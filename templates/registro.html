@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Registro de usuario{% endblock %}
+
+{% block content %}
+
+<div class="custom-bg-1 custom-text-1 p-4 rounded-4 mb-5">
+    <h2 class="mb-4">New user</h2>
+    <form action="/registrar_usuario" method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">name</label>
+            <input class="form-control" type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">e-mail</label>
+            <input class="form-control" type="email" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="contrasena" class="form-label">password</label>
+            <input class="form-control" type="password" id="contrasena" name="contrasena" required>    
+        </div>
+        <div class="mb-3">
+            <label for="repetir_contrasena" class="form-label">repeat password</label>
+            <input class="form-control" type="password" id="repetir_contrasena" name="repetir_contrasena" required>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn custom-btn">Register</button>
+        </div>
+    </form>
+</div><br><br>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Usar tiempo{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-center custom-fs-1">
+  <div class="text-white">
+    <span class="hour">00</span>
+    <span class="colon">:</span>
+    <span class="minute">00</span>
+    <span class="colon">:</span>
+    <span class="second">00</span>
+  </div>
+</div>
+
+<div class="d-flex flex-column align-items-center">
+  <div class="d-flex gap-4 mt-5">
+    <button class="start btn custom-btn-2">Start</button>
+    <button class="stop btn btn-secondary">Stop</button>
+  </div>
+</div>
+<div class="tiempo" style="display:none">{{ tiempo }}</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+<script src="{{ url_for('static', filename='timerUse.js') }}"></script>
+{% endblock %}
