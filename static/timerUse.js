@@ -43,6 +43,8 @@ function startCountdown() {
     if (remainingTimeMs <= 0) {
       clearInterval(countdownTimer)
       stopBtn.disabled = true
+      date_fin = getDate()
+      sendData(date_inicio, date_fin, remainingTimeMs)
       alert("¡Tiempo terminado!")
       return
     }
