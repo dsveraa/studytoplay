@@ -7,6 +7,9 @@ from sqlalchemy import desc, text
 from decouple import config
 from sqlalchemy.exc import OperationalError
 
+import time
+import threading
+
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = config('SECRET_KEY')
@@ -68,6 +71,63 @@ class Uso(db.Model):
     
     def __repr__(self):
         return f'<Uso {self.id} - Usuario {self.usuario.nombre}>'
+
+ms = 0
+sec = 0
+min = 0
+hr = 0
+running = False
+stop_event = threading.Event()
+
+def start_timer():
+    global ms, sec, min, hr, running
+    if running:
+        return
+    
+    running = True
+    stop_event.clear()
+    count = 0
+
+    while not stop_event.is_set():
+        time.sleep(0.01)
+        ms += 1
+
+        if ms == 100:
+            ms = 0
+            sec += 1
+
+        if sec == 60:
+            sec = 0
+            min += 1
+
+        if min == 60:
+            min = 0
+            hr += 1
+
+        count += 1
+        if count % 500 == 0:  # Cada 500 iteraciones (aprox. 5 segundos)
+            print(f"Backend Timer -> {hr:02}:{min:02}:{sec:02}.{ms:02}")
+
+@app.route('/start_clock')
+def start_clock():
+    global running
+    if not running:
+        timer_thread = threading.Thread(target=start_timer, daemon=True)
+        timer_thread.start()
+    return jsonify({"message": "Timer started"})
+
+@app.route('/stop_clock', methods=['GET'])
+def stop_clock():
+    global running
+    running = False
+    stop_event.set()  # Detener el temporizador
+    print("Reloj detenido.")  # Esto se debe mostrar en la terminal
+    return jsonify({"message": "Timer stopped"})
+
+
+@app.route('/get_time')
+def get_time():
+    return jsonify({"hr": hr, "min": min, "sec": sec, "ms": ms})
 
 @app.route("/save_use", methods=["POST"])
 def save_use():
