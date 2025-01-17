@@ -91,12 +91,25 @@ def save_use():
     
     tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
     tiempo.tiempo = time
-    print('que pasa3')
     db.session.add(tiempo)
 
     db.session.commit()
     
     return jsonify({'redirect': url_for('perfil')})
+
+@app.route("/update_time", methods=["POST"])
+def update_time():
+    data = request.get_json()
+    time = data.get('time')
+      
+    usuario_id = session.get("usuario_id")
+    
+    tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
+    tiempo.tiempo = time
+    db.session.add(tiempo)
+    db.session.commit()
+    
+    return "tiempo actualizado en el servidor..."
     
 @app.route("/save_study", methods=["POST"])
 def save_study():

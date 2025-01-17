@@ -38,6 +38,7 @@ function startCountdown() {
   stopBtn.disabled = false
 
   date_inicio = getDate()
+  timerInspector()
 
   countdownTimer = setInterval(() => {
     if (remainingTimeMs <= 0) {
@@ -114,4 +115,22 @@ function sendData(date_inicio, date_fin, remainingTimeMs) {
       }
     })
     .catch((error) => console.error("Error al guardar los datos:", error))
+}
+
+function updateTimeToServer() {
+  fetch('/update_time', {
+      method: 'POST',
+      body: JSON.stringify({ time: remainingTimeMs }),
+      headers: { 'Content-Type': 'application/json' }
+  }).then(response => {
+      if (!response.ok) {
+          console.error('Error al enviar el tiempo')
+      }
+  })
+}
+
+function timerInspector() {
+  timerInterval = setInterval(() => {
+    updateTimeToServer()
+  }, 5000)
 }
