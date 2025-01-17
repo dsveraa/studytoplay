@@ -2,14 +2,11 @@ const secEl = document.getElementById("second")
 const minEl = document.getElementById("minute")
 const hrEl = document.getElementById("hour")
 
-
 let ms = 0, sec = 0, min = 0, hr = 0
 let intervalId
 
 const startBtn = document.getElementById("start")
-const stopBtn = document.getElementById("stop")
-
-const cancelBtn = document.getElementById("cancel")
+const submitBtn = document.getElementById("stop")
 
 let date_inicio
 let date_fin
@@ -47,7 +44,6 @@ function startTime() {
   }, 10)
 }
 
-
 startBtn.addEventListener("click", () => {
   fetch("/start_clock") // Llamar al backend para iniciar el contador
     .then(response => response.json())
@@ -56,23 +52,20 @@ startBtn.addEventListener("click", () => {
 
   startTime()
   date_inicio = getDate()
-  console.log(date_inicio)
+  // console.log(date_inicio)
 
   startBtn.disabled = true
 
   startBtn.classList.add("active")
-  stopBtn.classList.remove("stopActive")
+  submitBtn.classList.remove("stopActive")
 })
 
-stopBtn.addEventListener("click", () => {
+submitBtn.addEventListener("click", () => {
   date_fin = getDate()
-  clearInterval(intervalId) // Detener el temporizador correctamente
-
-  console.log("Deteniendo el reloj...")
-  fetch("/stop_clock", { method: "GET" })
+  clearInterval(intervalId)
 
   startBtn.classList.remove("active")
-  stopBtn.classList.remove("stopActive")
+  submitBtn.classList.remove("stopActive")
 
   const summary = document.querySelector("#summary").value
 
@@ -86,7 +79,6 @@ stopBtn.addEventListener("click", () => {
 
   sendData(date_inicio, date_fin, summary, time)
 })
-
 
 function putValue() {
   secEl.innerHTML = sec.toString().padStart(2, "0")
@@ -124,13 +116,12 @@ function getServerTime() {
   fetch('/get_time')
     .then(response => response.json())
     .then(data => {
-      // Solo actualizar los valores, sin reiniciar el contador
       ms = data.ms
       sec = data.sec
       min = data.min
       hr = data.hr
       lastRequestTime = Date.now()
-      putValue() // Actualiza la UI sin afectar la ejecución del temporizador
+      putValue()
     })
     .catch(error => console.error(error))
 }
@@ -150,19 +141,9 @@ window.addEventListener("focus", () => {
   if (now - lastRequestTime > minInactiveTime) {
     console.log("Ventana activa, solicitando datos...")
     getServerTime()
-    console.log(sec)
   }
 })
 
-window.addEventListener("beforeunload", () => {
-  console.log("Deteniendo el reloj...")
-  fetch("/stop_clock", { method: "GET" })
-})
-
-cancelBtn.addEventListener('click', () => {
-  fetch("/stop_clock", { method: "GET" })
-    .then(response => response.json())
-    .then(data => console.log("Respuesta del backend:", data))
-    .catch(error => console.error("Error al detener el reloj:", error))
-  console.log("Deteniendo el reloj...")
+window.addEventListener("beforeunload", function (event) {
+  navigator.sendBeacon("/cancel")
 })
