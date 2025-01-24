@@ -2,6 +2,28 @@ from sqlalchemy import Column, Integer, String, Float, DateTime, Text, ForeignKe
 from sqlalchemy.orm import relationship
 from . import db
 
+'''
+TIP: Al renombrar una tabla, no es necesario migrar las claves foraneas, es decir, no debe haber instrucciones de modificación en los archivos de migración, solo instrucciones para renombrar. La base de datos mantendrá las relaciones entre las tablas y solo hay que actualizar los modelos de SQLAlchemy.
+
+Ej. Modelo: 
+
+class Usuario():
+    __tablename__ = 'usuario' -> __tablename__ = 'usuarios'
+
+class Estudio():
+    usuario_id = Column(Integer, ForeignKey('usuario.id'), nullable=False) -> 'usuarios.id'
+
+
+Ej. Migración:
+
+def upgrade():
+    op.rename_table('usuario', 'usuarios')
+
+def downgrade():
+    op.rename_table('usuarios', 'usuario')
+
+'''
+
 class Usuario(db.Model):
     __tablename__ = 'usuarios'
 
@@ -31,7 +53,7 @@ class Estudio(db.Model):
     fecha_inicio = Column(DateTime, nullable=False)
     fecha_fin = Column(DateTime, nullable=False)
     resumen = Column(Text, nullable=False)
-    asignatura = Column(Integer, ForeignKey('asignaturas.id'), nullable=False)
+    asignatura_id = Column(Integer, ForeignKey('asignaturas.id'), nullable=True)
 
     usuario = relationship('Usuario', back_populates='estudio')
     asignatura = relationship('Asignatura', back_populates='estudio')
