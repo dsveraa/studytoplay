@@ -16,7 +16,13 @@
 
 <div class="d-flex flex-column align-items-center mb-5">
   <button id="start" class="btn custom-btn mb-3">Start</button>
-  <textarea class="form-control mb-3 custom-textarea" name="summary" id="summary" placeholder="Summary of what I studied"></textarea>
+  <select class="mb-2" name="asignaturas" id="asignaturas" required>
+    <option value="">Select a Subject...</option>
+    {% for asignatura in asignaturas %}
+      <option value="{{ asignatura.id }}">{{ asignatura.nombre | capitalize }}</option>
+    {% endfor %}
+  </select>
+  <textarea class="form-control mb-3 custom-textarea" name="summary" id="summary" placeholder="Summary of what I studied" required></textarea>
   <div class="d-flex gap-4">
     <div><a id="cancel" class="btn custom-btn-3" href="/cancel">Cancel</a></div>
     <div><button id="stop" class="btn custom-btn-2">Submit</button></div>

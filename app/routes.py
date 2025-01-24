@@ -3,7 +3,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 from sqlalchemy import desc
 
-from app.models import Estudio, Tiempo, Uso, Usuario
+from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura
 from . import db
 
 import time
@@ -120,6 +120,7 @@ def register_routes(app):
         end = data.get('end')
         summary = data.get('summary')
         time = data.get('time')
+        subject_id = data.get('subject_id')
         
         usuario_id = session.get("usuario_id")
 
@@ -130,7 +131,8 @@ def register_routes(app):
             usuario_id=usuario_id,
             fecha_inicio=fecha_inicio,
             fecha_fin=fecha_fin,
-            resumen=summary
+            resumen=summary,
+            asignatura_id=subject_id
         )
         db.session.add(estudio)
         
@@ -155,9 +157,11 @@ def register_routes(app):
 
     @app.route("/add_time")
     def add_time():
+        asignaturas_obj = Asignatura.query.all()
+        asignaturas = [{'id': asignatura.id, 'nombre': asignatura.nombre} for asignatura in asignaturas_obj]
         if "usuario_id" not in session:
             return redirect(url_for("login"))
-        return render_template("add_time.html")
+        return render_template("add_time.html", asignaturas=asignaturas)
 
     @app.route("/use_time")
     def use_time():
@@ -168,32 +172,30 @@ def register_routes(app):
         tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
         tiempo_valor = tiempo.tiempo if tiempo else 0
         
-        return render_template("use_time.html", tiempo=tiempo_valor)
-        
-    @app.route("/registro")
-    def registro():
-        return render_template("registro.html")
+        return render_template("use_time.html", tiempo=tiempo_valor)      
 
-    @app.route("/registrar_usuario", methods=["POST"])
-    def registrar_usuario():
-        nombre = request.form["nombre"]
-        email = request.form["email"]
-        contrasena = request.form["contrasena"]
-        repetir_contrasena = request.form["repetir_contrasena"]
-        
-        if contrasena != repetir_contrasena:
-            return "Las contraseñas no coinciden, intenta nuevamente."
-        
-        if Usuario.query.filter_by(correo=email).first():
-            return "El correo ya está registrado, intenta con otro."
-        
-        contrasena_hash = generate_password_hash(contrasena)
-        
-        nuevo_usuario = Usuario(nombre=nombre, correo=email, contrasena=contrasena_hash)
-        db.session.add(nuevo_usuario)
-        db.session.commit()
-        
-        return redirect(url_for("login"))
+    @app.route("/registro", methods=["GET","POST"])
+    def registro():
+        if request.method == 'POST':
+            nombre = request.form["nombre"]
+            email = request.form["email"]
+            contrasena = request.form["contrasena"]
+            repetir_contrasena = request.form["repetir_contrasena"]
+            
+            if contrasena != repetir_contrasena:
+                return "Las contraseñas no coinciden, intenta nuevamente."
+            
+            if Usuario.query.filter_by(correo=email).first():
+                return "El correo ya está registrado, intenta con otro."
+            
+            contrasena_hash = generate_password_hash(contrasena)
+            
+            nuevo_usuario = Usuario(nombre=nombre, correo=email, contrasena=contrasena_hash)
+            db.session.add(nuevo_usuario)
+            db.session.commit()
+            
+            return redirect(url_for("login"))
+        return render_template("registro.html")
         
     @app.route("/usuarios")
     def mostrar_usuarios():

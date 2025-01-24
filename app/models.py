@@ -33,14 +33,14 @@ class Usuario(db.Model):
     contrasena = Column(String(200), nullable=False)
 
     estudios = relationship('Estudio', back_populates='usuario')
-    tiempos = relationship('Tiempo', back_populates='usuario')
+    tiempo = relationship('Tiempo', back_populates='usuario', uselist=False)
     usos = relationship('Uso', back_populates='usuario')
     
 class Tiempo(db.Model):
     __tablename__ = 'tiempos'
 
     id = Column(Integer, primary_key=True)
-    usuario_id = Column(Integer, ForeignKey('usuarios.id'), nullable=False)
+    usuario_id = Column(Integer, ForeignKey('usuarios.id'), nullable=False, unique=True)
     tiempo = Column(Float, default=0.0)
     
     usuario = relationship('Usuario', back_populates='tiempo')
@@ -55,7 +55,7 @@ class Estudio(db.Model):
     resumen = Column(Text, nullable=False)
     asignatura_id = Column(Integer, ForeignKey('asignaturas.id'), nullable=True)
 
-    usuario = relationship('Usuario', back_populates='estudio')
+    usuario = relationship('Usuario', back_populates='estudios')
     asignatura = relationship('Asignatura', back_populates='estudio')
     
 class Uso(db.Model):
@@ -66,7 +66,7 @@ class Uso(db.Model):
     fecha_inicio = Column(DateTime, nullable=False)
     fecha_fin = Column(DateTime, nullable=False)
     
-    usuario = relationship('Usuario', back_populates='uso')
+    usuario = relationship('Usuario', back_populates='usos')
 
 class Asignatura(db.Model):
     __tablename__ = 'asignaturas'

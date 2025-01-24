@@ -61,23 +61,29 @@ startBtn.addEventListener("click", () => {
 })
 
 submitBtn.addEventListener("click", () => {
-  date_fin = getDate()
-  clearInterval(intervalId)
-
-  startBtn.classList.remove("active")
-  submitBtn.classList.remove("stopActive")
-
   const summary = document.querySelector("#summary").value
-
-  let timeElapsedInMs =
-    parseInt(hr) * 3600000 +
-    parseInt(min) * 60000 +
-    parseInt(sec) * 1000 +
-    parseInt(ms)
-
-  let time = Math.floor(timeElapsedInMs / 100) * 100
-
-  sendData(date_inicio, date_fin, summary, time)
+  const subject = document.getElementById('asignaturas').value
+  
+  if (!summary || !subject) {
+    alert('Subject and Summary are mandatory')
+  } else {
+    date_fin = getDate()
+    clearInterval(intervalId)
+    
+    startBtn.classList.remove("active")
+    submitBtn.classList.remove("stopActive")
+    
+    
+    let timeElapsedInMs =
+      parseInt(hr) * 3600000 +
+      parseInt(min) * 60000 +
+      parseInt(sec) * 1000 +
+      parseInt(ms)
+  
+    let time = Math.floor(timeElapsedInMs / 100) * 100
+  
+    sendData(date_inicio, date_fin, summary, time, subject)
+  }
 })
 
 function putValue() {
@@ -86,7 +92,7 @@ function putValue() {
   hrEl.innerHTML = hr.toString().padStart(2, "0")
 }
 
-function sendData(date_inicio, date_fin, summary, time) {
+function sendData(date_inicio, date_fin, summary, time, subject_id) {
   fetch("/save_study", {
     method: "POST",
     headers: {
@@ -97,6 +103,7 @@ function sendData(date_inicio, date_fin, summary, time) {
       end: date_fin,
       summary: summary,
       time: time,
+      subject_id: subject_id
     }),
   })
     .then((response) => response.json())
