@@ -1,12 +1,13 @@
 const secEl = document.getElementById("second")
 const minEl = document.getElementById("minute")
 const hrEl = document.getElementById("hour")
-
-let ms = 0, sec = 0, min = 0, hr = 0
-let intervalId
-
 const startBtn = document.getElementById("start")
 const submitBtn = document.getElementById("stop")
+let summary = document.querySelector("#summary")
+let subject = document.getElementById('asignaturas')
+
+let timer = { ms: 0, sec: 0, min: 0, hr: 0 }
+let intervalId
 
 let date_inicio
 let date_fin
@@ -26,22 +27,47 @@ function getDate() {
 
 function startTime() {
   intervalId = setInterval(() => {
-    ms++
-    if (ms == 100) {
-      ms = 0
-      sec++
+    timer.ms++
+    if (timer.ms == 100) {
+      timer.ms = 0
+      timer.sec++
     }
-    if (sec == 60) {
-      sec = 0
-      min++
+    if (timer.sec == 60) {
+      timer.sec = 0
+      timer.min++
     }
-    if (min == 60) {
-      min = 0
-      hr++
+    if (timer.min == 60) {
+      timer.min = 0
+      timer.hr++
     }
 
     putValue()
   }, 10)
+}
+
+function stopTime() {
+  clearInterval(intervalId)
+}
+
+function validateInputs() { 
+  return !summary.value || !subject.value
+}
+
+function calculateElapsedTime() {
+  
+  let timeElapsedInMs =
+  parseInt(timer.hr) * 3600000 +
+  parseInt(timer.min) * 60000 +
+  parseInt(timer.sec) * 1000 +
+  parseInt(timer.ms)
+
+  return Math.floor(timeElapsedInMs / 100) * 100
+}
+
+function putValue() {
+  secEl.innerHTML = timer.sec.toString().padStart(2, "0")
+  minEl.innerHTML = timer.min.toString().padStart(2, "0")
+  hrEl.innerHTML = timer.hr.toString().padStart(2, "0")
 }
 
 startBtn.addEventListener("click", () => {
@@ -52,45 +78,26 @@ startBtn.addEventListener("click", () => {
 
   startTime()
   date_inicio = getDate()
-  // console.log(date_inicio)
-
   startBtn.disabled = true
-
-  startBtn.classList.add("active")
-  submitBtn.classList.remove("stopActive")
 })
 
 submitBtn.addEventListener("click", () => {
-  const summary = document.querySelector("#summary").value
-  const subject = document.getElementById('asignaturas').value
-  
-  if (!summary || !subject) {
+  if (validateInputs()) {
     alert('Subject and Summary are mandatory')
   } else {
-    date_fin = getDate()
-    clearInterval(intervalId)
-    
-    startBtn.classList.remove("active")
-    submitBtn.classList.remove("stopActive")
-    
-    
-    let timeElapsedInMs =
-      parseInt(hr) * 3600000 +
-      parseInt(min) * 60000 +
-      parseInt(sec) * 1000 +
-      parseInt(ms)
-  
-    let time = Math.floor(timeElapsedInMs / 100) * 100
-  
-    sendData(date_inicio, date_fin, summary, time, subject)
-  }
-})
+    stopTime() 
 
-function putValue() {
-  secEl.innerHTML = sec.toString().padStart(2, "0")
-  minEl.innerHTML = min.toString().padStart(2, "0")
-  hrEl.innerHTML = hr.toString().padStart(2, "0")
-}
+    date_fin = getDate()
+    summary = summary.value
+    subject = subject.value
+    time = calculateElapsedTime()
+
+    console.log(time)
+    setTimeout(()=> { 
+      sendData(date_inicio, date_fin, summary, time, subject)
+    }, 1000)  
+  }  
+})  
 
 function sendData(date_inicio, date_fin, summary, time, subject_id) {
   fetch("/save_study", {
@@ -123,10 +130,10 @@ function getServerTime() {
   fetch('/get_time')
     .then(response => response.json())
     .then(data => {
-      ms = data.ms
-      sec = data.sec
-      min = data.min
-      hr = data.hr
+      timer.ms = data.ms
+      timer.sec = data.sec
+      timer.min = data.min
+      timer.hr = data.hr
       lastRequestTime = Date.now()
       putValue()
     })
