@@ -4,11 +4,11 @@ class Timer {
     this.sec = 0
     this.min = 0
     this.hr = 0
-    this.intervalId = null
+    this.timerSTP = null
   }
 
   start() {
-    this.intervalId = setInterval(() => {
+    this.timerSTP = setInterval(() => {
       this.ms++
       if (this.ms === 100) {
         this.ms = 0
@@ -27,7 +27,7 @@ class Timer {
   }
 
   stop() {
-    clearInterval(this.intervalId)
+    clearInterval(this.timerSTP)
   }
 
   getElapsedTime() {
@@ -134,7 +134,7 @@ submitBtn.addEventListener("click", () => {
 
     // console.log(timer.getElapsedTime())
     setTimeout(() => {
-      sendData(date_inicio, date_fin, summaryInput.value, timer.getElapsedTime(), subjectInput.value)
+      sendData(date_inicio, date_fin, summaryInput.value, timer.getRemainingTime(), subjectInput.value)
     }, 1000)
   }
 })
