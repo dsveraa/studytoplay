@@ -9,6 +9,60 @@ from . import db
 import time
 import threading
 
+class Countdown:
+    def __init__(self, ms, sec, min, hr):
+        self.ms = ms
+        self.sec = sec
+        self.min = min
+        self.hr = hr
+        self.running = False
+        self.stop_event = threading.Event()
+
+countdown = Countdown(0,30,50,1) # se reemplazan luego desde /countdown_begins
+
+def start_countdown():
+    global countdown
+    if countdown.running:
+        return
+    
+    countdown.running = True
+    countdown.stop_event.clear()
+
+    total_ms = (
+        countdown.hr * 3600000 
+        + countdown.min * 60000 
+        + countdown.sec * 1000 
+        + countdown.ms
+    )
+    print(f"Valores actuales - hr: {countdown.hr}, min: {countdown.min}, sec: {countdown.sec}, ms: {countdown.ms}")
+    print(f"Total MS inicial: {total_ms}")
+
+    while not countdown.stop_event.is_set() and total_ms > 0:
+
+        time.sleep(0.01)
+        total_ms -= 10
+
+        countdown.hr = total_ms // 3600000
+        remaining_ms = total_ms % 3600000
+        countdown.min = remaining_ms // 60000
+        remaining_ms %= 60000
+        countdown.sec = remaining_ms // 1000
+        countdown.ms = remaining_ms % 1000
+
+        if (total_ms // 10) % 500 == 0:
+            print(f"{countdown.hr:02}:{countdown.min:02}:{countdown.sec:02}.{countdown.ms:03}", flush=True)
+    
+    countdown.running = False
+
+def stop_countdown():
+    countdown.running = False
+    countdown.stop_event.set()
+    countdown.ms = 0
+    countdown.sec = 0
+    countdown.min = 0
+    countdown.hr = 0
+    print("Reloj detenido.")
+
 class Timer:
     def __init__(self):
         self.ms = 0
@@ -57,7 +111,43 @@ def stop_timer():
     timer.hr = 0
     print("Reloj detenido.")
 
+def convertir_milisegundos(ms):
+    hr = ms // 3600000
+    ms %= 3600000
+    min = ms // 60000
+    ms %= 60000
+    sec = ms // 1000
+    ms %= 1000
+    return hr, min, sec, ms
+
 def register_routes(app):
+    @app.route('/countdown_begins')
+    def countdown_begins():
+        global countdown
+        usuario_id = session.get("usuario_id")
+        tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
+
+        hr, min, sec, ms = convertir_milisegundos(tiempo.tiempo)
+
+        countdown.hr = hr
+        countdown.min = min
+        countdown.sec = sec
+        countdown.ms = ms
+
+        if not countdown.running:
+            countdown_thread = threading.Thread(target=start_countdown, daemon=True)
+            countdown_thread.start()
+        return jsonify({"message": "Countdown started"})
+    
+    @app.route('/get_countdown_time')
+    def get_countdown_time():
+        return jsonify({
+            "hr": countdown.hr,
+            "min": countdown.min,
+            "sec": countdown.sec,
+            "ms": countdown.ms
+        })
+    
     @app.route('/start_clock')
     def start_clock():
         if not timer.running:
@@ -90,6 +180,7 @@ def register_routes(app):
     @app.route("/cancel", methods=["GET", "POST"])
     def cancel():
         stop_timer()
+        stop_countdown()
         return redirect(url_for('perfil'))
 
     @app.route("/add_time", methods=["GET", "POST"])
@@ -150,6 +241,7 @@ def register_routes(app):
         tiempo_valor = tiempo.tiempo if tiempo else 0
 
         if request.method == 'POST':
+            stop_countdown()
             data = request.get_json()
             
             start = data.get('start')

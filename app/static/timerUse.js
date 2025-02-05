@@ -112,7 +112,15 @@ function getDate() {
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}` // "YYYY-MM-DD HH:MM:SS"
 }
 
-startBtn.addEventListener("click", () => {
+startBtn.addEventListener("click", async () => {
+  try {
+    const response = await fetch("/countdown_begins")
+    const data = await response.json()
+    console.log(data.message)
+  } catch (error) {
+    console.error("Error al iniciar la cuenta regresiva:", error)
+  }
+
   timer.start()
   timerInspector()
   date_inicio = getDate()
@@ -178,3 +186,30 @@ function timerInspector() {
     updateTimeToServer()
   }, 5000)
 }
+
+async function getServerTime() {
+  try {
+    const response = await fetch('/get_countdown_time')
+    const data = await response.json()
+    timer.setFromServer(data)
+  } catch (error) {
+    console.error("Error al obtener el tiempo del servidor:", error)
+  }
+}
+
+let lastRequestTime = 0
+const minInactiveTime = 5000
+
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden && Date.now() - lastRequestTime > minInactiveTime) {
+    console.log("Volviendo a la página, solicitando datos...")
+    getServerTime()
+  }
+})
+
+window.addEventListener("focus", () => {
+  if (Date.now() - lastRequestTime > minInactiveTime) {
+    console.log("Ventana activa, solicitando datos...")
+    getServerTime()
+  }
+})
