@@ -96,7 +96,7 @@ function validateInputs() {
 
 async function sendData(date_inicio, date_fin, summary, time, subject_id) {
   try {
-    const response = await fetch("/save_study", {
+    const response = await fetch("/add_time", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ start: date_inicio, end: date_fin, summary, time, subject_id })
@@ -134,7 +134,7 @@ submitBtn.addEventListener("click", () => {
 
     // console.log(timer.getElapsedTime())
     setTimeout(() => {
-      sendData(date_inicio, date_fin, summaryInput.value, timer.getRemainingTime(), subjectInput.value)
+      sendData(date_inicio, date_fin, summaryInput.value, timer.getElapsedTime(), subjectInput.value)
     }, 1000)
   }
 })

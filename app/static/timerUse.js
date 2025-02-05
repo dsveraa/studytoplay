@@ -141,7 +141,7 @@ stopBtn.addEventListener("click", () => {
 })
 
 function sendData(date_inicio, date_fin, remainingTimeMs) {
-  fetch("/save_use", {
+  fetch("/use_time", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

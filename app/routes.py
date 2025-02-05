@@ -69,34 +69,7 @@ def register_routes(app):
     def get_time():
         global running, ms, sec, min, hr
         return jsonify({"hr": hr, "min": min, "sec": sec, "ms": ms})
-
-    @app.route("/save_use", methods=["POST"])
-    def save_use():
-        data = request.get_json()
-        
-        start = data.get('start')
-        end = data.get('end')
-        time = data.get('time')
-        
-        usuario_id = session.get("usuario_id")
-
-        fecha_inicio = datetime.strptime(start, "%Y-%m-%d %H:%M:%S")
-        fecha_fin = datetime.strptime(end, "%Y-%m-%d %H:%M:%S")
-
-        uso = Uso(
-            usuario_id=usuario_id,
-            fecha_inicio=fecha_inicio,
-            fecha_fin=fecha_fin,
-        )
-        db.session.add(uso)
-        
-        tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
-        tiempo.tiempo = time
-        db.session.add(tiempo)
-
-        db.session.commit()
-        return jsonify({'redirect': url_for('perfil')})
-    
+     
     @app.route("/update_time", methods=["POST"])
     def update_time():
         data = request.get_json()
@@ -108,59 +81,59 @@ def register_routes(app):
         tiempo.tiempo = time
         db.session.add(tiempo)
         db.session.commit()
-        return "tiempo actualizado en el servidor..."
-        
-    @app.route("/save_study", methods=["POST"])
-    def save_study():
-        stop_timer()
-
-        data = request.get_json()
-        
-        start = data.get('start')
-        end = data.get('end')
-        summary = data.get('summary')
-        time = data.get('time')
-        subject_id = data.get('subject_id')
-        
-        usuario_id = session.get("usuario_id")
-
-        fecha_inicio = datetime.strptime(start, "%Y-%m-%d %H:%M:%S")
-        fecha_fin = datetime.strptime(end, "%Y-%m-%d %H:%M:%S")
-
-        estudio = Estudio(
-            usuario_id=usuario_id,
-            fecha_inicio=fecha_inicio,
-            fecha_fin=fecha_fin,
-            resumen=summary,
-            asignatura_id=subject_id
-        )
-        db.session.add(estudio)
-        
-        tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
-        
-        if tiempo:
-                tiempo.tiempo += time
-        else:
-            tiempo = Tiempo(
-                usuario_id=usuario_id,
-                tiempo=time
-            )
-            db.session.add(tiempo)
-
-        db.session.commit()
-        return jsonify({'redirect': url_for('perfil')})
+        return "tiempo actualizado en el servidor..."      
 
     @app.route("/cancel", methods=["GET", "POST"])
     def cancel():
         stop_timer()
         return redirect(url_for('perfil'))
 
-    @app.route("/add_time")
+    @app.route("/add_time", methods=["GET", "POST"])
     def add_time():
         asignaturas_obj = Asignatura.query.all()
         asignaturas = [{'id': asignatura.id, 'nombre': asignatura.nombre} for asignatura in asignaturas_obj]
         if "usuario_id" not in session:
             return redirect(url_for("login"))
+        
+        if request.method == 'POST':
+            stop_timer()
+
+            data = request.get_json()
+            
+            start = data.get('start')
+            end = data.get('end')
+            summary = data.get('summary')
+            time = data.get('time')
+            subject_id = data.get('subject_id')
+            
+            usuario_id = session.get("usuario_id")
+
+            fecha_inicio = datetime.strptime(start, "%Y-%m-%d %H:%M:%S")
+            fecha_fin = datetime.strptime(end, "%Y-%m-%d %H:%M:%S")
+
+            estudio = Estudio(
+                usuario_id=usuario_id,
+                fecha_inicio=fecha_inicio,
+                fecha_fin=fecha_fin,
+                resumen=summary,
+                asignatura_id=subject_id
+            )
+            db.session.add(estudio)
+            
+            tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
+            
+            if tiempo:
+                    tiempo.tiempo += time
+            else:
+                tiempo = Tiempo(
+                    usuario_id=usuario_id,
+                    tiempo=time
+                )
+                db.session.add(tiempo)
+
+            db.session.commit()
+            return jsonify({'redirect': url_for('perfil')})
+        
         return render_template("add_time.html", asignaturas=asignaturas)
 
     @app.route("/use_time")
@@ -171,6 +144,32 @@ def register_routes(app):
         usuario_id = session.get("usuario_id")
         tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
         tiempo_valor = tiempo.tiempo if tiempo else 0
+
+        if request.method == 'POST':
+            data = request.get_json()
+            
+            start = data.get('start')
+            end = data.get('end')
+            time = data.get('time')
+            
+            usuario_id = session.get("usuario_id")
+
+            fecha_inicio = datetime.strptime(start, "%Y-%m-%d %H:%M:%S")
+            fecha_fin = datetime.strptime(end, "%Y-%m-%d %H:%M:%S")
+
+            uso = Uso(
+                usuario_id=usuario_id,
+                fecha_inicio=fecha_inicio,
+                fecha_fin=fecha_fin,
+            )
+            db.session.add(uso)
+            
+            tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
+            tiempo.tiempo = time
+            db.session.add(tiempo)
+
+            db.session.commit()
+            return jsonify({'redirect': url_for('perfil')})
         
         return render_template("use_time.html", tiempo=tiempo_valor)      
 
