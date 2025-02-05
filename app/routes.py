@@ -237,6 +237,7 @@ def register_routes(app):
             return redirect(url_for("login"))
         
         usuario_id = session.get("usuario_id")
+        username = session.get("usuario_nombre")
         tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
         tiempo_valor = tiempo.tiempo if tiempo else 0
 
@@ -270,7 +271,7 @@ def register_routes(app):
             db.session.commit()
             return jsonify({'redirect': url_for('perfil')})
         
-        return render_template("use_time.html", tiempo=tiempo_valor)      
+        return render_template("use_time.html", tiempo=tiempo_valor, username=username)      
 
     @app.route("/registro", methods=["GET","POST"])
     def registro():
