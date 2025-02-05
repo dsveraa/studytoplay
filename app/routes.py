@@ -9,66 +9,70 @@ from . import db
 import time
 import threading
 
-ms = 0
-sec = 0
-min = 0
-hr = 0
-running = False
-stop_event = threading.Event()
+class Timer:
+    def __init__(self):
+        self.ms = 0
+        self.sec = 0
+        self.min = 0
+        self.hr = 0
+        self.running = False
+        self.stop_event = threading.Event()
+
+timer = Timer()
 
 def start_timer():
-    global ms, sec, min, hr, running
-    if running:
+    if timer.running:
         return
     
-    running = True
-    stop_event.clear()
+    timer.running = True
+    timer.stop_event.clear()
     count = 0
 
-    while not stop_event.is_set():
+    while not timer.stop_event.is_set():
         time.sleep(0.01)
-        ms += 1
+        timer.ms += 1
 
-        if ms == 100:
-            ms = 0
-            sec += 1
+        if timer.ms == 100:
+            timer.ms = 0
+            timer.sec += 1
 
-        if sec == 60:
-            sec = 0
-            min += 1
+        if timer.sec == 60:
+            timer.sec = 0
+            timer.min += 1
 
-        if min == 60:
-            min = 0
-            hr += 1
+        if timer.min == 60:
+            timer.min = 0
+            timer.hr += 1
 
         count += 1
         if count % 500 == 0:
-            print(f"{hr:02}:{min:02}:{sec:02}.{ms:02}")
+            print(f"{timer.hr:02}:{timer.min:02}:{timer.sec:02}.{timer.ms:02}")
 
 def stop_timer():
-    global running, ms, sec, min, hr
-    running = False
-    stop_event.set()
-    ms = 0
-    sec = 0
-    min = 0
-    hr = 0
+    timer.running = False
+    timer.stop_event.set()
+    timer.ms = 0
+    timer.sec = 0
+    timer.min = 0
+    timer.hr = 0
     print("Reloj detenido.")
 
 def register_routes(app):
-
     @app.route('/start_clock')
     def start_clock():
-        global running
-        if not running:
+        if not timer.running:
             timer_thread = threading.Thread(target=start_timer, daemon=True)
             timer_thread.start()
         return jsonify({"message": "Timer started"})
 
     @app.route('/get_time')
     def get_time():
-        global running, ms, sec, min, hr
-        return jsonify({"hr": hr, "min": min, "sec": sec, "ms": ms})
+        return jsonify({
+            "hr": timer.hr,
+            "min": timer.min,
+            "sec": timer.sec,
+            "ms": timer.ms
+        })
      
     @app.route("/update_time", methods=["POST"])
     def update_time():
@@ -136,7 +140,7 @@ def register_routes(app):
         
         return render_template("add_time.html", asignaturas=asignaturas)
 
-    @app.route("/use_time")
+    @app.route("/use_time", methods=["GET", "POST"])
     def use_time():
         if "usuario_id" not in session:
             return redirect(url_for("login"))
@@ -151,6 +155,8 @@ def register_routes(app):
             start = data.get('start')
             end = data.get('end')
             time = data.get('time')
+
+            print(start, end, time)
             
             usuario_id = session.get("usuario_id")
 
@@ -165,6 +171,7 @@ def register_routes(app):
             db.session.add(uso)
             
             tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
+            print("hola")
             tiempo.tiempo = time
             db.session.add(tiempo)
 
