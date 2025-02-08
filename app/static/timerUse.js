@@ -35,13 +35,16 @@ class Timer {
     clearInterval(this.timerSTP)
   }
 
-  getRemainingTime() { // devuelve ms
+  getRemainingTime() { 
     let timeElapsedInMs =
       this.hr * 3600000 +
       this.min * 60000 +
       this.sec * 1000 +
       this.ms
-    return Math.floor(timeElapsedInMs / 100) * 100
+
+    const elapsedTimeMs = Math.floor(timeElapsedInMs / 100) * 100
+    
+    return elapsedTimeMs
   }
 
   setFromServer(data) {
@@ -60,27 +63,19 @@ class Timer {
     }
   }
 }
-class UI {
-  static updateTimerDisplay(timer_obj) {
-    document.querySelector('.second').innerText = String(timer_obj.sec).padStart(2, "0")
-    document.querySelector('.minute').innerText = String(timer_obj.min).padStart(2, "0")
-    document.querySelector('.hour').innerText = String(timer_obj.hr).padStart(2, "0")
-  }
 
-  static disableButton(button) {
-    button.disabled = true
-  }
+const initialTime = document.querySelector('.tiempo').textContent.trim() // ms: str
+console.log(initialTime, typeof(initialTime))
+const startBtn = document.querySelector("#start")
+const stopBtn = document.querySelector("#stop")
+const brokenDownTime = breakDownTime(initialTime)
 
-  static enableButton(button) {
-    button.disabled = false
-  }
-}
-
-let time = document.querySelector('.tiempo').textContent.trim()
-const brokenDownTime = breakDownTime(time)
-
-UI.updateTimerDisplay(brokenDownTime)
-
+/**
+ * Descompone el tiempo desde milisegundos a hora, minuto, segundo.
+*
+* @param {string} time 
+* @returns {{ hr: number; min: number; sec: number; ms: number; }} 
+*/
 function breakDownTime(time) {
   const totalMs = parseInt(time, 10) || 0
   const hours = Math.floor(totalMs / 3600000)
@@ -93,13 +88,35 @@ function breakDownTime(time) {
   return { 'hr': hours, 'min': minutes, 'sec': seconds, 'ms': milliseconds }
 }
 
-const timer = new Timer(brokenDownTime.ms, brokenDownTime.sec, brokenDownTime.min, brokenDownTime.hr)
-const hourSpan = document.querySelector(".hour")
-const minuteSpan = document.querySelector(".minute")
-const secondSpan = document.querySelector(".second")
-const startBtn = document.querySelector("#start")
-const stopBtn = document.querySelector("#stop")
+const timer = new Timer(
+  brokenDownTime.ms, 
+  brokenDownTime.sec, 
+  brokenDownTime.min, 
+  brokenDownTime.hr)
 
+class UI {
+  static updateTimerDisplay() {
+    document.querySelector('.second').innerText = String(timer.sec).padStart(2, "0")
+    document.querySelector('.minute').innerText = String(timer.min).padStart(2, "0")
+    document.querySelector('.hour').innerText = String(timer.hr).padStart(2, "0")
+  }
+  
+  static disableButton(button) {
+    button.disabled = true
+  }
+  
+  static enableButton(button) {
+    button.disabled = false
+  }
+}
+
+UI.updateTimerDisplay(brokenDownTime)
+
+/**
+ * Obtiene fecha y hora actual en formato YYYY-MM-DD HH:MM:SS
+ *
+ * @returns {string} 
+ */
 function getDate() {
   const now = new Date()
   const year = now.getFullYear()
@@ -109,12 +126,12 @@ function getDate() {
   const minutes = String(now.getMinutes()).padStart(2, "0")
   const seconds = String(now.getSeconds()).padStart(2, "0")
 
-  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}` // "YYYY-MM-DD HH:MM:SS"
+  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
 }
 
 startBtn.addEventListener("click", async () => {
   try {
-    const response = await fetch("/countdown_begins")
+    const response = await fetch("/stamp_time")
     const data = await response.json()
     console.log(data.message)
   } catch (error) {
@@ -144,10 +161,18 @@ stopBtn.addEventListener("click", () => {
       Swal.fire("Detenido", "El cronómetro ha sido detenido.", "success")
       date_fin = getDate()
       sendData(date_inicio, date_fin, timer.getRemainingTime())
+      console.log("enviando datos al backend")
     }
   })
 })
 
+/**
+ * Envía momentos de inicio y fin del conteo, como tiempo restante al backend.
+ *
+ * @param {string} date_inicio 
+ * @param {string} date_fin 
+ * @param {number} remainingTimeMs 
+ */
 function sendData(date_inicio, date_fin, remainingTimeMs) {
   fetch("/use_time", {
     method: "POST",
@@ -189,9 +214,13 @@ function timerInspector() {
 
 async function getServerTime() {
   try {
-    const response = await fetch('/get_countdown_time')
+    const response = await fetch('/redeem_time')
     const data = await response.json()
-    timer.setFromServer(data)
+    console.log(data)
+    const time = data.updated_time
+    const updatedTime = breakDownTime(time)
+    console.log(updatedTime)
+    timer.setFromServer(updatedTime)
   } catch (error) {
     console.error("Error al obtener el tiempo del servidor:", error)
   }
@@ -202,14 +231,14 @@ const minInactiveTime = 5000
 
 document.addEventListener("visibilitychange", () => {
   if (!document.hidden && Date.now() - lastRequestTime > minInactiveTime) {
-    console.log("Volviendo a la página, solicitando datos...")
+    console.log("Volviendo a pestaña, solicitando datos...")
     getServerTime()
   }
 })
 
 window.addEventListener("focus", () => {
   if (Date.now() - lastRequestTime > minInactiveTime) {
-    console.log("Ventana activa, solicitando datos...")
+    console.log("solicitando datos...")
     getServerTime()
   }
 })
