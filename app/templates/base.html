@@ -54,6 +54,27 @@ height: 150px;
   }
 }
 
+.highlight-row td {
+  background-color: rgb(236, 236, 236) !important; /* Un color de fondo diferente */
+  transition: background-color 0.3s ease;
+}
+
+.resumen-visible td {
+  position: relative;
+}
+
+.resumen-visible td::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Grosor de la sombra */
+  /* background: rgba(0, 0, 0, 0.2); */
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.3); 
+}
+
+
 </style>
 </head>
 <body class="d-flex justify-content-center align-items-center">

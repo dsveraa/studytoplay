@@ -1,13 +1,16 @@
 from flask import render_template, request, redirect, url_for, session, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
-from datetime import datetime
+from datetime import datetime, timedelta
 from sqlalchemy import desc
 
 from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura
+from app.utils.helpers import porcentaje_tiempos, sumar_tiempos
 from . import db
 
 import time
 import threading
+
+from pprint import pprint
 
 class Timer:
     def __init__(self):
@@ -259,8 +262,32 @@ def register_routes(app):
         usuario_nombre = session["usuario_nombre"]
         
         estudios = Estudio.query.filter_by(usuario_id=usuario_id).order_by(desc(Estudio.id)).all()
+
+        asignaturas = Asignatura.query.all()
+
+        asignaturas = [asignatura.nombre for asignatura in asignaturas]
+
+        datos_estudios = [{
+            'fecha_inicio': estudio.fecha_inicio,
+            'fecha_fin': estudio.fecha_fin,
+            'asignatura': estudio.asignatura.nombre if estudio.asignatura else 'No se seleccionó',
+            'asignatura_id': estudio.asignatura_id
+            }
+            for estudio in estudios]
         
-        return render_template("perfil.html", id=usuario_id, nombre=usuario_nombre, estudios=estudios)
+        total_tiempo_asignaturas = {asignatura: sumar_tiempos(datos_estudios, asignatura) for asignatura in asignaturas}
+
+        tiempo_total = sum(total_tiempo_asignaturas.values(), timedelta())
+
+        porcentajes_asignaturas = {asignatura: f'{porcentaje_tiempos(total_tiempo_asignaturas[asignatura], tiempo_total):.1f}%' for asignatura in asignaturas}
+
+        return render_template(
+            "perfil.html", 
+            id=usuario_id, 
+            nombre=usuario_nombre, 
+            estudios=estudios, 
+            asignaturas=asignaturas, 
+            porcentajes_asignaturas=porcentajes_asignaturas)
 
     @app.route("/logout")
     def logout():
@@ -270,4 +297,7 @@ def register_routes(app):
 
     @app.route("/")
     def home():
-        return render_template("login.html")
+        if "usuario_id" not in session:
+            return redirect(url_for("login"))
+        
+        return redirect(url_for("perfil"))
