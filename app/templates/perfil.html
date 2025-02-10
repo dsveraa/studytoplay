@@ -6,7 +6,7 @@
 <style>
   .progress-container {
     width: 100%;
-    background-color: #e0e0e0;
+    background-color: white;
     border-radius: 10px;
     overflow: hidden;
     height: 20px;
@@ -20,7 +20,7 @@
   }
 </style>
 
-<div class="custom-bg-1 custom-text-1 p-4 rounded-4 mb-5">
+<div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
   <p class="mb-4 text-center">Welcome, {{ nombre }}!</p>
 
 {% if not estudios %}
@@ -38,15 +38,15 @@
 
     <h2 class="mb-4 text-center mt-5">Study record</h2>
     <div class="table-responsive">
-      <table class="table table-bordered table-striped text-center">
-        <thead class="custom-bg-1">
+      <table class="table table-bordered text-center custom-text-2 !important">
+        <thead>
           <tr class="custom-text-1">
             <th>Date</th>
             <th>Time</th>
             <th>Details</th>
           </tr>
         </thead>
-        <tbody class="fs-5">
+        <tbody>
           {% for estudio in estudios %}
           <tr class="align-middle">
             <td>{{ estudio.fecha_inicio.strftime('%d-%m-%Y') }}</td>
@@ -64,8 +64,11 @@
                 <div><strong>Start:</strong> {{ estudio.fecha_inicio.strftime('%H:%M:%S') }}</div>
                 <div><strong>End:</strong> {{ estudio.fecha_fin.strftime('%H:%M:%S') }}</div>
               </div>
+              <div class="text-start mb-2">
+                <strong>Subject:</strong> {{ estudio.asignatura.nombre | capitalize }}
+              </div>
               <div class="text-start">
-                <div><strong>Summary:</strong> {{ estudio.resumen }}</div>
+                <strong>Summary:</strong> {{ estudio.resumen }}
               </div>
             </td>
           </tr>

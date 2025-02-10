@@ -26,10 +26,16 @@ a {
     color: #aaa;
 }
 .custom-bg-1 {
-    background-color: #eee;
+    background-color: rgb(180, 224, 224);
+}
+.custom-bg-2 {
+    background-color: #e9f9fc;
 }
 .custom-text-1 {
     color: #666;
+}
+.custom-text-2 {
+    color: #285058;
 }
 input::placeholder {
     color: #fff; 
@@ -47,6 +53,7 @@ height: 150px;
 .table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  background-color: white;
 }
 @media (max-width: 375px) {
   .table th, .table td {
@@ -89,7 +96,7 @@ height: 150px;
         {% block content %}
         {% endblock %}
     </div>
-    <footer class="custom-bg-1 text-white fixed-bottom">
+    <footer class="custom-bg-2 text-white fixed-bottom">
         <div class="container d-flex justify-content-center py-3">
             <a href="/perfil" class="text-white mx-3"><iconify-icon icon="mdi:folder-home" style="color: {{ '#fbc93e' if request.path == '/perfil' else '#b3b3b3' }}; font-size: 30px" ></iconify-icon></a>
             <a href="/add_time" class="text-white mx-3"><iconify-icon icon="mdi:account-school" style="color: {{ '#fbc93e' if request.path == '/add_time' else '#b3b3b3' }}; font-size: 30px" ></iconify-icon></a>
