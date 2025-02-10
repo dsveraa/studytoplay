@@ -22,55 +22,60 @@
 
 <div class="custom-bg-1 custom-text-1 p-4 rounded-4 mb-5">
   <p class="mb-4 text-center">Welcome, {{ nombre }}!</p>
-<h2 class="mb-4 text-center">Percentages of study</h2>
-{% for key, value in porcentajes_asignaturas.items() %}
-  <div class="mb-3">
-    {{ key | capitalize }}: {{ value }}%
-    <div class="progress-container">
-      <div class="progress-bar" style="width: {{ value }}%;"></div>
+
+{% if not estudios %}
+  <p class="text-center">Record your first study time <a href="/add_time" style="color:#fb7833">here</a>.</p>
+{% else %}
+  <h2 class="mb-4 text-center">Percentages of study</h2>
+  {% for key, value in porcentajes_asignaturas.items() %}
+    <div class="mb-3">
+      {{ key | capitalize }}: {{ value }}%
+      <div class="progress-container">
+        <div class="progress-bar" style="width: {{ value }}%;"></div>
+      </div>
+    </div>
+  {% endfor %}
+
+    <h2 class="mb-4 text-center mt-5">Study record</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped text-center">
+        <thead class="custom-bg-1">
+          <tr class="custom-text-1">
+            <th>Date</th>
+            <th>Time</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody class="fs-5">
+          {% for estudio in estudios %}
+          <tr class="align-middle">
+            <td>{{ estudio.fecha_inicio.strftime('%d-%m-%Y') }}</td>
+            <td>{{ (estudio.fecha_fin - estudio.fecha_inicio) }}</td>
+            <td>
+              <a class="text-decoration-none cursor-pointer" role="button" onclick="toggleDetails( {{ loop.index }} )">
+                <iconify-icon id="icon-{{ loop.index }}" icon="material-symbols:zoom-in-rounded" style="color: #fbc93e" width="32"
+                  height="32"></iconify-icon>
+              </a>
+            </td>
+          </tr>
+          <tr id="resumen-row-{{ loop.index }}" style="display: none;">
+            <td colspan="4" class="p-3">
+              <div class="d-flex justify-content-between mb-2">
+                <div><strong>Start:</strong> {{ estudio.fecha_inicio.strftime('%H:%M:%S') }}</div>
+                <div><strong>End:</strong> {{ estudio.fecha_fin.strftime('%H:%M:%S') }}</div>
+              </div>
+              <div class="text-start">
+                <div><strong>Summary:</strong> {{ estudio.resumen }}</div>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
   </div>
-{% endfor %}
-
-  <h2 class="mb-4 text-center mt-5">Study record</h2>
-  <div class="table-responsive">
-    <table class="table table-bordered table-striped text-center">
-      <thead class="custom-bg-1">
-        <tr class="custom-text-1">
-          <th>Date</th>
-          <th>Time</th>
-          <th>Details</th>
-        </tr>
-      </thead>
-      <tbody class="fs-5">
-        {% for estudio in estudios %}
-        <tr class="align-middle">
-          <td>{{ estudio.fecha_inicio.strftime('%d-%m-%Y') }}</td>
-          <td>{{ (estudio.fecha_fin - estudio.fecha_inicio) }}</td>
-          <td>
-            <a class="text-decoration-none cursor-pointer" role="button" onclick="toggleDetails( {{ loop.index }} )">
-              <iconify-icon id="icon-{{ loop.index }}" icon="material-symbols:zoom-in-rounded" style="color: #fbc93e" width="32"
-                height="32"></iconify-icon>
-            </a>
-          </td>
-        </tr>
-        <tr id="resumen-row-{{ loop.index }}" style="display: none;">
-          <td colspan="4" class="p-3">
-            <div class="d-flex justify-content-between mb-2">
-              <div><strong>Start:</strong> {{ estudio.fecha_inicio.strftime('%H:%M:%S') }}</div>
-              <div><strong>End:</strong> {{ estudio.fecha_fin.strftime('%H:%M:%S') }}</div>
-            </div>
-            <div class="text-start">
-              <div><strong>Summary:</strong> {{ estudio.resumen }}</div>
-            </div>
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>
-</div>
-<br><br>
+  <br><br>
+{% endif %}
 
 <script>
   function toggleDetails(index) {

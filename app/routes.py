@@ -263,6 +263,9 @@ def register_routes(app):
         
         estudios = Estudio.query.filter_by(usuario_id=usuario_id).order_by(desc(Estudio.id)).all()
 
+        if not estudios:
+            return render_template("perfil.html", id=usuario_id, nombre=usuario_nombre)
+
         asignaturas = Asignatura.query.all()
 
         asignaturas = [asignatura.nombre for asignatura in asignaturas]
