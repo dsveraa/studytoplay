@@ -3,37 +3,65 @@
 {% block title %}Perfil{% endblock %}
 
 {% block content %}
+<style>
+  .progress-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 5px;
+  }
+
+  .progress-bar {
+    height: 100%;
+    background-color: #fb7833;
+    transition: width 0.5s ease-in-out;
+  }
+</style>
 
 <div class="custom-bg-1 custom-text-1 p-4 rounded-4 mb-5">
   <p class="mb-4 text-center">Welcome, {{ nombre }}!</p>
-  <h2 class="mb-4 text-center">Here's your study record</h2>
+<h2 class="mb-4 text-center">Percentages of study</h2>
+{% for key, value in porcentajes_asignaturas.items() %}
+  <div class="mb-3">
+    {{ key | capitalize }}: {{ value }}%
+    <div class="progress-container">
+      <div class="progress-bar" style="width: {{ value }}%;"></div>
+    </div>
+  </div>
+{% endfor %}
+
+  <h2 class="mb-4 text-center mt-5">Study record</h2>
   <div class="table-responsive">
     <table class="table table-bordered table-striped text-center">
       <thead class="custom-bg-1">
         <tr class="custom-text-1">
           <th>Date</th>
           <th>Time</th>
-          <th>Summary</th>
+          <th>Details</th>
         </tr>
       </thead>
-      <tbody class="fs-6">
+      <tbody class="fs-5">
         {% for estudio in estudios %}
-        <tr>
+        <tr class="align-middle">
           <td>{{ estudio.fecha_inicio.strftime('%d-%m-%Y') }}</td>
           <td>{{ (estudio.fecha_fin - estudio.fecha_inicio) }}</td>
-          <td><a class="text-decoration-none cursor-pointer" role="button" onclick="toggleResumen( {{ loop.index }} )"><iconify-icon icon="ic:baseline-zoom-in" width="24" height="24"></iconify-icon></a></td>
+          <td>
+            <a class="text-decoration-none cursor-pointer" role="button" onclick="toggleDetails( {{ loop.index }} )">
+              <iconify-icon id="icon-{{ loop.index }}" icon="material-symbols:zoom-in-rounded" style="color: #fbc93e" width="32"
+                height="32"></iconify-icon>
+            </a>
+          </td>
         </tr>
         <tr id="resumen-row-{{ loop.index }}" style="display: none;">
           <td colspan="4" class="p-3">
-          
-            <div class="custom-bg-1 p-2 rounded-3">
-              <div class="d-flex justify-content-between mb-2">
-                <div><strong>Start:</strong> {{ estudio.fecha_inicio.strftime('%H:%M:%S') }}</div>
-                <div><strong>End:</strong> {{ estudio.fecha_fin.strftime('%H:%M:%S') }}</div>
-              </div>
-              <div class="text-start">
-                <div><strong>Summary:</strong> {{ estudio.resumen }}</div>
-              </div>
+            <div class="d-flex justify-content-between mb-2">
+              <div><strong>Start:</strong> {{ estudio.fecha_inicio.strftime('%H:%M:%S') }}</div>
+              <div><strong>End:</strong> {{ estudio.fecha_fin.strftime('%H:%M:%S') }}</div>
+            </div>
+            <div class="text-start">
+              <div><strong>Summary:</strong> {{ estudio.resumen }}</div>
             </div>
           </td>
         </tr>
@@ -45,24 +73,21 @@
 <br><br>
 
 <script>
-  function toggleResumen(index) {
+  function toggleDetails(index) {
     const resumenRow = document.getElementById(`resumen-row-${index}`)
+    const icon = document.getElementById(`icon-${index}`)
+
     if (resumenRow.style.display === "none") {
       resumenRow.style.display = "table-row"
+      resumenRow.classList.add("resumen-visible")
+      icon.setAttribute("icon", "material-symbols:zoom-out-rounded")
+      icon.setAttribute("style", "color: #fb7833")
     } else {
       resumenRow.style.display = "none"
-    }
-  }
+      resumenRow.classList.remove("resumen-visible")
+      icon.setAttribute("icon", "material-symbols:zoom-in-rounded")
+      icon.setAttribute("style", "color: #fbc93e")
 
-  function toggleResumen(index) {
-    const resumenRow = document.getElementById(`resumen-row-${index}`);
-
-    if (resumenRow.style.display === "none") {
-      resumenRow.style.display = "table-row";
-      resumenRow.classList.add("resumen-visible"); // Agregar sombra
-    } else {
-      resumenRow.style.display = "none";
-      resumenRow.classList.remove("resumen-visible"); // Quitar sombra
     }
   }
 </script>

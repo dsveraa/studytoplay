@@ -279,7 +279,7 @@ def register_routes(app):
 
         tiempo_total = sum(total_tiempo_asignaturas.values(), timedelta())
 
-        porcentajes_asignaturas = {asignatura: f'{porcentaje_tiempos(total_tiempo_asignaturas[asignatura], tiempo_total):.1f}%' for asignatura in asignaturas}
+        porcentajes_asignaturas = {asignatura: f'{porcentaje_tiempos(total_tiempo_asignaturas[asignatura], tiempo_total):.1f}' for asignatura in asignaturas}
 
         return render_template(
             "perfil.html", 
