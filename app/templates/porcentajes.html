@@ -1,0 +1,8 @@
+{% for key, value in porcentajes_asignaturas.items() %}
+<div class="mb-3">
+    {{ key | capitalize }}: {{ value }}%
+    <div class="progress-container">
+    <div class="progress-bar" style="width: {{ value }}%;"></div>
+    </div>
+</div>
+{% endfor %}

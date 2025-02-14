@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from sqlalchemy import desc
 
 from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura
-from app.utils.helpers import porcentaje_tiempos, sumar_tiempos
+from app.utils.helpers import asignar_estrellas, asignar_trofeos, porcentaje_tiempos, sumar_tiempos, asignar_nivel
 from . import db
 
 import time
@@ -284,13 +284,20 @@ def register_routes(app):
 
         porcentajes_asignaturas = {asignatura: f'{porcentaje_tiempos(total_tiempo_asignaturas[asignatura], tiempo_total):.1f}' for asignatura in asignaturas}
 
+        nivel = asignar_nivel(usuario_id)
+        estrellas = asignar_estrellas(usuario_id)
+        trofeos = asignar_trofeos(usuario_id)
+
         return render_template(
             "perfil.html", 
             id=usuario_id, 
             nombre=usuario_nombre, 
             estudios=estudios, 
             asignaturas=asignaturas, 
-            porcentajes_asignaturas=porcentajes_asignaturas)
+            porcentajes_asignaturas=porcentajes_asignaturas,
+            nivel=nivel,
+            estrellas=estrellas,
+            trofeos=trofeos)
 
     @app.route("/logout")
     def logout():

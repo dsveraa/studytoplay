@@ -31,10 +31,17 @@ class Usuario(db.Model):
     nombre = Column(String(50), nullable=False)
     correo = Column(String(120), unique=True, nullable=False)
     contrasena = Column(String(200), nullable=False)
-
+    
     estudios = relationship('Estudio', back_populates='usuario')
     tiempo = relationship('Tiempo', back_populates='usuario', uselist=False)
     usos = relationship('Uso', back_populates='usuario')
+
+    niveles = relationship('Nivel', backref='usuario')
+    trofeos = relationship('Trofeo', backref='usuario')
+    premios = relationship('Premio', backref='usuario')
+    acumulacion_tiempos = relationship('AcumulacionTiempo', backref='usuario')
+    estrellas = relationship('Estrella', backref='usuario')
+
     
 class Tiempo(db.Model):
     __tablename__ = 'tiempos'
@@ -75,3 +82,38 @@ class Asignatura(db.Model):
     nombre = Column(String(50), nullable=False)
 
     estudio = relationship('Estudio', back_populates='asignatura')
+  
+class Nivel(db.Model):
+    __tablename__ = "niveles"
+
+    id = Column(Integer, primary_key=True)
+    usuario_id = Column(Integer, ForeignKey('usuarios.id'))
+    nivel = Column(Integer)
+
+class Trofeo(db.Model):
+    __tablename__ = "trofeos"
+
+    id = Column(Integer, primary_key=True)
+    usuario_id = Column(Integer, ForeignKey('usuarios.id'))
+    cantidad = Column(Integer)
+
+class Premio(db.Model):
+    __tablename__ = "premios"
+
+    id = Column(Integer, primary_key=True)
+    usuario_id = Column(Integer, ForeignKey('usuarios.id'))
+    descripcion = Column(String(100))
+
+class AcumulacionTiempo(db.Model):
+    __tablename__ = "acumulacion_tiempos"
+
+    id = Column(Integer, primary_key=True)
+    usuario_id = Column(Integer, ForeignKey('usuarios.id'))
+    cantidad = Column(Integer)
+
+class Estrella(db.Model):
+    __tablename__ = 'estrellas'
+
+    id = Column(Integer, primary_key=True)
+    usuario_id = Column(Integer, ForeignKey('usuarios.id'))
+    cantidad = Column(Integer)
