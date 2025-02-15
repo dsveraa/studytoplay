@@ -20,12 +20,12 @@ def sumar_tiempos(datos_estudio, asignatura):
     return tiempo_total
 
 def porcentaje_tiempos(tiempo_asignatura, tiempo_total):
-    return (tiempo_asignatura / tiempo_total) * 100
+    return (tiempo_asignatura / tiempo_total) * 100 if tiempo_asignatura and tiempo_total else 0
 
 def revisar_nivel(id: int) -> int:
     nivel = Nivel.query.filter_by(usuario_id=id).first() 
     if nivel is None:
-        raise ValueError(f"No se encontró nivel con id {id}")
+        print(f"No se encontró nivel con id {id}")
     return nivel
 
 def mostrar_nivel(id: int) -> int:
@@ -34,13 +34,14 @@ def mostrar_nivel(id: int) -> int:
         nuevo_nivel = Nivel(usuario_id=id, nivel=0)
         db.session.add(nuevo_nivel)
         db.session.commit()
+        print(f"Se asignó nivel: 0 al id: {id}")
         return 0
     return nivel_actual.nivel
 
 def revisar_estrellas(id: int) -> int:
     estrellas = Estrella.query.filter_by(usuario_id=id).first()
     if estrellas is None:
-        raise ValueError(f"No se encontraron estrellas con id {id}")
+        print(f"No se encontraron estrellas con id {id}")
     return estrellas
 
 def mostrar_estrellas(id: int) -> int:
@@ -52,10 +53,18 @@ def mostrar_estrellas(id: int) -> int:
         return 0
     return estrellas_existentes.cantidad
 
+def crear_plantilla_estrellas(estrellas):
+    plantilla_estrellas = [1] * estrellas  
+    
+    while len(plantilla_estrellas) < 5:
+        plantilla_estrellas.append(0)
+    
+    return plantilla_estrellas
+
 def revisar_trofeos(id: int) -> int:
     trofeos = Trofeo.query.filter_by(usuario_id=id).first()
     if trofeos is None:
-        raise ValueError(f"No se encontraron trofeos con id {id}")
+        print(f"No se encontraron trofeos con id {id}")
     return trofeos
 
 def mostrar_trofeos(id: int) -> int:
@@ -79,7 +88,7 @@ def revisar_tiempo_total(id: int) -> float:
         raise ValueError(f"No se encontró tiempo total con id {id}")
     return tiempo_total
 
-HORA = 36_000_000
+HORA = 3_600_000
 CHECKPOINT = HORA * 2
 TIEMPO_MAXIMO = CHECKPOINT * 5
 BONIFICACION = CHECKPOINT // 2 

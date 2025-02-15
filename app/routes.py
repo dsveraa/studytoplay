@@ -4,13 +4,14 @@ from datetime import datetime, timedelta
 from sqlalchemy import desc
 
 from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura, AcumulacionTiempo
-from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, mostrar_estrellas, mostrar_trofeos, porcentaje_tiempos, sumar_tiempos, mostrar_nivel
+from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, mostrar_estrellas, mostrar_trofeos, porcentaje_tiempos, sumar_tiempos, mostrar_nivel
 from . import db
 
 import time
 import threading
 
 from pprint import pprint
+from typing import List, Tuple, Dict
 
 class Timer:
     def __init__(self):
@@ -293,9 +294,10 @@ def register_routes(app):
 
         porcentajes_asignaturas = {asignatura: f'{porcentaje_tiempos(total_tiempo_asignaturas[asignatura], tiempo_total):.1f}' for asignatura in asignaturas}
 
-        nivel = mostrar_nivel(usuario_id)
-        estrellas = mostrar_estrellas(usuario_id)
-        trofeos = mostrar_trofeos(usuario_id)
+        nivel: int = mostrar_nivel(usuario_id)
+        trofeos: int = mostrar_trofeos(usuario_id)
+        cantidad_estrellas: int = mostrar_estrellas(usuario_id)
+        estrellas: List[int] = crear_plantilla_estrellas(cantidad_estrellas)
 
         return render_template(
             "perfil.html", 
