@@ -3,8 +3,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime, timedelta
 from sqlalchemy import desc
 
-from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura
-from app.utils.helpers import asignar_estrellas, asignar_trofeos, porcentaje_tiempos, sumar_tiempos, asignar_nivel
+from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura, AcumulacionTiempo
+from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, mostrar_estrellas, mostrar_trofeos, porcentaje_tiempos, sumar_tiempos, mostrar_nivel
 from . import db
 
 import time
@@ -151,17 +151,26 @@ def register_routes(app):
             db.session.add(estudio)
             
             tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
+            acumulacion_tiempo = AcumulacionTiempo.query.filter_by(usuario_id=usuario_id).first()
             
             if tiempo:
-                    tiempo.tiempo += time
+                tiempo.tiempo += time
             else:
-                tiempo = Tiempo(
-                    usuario_id=usuario_id,
-                    tiempo=time
-                )
+                tiempo = Tiempo(usuario_id=usuario_id, tiempo=time)
                 db.session.add(tiempo)
+            
+            if acumulacion_tiempo:
+                acumulacion_tiempo.cantidad += time
+            else:
+                acumulacion_tiempo = AcumulacionTiempo(usuario_id=usuario_id, cantidad=time)
+                db.session.add(acumulacion_tiempo)
 
             db.session.commit()
+
+            asignar_estrellas(usuario_id)
+            asignar_nivel(usuario_id)
+            asignar_trofeos(usuario_id)
+
             return jsonify({'redirect': url_for('perfil')})
         
         return render_template("add_time.html", asignaturas=asignaturas)
@@ -284,9 +293,9 @@ def register_routes(app):
 
         porcentajes_asignaturas = {asignatura: f'{porcentaje_tiempos(total_tiempo_asignaturas[asignatura], tiempo_total):.1f}' for asignatura in asignaturas}
 
-        nivel = asignar_nivel(usuario_id)
-        estrellas = asignar_estrellas(usuario_id)
-        trofeos = asignar_trofeos(usuario_id)
+        nivel = mostrar_nivel(usuario_id)
+        estrellas = mostrar_estrellas(usuario_id)
+        trofeos = mostrar_trofeos(usuario_id)
 
         return render_template(
             "perfil.html", 

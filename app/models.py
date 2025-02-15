@@ -109,7 +109,7 @@ class AcumulacionTiempo(db.Model):
 
     id = Column(Integer, primary_key=True)
     usuario_id = Column(Integer, ForeignKey('usuarios.id'))
-    cantidad = Column(Integer)
+    cantidad = Column(Float)
 
 class Estrella(db.Model):
     __tablename__ = 'estrellas'

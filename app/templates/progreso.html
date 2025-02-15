@@ -1,3 +1,13 @@
-<p>Nivel: {{ nivel }}</p>
-<p>Estrellas: {{ estrellas }}</p>
-<p>Trofeos: {{ trofeos }}</p>
+{# <p>Stars: {{ estrellas }}</p> #}
+<div class="d-flex flex-column align-items-center mb-5">
+    <div class="mb-5 d-flex align-items-center flex-column">
+        <img src="{{ url_for('static', filename='trofeo.png') }}" alt="estrella" height="64px">
+        <div class="custom-text-3 fs-1"><strong>Trophies: {{ trofeos }}</strong></div>
+    </div>
+    <div class="d-flex justify-content-center mb-2 gap-2">
+        {% for estrella in range(estrellas) %}
+            <img src="{{ url_for('static', filename='star.png') }}" alt="estrella" height="48px">
+        {% endfor %}
+    </div>
+    <span class="custom-text-3 fs-1"><strong>Level: {{ nivel }}</strong></span>
+</div>
