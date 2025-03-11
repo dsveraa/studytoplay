@@ -1,3 +1,4 @@
+
 class Timer {
   constructor() {
     this.ms = 0
@@ -6,7 +7,7 @@ class Timer {
     this.hr = 0
     this.timerSTP = null
   }
-
+  
   start() {
     this.timerSTP = setInterval(() => {
       this.ms++
@@ -25,17 +26,17 @@ class Timer {
       UI.updateTimerDisplay(this)
     }, 10)
   }
-
+  
   stop() {
     clearInterval(this.timerSTP)
   }
-
+  
   getElapsedTime() {
     let timeElapsedInMs =
-      this.hr * 3600000 +
-      this.min * 60000 +
-      this.sec * 1000 +
-      this.ms
+    this.hr * 3600000 +
+    this.min * 60000 +
+    this.sec * 1000 +
+    this.ms
     return Math.floor(timeElapsedInMs / 100) * 100
   }
 
@@ -54,15 +55,15 @@ class UI {
     document.getElementById("minute").innerText = String(timer.min).padStart(2, "0")
     document.getElementById("hour").innerText = String(timer.hr).padStart(2, "0")
   }
-
+  
   static disableButton(button) {
     button.disabled = true
   }
-
+  
   static enableButton(button) {
     button.disabled = false
   }
-
+  
   static alert(message) {
     alert(message)
   }
@@ -76,17 +77,18 @@ const subjectInput = document.getElementById('asignaturas')
 
 let date_inicio
 let date_fin
+timerInspector()
 
 function getDate() {
   const now = new Date()
-
+  
   const year = now.getFullYear()
   const month = String(now.getMonth() + 1).padStart(2, "0")
   const day = String(now.getDate()).padStart(2, "0")
   const hours = String(now.getHours()).padStart(2, "0")
   const minutes = String(now.getMinutes()).padStart(2, "0")
   const seconds = String(now.getSeconds()).padStart(2, "0")
-
+  
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}` // "YYYY-MM-DD HH:MM:SS"
 }
 
@@ -169,3 +171,22 @@ window.addEventListener("focus", () => {
 window.addEventListener("beforeunload", () => {
   navigator.sendBeacon("/cancel")
 })
+
+function stayAwake() {
+  const message = 'Server still awake...'
+  fetch('/stay_awake', {
+    method: 'POST',
+    body: JSON.stringify({ message: message }),
+    headers: { 'Content-Type': 'application/json' }
+  }).then(response => {
+    if (!response.ok) {
+      console.error('Error al enviar el mensaje')
+    }
+  })
+}
+
+function timerInspector() {
+  timerInterval = setInterval(() => {
+    updateTimeToServer()
+  }, 60000)
+}

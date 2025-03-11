@@ -100,7 +100,13 @@ def register_routes(app):
             "sec": timer.sec,
             "ms": timer.ms
         })
-     
+
+    @app.route("/stay_awake", methods=["POST"])
+    def stay_awake():
+         data = request.get_json()
+         message = data.get('message')
+         print(message)
+    
     @app.route("/update_time", methods=["POST"])
     def update_time():
         data = request.get_json()
@@ -210,7 +216,7 @@ def register_routes(app):
             db.session.add(uso)
             
             tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
-            print("hola")
+            # print("hola")
             tiempo.tiempo = time
             db.session.add(tiempo)
 
