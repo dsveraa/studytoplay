@@ -69,6 +69,68 @@ class UI {
   }
 }
 
+class Hour {
+  constructor() {
+    this.initialTime = null
+    this.currentTime = null
+  }
+
+  async getInitialTime() {
+    this.initialTime = await this.fetchTime()
+    console.log(this.initialTime)
+  }
+  
+  async getCurrentTime() {
+    this.currentTime = await this.fetchTime()
+    console.log(this.currentTime)
+
+    if (this.initialTime) {
+      const differenceMs = this.calculateDifference()
+      return this.formatDifference(differenceMs)
+
+    }
+  }
+
+  async fetchTime() {
+    try {
+      const response = await fetch('/get_time')
+      const data = await response.json()
+      const stringToDate = new Date(data.current_time)
+      return stringToDate
+
+    } catch (error) {
+      console.error('Error al obtener la hora:', error)
+      return null
+    }
+  }
+
+  calculateDifference() {
+    if (!this.initialTime || !this.currentTime) {
+      console.error("No se puede calcular la diferencia sin ambas horas")
+      return null
+    }
+    console.log(typeof(this.currentTime))
+    const difference = this.currentTime - this.initialTime
+    console.log(difference)
+    return difference
+  }
+
+  formatDifference(differenceMs) {
+    if (differenceMs === null) return null
+
+    const ms = differenceMs % 1000
+    const totalSeconds = Math.floor(differenceMs / 1000)
+    const sec = totalSeconds % 60
+    const totalMinutes = Math.floor(totalSeconds / 60)
+    const min = totalMinutes % 60
+    const hr = Math.floor(totalMinutes / 60)
+
+    return { ms, sec, min, hr }
+  }
+
+}
+
+const hour = new Hour()
 const timer = new Timer()
 const startBtn = document.getElementById("start")
 const submitBtn = document.getElementById("stop")
@@ -77,7 +139,6 @@ const subjectInput = document.getElementById('asignaturas')
 
 let date_inicio
 let date_fin
-timerInspector()
 
 function getDate() {
   const now = new Date()
@@ -113,18 +174,14 @@ async function sendData(date_inicio, date_fin, summary, time, subject_id) {
 }
 
 startBtn.addEventListener("click", async () => {
-  try {
-    const response = await fetch("/start_clock")
-    const data = await response.json()
-    console.log(data.message)
-  } catch (error) {
-    console.error("Error al iniciar el reloj:", error)
-  }
 
   timer.start()
   date_inicio = getDate()
-  console.log(date_inicio)
+  // console.log(date_inicio)
+  // console.log(typeof(date_inicio))
   UI.disableButton(startBtn)
+
+  hour.getInitialTime()
 })
 
 submitBtn.addEventListener("click", () => {
@@ -134,59 +191,24 @@ submitBtn.addEventListener("click", () => {
     timer.stop()
     date_fin = getDate()
 
-    // console.log(timer.getElapsedTime())
     setTimeout(() => {
       sendData(date_inicio, date_fin, summaryInput.value, timer.getElapsedTime(), subjectInput.value)
     }, 1000)
   }
 })
 
-async function getServerTime() {
-  try {
-    const response = await fetch('/get_time')
-    const data = await response.json()
-    timer.setFromServer(data)
-  } catch (error) {
-    console.error("Error al obtener el tiempo del servidor:", error)
-  }
-}
+window.addEventListener("focus", async () => {
 
-let lastRequestTime = 0
-const minInactiveTime = 5000
+  console.log("Ventana activa, solicitando datos...")
 
-document.addEventListener("visibilitychange", () => {
-  if (!document.hidden && Date.now() - lastRequestTime > minInactiveTime) {
-    console.log("Volviendo a la página, solicitando datos...")
-    getServerTime()
-  }
-})
+  const timeUpdate = await hour.getCurrentTime()
 
-window.addEventListener("focus", () => {
-  if (Date.now() - lastRequestTime > minInactiveTime) {
-    console.log("Ventana activa, solicitando datos...")
-    getServerTime()
+  if (timeUpdate) {
+    timer.setFromServer(timeUpdate)
   }
+  
 })
 
 window.addEventListener("beforeunload", () => {
   navigator.sendBeacon("/cancel")
 })
-
-function stayAwake() {
-  const message = 'Server still awake...'
-  fetch('/stay_awake', {
-    method: 'POST',
-    body: JSON.stringify({ message: message }),
-    headers: { 'Content-Type': 'application/json' }
-  }).then(response => {
-    if (!response.ok) {
-      console.error('Error al enviar el mensaje')
-    }
-  })
-}
-
-function timerInspector() {
-  timerInterval = setInterval(() => {
-    updateTimeToServer()
-  }, 60000)
-}

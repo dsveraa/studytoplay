@@ -13,64 +13,12 @@ import threading
 from pprint import pprint
 from typing import List, Tuple, Dict
 
-class Timer:
-    def __init__(self):
-        self.ms = 0
-        self.sec = 0
-        self.min = 0
-        self.hr = 0
-        self.running = False
-        self.stop_event = threading.Event()
-
-timer = Timer()
-
-def start_timer():
-    if timer.running:
-        return
-    
-    timer.running = True
-    timer.stop_event.clear()
-    count = 0
-
-    while not timer.stop_event.is_set():
-        time.sleep(0.01)
-        timer.ms += 1
-
-        if timer.ms == 100:
-            timer.ms = 0
-            timer.sec += 1
-
-        if timer.sec == 60:
-            timer.sec = 0
-            timer.min += 1
-
-        if timer.min == 60:
-            timer.min = 0
-            timer.hr += 1
-
-        count += 1
-        if count % 500 == 0:
-            print(f"{timer.hr:02}:{timer.min:02}:{timer.sec:02}.{timer.ms:02}")
-
-def stop_timer():
-    timer.running = False
-    timer.stop_event.set()
-    timer.ms = 0
-    timer.sec = 0
-    timer.min = 0
-    timer.hr = 0
-    print("Reloj detenido.")
-
-def convertir_milisegundos(ms):
-    hr = ms // 3600000
-    ms %= 3600000
-    min = ms // 60000
-    ms %= 60000
-    sec = ms // 1000
-    ms %= 1000
-    return hr, min, sec, ms
-
 def register_routes(app):
+    @app.route('/get_time')
+    def get_time():
+        current_time = datetime.now()
+        return jsonify({'current_time': current_time})
+
     @app.route('/stamp_time')
     def start_countdown():
         session["start_time"] = datetime.now()
@@ -84,29 +32,7 @@ def register_routes(app):
         updated_time = str(session["initial_time"] - time_difference)
         print('updated_time:', type(updated_time), 'value=', updated_time)
         return jsonify({'updated_time': updated_time})
-    
-    @app.route('/start_clock')
-    def start_clock():
-        if not timer.running:
-            timer_thread = threading.Thread(target=start_timer, daemon=True)
-            timer_thread.start()
-        return jsonify({"message": "Timer started"})
-
-    @app.route('/get_time')
-    def get_time():
-        return jsonify({
-            "hr": timer.hr,
-            "min": timer.min,
-            "sec": timer.sec,
-            "ms": timer.ms
-        })
-
-    @app.route("/stay_awake", methods=["POST"])
-    def stay_awake():
-         data = request.get_json()
-         message = data.get('message')
-         print(message)
-    
+       
     @app.route("/update_time", methods=["POST"])
     def update_time():
         data = request.get_json()
@@ -122,7 +48,6 @@ def register_routes(app):
 
     @app.route("/cancel", methods=["GET", "POST"])
     def cancel():
-        stop_timer()
         return redirect(url_for('perfil'))
 
     @app.route("/add_time", methods=["GET", "POST"])
@@ -133,7 +58,6 @@ def register_routes(app):
             return redirect(url_for("login"))
         
         if request.method == 'POST':
-            stop_timer()
 
             data = request.get_json()
             
@@ -328,3 +252,4 @@ def register_routes(app):
             return redirect(url_for("login"))
         
         return redirect(url_for("perfil"))
+    
