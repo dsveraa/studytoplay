@@ -7,8 +7,6 @@ from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura, AcumulacionTie
 from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, mostrar_estrellas, mostrar_trofeos, porcentaje_tiempos, sumar_tiempos, mostrar_nivel
 from . import db
 
-import time
-import threading
 
 from pprint import pprint
 from typing import List, Tuple, Dict
@@ -18,21 +16,7 @@ def register_routes(app):
     def get_time():
         current_time = datetime.now()
         return jsonify({'current_time': current_time})
-
-    @app.route('/stamp_time')
-    def start_countdown():
-        session["start_time"] = datetime.now()
-        return jsonify({'message': 'se inició la cuenta regresiva'})
-    
-    @app.route('/redeem_time')
-    def redeem_time():
-        time_now = datetime.now()
-        start_time = session.get("start_time")
-        time_difference = (time_now - start_time.replace(tzinfo=None)).total_seconds() * 1000
-        updated_time = str(session["initial_time"] - time_difference)
-        print('updated_time:', type(updated_time), 'value=', updated_time)
-        return jsonify({'updated_time': updated_time})
-       
+         
     @app.route("/update_time", methods=["POST"])
     def update_time():
         data = request.get_json()
@@ -116,8 +100,6 @@ def register_routes(app):
         tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
         tiempo_valor = tiempo.tiempo if tiempo else 0
 
-        session["initial_time"] = tiempo_valor
-
         if request.method == 'POST':
             data = request.get_json()
             
@@ -140,7 +122,6 @@ def register_routes(app):
             db.session.add(uso)
             
             tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
-            # print("hola")
             tiempo.tiempo = time
             db.session.add(tiempo)
 
@@ -188,6 +169,7 @@ def register_routes(app):
             if usuario and check_password_hash(usuario.contrasena, contrasena):
                 session["usuario_id"] = usuario.id
                 session["usuario_nombre"] = usuario.nombre
+                session.permanent = True
                 return redirect(url_for("perfil"))
             else:
                 return "Correo o contraseña incorrectos."

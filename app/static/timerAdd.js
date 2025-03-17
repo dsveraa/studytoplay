@@ -7,7 +7,7 @@ class Timer {
     this.hr = 0
     this.timerSTP = null
   }
-  
+
   start() {
     this.timerSTP = setInterval(() => {
       this.ms++
@@ -26,17 +26,17 @@ class Timer {
       UI.updateTimerDisplay(this)
     }, 10)
   }
-  
+
   stop() {
     clearInterval(this.timerSTP)
   }
-  
+
   getElapsedTime() {
     let timeElapsedInMs =
-    this.hr * 3600000 +
-    this.min * 60000 +
-    this.sec * 1000 +
-    this.ms
+      this.hr * 3600000 +
+      this.min * 60000 +
+      this.sec * 1000 +
+      this.ms
     return Math.floor(timeElapsedInMs / 100) * 100
   }
 
@@ -55,15 +55,15 @@ class UI {
     document.getElementById("minute").innerText = String(timer.min).padStart(2, "0")
     document.getElementById("hour").innerText = String(timer.hr).padStart(2, "0")
   }
-  
+
   static disableButton(button) {
     button.disabled = true
   }
-  
+
   static enableButton(button) {
     button.disabled = false
   }
-  
+
   static alert(message) {
     alert(message)
   }
@@ -79,7 +79,7 @@ class Hour {
     this.initialTime = await this.fetchTime()
     console.log(this.initialTime)
   }
-  
+
   async getCurrentTime() {
     this.currentTime = await this.fetchTime()
     console.log(this.currentTime)
@@ -109,7 +109,7 @@ class Hour {
       console.error("No se puede calcular la diferencia sin ambas horas")
       return null
     }
-    console.log(typeof(this.currentTime))
+    console.log(typeof (this.currentTime))
     const difference = this.currentTime - this.initialTime
     console.log(difference)
     return difference
@@ -142,14 +142,14 @@ let date_fin
 
 function getDate() {
   const now = new Date()
-  
+
   const year = now.getFullYear()
   const month = String(now.getMonth() + 1).padStart(2, "0")
   const day = String(now.getDate()).padStart(2, "0")
   const hours = String(now.getHours()).padStart(2, "0")
   const minutes = String(now.getMinutes()).padStart(2, "0")
   const seconds = String(now.getSeconds()).padStart(2, "0")
-  
+
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}` // "YYYY-MM-DD HH:MM:SS"
 }
 
@@ -173,7 +173,7 @@ async function sendData(date_inicio, date_fin, summary, time, subject_id) {
   }
 }
 
-startBtn.addEventListener("click", async () => {
+startBtn.addEventListener("click", () => {
 
   timer.start()
   date_inicio = getDate()
@@ -181,7 +181,7 @@ startBtn.addEventListener("click", async () => {
   // console.log(typeof(date_inicio))
   UI.disableButton(startBtn)
 
-  hour.getInitialTime()
+  hour.getInitialDate()
 })
 
 submitBtn.addEventListener("click", () => {
@@ -201,12 +201,12 @@ window.addEventListener("focus", async () => {
 
   console.log("Ventana activa, solicitando datos...")
 
-  const timeUpdate = await hour.getCurrentTime()
+  const timeUpdate = await hour.getCurrentDate()
 
   if (timeUpdate) {
     timer.setFromServer(timeUpdate)
   }
-  
+
 })
 
 window.addEventListener("beforeunload", () => {

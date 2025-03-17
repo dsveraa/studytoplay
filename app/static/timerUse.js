@@ -35,7 +35,7 @@ class Timer {
     clearInterval(this.timerSTP)
   }
 
-  getRemainingTime() { 
+  getRemainingTime() {
     let timeElapsedInMs =
       this.hr * 3600000 +
       this.min * 60000 +
@@ -43,7 +43,7 @@ class Timer {
       this.ms
 
     const elapsedTimeMs = Math.floor(timeElapsedInMs / 100) * 100
-    
+
     return elapsedTimeMs
   }
 
@@ -64,8 +64,78 @@ class Timer {
   }
 }
 
+class Hour {
+  constructor() {
+    this.initialTime = null
+    this.initialDate = null
+    this.currentDate = null
+  }
+
+  getInitialTime() {
+    this.initialTime = initialTime
+    console.log(`tiempo inicial: ${this.initialTime}`) 
+  }
+
+  async getInitialDate() {
+    this.initialDate = await this.fetchTime()
+    console.log(`fecha inicial: ${this.initialDate}`)
+  }
+
+  async getCurrentDate() {
+    this.currentDate = await this.fetchTime()
+    console.log(`fecha actual: ${this.currentDate}`)
+
+    if (this.initialDate) {
+      const differenceMs = this.calculateDifference()
+      const currentTime = this.initialTime - differenceMs
+      return this.formatDifference(currentTime)
+
+    }
+  }
+
+  async fetchTime() {
+    try {
+      const response = await fetch('/get_time')
+      const data = await response.json()
+      const stringToDate = new Date(data.current_time)
+      return stringToDate
+
+    } catch (error) {
+      console.error('Error al obtener la hora:', error)
+      return null
+    }
+  }
+
+  calculateDifference() {
+    if (!this.initialDate || !this.currentDate) {
+      console.error("No se puede calcular la diferencia sin ambas horas")
+      return null
+    }
+    console.log(`tipo de dato currentTime: ${typeof (this.currentDate)}`)
+    const difference = this.currentDate - this.initialDate
+    console.log(`diferencia entre dates: ${difference}`)
+    return difference
+  }
+
+  formatDifference(differenceMs) {
+    if (differenceMs === null) return null
+
+    const ms = differenceMs % 1000
+    const totalSeconds = Math.floor(differenceMs / 1000)
+    const sec = totalSeconds % 60
+    const totalMinutes = Math.floor(totalSeconds / 60)
+    const min = totalMinutes % 60
+    const hr = Math.floor(totalMinutes / 60)
+
+    return { ms, sec, min, hr }
+  }
+
+}
+
+const hour = new Hour()
+
 const initialTime = document.querySelector('.tiempo').textContent.trim() // ms: str
-console.log(initialTime, typeof(initialTime))
+console.log(initialTime, typeof (initialTime))
 const startBtn = document.querySelector("#start")
 const stopBtn = document.querySelector("#stop")
 const brokenDownTime = breakDownTime(initialTime)
@@ -89,9 +159,9 @@ function breakDownTime(time) {
 }
 
 const timer = new Timer(
-  brokenDownTime.ms, 
-  brokenDownTime.sec, 
-  brokenDownTime.min, 
+  brokenDownTime.ms,
+  brokenDownTime.sec,
+  brokenDownTime.min,
   brokenDownTime.hr)
 
 class UI {
@@ -100,11 +170,11 @@ class UI {
     document.querySelector('.minute').innerText = String(timer.min).padStart(2, "0")
     document.querySelector('.hour').innerText = String(timer.hr).padStart(2, "0")
   }
-  
+
   static disableButton(button) {
     button.disabled = true
   }
-  
+
   static enableButton(button) {
     button.disabled = false
   }
@@ -129,20 +199,17 @@ function getDate() {
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
 }
 
-startBtn.addEventListener("click", async () => {
-  try {
-    const response = await fetch("/stamp_time")
-    const data = await response.json()
-    console.log(data.message)
-  } catch (error) {
-    console.error("Error al iniciar la cuenta regresiva:", error)
-  }
+startBtn.addEventListener("click", () => {
 
   timer.start()
   timerInspector()
   date_inicio = getDate()
   UI.enableButton(stopBtn)
   UI.disableButton(startBtn)
+
+  hour.getInitialTime()
+  hour.getInitialDate()
+
 })
 
 stopBtn.addEventListener("click", () => {
@@ -209,36 +276,16 @@ function updateTimeToServer() {
 function timerInspector() {
   timerInterval = setInterval(() => {
     updateTimeToServer()
-  }, 5000)
+  }, 300000)
 }
 
-async function getServerTime() {
-  try {
-    const response = await fetch('/redeem_time')
-    const data = await response.json()
-    console.log(data)
-    const time = data.updated_time
-    const updatedTime = breakDownTime(time)
-    console.log(updatedTime)
-    timer.setFromServer(updatedTime)
-  } catch (error) {
-    console.error("Error al obtener el tiempo del servidor:", error)
-  }
-}
+window.addEventListener("focus", async () => {
 
-let lastRequestTime = 0
-const minInactiveTime = 5000
+  console.log("Ventana activa, solicitando datos...")
 
-document.addEventListener("visibilitychange", () => {
-  if (!document.hidden && Date.now() - lastRequestTime > minInactiveTime) {
-    console.log("Volviendo a pestaña, solicitando datos...")
-    getServerTime()
-  }
-})
+  const timeUpdate = await hour.getCurrentDate()
 
-window.addEventListener("focus", () => {
-  if (Date.now() - lastRequestTime > minInactiveTime) {
-    console.log("solicitando datos...")
-    getServerTime()
+  if (timeUpdate) {
+    timer.setFromServer(timeUpdate)
   }
 })
