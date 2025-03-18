@@ -41,6 +41,7 @@ class Usuario(db.Model):
     premios = relationship('Premio', backref='usuario')
     acumulacion_tiempos = relationship('AcumulacionTiempo', backref='usuario')
     estrellas = relationship('Estrella', backref='usuario')
+    asignaturas = relationship('Asignatura', backref='usuario')
 
     
 class Tiempo(db.Model):
@@ -80,6 +81,7 @@ class Asignatura(db.Model):
 
     id = Column(Integer, primary_key=True)
     nombre = Column(String(50), nullable=False)
+    usuario_id = Column(Integer, ForeignKey('usuarios.id'))
 
     estudio = relationship('Estudio', back_populates='asignatura')
   

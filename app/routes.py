@@ -36,10 +36,13 @@ def register_routes(app):
 
     @app.route("/add_time", methods=["GET", "POST"])
     def add_time():
-        asignaturas_obj = Asignatura.query.all()
-        asignaturas = [{'id': asignatura.id, 'nombre': asignatura.nombre} for asignatura in asignaturas_obj]
         if "usuario_id" not in session:
             return redirect(url_for("login"))
+        
+        usuario_id = session.get("usuario_id")
+
+        asignaturas_obj = Asignatura.query.filter_by(usuario_id=usuario_id).all()
+        asignaturas = [{'id': asignatura.id, 'nombre': asignatura.nombre} for asignatura in asignaturas_obj]
         
         if request.method == 'POST':
 
@@ -51,8 +54,6 @@ def register_routes(app):
             time = data.get('time')
             subject_id = data.get('subject_id')
             
-            usuario_id = session.get("usuario_id")
-
             fecha_inicio = datetime.strptime(start, "%Y-%m-%d %H:%M:%S")
             fecha_fin = datetime.strptime(end, "%Y-%m-%d %H:%M:%S")
 
@@ -188,7 +189,7 @@ def register_routes(app):
         if not estudios:
             return render_template("perfil.html", id=usuario_id, nombre=usuario_nombre)
 
-        asignaturas = Asignatura.query.all()
+        asignaturas = Asignatura.query.filter_by(usuario_id=usuario_id).all()
 
         asignaturas = [asignatura.nombre for asignatura in asignaturas]
 
