@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from decouple import config
 from datetime import timedelta
+import markdown
 
 
 db = SQLAlchemy()
@@ -22,5 +23,9 @@ def create_app():
     from .routes import register_routes
 
     register_routes(app)
+
+    @app.template_filter('markdown')
+    def markdown_filter(text):
+        return markdown.markdown(text)
 
     return app
