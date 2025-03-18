@@ -201,7 +201,7 @@ window.addEventListener("focus", async () => {
 
   console.log("Ventana activa, solicitando datos...")
 
-  const timeUpdate = await hour.getCurrentDate()
+  const timeUpdate = await hour.getCurrentTime()
 
   if (timeUpdate) {
     timer.setFromServer(timeUpdate)
