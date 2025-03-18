@@ -86,6 +86,7 @@ class Hour {
 
     if (this.initialTime) {
       const differenceMs = this.calculateDifference()
+      console.log(differenceMs)
       return this.formatDifference(differenceMs)
 
     }
@@ -181,7 +182,7 @@ startBtn.addEventListener("click", () => {
   // console.log(typeof(date_inicio))
   UI.disableButton(startBtn)
 
-  hour.getInitialDate()
+  hour.getInitialTime()
 })
 
 submitBtn.addEventListener("click", () => {
@@ -202,6 +203,7 @@ window.addEventListener("focus", async () => {
   console.log("Ventana activa, solicitando datos...")
 
   const timeUpdate = await hour.getCurrentTime()
+  console.log(timeUpdate, typeof(timeUpdate))
 
   if (timeUpdate) {
     timer.setFromServer(timeUpdate)
