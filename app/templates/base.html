@@ -87,7 +87,7 @@ height: 150px;
 <body class="d-flex justify-content-center align-items-center">
     <div class="container">
         <div class="d-flex justify-content-center mt-3">
-            {% if request.path == '/login' or request.path == '/registro' or request.path == '/' or request.path == '/perfil' %}
+            {% if request.path != '/add_time' or request.path != '/use_time' %}
             <img src="{{ url_for('static', filename='logo.png') }}" alt="logo study to play" style="max-width: 100%; height: auto;">
             {% endif %}
 

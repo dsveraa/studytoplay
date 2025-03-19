@@ -61,8 +61,12 @@
               <div class="text-start mb-2">
                 <strong>Subject:</strong> {{ estudio.asignatura.nombre | capitalize }}
               </div>
+              <div class="d-flex justify-content-between">
+                <strong>Summary:</strong>
+                <a href="/edit_record/{{ estudio.id }}"><iconify-icon icon="mdi:comment-edit" width="24" height="24" style="color: {{ '#fbc93e' }}"></iconify-icon></a>
+              </div>
               <div class="text-start">
-                <strong>Summary:</strong> <p style="white-space: pre-line;">{{ estudio.resumen | markdown | safe }}</p>
+                <p style="white-space: pre-line;">{{ estudio.resumen | markdown | safe }}</p>
               </div>
             </td>
           </tr>

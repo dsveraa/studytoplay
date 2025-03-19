@@ -106,8 +106,8 @@ def asignar_estrellas(id: int) -> int:
             estrellas_obj.cantidad = estrellas
             print(f'{estrellas=}')
             db.session.commit()
+            print(f'Has ganado una nueva estrella, ¡felicidades!, tienes {estrellas} en total.') if estrellas_iniciales < estrellas_obj.cantidad else None
             break
-    return print(f'Has ganado una nueva estrella, ¡felicidades!, tienes {estrellas} en total.') if estrellas_iniciales < estrellas_obj.cantidad else None
 
 
 def asignar_nivel(id: int) -> int:

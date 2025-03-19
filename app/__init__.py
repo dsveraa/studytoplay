@@ -26,6 +26,6 @@ def create_app():
 
     @app.template_filter('markdown')
     def markdown_filter(text):
-        return markdown.markdown(text)
+        return markdown.markdown(text, extensions=["extra", "fenced_code", "tables"])
 
     return app

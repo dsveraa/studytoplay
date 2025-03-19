@@ -12,6 +12,21 @@ from pprint import pprint
 from typing import List, Tuple, Dict
 
 def register_routes(app):
+    @app.route('/edit_record/<id>', methods=["GET", "POST"])
+    def edit_record(id):
+        usuario_id = session.get("usuario_id")
+        summary_obj = Estudio.query.filter_by(id=id, usuario_id=usuario_id).first()
+        summary = summary_obj.resumen
+
+        if request.method == 'POST':
+            data = request.get_json()
+            summary = data.get('summary')
+            summary_obj.resumen = summary
+            db.session.commit()
+            return redirect(url_for("perfil"))
+
+        return render_template("edit_record.html", summary=summary)
+
     @app.route('/get_time')
     def get_time():
         current_time = datetime.now()
