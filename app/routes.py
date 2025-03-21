@@ -191,6 +191,33 @@ def register_routes(app):
                 return "Correo o contraseña incorrectos."
         return render_template("login.html")
 
+    @app.route("/records")
+    @app.route("/records/<activity_id>")
+    def records(activity_id=None):
+        if "usuario_id" not in session:
+            return redirect(url_for("login"))
+        
+        usuario_id = session.get("usuario_id")
+        asignaturas_obj = Asignatura.query.filter_by(usuario_id=usuario_id).all()
+
+        if activity_id:
+            activity_obj = Estudio.query.filter_by(usuario_id=usuario_id, asignatura_id=activity_id).order_by(desc(Estudio.id)).all()
+            nombre_asignatura_obj = Asignatura.query.filter_by(id=activity_id).first()
+            nombre_asignatura = nombre_asignatura_obj.nombre if nombre_asignatura_obj else "Desconocida"
+        else:
+            activity_obj = Estudio.query.filter_by(usuario_id=usuario_id).order_by(desc(Estudio.id)).limit(20).all()
+            nombre_asignatura = "Latest"
+        
+        # pendiente, que muestre una lista de registros de todas las asignaturas en la primera vista por defecto.
+        
+        return render_template("records.html", 
+                               estudios=activity_obj, 
+                               asignaturas=asignaturas_obj, 
+                               nombre_asignatura=nombre_asignatura
+                               )
+
+        
+    
     @app.route("/perfil")
     def perfil():
         if "usuario_id" not in session:
@@ -204,9 +231,9 @@ def register_routes(app):
         if not estudios:
             return render_template("perfil.html", id=usuario_id, nombre=usuario_nombre)
 
-        asignaturas = Asignatura.query.filter_by(usuario_id=usuario_id).all()
+        asignaturas_obj = Asignatura.query.filter_by(usuario_id=usuario_id).all()
 
-        asignaturas = [asignatura.nombre for asignatura in asignaturas]
+        asignaturas_nombre = [asignatura.nombre for asignatura in asignaturas_obj]
 
         datos_estudios = [{
             'fecha_inicio': estudio.fecha_inicio,
@@ -216,11 +243,11 @@ def register_routes(app):
             }
             for estudio in estudios]
         
-        total_tiempo_asignaturas = {asignatura: sumar_tiempos(datos_estudios, asignatura) for asignatura in asignaturas}
+        total_tiempo_asignaturas = {asignatura: sumar_tiempos(datos_estudios, asignatura) for asignatura in asignaturas_nombre}
 
         tiempo_total = sum(total_tiempo_asignaturas.values(), timedelta())
 
-        porcentajes_asignaturas = {asignatura: f'{porcentaje_tiempos(total_tiempo_asignaturas[asignatura], tiempo_total):.1f}' for asignatura in asignaturas}
+        porcentajes_asignaturas = {asignatura: f'{porcentaje_tiempos(total_tiempo_asignaturas[asignatura], tiempo_total):.1f}' for asignatura in asignaturas_nombre}
 
         nivel: int = mostrar_nivel(usuario_id)
         trofeos: int = mostrar_trofeos(usuario_id)
@@ -232,7 +259,7 @@ def register_routes(app):
             id=usuario_id, 
             nombre=usuario_nombre, 
             estudios=estudios, 
-            asignaturas=asignaturas, 
+            asignaturas=asignaturas_obj, 
             porcentajes_asignaturas=porcentajes_asignaturas,
             nivel=nivel,
             estrellas=estrellas,

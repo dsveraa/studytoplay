@@ -3,99 +3,20 @@
 {% block title %}Perfil{% endblock %}
 
 {% block content %}
-<style>
-  .progress-container {
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 20px;
-    margin-top: 5px;
-  }
-
-  .progress-bar {
-    height: 100%;
-    background-color: #fb7833;
-    transition: width 0.5s ease-in-out;
-  }
-</style>
 
 <div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
   <p class="mb-4 text-center">Welcome, {{ nombre }}!</p>
 
   {% include 'progreso.html'%}
 
-{% if not estudios %}
-  <p class="text-center">Record your first study time <a href="/add_time" style="color:#fb7833">here</a>.</p>
-{% else %}
-  <h2 class="mb-4 text-center">Percentages of study</h2>
-  {% include 'porcentajes.html'%}
-    <h2 class="mb-4 text-center mt-5">Study record</h2>
-    <div class="table-responsive">
-      <table class="table table-bordered text-center custom-text-2 !important">
-        <thead>
-          <tr class="custom-text-1">
-            <th>Date</th>
-            <th>Time</th>
-            <th>Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for estudio in estudios %}
-          <tr class="align-middle">
-            <td>{{ estudio.fecha_inicio.strftime('%d-%m-%Y') }}</td>
-            <td>{{ (estudio.fecha_fin - estudio.fecha_inicio) }}</td>
-            <td>
-              <a class="text-decoration-none cursor-pointer" role="button" onclick="toggleDetails( {{ loop.index }} )">
-                <iconify-icon id="icon-{{ loop.index }}" icon="material-symbols:zoom-in-rounded" style="color: #fbc93e" width="32"
-                  height="32"></iconify-icon>
-              </a>
-            </td>
-          </tr>
-          <tr id="resumen-row-{{ loop.index }}" style="display: none;">
-            <td colspan="4" class="p-3">
-              <div class="d-flex justify-content-between mb-2">
-                <div><strong>Start:</strong> {{ estudio.fecha_inicio.strftime('%H:%M:%S') }}</div>
-                <div><strong>End:</strong> {{ estudio.fecha_fin.strftime('%H:%M:%S') }}</div>
-              </div>
-              <div class="text-start mb-2">
-                <strong>Subject:</strong> {{ estudio.asignatura.nombre | capitalize }}
-              </div>
-              <div class="d-flex justify-content-between">
-                <strong>Summary:</strong>
-                <a href="/edit_record/{{ estudio.id }}"><iconify-icon icon="mdi:comment-edit" width="24" height="24" style="color: {{ '#fbc93e' }}"></iconify-icon></a>
-              </div>
-              <div class="text-start">
-                <p style="white-space: pre-line;">{{ estudio.resumen | markdown | safe }}</p>
-              </div>
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
+  {% if not estudios %}
+    <p class="text-center">Record your first study time <a href="/add_time" style="color:#fb7833">here</a>.</p>
+  {% else %}
+    <h2 class="mb-4 text-center">Percentages of study</h2>
+    {% include 'porcentajes.html'%}
+    {# <h2 class="mb-4 text-center mt-5" id="study-record-title">Latest study records</h2> #}
+    {# {% include 'record_list.html' %} #}
   </div>
-  <br><br>
-{% endif %}
-
-<script>
-  function toggleDetails(index) {
-    const resumenRow = document.getElementById(`resumen-row-${index}`)
-    const icon = document.getElementById(`icon-${index}`)
-
-    if (resumenRow.style.display === "none") {
-      resumenRow.style.display = "table-row"
-      resumenRow.classList.add("resumen-visible")
-      icon.setAttribute("icon", "material-symbols:zoom-out-rounded")
-      icon.setAttribute("style", "color: #fb7833")
-    } else {
-      resumenRow.style.display = "none"
-      resumenRow.classList.remove("resumen-visible")
-      icon.setAttribute("icon", "material-symbols:zoom-in-rounded")
-      icon.setAttribute("style", "color: #fbc93e")
-
-    }
-  }
-</script>
+  {% endif %}
 
 {% endblock %}

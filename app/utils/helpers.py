@@ -101,8 +101,15 @@ def asignar_estrellas(id: int) -> int:
     estrellas_iniciales = estrellas_obj.cantidad
     nivel_estrellas = [5, 4, 3, 2, 1]
 
+
     for estrellas in nivel_estrellas:
         if tiempo >= CHECKPOINT * estrellas:
+            ''' CP * 5 = 36_000_000
+                CP * 4 = 28_800_000
+                CP * 3 = 21_600_000
+                CP * 2 = 14_400_000
+                CP * 1 = 7_200_000 
+            '''
             estrellas_obj.cantidad = estrellas
             print(f'{estrellas=}')
             db.session.commit()

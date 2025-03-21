@@ -14,12 +14,24 @@ body {
     background-color: #fb7833;
     color: #fff;
 }
+.custom-btn:hover {
+    background-color: #f06317;
+    color: #fff;
+}
 .custom-btn-2 {
     background-color: #fbc93e;
     color: #fff;
 }
+.custom-btn-2:hover {
+    background-color: #ffbb00;
+    color: #fff;
+}
 .custom-btn-3 {
     background-color: #b3b3b3;
+    color: #fff;
+}
+.custom-btn-3:hover {
+    background-color: #999999;
     color: #fff;
 }
 a {
@@ -87,7 +99,7 @@ height: 150px;
 <body class="d-flex justify-content-center align-items-center">
     <div class="container">
         <div class="d-flex justify-content-center mt-3">
-            {% if request.path != '/add_time' or request.path != '/use_time' %}
+            {% if request.path != '/add_time' and request.path != '/use_time' %}
             <img src="{{ url_for('static', filename='logo.png') }}" alt="logo study to play" style="max-width: 100%; height: auto;">
             {% endif %}
 
@@ -104,7 +116,8 @@ height: 150px;
     </div>
     <footer class="custom-bg-2 text-white fixed-bottom shadow-bar">
         <div class="container d-flex justify-content-center py-3">
-            <a href="/perfil" class="text-white mx-3"><iconify-icon icon="mdi:folder-home" style="color: {{ '#fbc93e' if request.path == '/perfil' else '#b3b3b3' }}; font-size: 30px" ></iconify-icon></a>
+            <a href="/perfil" class="text-white mx-3"><iconify-icon icon="mdi:star-circle" style="color: {{ '#fbc93e' if request.path == '/perfil' else '#b3b3b3' }}; font-size: 30px" ></iconify-icon></a>
+            <a href="/records" class="text-white mx-3"><iconify-icon icon="mdi:folder-home" style="color: {{ '#fbc93e' if request.path == '/records' else '#b3b3b3' }}; font-size: 30px" ></iconify-icon></a>
             <a href="/add_time" class="text-white mx-3"><iconify-icon icon="mdi:account-school" style="color: {{ '#fbc93e' if request.path == '/add_time' else '#b3b3b3' }}; font-size: 30px" ></iconify-icon></a>
             <a href="/use_time" class="text-white mx-3"><iconify-icon icon="mdi:play-circle" style="color: {{ '#fbc93e' if request.path == '/use_time' else '#b3b3b3' }}; font-size: 30px" ></iconify-icon></a>
             <a href="/logout" class="text-white mx-3"><iconify-icon icon="mdi:location-exit" style="color: {{ '#b3b3b3' if session.get("usuario_nombre") == None else '#fa7266' }}; font-size: 30px" ></iconify-icon></a>
@@ -114,4 +127,3 @@ height: 150px;
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.2.0/dist/iconify-icon.min.js"></script>
 </body>
 </html>
-
