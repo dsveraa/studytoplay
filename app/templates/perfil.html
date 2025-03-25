@@ -6,16 +6,18 @@
 
 <div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
   <p class="mb-4 text-center">Welcome, {{ nombre }}!</p>
-
-  {% include 'progreso.html'%}
-
-  {% if not estudios %}
+{% if not estudios %}
     <p class="text-center">Record your first study time <a href="/add_time" style="color:#fb7833">here</a>.</p>
-  {% else %}
+</div>
+<br><br>
+{% else %}
+  {% include 'progreso.html'%}
+</div>
+<div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
     <h2 class="mb-4 text-center">Percentages of study</h2>
     {% include 'porcentajes.html'%}
-  </div>
-  <br><br>
-  {% endif %}
+</div>
+<br><br>
+{% endif %}
 
 {% endblock %}

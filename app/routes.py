@@ -97,10 +97,11 @@ def register_routes(app):
                 db.session.add(acumulacion_tiempo)
 
             db.session.commit()
-
+            db.session.refresh(acumulacion_tiempo)
             asignar_estrellas(usuario_id)
             asignar_nivel(usuario_id)
             asignar_trofeos(usuario_id)
+            
 
             return jsonify({'redirect': url_for('perfil')})
         
