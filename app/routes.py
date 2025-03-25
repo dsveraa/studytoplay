@@ -116,6 +116,8 @@ def register_routes(app):
         tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
         tiempo_valor = tiempo.tiempo if tiempo else 0
 
+        
+
         if request.method == 'POST':
             data = request.get_json()
             
