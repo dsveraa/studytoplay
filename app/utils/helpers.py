@@ -88,7 +88,7 @@ def revisar_tiempo_total(id: int) -> float:
         raise ValueError(f"No se encontró tiempo total con id {id}")
     return tiempo_total
 
-HORA = 3_600_000
+HORA = 2000
 CHECKPOINT = HORA * 2
 TIEMPO_MAXIMO = CHECKPOINT * 5
 BONIFICACION = CHECKPOINT // 2 
@@ -141,3 +141,4 @@ def asignar_trofeos(id: int) -> int:
         nivel_obj.nivel = 0
         db.session.commit()
         return print(f'Has ganado un nuevo trofeo! Tienes {trofeos_obj.cantidad} en total.')
+
