@@ -1,0 +1,57 @@
+<div class="table-responsive">
+  <table class="table table-bordered text-center custom-text-2 !important">
+    <thead>
+      <tr class="custom-text-1">
+        <th>Date</th>
+        <th>Time</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for uso in usos %}
+      <tr class="align-middle">
+        <td>{{ uso.fecha_inicio.strftime('%d-%m-%Y') }}</td>
+        <td>{{ (uso.fecha_fin - uso.fecha_inicio) }}</td>
+        <td>
+          <a class="text-decoration-none cursor-pointer" role="button" onclick="toggleDetails( {{ loop.index }} )">
+            <iconify-icon id="icon-{{ loop.index }}" icon="material-symbols:zoom-in-rounded" style="color: #fbc93e" width="32"
+              height="32"></iconify-icon>
+          </a>
+        </td>
+      </tr>
+      <tr id="resumen-row-{{ loop.index }}" style="display: none;">
+        <td colspan="4" class="p-3">
+          <div class="d-flex justify-content-between mb-2">
+            <div><strong>Start:</strong> {{ uso.fecha_inicio.strftime('%H:%M:%S') }}</div>
+            <div><strong>End:</strong> {{ uso.fecha_fin.strftime('%H:%M:%S') }}</div>
+          </div>
+          
+          <div class="text-start">
+            <strong>Activity:</strong><span style="white-space: pre-line;"> {{ uso.actividad or "" | markdown | safe }}</span>            
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<script>
+  function toggleDetails(index) {
+    const resumenRow = document.getElementById(`resumen-row-${index}`)
+    const icon = document.getElementById(`icon-${index}`)
+
+    if (resumenRow.style.display === "none") {
+      resumenRow.style.display = "table-row"
+      resumenRow.classList.add("resumen-visible")
+      icon.setAttribute("icon", "material-symbols:zoom-out-rounded")
+      icon.setAttribute("style", "color: #fb7833")
+    } else {
+      resumenRow.style.display = "none"
+      resumenRow.classList.remove("resumen-visible")
+      icon.setAttribute("icon", "material-symbols:zoom-in-rounded")
+      icon.setAttribute("style", "color: #fbc93e")
+
+    }
+  }
+</script>

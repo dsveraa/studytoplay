@@ -214,24 +214,30 @@ startBtn.addEventListener("click", () => {
 
 stopBtn.addEventListener("click", () => {
   Swal.fire({
-    title: "¿Estás seguro?",
-    text: "Esto detendrá el cronómetro.",
-    icon: "warning",
+    title: "What activity have you done?",
+    input: "text",
+    inputPlaceholder: "Videogames, watching Youtube, etc...",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
     cancelButtonColor: "#d33",
-    confirmButtonText: "Sí, detener",
+    confirmButtonText: "Guardar",
     cancelButtonText: "Cancelar",
+    inputValidator: (value) => {
+      if (!value) {
+        return "You must instert an activity"
+      }
+    },
   }).then((result) => {
     if (result.isConfirmed) {
+      const actividad = result.value 
       timer.stop()
-      Swal.fire("Detenido", "El cronómetro ha sido detenido.", "success")
       date_fin = getDate()
-      sendData(date_inicio, date_fin, timer.getRemainingTime())
-      console.log("enviando datos al backend")
+      sendData(date_inicio, date_fin, timer.getRemainingTime(), actividad)
+      console.log("Enviando datos al backend:", actividad)
     }
   })
 })
+
 
 /**
  * Envía momentos de inicio y fin del conteo, como tiempo restante al backend.
@@ -240,7 +246,7 @@ stopBtn.addEventListener("click", () => {
  * @param {string} date_fin 
  * @param {number} remainingTimeMs 
  */
-function sendData(date_inicio, date_fin, remainingTimeMs) {
+function sendData(date_inicio, date_fin, remainingTimeMs, actividad) {
   fetch("/use_time", {
     method: "POST",
     headers: {
@@ -250,6 +256,7 @@ function sendData(date_inicio, date_fin, remainingTimeMs) {
       start: date_inicio,
       end: date_fin,
       time: remainingTimeMs,
+      actividad: actividad,
     }),
   })
     .then((response) => response.json())

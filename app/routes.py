@@ -116,14 +116,17 @@ def register_routes(app):
         tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
         tiempo_valor = tiempo.tiempo if tiempo else 0
 
-        
+        use_obj = Uso.query.filter_by(usuario_id=usuario_id).order_by(desc(Uso.id)).limit(10).all()
 
         if request.method == 'POST':
             data = request.get_json()
-            
+            print("datos recibidos:", data)
             start = data.get('start')
             end = data.get('end')
             time = data.get('time')
+            activity = data.get('actividad', '').strip()
+            if not activity:
+                return jsonify({'error': 'La actividad no puede estar vacía'}), 400
 
             print(start, end, time)
             
@@ -136,6 +139,7 @@ def register_routes(app):
                 usuario_id=usuario_id,
                 fecha_inicio=fecha_inicio,
                 fecha_fin=fecha_fin,
+                actividad=activity or "Sin especificar"
             )
             db.session.add(uso)
             
@@ -144,9 +148,12 @@ def register_routes(app):
             db.session.add(tiempo)
 
             db.session.commit()
+            ultimo_uso = Uso.query.order_by(Uso.id.desc()).first()
+            print("Último uso registrado:", ultimo_uso.__dict__)
+            
             return jsonify({'redirect': url_for('perfil')})
         
-        return render_template("use_time.html", tiempo=tiempo_valor, username=username)      
+        return render_template("use_time.html", tiempo=tiempo_valor, username=username, usos=use_obj)      
 
     @app.route("/registro", methods=["GET","POST"])
     def registro():
@@ -210,15 +217,11 @@ def register_routes(app):
             activity_obj = Estudio.query.filter_by(usuario_id=usuario_id).order_by(desc(Estudio.id)).limit(20).all()
             nombre_asignatura = "Latest"
         
-        # pendiente, que muestre una lista de registros de todas las asignaturas en la primera vista por defecto.
-        
         return render_template("records.html", 
                                estudios=activity_obj, 
                                asignaturas=asignaturas_obj, 
                                nombre_asignatura=nombre_asignatura
                                )
-
-        
     
     @app.route("/perfil")
     def perfil():

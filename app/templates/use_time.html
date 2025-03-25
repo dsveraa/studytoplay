@@ -23,7 +23,13 @@
     </div>
   </div>
   <div class="tiempo" style="display:none">{{ tiempo }}</div>
+
 </div>
+<div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
+  <h2 class="mb-4 text-center">Time use record</h2>
+  {% include 'time_use_list.html' %}
+</div>
+<br><br>  
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 <script src="{{ url_for('static', filename='timerUse.js') }}"></script>
 {% endblock %}

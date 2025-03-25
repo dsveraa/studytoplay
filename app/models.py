@@ -73,6 +73,7 @@ class Uso(db.Model):
     usuario_id = Column(Integer, ForeignKey('usuarios.id'), nullable=False)
     fecha_inicio = Column(DateTime, nullable=False)
     fecha_fin = Column(DateTime, nullable=False)
+    actividad = Column(Text, nullable=False, default="")
     
     usuario = relationship('Usuario', back_populates='usos')
 
