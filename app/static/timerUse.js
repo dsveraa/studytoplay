@@ -1,186 +1,27 @@
-class Timer {
-  constructor(ms, sec, min, hr) {
-    this.ms = ms
-    this.sec = sec
-    this.min = min
-    this.hr = hr
-    this.timerSTP = null
-  }
+const session_secret = "perri"
 
-  start() {
-    this.timerSTP = setInterval(() => {
-      this.ms -= 1000
-
-      if (this.ms < 0) {
-        this.ms += 1000
-        this.sec--
-      }
-
-      if (this.sec < 0) {
-        this.sec += 60
-        this.min--
-      }
-
-      if (this.min < 0) {
-        this.min += 60
-        this.hr--
-      }
-
-      UI.updateTimerDisplay(this)
-      this.timeIsOver()
-    }, 1000)
-  }
-
-  stop() {
-    clearInterval(this.timerSTP)
-  }
-
-  getRemainingTime() {
-    let timeElapsedInMs =
-      this.hr * 3600000 +
-      this.min * 60000 +
-      this.sec * 1000 +
-      this.ms
-
-    const elapsedTimeMs = Math.floor(timeElapsedInMs / 100) * 100
-
-    return elapsedTimeMs
-  }
-
-  setFromServer(data) {
-    this.ms = data.ms
-    this.sec = data.sec
-    this.min = data.min
-    this.hr = data.hr
-  }
-
-  timeIsOver() {
-    if (this.hr === 0 && this.min === 0 && this.sec === 0) {
-      clearInterval(this.timerSTP)
-      date_fin = getDate()
-      sendData(date_inicio, date_fin, 0)
-      alert("¡Tiempo terminado!")
-    }
-  }
+function encryptData(data) {
+  return CryptoJS.AES.encrypt(JSON.stringify(data), session_secret).toString()
 }
 
-class Hour {
-  constructor() {
-    this.initialTime = null
-    this.initialDate = null
-    this.currentDate = null
-  }
-
-  getInitialTime() {
-    this.initialTime = initialTime
-    console.log(`tiempo inicial: ${this.initialTime}`) 
-  }
-
-  async getInitialDate() {
-    this.initialDate = await this.fetchTime()
-    console.log(`fecha inicial: ${this.initialDate}`)
-  }
-
-  async getCurrentDate() {
-    this.currentDate = await this.fetchTime()
-    console.log(`fecha actual: ${this.currentDate}`)
-
-    if (this.initialDate) {
-      const differenceMs = this.calculateDifference()
-      const currentTime = this.initialTime - differenceMs
-      return this.formatDifference(currentTime)
-
-    }
-  }
-
-  async fetchTime() {
-    try {
-      const response = await fetch('/get_time')
-      const data = await response.json()
-      const stringToDate = new Date(data.current_time)
-      return stringToDate
-
-    } catch (error) {
-      console.error('Error al obtener la hora:', error)
-      return null
-    }
-  }
-
-  calculateDifference() {
-    if (!this.initialDate || !this.currentDate) {
-      console.error("No se puede calcular la diferencia sin ambas horas")
-      return null
-    }
-    console.log(`tipo de dato currentTime: ${typeof (this.currentDate)}`)
-    const difference = this.currentDate - this.initialDate
-    console.log(`diferencia entre dates: ${difference}`)
-    return difference
-  }
-
-  formatDifference(differenceMs) {
-    if (differenceMs === null) return null
-
-    const ms = differenceMs % 1000
-    const totalSeconds = Math.floor(differenceMs / 1000)
-    const sec = totalSeconds % 60
-    const totalMinutes = Math.floor(totalSeconds / 60)
-    const min = totalMinutes % 60
-    const hr = Math.floor(totalMinutes / 60)
-
-    return { ms, sec, min, hr }
-  }
-
+function decryptData(encryptedData) {
+  const bytes = CryptoJS.AES.decrypt(encryptedData, session_secret)
+  return JSON.parse(bytes.toString(CryptoJS.enc.Utf8))
 }
 
-const hour = new Hour()
+const startBtn = document.getElementById('start_button')
+const stopBtn = document.getElementById('stop_button')
+const counter = document.getElementById('counter')
 
-const initialTime = document.querySelector('.tiempo').textContent.trim() // ms: str
-console.log(initialTime, typeof (initialTime))
-const startBtn = document.querySelector("#start")
-const stopBtn = document.querySelector("#stop")
-const brokenDownTime = breakDownTime(initialTime)
+let sessionTime
 
-/**
- * Descompone el tiempo desde milisegundos a hora, minuto, segundo.
-*
-* @param {string} time 
-* @returns {{ hr: number; min: number; sec: number; ms: number; }} 
-*/
-function breakDownTime(time) {
-  const totalMs = parseInt(time, 10) || 0
-  const hours = Math.floor(totalMs / 3600000)
-  const remainingMs = totalMs % 3600000
-  const minutes = Math.floor(remainingMs / 60000)
-  const remainingMsAfterMinutes = remainingMs % 60000
-  const seconds = Math.floor(remainingMsAfterMinutes / 1000)
-  const milliseconds = remainingMsAfterMinutes % 1000 // Corregido
+const rt_element = document.createElement('p')
 
-  return { 'hr': hours, 'min': minutes, 'sec': seconds, 'ms': milliseconds }
-}
+let interval
 
-const timer = new Timer(
-  brokenDownTime.ms,
-  brokenDownTime.sec,
-  brokenDownTime.min,
-  brokenDownTime.hr)
-
-class UI {
-  static updateTimerDisplay() {
-    document.querySelector('.second').innerText = String(timer.sec).padStart(2, "0")
-    document.querySelector('.minute').innerText = String(timer.min).padStart(2, "0")
-    document.querySelector('.hour').innerText = String(timer.hr).padStart(2, "0")
-  }
-
-  static disableButton(button) {
-    button.disabled = true
-  }
-
-  static enableButton(button) {
-    button.disabled = false
-  }
-}
-
-UI.updateTimerDisplay(brokenDownTime)
+let countdownRunning = null
+let currentTime = null
+countdownRunning = localStorage.getItem('cd_running')
 
 /**
  * Obtiene fecha y hora actual en formato YYYY-MM-DD HH:MM:SS
@@ -198,19 +39,6 @@ function getDate() {
 
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
 }
-
-startBtn.addEventListener("click", () => {
-
-  timer.start()
-  timerInspector()
-  date_inicio = getDate()
-  UI.enableButton(stopBtn)
-  UI.disableButton(startBtn)
-
-  hour.getInitialTime()
-  hour.getInitialDate()
-
-})
 
 stopBtn.addEventListener("click", () => {
   Swal.fire({
@@ -230,14 +58,132 @@ stopBtn.addEventListener("click", () => {
   }).then((result) => {
     if (result.isConfirmed) {
       const actividad = result.value 
-      timer.stop()
+      
+      countdownRunning = false
+      stopCountdown()
+
+      let initialTime = localStorage.getItem('initial_time')
+      let finalTime = new Date().toISOString()
+
+      const differenceTime = new Date(finalTime) - new Date(initialTime)
+      const updatedTime = sessionTime - differenceTime
+
+      
+      stopBtn.disabled = true
+      
+      date_inicio = localStorage.getItem('date_inicio')
       date_fin = getDate()
-      sendData(date_inicio, date_fin, timer.getRemainingTime(), actividad)
+      
+      localStorage.removeItem('initial_time')
+      localStorage.removeItem('cd_running')
+      localStorage.removeItem('current_time')
+      localStorage.removeItem('session_time')
+      localStorage.removeItem('date_inicio')
+
+      sendData(date_inicio, date_fin, updatedTime, actividad)
       console.log("Enviando datos al backend:", actividad)
+      
     }
   })
 })
 
+function stopCountdown() {
+  clearInterval(interval)
+}
+
+function startCountdown() {
+  if (countdownRunning) {
+    currentTime = localStorage.getItem('current_time')
+  } else {
+    currentTime = decryptData(localStorage.getItem('session_time'))
+  }
+
+  interval = setInterval(()=> {
+      currentTime = currentTime -1000
+      counter.removeChild(rt_element)
+      const HMS = msToHMS(currentTime)
+      rt_element.textContent = HMS
+      counter.appendChild(rt_element)
+      localStorage.setItem('current_time', currentTime)
+
+      if (currentTime <= 0) {
+          clearInterval(interval)
+      }
+  }, 1000)
+}
+
+function msToHMS(ms) {
+let totalSeconds = Math.floor(ms / 1000)
+let hours = Math.floor(totalSeconds / 3600)
+let minutes = Math.floor((totalSeconds % 3600) / 60)
+let seconds = totalSeconds % 60
+
+return [hours, minutes, seconds]
+    .map(unit => String(unit).padStart(2, '0'))
+    .join(':')
+}
+
+startBtn.addEventListener('click', ()=> {
+  localStorage.setItem('initial_time', new Date().toISOString())
+  localStorage.setItem('cd_running', true)
+  localStorage.setItem('date_inicio', getDate())
+
+  startCountdown()
+
+  startBtn.disabled = true
+  stopBtn.disabled = false
+})
+
+async function onLoad() {
+  let HMS
+
+  if (countdownRunning) {
+    console.log('countdown running')
+    currentTime = localStorage.getItem('current_time')
+    sessionTime = decryptData(localStorage.getItem('session_time'))
+
+    console.log('currentTime:', currentTime)
+    
+    stopBtn.disabled = false
+    startBtn.disabled = true
+    HMS = msToHMS(currentTime)
+    
+    console.log(HMS)
+    
+    rt_element.textContent = HMS // <p>HMS</p>
+    counter.appendChild(rt_element)
+    startCountdown()
+    return
+  }
+
+  stopBtn.disabled = true
+  startBtn.disabled = false
+  
+  const time = await fetchTime()
+  
+  encryptedTime = encryptData(time)
+  localStorage.setItem("session_time", encryptedTime)
+  
+  sessionTime = decryptData(localStorage.getItem('session_time'))
+
+  HMS = msToHMS(sessionTime)
+  rt_element.textContent = HMS
+  counter.appendChild(rt_element)
+}
+
+async function fetchTime() {
+  try {
+      const response = await fetch("/get_remaining_time")
+      if (!response.ok) {
+          throw new Error(`Error HTTP: ${response.status}`)
+      }
+      const data = await response.json()
+      return data.remaining_time
+  } catch (error) {
+      console.error("error al consultar los datos", error)
+      return null
+  }
+}
 
 /**
  * Envía momentos de inicio y fin del conteo, como tiempo restante al backend.
@@ -268,31 +214,22 @@ function sendData(date_inicio, date_fin, remainingTimeMs, actividad) {
     .catch((error) => console.error("Error al guardar los datos:", error))
 }
 
-function updateTimeToServer() {
-  fetch('/update_time', {
-    method: 'POST',
-    body: JSON.stringify({ time: timer.getRemainingTime() }),
-    headers: { 'Content-Type': 'application/json' }
-  }).then(response => {
-    if (!response.ok) {
-      console.error('Error al enviar el tiempo')
-    }
-  })
-}
 
-function timerInspector() {
-  timerInterval = setInterval(() => {
-    updateTimeToServer()
-  }, 300000)
-}
-
-window.addEventListener("focus", async () => {
-
-  console.log("Ventana activa, solicitando datos...")
-
-  const timeUpdate = await hour.getCurrentDate()
-
-  if (timeUpdate) {
-    timer.setFromServer(timeUpdate)
-  }
+window.addEventListener("focus", () => {
+  let initialTime = localStorage.getItem('initial_time')
+  console.log('initialTime:', initialTime)
+  let finalTime = new Date().toISOString()
+  console.log('finalTime:', finalTime)
+  let diffTime = new Date(finalTime) - new Date(initialTime)
+  console.log('diffTime:', diffTime)
+  
+  const sessionTimeInt = parseInt(sessionTime)
+  console.log('typeof sessionTimeInt:', typeof(sessionTimeInt))
+  
+  currentTime = (sessionTimeInt - diffTime)
+  console.log('typeof diffTime:', typeof(diffTime))
+  console.log('currentTime:', currentTime)
 })
+
+
+onLoad()

@@ -11,6 +11,10 @@ from . import db
 from pprint import pprint
 from typing import List, Tuple, Dict
 
+from decouple import config
+
+SECRET_KEY = config('SECRET_KEY')
+
 def register_routes(app):
     @app.route('/edit_record/<id>', methods=["GET", "POST"])
     def edit_record(id):
@@ -114,8 +118,6 @@ def register_routes(app):
         
         usuario_id = session.get("usuario_id")
         username = session.get("usuario_nombre")
-        tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
-        tiempo_valor = tiempo.tiempo if tiempo else 0
 
         use_obj = Uso.query.filter_by(usuario_id=usuario_id).order_by(desc(Uso.id)).limit(10).all()
 
@@ -129,7 +131,7 @@ def register_routes(app):
             if not activity:
                 return jsonify({'error': 'La actividad no puede estar vacía'}), 400
 
-            print(start, end, time)
+            # print(start, end, time)
             
             usuario_id = session.get("usuario_id")
 
@@ -154,7 +156,18 @@ def register_routes(app):
             
             return jsonify({'redirect': url_for('perfil')})
         
-        return render_template("use_time.html", tiempo=tiempo_valor, username=username, usos=use_obj)      
+        return render_template("use_time.html", username=username, usos=use_obj)
+
+    @app.route("/get_remaining_time")
+    def get_remaining_time():
+        if "usuario_id" not in session:
+            return redirect(url_for("login"))
+        
+        usuario_id = session.get("usuario_id")
+        tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
+        tiempo_valor = tiempo.tiempo if tiempo else 0
+            
+        return jsonify({'remaining_time': tiempo_valor})
 
     @app.route("/registro", methods=["GET","POST"])
     def registro():
@@ -283,4 +296,5 @@ def register_routes(app):
             return redirect(url_for("login"))
         
         return redirect(url_for("perfil"))
+
     
