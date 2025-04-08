@@ -23,6 +23,17 @@
             <label for="repetir_contrasena" class="form-label">repeat password</label>
             <input class="form-control" type="password" id="repetir_contrasena" name="repetir_contrasena" required>
         </div>
+        <div class="mb-3">
+            <label class="form-label">role</label>
+            <div>
+                {% for rol in roles %}
+                <input type="radio" id="{{rol.id}}" name="role" value="{{rol.id}}"
+               {% if rol.rol == rol_seleccionado %}checked{% endif %}>
+                <label for="{{rol.id}}" class="form-label">{{rol.rol}}</label>
+                <br>
+                {% endfor %}
+            </div>
+        </div>
         <div class="d-flex justify-content-end">
             <button type="submit" class="btn custom-btn">Register</button>
         </div>

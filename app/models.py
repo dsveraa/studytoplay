@@ -31,6 +31,7 @@ class Usuario(db.Model):
     nombre = Column(String(50), nullable=False)
     correo = Column(String(120), unique=True, nullable=False)
     contrasena = Column(String(200), nullable=False)
+    rol_id = Column(Integer, ForeignKey('roles.id'))
     
     estudios = relationship('Estudio', back_populates='usuario')
     tiempo = relationship('Tiempo', back_populates='usuario', uselist=False)
@@ -42,6 +43,13 @@ class Usuario(db.Model):
     acumulacion_tiempos = relationship('AcumulacionTiempo', backref='usuario')
     estrellas = relationship('Estrella', backref='usuario')
     asignaturas = relationship('Asignatura', backref='usuario')
+    rol = relationship('Rol', backref='usuario')
+
+class Rol(db.Model):
+    __tablename__ = 'roles'
+
+    id = Column(Integer, primary_key=True)
+    nombre = Column(String)
 
     
 class Tiempo(db.Model):

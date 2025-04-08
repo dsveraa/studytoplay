@@ -3,7 +3,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime, timedelta
 from sqlalchemy import desc
 
-from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura, AcumulacionTiempo
+from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura, AcumulacionTiempo, Rol
 from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, mostrar_estrellas, mostrar_trofeos, porcentaje_tiempos, sumar_tiempos, mostrar_nivel
 from . import db
 
@@ -171,11 +171,16 @@ def register_routes(app):
 
     @app.route("/registro", methods=["GET","POST"])
     def registro():
+        role_obj = Rol.query.all()
+        roles = [{'id': role.id, 'rol': role.rol} for role in role_obj]
+        # print(roles)
+
         if request.method == 'POST':
             nombre = request.form["nombre"]
             email = request.form["email"]
             contrasena = request.form["contrasena"]
             repetir_contrasena = request.form["repetir_contrasena"]
+            rol = request.form["role"]
             
             if contrasena != repetir_contrasena:
                 return "Las contraseñas no coinciden, intenta nuevamente."
@@ -185,12 +190,12 @@ def register_routes(app):
             
             contrasena_hash = generate_password_hash(contrasena)
             
-            nuevo_usuario = Usuario(nombre=nombre, correo=email, contrasena=contrasena_hash)
+            nuevo_usuario = Usuario(nombre=nombre, correo=email, contrasena=contrasena_hash, rol=rol)
             db.session.add(nuevo_usuario)
             db.session.commit()
             
             return redirect(url_for("login"))
-        return render_template("registro.html")
+        return render_template("registro.html", roles=roles, rol_seleccionado='student')
         
     @app.route("/usuarios")
     def mostrar_usuarios():
@@ -209,7 +214,7 @@ def register_routes(app):
                 session["usuario_id"] = usuario.id
                 session["usuario_nombre"] = usuario.nombre
                 session.permanent = True
-                return redirect(url_for("perfil"))
+                return redirect(url_for("home"))
             else:
                 return "Correo o contraseña incorrectos."
         return render_template("login.html")
@@ -294,6 +299,14 @@ def register_routes(app):
     def home():
         if "usuario_id" not in session:
             return redirect(url_for("login"))
+        
+        usuario_id = session.get('usuario_id')
+        print(usuario_id)
+        
+        supervisor = Usuario.query.join(Rol).filter(Usuario.id == usuario_id, Rol.nombre == "supervisor").first()
+
+        if supervisor:
+            return 'Panel de supervisor'
         
         return redirect(url_for("perfil"))
 
