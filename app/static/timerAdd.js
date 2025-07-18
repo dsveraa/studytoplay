@@ -137,6 +137,7 @@ const startBtn = document.getElementById("start")
 const submitBtn = document.getElementById("stop")
 const summaryInput = document.querySelector("#summary")
 const subjectInput = document.getElementById('asignaturas')
+const cancelBtn = document.getElementById('cancel')
 
 let date_inicio
 let date_fin
@@ -174,6 +175,19 @@ async function sendData(date_inicio, date_fin, summary, time, subject_id) {
   }
 }
 
+function switchStudying() {
+  fetch('/switch_status/studying', {
+    method: 'POST',
+    headers: {'X-Requested-With': 'XMLHttpRequest'}
+  })
+  .then(response => response.json())
+  .then(data => {console.log('Nuevo estado:', data)
+  })
+  .catch(error => {
+    console.error('Error', error)
+  })
+}
+
 startBtn.addEventListener("click", () => {
 
   timer.start()
@@ -183,7 +197,22 @@ startBtn.addEventListener("click", () => {
   UI.disableButton(startBtn)
 
   hour.getInitialTime()
+  switchStudying()
 })
+
+async function switchIdle() {
+  try {
+    const response = await fetch('/switch_status/idle', {
+      method: 'POST',
+      headers: { 'X-Requested-With': 'XMLHttpRequest' }
+    })
+    const data = await response.json()
+    console.log('Nuevo estado:', data)
+  } catch (error) {
+    console.error('Error', error)
+  }
+}
+
 
 submitBtn.addEventListener("click", () => {
   if (validateInputs()) {
@@ -196,6 +225,14 @@ submitBtn.addEventListener("click", () => {
       sendData(date_inicio, date_fin, summaryInput.value, timer.getElapsedTime(), subjectInput.value)
     }, 1000)
   }
+
+  switchIdle()
+})
+
+cancelBtn.addEventListener("click", () => {
+  switchIdle().then(() => {
+    window.location.href = "/perfil"  
+  })
 })
 
 window.addEventListener("focus", async () => {

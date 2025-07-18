@@ -1,4 +1,4 @@
-const session_secret = "perri"
+const session_secret = "perri" //vulnerabilidad, solucionar.
 
 function encryptData(data) {
   return CryptoJS.AES.encrypt(JSON.stringify(data), session_secret).toString()
@@ -38,6 +38,19 @@ function getDate() {
   const seconds = String(now.getSeconds()).padStart(2, "0")
 
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
+}
+
+async function switchIdle() {
+  try {
+    const response = await fetch('/switch_status/idle', {
+      method: 'POST',
+      headers: { 'X-Requested-With': 'XMLHttpRequest' }
+    })
+    const data = await response.json()
+    console.log('Nuevo estado:', data)
+  } catch (error) {
+    console.error('Error', error)
+  }
 }
 
 stopBtn.addEventListener("click", () => {
@@ -85,6 +98,7 @@ stopBtn.addEventListener("click", () => {
       
     }
   })
+  switchIdle()
 })
 
 function stopCountdown() {
@@ -123,6 +137,19 @@ return [hours, minutes, seconds]
     .join(':')
 }
 
+function switchPlaying() {
+  fetch('/switch_status/playing', {
+    method: 'POST',
+    headers: {'X-Requested-With': 'XMLHttpRequest'}
+  })
+  .then(response => response.json())
+  .then(data => {console.log('Nuevo estado:', data)
+  })
+  .catch(error => {
+    console.error('Error', error)
+  })
+}
+
 startBtn.addEventListener('click', ()=> {
   localStorage.setItem('initial_time', new Date().toISOString())
   localStorage.setItem('cd_running', true)
@@ -132,6 +159,8 @@ startBtn.addEventListener('click', ()=> {
 
   startBtn.disabled = true
   stopBtn.disabled = false
+
+  switchPlaying()
 })
 
 async function onLoad() {

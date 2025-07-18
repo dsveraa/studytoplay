@@ -16,6 +16,8 @@ def create_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = config('SQLALCHEMY_TRACK_MODIFICATIONS')
     app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)
 
+    print("DB URI:", app.config["SQLALCHEMY_DATABASE_URI"])
+
     db.init_app(app)
     Migrate(app, db)
 

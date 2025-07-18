@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String, Float, DateTime, Text, ForeignKey
 from sqlalchemy.orm import relationship
 from . import db
+from datetime import datetime, timezone
 
 '''
 TIP: Al renombrar una tabla, no es necesario migrar las claves foraneas, es decir, no debe haber instrucciones de modificación en los archivos de migración, solo instrucciones para renombrar. La base de datos mantendrá las relaciones entre las tablas y solo hay que actualizar los modelos de SQLAlchemy.
@@ -51,7 +52,37 @@ class Rol(db.Model):
     id = Column(Integer, primary_key=True)
     nombre = Column(String)
 
-    
+class SupervisorEstudiante(db.Model):
+    __tablename__ = 'supervisor_estudiante'
+
+    id = Column(Integer, primary_key=True)
+
+    supervisor_id = Column(Integer, ForeignKey('usuarios.id'))
+    estudiante_id = Column(Integer, ForeignKey('usuarios.id'))
+
+    supervisor = relationship('Usuario', foreign_keys=[supervisor_id], backref='estudiantes_asignados')
+    estudiante = relationship('Usuario', foreign_keys=[estudiante_id], backref='supervisores_asignados')
+
+class SolicitudVinculacion(db.Model):
+    __tablename__ = 'solicitud_vinculacion'
+
+    id = Column(Integer, primary_key=True)
+
+    supervisor_id = Column(Integer, ForeignKey('usuarios.id'))
+    estudiante_id = Column(Integer, ForeignKey('usuarios.id'))
+    estado = Column(String, default='pendiente')
+    fecha_solicitud = Column(DateTime, default=datetime.now(timezone.utc))
+
+    supervisor = relationship('Usuario', foreign_keys=[supervisor_id], backref='solicitudes_enviadas')
+    estudiante = relationship('Usuario', foreign_keys=[estudiante_id], backref='solicitudes_recibidas')
+
+class EstadoUsuario(db.Model):
+    __tablename__ = 'estado_usuario'
+
+    id = Column(Integer, primary_key=True)
+    usuario_id = Column(Integer, ForeignKey('usuarios.id'), unique=True)
+    estado = Column(String, default='idle')
+
 class Tiempo(db.Model):
     __tablename__ = 'tiempos'
 
