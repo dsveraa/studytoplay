@@ -1,0 +1,20 @@
+{% extends 'base_supervisor.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
+  <div class="d-flex flex-column align-items-center">
+    <h3>Students</h3>
+    <div class="list-group w-100 mt-3">
+      {% for estudiante in estudiantes %}
+        <div class="list-group-item">
+          <strong>{{ estudiante.nombre }}</strong><br>
+          Status: {{ estudiante.estado | capitalize }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
+

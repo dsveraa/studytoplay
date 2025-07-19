@@ -430,10 +430,11 @@ def register_routes(app):
             for estudiante in estudiantes_asociados:
                 estudiante['estado'] = estados_dict.get(estudiante['id'], None)
 
-            return jsonify({
-                'supervisor': {'id': usuario_id, 'nombre': supervisor.nombre},
-                'estudiantes': estudiantes_asociados
-            })
+            # return jsonify({
+            #     'supervisor': {'id': usuario_id, 'nombre': supervisor.nombre},
+            #     'estudiantes': estudiantes_asociados
+            # })
+            return render_template("s_dashboard.html", estudiantes=estudiantes_asociados)
         
         return redirect(url_for("perfil"))
 
