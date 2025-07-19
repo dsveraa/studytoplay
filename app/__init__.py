@@ -5,11 +5,15 @@ from decouple import config
 from datetime import timedelta
 import markdown
 
+from werkzeug.middleware.proxy_fix import ProxyFix
+
 
 db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
+
+    app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
 
     app.config['SECRET_KEY'] = config('SECRET_KEY')
     app.config['SQLALCHEMY_DATABASE_URI'] = config('SQLALCHEMY_DATABASE_URI')
