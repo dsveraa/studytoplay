@@ -16,6 +16,17 @@ from decouple import config
 SECRET_KEY = config('SECRET_KEY')
 
 def register_routes(app):
+    @app.route('/log_click')
+    def log_click():
+        data = request.json
+        boton = data.get('boton', 'desconocido')
+        origen = request.referrer or 'origen desconocido'
+        navegador = request.user_agent.browser or 'navegador desconocido'
+        sistema = request.user_agent.platform or 'SO desconocido'
+
+        print(f'Click en: "{boton}", deste "{origen}", usando "{navegador}", en "{sistema}"' )
+        return jsonify({"status": "ok"}), 200
+
     @app.route('/switch_status/<status>/', methods=['POST'])
     def switch_status(status: str):
         if 'usuario_id' not in session:

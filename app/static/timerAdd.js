@@ -1,4 +1,18 @@
 
+function logClick(boton) {
+  fetch('log_click', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ boton: boton})
+  }).then(response => {
+    if (response.ok) {
+      console.log("Log enviado")
+    }
+  })
+}
+
 class Timer {
   constructor() {
     this.ms = 0

@@ -1,5 +1,19 @@
 const session_secret = "perri" //vulnerabilidad, solucionar.
 
+function logClick(boton) {
+  fetch('log_click', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ boton: boton})
+  }).then(response => {
+    if (response.ok) {
+      console.log("Log enviado")
+    }
+  })
+}
+
 function encryptData(data) {
   return CryptoJS.AES.encrypt(JSON.stringify(data), session_secret).toString()
 }
