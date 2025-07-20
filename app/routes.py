@@ -14,6 +14,7 @@ from typing import List, Tuple, Dict
 from decouple import config
 
 from user_agents import parse
+import logging
 
 SECRET_KEY = config('SECRET_KEY')
 
@@ -23,6 +24,7 @@ def register_routes(app):
         data = request.json
         boton = data.get('boton', 'desconocido')
         origen = request.referrer or 'origen desconocido'
+        # hora_cliente = data.get('hora_cliente', 'hora no enviada')
         
         ua_strig = request.headers.get('User-Agent', '')
         user_agent = parse(ua_strig)
@@ -30,7 +32,7 @@ def register_routes(app):
         navegador = user_agent.browser.family or 'navegador desconocido'
         sistema = user_agent.os.family or 'SO desconocido'
 
-        print(f'Click en: "{boton}", desde "{origen}", usando "{navegador}", en "{sistema}"' )
+        logging.info(f'Click en: "{boton}", desde "{origen}", usando "{navegador}", en "{sistema}"' )
         return jsonify({"status": "ok"}), 200
 
     @app.route('/switch_status/<status>/', methods=['POST'])

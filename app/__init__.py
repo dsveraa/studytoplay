@@ -6,6 +6,7 @@ from datetime import timedelta
 import markdown
 
 from werkzeug.middleware.proxy_fix import ProxyFix
+import logging
 
 
 db = SQLAlchemy()
@@ -34,4 +35,14 @@ def create_app():
     def markdown_filter(text):
         return markdown.markdown(text or "", extensions=["extra", "fenced_code", "tables"])
 
+    # Logging
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s [%(levelname)s] %(message)s',
+        handlers=[
+            logging.FileHandler("app.log"),      # Log a archivo
+            logging.StreamHandler()              # Log a consola
+        ]
+    )
+    
     return app

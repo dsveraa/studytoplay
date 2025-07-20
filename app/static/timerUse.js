@@ -1,12 +1,13 @@
 const session_secret = "perri" //vulnerabilidad, solucionar.
 
 function logClick(boton) {
+  const now = new Date().toLocaleString()
   fetch('log_click', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ boton: boton})
+    body: JSON.stringify({ boton: boton, hora_cliente: now})
   }).then(response => {
     if (response.ok) {
       console.log("Log enviado")

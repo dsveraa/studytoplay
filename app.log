@@ -1,0 +1,26 @@
+2025-07-20 16:32:53,030 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-20 16:32:53,030 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-20 16:33:02,485 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:02] "GET /add_time HTTP/1.1" 200 -
+2025-07-20 16:33:02,540 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:02] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-20 16:33:02,541 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:02] "[36mGET /static/logo_study.png HTTP/1.1[0m" 304 -
+2025-07-20 16:33:04,744 [INFO] [20-07-2025, 4:33:04 p. m.] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-07-20 16:33:04,747 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:04] "POST /log_click HTTP/1.1" 200 -
+2025-07-20 16:33:04,747 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:04] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-07-20 16:33:04,749 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:04] "GET /get_time HTTP/1.1" 200 -
+2025-07-20 16:33:05,446 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:05] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-07-20 16:33:33,339 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-20 16:33:33,339 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-20 16:33:35,087 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:35] "GET /get_time HTTP/1.1" 200 -
+2025-07-20 16:33:35,139 [INFO] Click en: "Cancel", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-07-20 16:33:35,141 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:35] "POST /log_click HTTP/1.1" 200 -
+2025-07-20 16:33:35,142 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:35] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-07-20 16:33:38,726 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:38] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-07-20 16:33:38,751 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:38] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-20 16:33:40,103 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:40] "GET /perfil HTTP/1.1" 200 -
+2025-07-20 16:33:40,168 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:40] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-20 16:33:40,175 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:40] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-20 16:33:40,175 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:40] "[36mGET /static/star.png HTTP/1.1[0m" 304 -
+2025-07-20 16:33:40,176 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:40] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-20 16:33:40,881 [INFO] 127.0.0.1 - - [20/Jul/2025 16:33:40] "GET /perfil HTTP/1.1" 200 -
