@@ -13,18 +13,24 @@ from typing import List, Tuple, Dict
 
 from decouple import config
 
+from user_agents import parse
+
 SECRET_KEY = config('SECRET_KEY')
 
 def register_routes(app):
-    @app.route('/log_click')
+    @app.route('/log_click', methods=['POST'])
     def log_click():
         data = request.json
         boton = data.get('boton', 'desconocido')
         origen = request.referrer or 'origen desconocido'
-        navegador = request.user_agent.browser or 'navegador desconocido'
-        sistema = request.user_agent.platform or 'SO desconocido'
+        
+        ua_strig = request.headers.get('User-Agent', '')
+        user_agent = parse(ua_strig)
 
-        print(f'Click en: "{boton}", deste "{origen}", usando "{navegador}", en "{sistema}"' )
+        navegador = user_agent.browser.family or 'navegador desconocido'
+        sistema = user_agent.os.family or 'SO desconocido'
+
+        print(f'Click en: "{boton}", desde "{origen}", usando "{navegador}", en "{sistema}"' )
         return jsonify({"status": "ok"}), 200
 
     @app.route('/switch_status/<status>/', methods=['POST'])

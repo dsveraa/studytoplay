@@ -22,7 +22,11 @@ pycryptodome==3.21.0
 python-decouple==3.8
 python-dotenv==1.0.1
 pytz==2024.2
+PyYAML==6.0.2
 SQLAlchemy==2.0.37
 typeguard==4.4.1
 typing_extensions==4.12.2
+ua-parser==1.0.1
+ua-parser-builtins==0.18.0.post1
+user-agents==2.2.0
 Werkzeug==3.1.3
