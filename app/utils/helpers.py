@@ -127,10 +127,11 @@ def asignar_nivel(id: int) -> int:
         nuevo_nivel = nivel_obj.nivel + 1
         nivel_obj.nivel = nuevo_nivel
         tiempo_obj.cantidad -= TIEMPO_MAXIMO
-        tiempo_total_obj = revisar_tiempo_total(id)
-        tiempo_total_obj.tiempo += BONIFICACION * nuevo_nivel
+        # tiempo_total_obj = revisar_tiempo_total(id)
+        # tiempo_total_obj.tiempo += BONIFICACION * nuevo_nivel
         db.session.commit()
-        return print(f'Has pasado a nivel {nivel_obj.nivel} y tienes una nueva bonificación de tiempo!')
+        # return print(f'Has pasado a nivel {nivel_obj.nivel} y tienes una nueva bonificación de tiempo!')
+        return print(f'Has pasado a nivel {nivel_obj.nivel} !')
 
 def asignar_trofeos(id: int) -> int:
     nivel_obj = revisar_nivel(id)
