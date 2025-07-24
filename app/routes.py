@@ -19,6 +19,25 @@ import logging
 SECRET_KEY = config('SECRET_KEY')
 
 def register_routes(app):
+    @app.template_filter('ms_to_hms')
+    def ms_to_hms_filter(ms):
+        import datetime
+        segundos = ms // 1000
+        return str(datetime.timedelta(seconds=segundos))
+    
+    @app.route('/student_info/<id>', methods=['GET'])
+    def student_info(id):
+        supervisor_id = session.get('usuario_id')
+        relation = SupervisorEstudiante.query.filter_by(supervisor_id=supervisor_id, estudiante_id=id).first()
+
+        if not relation:
+            return "Relation not found"
+        
+        activity_obj = Estudio.query.filter_by(usuario_id=id).order_by(desc(Estudio.id)).limit(5).all()
+        use_obj = Uso.query.filter_by(usuario_id=id).order_by(desc(Uso.id)).limit(10).all()
+
+        return render_template("s_records.html", estudios=activity_obj, usos=use_obj)
+
     @app.route('/log_click', methods=['POST'])
     def log_click():
         data = request.json
@@ -429,10 +448,10 @@ def register_routes(app):
             ids_vistos = set()
             estudiantes_asociados = []
             
-            supervisor_estudiantes = SupervisorEstudiante.query.filter_by(supervisor_id=usuario_id).all()
+            estudiantes_supervisados = SupervisorEstudiante.query.filter_by(supervisor_id=usuario_id).all()
 
-            for se in supervisor_estudiantes:
-                estudiante = se.estudiante
+            for es in estudiantes_supervisados:
+                estudiante = es.estudiante
                 if estudiante.id not in ids_vistos:
                     ids_vistos.add(estudiante.id)
                     estudiantes_asociados.append({
@@ -449,6 +468,18 @@ def register_routes(app):
             for estudiante in estudiantes_asociados:
                 estudiante['estado'] = estados_dict.get(estudiante['id'], None)
 
+            tiempo_estudiantes = Tiempo.query.filter(Tiempo.usuario_id.in_(estudiante_ids)).all()
+            # print(tiempo_estudiantes[1].tiempo)
+
+            tiempos_dict = {obj.id: obj.tiempo for obj in tiempo_estudiantes}
+
+            for estudiante in estudiantes_asociados:
+                id_est = estudiante['id']
+                estudiante['tiempo'] = tiempos_dict.get(id_est, None)
+            
+            for estudiante in estudiantes_asociados:
+                print(estudiante)
+
             # return jsonify({
             #     'supervisor': {'id': usuario_id, 'nombre': supervisor.nombre},
             #     'estudiantes': estudiantes_asociados
@@ -456,5 +487,4 @@ def register_routes(app):
             return render_template("s_dashboard.html", estudiantes=estudiantes_asociados)
         
         return redirect(url_for("perfil"))
-
-    
+        
