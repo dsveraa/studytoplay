@@ -2501,3 +2501,173 @@ sqlalchemy.exc.MultipleResultsFound: Multiple rows were found when exactly one w
 2025-07-24 17:19:27,618 [INFO]  * Restarting with stat
 2025-07-24 17:19:38,118 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
 2025-07-24 17:19:38,220 [INFO]  * Restarting with stat
+2025-07-24 18:15:14,029 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-24 18:15:14,029 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-24 18:15:14,030 [INFO]  * Restarting with stat
+2025-07-24 18:15:14,459 [WARNING]  * Debugger is active!
+2025-07-24 18:15:14,459 [INFO]  * Debugger PIN: 129-309-471
+2025-07-24 18:15:15,956 [INFO] 127.0.0.1 - - [24/Jul/2025 18:15:15] "GET /login HTTP/1.1" 200 -
+2025-07-24 18:15:16,004 [INFO] 127.0.0.1 - - [24/Jul/2025 18:15:16] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:15:23,181 [INFO] 127.0.0.1 - - [24/Jul/2025 18:15:23] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-07-24 18:15:23,201 [INFO] 127.0.0.1 - - [24/Jul/2025 18:15:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-24 18:15:23,246 [INFO] 127.0.0.1 - - [24/Jul/2025 18:15:23] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-24 18:15:23,246 [INFO] 127.0.0.1 - - [24/Jul/2025 18:15:23] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-24 18:15:23,273 [INFO] 127.0.0.1 - - [24/Jul/2025 18:15:23] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=E3jg1by9d9eQ4htTKAjQ HTTP/1.1" 200 -
+2025-07-24 18:15:53,741 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:15:53,839 [INFO]  * Restarting with stat
+2025-07-24 18:15:54,282 [WARNING]  * Debugger is active!
+2025-07-24 18:15:54,282 [INFO]  * Debugger PIN: 129-309-471
+2025-07-24 18:15:59,408 [INFO] 127.0.0.1 - - [24/Jul/2025 18:15:59] "GET / HTTP/1.1" 200 -
+2025-07-24 18:15:59,437 [INFO] 127.0.0.1 - - [24/Jul/2025 18:15:59] "GET /static/logo.png HTTP/1.1" 200 -
+2025-07-24 18:16:28,755 [INFO] 127.0.0.1 - - [24/Jul/2025 18:16:28] "GET /link_request HTTP/1.1" 200 -
+2025-07-24 18:16:28,819 [INFO] 127.0.0.1 - - [24/Jul/2025 18:16:28] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:16:32,131 [INFO] 127.0.0.1 - - [24/Jul/2025 18:16:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 18:16:49,704 [INFO] 127.0.0.1 - - [24/Jul/2025 18:16:49] "GET / HTTP/1.1" 200 -
+2025-07-24 18:16:49,740 [INFO] 127.0.0.1 - - [24/Jul/2025 18:16:49] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:16:59,902 [INFO] 127.0.0.1 - - [24/Jul/2025 18:16:59] "GET / HTTP/1.1" 200 -
+2025-07-24 18:16:59,934 [INFO] 127.0.0.1 - - [24/Jul/2025 18:16:59] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:17:02,835 [INFO] 127.0.0.1 - - [24/Jul/2025 18:17:02] "GET /link_request HTTP/1.1" 200 -
+2025-07-24 18:17:02,887 [INFO] 127.0.0.1 - - [24/Jul/2025 18:17:02] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:17:06,800 [INFO] 127.0.0.1 - - [24/Jul/2025 18:17:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 18:17:11,136 [INFO] 127.0.0.1 - - [24/Jul/2025 18:17:11] "GET /link_request HTTP/1.1" 200 -
+2025-07-24 18:17:11,187 [INFO] 127.0.0.1 - - [24/Jul/2025 18:17:11] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:17:15,287 [INFO] 127.0.0.1 - - [24/Jul/2025 18:17:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 18:17:18,745 [INFO] 127.0.0.1 - - [24/Jul/2025 18:17:18] "GET /link_request HTTP/1.1" 200 -
+2025-07-24 18:17:18,785 [INFO] 127.0.0.1 - - [24/Jul/2025 18:17:18] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:17:25,175 [INFO] 127.0.0.1 - - [24/Jul/2025 18:17:25] "POST /link_request HTTP/1.1" 200 -
+2025-07-24 18:17:25,210 [INFO] 127.0.0.1 - - [24/Jul/2025 18:17:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 18:17:31,099 [INFO] 127.0.0.1 - - [24/Jul/2025 18:17:31] "GET /link_request HTTP/1.1" 200 -
+2025-07-24 18:17:31,144 [INFO] 127.0.0.1 - - [24/Jul/2025 18:17:31] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:20:37,320 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:20:37,418 [INFO]  * Restarting with stat
+2025-07-24 18:20:37,851 [WARNING]  * Debugger is active!
+2025-07-24 18:20:37,851 [INFO]  * Debugger PIN: 129-309-471
+2025-07-24 18:20:41,881 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:20:41,971 [INFO]  * Restarting with stat
+2025-07-24 18:30:33,622 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-24 18:30:33,622 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-24 18:30:33,623 [INFO]  * Restarting with stat
+2025-07-24 18:30:34,036 [WARNING]  * Debugger is active!
+2025-07-24 18:30:34,037 [INFO]  * Debugger PIN: 129-309-471
+2025-07-24 18:30:50,225 [INFO] 127.0.0.1 - - [24/Jul/2025 18:30:50] "POST /link_request HTTP/1.1" 200 -
+2025-07-24 18:31:06,994 [INFO] 127.0.0.1 - - [24/Jul/2025 18:31:06] "GET /link_request HTTP/1.1" 200 -
+2025-07-24 18:31:07,028 [INFO] 127.0.0.1 - - [24/Jul/2025 18:31:07] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:31:15,689 [INFO] 127.0.0.1 - - [24/Jul/2025 18:31:15] "POST /link_request HTTP/1.1" 200 -
+2025-07-24 18:31:20,944 [INFO] 127.0.0.1 - - [24/Jul/2025 18:31:20] "GET /link_request HTTP/1.1" 200 -
+2025-07-24 18:31:20,961 [INFO] 127.0.0.1 - - [24/Jul/2025 18:31:20] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:31:42,572 [INFO] 127.0.0.1 - - [24/Jul/2025 18:31:42] "GET / HTTP/1.1" 200 -
+2025-07-24 18:31:44,223 [INFO] 127.0.0.1 - - [24/Jul/2025 18:31:44] "GET / HTTP/1.1" 200 -
+2025-07-24 18:31:44,247 [INFO] 127.0.0.1 - - [24/Jul/2025 18:31:44] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:32:05,289 [INFO] 127.0.0.1 - - [24/Jul/2025 18:32:05] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:32:09,360 [INFO] 127.0.0.1 - - [24/Jul/2025 18:32:09] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:32:09,363 [INFO] 127.0.0.1 - - [24/Jul/2025 18:32:09] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:32:09,365 [INFO] 127.0.0.1 - - [24/Jul/2025 18:32:09] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-24 18:32:23,733 [INFO] 127.0.0.1 - - [24/Jul/2025 18:32:23] "[33mGET /link_request/14/accept HTTP/1.1[0m" 404 -
+2025-07-24 18:33:26,888 [INFO] 127.0.0.1 - - [24/Jul/2025 18:33:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 18:33:28,504 [INFO] 127.0.0.1 - - [24/Jul/2025 18:33:28] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-07-24 18:33:28,512 [INFO] 127.0.0.1 - - [24/Jul/2025 18:33:28] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-24 18:33:28,518 [INFO] 127.0.0.1 - - [24/Jul/2025 18:33:28] "GET /login HTTP/1.1" 200 -
+2025-07-24 18:33:28,580 [INFO] 127.0.0.1 - - [24/Jul/2025 18:33:28] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:33:35,505 [INFO] 127.0.0.1 - - [24/Jul/2025 18:33:35] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-07-24 18:33:35,513 [INFO] 127.0.0.1 - - [24/Jul/2025 18:33:35] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-24 18:33:35,535 [INFO] 127.0.0.1 - - [24/Jul/2025 18:33:35] "GET /perfil HTTP/1.1" 200 -
+2025-07-24 18:33:35,591 [INFO] 127.0.0.1 - - [24/Jul/2025 18:33:35] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-24 18:33:35,591 [INFO] 127.0.0.1 - - [24/Jul/2025 18:33:35] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:33:35,593 [INFO] 127.0.0.1 - - [24/Jul/2025 18:33:35] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:33:39,761 [INFO] 127.0.0.1 - - [24/Jul/2025 18:33:39] "[33mGET /link_request/14/accept HTTP/1.1[0m" 404 -
+2025-07-24 18:33:39,808 [INFO] 127.0.0.1 - - [24/Jul/2025 18:33:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 18:33:50,507 [INFO] 127.0.0.1 - - [24/Jul/2025 18:33:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 18:34:34,789 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:34:34,887 [INFO]  * Restarting with stat
+2025-07-24 18:34:35,351 [WARNING]  * Debugger is active!
+2025-07-24 18:34:35,351 [INFO]  * Debugger PIN: 129-309-471
+2025-07-24 18:34:37,373 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:34:37,463 [INFO]  * Restarting with stat
+2025-07-24 18:34:37,921 [WARNING]  * Debugger is active!
+2025-07-24 18:34:37,921 [INFO]  * Debugger PIN: 129-309-471
+2025-07-24 18:34:39,939 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:34:40,010 [INFO]  * Restarting with stat
+2025-07-24 18:34:40,445 [WARNING]  * Debugger is active!
+2025-07-24 18:34:40,446 [INFO]  * Debugger PIN: 129-309-471
+2025-07-24 18:34:46,762 [INFO] 127.0.0.1 - - [24/Jul/2025 18:34:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 18:35:06,641 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:35:06,732 [INFO]  * Restarting with stat
+2025-07-24 18:35:07,162 [WARNING]  * Debugger is active!
+2025-07-24 18:35:07,163 [INFO]  * Debugger PIN: 129-309-471
+2025-07-24 18:35:10,186 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:35:10,258 [INFO]  * Restarting with stat
+2025-07-24 18:35:10,698 [WARNING]  * Debugger is active!
+2025-07-24 18:35:10,699 [INFO]  * Debugger PIN: 129-309-471
+2025-07-24 18:35:26,816 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:35:26,909 [INFO]  * Restarting with stat
+2025-07-24 18:35:27,332 [WARNING]  * Debugger is active!
+2025-07-24 18:35:27,332 [INFO]  * Debugger PIN: 129-309-471
+2025-07-24 18:35:39,047 [INFO] 127.0.0.1 - - [24/Jul/2025 18:35:39] "[33mGET /link_request/14/accept HTTP/1.1[0m" 404 -
+2025-07-24 18:35:39,070 [INFO] 127.0.0.1 - - [24/Jul/2025 18:35:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 18:36:34,495 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-24 18:36:34,495 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-24 18:36:34,496 [INFO]  * Restarting with stat
+2025-07-24 18:36:48,304 [INFO] 127.0.0.1 - - [24/Jul/2025 18:36:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 18:36:53,672 [INFO] 127.0.0.1 - - [24/Jul/2025 18:36:53] "[33mGET /link_request/14/accept HTTP/1.1[0m" 404 -
+2025-07-24 18:36:53,699 [INFO] 127.0.0.1 - - [24/Jul/2025 18:36:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 18:37:27,293 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:37:27,389 [INFO]  * Restarting with stat
+2025-07-24 18:37:28,828 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:37:28,897 [INFO]  * Restarting with stat
+2025-07-24 18:37:30,355 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:37:30,425 [INFO]  * Restarting with stat
+2025-07-24 18:37:34,889 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:37:34,981 [INFO]  * Restarting with stat
+2025-07-24 18:37:37,890 [INFO] 127.0.0.1 - - [24/Jul/2025 18:37:37] "[33mGET /link_request/14/accept HTTP/1.1[0m" 404 -
+2025-07-24 18:37:37,914 [INFO] 127.0.0.1 - - [24/Jul/2025 18:37:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 18:37:46,599 [INFO] 127.0.0.1 - - [24/Jul/2025 18:37:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 18:37:49,283 [INFO] 127.0.0.1 - - [24/Jul/2025 18:37:49] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-07-24 18:37:49,287 [INFO] 127.0.0.1 - - [24/Jul/2025 18:37:49] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-24 18:37:49,309 [INFO] 127.0.0.1 - - [24/Jul/2025 18:37:49] "GET /login HTTP/1.1" 200 -
+2025-07-24 18:37:49,358 [INFO] 127.0.0.1 - - [24/Jul/2025 18:37:49] "GET /static/logo.png HTTP/1.1" 200 -
+2025-07-24 18:37:56,511 [INFO] 127.0.0.1 - - [24/Jul/2025 18:37:56] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-07-24 18:37:56,519 [INFO] 127.0.0.1 - - [24/Jul/2025 18:37:56] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-24 18:37:56,541 [INFO] 127.0.0.1 - - [24/Jul/2025 18:37:56] "GET /perfil HTTP/1.1" 200 -
+2025-07-24 18:37:56,599 [INFO] 127.0.0.1 - - [24/Jul/2025 18:37:56] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:37:56,603 [INFO] 127.0.0.1 - - [24/Jul/2025 18:37:56] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-24 18:37:56,603 [INFO] 127.0.0.1 - - [24/Jul/2025 18:37:56] "GET /static/trofeo.png HTTP/1.1" 200 -
+2025-07-24 18:38:17,194 [INFO] 127.0.0.1 - - [24/Jul/2025 18:38:17] "[35m[1mGET /link_request/14/accept HTTP/1.1[0m" 201 -
+2025-07-24 18:38:17,242 [INFO] 127.0.0.1 - - [24/Jul/2025 18:38:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 18:39:08,034 [INFO] 127.0.0.1 - - [24/Jul/2025 18:39:08] "GET / HTTP/1.1" 200 -
+2025-07-24 18:39:08,055 [INFO] 127.0.0.1 - - [24/Jul/2025 18:39:08] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:39:16,070 [INFO] 127.0.0.1 - - [24/Jul/2025 18:39:16] "GET /link_request HTTP/1.1" 200 -
+2025-07-24 18:39:16,157 [INFO] 127.0.0.1 - - [24/Jul/2025 18:39:16] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:39:19,517 [INFO] 127.0.0.1 - - [24/Jul/2025 18:39:19] "GET /link_request HTTP/1.1" 200 -
+2025-07-24 18:39:19,549 [INFO] 127.0.0.1 - - [24/Jul/2025 18:39:19] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:39:40,663 [INFO] 127.0.0.1 - - [24/Jul/2025 18:39:40] "GET /student_info/1 HTTP/1.1" 200 -
+2025-07-24 18:39:40,685 [INFO] 127.0.0.1 - - [24/Jul/2025 18:39:40] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:42:30,885 [INFO] 127.0.0.1 - - [24/Jul/2025 18:42:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 18:43:21,947 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:43:22,052 [INFO]  * Restarting with stat
+2025-07-24 18:43:56,723 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:43:56,828 [INFO]  * Restarting with stat
+2025-07-24 18:44:00,297 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:44:00,367 [INFO]  * Restarting with stat
+2025-07-24 18:44:07,700 [INFO] 127.0.0.1 - - [24/Jul/2025 18:44:07] "GET /link_request HTTP/1.1" 200 -
+2025-07-24 18:44:07,727 [INFO] 127.0.0.1 - - [24/Jul/2025 18:44:07] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 18:44:15,247 [INFO] 127.0.0.1 - - [24/Jul/2025 18:44:15] "POST /link_request HTTP/1.1" 200 -
+2025-07-24 18:44:40,073 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:44:40,164 [INFO]  * Restarting with stat
+2025-07-24 18:44:43,596 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:44:43,666 [INFO]  * Restarting with stat
+2025-07-24 18:45:10,292 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:45:10,391 [INFO]  * Restarting with stat
+2025-07-24 18:45:11,835 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:45:11,910 [INFO]  * Restarting with stat
+2025-07-24 18:45:12,595 [INFO] 127.0.0.1 - - [24/Jul/2025 18:45:12] "POST /link_request HTTP/1.1" 200 -
+2025-07-24 18:45:26,447 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:45:26,544 [INFO]  * Restarting with stat
+2025-07-24 18:45:38,043 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:45:38,130 [INFO]  * Restarting with stat
+2025-07-24 18:45:43,574 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:45:43,666 [INFO]  * Restarting with stat
+2025-07-24 18:45:56,193 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 18:45:56,287 [INFO]  * Restarting with stat

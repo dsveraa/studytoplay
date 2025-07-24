@@ -135,7 +135,7 @@ def register_routes(app):
         return jsonify({'status': 'failed'}), 404
 
     @app.route('/link_request', methods=['GET', 'POST']) # envía solicitud de vinculación escribiendo datos en tabla solicitud_vinculacion
-    def link_requests(id=None):
+    def link_request(id=None):
         # print(session) #debug
         if request.method == 'POST':
             if "supervisor_id" not in session:
@@ -144,7 +144,7 @@ def register_routes(app):
             supervisor_id = session.get('supervisor_id')
             # supervisor_id = request.form.get('supervisor_id') #tmp
             usuario_estudiante = request.form['email']
-            print(usuario_estudiante)
+            # print(usuario_estudiante)
             estudiante_id = db.session.query(Usuario.id).filter_by(correo=usuario_estudiante).scalar()
 
             estado_solicitud_vinculacion = (
@@ -156,12 +156,21 @@ def register_routes(app):
                 )
             
             esv = estado_solicitud_vinculacion
-            print(esv)
+            
+            existe_supervisor_estudiante = (
+                db.session.query(SupervisorEstudiante)
+                .filter_by(supervisor_id=supervisor_id, estudiante_id=estudiante_id)
+                .scalar()
+            )
+            
+            ese = existe_supervisor_estudiante
+            # pprint(ese)
+            if ese:
+                return '<h1>This supervisor account is already following the student</h1>'
+
             if esv == 'pendiente':
-                print('I was here')
-                return 'There is a pending link request'
-            elif esv == 'aceptada':
-                return 'Link request is already accepted by the student'
+                return '<h1>There is a pending link request for this student</h1>'
+                
             else:
                 solicitud = SolicitudVinculacion(
                     supervisor_id=supervisor_id,
