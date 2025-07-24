@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float, DateTime, Text, ForeignKey
+from sqlalchemy import Column, Integer, String, Float, DateTime, Text, ForeignKey, UniqueConstraint
 from sqlalchemy.orm import relationship
 from . import db
 from datetime import datetime, timezone
@@ -54,6 +54,9 @@ class Rol(db.Model):
 
 class SupervisorEstudiante(db.Model):
     __tablename__ = 'supervisor_estudiante'
+    __table_args__ = (
+        UniqueConstraint('supervisor_id', 'estudiante_id', name='unique_supervisor_estudiante'),
+    )
 
     id = Column(Integer, primary_key=True)
 

@@ -79,7 +79,7 @@ def register_routes(app):
             'status': status
         }), 200
     
-    @app.route('/link_requests/received', methods=['GET'])
+    @app.route('/link_request/received', methods=['GET'])
     def solicitudes_recibidas():
         if 'usuario_id' not in session:
             return jsonify('status', 'failed'), 401
@@ -100,7 +100,7 @@ def register_routes(app):
                         'solicitante': solicitud.supervisor.nombre 
                         })
 
-    @app.route('/link_requests/<solicitud_id>/accept', methods=['GET']) # se puede aceptar incluso después de haberla rechazado
+    @app.route('/link_request/<solicitud_id>/accept', methods=['GET']) # se puede aceptar incluso después de haberla rechazado
     def aceptar_solicitud(solicitud_id):
         estudiante_id = session.get('usuario_id')
         solicitud = SolicitudVinculacion.query.filter_by(id=solicitud_id, estudiante_id=estudiante_id).first()
@@ -121,11 +121,11 @@ def register_routes(app):
         return jsonify({'status': 'failed'}), 404
 
 
-    @app.route('/link_requests/<solicitud_id>/reject', methods=['GET']) # si existe la solicitud, se cambia el estado.
+    @app.route('/link_request/<solicitud_id>/reject', methods=['GET']) # si existe la solicitud, se cambia el estado.
     def rechazar_solicitud(solicitud_id):
         estudiante_id = session.get('usuario_id')
         solicitud = SolicitudVinculacion.query.filter_by(id=solicitud_id, estudiante_id=estudiante_id).first()
-        print(solicitud)
+        # print(solicitud)
 
         if solicitud:
             solicitud.estado = 'rechazada'
@@ -134,27 +134,46 @@ def register_routes(app):
                             'response': 'rejected'}), 201
         return jsonify({'status': 'failed'}), 404
 
-    @app.route('/link_requests', methods=['POST']) # envía solicitud de vinculación escribiendo datos en tabla solicitud_vinculacion
+    @app.route('/link_request', methods=['GET', 'POST']) # envía solicitud de vinculación escribiendo datos en tabla solicitud_vinculacion
     def link_requests(id=None):
-        # if "supervisor_id" not in session:
-        #     return
-        
-        # supervisor_id = session.get('supervisor_id')
-        supervisor_id = request.form.get('supervisor_id') #tmp
-        usuario_estudiante = request.form['email']
-        estudiante_obj = Usuario.query.filter_by(correo=usuario_estudiante).first()
-        estudiante_id = estudiante_obj.id
+        # print(session) #debug
+        if request.method == 'POST':
+            if "supervisor_id" not in session:
+                return "<h1>Access denied</h1>", 403
+            
+            supervisor_id = session.get('supervisor_id')
+            # supervisor_id = request.form.get('supervisor_id') #tmp
+            usuario_estudiante = request.form['email']
+            print(usuario_estudiante)
+            estudiante_id = db.session.query(Usuario.id).filter_by(correo=usuario_estudiante).scalar()
 
-        solicitud = SolicitudVinculacion(
-            supervisor_id=supervisor_id,
-            estudiante_id=estudiante_id,
-            estado='pendiente'
-        )
+            estado_solicitud_vinculacion = (
+                db.session.query(SolicitudVinculacion.estado)
+                .select_from(SolicitudVinculacion)
+                .filter_by(supervisor_id=supervisor_id, estudiante_id=estudiante_id)
+                .order_by(desc(SolicitudVinculacion.fecha_solicitud))
+                .limit(1).scalar()
+                )
+            
+            esv = estado_solicitud_vinculacion
+            print(esv)
+            if esv == 'pendiente':
+                print('I was here')
+                return 'There is a pending link request'
+            elif esv == 'aceptada':
+                return 'Link request is already accepted by the student'
+            else:
+                solicitud = SolicitudVinculacion(
+                    supervisor_id=supervisor_id,
+                    estudiante_id=estudiante_id,
+                    estado='pendiente'
+                )
 
-        db.session.add(solicitud)
-        db.session.commit()
+            db.session.add(solicitud)
+            db.session.commit()
 
-        return jsonify({'response': 'solicitud enviada'})
+            return jsonify({'response': 'solicitud enviada'})
+        return render_template("/s_link_request.html")
     
     @app.route('/edit_record/<id>', methods=["GET", "POST"])
     def edit_record(id):
@@ -353,10 +372,18 @@ def register_routes(app):
             if usuario and check_password_hash(usuario.contrasena, contrasena):
                 session["usuario_id"] = usuario.id
                 session["usuario_nombre"] = usuario.nombre
+                
+                usuario_id = session.get('usuario_id')
+                supervisor = Usuario.query.join(Rol).filter(Usuario.id == usuario_id, Rol.nombre == "supervisor").first()
+                
+                if supervisor:
+                    session["supervisor_id"] = usuario_id
+
                 session.permanent = True
                 return redirect(url_for("home"))
             else:
                 return "Correo o contraseña incorrectos."
+                
         return render_template("login.html")
 
     @app.route("/records")
@@ -463,6 +490,7 @@ def register_routes(app):
                 .join(Tiempo, Tiempo.usuario_id == SupervisorEstudiante.estudiante_id)
                 .join(EstadoUsuario, EstadoUsuario.usuario_id == SupervisorEstudiante.estudiante_id)
                 .filter(SupervisorEstudiante.supervisor_id == usuario_id)
+                .distinct(Estudiante.id)
             )
 
             estudiantes = [
