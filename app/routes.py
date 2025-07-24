@@ -2,6 +2,8 @@ from flask import render_template, request, redirect, url_for, session, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime, timedelta
 from sqlalchemy import desc
+from sqlalchemy.orm import aliased
+
 
 from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura, AcumulacionTiempo, Rol, SolicitudVinculacion, SupervisorEstudiante, EstadoUsuario
 from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, mostrar_estrellas, mostrar_trofeos, porcentaje_tiempos, sumar_tiempos, mostrar_nivel
@@ -431,6 +433,7 @@ def register_routes(app):
     def logout():
         session.pop("usuario_id", None)
         session.pop("usuario_nombre", None)
+        session.pop("supervisor_id", None)
         return redirect(url_for("home"))
 
     @app.route("/")
@@ -444,47 +447,29 @@ def register_routes(app):
         if supervisor:
             session["supervisor_id"] = usuario_id
 
-            # Set para guardar IDs ya vistos
-            ids_vistos = set()
-            estudiantes_asociados = []
-            
-            estudiantes_supervisados = SupervisorEstudiante.query.filter_by(supervisor_id=usuario_id).all()
+            Estudiante = aliased(Usuario)
+            Supervisor = aliased(Usuario)
 
-            for es in estudiantes_supervisados:
-                estudiante = es.estudiante
-                if estudiante.id not in ids_vistos:
-                    ids_vistos.add(estudiante.id)
-                    estudiantes_asociados.append({
-                        'id': estudiante.id,
-                        'nombre': estudiante.nombre
-                    })
-            
-            # print(estudiantes_asociados)
+            query = (
+                db.session.query(
+                    Estudiante.id,
+                    Estudiante.nombre,
+                    Tiempo.tiempo,
+                    EstadoUsuario.estado
+                )
+                .select_from(SupervisorEstudiante)
+                .join(Supervisor, Supervisor.id == SupervisorEstudiante.supervisor_id)
+                .join(Estudiante, Estudiante.id == SupervisorEstudiante.estudiante_id)
+                .join(Tiempo, Tiempo.usuario_id == SupervisorEstudiante.estudiante_id)
+                .join(EstadoUsuario, EstadoUsuario.usuario_id == SupervisorEstudiante.estudiante_id)
+                .filter(SupervisorEstudiante.supervisor_id == usuario_id)
+            )
 
-            estudiante_ids = [e['id'] for e in estudiantes_asociados]
-            estados_usuarios = EstadoUsuario.query.filter(EstadoUsuario.usuario_id.in_(estudiante_ids)).all()
-            estados_dict = {e.usuario_id: e.estado for e in estados_usuarios}
-
-            for estudiante in estudiantes_asociados:
-                estudiante['estado'] = estados_dict.get(estudiante['id'], None)
-
-            tiempo_estudiantes = Tiempo.query.filter(Tiempo.usuario_id.in_(estudiante_ids)).all()
-            # print(tiempo_estudiantes[1].tiempo)
-
-            tiempos_dict = {obj.id: obj.tiempo for obj in tiempo_estudiantes}
-
-            for estudiante in estudiantes_asociados:
-                id_est = estudiante['id']
-                estudiante['tiempo'] = tiempos_dict.get(id_est, None)
-            
-            for estudiante in estudiantes_asociados:
-                print(estudiante)
-
-            # return jsonify({
-            #     'supervisor': {'id': usuario_id, 'nombre': supervisor.nombre},
-            #     'estudiantes': estudiantes_asociados
-            # })
-            return render_template("s_dashboard.html", estudiantes=estudiantes_asociados)
+            estudiantes = [
+                {"id": eid, "nombre": nombre, "tiempo": tiempo, "estado": estado}
+                for eid, nombre, tiempo, estado in query.all()
+            ]
+            return render_template("s_dashboard.html", estudiantes=estudiantes)
         
         return redirect(url_for("perfil"))
         

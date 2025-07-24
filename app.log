@@ -794,3 +794,427 @@ WHERE asignaturas.usuario_id = %(usuario_id_1)s]
 2025-07-23 21:04:13,557 [INFO] 127.0.0.1 - - [23/Jul/2025 21:04:13] "GET / HTTP/1.1" 200 -
 2025-07-23 21:04:21,444 [INFO] 127.0.0.1 - - [23/Jul/2025 21:04:21] "GET /student_info/7 HTTP/1.1" 200 -
 2025-07-23 21:04:21,462 [INFO] 127.0.0.1 - - [23/Jul/2025 21:04:21] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 00:12:58,601 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-24 00:12:58,601 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-24 00:13:08,829 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 505, in home
+    print(query)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2883, in __str__
+    return str(statement.compile(bind))
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 308, in compile
+    return self._compiler(dialect, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 316, in _compiler
+    return dialect.statement_compiler(dialect, self, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 1429, in __init__
+    Compiled.__init__(self, dialect, statement, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 870, in __init__
+    self.string = self.process(self.statement, **compile_kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 915, in process
+    return obj._compiler_dispatch(self, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/visitors.py", line 141, in _compiler_dispatch
+    return meth(self, **kw)  # type: ignore  # noqa: E501
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 4680, in visit_select
+    compile_state = select_stmt._compile_state_factory(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/base.py", line 683, in create_for_statement
+    return klass.create_for_statement(statement, compiler, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1181, in create_for_statement
+    self._setup_for_generate()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1216, in _setup_for_generate
+    self._join(query._setup_joins, self._entities)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1859, in _join
+    self._join_left_to_right(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1894, in _join_left_to_right
+    ) = self._join_determine_implicit_left_side(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 2049, in _join_determine_implicit_left_side
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Can't determine which FROM clause to join from, there are multiple FROMS which can join to this entity. Please use the .select_from() method to establish an explicit left side, as well as providing an explicit ON clause if not present already to help resolve the ambiguity.
+2025-07-24 00:13:08,962 [INFO] 127.0.0.1 - - [24/Jul/2025 00:13:08] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-24 00:13:08,983 [INFO] 127.0.0.1 - - [24/Jul/2025 00:13:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 00:13:14,217 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 505, in home
+    print(query)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2883, in __str__
+    return str(statement.compile(bind))
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 308, in compile
+    return self._compiler(dialect, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 316, in _compiler
+    return dialect.statement_compiler(dialect, self, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 1429, in __init__
+    Compiled.__init__(self, dialect, statement, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 870, in __init__
+    self.string = self.process(self.statement, **compile_kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 915, in process
+    return obj._compiler_dispatch(self, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/visitors.py", line 141, in _compiler_dispatch
+    return meth(self, **kw)  # type: ignore  # noqa: E501
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 4680, in visit_select
+    compile_state = select_stmt._compile_state_factory(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/base.py", line 683, in create_for_statement
+    return klass.create_for_statement(statement, compiler, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1181, in create_for_statement
+    self._setup_for_generate()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1216, in _setup_for_generate
+    self._join(query._setup_joins, self._entities)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1859, in _join
+    self._join_left_to_right(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1894, in _join_left_to_right
+    ) = self._join_determine_implicit_left_side(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 2049, in _join_determine_implicit_left_side
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Can't determine which FROM clause to join from, there are multiple FROMS which can join to this entity. Please use the .select_from() method to establish an explicit left side, as well as providing an explicit ON clause if not present already to help resolve the ambiguity.
+2025-07-24 00:13:14,419 [INFO] 127.0.0.1 - - [24/Jul/2025 00:13:14] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-24 00:14:24,881 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 505, in home
+    # print(query)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2883, in __str__
+    return str(statement.compile(bind))
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 308, in compile
+    return self._compiler(dialect, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 316, in _compiler
+    return dialect.statement_compiler(dialect, self, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 1429, in __init__
+    Compiled.__init__(self, dialect, statement, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 870, in __init__
+    self.string = self.process(self.statement, **compile_kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 915, in process
+    return obj._compiler_dispatch(self, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/visitors.py", line 141, in _compiler_dispatch
+    return meth(self, **kw)  # type: ignore  # noqa: E501
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 4680, in visit_select
+    compile_state = select_stmt._compile_state_factory(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/base.py", line 683, in create_for_statement
+    return klass.create_for_statement(statement, compiler, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1181, in create_for_statement
+    self._setup_for_generate()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1216, in _setup_for_generate
+    self._join(query._setup_joins, self._entities)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1859, in _join
+    self._join_left_to_right(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1894, in _join_left_to_right
+    ) = self._join_determine_implicit_left_side(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 2049, in _join_determine_implicit_left_side
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Can't determine which FROM clause to join from, there are multiple FROMS which can join to this entity. Please use the .select_from() method to establish an explicit left side, as well as providing an explicit ON clause if not present already to help resolve the ambiguity.
+2025-07-24 00:14:25,009 [INFO] 127.0.0.1 - - [24/Jul/2025 00:14:25] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-24 00:14:50,247 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 505, in home
+    # print(query)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2883, in __str__
+    return str(statement.compile(bind))
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 308, in compile
+    return self._compiler(dialect, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 316, in _compiler
+    return dialect.statement_compiler(dialect, self, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 1429, in __init__
+    Compiled.__init__(self, dialect, statement, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 870, in __init__
+    self.string = self.process(self.statement, **compile_kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 915, in process
+    return obj._compiler_dispatch(self, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/visitors.py", line 141, in _compiler_dispatch
+    return meth(self, **kw)  # type: ignore  # noqa: E501
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 4680, in visit_select
+    compile_state = select_stmt._compile_state_factory(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/base.py", line 683, in create_for_statement
+    return klass.create_for_statement(statement, compiler, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1181, in create_for_statement
+    self._setup_for_generate()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1216, in _setup_for_generate
+    self._join(query._setup_joins, self._entities)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1859, in _join
+    self._join_left_to_right(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1894, in _join_left_to_right
+    ) = self._join_determine_implicit_left_side(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 2049, in _join_determine_implicit_left_side
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Can't determine which FROM clause to join from, there are multiple FROMS which can join to this entity. Please use the .select_from() method to establish an explicit left side, as well as providing an explicit ON clause if not present already to help resolve the ambiguity.
+2025-07-24 00:14:50,476 [INFO] 127.0.0.1 - - [24/Jul/2025 00:14:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-24 00:15:08,384 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 505, in home
+    # print(query)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2883, in __str__
+    return str(statement.compile(bind))
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 308, in compile
+    return self._compiler(dialect, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 316, in _compiler
+    return dialect.statement_compiler(dialect, self, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 1429, in __init__
+    Compiled.__init__(self, dialect, statement, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 870, in __init__
+    self.string = self.process(self.statement, **compile_kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 915, in process
+    return obj._compiler_dispatch(self, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/visitors.py", line 141, in _compiler_dispatch
+    return meth(self, **kw)  # type: ignore  # noqa: E501
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 4680, in visit_select
+    compile_state = select_stmt._compile_state_factory(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/base.py", line 683, in create_for_statement
+    return klass.create_for_statement(statement, compiler, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1181, in create_for_statement
+    self._setup_for_generate()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1216, in _setup_for_generate
+    self._join(query._setup_joins, self._entities)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1859, in _join
+    self._join_left_to_right(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1894, in _join_left_to_right
+    ) = self._join_determine_implicit_left_side(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 2049, in _join_determine_implicit_left_side
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Can't determine which FROM clause to join from, there are multiple FROMS which can join to this entity. Please use the .select_from() method to establish an explicit left side, as well as providing an explicit ON clause if not present already to help resolve the ambiguity.
+2025-07-24 00:15:08,521 [INFO] 127.0.0.1 - - [24/Jul/2025 00:15:08] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-24 00:15:32,743 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-24 00:15:32,743 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-24 00:15:32,744 [INFO]  * Restarting with stat
+2025-07-24 00:15:37,391 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 506, in home
+    return render_template("s_dashboard.html", estudiantes=None)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 1, in top-level template code
+    {% extends 'base_supervisor.html' %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/base_supervisor.html", line 105, in top-level template code
+    {% block content %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 10, in block 'content'
+    {% for estudiante in estudiantes %}
+TypeError: 'NoneType' object is not iterable
+2025-07-24 00:15:37,583 [INFO] 127.0.0.1 - - [24/Jul/2025 00:15:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-24 00:16:12,736 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-24 00:16:12,736 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-24 00:16:12,737 [INFO]  * Restarting with stat
+2025-07-24 00:16:16,548 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 506, in home
+    return render_template("s_dashboard.html", estudiantes=None)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 1, in top-level template code
+    {% extends 'base_supervisor.html' %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/base_supervisor.html", line 105, in top-level template code
+    {% block content %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 10, in block 'content'
+    <!-- {% for estudiante in estudiantes %}
+TypeError: 'NoneType' object is not iterable
+2025-07-24 00:16:16,798 [INFO] 127.0.0.1 - - [24/Jul/2025 00:16:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-24 00:16:39,545 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-24 00:16:39,545 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-24 00:16:39,546 [INFO]  * Restarting with stat
+2025-07-24 00:16:43,663 [INFO] 127.0.0.1 - - [24/Jul/2025 00:16:43] "GET / HTTP/1.1" 200 -
+2025-07-24 00:16:43,686 [INFO] 127.0.0.1 - - [24/Jul/2025 00:16:43] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 00:16:54,099 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 00:16:54,179 [INFO]  * Restarting with stat
+2025-07-24 00:17:04,707 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 00:17:04,801 [INFO]  * Restarting with stat
+2025-07-24 00:17:07,698 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 505, in home
+    print(query)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2883, in __str__
+    return str(statement.compile(bind))
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 308, in compile
+    return self._compiler(dialect, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 316, in _compiler
+    return dialect.statement_compiler(dialect, self, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 1429, in __init__
+    Compiled.__init__(self, dialect, statement, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 870, in __init__
+    self.string = self.process(self.statement, **compile_kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 915, in process
+    return obj._compiler_dispatch(self, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/visitors.py", line 141, in _compiler_dispatch
+    return meth(self, **kw)  # type: ignore  # noqa: E501
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 4680, in visit_select
+    compile_state = select_stmt._compile_state_factory(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/base.py", line 683, in create_for_statement
+    return klass.create_for_statement(statement, compiler, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1181, in create_for_statement
+    self._setup_for_generate()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1216, in _setup_for_generate
+    self._join(query._setup_joins, self._entities)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1859, in _join
+    self._join_left_to_right(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 1894, in _join_left_to_right
+    ) = self._join_determine_implicit_left_side(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 2049, in _join_determine_implicit_left_side
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Can't determine which FROM clause to join from, there are multiple FROMS which can join to this entity. Please use the .select_from() method to establish an explicit left side, as well as providing an explicit ON clause if not present already to help resolve the ambiguity.
+2025-07-24 00:17:07,831 [INFO] 127.0.0.1 - - [24/Jul/2025 00:17:07] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-24 00:18:25,831 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 00:18:25,930 [INFO]  * Restarting with stat
+2025-07-24 00:18:28,352 [INFO]  * Restarting with stat
+2025-07-24 00:18:39,109 [INFO] 127.0.0.1 - - [24/Jul/2025 00:18:39] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-24 00:18:39,507 [INFO] 127.0.0.1 - - [24/Jul/2025 00:18:39] "GET /perfil HTTP/1.1" 200 -
+2025-07-24 00:18:39,534 [INFO] 127.0.0.1 - - [24/Jul/2025 00:18:39] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 00:19:10,068 [INFO] 127.0.0.1 - - [24/Jul/2025 00:19:10] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-24 00:19:10,485 [INFO] 127.0.0.1 - - [24/Jul/2025 00:19:10] "GET /perfil HTTP/1.1" 200 -
+2025-07-24 00:19:10,501 [INFO] 127.0.0.1 - - [24/Jul/2025 00:19:10] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 00:19:12,308 [INFO] 127.0.0.1 - - [24/Jul/2025 00:19:12] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-07-24 00:19:12,312 [INFO] 127.0.0.1 - - [24/Jul/2025 00:19:12] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-24 00:19:12,317 [INFO] 127.0.0.1 - - [24/Jul/2025 00:19:12] "GET /login HTTP/1.1" 200 -
+2025-07-24 00:19:12,416 [INFO] 127.0.0.1 - - [24/Jul/2025 00:19:12] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 00:19:18,370 [INFO] 127.0.0.1 - - [24/Jul/2025 00:19:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-07-24 00:19:18,827 [INFO] 127.0.0.1 - - [24/Jul/2025 00:19:18] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-24 00:19:19,599 [INFO] 127.0.0.1 - - [24/Jul/2025 00:19:19] "GET /perfil HTTP/1.1" 200 -
+2025-07-24 00:19:19,621 [INFO] 127.0.0.1 - - [24/Jul/2025 00:19:19] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 00:19:27,231 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 00:19:27,330 [INFO]  * Restarting with stat
+2025-07-24 00:19:37,834 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 00:19:37,906 [INFO]  * Restarting with stat
+2025-07-24 00:19:43,387 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 00:19:43,481 [INFO]  * Restarting with stat
+2025-07-24 00:19:49,951 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 00:19:50,027 [INFO]  * Restarting with stat
+2025-07-24 00:19:53,425 [INFO]  * Restarting with stat
+2025-07-24 00:20:00,048 [INFO] 127.0.0.1 - - [24/Jul/2025 00:20:00] "GET /perfil HTTP/1.1" 200 -
+2025-07-24 00:20:00,116 [INFO] 127.0.0.1 - - [24/Jul/2025 00:20:00] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 00:20:06,091 [INFO] 127.0.0.1 - - [24/Jul/2025 00:20:06] "GET / HTTP/1.1" 200 -
+2025-07-24 00:20:06,115 [INFO] 127.0.0.1 - - [24/Jul/2025 00:20:06] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 00:20:23,498 [INFO] 127.0.0.1 - - [24/Jul/2025 00:20:23] "GET / HTTP/1.1" 200 -
+2025-07-24 00:20:23,511 [INFO] 127.0.0.1 - - [24/Jul/2025 00:20:23] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 00:20:43,224 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 00:20:43,335 [INFO]  * Restarting with stat
+2025-07-24 00:20:46,759 [INFO]  * Restarting with stat
+2025-07-24 00:20:54,872 [INFO] 127.0.0.1 - - [24/Jul/2025 00:20:54] "GET / HTTP/1.1" 200 -
+2025-07-24 00:20:54,891 [INFO] 127.0.0.1 - - [24/Jul/2025 00:20:54] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    2025-07-24 00:34:48,138 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-24 00:34:48,138 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-24 00:34:48,139 [INFO]  * Restarting with stat
+2025-07-24 00:34:48,545 [WARNING]  * Debugger is active!
+2025-07-24 00:34:48,545 [INFO]  * Debugger PIN: 134-207-952
+2025-07-24 00:34:58,383 [INFO] 127.0.0.1 - - [24/Jul/2025 00:34:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-24 00:35:00,035 [INFO] 127.0.0.1 - - [24/Jul/2025 00:35:00] "GET /perfil HTTP/1.1" 200 -
+2025-07-24 00:35:00,134 [INFO] 127.0.0.1 - - [24/Jul/2025 00:35:00] "GET /static/trofeo.png HTTP/1.1" 200 -
+2025-07-24 00:35:00,134 [INFO] 127.0.0.1 - - [24/Jul/2025 00:35:00] "GET /static/star.png HTTP/1.1" 200 -
+2025-07-24 00:35:00,135 [INFO] 127.0.0.1 - - [24/Jul/2025 00:35:00] "GET /static/logo.png HTTP/1.1" 200 -
+2025-07-24 00:35:00,135 [INFO] 127.0.0.1 - - [24/Jul/2025 00:35:00] "GET /static/template_star.png HTTP/1.1" 200 -
+2025-07-24 00:35:12,357 [INFO] 127.0.0.1 - - [24/Jul/2025 00:35:12] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-07-24 00:35:12,370 [INFO] 127.0.0.1 - - [24/Jul/2025 00:35:12] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-24 00:35:12,384 [INFO] 127.0.0.1 - - [24/Jul/2025 00:35:12] "GET /login HTTP/1.1" 200 -
+2025-07-24 00:35:12,435 [INFO] 127.0.0.1 - - [24/Jul/2025 00:35:12] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 00:35:20,460 [INFO] 127.0.0.1 - - [24/Jul/2025 00:35:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-07-24 00:35:21,130 [INFO] 127.0.0.1 - - [24/Jul/2025 00:35:21] "GET / HTTP/1.1" 200 -
+2025-07-24 00:35:21,171 [INFO] 127.0.0.1 - - [24/Jul/2025 00:35:21] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 00:35:38,790 [INFO] 127.0.0.1 - - [24/Jul/2025 00:35:38] "[33mGET /student_info/ HTTP/1.1[0m" 404 -
+2025-07-24 00:35:38,840 [INFO] 127.0.0.1 - - [24/Jul/2025 00:35:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-24 00:37:26,737 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 00:37:26,835 [INFO]  * Restarting with stat
+2025-07-24 00:37:27,262 [WARNING]  * Debugger is active!
+2025-07-24 00:37:27,262 [INFO]  * Debugger PIN: 134-207-952
+2025-07-24 00:37:46,405 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 00:37:46,494 [INFO]  * Restarting with stat
+2025-07-24 00:37:46,946 [WARNING]  * Debugger is active!
+2025-07-24 00:37:46,947 [INFO]  * Debugger PIN: 134-207-952
+2025-07-24 00:39:01,499 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 00:39:01,586 [INFO]  * Restarting with stat
+2025-07-24 00:39:42,578 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-24 00:39:42,578 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-24 00:39:42,578 [INFO]  * Restarting with stat
+2025-07-24 00:39:43,005 [WARNING]  * Debugger is active!
+2025-07-24 00:39:43,005 [INFO]  * Debugger PIN: 134-207-952
+2025-07-24 00:39:49,397 [INFO] 127.0.0.1 - - [24/Jul/2025 00:39:49] "GET / HTTP/1.1" 200 -
+2025-07-24 00:39:49,440 [INFO] 127.0.0.1 - - [24/Jul/2025 00:39:49] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 00:39:54,189 [INFO] 127.0.0.1 - - [24/Jul/2025 00:39:54] "GET /student_info/7 HTTP/1.1" 200 -
+2025-07-24 00:39:54,238 [INFO] 127.0.0.1 - - [24/Jul/2025 00:39:54] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-24 00:42:34,324 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 00:42:34,423 [INFO]  * Restarting with stat
+2025-07-24 00:42:34,846 [WARNING]  * Debugger is active!
+2025-07-24 00:42:34,847 [INFO]  * Debugger PIN: 134-207-952
+2025-07-24 00:42:38,877 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 00:42:38,961 [INFO]  * Restarting with stat
+2025-07-24 00:42:39,403 [WARNING]  * Debugger is active!
+2025-07-24 00:42:39,403 [INFO]  * Debugger PIN: 134-207-952
+2025-07-24 00:42:42,426 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 00:42:42,501 [INFO]  * Restarting with stat
+2025-07-24 00:42:42,937 [WARNING]  * Debugger is active!
+2025-07-24 00:42:42,937 [INFO]  * Debugger PIN: 134-207-952
+2025-07-24 00:42:44,955 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-24 00:42:45,028 [INFO]  * Restarting with stat
+2025-07-24 00:42:45,449 [WARNING]  * Debugger is active!
+2025-07-24 00:42:45,450 [INFO]  * Debugger PIN: 134-207-952
