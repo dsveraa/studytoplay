@@ -79,6 +79,11 @@ class SolicitudVinculacion(db.Model):
     supervisor = relationship('Usuario', foreign_keys=[supervisor_id], backref='solicitudes_enviadas')
     estudiante = relationship('Usuario', foreign_keys=[estudiante_id], backref='solicitudes_recibidas')
 
+    def to_dict(self):
+        d = self.__dict__.copy()
+        d.pop('_sa_instance_state', None)
+        return d
+
 class EstadoUsuario(db.Model):
     __tablename__ = 'estado_usuario'
 

@@ -1,6 +1,24 @@
 from datetime import timedelta
 from app.models import Nivel, Trofeo, Premio, Usuario, Estrella, AcumulacionTiempo, Tiempo
 from .. import db
+from functools import wraps
+from flask import session, jsonify
+
+def login_required(f):
+    @wraps(f)
+    def wrapped(*args, **kwargs):
+        if 'usuario_id' not in session:
+            return jsonify({'status': 'unauthorized'}), 401
+        return f(*args, **kwargs)
+    return wrapped
+
+def supervisor_required(f):
+    @wraps(f)
+    def wrapped(*args, **kwargs):
+        if 'supervisor_id' not in session:
+            return jsonify({'status': 'unauthorized'}), 401
+        return f(*args, **kwargs)
+    return wrapped
 
 def agrupar_tiempos(estudios, asignatura):
     return [{

@@ -2671,3 +2671,1968 @@ sqlalchemy.exc.MultipleResultsFound: Multiple rows were found when exactly one w
 2025-07-24 18:45:43,666 [INFO]  * Restarting with stat
 2025-07-24 18:45:56,193 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
 2025-07-24 18:45:56,287 [INFO]  * Restarting with stat
+2025-07-25 12:37:02,995 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-25 12:37:02,995 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-25 12:37:02,996 [INFO]  * Restarting with stat
+2025-07-25 12:37:03,411 [WARNING]  * Debugger is active!
+2025-07-25 12:37:03,411 [INFO]  * Debugger PIN: 304-672-778
+2025-07-25 12:37:13,065 [INFO] 127.0.0.1 - - [25/Jul/2025 12:37:13] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-25 12:37:13,198 [INFO] 127.0.0.1 - - [25/Jul/2025 12:37:13] "GET /perfil HTTP/1.1" 200 -
+2025-07-25 12:37:13,284 [INFO] 127.0.0.1 - - [25/Jul/2025 12:37:13] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-25 12:37:13,284 [INFO] 127.0.0.1 - - [25/Jul/2025 12:37:13] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 12:37:13,287 [INFO] 127.0.0.1 - - [25/Jul/2025 12:37:13] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-25 12:37:30,747 [INFO] 127.0.0.1 - - [25/Jul/2025 12:37:30] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-07-25 12:37:30,756 [INFO] 127.0.0.1 - - [25/Jul/2025 12:37:30] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-25 12:37:30,771 [INFO] 127.0.0.1 - - [25/Jul/2025 12:37:30] "GET /login HTTP/1.1" 200 -
+2025-07-25 12:37:30,821 [INFO] 127.0.0.1 - - [25/Jul/2025 12:37:30] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 12:40:13,726 [INFO] 127.0.0.1 - - [25/Jul/2025 12:40:13] "POST /link_request HTTP/1.1" 200 -
+2025-07-25 12:40:14,094 [INFO] 127.0.0.1 - - [25/Jul/2025 12:40:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 12:40:20,190 [INFO] 127.0.0.1 - - [25/Jul/2025 12:40:20] "GET / HTTP/1.1" 200 -
+2025-07-25 12:40:20,289 [INFO] 127.0.0.1 - - [25/Jul/2025 12:40:20] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 12:40:47,867 [INFO] 127.0.0.1 - - [25/Jul/2025 12:40:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-07-25 12:40:47,876 [INFO] 127.0.0.1 - - [25/Jul/2025 12:40:47] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-25 12:40:47,887 [INFO] 127.0.0.1 - - [25/Jul/2025 12:40:47] "GET /perfil HTTP/1.1" 200 -
+2025-07-25 12:40:47,943 [INFO] 127.0.0.1 - - [25/Jul/2025 12:40:47] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-25 12:40:47,943 [INFO] 127.0.0.1 - - [25/Jul/2025 12:40:47] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-25 12:40:47,945 [INFO] 127.0.0.1 - - [25/Jul/2025 12:40:47] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 12:41:58,664 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 12:41:58,765 [INFO]  * Restarting with stat
+2025-07-25 12:41:59,185 [WARNING]  * Debugger is active!
+2025-07-25 12:41:59,185 [INFO]  * Debugger PIN: 304-672-778
+2025-07-25 12:52:13,945 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 12:52:14,039 [INFO]  * Restarting with stat
+2025-07-25 12:52:14,482 [WARNING]  * Debugger is active!
+2025-07-25 12:52:14,483 [INFO]  * Debugger PIN: 304-672-778
+2025-07-25 12:52:15,496 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 12:52:15,571 [INFO]  * Restarting with stat
+2025-07-25 14:16:15,891 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-25 14:16:15,891 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-25 14:16:15,891 [INFO]  * Restarting with stat
+2025-07-25 14:16:16,322 [WARNING]  * Debugger is active!
+2025-07-25 14:16:16,322 [INFO]  * Debugger PIN: 304-672-778
+2025-07-25 14:16:18,690 [INFO] 127.0.0.1 - - [25/Jul/2025 14:16:18] "GET /link_request HTTP/1.1" 200 -
+2025-07-25 14:16:18,718 [INFO] 127.0.0.1 - - [25/Jul/2025 14:16:18] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 14:16:29,676 [INFO] 127.0.0.1 - - [25/Jul/2025 14:16:29] "POST /link_request HTTP/1.1" 200 -
+2025-07-25 14:17:29,879 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:17:29,980 [INFO]  * Restarting with stat
+2025-07-25 14:17:30,423 [WARNING]  * Debugger is active!
+2025-07-25 14:17:30,423 [INFO]  * Debugger PIN: 304-672-778
+2025-07-25 14:17:44,531 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:17:44,633 [INFO]  * Restarting with stat
+2025-07-25 14:19:41,693 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-25 14:19:41,694 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-25 14:19:41,694 [INFO]  * Restarting with stat
+2025-07-25 14:19:42,127 [WARNING]  * Debugger is active!
+2025-07-25 14:19:42,127 [INFO]  * Debugger PIN: 304-672-778
+2025-07-25 14:19:49,266 [INFO] 127.0.0.1 - - [25/Jul/2025 14:19:49] "GET /link_request HTTP/1.1" 200 -
+2025-07-25 14:19:49,285 [INFO] 127.0.0.1 - - [25/Jul/2025 14:19:49] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 14:19:51,302 [INFO] 127.0.0.1 - - [25/Jul/2025 14:19:51] "POST /link_request HTTP/1.1" 200 -
+2025-07-25 14:20:12,354 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:20:12,452 [INFO]  * Restarting with stat
+2025-07-25 14:20:12,884 [WARNING]  * Debugger is active!
+2025-07-25 14:20:12,885 [INFO]  * Debugger PIN: 304-672-778
+2025-07-25 14:20:14,903 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:20:14,972 [INFO]  * Restarting with stat
+2025-07-25 14:20:15,409 [WARNING]  * Debugger is active!
+2025-07-25 14:20:15,410 [INFO]  * Debugger PIN: 304-672-778
+2025-07-25 14:20:18,305 [INFO] 127.0.0.1 - - [25/Jul/2025 14:20:18] "POST /link_request HTTP/1.1" 200 -
+2025-07-25 14:20:46,640 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:20:46,742 [INFO]  * Restarting with stat
+2025-07-25 14:20:57,741 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-25 14:20:57,741 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-25 14:20:57,741 [INFO]  * Restarting with stat
+2025-07-25 14:20:58,174 [WARNING]  * Debugger is active!
+2025-07-25 14:20:58,174 [INFO]  * Debugger PIN: 304-672-778
+2025-07-25 14:21:05,759 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-25 14:21:05,759 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-25 14:21:05,760 [INFO]  * Restarting with stat
+2025-07-25 14:21:08,777 [INFO] 127.0.0.1 - - [25/Jul/2025 14:21:08] "POST /link_request HTTP/1.1" 200 -
+2025-07-25 14:23:00,051 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:23:00,149 [INFO]  * Restarting with stat
+2025-07-25 14:23:05,622 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:23:05,711 [INFO]  * Restarting with stat
+2025-07-25 14:23:09,177 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:23:09,246 [INFO]  * Restarting with stat
+2025-07-25 14:23:14,711 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:23:14,783 [INFO]  * Restarting with stat
+2025-07-25 14:23:18,944 [INFO] 127.0.0.1 - - [25/Jul/2025 14:23:18] "POST /link_request HTTP/1.1" 200 -
+2025-07-25 14:24:31,368 [INFO] 127.0.0.1 - - [25/Jul/2025 14:24:31] "GET /link_request HTTP/1.1" 200 -
+2025-07-25 14:24:31,391 [INFO] 127.0.0.1 - - [25/Jul/2025 14:24:31] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 14:24:32,628 [INFO] 127.0.0.1 - - [25/Jul/2025 14:24:32] "GET / HTTP/1.1" 200 -
+2025-07-25 14:24:32,640 [INFO] 127.0.0.1 - - [25/Jul/2025 14:24:32] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 14:25:23,774 [INFO] 127.0.0.1 - - [25/Jul/2025 14:25:23] "GET /student_info/1 HTTP/1.1" 200 -
+2025-07-25 14:25:23,792 [INFO] 127.0.0.1 - - [25/Jul/2025 14:25:23] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 14:25:27,494 [INFO] 127.0.0.1 - - [25/Jul/2025 14:25:27] "GET / HTTP/1.1" 200 -
+2025-07-25 14:25:27,517 [INFO] 127.0.0.1 - - [25/Jul/2025 14:25:27] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 14:25:28,852 [INFO] 127.0.0.1 - - [25/Jul/2025 14:25:28] "GET /student_info/1 HTTP/1.1" 200 -
+2025-07-25 14:25:28,868 [INFO] 127.0.0.1 - - [25/Jul/2025 14:25:28] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 14:25:36,499 [INFO] 127.0.0.1 - - [25/Jul/2025 14:25:36] "GET /student_info/1 HTTP/1.1" 200 -
+2025-07-25 14:25:36,520 [INFO] 127.0.0.1 - - [25/Jul/2025 14:25:36] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 14:25:47,757 [INFO] 127.0.0.1 - - [25/Jul/2025 14:25:47] "GET /student_info/3 HTTP/1.1" 200 -
+2025-07-25 14:25:47,773 [INFO] 127.0.0.1 - - [25/Jul/2025 14:25:47] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 14:26:12,849 [INFO] 127.0.0.1 - - [25/Jul/2025 14:26:12] "GET /student_info/2 HTTP/1.1" 200 -
+2025-07-25 14:26:29,165 [INFO] 127.0.0.1 - - [25/Jul/2025 14:26:29] "GET /student_info/1 HTTP/1.1" 200 -
+2025-07-25 14:26:29,188 [INFO] 127.0.0.1 - - [25/Jul/2025 14:26:29] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 14:26:32,076 [INFO] 127.0.0.1 - - [25/Jul/2025 14:26:32] "GET /student_info/3 HTTP/1.1" 200 -
+2025-07-25 14:26:32,101 [INFO] 127.0.0.1 - - [25/Jul/2025 14:26:32] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 14:27:54,352 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:27:54,448 [INFO]  * Restarting with stat
+2025-07-25 14:27:59,917 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:28:00,004 [INFO]  * Restarting with stat
+2025-07-25 14:32:35,530 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:32:35,619 [INFO]  * Restarting with stat
+2025-07-25 14:32:37,156 [INFO]  * Restarting with stat
+2025-07-25 14:32:41,622 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:32:41,709 [INFO]  * Restarting with stat
+2025-07-25 14:32:43,152 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:32:43,221 [INFO]  * Restarting with stat
+2025-07-25 14:33:53,785 [INFO] 127.0.0.1 - - [25/Jul/2025 14:33:53] "GET /link_request/received HTTP/1.1" 200 -
+2025-07-25 14:33:53,825 [INFO] 127.0.0.1 - - [25/Jul/2025 14:33:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 14:36:57,546 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:36:57,640 [INFO]  * Restarting with stat
+2025-07-25 14:37:02,100 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:37:02,192 [INFO]  * Restarting with stat
+2025-07-25 14:38:23,203 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:38:23,295 [INFO]  * Restarting with stat
+2025-07-25 14:38:25,728 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:38:25,795 [INFO]  * Restarting with stat
+2025-07-25 14:38:28,239 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:38:28,309 [INFO]  * Restarting with stat
+2025-07-25 14:38:29,755 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:38:29,837 [INFO]  * Restarting with stat
+2025-07-25 14:38:31,280 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:38:31,348 [INFO]  * Restarting with stat
+2025-07-25 14:38:32,790 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:38:32,858 [INFO]  * Restarting with stat
+2025-07-25 14:39:00,472 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:39:00,563 [INFO]  * Restarting with stat
+2025-07-25 14:39:01,949 [INFO]  * Restarting with stat
+2025-07-25 14:39:11,458 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:39:11,545 [INFO]  * Restarting with stat
+2025-07-25 14:39:22,058 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:39:22,145 [INFO]  * Restarting with stat
+2025-07-25 14:39:39,697 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:39:39,787 [INFO]  * Restarting with stat
+2025-07-25 14:39:45,257 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:39:45,349 [INFO]  * Restarting with stat
+2025-07-25 14:39:49,796 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:39:49,887 [INFO]  * Restarting with stat
+2025-07-25 14:39:52,258 [INFO]  * Restarting with stat
+2025-07-25 14:39:54,699 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:39:54,768 [INFO]  * Restarting with stat
+2025-07-25 14:40:01,246 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:40:01,347 [INFO]  * Restarting with stat
+2025-07-25 14:40:03,810 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:40:03,884 [INFO]  * Restarting with stat
+2025-07-25 14:40:08,287 [INFO]  * Restarting with stat
+2025-07-25 14:40:12,758 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:40:12,845 [INFO]  * Restarting with stat
+2025-07-25 14:40:16,295 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:40:16,381 [INFO]  * Restarting with stat
+2025-07-25 14:40:32,931 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:40:33,020 [INFO]  * Restarting with stat
+2025-07-25 14:40:35,466 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:40:35,534 [INFO]  * Restarting with stat
+2025-07-25 14:40:41,004 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:40:41,075 [INFO]  * Restarting with stat
+2025-07-25 14:41:00,708 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 939, in finalize_request
+    response = self.make_response(rv)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1212, in make_response
+    raise TypeError(
+TypeError: The view function for 'received_requests' did not return a valid response. The function either returned None or ended without a return statement.
+2025-07-25 14:41:00,710 [INFO] 127.0.0.1 - - [25/Jul/2025 14:41:00] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 14:41:00,756 [INFO] 127.0.0.1 - - [25/Jul/2025 14:41:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 14:41:23,811 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:41:23,913 [INFO]  * Restarting with stat
+2025-07-25 14:41:26,376 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:41:26,446 [INFO]  * Restarting with stat
+2025-07-25 14:41:31,914 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:41:32,019 [INFO]  * Restarting with stat
+2025-07-25 14:41:34,485 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:41:34,560 [INFO]  * Restarting with stat
+2025-07-25 14:41:39,036 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:41:39,123 [INFO]  * Restarting with stat
+2025-07-25 14:41:41,567 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 14:41:41,636 [INFO]  * Restarting with stat
+2025-07-25 14:41:44,604 [INFO] 127.0.0.1 - - [25/Jul/2025 14:41:44] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 14:41:44,632 [INFO] 127.0.0.1 - - [25/Jul/2025 14:41:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:07:02,577 [INFO] 127.0.0.1 - - [25/Jul/2025 17:07:02] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 17:07:02,615 [INFO] 127.0.0.1 - - [25/Jul/2025 17:07:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:07:25,642 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:07:25,720 [INFO]  * Restarting with stat
+2025-07-25 17:07:27,148 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:07:27,219 [INFO]  * Restarting with stat
+2025-07-25 17:07:29,676 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:07:29,752 [INFO]  * Restarting with stat
+2025-07-25 17:07:37,227 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:07:37,322 [INFO]  * Restarting with stat
+2025-07-25 17:07:39,778 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:07:39,853 [INFO]  * Restarting with stat
+2025-07-25 17:07:43,305 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:07:43,374 [INFO]  * Restarting with stat
+2025-07-25 17:07:45,803 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:07:45,869 [INFO]  * Restarting with stat
+2025-07-25 17:08:03,423 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:08:03,513 [INFO]  * Restarting with stat
+2025-07-25 17:08:37,138 [INFO]  * Restarting with stat
+2025-07-25 17:08:39,572 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:08:39,640 [INFO]  * Restarting with stat
+2025-07-25 17:08:51,153 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:08:51,224 [INFO]  * Restarting with stat
+2025-07-25 17:09:02,727 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:09:02,817 [INFO]  * Restarting with stat
+2025-07-25 17:09:04,261 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:09:04,330 [INFO]  * Restarting with stat
+2025-07-25 17:10:08,147 [INFO]  * Restarting with stat
+2025-07-25 17:10:10,524 [INFO]  * Restarting with stat
+2025-07-25 17:10:27,013 [INFO]  * Restarting with stat
+2025-07-25 17:10:28,484 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:10:28,554 [INFO]  * Restarting with stat
+2025-07-25 17:10:35,022 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:10:35,109 [INFO]  * Restarting with stat
+2025-07-25 17:10:36,499 [INFO]  * Restarting with stat
+2025-07-25 17:10:37,865 [INFO]  * Restarting with stat
+2025-07-25 17:11:12,557 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:11:12,650 [INFO]  * Restarting with stat
+2025-07-25 17:11:24,110 [INFO]  * Restarting with stat
+2025-07-25 17:11:26,485 [INFO]  * Restarting with stat
+2025-07-25 17:11:30,941 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:11:31,031 [INFO]  * Restarting with stat
+2025-07-25 17:11:34,489 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:11:34,575 [INFO]  * Restarting with stat
+2025-07-25 17:11:42,012 [INFO]  * Restarting with stat
+2025-07-25 17:11:44,383 [INFO]  * Restarting with stat
+2025-07-25 17:11:47,827 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:11:47,893 [INFO]  * Restarting with stat
+2025-07-25 17:11:51,330 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:11:51,399 [INFO]  * Restarting with stat
+2025-07-25 17:11:54,788 [INFO]  * Restarting with stat
+2025-07-25 17:11:56,151 [INFO]  * Restarting with stat
+2025-07-25 17:12:04,587 [INFO]  * Restarting with stat
+2025-07-25 17:12:07,036 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:12:07,104 [INFO]  * Restarting with stat
+2025-07-25 17:12:15,576 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:12:15,664 [INFO]  * Restarting with stat
+2025-07-25 17:12:17,123 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:12:17,192 [INFO]  * Restarting with stat
+2025-07-25 17:12:23,670 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:12:23,761 [INFO]  * Restarting with stat
+2025-07-25 17:12:39,285 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:12:39,373 [INFO]  * Restarting with stat
+2025-07-25 17:12:45,072 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 91, in received_requests
+    for sid, eid, estado in query.all()
+AttributeError: 'list' object has no attribute 'all'
+2025-07-25 17:12:45,073 [INFO] 127.0.0.1 - - [25/Jul/2025 17:12:45] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:12:45,114 [INFO] 127.0.0.1 - - [25/Jul/2025 17:12:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:12:52,910 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:12:53,028 [INFO]  * Restarting with stat
+2025-07-25 17:12:54,285 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 89, in received_requests
+    current_requests = [
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 91, in <listcomp>
+    for sid, eid, estado in query
+TypeError: cannot unpack non-iterable SolicitudVinculacion object
+2025-07-25 17:12:54,287 [INFO] 127.0.0.1 - - [25/Jul/2025 17:12:54] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:12:54,318 [INFO] 127.0.0.1 - - [25/Jul/2025 17:12:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:15:40,762 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:15:40,856 [INFO]  * Restarting with stat
+2025-07-25 17:15:45,303 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:15:45,410 [INFO]  * Restarting with stat
+2025-07-25 17:15:46,783 [INFO]  * Restarting with stat
+2025-07-25 17:15:48,229 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:15:48,299 [INFO]  * Restarting with stat
+2025-07-25 17:15:56,742 [INFO]  * Restarting with stat
+2025-07-25 17:16:06,232 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:16:06,319 [INFO]  * Restarting with stat
+2025-07-25 17:16:12,799 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:16:12,886 [INFO]  * Restarting with stat
+2025-07-25 17:16:17,570 [INFO] 127.0.0.1 - - [25/Jul/2025 17:16:17] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 17:16:17,609 [INFO] 127.0.0.1 - - [25/Jul/2025 17:16:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:16:41,517 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:16:41,616 [INFO]  * Restarting with stat
+2025-07-25 17:16:42,980 [INFO]  * Restarting with stat
+2025-07-25 17:16:45,346 [INFO]  * Restarting with stat
+2025-07-25 17:16:46,087 [INFO] 127.0.0.1 - - [25/Jul/2025 17:16:46] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 17:16:46,113 [INFO] 127.0.0.1 - - [25/Jul/2025 17:16:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:17:32,126 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:17:32,229 [INFO]  * Restarting with stat
+2025-07-25 17:17:33,609 [INFO]  * Restarting with stat
+2025-07-25 17:17:35,995 [INFO]  * Restarting with stat
+2025-07-25 17:17:40,387 [INFO]  * Restarting with stat
+2025-07-25 17:17:42,832 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:17:42,899 [INFO]  * Restarting with stat
+2025-07-25 17:17:45,361 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:17:45,434 [INFO]  * Restarting with stat
+2025-07-25 17:17:46,778 [INFO] 127.0.0.1 - - [25/Jul/2025 17:17:46] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 17:17:46,800 [INFO] 127.0.0.1 - - [25/Jul/2025 17:17:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:18:11,048 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:18:11,140 [INFO]  * Restarting with stat
+2025-07-25 17:18:12,509 [INFO]  * Restarting with stat
+2025-07-25 17:18:16,972 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:18:17,065 [INFO]  * Restarting with stat
+2025-07-25 17:18:18,437 [INFO]  * Restarting with stat
+2025-07-25 17:18:24,918 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:18:25,004 [INFO]  * Restarting with stat
+2025-07-25 17:18:30,405 [INFO]  * Restarting with stat
+2025-07-25 17:18:33,857 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:18:33,926 [INFO]  * Restarting with stat
+2025-07-25 17:18:42,402 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:18:42,508 [INFO]  * Restarting with stat
+2025-07-25 17:18:44,914 [INFO]  * Restarting with stat
+2025-07-25 17:18:54,405 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:18:54,493 [INFO]  * Restarting with stat
+2025-07-25 17:18:59,949 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:19:00,033 [INFO]  * Restarting with stat
+2025-07-25 17:19:01,494 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:19:01,562 [INFO]  * Restarting with stat
+2025-07-25 17:19:06,017 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:19:06,112 [INFO]  * Restarting with stat
+2025-07-25 17:19:15,054 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 90, in received_requests
+    .order_by(desc(id))
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/_elements_constructors.py", line 1097, in desc
+    return UnaryExpression._create_desc(column)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 3652, in _create_desc
+    coercions.expect(roles.ByOfRole, column),
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 634, in _literal_coercion
+    self._raise_for_expected(element, argname)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: GROUP BY / OF / etc. expression expected, got <built-in function id>.
+2025-07-25 17:19:15,056 [INFO] 127.0.0.1 - - [25/Jul/2025 17:19:15] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:19:15,093 [INFO] 127.0.0.1 - - [25/Jul/2025 17:19:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:19:22,675 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:19:22,772 [INFO]  * Restarting with stat
+2025-07-25 17:19:23,227 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 90, in received_requests
+    .order_by(desc(id))
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/_elements_constructors.py", line 1097, in desc
+    return UnaryExpression._create_desc(column)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 3652, in _create_desc
+    coercions.expect(roles.ByOfRole, column),
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 634, in _literal_coercion
+    self._raise_for_expected(element, argname)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: GROUP BY / OF / etc. expression expected, got <built-in function id>.
+2025-07-25 17:19:23,231 [INFO] 127.0.0.1 - - [25/Jul/2025 17:19:23] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:19:23,267 [INFO] 127.0.0.1 - - [25/Jul/2025 17:19:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:19:30,285 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:19:30,380 [INFO]  * Restarting with stat
+2025-07-25 17:19:31,831 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:19:31,901 [INFO]  * Restarting with stat
+2025-07-25 17:20:19,625 [INFO]  * Restarting with stat
+2025-07-25 17:20:22,092 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:20:22,167 [INFO]  * Restarting with stat
+2025-07-25 17:20:22,636 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 90, in received_requests
+    .order_by(desc(id))
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/_elements_constructors.py", line 1097, in desc
+    return UnaryExpression._create_desc(column)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 3652, in _create_desc
+    coercions.expect(roles.ByOfRole, column),
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 634, in _literal_coercion
+    self._raise_for_expected(element, argname)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: GROUP BY / OF / etc. expression expected, got <built-in function id>.
+2025-07-25 17:20:22,639 [INFO] 127.0.0.1 - - [25/Jul/2025 17:20:22] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:20:22,677 [INFO] 127.0.0.1 - - [25/Jul/2025 17:20:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:20:28,686 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:20:28,772 [INFO]  * Restarting with stat
+2025-07-25 17:20:33,558 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 90, in received_requests
+    .order_by(desc(id))
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/_elements_constructors.py", line 1097, in desc
+    return UnaryExpression._create_desc(column)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 3652, in _create_desc
+    coercions.expect(roles.ByOfRole, column),
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 634, in _literal_coercion
+    self._raise_for_expected(element, argname)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: GROUP BY / OF / etc. expression expected, got <built-in function id>.
+2025-07-25 17:20:33,560 [INFO] 127.0.0.1 - - [25/Jul/2025 17:20:33] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:20:33,593 [INFO] 127.0.0.1 - - [25/Jul/2025 17:20:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:20:36,780 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 90, in received_requests
+    .order_by(desc(id))
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/_elements_constructors.py", line 1097, in desc
+    return UnaryExpression._create_desc(column)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 3652, in _create_desc
+    coercions.expect(roles.ByOfRole, column),
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 634, in _literal_coercion
+    self._raise_for_expected(element, argname)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: GROUP BY / OF / etc. expression expected, got <built-in function id>.
+2025-07-25 17:20:36,781 [INFO] 127.0.0.1 - - [25/Jul/2025 17:20:36] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:20:36,816 [INFO] 127.0.0.1 - - [25/Jul/2025 17:20:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:25:52,646 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:25:52,739 [INFO]  * Restarting with stat
+2025-07-25 17:26:49,609 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:26:49,695 [INFO]  * Restarting with stat
+2025-07-25 17:26:54,154 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:26:54,246 [INFO]  * Restarting with stat
+2025-07-25 17:26:58,696 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:26:58,783 [INFO]  * Restarting with stat
+2025-07-25 17:27:05,255 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:27:05,333 [INFO]  * Restarting with stat
+2025-07-25 17:27:12,811 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:27:12,899 [INFO]  * Restarting with stat
+2025-07-25 17:27:14,338 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:27:14,408 [INFO]  * Restarting with stat
+2025-07-25 17:27:16,853 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:27:16,923 [INFO]  * Restarting with stat
+2025-07-25 17:27:19,380 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:27:19,447 [INFO]  * Restarting with stat
+2025-07-25 17:27:22,902 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:27:22,976 [INFO]  * Restarting with stat
+2025-07-25 17:27:28,438 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:27:28,528 [INFO]  * Restarting with stat
+2025-07-25 17:27:46,087 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:27:46,180 [INFO]  * Restarting with stat
+2025-07-25 17:27:48,613 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 90, in received_requests
+    .order_by(desc(id))
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/_elements_constructors.py", line 1097, in desc
+    return UnaryExpression._create_desc(column)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 3652, in _create_desc
+    coercions.expect(roles.ByOfRole, column),
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 634, in _literal_coercion
+    self._raise_for_expected(element, argname)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: GROUP BY / OF / etc. expression expected, got <built-in function id>.
+2025-07-25 17:27:48,615 [INFO] 127.0.0.1 - - [25/Jul/2025 17:27:48] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:27:48,653 [INFO] 127.0.0.1 - - [25/Jul/2025 17:27:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:28:53,104 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:28:53,207 [INFO]  * Restarting with stat
+2025-07-25 17:28:54,030 [INFO] 127.0.0.1 - - [25/Jul/2025 17:28:54] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 17:28:54,057 [INFO] 127.0.0.1 - - [25/Jul/2025 17:28:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:29:17,810 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:29:17,921 [INFO]  * Restarting with stat
+2025-07-25 17:29:21,397 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:29:21,477 [INFO]  * Restarting with stat
+2025-07-25 17:29:22,995 [INFO] 127.0.0.1 - - [25/Jul/2025 17:29:22] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 17:29:23,019 [INFO] 127.0.0.1 - - [25/Jul/2025 17:29:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:30:46,551 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:30:46,667 [INFO]  * Restarting with stat
+2025-07-25 17:30:51,166 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:30:51,256 [INFO]  * Restarting with stat
+2025-07-25 17:30:53,711 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:30:53,793 [INFO]  * Restarting with stat
+2025-07-25 17:30:55,244 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:30:55,333 [INFO]  * Restarting with stat
+2025-07-25 17:30:56,792 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:30:56,866 [INFO]  * Restarting with stat
+2025-07-25 17:31:01,277 [INFO]  * Restarting with stat
+2025-07-25 17:31:03,652 [INFO]  * Restarting with stat
+2025-07-25 17:31:09,077 [INFO]  * Restarting with stat
+2025-07-25 17:31:16,551 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:31:16,641 [INFO]  * Restarting with stat
+2025-07-25 17:31:24,111 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:31:24,202 [INFO]  * Restarting with stat
+2025-07-25 17:31:39,738 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:31:39,825 [INFO]  * Restarting with stat
+2025-07-25 17:31:41,184 [INFO]  * Restarting with stat
+2025-07-25 17:31:50,685 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:31:50,772 [INFO]  * Restarting with stat
+2025-07-25 17:31:58,356 [INFO] 127.0.0.1 - - [25/Jul/2025 17:31:58] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 17:31:58,378 [INFO] 127.0.0.1 - - [25/Jul/2025 17:31:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:32:09,334 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:32:09,435 [INFO]  * Restarting with stat
+2025-07-25 17:32:18,927 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:32:19,019 [INFO]  * Restarting with stat
+2025-07-25 17:32:21,254 [INFO] 127.0.0.1 - - [25/Jul/2025 17:32:21] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 17:32:21,275 [INFO] 127.0.0.1 - - [25/Jul/2025 17:32:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:34:36,451 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:34:36,551 [INFO]  * Restarting with stat
+2025-07-25 17:41:50,062 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:41:50,155 [INFO]  * Restarting with stat
+2025-07-25 17:41:51,607 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:41:51,677 [INFO]  * Restarting with stat
+2025-07-25 17:42:03,183 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:42:03,281 [INFO]  * Restarting with stat
+2025-07-25 17:42:05,661 [INFO]  * Restarting with stat
+2025-07-25 17:42:07,108 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:42:07,184 [INFO]  * Restarting with stat
+2025-07-25 17:42:19,527 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.GroupingError: column "solicitud_vinculacion.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id,...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 92, in received_requests
+    .all()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2699, in all
+    return self._iter().all()  # type: ignore
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2853, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+    return meth(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.GroupingError) column "solicitud_vinculacion.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id,...
+               ^
+
+[SQL: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id, solicitud_vinculacion.supervisor_id AS solicitud_vinculacion_supervisor_id, solicitud_vinculacion.estudiante_id AS solicitud_vinculacion_estudiante_id, solicitud_vinculacion.estado AS solicitud_vinculacion_estado, solicitud_vinculacion.fecha_solicitud AS solicitud_vinculacion_fecha_solicitud 
+FROM solicitud_vinculacion 
+WHERE solicitud_vinculacion.estudiante_id = %(estudiante_id_1)s GROUP BY solicitud_vinculacion.supervisor_id ORDER BY solicitud_vinculacion.id DESC]
+[parameters: {'estudiante_id_1': 3}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-07-25 17:42:19,532 [INFO] 127.0.0.1 - - [25/Jul/2025 17:42:19] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:42:19,573 [INFO] 127.0.0.1 - - [25/Jul/2025 17:42:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:50:50,368 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-25 17:50:50,450 [INFO]  * Restarting with stat
+2025-07-25 17:54:19,347 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.GroupingError: column "solicitud_vinculacion.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id,...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 92, in received_requests
+    .all()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2699, in all
+    return self._iter().all()  # type: ignore
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2853, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+    return meth(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.GroupingError) column "solicitud_vinculacion.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id,...
+               ^
+
+[SQL: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id, solicitud_vinculacion.supervisor_id AS solicitud_vinculacion_supervisor_id, solicitud_vinculacion.estudiante_id AS solicitud_vinculacion_estudiante_id, solicitud_vinculacion.estado AS solicitud_vinculacion_estado, solicitud_vinculacion.fecha_solicitud AS solicitud_vinculacion_fecha_solicitud 
+FROM solicitud_vinculacion 
+WHERE solicitud_vinculacion.estudiante_id = %(estudiante_id_1)s GROUP BY solicitud_vinculacion.supervisor_id ORDER BY solicitud_vinculacion.id DESC]
+[parameters: {'estudiante_id_1': 3}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-07-25 17:54:19,355 [INFO] 127.0.0.1 - - [25/Jul/2025 17:54:19] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:54:19,389 [INFO] 127.0.0.1 - - [25/Jul/2025 17:54:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:55:02,684 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:55:02,784 [INFO]  * Restarting with stat
+2025-07-25 17:55:05,459 [INFO] 127.0.0.1 - - [25/Jul/2025 17:55:05] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 17:55:05,487 [INFO] 127.0.0.1 - - [25/Jul/2025 17:55:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:55:21,342 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:55:21,436 [INFO]  * Restarting with stat
+2025-07-25 17:55:22,756 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.GroupingError: column "solicitud_vinculacion.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id,...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 92, in received_requests
+    .all()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2699, in all
+    return self._iter().all()  # type: ignore
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2853, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+    return meth(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.GroupingError) column "solicitud_vinculacion.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id,...
+               ^
+
+[SQL: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id, solicitud_vinculacion.supervisor_id AS solicitud_vinculacion_supervisor_id, solicitud_vinculacion.estudiante_id AS solicitud_vinculacion_estudiante_id, solicitud_vinculacion.estado AS solicitud_vinculacion_estado, solicitud_vinculacion.fecha_solicitud AS solicitud_vinculacion_fecha_solicitud 
+FROM solicitud_vinculacion 
+WHERE solicitud_vinculacion.estudiante_id = %(estudiante_id_1)s GROUP BY solicitud_vinculacion.estado ORDER BY solicitud_vinculacion.id DESC]
+[parameters: {'estudiante_id_1': 3}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-07-25 17:55:22,760 [INFO] 127.0.0.1 - - [25/Jul/2025 17:55:22] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:55:22,790 [INFO] 127.0.0.1 - - [25/Jul/2025 17:55:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:55:24,918 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.GroupingError: column "solicitud_vinculacion.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id,...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 92, in received_requests
+    .all()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2699, in all
+    return self._iter().all()  # type: ignore
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2853, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+    return meth(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.GroupingError) column "solicitud_vinculacion.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id,...
+               ^
+
+[SQL: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id, solicitud_vinculacion.supervisor_id AS solicitud_vinculacion_supervisor_id, solicitud_vinculacion.estudiante_id AS solicitud_vinculacion_estudiante_id, solicitud_vinculacion.estado AS solicitud_vinculacion_estado, solicitud_vinculacion.fecha_solicitud AS solicitud_vinculacion_fecha_solicitud 
+FROM solicitud_vinculacion 
+WHERE solicitud_vinculacion.estudiante_id = %(estudiante_id_1)s GROUP BY solicitud_vinculacion.estado ORDER BY solicitud_vinculacion.id DESC]
+[parameters: {'estudiante_id_1': 3}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-07-25 17:55:24,919 [INFO] 127.0.0.1 - - [25/Jul/2025 17:55:24] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:55:24,951 [INFO] 127.0.0.1 - - [25/Jul/2025 17:55:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:55:35,962 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:55:36,059 [INFO]  * Restarting with stat
+2025-07-25 17:55:36,549 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.GroupingError: column "solicitud_vinculacion.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id,...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 92, in received_requests
+    .all()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2699, in all
+    return self._iter().all()  # type: ignore
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2853, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+    return meth(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.GroupingError) column "solicitud_vinculacion.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id,...
+               ^
+
+[SQL: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id, solicitud_vinculacion.supervisor_id AS solicitud_vinculacion_supervisor_id, solicitud_vinculacion.estudiante_id AS solicitud_vinculacion_estudiante_id, solicitud_vinculacion.estado AS solicitud_vinculacion_estado, solicitud_vinculacion.fecha_solicitud AS solicitud_vinculacion_fecha_solicitud 
+FROM solicitud_vinculacion 
+WHERE solicitud_vinculacion.estudiante_id = %(estudiante_id_1)s GROUP BY solicitud_vinculacion.estado ORDER BY solicitud_vinculacion.id DESC]
+[parameters: {'estudiante_id_1': 3}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-07-25 17:55:36,557 [INFO] 127.0.0.1 - - [25/Jul/2025 17:55:36] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:55:36,586 [INFO] 127.0.0.1 - - [25/Jul/2025 17:55:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:55:37,788 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.GroupingError: column "solicitud_vinculacion.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id,...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 92, in received_requests
+    .all()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2699, in all
+    return self._iter().all()  # type: ignore
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2853, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+    return meth(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.GroupingError) column "solicitud_vinculacion.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id,...
+               ^
+
+[SQL: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id, solicitud_vinculacion.supervisor_id AS solicitud_vinculacion_supervisor_id, solicitud_vinculacion.estudiante_id AS solicitud_vinculacion_estudiante_id, solicitud_vinculacion.estado AS solicitud_vinculacion_estado, solicitud_vinculacion.fecha_solicitud AS solicitud_vinculacion_fecha_solicitud 
+FROM solicitud_vinculacion 
+WHERE solicitud_vinculacion.estudiante_id = %(estudiante_id_1)s GROUP BY solicitud_vinculacion.estado ORDER BY solicitud_vinculacion.id DESC]
+[parameters: {'estudiante_id_1': 3}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-07-25 17:55:37,789 [INFO] 127.0.0.1 - - [25/Jul/2025 17:55:37] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:55:37,815 [INFO] 127.0.0.1 - - [25/Jul/2025 17:55:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:55:43,577 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:55:43,672 [INFO]  * Restarting with stat
+2025-07-25 17:55:46,133 [INFO] 127.0.0.1 - - [25/Jul/2025 17:55:46] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 17:55:46,168 [INFO] 127.0.0.1 - - [25/Jul/2025 17:55:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:56:08,286 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:56:08,384 [INFO]  * Restarting with stat
+2025-07-25 17:56:10,848 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:56:10,922 [INFO]  * Restarting with stat
+2025-07-25 17:56:12,038 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.GroupingError: column "solicitud_vinculacion.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id,...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 92, in received_requests
+    .all()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2699, in all
+    return self._iter().all()  # type: ignore
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2853, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+    return meth(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.GroupingError) column "solicitud_vinculacion.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id,...
+               ^
+
+[SQL: SELECT solicitud_vinculacion.id AS solicitud_vinculacion_id, solicitud_vinculacion.supervisor_id AS solicitud_vinculacion_supervisor_id, solicitud_vinculacion.estudiante_id AS solicitud_vinculacion_estudiante_id, solicitud_vinculacion.estado AS solicitud_vinculacion_estado, solicitud_vinculacion.fecha_solicitud AS solicitud_vinculacion_fecha_solicitud 
+FROM solicitud_vinculacion 
+WHERE solicitud_vinculacion.estudiante_id = %(estudiante_id_1)s GROUP BY solicitud_vinculacion.estudiante_id ORDER BY solicitud_vinculacion.id DESC]
+[parameters: {'estudiante_id_1': 3}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-07-25 17:56:12,044 [INFO] 127.0.0.1 - - [25/Jul/2025 17:56:12] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:56:12,079 [INFO] 127.0.0.1 - - [25/Jul/2025 17:56:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:56:25,462 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:56:25,549 [INFO]  * Restarting with stat
+2025-07-25 17:56:31,032 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:56:31,123 [INFO]  * Restarting with stat
+2025-07-25 17:56:32,690 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 94, in received_requests
+    current_requests = [
+TypeError: 'SolicitudVinculacion' object is not iterable
+2025-07-25 17:56:32,692 [INFO] 127.0.0.1 - - [25/Jul/2025 17:56:32] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:56:32,727 [INFO] 127.0.0.1 - - [25/Jul/2025 17:56:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:56:48,675 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:56:48,772 [INFO]  * Restarting with stat
+2025-07-25 17:56:50,213 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:56:50,285 [INFO]  * Restarting with stat
+2025-07-25 17:56:50,788 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 91, in received_requests
+    .scalar()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2831, in scalar
+    ret = self.one()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2804, in one
+    return self._iter().one()  # type: ignore
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/result.py", line 1808, in one
+    return self._only_one_row(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/result.py", line 805, in _only_one_row
+    raise exc.MultipleResultsFound(
+sqlalchemy.exc.MultipleResultsFound: Multiple rows were found when exactly one was required
+2025-07-25 17:56:50,791 [INFO] 127.0.0.1 - - [25/Jul/2025 17:56:50] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:56:50,829 [INFO] 127.0.0.1 - - [25/Jul/2025 17:56:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:57:17,974 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:57:18,071 [INFO]  * Restarting with stat
+2025-07-25 17:57:20,440 [INFO]  * Restarting with stat
+2025-07-25 17:57:27,917 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:57:28,000 [INFO]  * Restarting with stat
+2025-07-25 17:57:29,364 [INFO]  * Restarting with stat
+2025-07-25 17:57:31,740 [INFO]  * Restarting with stat
+2025-07-25 17:57:34,112 [INFO]  * Restarting with stat
+2025-07-25 17:57:36,155 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 90, in received_requests
+    current_requests = [
+TypeError: 'SolicitudVinculacion' object is not iterable
+2025-07-25 17:57:36,157 [INFO] 127.0.0.1 - - [25/Jul/2025 17:57:36] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:57:36,191 [INFO] 127.0.0.1 - - [25/Jul/2025 17:57:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 17:57:56,703 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:57:56,798 [INFO]  * Restarting with stat
+2025-07-25 17:58:06,304 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:58:06,397 [INFO]  * Restarting with stat
+2025-07-25 17:58:10,860 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 17:58:10,949 [INFO]  * Restarting with stat
+2025-07-25 17:58:12,433 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 94, in received_requests
+    current_requests = [
+TypeError: 'SolicitudVinculacion' object is not iterable
+2025-07-25 17:58:12,435 [INFO] 127.0.0.1 - - [25/Jul/2025 17:58:12] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 17:58:12,468 [INFO] 127.0.0.1 - - [25/Jul/2025 17:58:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:02:18,180 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:02:18,275 [INFO]  * Restarting with stat
+2025-07-25 18:02:20,644 [INFO]  * Restarting with stat
+2025-07-25 18:02:24,030 [INFO]  * Restarting with stat
+2025-07-25 18:02:27,628 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 94, in received_requests
+    current_requests = [
+TypeError: 'SolicitudVinculacion' object is not iterable
+2025-07-25 18:02:27,631 [INFO] 127.0.0.1 - - [25/Jul/2025 18:02:27] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 18:02:27,666 [INFO] 127.0.0.1 - - [25/Jul/2025 18:02:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:03:57,080 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:03:57,191 [INFO]  * Restarting with stat
+2025-07-25 18:03:59,654 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:03:59,723 [INFO]  * Restarting with stat
+2025-07-25 18:04:01,113 [INFO]  * Restarting with stat
+2025-07-25 18:04:10,551 [INFO]  * Restarting with stat
+2025-07-25 18:04:11,920 [INFO]  * Restarting with stat
+2025-07-25 18:04:20,343 [INFO]  * Restarting with stat
+2025-07-25 18:04:29,853 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:04:29,946 [INFO]  * Restarting with stat
+2025-07-25 18:04:32,326 [INFO]  * Restarting with stat
+2025-07-25 18:04:34,769 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:04:34,837 [INFO]  * Restarting with stat
+2025-07-25 18:04:41,009 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 95, in received_requests
+    current_requests = [
+TypeError: 'SolicitudVinculacion' object is not iterable
+2025-07-25 18:04:41,011 [INFO] 127.0.0.1 - - [25/Jul/2025 18:04:41] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 18:04:41,044 [INFO] 127.0.0.1 - - [25/Jul/2025 18:04:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:05:23,605 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:05:23,706 [INFO]  * Restarting with stat
+2025-07-25 18:05:24,645 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 96, in received_requests
+    current_requests = [
+TypeError: 'SolicitudVinculacion' object is not iterable
+2025-07-25 18:05:24,647 [INFO] 127.0.0.1 - - [25/Jul/2025 18:05:24] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 18:05:24,679 [INFO] 127.0.0.1 - - [25/Jul/2025 18:05:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:06:18,540 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/debugging.py', reloading
+2025-07-25 18:06:18,658 [INFO]  * Restarting with stat
+2025-07-25 18:06:20,557 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 96, in received_requests
+    current_requests = [
+TypeError: 'SolicitudVinculacion' object is not iterable
+2025-07-25 18:06:20,559 [INFO] 127.0.0.1 - - [25/Jul/2025 18:06:20] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 18:06:20,589 [INFO] 127.0.0.1 - - [25/Jul/2025 18:06:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:06:34,230 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:06:34,329 [INFO]  * Restarting with stat
+2025-07-25 18:09:01,824 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:09:01,922 [INFO]  * Restarting with stat
+2025-07-25 18:09:08,340 [INFO]  * Restarting with stat
+2025-07-25 18:09:11,742 [INFO]  * Restarting with stat
+2025-07-25 18:09:19,173 [INFO]  * Restarting with stat
+2025-07-25 18:09:21,553 [INFO]  * Restarting with stat
+2025-07-25 18:12:42,304 [INFO]  * Restarting with stat
+2025-07-25 18:12:46,716 [INFO]  * Restarting with stat
+2025-07-25 18:12:53,116 [INFO]  * Restarting with stat
+2025-07-25 18:12:57,513 [INFO]  * Restarting with stat
+2025-07-25 18:12:58,878 [INFO]  * Restarting with stat
+2025-07-25 18:13:04,275 [INFO]  * Restarting with stat
+2025-07-25 18:13:07,684 [INFO]  * Restarting with stat
+2025-07-25 18:13:11,081 [INFO]  * Restarting with stat
+2025-07-25 18:13:13,476 [INFO]  * Restarting with stat
+2025-07-25 18:13:15,865 [INFO]  * Restarting with stat
+2025-07-25 18:13:20,274 [INFO]  * Restarting with stat
+2025-07-25 18:13:25,690 [INFO]  * Restarting with stat
+2025-07-25 18:13:30,086 [INFO]  * Restarting with stat
+2025-07-25 18:13:33,480 [INFO]  * Restarting with stat
+2025-07-25 18:13:37,874 [INFO]  * Restarting with stat
+2025-07-25 18:13:41,261 [INFO]  * Restarting with stat
+2025-07-25 18:14:05,838 [INFO]  * Restarting with stat
+2025-07-25 18:14:08,201 [INFO]  * Restarting with stat
+2025-07-25 18:14:15,626 [INFO]  * Restarting with stat
+2025-07-25 18:14:22,026 [INFO]  * Restarting with stat
+2025-07-25 18:14:25,477 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:14:25,551 [INFO]  * Restarting with stat
+2025-07-25 18:14:27,002 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:14:27,071 [INFO]  * Restarting with stat
+2025-07-25 18:14:42,628 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:14:42,714 [INFO]  * Restarting with stat
+2025-07-25 18:14:46,162 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:14:46,229 [INFO]  * Restarting with stat
+2025-07-25 18:14:48,307 [INFO] 127.0.0.1 - - [25/Jul/2025 18:14:48] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 18:14:48,345 [INFO] 127.0.0.1 - - [25/Jul/2025 18:14:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:16:57,625 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:16:57,730 [INFO]  * Restarting with stat
+2025-07-25 18:16:59,107 [INFO]  * Restarting with stat
+2025-07-25 18:17:29,747 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:17:29,832 [INFO]  * Restarting with stat
+2025-07-25 18:18:26,287 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 98, in received_requests
+    print(d)
+UnboundLocalError: local variable 'd' referenced before assignment
+2025-07-25 18:18:26,289 [INFO] 127.0.0.1 - - [25/Jul/2025 18:18:26] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 18:18:26,321 [INFO] 127.0.0.1 - - [25/Jul/2025 18:18:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:18:58,931 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:18:59,026 [INFO]  * Restarting with stat
+2025-07-25 18:19:01,465 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:19:01,534 [INFO]  * Restarting with stat
+2025-07-25 18:19:09,025 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:19:09,114 [INFO]  * Restarting with stat
+2025-07-25 18:19:18,617 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:19:18,708 [INFO]  * Restarting with stat
+2025-07-25 18:19:21,156 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:19:21,246 [INFO]  * Restarting with stat
+2025-07-25 18:19:22,705 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:19:22,774 [INFO]  * Restarting with stat
+2025-07-25 18:19:26,274 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:19:26,346 [INFO]  * Restarting with stat
+2025-07-25 18:19:28,790 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:19:28,859 [INFO]  * Restarting with stat
+2025-07-25 18:19:30,241 [INFO]  * Restarting with stat
+2025-07-25 18:19:44,778 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:19:44,871 [INFO]  * Restarting with stat
+2025-07-25 18:19:47,322 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:19:47,392 [INFO]  * Restarting with stat
+2025-07-25 18:19:48,849 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:19:48,919 [INFO]  * Restarting with stat
+2025-07-25 18:19:51,295 [INFO]  * Restarting with stat
+2025-07-25 18:19:52,674 [INFO]  * Restarting with stat
+2025-07-25 18:19:54,044 [INFO]  * Restarting with stat
+2025-07-25 18:19:55,434 [INFO]  * Restarting with stat
+2025-07-25 18:20:01,919 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:20:02,008 [INFO]  * Restarting with stat
+2025-07-25 18:20:08,502 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:20:08,589 [INFO]  * Restarting with stat
+2025-07-25 18:20:15,070 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:20:15,158 [INFO]  * Restarting with stat
+2025-07-25 18:20:18,433 [INFO] 127.0.0.1 - - [25/Jul/2025 18:20:18] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 18:20:18,456 [INFO] 127.0.0.1 - - [25/Jul/2025 18:20:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:20:31,709 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:20:31,802 [INFO]  * Restarting with stat
+2025-07-25 18:20:50,763 [INFO] 127.0.0.1 - - [25/Jul/2025 18:20:50] "GET / HTTP/1.1" 200 -
+2025-07-25 18:20:50,786 [INFO] 127.0.0.1 - - [25/Jul/2025 18:20:50] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 18:20:52,690 [INFO] 127.0.0.1 - - [25/Jul/2025 18:20:52] "GET /link_request HTTP/1.1" 200 -
+2025-07-25 18:20:52,705 [INFO] 127.0.0.1 - - [25/Jul/2025 18:20:52] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-25 18:20:58,020 [INFO] 127.0.0.1 - - [25/Jul/2025 18:20:58] "POST /link_request HTTP/1.1" 200 -
+2025-07-25 18:21:04,757 [INFO] 127.0.0.1 - - [25/Jul/2025 18:21:04] "GET /link_request HTTP/1.1" 200 -
+2025-07-25 18:21:34,571 [INFO] 127.0.0.1 - - [25/Jul/2025 18:21:34] "POST /link_request HTTP/1.1" 200 -
+2025-07-25 18:21:58,085 [INFO] 127.0.0.1 - - [25/Jul/2025 18:21:58] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 18:21:58,116 [INFO] 127.0.0.1 - - [25/Jul/2025 18:21:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:24:35,003 [INFO] 127.0.0.1 - - [25/Jul/2025 18:24:35] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 18:24:35,028 [INFO] 127.0.0.1 - - [25/Jul/2025 18:24:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:25:18,294 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:25:18,403 [INFO]  * Restarting with stat
+2025-07-25 18:25:19,221 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 98, in received_requests
+    d = solicitud.to_dict()
+AttributeError: 'list' object has no attribute 'to_dict'
+2025-07-25 18:25:19,223 [INFO] 127.0.0.1 - - [25/Jul/2025 18:25:19] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 18:25:19,259 [INFO] 127.0.0.1 - - [25/Jul/2025 18:25:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:25:33,957 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:25:34,051 [INFO]  * Restarting with stat
+2025-07-25 18:25:39,473 [INFO]  * Restarting with stat
+2025-07-25 18:25:41,869 [INFO]  * Restarting with stat
+2025-07-25 18:26:47,789 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:26:47,867 [INFO]  * Restarting with stat
+2025-07-25 18:26:50,249 [INFO]  * Restarting with stat
+2025-07-25 18:26:58,752 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:26:58,843 [INFO]  * Restarting with stat
+2025-07-25 18:26:59,353 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 100, in received_requests
+    print(d)
+NameError: name 'd' is not defined
+2025-07-25 18:26:59,355 [INFO] 127.0.0.1 - - [25/Jul/2025 18:26:59] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 18:26:59,383 [INFO] 127.0.0.1 - - [25/Jul/2025 18:26:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:27:00,449 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 100, in received_requests
+    print(d)
+NameError: name 'd' is not defined
+2025-07-25 18:27:00,450 [INFO] 127.0.0.1 - - [25/Jul/2025 18:27:00] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 18:27:00,492 [INFO] 127.0.0.1 - - [25/Jul/2025 18:27:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:27:11,424 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:27:11,523 [INFO]  * Restarting with stat
+2025-07-25 18:27:16,989 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:27:17,092 [INFO]  * Restarting with stat
+2025-07-25 18:27:18,557 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:27:18,628 [INFO]  * Restarting with stat
+2025-07-25 18:27:31,147 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:27:31,234 [INFO]  * Restarting with stat
+2025-07-25 18:27:35,694 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:27:35,785 [INFO]  * Restarting with stat
+2025-07-25 18:27:39,234 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:27:39,320 [INFO]  * Restarting with stat
+2025-07-25 18:27:41,761 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:27:41,831 [INFO]  * Restarting with stat
+2025-07-25 18:27:46,289 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:27:46,372 [INFO]  * Restarting with stat
+2025-07-25 18:27:50,338 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 97, in received_requests
+    printn(solicitud)
+TypeError: printn() missing 1 required positional argument: 'message'
+2025-07-25 18:27:50,339 [INFO] 127.0.0.1 - - [25/Jul/2025 18:27:50] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 18:27:50,371 [INFO] 127.0.0.1 - - [25/Jul/2025 18:27:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:27:50,841 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:27:50,931 [INFO]  * Restarting with stat
+2025-07-25 18:28:26,619 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:28:26,706 [INFO]  * Restarting with stat
+2025-07-25 18:28:30,179 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:28:30,251 [INFO]  * Restarting with stat
+2025-07-25 18:28:31,711 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:28:31,781 [INFO]  * Restarting with stat
+2025-07-25 18:28:32,284 [INFO] 127.0.0.1 - - [25/Jul/2025 18:28:32] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 18:28:32,301 [INFO] 127.0.0.1 - - [25/Jul/2025 18:28:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:29:06,457 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:29:06,557 [INFO]  * Restarting with stat
+2025-07-25 18:29:14,045 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:29:14,148 [INFO]  * Restarting with stat
+2025-07-25 18:29:17,545 [INFO]  * Restarting with stat
+2025-07-25 18:29:20,001 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:29:20,070 [INFO]  * Restarting with stat
+2025-07-25 18:29:25,556 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:29:25,646 [INFO]  * Restarting with stat
+2025-07-25 18:29:27,096 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:29:27,171 [INFO]  * Restarting with stat
+2025-07-25 18:29:31,596 [INFO]  * Restarting with stat
+2025-07-25 18:29:35,001 [INFO]  * Restarting with stat
+2025-07-25 18:29:39,416 [INFO]  * Restarting with stat
+2025-07-25 18:29:54,896 [INFO]  * Restarting with stat
+2025-07-25 18:30:01,369 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:30:01,457 [INFO]  * Restarting with stat
+2025-07-25 18:30:04,925 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:30:05,006 [INFO]  * Restarting with stat
+2025-07-25 18:30:06,432 [INFO]  * Restarting with stat
+2025-07-25 18:30:07,882 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:30:07,954 [INFO]  * Restarting with stat
+2025-07-25 18:30:14,425 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:30:14,516 [INFO]  * Restarting with stat
+2025-07-25 18:30:16,958 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:30:17,029 [INFO]  * Restarting with stat
+2025-07-25 18:30:20,493 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:30:20,565 [INFO]  * Restarting with stat
+2025-07-25 18:30:21,941 [INFO]  * Restarting with stat
+2025-07-25 18:30:24,747 [INFO] 127.0.0.1 - - [25/Jul/2025 18:30:24] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 18:30:24,771 [INFO] 127.0.0.1 - - [25/Jul/2025 18:30:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:30:52,586 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:30:52,666 [INFO]  * Restarting with stat
+2025-07-25 18:30:53,610 [INFO] 127.0.0.1 - - [25/Jul/2025 18:30:53] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 18:30:53,631 [INFO] 127.0.0.1 - - [25/Jul/2025 18:30:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:31:44,457 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:31:44,554 [INFO]  * Restarting with stat
+2025-07-25 18:31:47,667 [INFO] 127.0.0.1 - - [25/Jul/2025 18:31:47] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 18:31:47,687 [INFO] 127.0.0.1 - - [25/Jul/2025 18:31:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:31:48,007 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:31:48,087 [INFO]  * Restarting with stat
+2025-07-25 18:31:50,847 [INFO] 127.0.0.1 - - [25/Jul/2025 18:31:50] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 18:31:50,862 [INFO] 127.0.0.1 - - [25/Jul/2025 18:31:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:31:59,586 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:31:59,683 [INFO]  * Restarting with stat
+2025-07-25 18:32:02,141 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:32:02,211 [INFO]  * Restarting with stat
+2025-07-25 18:32:05,663 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:32:05,735 [INFO]  * Restarting with stat
+2025-07-25 18:32:07,198 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:32:07,272 [INFO]  * Restarting with stat
+2025-07-25 18:32:11,722 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:32:11,813 [INFO]  * Restarting with stat
+2025-07-25 18:32:13,257 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:32:13,351 [INFO]  * Restarting with stat
+2025-07-25 18:32:16,753 [INFO]  * Restarting with stat
+2025-07-25 18:32:22,154 [INFO]  * Restarting with stat
+2025-07-25 18:32:24,272 [INFO] 127.0.0.1 - - [25/Jul/2025 18:32:24] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 18:32:24,291 [INFO] 127.0.0.1 - - [25/Jul/2025 18:32:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:33:16,991 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:33:17,087 [INFO]  * Restarting with stat
+2025-07-25 18:33:20,547 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:33:20,619 [INFO]  * Restarting with stat
+2025-07-25 18:33:25,023 [INFO]  * Restarting with stat
+2025-07-25 18:33:25,828 [INFO] 127.0.0.1 - - [25/Jul/2025 18:33:25] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 18:33:25,848 [INFO] 127.0.0.1 - - [25/Jul/2025 18:33:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 18:34:35,976 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:34:36,053 [INFO]  * Restarting with stat
+2025-07-25 18:40:04,807 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:40:04,898 [INFO]  * Restarting with stat
+2025-07-25 18:40:06,340 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:40:06,410 [INFO]  * Restarting with stat
+2025-07-25 18:40:08,791 [INFO]  * Restarting with stat
+2025-07-25 18:40:11,302 [INFO]  * Restarting with stat
+2025-07-25 18:40:38,926 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:40:39,016 [INFO]  * Restarting with stat
+2025-07-25 18:40:41,478 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:40:41,549 [INFO]  * Restarting with stat
+2025-07-25 18:40:46,009 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:40:46,100 [INFO]  * Restarting with stat
+2025-07-25 18:40:48,480 [INFO]  * Restarting with stat
+2025-07-25 18:40:53,951 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:40:54,040 [INFO]  * Restarting with stat
+2025-07-25 18:40:59,509 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:40:59,600 [INFO]  * Restarting with stat
+2025-07-25 18:41:01,043 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:41:01,117 [INFO]  * Restarting with stat
+2025-07-25 18:41:25,721 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:41:25,809 [INFO]  * Restarting with stat
+2025-07-25 18:41:28,263 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:41:28,341 [INFO]  * Restarting with stat
+2025-07-25 18:41:30,719 [INFO]  * Restarting with stat
+2025-07-25 18:41:33,177 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:41:33,250 [INFO]  * Restarting with stat
+2025-07-25 18:41:42,742 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:41:42,814 [INFO]  * Restarting with stat
+2025-07-25 18:42:52,660 [INFO]  * Restarting with stat
+2025-07-25 18:43:07,187 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:43:07,286 [INFO]  * Restarting with stat
+2025-07-25 18:43:14,780 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:43:14,898 [INFO]  * Restarting with stat
+2025-07-25 18:43:16,355 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:43:16,439 [INFO]  * Restarting with stat
+2025-07-25 18:43:17,877 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:43:17,944 [INFO]  * Restarting with stat
+2025-07-25 18:43:27,433 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:43:27,521 [INFO]  * Restarting with stat
+2025-07-25 18:43:28,984 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:43:29,054 [INFO]  * Restarting with stat
+2025-07-25 18:43:32,503 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:43:32,569 [INFO]  * Restarting with stat
+2025-07-25 18:43:36,011 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:43:36,080 [INFO]  * Restarting with stat
+2025-07-25 18:43:47,602 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:43:47,701 [INFO]  * Restarting with stat
+2025-07-25 18:43:51,167 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:43:51,237 [INFO]  * Restarting with stat
+2025-07-25 18:44:00,666 [INFO]  * Restarting with stat
+2025-07-25 18:44:07,091 [INFO]  * Restarting with stat
+2025-07-25 18:44:15,518 [INFO]  * Restarting with stat
+2025-07-25 18:44:50,190 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:44:50,273 [INFO]  * Restarting with stat
+2025-07-25 18:44:54,729 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:44:54,821 [INFO]  * Restarting with stat
+2025-07-25 18:44:57,275 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:44:57,345 [INFO]  * Restarting with stat
+2025-07-25 18:45:03,816 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:45:03,887 [INFO]  * Restarting with stat
+2025-07-25 18:45:06,333 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:45:06,404 [INFO]  * Restarting with stat
+2025-07-25 18:45:10,870 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:45:10,960 [INFO]  * Restarting with stat
+2025-07-25 18:45:12,413 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:45:12,482 [INFO]  * Restarting with stat
+2025-07-25 18:45:22,984 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:45:23,074 [INFO]  * Restarting with stat
+2025-07-25 18:45:24,526 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:45:24,595 [INFO]  * Restarting with stat
+2025-07-25 18:46:12,378 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:46:12,467 [INFO]  * Restarting with stat
+2025-07-25 18:46:14,916 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:46:14,986 [INFO]  * Restarting with stat
+2025-07-25 18:46:20,444 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:46:20,532 [INFO]  * Restarting with stat
+2025-07-25 18:46:41,110 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:46:41,197 [INFO]  * Restarting with stat
+2025-07-25 18:46:48,701 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 18:46:48,791 [INFO]  * Restarting with stat
+2025-07-25 19:00:43,950 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:00:44,041 [INFO]  * Restarting with stat
+2025-07-25 19:00:46,502 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:00:46,573 [INFO]  * Restarting with stat
+2025-07-25 19:00:49,012 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:00:49,080 [INFO]  * Restarting with stat
+2025-07-25 19:00:54,549 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:00:54,643 [INFO]  * Restarting with stat
+2025-07-25 19:00:56,037 [INFO]  * Restarting with stat
+2025-07-25 19:01:01,502 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:01:01,590 [INFO]  * Restarting with stat
+2025-07-25 19:01:08,070 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:01:08,146 [INFO]  * Restarting with stat
+2025-07-25 19:01:19,658 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:01:19,751 [INFO]  * Restarting with stat
+2025-07-25 19:01:21,198 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:01:21,266 [INFO]  * Restarting with stat
+2025-07-25 19:01:24,743 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:01:24,812 [INFO]  * Restarting with stat
+2025-07-25 19:01:26,267 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:01:26,336 [INFO]  * Restarting with stat
+2025-07-25 19:01:32,817 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:01:32,901 [INFO]  * Restarting with stat
+2025-07-25 19:01:36,349 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:01:36,431 [INFO]  * Restarting with stat
+2025-07-25 19:01:38,885 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:01:38,953 [INFO]  * Restarting with stat
+2025-07-25 19:01:41,333 [INFO]  * Restarting with stat
+2025-07-25 19:01:42,799 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:01:42,868 [INFO]  * Restarting with stat
+2025-07-25 19:01:48,335 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:01:48,442 [INFO]  * Restarting with stat
+2025-07-25 19:01:50,905 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:01:50,972 [INFO]  * Restarting with stat
+2025-07-25 19:01:54,353 [INFO]  * Restarting with stat
+2025-07-25 19:02:15,943 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:02:16,032 [INFO]  * Restarting with stat
+2025-07-25 19:02:27,554 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:02:27,646 [INFO]  * Restarting with stat
+2025-07-25 19:02:32,101 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:02:32,189 [INFO]  * Restarting with stat
+2025-07-25 19:02:34,663 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:02:34,734 [INFO]  * Restarting with stat
+2025-07-25 19:02:37,190 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:02:37,284 [INFO]  * Restarting with stat
+2025-07-25 19:02:40,751 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:02:40,825 [INFO]  * Restarting with stat
+2025-07-25 19:02:43,274 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:02:43,346 [INFO]  * Restarting with stat
+2025-07-25 19:02:44,800 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:02:44,868 [INFO]  * Restarting with stat
+2025-07-25 19:02:49,277 [INFO]  * Restarting with stat
+2025-07-25 19:02:54,752 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:02:54,844 [INFO]  * Restarting with stat
+2025-07-25 19:02:57,293 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:02:57,369 [INFO]  * Restarting with stat
+2025-07-25 19:02:58,852 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:02:58,924 [INFO]  * Restarting with stat
+2025-07-25 19:03:00,365 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:03:00,433 [INFO]  * Restarting with stat
+2025-07-25 19:03:04,903 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:03:04,997 [INFO]  * Restarting with stat
+2025-07-25 19:03:13,482 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:03:13,553 [INFO]  * Restarting with stat
+2025-07-25 19:03:16,942 [INFO]  * Restarting with stat
+2025-07-25 19:03:23,352 [INFO]  * Restarting with stat
+2025-07-25 19:03:24,789 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:03:24,858 [INFO]  * Restarting with stat
+2025-07-25 19:03:29,322 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:03:29,413 [INFO]  * Restarting with stat
+2025-07-25 19:03:30,857 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:03:30,925 [INFO]  * Restarting with stat
+2025-07-25 19:03:34,394 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:03:34,464 [INFO]  * Restarting with stat
+2025-07-25 19:03:35,920 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:03:35,990 [INFO]  * Restarting with stat
+2025-07-25 19:03:38,454 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:03:38,523 [INFO]  * Restarting with stat
+2025-07-25 19:03:46,955 [INFO]  * Restarting with stat
+2025-07-25 19:03:50,378 [INFO]  * Restarting with stat
+2025-07-25 19:03:51,764 [INFO]  * Restarting with stat
+2025-07-25 19:03:53,208 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:03:53,286 [INFO]  * Restarting with stat
+2025-07-25 19:03:54,754 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:03:54,840 [INFO]  * Restarting with stat
+2025-07-25 19:03:57,316 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:03:57,383 [INFO]  * Restarting with stat
+2025-07-25 19:03:58,838 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:03:58,908 [INFO]  * Restarting with stat
+2025-07-25 19:04:04,378 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:04:04,449 [INFO]  * Restarting with stat
+2025-07-25 19:04:11,938 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:04:12,030 [INFO]  * Restarting with stat
+2025-07-25 19:04:15,500 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:04:15,574 [INFO]  * Restarting with stat
+2025-07-25 19:04:41,185 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:04:41,276 [INFO]  * Restarting with stat
+2025-07-25 19:04:43,725 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:04:43,804 [INFO]  * Restarting with stat
+2025-07-25 19:04:57,348 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:04:57,437 [INFO]  * Restarting with stat
+2025-07-25 19:05:05,921 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:05:06,014 [INFO]  * Restarting with stat
+2025-07-25 19:05:08,467 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:05:08,535 [INFO]  * Restarting with stat
+2025-07-25 19:05:12,998 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:05:13,086 [INFO]  * Restarting with stat
+2025-07-25 19:05:17,541 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:05:17,633 [INFO]  * Restarting with stat
+2025-07-25 19:05:41,243 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:05:41,336 [INFO]  * Restarting with stat
+2025-07-25 19:05:51,857 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:05:51,949 [INFO]  * Restarting with stat
+2025-07-25 19:05:54,319 [INFO]  * Restarting with stat
+2025-07-25 19:05:55,774 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:05:55,844 [INFO]  * Restarting with stat
+2025-07-25 19:06:05,361 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:06:05,451 [INFO]  * Restarting with stat
+2025-07-25 19:06:10,934 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:06:11,025 [INFO]  * Restarting with stat
+2025-07-25 19:06:12,481 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:06:12,557 [INFO]  * Restarting with stat
+2025-07-25 19:06:14,990 [INFO]  * Restarting with stat
+2025-07-25 19:06:16,445 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:06:16,521 [INFO]  * Restarting with stat
+2025-07-25 19:06:17,974 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:06:18,048 [INFO]  * Restarting with stat
+2025-07-25 19:06:21,429 [INFO]  * Restarting with stat
+2025-07-25 19:06:23,788 [INFO]  * Restarting with stat
+2025-07-25 19:06:40,279 [INFO]  * Restarting with stat
+2025-07-25 19:06:53,814 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:06:53,905 [INFO]  * Restarting with stat
+2025-07-25 19:06:55,276 [INFO]  * Restarting with stat
+2025-07-25 19:06:59,678 [INFO]  * Restarting with stat
+2025-07-25 19:07:24,285 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:07:24,379 [INFO]  * Restarting with stat
+2025-07-25 19:07:25,757 [INFO]  * Restarting with stat
+2025-07-25 19:07:28,137 [INFO]  * Restarting with stat
+2025-07-25 19:07:34,602 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:07:34,698 [INFO]  * Restarting with stat
+2025-07-25 19:07:37,075 [INFO]  * Restarting with stat
+2025-07-25 19:07:40,535 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:07:40,608 [INFO]  * Restarting with stat
+2025-07-25 19:07:42,066 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:07:42,136 [INFO]  * Restarting with stat
+2025-07-25 19:07:48,555 [INFO]  * Restarting with stat
+2025-07-25 19:07:53,993 [INFO]  * Restarting with stat
+2025-07-25 19:07:55,397 [INFO]  * Restarting with stat
+2025-07-25 19:07:57,773 [INFO]  * Restarting with stat
+2025-07-25 19:08:24,400 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:08:24,497 [INFO]  * Restarting with stat
+2025-07-25 19:08:27,895 [INFO]  * Restarting with stat
+2025-07-25 19:08:32,364 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:08:32,452 [INFO]  * Restarting with stat
+2025-07-25 19:08:34,908 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:08:34,978 [INFO]  * Restarting with stat
+2025-07-25 19:08:39,059 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.DuplicateAlias: table name "usuarios" specified more than once
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 107, in received_requests
+    .all()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2699, in all
+    return self._iter().all()  # type: ignore
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2853, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+    return meth(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.DuplicateAlias) table name "usuarios" specified more than once
+
+[SQL: SELECT usuarios.id AS usuarios_id, usuarios.nombre AS usuarios_nombre, solicitud_vinculacion.estudiante_id AS solicitud_vinculacion_estudiante_id, usuarios.nombre AS usuarios_nombre__1, solicitud_vinculacion.estado AS solicitud_vinculacion_estado, solicitud_vinculacion.fecha_solicitud AS solicitud_vinculacion_fecha_solicitud 
+FROM usuarios JOIN solicitud_vinculacion ON usuarios.id = solicitud_vinculacion.supervisor_id JOIN usuarios ON usuarios.id = solicitud_vinculacion.estudiante_id ORDER BY solicitud_vinculacion.fecha_solicitud DESC]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-07-25 19:08:39,062 [INFO] 127.0.0.1 - - [25/Jul/2025 19:08:39] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 19:10:17,131 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:10:17,226 [INFO]  * Restarting with stat
+2025-07-25 19:10:19,681 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:10:19,765 [INFO]  * Restarting with stat
+2025-07-25 19:10:22,227 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:10:22,294 [INFO]  * Restarting with stat
+2025-07-25 19:10:27,784 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:10:27,878 [INFO]  * Restarting with stat
+2025-07-25 19:10:41,409 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:10:41,484 [INFO]  * Restarting with stat
+2025-07-25 19:11:05,072 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:11:05,145 [INFO]  * Restarting with stat
+2025-07-25 19:11:07,607 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:11:07,699 [INFO]  * Restarting with stat
+2025-07-25 19:11:11,154 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:11:11,246 [INFO]  * Restarting with stat
+2025-07-25 19:11:12,688 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:11:12,773 [INFO]  * Restarting with stat
+2025-07-25 19:11:16,243 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:11:16,313 [INFO]  * Restarting with stat
+2025-07-25 19:11:27,822 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:11:27,912 [INFO]  * Restarting with stat
+2025-07-25 19:11:33,385 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:11:33,458 [INFO]  * Restarting with stat
+2025-07-25 19:11:36,924 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:11:36,997 [INFO]  * Restarting with stat
+2025-07-25 19:11:45,475 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:11:45,581 [INFO]  * Restarting with stat
+2025-07-25 19:11:50,048 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:11:50,150 [INFO]  * Restarting with stat
+2025-07-25 19:11:51,608 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:11:51,679 [INFO]  * Restarting with stat
+2025-07-25 19:11:54,149 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:11:54,221 [INFO]  * Restarting with stat
+2025-07-25 19:12:01,712 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:12:01,817 [INFO]  * Restarting with stat
+2025-07-25 19:12:04,284 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:12:04,354 [INFO]  * Restarting with stat
+2025-07-25 19:12:13,856 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:12:13,929 [INFO]  * Restarting with stat
+2025-07-25 19:12:24,434 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:12:24,527 [INFO]  * Restarting with stat
+2025-07-25 19:12:25,983 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:12:26,058 [INFO]  * Restarting with stat
+2025-07-25 19:12:31,535 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:12:31,608 [INFO]  * Restarting with stat
+2025-07-25 19:12:47,505 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 114, in received_requests
+    datos = [
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 122, in <listcomp>
+    for sid, supervisor, estudiante, estado, fecha in solicitud
+ValueError: too many values to unpack (expected 5)
+2025-07-25 19:12:47,508 [INFO] 127.0.0.1 - - [25/Jul/2025 19:12:47] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 19:13:12,345 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:12,445 [INFO]  * Restarting with stat
+2025-07-25 19:13:15,911 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:15,980 [INFO]  * Restarting with stat
+2025-07-25 19:13:18,519 [ERROR] Exception on /received_requests [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 12, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 132, in received_requests
+    return jsonify({'status': 'ok', 'current_requests': lista})
+NameError: name 'lista' is not defined
+2025-07-25 19:13:18,521 [INFO] 127.0.0.1 - - [25/Jul/2025 19:13:18] "[35m[1mGET /received_requests HTTP/1.1[0m" 500 -
+2025-07-25 19:13:24,470 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:24,560 [INFO]  * Restarting with stat
+2025-07-25 19:13:26,021 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:26,098 [INFO]  * Restarting with stat
+2025-07-25 19:13:27,555 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:27,644 [INFO]  * Restarting with stat
+2025-07-25 19:13:31,101 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:31,170 [INFO]  * Restarting with stat
+2025-07-25 19:13:33,625 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:33,694 [INFO]  * Restarting with stat
+2025-07-25 19:13:36,151 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:36,222 [INFO]  * Restarting with stat
+2025-07-25 19:13:39,677 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:39,747 [INFO]  * Restarting with stat
+2025-07-25 19:13:42,197 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:42,268 [INFO]  * Restarting with stat
+2025-07-25 19:13:43,725 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:43,797 [INFO]  * Restarting with stat
+2025-07-25 19:13:46,257 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:46,332 [INFO]  * Restarting with stat
+2025-07-25 19:13:47,796 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:47,866 [INFO]  * Restarting with stat
+2025-07-25 19:13:50,325 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:50,396 [INFO]  * Restarting with stat
+2025-07-25 19:13:52,848 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:52,917 [INFO]  * Restarting with stat
+2025-07-25 19:13:57,377 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:13:57,467 [INFO]  * Restarting with stat
+2025-07-25 19:14:13,012 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:14:13,105 [INFO]  * Restarting with stat
+2025-07-25 19:14:14,099 [INFO] 127.0.0.1 - - [25/Jul/2025 19:14:14] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 19:14:14,124 [INFO] 127.0.0.1 - - [25/Jul/2025 19:14:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 19:14:43,763 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:14:43,859 [INFO]  * Restarting with stat
+2025-07-25 19:14:52,348 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:14:52,438 [INFO]  * Restarting with stat
+2025-07-25 19:14:58,914 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:14:59,002 [INFO]  * Restarting with stat
+2025-07-25 19:15:11,087 [INFO] 127.0.0.1 - - [25/Jul/2025 19:15:11] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 19:15:11,117 [INFO] 127.0.0.1 - - [25/Jul/2025 19:15:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 19:19:34,395 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:19:34,503 [INFO]  * Restarting with stat
+2025-07-25 19:19:37,973 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:19:38,045 [INFO]  * Restarting with stat
+2025-07-25 19:19:43,504 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:19:43,607 [INFO]  * Restarting with stat
+2025-07-25 19:19:47,068 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:19:47,150 [INFO]  * Restarting with stat
+2025-07-25 19:19:49,532 [INFO]  * Restarting with stat
+2025-07-25 19:19:53,200 [INFO] 127.0.0.1 - - [25/Jul/2025 19:19:53] "[31m[1mGET /received_requests HTTP/1.1[0m" 400 -
+2025-07-25 19:19:53,230 [INFO] 127.0.0.1 - - [25/Jul/2025 19:19:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 19:20:03,066 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:20:03,182 [INFO]  * Restarting with stat
+2025-07-25 19:20:04,577 [INFO]  * Restarting with stat
+2025-07-25 19:20:06,031 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:20:06,107 [INFO]  * Restarting with stat
+2025-07-25 19:20:11,578 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:20:11,680 [INFO]  * Restarting with stat
+2025-07-25 19:20:13,134 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:20:13,204 [INFO]  * Restarting with stat
+2025-07-25 19:20:13,704 [INFO] 127.0.0.1 - - [25/Jul/2025 19:20:13] "GET /received_requests HTTP/1.1" 200 -
+2025-07-25 19:20:13,724 [INFO] 127.0.0.1 - - [25/Jul/2025 19:20:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-25 19:21:03,032 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-25 19:21:03,126 [INFO]  * Restarting with stat
