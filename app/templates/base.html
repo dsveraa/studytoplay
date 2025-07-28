@@ -34,6 +34,14 @@ body {
     background-color: #999999;
     color: #fff;
 }
+.custom-btn-4 {
+    background-color: #beda23;
+    color: #fff;
+}
+.custom-btn-4:hover {
+    background-color: #a5b44d;
+    color: #fff;
+}
 a {
     color: #aaa;
 }
@@ -120,6 +128,9 @@ height: 150px;
             <a href="/records" class="text-white mx-3"><iconify-icon icon="mdi:folder-home" style="color: {{ '#fbc93e' if request.path == '/records' else '#b3b3b3' }}; font-size: 30px" ></iconify-icon></a>
             <a href="/add_time" class="text-white mx-3"><iconify-icon icon="mdi:account-school" style="color: {{ '#fbc93e' if request.path == '/add_time' else '#b3b3b3' }}; font-size: 30px" ></iconify-icon></a>
             <a href="/use_time" class="text-white mx-3"><iconify-icon icon="mdi:play-circle" style="color: {{ '#fbc93e' if request.path == '/use_time' else '#b3b3b3' }}; font-size: 30px" ></iconify-icon></a>
+            
+            <a href="/notifications" class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 14 14"><g fill="none"><path fill="{{ '#fbc93e' if request.path ==  '/notifications' else '#b3b3b3' }}" fill-rule="evenodd" d="M6.127.5c.456 0 .905.068 1.334.197a3.75 3.75 0 0 0 3.27 5.553v2.227a.695.695 0 0 0 .696.695a.75.75 0 1 1 0 1.5H.827a.75.75 0 0 1 0-1.5a.695.695 0 0 0 .696-.695V5.104A4.604 4.604 0 0 1 6.127.5m-1 11.5a.75.75 0 0 0 0 1.5h2a.75.75 0 0 0 0-1.5z" clip-rule="evenodd"/><path fill="{{ '#b3b3b3' if not session.get("nueva_notificacion") else '#ee0a0a' }}" d="M10.75 5a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5"/></g></svg></a>
+            
             <a href="/logout" class="text-white mx-3"><iconify-icon icon="mdi:location-exit" style="color: {{ '#b3b3b3' if session.get("usuario_nombre") == None else '#fa7266' }}; font-size: 30px" ></iconify-icon></a>
         </div>
     </footer>

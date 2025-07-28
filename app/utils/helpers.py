@@ -1,8 +1,11 @@
 from datetime import timedelta
-from app.models import Nivel, Trofeo, Premio, Usuario, Estrella, AcumulacionTiempo, Tiempo
+from app.models import Nivel, Trofeo, Premio, Usuario, Estrella, AcumulacionTiempo, Tiempo, NuevaNotificacion, Notificaciones, SolicitudVinculacion, SupervisorEstudiante
 from .. import db
 from functools import wraps
-from flask import session, jsonify
+from flask import session, jsonify, url_for
+from sqlalchemy.orm import aliased
+from sqlalchemy import desc
+from app.utils.debugging import printn
 
 def login_required(f):
     @wraps(f)
@@ -160,3 +163,70 @@ def asignar_trofeos(id: int) -> int:
         nivel_obj.nivel = 0
         db.session.commit()
         return print(f'Has ganado un nuevo trofeo! Tienes {trofeos_obj.cantidad} en total.')
+    
+def revisar_nuevas_notificaciones(id):
+    nueva_notificacion = NuevaNotificacion.query.filter_by(usuario_id=id).first()
+
+    if not nueva_notificacion:
+        entrada_default = NuevaNotificacion(usuario_id=id, estado=False)
+        db.session.add(entrada_default)
+        db.session.commit()
+        return
+    
+    session['nueva_notificacion'] = nueva_notificacion.estado
+
+def enviar_notificacion_link_request(sid, uid): # "nombre@email.com" solicita supervisar tu cuenta [aceptar] [rechazar]
+    
+    supervisor = Usuario.query.get_or_404(sid)
+    email = supervisor.correo
+
+    query = (
+        SolicitudVinculacion.query
+        .filter_by(estudiante_id=uid)
+        .order_by(desc(SolicitudVinculacion.fecha_solicitud))
+        .first()
+    )
+    
+    id_solicitud = query.id
+
+    mensaje_html = f'''
+<div id="solicitud-{id_solicitud}">
+    <b>{email}</b> requests to supervise your account.
+    <span id="acciones-{id_solicitud}">
+        <iconify-icon 
+            icon="ix:thumb-up-filled" 
+            width="24" 
+            height="24" 
+            style="cursor: pointer; margin-right: 4px; vertical-align: middle; color: #beda23" 
+            onclick="responderSolicitud({id_solicitud}, 'aceptada')">
+        </iconify-icon>
+        <iconify-icon 
+            icon="ix:thumb-down-filled" 
+            width="24" 
+            height="24" 
+            style="cursor: pointer; vertical-align: middle; color: #fb7833" 
+            onclick="responderSolicitud({id_solicitud}, 'rechazada')">
+        </iconify-icon>
+    </span>
+</div>
+'''
+   
+    notificacion_lr = Notificaciones(usuario_id=uid, notificacion=mensaje_html, leida=False)
+    nueva_notificacion = NuevaNotificacion.query.get(uid)
+    nueva_notificacion.estado = True
+    
+    db.session.add(notificacion_lr)
+    db.session.commit()
+
+def enviar_notificacion_respuesta_lr(s_correo, respuesta, uid):
+    if respuesta == 'aceptada':
+        mensaje_html = f'''
+The <b>{s_correo}</b> request has been accepted.
+'''
+    else:
+        mensaje_html = f'''
+The <b>{s_correo}</b> request has been declined.
+'''
+    notificacion_respuesta = Notificaciones(usuario_id=uid, notificacion=mensaje_html)
+    db.session.add(notificacion_respuesta)
+    db.session.commit()

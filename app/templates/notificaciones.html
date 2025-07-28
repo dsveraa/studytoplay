@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
+  <div class="d-flex flex-column align-items-center">
+    <h3>Notifications</h3>
+    <div class="list-group w-100 mt-3">
+      
+      {% for notificacion in notificaciones %}
+      <div class="list-group-item">
+        {{ notificacion.notificacion | safe }}
+      </div>  
+      {% endfor %}
+      
+    </div>
+    
+  </div>
+</div>
+<br>
+<br>
+
+<script>
+  function responderSolicitud(id, respuesta)  {
+    fetch('/request_response', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        sid: id,
+        response: respuesta
+      })
+    })
+    .then(res => {
+      if (!res.ok) throw new Error('Error en la solicitud')
+      return res.json()
+    })
+    .then(data => {
+      const acciones = document.getElementById(`acciones-${id}`)
+      if (acciones) acciones.remove()
+      window.location.reload()
+    })
+    .catch(error => {
+      console.error(error)
+      alert('Hubo un problema al procesar la solicitud')
+    })
+  }
+</script>
+{% endblock %}

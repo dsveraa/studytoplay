@@ -1,12 +1,12 @@
 from flask import render_template, request, redirect, url_for, session, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime, timedelta
-from sqlalchemy import desc
+from sqlalchemy import desc, and_
 from sqlalchemy.orm import aliased
 
 
-from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura, AcumulacionTiempo, Rol, SolicitudVinculacion, SupervisorEstudiante, EstadoUsuario
-from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, mostrar_estrellas, mostrar_trofeos, porcentaje_tiempos, sumar_tiempos, mostrar_nivel, login_required, supervisor_required
+from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura, AcumulacionTiempo, Rol, SolicitudVinculacion, SupervisorEstudiante, EstadoUsuario, NuevaNotificacion, Notificaciones
+from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, mostrar_estrellas, mostrar_trofeos, porcentaje_tiempos, sumar_tiempos, mostrar_nivel, login_required, supervisor_required, revisar_nuevas_notificaciones, enviar_notificacion_link_request, enviar_notificacion_respuesta_lr
 from . import db
 
 
@@ -138,18 +138,38 @@ def register_routes(app):
         if not solicitud:
             return jsonify({'status': 'failed', 'error': 'Request not found'}), 404
         
+        solicitud.estado = response
+
         if response == 'aceptada':
-            solicitud.estado = 'aceptada'
             relacion = SupervisorEstudiante(
                 supervisor_id=solicitud.supervisor_id,
                 estudiante_id=solicitud.estudiante_id
             )
             db.session.add(relacion)
         
-        elif response == 'rechazada':
-            solicitud.estado = 'rechazada'
+        notificacion = (
+            Notificaciones.query
+            .filter(
+                Notificaciones.usuario_id == estudiante_id,
+                Notificaciones.notificacion.like(f'%acciones-{solicitud_id}%')
+            )
+            .first()
+        )
+
+        if notificacion:
+            import re
+            notificacion.notificacion = re.sub(
+                rf'<span id="acciones-{solicitud_id}".*?</span>',
+                '',
+                notificacion.notificacion,
+                flags=re.DOTALL
+            )
             
+        s_correo = solicitud.supervisor.correo
+        enviar_notificacion_respuesta_lr(s_correo, response, estudiante_id)
+
         db.session.commit()
+        
         return jsonify({'status': 'success', 'response': response}), 201
 
     @app.route('/link_request', methods=['GET', 'POST']) # envía solicitud de vinculación escribiendo datos en tabla solicitud_vinculacion
@@ -160,6 +180,7 @@ def register_routes(app):
             usuario_estudiante = request.form['email']
             
             estudiante_id = db.session.query(Usuario.id).filter_by(correo=usuario_estudiante).scalar()
+            printn(estudiante_id)
 
             if not estudiante_id:
                 return jsonify({'status': 'failed', 'error': f"No students were found with the username '{usuario_estudiante}'"})
@@ -190,9 +211,12 @@ def register_routes(app):
                     estudiante_id=estudiante_id,
                     estado='pendiente'
                 )
+                db.session.add(solicitud)
+                db.session.commit()
+                printn(supervisor_id)
+                printn(estudiante_id)
+                enviar_notificacion_link_request(supervisor_id, estudiante_id)
 
-            db.session.add(solicitud)
-            db.session.commit()
 
             return jsonify({'response': 'solicitud enviada'})
         return render_template("/s_link_request.html")
@@ -286,9 +310,12 @@ def register_routes(app):
             asignar_estrellas(usuario_id)
             asignar_nivel(usuario_id)
             asignar_trofeos(usuario_id)
+
             
 
             return jsonify({'redirect': url_for('perfil')})
+        
+        revisar_nuevas_notificaciones(usuario_id)
         
         return render_template("add_time.html", asignaturas=asignaturas)
 
@@ -336,6 +363,8 @@ def register_routes(app):
             print("Último uso registrado:", ultimo_uso.__dict__)
             
             return jsonify({'redirect': url_for('perfil')})
+        
+        revisar_nuevas_notificaciones(usuario_id)
         
         return render_template("use_time.html", username=username, usos=use_obj)
 
@@ -425,6 +454,8 @@ def register_routes(app):
             activity_obj = Estudio.query.filter_by(usuario_id=usuario_id).order_by(desc(Estudio.id)).limit(20).all()
             nombre_asignatura = "Latest"
         
+        revisar_nuevas_notificaciones(usuario_id)
+        
         return render_template("records.html", 
                                estudios=activity_obj, 
                                asignaturas=asignaturas_obj, 
@@ -466,6 +497,8 @@ def register_routes(app):
         trofeos: int = mostrar_trofeos(usuario_id)
         cantidad_estrellas: int = mostrar_estrellas(usuario_id)
         estrellas: List[int] = crear_plantilla_estrellas(cantidad_estrellas)
+
+        revisar_nuevas_notificaciones(usuario_id)
 
         return render_template(
             "perfil.html", 
@@ -522,4 +555,20 @@ def register_routes(app):
             return render_template("s_dashboard.html", estudiantes=estudiantes)
         
         return redirect(url_for("perfil"))
-        
+    
+    @app.route('/notifications')
+    @login_required
+    def notifications():
+        usuario_id = session.get('usuario_id')
+        NuevaNotificacion.query.filter_by(usuario_id=usuario_id).update({ 'estado': False })
+        db.session.commit()
+        revisar_nuevas_notificaciones(usuario_id)
+
+        query = (
+            Notificaciones.query
+            .filter_by(usuario_id=usuario_id)
+            .order_by(desc(Notificaciones.fecha))
+            .all()
+        )
+
+        return render_template("notificaciones.html", notificaciones=query)
