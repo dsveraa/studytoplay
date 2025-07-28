@@ -20,6 +20,10 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = config('SQLALCHEMY_DATABASE_URI')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = config('SQLALCHEMY_TRACK_MODIFICATIONS')
     app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)
+    app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
+    'pool_pre_ping': True,
+    'pool_recycle': 250  # 5 minutos
+}
 
     print("DB URI:", app.config["SQLALCHEMY_DATABASE_URI"])
 
