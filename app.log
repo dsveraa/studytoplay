@@ -8035,3 +8035,316 @@ sqlalchemy.exc.ArgumentError: ORDER BY expression expected, got <built-in functi
 2025-07-27 23:40:36,437 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:36] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
 2025-07-27 23:40:36,452 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:36] "GET /notifications HTTP/1.1" 200 -
 2025-07-27 23:40:36,466 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:36] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:44:33,079 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-27 23:44:33,079 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-27 23:44:33,080 [INFO]  * Restarting with stat
+2025-07-27 23:44:34,393 [INFO] 127.0.0.1 - - [27/Jul/2025 23:44:34] "GET /use_time HTTP/1.1" 200 -
+2025-07-27 23:44:34,417 [INFO] 127.0.0.1 - - [27/Jul/2025 23:44:34] "[36mGET /static/logo_play.png HTTP/1.1[0m" 304 -
+2025-07-27 23:44:34,445 [INFO] 127.0.0.1 - - [27/Jul/2025 23:44:34] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-27 23:44:34,471 [INFO] 127.0.0.1 - - [27/Jul/2025 23:44:34] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-27 23:44:37,837 [INFO] 127.0.0.1 - - [27/Jul/2025 23:44:37] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:44:37,862 [INFO] 127.0.0.1 - - [27/Jul/2025 23:44:37] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:44:59,576 [INFO] 127.0.0.1 - - [27/Jul/2025 23:44:59] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:44:59,630 [INFO] 127.0.0.1 - - [27/Jul/2025 23:44:59] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:45:00,446 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:00] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:45:00,473 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:45:02,301 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:02] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:45:02,322 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:02] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:45:02,329 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:02] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:45:02,331 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:02] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 23:45:05,582 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:05] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:45:05,603 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:05] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:45:10,096 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:10] "GET /use_time HTTP/1.1" 200 -
+2025-07-27 23:45:10,120 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:10] "[36mGET /static/logo_play.png HTTP/1.1[0m" 304 -
+2025-07-27 23:45:10,121 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:10] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-27 23:45:10,172 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:10] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-27 23:45:11,182 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:11] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:45:11,208 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:11] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:45:17,009 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:17] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:45:17,025 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:17] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:45:17,047 [INFO] 127.0.0.1 - - [27/Jul/2025 23:45:17] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:52:55,380 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:52:55,488 [INFO]  * Restarting with stat
+2025-07-27 23:52:56,930 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:52:56,999 [INFO]  * Restarting with stat
+2025-07-27 23:53:02,459 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:53:02,541 [INFO]  * Restarting with stat
+2025-07-27 23:53:29,920 [INFO] 127.0.0.1 - - [27/Jul/2025 23:53:29] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:53:29,966 [INFO] 127.0.0.1 - - [27/Jul/2025 23:53:29] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:53:51,554 [INFO] 127.0.0.1 - - [27/Jul/2025 23:53:51] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:53:51,597 [INFO] 127.0.0.1 - - [27/Jul/2025 23:53:51] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:53:54,438 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 558, in home
+    .distinct(SupervisorEstudiante.estudiante_id)
+AttributeError: type object 'SupervisorEstudiante' has no attribute 'est'
+2025-07-27 23:53:54,440 [INFO] 127.0.0.1 - - [27/Jul/2025 23:53:54] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-27 23:54:06,758 [INFO] 127.0.0.1 - - [27/Jul/2025 23:54:06] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-07-27 23:54:06,766 [INFO] 127.0.0.1 - - [27/Jul/2025 23:54:06] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-27 23:54:06,773 [INFO] 127.0.0.1 - - [27/Jul/2025 23:54:06] "GET /login HTTP/1.1" 200 -
+2025-07-27 23:54:06,820 [INFO] 127.0.0.1 - - [27/Jul/2025 23:54:06] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:54:15,117 [INFO] 127.0.0.1 - - [27/Jul/2025 23:54:15] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-07-27 23:54:15,124 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 558, in home
+    .distinct(SupervisorEstudiante.estudiante_id)
+AttributeError: type object 'SupervisorEstudiante' has no attribute 'est'
+2025-07-27 23:54:15,125 [INFO] 127.0.0.1 - - [27/Jul/2025 23:54:15] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-27 23:55:34,118 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:55:34,224 [INFO]  * Restarting with stat
+2025-07-27 23:55:36,687 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:55:36,761 [INFO]  * Restarting with stat
+2025-07-27 23:55:38,218 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:55:38,291 [INFO]  * Restarting with stat
+2025-07-27 23:55:40,224 [INFO] 127.0.0.1 - - [27/Jul/2025 23:55:40] "GET / HTTP/1.1" 200 -
+2025-07-27 23:55:40,266 [INFO] 127.0.0.1 - - [27/Jul/2025 23:55:40] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:55:58,344 [INFO] 127.0.0.1 - - [27/Jul/2025 23:55:58] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-07-27 23:55:58,349 [INFO] 127.0.0.1 - - [27/Jul/2025 23:55:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-27 23:55:58,364 [INFO] 127.0.0.1 - - [27/Jul/2025 23:55:58] "GET /login HTTP/1.1" 200 -
+2025-07-27 23:55:58,384 [INFO] 127.0.0.1 - - [27/Jul/2025 23:55:58] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:56:08,699 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-07-27 23:56:08,705 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:08] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-27 23:56:08,735 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:08] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:56:08,757 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:08] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:56:08,759 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:08] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:56:08,759 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:08] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 23:56:11,735 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:11] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:56:11,799 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:11] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:56:17,641 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:17] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:56:17,677 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:56:19,663 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:19] "GET /records HTTP/1.1" 200 -
+2025-07-27 23:56:19,681 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:19] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:56:20,556 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:20] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:56:20,577 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:20] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:56:21,634 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:21] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:56:21,647 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:21] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:56:21,664 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:21] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:56:23,883 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:23] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:56:23,926 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:23] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:56:25,914 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:25] "GET / HTTP/1.1" 200 -
+2025-07-27 23:56:25,950 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:25] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:56:27,301 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:27] "GET / HTTP/1.1" 200 -
+2025-07-27 23:56:27,337 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:27] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:56:38,678 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:38] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-07-27 23:56:38,687 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:38] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-27 23:56:38,696 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:38] "GET /login HTTP/1.1" 200 -
+2025-07-27 23:56:38,754 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:38] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:56:51,300 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-07-27 23:56:51,309 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:51] "GET / HTTP/1.1" 200 -
+2025-07-27 23:56:51,351 [INFO] 127.0.0.1 - - [27/Jul/2025 23:56:51] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:59:31,523 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:59:31,643 [INFO]  * Restarting with stat
+2025-07-27 23:59:35,110 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:59:35,181 [INFO]  * Restarting with stat
+2025-07-27 23:59:36,630 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:59:36,700 [INFO]  * Restarting with stat
+2025-07-27 23:59:39,157 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:59:39,227 [INFO]  * Restarting with stat
+2025-07-27 23:59:42,524 [INFO] 127.0.0.1 - - [27/Jul/2025 23:59:42] "GET / HTTP/1.1" 200 -
+2025-07-27 23:59:42,576 [INFO] 127.0.0.1 - - [27/Jul/2025 23:59:42] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-28 00:00:39,110 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:00:39,209 [INFO]  * Restarting with stat
+2025-07-28 00:00:40,923 [INFO] 127.0.0.1 - - [28/Jul/2025 00:00:40] "GET / HTTP/1.1" 200 -
+2025-07-28 00:00:40,975 [INFO] 127.0.0.1 - - [28/Jul/2025 00:00:40] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-28 00:00:46,686 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:00:46,784 [INFO]  * Restarting with stat
+2025-07-28 00:01:56,733 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:01:56,828 [INFO]  * Restarting with stat
+2025-07-28 00:02:00,292 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:02:00,365 [INFO]  * Restarting with stat
+2025-07-28 00:02:08,861 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:02:08,949 [INFO]  * Restarting with stat
+2025-07-28 00:02:13,410 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:02:13,498 [INFO]  * Restarting with stat
+2025-07-28 00:02:34,999 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.GroupingError: column "tiempos.tiempo" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: ...ios_1_id, usuarios_1.nombre AS usuarios_1_nombre, tiempos.ti...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 563, in home
+    for eid, nombre, tiempo, estado in query.all()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2699, in all
+    return self._iter().all()  # type: ignore
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2853, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+    return meth(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.GroupingError) column "tiempos.tiempo" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: ...ios_1_id, usuarios_1.nombre AS usuarios_1_nombre, tiempos.ti...
+                                                             ^
+
+[SQL: SELECT usuarios_1.id AS usuarios_1_id, usuarios_1.nombre AS usuarios_1_nombre, tiempos.tiempo AS tiempos_tiempo, estado_usuario.estado AS estado_usuario_estado 
+FROM supervisor_estudiante JOIN usuarios AS usuarios_2 ON usuarios_2.id = supervisor_estudiante.supervisor_id JOIN usuarios AS usuarios_1 ON usuarios_1.id = supervisor_estudiante.estudiante_id JOIN tiempos ON tiempos.usuario_id = supervisor_estudiante.estudiante_id JOIN estado_usuario ON estado_usuario.usuario_id = supervisor_estudiante.estudiante_id 
+WHERE supervisor_estudiante.supervisor_id = %(supervisor_id_1)s GROUP BY usuarios_1.id, usuarios_1.nombre]
+[parameters: {'supervisor_id_1': 11}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-07-28 00:02:35,002 [INFO] 127.0.0.1 - - [28/Jul/2025 00:02:35] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-28 00:02:50,203 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:02:50,315 [INFO]  * Restarting with stat
+2025-07-28 00:02:50,822 [INFO] 127.0.0.1 - - [28/Jul/2025 00:02:50] "GET / HTTP/1.1" 200 -
+2025-07-28 00:02:50,869 [INFO] 127.0.0.1 - - [28/Jul/2025 00:02:50] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-28 00:05:28,983 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:05:29,093 [INFO]  * Restarting with stat
+2025-07-28 00:05:34,558 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:05:34,646 [INFO]  * Restarting with stat
+2025-07-28 00:05:36,094 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:05:36,164 [INFO]  * Restarting with stat
+2025-07-28 00:07:22,370 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:07:22,460 [INFO]  * Restarting with stat
+2025-07-28 00:07:26,931 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:07:27,021 [INFO]  * Restarting with stat
+2025-07-28 00:07:32,728 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 566, in home
+    return render_template("s_dashboard.html", estudiantes=estudiantes)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 1, in top-level template code
+    {% extends 'base_supervisor.html' %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/base_supervisor.html", line 105, in top-level template code
+    {% block content %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 15, in block 'content'
+    Current time: {{ estudiante.tiempo | ms_to_hms }}
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 28, in ms_to_hms_filter
+    segundos = ms // 1000
+TypeError: unsupported operand type(s) for //: 'NoneType' and 'int'
+2025-07-28 00:07:32,730 [INFO] 127.0.0.1 - - [28/Jul/2025 00:07:32] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-28 00:07:43,193 [INFO] 127.0.0.1 - - [28/Jul/2025 00:07:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-07-28 00:07:43,205 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 566, in home
+    return render_template("s_dashboard.html", estudiantes=estudiantes)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 1, in top-level template code
+    {% extends 'base_supervisor.html' %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/base_supervisor.html", line 105, in top-level template code
+    {% block content %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 15, in block 'content'
+    Current time: {{ estudiante.tiempo | ms_to_hms }}
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 28, in ms_to_hms_filter
+    segundos = ms // 1000
+TypeError: unsupported operand type(s) for //: 'NoneType' and 'int'
+2025-07-28 00:07:43,206 [INFO] 127.0.0.1 - - [28/Jul/2025 00:07:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-07-28 00:08:32,950 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:08:33,055 [INFO]  * Restarting with stat
+2025-07-28 00:08:35,504 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:08:35,578 [INFO]  * Restarting with stat
+2025-07-28 00:08:50,049 [INFO]  * Restarting with stat
+2025-07-28 00:08:53,425 [INFO]  * Restarting with stat
+2025-07-28 00:09:18,980 [INFO]  * Restarting with stat
+2025-07-28 00:09:27,468 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:09:27,556 [INFO]  * Restarting with stat
+2025-07-28 00:09:36,048 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-28 00:09:36,141 [INFO]  * Restarting with stat
+2025-07-28 00:09:40,915 [INFO] 127.0.0.1 - - [28/Jul/2025 00:09:40] "GET / HTTP/1.1" 200 -
+2025-07-28 00:09:40,965 [INFO] 127.0.0.1 - - [28/Jul/2025 00:09:40] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-28 00:11:21,740 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:21] "GET /perfil HTTP/1.1" 200 -
+2025-07-28 00:11:21,764 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:21] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-28 00:11:21,769 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:21] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-28 00:11:21,773 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:21] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-28 00:11:25,502 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:25] "GET /add_time HTTP/1.1" 200 -
+2025-07-28 00:11:25,531 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:25] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-28 00:11:25,532 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:25] "[36mGET /static/logo_study.png HTTP/1.1[0m" 304 -
+2025-07-28 00:11:26,898 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Chrome", en "Linux"
+2025-07-28 00:11:26,900 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:26] "GET /get_time HTTP/1.1" 200 -
+2025-07-28 00:11:26,900 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:26] "POST /log_click HTTP/1.1" 200 -
+2025-07-28 00:11:26,903 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:26] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-07-28 00:11:26,914 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:26] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-07-28 00:11:28,908 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:28] "GET / HTTP/1.1" 200 -
+2025-07-28 00:11:28,954 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:28] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-28 00:11:31,064 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:31] "GET /get_time HTTP/1.1" 200 -
+2025-07-28 00:11:31,100 [INFO] Click en: "Cancel", desde "http://127.0.0.1:5000/add_time", usando "Chrome", en "Linux"
+2025-07-28 00:11:31,102 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:31] "POST /log_click HTTP/1.1" 200 -
+2025-07-28 00:11:31,103 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:31] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-07-28 00:11:31,127 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:31] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-07-28 00:11:31,142 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:31] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-28 00:11:31,146 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:31] "GET /perfil HTTP/1.1" 200 -
+2025-07-28 00:11:31,154 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:31] "GET /perfil HTTP/1.1" 200 -
+2025-07-28 00:11:31,170 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:31] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-28 00:11:31,172 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:31] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-28 00:11:31,172 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:31] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-28 00:11:33,029 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:33] "GET / HTTP/1.1" 200 -
+2025-07-28 00:11:33,069 [INFO] 127.0.0.1 - - [28/Jul/2025 00:11:33] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -

@@ -25,7 +25,10 @@ def register_routes(app):
     @app.template_filter('ms_to_hms')
     def ms_to_hms_filter(ms):
         import datetime
-        segundos = ms // 1000
+        if not ms:
+            segundos = 0
+        else:
+            segundos = ms // 1000
         return str(datetime.timedelta(seconds=segundos))
     
     @app.route('/student_info/<id>', methods=['GET'])
@@ -552,8 +555,8 @@ def register_routes(app):
                 .select_from(SupervisorEstudiante)
                 .join(Supervisor, Supervisor.id == SupervisorEstudiante.supervisor_id)
                 .join(Estudiante, Estudiante.id == SupervisorEstudiante.estudiante_id)
-                .join(Tiempo, Tiempo.usuario_id == SupervisorEstudiante.estudiante_id)
-                .join(EstadoUsuario, EstadoUsuario.usuario_id == SupervisorEstudiante.estudiante_id)
+                .outerjoin(Tiempo, Tiempo.usuario_id == SupervisorEstudiante.estudiante_id)
+                .outerjoin(EstadoUsuario, EstadoUsuario.usuario_id == SupervisorEstudiante.estudiante_id)
                 .filter(SupervisorEstudiante.supervisor_id == usuario_id)
                 .distinct(Estudiante.id)
             )
@@ -562,6 +565,7 @@ def register_routes(app):
                 {"id": eid, "nombre": nombre, "tiempo": tiempo, "estado": estado}
                 for eid, nombre, tiempo, estado in query.all()
             ]
+            printn(estudiantes)
             return render_template("s_dashboard.html", estudiantes=estudiantes)
         
         return redirect(url_for("perfil"))
