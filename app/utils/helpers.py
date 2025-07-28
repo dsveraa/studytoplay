@@ -166,14 +166,8 @@ def asignar_trofeos(id: int) -> int:
     
 def revisar_nuevas_notificaciones(id):
     nueva_notificacion = NuevaNotificacion.query.filter_by(usuario_id=id).first()
-
-    if not nueva_notificacion:
-        entrada_default = NuevaNotificacion(usuario_id=id, estado=False)
-        db.session.add(entrada_default)
-        db.session.commit()
-        return
-    
     session['nueva_notificacion'] = nueva_notificacion.estado
+    return
 
 def enviar_notificacion_link_request(sid, uid): # "nombre@email.com" solicita supervisar tu cuenta [aceptar] [rechazar]
     
@@ -183,7 +177,7 @@ def enviar_notificacion_link_request(sid, uid): # "nombre@email.com" solicita su
     query = (
         SolicitudVinculacion.query
         .filter_by(estudiante_id=uid)
-        .order_by(desc(SolicitudVinculacion.fecha_solicitud))
+        .order_by(desc(SolicitudVinculacion.id))
         .first()
     )
     
@@ -212,7 +206,9 @@ def enviar_notificacion_link_request(sid, uid): # "nombre@email.com" solicita su
 '''
    
     notificacion_lr = Notificaciones(usuario_id=uid, notificacion=mensaje_html, leida=False)
-    nueva_notificacion = NuevaNotificacion.query.get(uid)
+    nueva_notificacion = NuevaNotificacion.query.filter_by(usuario_id=uid).first()
+    printn(uid)
+    printn(nueva_notificacion)
     nueva_notificacion.estado = True
     
     db.session.add(notificacion_lr)

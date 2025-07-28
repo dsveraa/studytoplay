@@ -7271,3 +7271,767 @@ AttributeError: 'NoneType' object has no attribute 'estado'
 2025-07-27 19:15:24,792 [INFO] 127.0.0.1 - - [27/Jul/2025 19:15:24] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
 2025-07-27 19:15:25,938 [INFO] 127.0.0.1 - - [27/Jul/2025 19:15:25] "GET /notifications HTTP/1.1" 200 -
 2025-07-27 19:15:25,958 [INFO] 127.0.0.1 - - [27/Jul/2025 19:15:25] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:39:53,176 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-27 22:39:53,176 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-27 22:39:53,177 [INFO]  * Restarting with stat
+2025-07-27 22:40:06,559 [INFO] 127.0.0.1 - - [27/Jul/2025 22:40:06] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-27 22:40:06,595 [INFO] 127.0.0.1 - - [27/Jul/2025 22:40:06] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 22:40:06,632 [INFO] 127.0.0.1 - - [27/Jul/2025 22:40:06] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:40:06,634 [INFO] 127.0.0.1 - - [27/Jul/2025 22:40:06] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:40:06,635 [INFO] 127.0.0.1 - - [27/Jul/2025 22:40:06] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 22:41:44,656 [INFO] 127.0.0.1 - - [27/Jul/2025 22:41:44] "GET / HTTP/1.1" 200 -
+2025-07-27 22:41:44,706 [INFO] 127.0.0.1 - - [27/Jul/2025 22:41:44] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:41:47,355 [INFO] 127.0.0.1 - - [27/Jul/2025 22:41:47] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 22:41:47,407 [INFO] 127.0.0.1 - - [27/Jul/2025 22:41:47] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:41:50,235 [ERROR] Exception on /link_request [POST]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 23, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 218, in link_request
+    enviar_notificacion_link_request(supervisor_id, estudiante_id)
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 216, in enviar_notificacion_link_request
+    nueva_notificacion.estado = True
+AttributeError: 'NoneType' object has no attribute 'estado'
+2025-07-27 22:41:50,236 [INFO] 127.0.0.1 - - [27/Jul/2025 22:41:50] "[35m[1mPOST /link_request HTTP/1.1[0m" 500 -
+2025-07-27 22:42:14,665 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 22:42:14,768 [INFO]  * Restarting with stat
+2025-07-27 22:42:16,200 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 22:42:16,268 [INFO]  * Restarting with stat
+2025-07-27 22:42:19,600 [INFO] 127.0.0.1 - - [27/Jul/2025 22:42:19] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 22:42:19,654 [INFO] 127.0.0.1 - - [27/Jul/2025 22:42:19] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:42:21,092 [INFO] 127.0.0.1 - - [27/Jul/2025 22:42:21] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 22:42:39,109 [INFO] 127.0.0.1 - - [27/Jul/2025 22:42:39] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 22:42:39,146 [INFO] 127.0.0.1 - - [27/Jul/2025 22:42:39] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:43:11,713 [ERROR] Exception on /link_request [POST]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 23, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 218, in link_request
+    enviar_notificacion_link_request(supervisor_id, estudiante_id)
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 217, in enviar_notificacion_link_request
+    nueva_notificacion.estado = True
+AttributeError: 'NoneType' object has no attribute 'estado'
+2025-07-27 22:43:11,715 [INFO] 127.0.0.1 - - [27/Jul/2025 22:43:11] "[35m[1mPOST /link_request HTTP/1.1[0m" 500 -
+2025-07-27 22:43:51,426 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 22:43:51,522 [INFO]  * Restarting with stat
+2025-07-27 22:44:15,114 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 22:44:15,202 [INFO]  * Restarting with stat
+2025-07-27 22:44:18,376 [INFO] 127.0.0.1 - - [27/Jul/2025 22:44:18] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 22:44:18,435 [INFO] 127.0.0.1 - - [27/Jul/2025 22:44:18] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:44:20,558 [ERROR] Exception on /link_request [POST]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 23, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 217, in link_request
+    enviar_notificacion_link_request(supervisor_id, estudiante_id)
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 217, in enviar_notificacion_link_request
+    nueva_notificacion.estado = True
+AttributeError: 'NoneType' object has no attribute 'estado'
+2025-07-27 22:44:20,559 [INFO] 127.0.0.1 - - [27/Jul/2025 22:44:20] "[35m[1mPOST /link_request HTTP/1.1[0m" 500 -
+2025-07-27 22:44:45,869 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 22:44:45,969 [INFO]  * Restarting with stat
+2025-07-27 22:44:55,264 [INFO] 127.0.0.1 - - [27/Jul/2025 22:44:55] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 22:44:55,316 [INFO] 127.0.0.1 - - [27/Jul/2025 22:44:55] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:44:56,798 [ERROR] Exception on /link_request [POST]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 23, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 216, in link_request
+    enviar_notificacion_link_request(supervisor_id, estudiante_id)
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 217, in enviar_notificacion_link_request
+    nueva_notificacion.estado = True
+AttributeError: 'NoneType' object has no attribute 'estado'
+2025-07-27 22:44:56,799 [INFO] 127.0.0.1 - - [27/Jul/2025 22:44:56] "[35m[1mPOST /link_request HTTP/1.1[0m" 500 -
+2025-07-27 22:47:25,756 [INFO] 127.0.0.1 - - [27/Jul/2025 22:47:25] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 22:47:25,778 [INFO] 127.0.0.1 - - [27/Jul/2025 22:47:25] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:47:35,758 [INFO] 127.0.0.1 - - [27/Jul/2025 22:47:35] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 22:47:35,826 [INFO] 127.0.0.1 - - [27/Jul/2025 22:47:35] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:47:37,314 [ERROR] Exception on /link_request [POST]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 23, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 216, in link_request
+    enviar_notificacion_link_request(supervisor_id, estudiante_id)
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 217, in enviar_notificacion_link_request
+    nueva_notificacion.estado = True
+AttributeError: 'NoneType' object has no attribute 'estado'
+2025-07-27 22:47:37,315 [INFO] 127.0.0.1 - - [27/Jul/2025 22:47:37] "[35m[1mPOST /link_request HTTP/1.1[0m" 500 -
+2025-07-27 22:48:06,939 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 22:48:07,037 [INFO]  * Restarting with stat
+2025-07-27 22:48:09,476 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 22:48:09,560 [INFO]  * Restarting with stat
+2025-07-27 22:48:11,000 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 22:48:11,073 [INFO]  * Restarting with stat
+2025-07-27 22:48:36,630 [INFO] 127.0.0.1 - - [27/Jul/2025 22:48:36] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 22:48:36,692 [INFO] 127.0.0.1 - - [27/Jul/2025 22:48:36] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:48:47,390 [ERROR] Exception on /link_request [POST]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 23, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 216, in link_request
+    enviar_notificacion_link_request(supervisor_id, estudiante_id)
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 218, in enviar_notificacion_link_request
+    nueva_notificacion.estado = True
+AttributeError: 'NoneType' object has no attribute 'estado'
+2025-07-27 22:48:47,391 [INFO] 127.0.0.1 - - [27/Jul/2025 22:48:47] "[35m[1mPOST /link_request HTTP/1.1[0m" 500 -
+2025-07-27 22:49:38,593 [INFO] 127.0.0.1 - - [27/Jul/2025 22:49:38] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 22:49:38,612 [INFO] 127.0.0.1 - - [27/Jul/2025 22:49:38] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:49:51,532 [INFO] 127.0.0.1 - - [27/Jul/2025 22:49:51] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 22:49:51,594 [INFO] 127.0.0.1 - - [27/Jul/2025 22:49:51] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:49:56,006 [ERROR] Exception on /link_request [POST]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 23, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 216, in link_request
+    enviar_notificacion_link_request(supervisor_id, estudiante_id)
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 218, in enviar_notificacion_link_request
+    nueva_notificacion.estado = True
+AttributeError: 'NoneType' object has no attribute 'estado'
+2025-07-27 22:49:56,007 [INFO] 127.0.0.1 - - [27/Jul/2025 22:49:56] "[35m[1mPOST /link_request HTTP/1.1[0m" 500 -
+2025-07-27 22:51:06,824 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 22:51:06,923 [INFO]  * Restarting with stat
+2025-07-27 22:51:09,394 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 22:51:09,464 [INFO]  * Restarting with stat
+2025-07-27 22:51:20,975 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 22:51:21,073 [INFO]  * Restarting with stat
+2025-07-27 22:51:23,528 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 22:51:23,603 [INFO]  * Restarting with stat
+2025-07-27 22:51:44,357 [INFO] 127.0.0.1 - - [27/Jul/2025 22:51:44] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 22:51:44,421 [INFO] 127.0.0.1 - - [27/Jul/2025 22:51:44] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:51:45,732 [INFO] 127.0.0.1 - - [27/Jul/2025 22:51:45] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 22:51:45,767 [INFO] 127.0.0.1 - - [27/Jul/2025 22:51:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 22:51:58,342 [INFO] 127.0.0.1 - - [27/Jul/2025 22:51:58] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 22:51:58,367 [INFO] 127.0.0.1 - - [27/Jul/2025 22:51:58] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:51:58,370 [INFO] 127.0.0.1 - - [27/Jul/2025 22:51:58] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 22:51:58,371 [INFO] 127.0.0.1 - - [27/Jul/2025 22:51:58] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:52:02,742 [INFO] 127.0.0.1 - - [27/Jul/2025 22:52:02] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 22:52:02,754 [INFO] 127.0.0.1 - - [27/Jul/2025 22:52:02] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:52:26,305 [INFO] 127.0.0.1 - - [27/Jul/2025 22:52:26] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 22:52:26,324 [INFO] 127.0.0.1 - - [27/Jul/2025 22:52:26] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:52:26,325 [INFO] 127.0.0.1 - - [27/Jul/2025 22:52:26] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:52:26,334 [INFO] 127.0.0.1 - - [27/Jul/2025 22:52:26] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 22:52:30,390 [INFO] 127.0.0.1 - - [27/Jul/2025 22:52:30] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 22:52:30,449 [INFO] 127.0.0.1 - - [27/Jul/2025 22:52:30] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:52:40,272 [INFO] 127.0.0.1 - - [27/Jul/2025 22:52:40] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 22:52:40,293 [INFO] 127.0.0.1 - - [27/Jul/2025 22:52:40] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:52:42,009 [INFO] 127.0.0.1 - - [27/Jul/2025 22:52:42] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 22:52:42,032 [INFO] 127.0.0.1 - - [27/Jul/2025 22:52:42] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:52:42,034 [INFO] 127.0.0.1 - - [27/Jul/2025 22:52:42] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:52:42,036 [INFO] 127.0.0.1 - - [27/Jul/2025 22:52:42] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 22:53:03,540 [INFO] 127.0.0.1 - - [27/Jul/2025 22:53:03] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 22:53:03,580 [INFO] 127.0.0.1 - - [27/Jul/2025 22:53:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 22:53:48,193 [INFO] 127.0.0.1 - - [27/Jul/2025 22:53:48] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 22:53:48,217 [INFO] 127.0.0.1 - - [27/Jul/2025 22:53:48] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:53:49,456 [INFO] 127.0.0.1 - - [27/Jul/2025 22:53:49] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 22:53:49,484 [INFO] 127.0.0.1 - - [27/Jul/2025 22:53:49] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:53:49,485 [INFO] 127.0.0.1 - - [27/Jul/2025 22:53:49] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:53:49,492 [INFO] 127.0.0.1 - - [27/Jul/2025 22:53:49] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 22:54:03,073 [INFO] 127.0.0.1 - - [27/Jul/2025 22:54:03] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 22:54:03,093 [INFO] 127.0.0.1 - - [27/Jul/2025 22:54:03] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:54:03,093 [INFO] 127.0.0.1 - - [27/Jul/2025 22:54:03] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:54:03,095 [INFO] 127.0.0.1 - - [27/Jul/2025 22:54:03] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 22:54:04,946 [INFO] 127.0.0.1 - - [27/Jul/2025 22:54:04] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 22:54:04,965 [INFO] 127.0.0.1 - - [27/Jul/2025 22:54:04] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:54:06,442 [INFO] 127.0.0.1 - - [27/Jul/2025 22:54:06] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 22:54:06,461 [INFO] 127.0.0.1 - - [27/Jul/2025 22:54:06] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:54:06,463 [INFO] 127.0.0.1 - - [27/Jul/2025 22:54:06] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 22:54:06,469 [INFO] 127.0.0.1 - - [27/Jul/2025 22:54:06] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 22:56:38,403 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 22:56:38,502 [INFO]  * Restarting with stat
+2025-07-27 22:56:40,946 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 22:56:41,017 [INFO]  * Restarting with stat
+2025-07-27 22:57:36,875 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 22:57:36,967 [INFO]  * Restarting with stat
+2025-07-27 22:58:42,862 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 22:58:42,956 [INFO]  * Restarting with stat
+2025-07-27 22:58:45,409 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 22:58:45,479 [INFO]  * Restarting with stat
+2025-07-27 22:59:20,160 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 22:59:20,255 [INFO]  * Restarting with stat
+2025-07-27 22:59:22,615 [INFO]  * Restarting with stat
+2025-07-27 22:59:25,054 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 22:59:25,125 [INFO]  * Restarting with stat
+2025-07-27 22:59:36,624 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 22:59:36,715 [INFO]  * Restarting with stat
+2025-07-27 22:59:38,147 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 22:59:38,214 [INFO]  * Restarting with stat
+2025-07-27 22:59:49,714 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 22:59:49,803 [INFO]  * Restarting with stat
+2025-07-27 23:00:18,899 [INFO] 127.0.0.1 - - [27/Jul/2025 23:00:18] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-07-27 23:00:18,903 [INFO] 127.0.0.1 - - [27/Jul/2025 23:00:18] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-27 23:00:18,918 [INFO] 127.0.0.1 - - [27/Jul/2025 23:00:18] "GET /login HTTP/1.1" 200 -
+2025-07-27 23:00:18,946 [INFO] 127.0.0.1 - - [27/Jul/2025 23:00:18] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:00:27,348 [INFO] 127.0.0.1 - - [27/Jul/2025 23:00:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-07-27 23:00:27,354 [INFO] 127.0.0.1 - - [27/Jul/2025 23:00:27] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-27 23:00:27,375 [INFO] 127.0.0.1 - - [27/Jul/2025 23:00:27] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:00:27,411 [INFO] 127.0.0.1 - - [27/Jul/2025 23:00:27] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:00:27,412 [INFO] 127.0.0.1 - - [27/Jul/2025 23:00:27] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:00:27,412 [INFO] 127.0.0.1 - - [27/Jul/2025 23:00:27] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 23:01:41,057 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 23:01:41,179 [INFO]  * Restarting with stat
+2025-07-27 23:01:42,611 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 23:01:42,679 [INFO]  * Restarting with stat
+2025-07-27 23:01:44,113 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 23:01:44,181 [INFO]  * Restarting with stat
+2025-07-27 23:01:54,669 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 23:01:54,770 [INFO]  * Restarting with stat
+2025-07-27 23:01:56,213 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 23:01:56,285 [INFO]  * Restarting with stat
+2025-07-27 23:01:58,713 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 23:01:58,781 [INFO]  * Restarting with stat
+2025-07-27 23:02:02,217 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 23:02:02,297 [INFO]  * Restarting with stat
+2025-07-27 23:02:57,129 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:02:57,227 [INFO]  * Restarting with stat
+2025-07-27 23:02:59,671 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:02:59,740 [INFO]  * Restarting with stat
+2025-07-27 23:03:59,989 [INFO] 127.0.0.1 - - [27/Jul/2025 23:03:59] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:04:00,017 [INFO] 127.0.0.1 - - [27/Jul/2025 23:04:00] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:04:05,146 [INFO] 127.0.0.1 - - [27/Jul/2025 23:04:05] "[33mPOST /request_response HTTP/1.1[0m" 404 -
+2025-07-27 23:04:07,416 [INFO] 127.0.0.1 - - [27/Jul/2025 23:04:07] "[33mPOST /request_response HTTP/1.1[0m" 404 -
+2025-07-27 23:04:08,937 [INFO] 127.0.0.1 - - [27/Jul/2025 23:04:08] "[33mPOST /request_response HTTP/1.1[0m" 404 -
+2025-07-27 23:04:30,676 [INFO] 127.0.0.1 - - [27/Jul/2025 23:04:30] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:04:30,730 [INFO] 127.0.0.1 - - [27/Jul/2025 23:04:30] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:05:19,248 [INFO] 127.0.0.1 - - [27/Jul/2025 23:05:19] "GET / HTTP/1.1" 200 -
+2025-07-27 23:05:19,288 [INFO] 127.0.0.1 - - [27/Jul/2025 23:05:19] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:05:25,438 [INFO] 127.0.0.1 - - [27/Jul/2025 23:05:25] "GET / HTTP/1.1" 200 -
+2025-07-27 23:05:25,475 [INFO] 127.0.0.1 - - [27/Jul/2025 23:05:25] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:05:47,409 [INFO] 127.0.0.1 - - [27/Jul/2025 23:05:47] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:05:47,457 [INFO] 127.0.0.1 - - [27/Jul/2025 23:05:47] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:05:51,984 [INFO] 127.0.0.1 - - [27/Jul/2025 23:05:51] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:05:52,001 [INFO] 127.0.0.1 - - [27/Jul/2025 23:05:52] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:05:57,319 [ERROR] Exception on /perfil [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 507, in perfil
+    revisar_nuevas_notificaciones(usuario_id)
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 169, in revisar_nuevas_notificaciones
+    session['nueva_notificacion'] = nueva_notificacion.estado
+AttributeError: 'NoneType' object has no attribute 'estado'
+2025-07-27 23:05:57,321 [INFO] 127.0.0.1 - - [27/Jul/2025 23:05:57] "[35m[1mGET /perfil HTTP/1.1[0m" 500 -
+2025-07-27 23:05:57,349 [INFO] 127.0.0.1 - - [27/Jul/2025 23:05:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:06:11,094 [ERROR] Exception on /records [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 463, in records
+    revisar_nuevas_notificaciones(usuario_id)
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 169, in revisar_nuevas_notificaciones
+    session['nueva_notificacion'] = nueva_notificacion.estado
+AttributeError: 'NoneType' object has no attribute 'estado'
+2025-07-27 23:06:11,095 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:11] "[35m[1mGET /records HTTP/1.1[0m" 500 -
+2025-07-27 23:06:16,506 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:16] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-07-27 23:06:16,513 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:16] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-27 23:06:16,520 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:16] "GET /login HTTP/1.1" 200 -
+2025-07-27 23:06:16,543 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:16] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:22,946 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-07-27 23:06:22,952 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:22] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-27 23:06:22,968 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:22] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:06:22,989 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:22] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:22,989 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:22] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:22,992 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:22] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:24,948 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:24] "GET /records HTTP/1.1" 200 -
+2025-07-27 23:06:24,968 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:24] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:25,537 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:25] "GET /add_time HTTP/1.1" 200 -
+2025-07-27 23:06:25,558 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:25] "[36mGET /static/logo_study.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:25,559 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:25] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-27 23:06:26,295 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:26] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-27 23:06:26,305 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:26] "GET /use_time HTTP/1.1" 200 -
+2025-07-27 23:06:26,323 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:26] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:06:26,325 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:26] "[36mGET /static/logo_play.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:26,334 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:26] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-27 23:06:26,389 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:26] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-27 23:06:27,271 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:27] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:06:27,288 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:27] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:33,052 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:33] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:06:33,074 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:33] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:33,075 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:33] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:33,084 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:33] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:35,162 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:35] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:06:35,188 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:06:37,252 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:37] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:06:37,266 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:37] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:37,267 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:37] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:37,275 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:37] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:39,625 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:39] "GET /records HTTP/1.1" 200 -
+2025-07-27 23:06:39,651 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:39] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:40,351 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:40] "GET /add_time HTTP/1.1" 200 -
+2025-07-27 23:06:40,374 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:40] "[36mGET /static/logo_study.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:40,375 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:40] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-27 23:06:41,135 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:41] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-27 23:06:41,137 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:41] "GET /use_time HTTP/1.1" 200 -
+2025-07-27 23:06:41,150 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:41] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:06:41,159 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:41] "[36mGET /static/logo_play.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:41,161 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:41] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-27 23:06:41,185 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:41] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-27 23:06:41,801 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:41] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:06:41,821 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:41] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:06:45,956 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:45] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:06:45,971 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:45] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:06:45,990 [INFO] 127.0.0.1 - - [27/Jul/2025 23:06:45] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:07:38,532 [INFO] 127.0.0.1 - - [27/Jul/2025 23:07:38] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:07:38,582 [INFO] 127.0.0.1 - - [27/Jul/2025 23:07:38] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:07:42,261 [INFO] 127.0.0.1 - - [27/Jul/2025 23:07:42] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:07:42,283 [INFO] 127.0.0.1 - - [27/Jul/2025 23:07:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:08:04,857 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:04] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:08:04,888 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:04] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:08:04,892 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:04] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:08:04,893 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:04] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 23:08:10,981 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:10] "GET /records HTTP/1.1" 200 -
+2025-07-27 23:08:11,001 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:11] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:08:12,188 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:12] "GET /add_time HTTP/1.1" 200 -
+2025-07-27 23:08:12,209 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:12] "[36mGET /static/logo_study.png HTTP/1.1[0m" 304 -
+2025-07-27 23:08:12,210 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:12] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-27 23:08:13,091 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:13] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-27 23:08:13,094 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:13] "GET /use_time HTTP/1.1" 200 -
+2025-07-27 23:08:13,104 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:13] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:08:13,120 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:13] "[36mGET /static/logo_play.png HTTP/1.1[0m" 304 -
+2025-07-27 23:08:13,123 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:13] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-27 23:08:13,168 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:13] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-27 23:08:14,185 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:14] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:08:14,209 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:14] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:08:14,211 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:14] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:08:14,213 [INFO] 127.0.0.1 - - [27/Jul/2025 23:08:14] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 23:09:40,217 [INFO] 127.0.0.1 - - [27/Jul/2025 23:09:40] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:09:40,271 [INFO] 127.0.0.1 - - [27/Jul/2025 23:09:40] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:09:46,894 [INFO] 127.0.0.1 - - [27/Jul/2025 23:09:46] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:09:46,933 [INFO] 127.0.0.1 - - [27/Jul/2025 23:09:46] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:10:56,465 [INFO] 127.0.0.1 - - [27/Jul/2025 23:10:56] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:10:56,478 [INFO] 127.0.0.1 - - [27/Jul/2025 23:10:56] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:11:07,661 [INFO] 127.0.0.1 - - [27/Jul/2025 23:11:07] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:11:07,676 [INFO] 127.0.0.1 - - [27/Jul/2025 23:11:07] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:11:07,692 [INFO] 127.0.0.1 - - [27/Jul/2025 23:11:07] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:11:36,764 [INFO] 127.0.0.1 - - [27/Jul/2025 23:11:36] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:12:02,099 [INFO] 127.0.0.1 - - [27/Jul/2025 23:12:02] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:12:02,125 [INFO] 127.0.0.1 - - [27/Jul/2025 23:12:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:12:05,248 [INFO] 127.0.0.1 - - [27/Jul/2025 23:12:05] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:12:05,264 [INFO] 127.0.0.1 - - [27/Jul/2025 23:12:05] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:12:08,030 [INFO] 127.0.0.1 - - [27/Jul/2025 23:12:08] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:12:08,045 [INFO] 127.0.0.1 - - [27/Jul/2025 23:12:08] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:12:08,068 [INFO] 127.0.0.1 - - [27/Jul/2025 23:12:08] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:14:20,347 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:14:20,465 [INFO]  * Restarting with stat
+2025-07-27 23:14:21,915 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:14:21,984 [INFO]  * Restarting with stat
+2025-07-27 23:14:23,352 [INFO]  * Restarting with stat
+2025-07-27 23:14:24,727 [INFO]  * Restarting with stat
+2025-07-27 23:14:26,089 [INFO]  * Restarting with stat
+2025-07-27 23:14:33,512 [INFO]  * Restarting with stat
+2025-07-27 23:14:48,995 [INFO]  * Restarting with stat
+2025-07-27 23:14:50,440 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:14:50,516 [INFO]  * Restarting with stat
+2025-07-27 23:14:52,966 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:14:53,036 [INFO]  * Restarting with stat
+2025-07-27 23:15:11,674 [INFO] 127.0.0.1 - - [27/Jul/2025 23:15:11] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:15:11,733 [INFO] 127.0.0.1 - - [27/Jul/2025 23:15:11] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:15:13,029 [INFO] 127.0.0.1 - - [27/Jul/2025 23:15:13] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:15:13,058 [INFO] 127.0.0.1 - - [27/Jul/2025 23:15:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:15:15,771 [INFO] 127.0.0.1 - - [27/Jul/2025 23:15:15] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:15:15,795 [INFO] 127.0.0.1 - - [27/Jul/2025 23:15:15] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:15:15,797 [INFO] 127.0.0.1 - - [27/Jul/2025 23:15:15] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:15:15,798 [INFO] 127.0.0.1 - - [27/Jul/2025 23:15:15] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 23:15:17,087 [INFO] 127.0.0.1 - - [27/Jul/2025 23:15:17] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:15:17,110 [INFO] 127.0.0.1 - - [27/Jul/2025 23:15:17] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:15:25,451 [INFO] 127.0.0.1 - - [27/Jul/2025 23:15:25] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:15:25,470 [INFO] 127.0.0.1 - - [27/Jul/2025 23:15:25] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:15:25,492 [INFO] 127.0.0.1 - - [27/Jul/2025 23:15:25] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:15:39,333 [INFO] 127.0.0.1 - - [27/Jul/2025 23:15:39] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:15:39,358 [INFO] 127.0.0.1 - - [27/Jul/2025 23:15:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:16:29,045 [INFO] 127.0.0.1 - - [27/Jul/2025 23:16:29] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:16:29,062 [INFO] 127.0.0.1 - - [27/Jul/2025 23:16:29] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:16:30,749 [INFO] 127.0.0.1 - - [27/Jul/2025 23:16:30] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:16:30,764 [INFO] 127.0.0.1 - - [27/Jul/2025 23:16:30] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:16:30,779 [INFO] 127.0.0.1 - - [27/Jul/2025 23:16:30] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:18:34,150 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:18:34,257 [INFO]  * Restarting with stat
+2025-07-27 23:18:36,622 [INFO]  * Restarting with stat
+2025-07-27 23:18:39,060 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:18:39,128 [INFO]  * Restarting with stat
+2025-07-27 23:18:43,573 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:18:43,673 [INFO]  * Restarting with stat
+2025-07-27 23:18:49,145 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:18:49,240 [INFO]  * Restarting with stat
+2025-07-27 23:18:51,628 [INFO]  * Restarting with stat
+2025-07-27 23:18:55,076 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:18:55,154 [INFO]  * Restarting with stat
+2025-07-27 23:18:58,605 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:18:58,676 [INFO]  * Restarting with stat
+2025-07-27 23:19:11,216 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:19:11,306 [INFO]  * Restarting with stat
+2025-07-27 23:19:28,330 [INFO] 127.0.0.1 - - [27/Jul/2025 23:19:28] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:19:28,384 [INFO] 127.0.0.1 - - [27/Jul/2025 23:19:28] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:19:29,547 [INFO] 127.0.0.1 - - [27/Jul/2025 23:19:29] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:19:29,584 [INFO] 127.0.0.1 - - [27/Jul/2025 23:19:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:19:31,758 [INFO] 127.0.0.1 - - [27/Jul/2025 23:19:31] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:19:31,774 [INFO] 127.0.0.1 - - [27/Jul/2025 23:19:31] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:19:35,156 [ERROR] Exception on /request_response [POST]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 15, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 139, in request_response
+    .order_by(id)
+  File "<string>", line 2, in order_by
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/base.py", line 279, in _generative
+    x = fn(self, *args, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2035, in order_by
+    criterion = tuple(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2036, in <genexpr>
+    coercions.expect(roles.OrderByRole, clause)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 634, in _literal_coercion
+    self._raise_for_expected(element, argname)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: ORDER BY expression expected, got <built-in function id>.
+2025-07-27 23:19:35,159 [INFO] 127.0.0.1 - - [27/Jul/2025 23:19:35] "[35m[1mPOST /request_response HTTP/1.1[0m" 500 -
+2025-07-27 23:19:46,117 [ERROR] Exception on /request_response [POST]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 15, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 139, in request_response
+    .order_by(id)
+  File "<string>", line 2, in order_by
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/base.py", line 279, in _generative
+    x = fn(self, *args, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2035, in order_by
+    criterion = tuple(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2036, in <genexpr>
+    coercions.expect(roles.OrderByRole, clause)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 634, in _literal_coercion
+    self._raise_for_expected(element, argname)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: ORDER BY expression expected, got <built-in function id>.
+2025-07-27 23:19:46,118 [INFO] 127.0.0.1 - - [27/Jul/2025 23:19:46] "[35m[1mPOST /request_response HTTP/1.1[0m" 500 -
+2025-07-27 23:19:53,798 [ERROR] Exception on /request_response [POST]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 15, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 139, in request_response
+    .order_by(id)
+  File "<string>", line 2, in order_by
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/base.py", line 279, in _generative
+    x = fn(self, *args, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2035, in order_by
+    criterion = tuple(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2036, in <genexpr>
+    coercions.expect(roles.OrderByRole, clause)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 634, in _literal_coercion
+    self._raise_for_expected(element, argname)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: ORDER BY expression expected, got <built-in function id>.
+2025-07-27 23:19:53,799 [INFO] 127.0.0.1 - - [27/Jul/2025 23:19:53] "[35m[1mPOST /request_response HTTP/1.1[0m" 500 -
+2025-07-27 23:20:09,163 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:20:09,268 [INFO]  * Restarting with stat
+2025-07-27 23:20:11,590 [ERROR] Exception on /request_response [POST]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py", line 15, in wrapped
+    return f(*args, **kwargs)
+  File "/home/david/Dropbox/dev/studytoplay/app/routes.py", line 139, in request_response
+    .order_by(id)
+  File "<string>", line 2, in order_by
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/base.py", line 279, in _generative
+    x = fn(self, *args, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2035, in order_by
+    criterion = tuple(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2036, in <genexpr>
+    coercions.expect(roles.OrderByRole, clause)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 634, in _literal_coercion
+    self._raise_for_expected(element, argname)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: ORDER BY expression expected, got <built-in function id>.
+2025-07-27 23:20:11,592 [INFO] 127.0.0.1 - - [27/Jul/2025 23:20:11] "[35m[1mPOST /request_response HTTP/1.1[0m" 500 -
+2025-07-27 23:21:08,143 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:21:08,238 [INFO]  * Restarting with stat
+2025-07-27 23:21:10,267 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:10] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:21:10,293 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:10] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:21:10,315 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:10] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:21:17,927 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:17] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:21:17,972 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:17] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:21:18,868 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:18] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:21:18,901 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:21:25,124 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:25] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:21:25,145 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:25] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:21:32,236 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:32] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:21:32,251 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:32] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:21:32,268 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:32] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:21:46,030 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:46] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:21:46,082 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:46] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:21:46,995 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:46] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:21:49,141 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:49] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:21:49,183 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:49] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:21:59,074 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:59] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:21:59,106 [INFO] 127.0.0.1 - - [27/Jul/2025 23:21:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:22:01,543 [INFO] 127.0.0.1 - - [27/Jul/2025 23:22:01] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:22:01,568 [INFO] 127.0.0.1 - - [27/Jul/2025 23:22:01] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:22:09,311 [INFO] 127.0.0.1 - - [27/Jul/2025 23:22:09] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:22:09,326 [INFO] 127.0.0.1 - - [27/Jul/2025 23:22:09] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:22:09,338 [INFO] 127.0.0.1 - - [27/Jul/2025 23:22:09] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:24:07,516 [INFO] 127.0.0.1 - - [27/Jul/2025 23:24:07] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:24:07,583 [INFO] 127.0.0.1 - - [27/Jul/2025 23:24:07] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:24:08,422 [INFO] 127.0.0.1 - - [27/Jul/2025 23:24:08] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:24:08,452 [INFO] 127.0.0.1 - - [27/Jul/2025 23:24:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:24:14,612 [INFO] 127.0.0.1 - - [27/Jul/2025 23:24:14] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:24:14,633 [INFO] 127.0.0.1 - - [27/Jul/2025 23:24:14] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:24:18,350 [INFO] 127.0.0.1 - - [27/Jul/2025 23:24:18] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:24:18,366 [INFO] 127.0.0.1 - - [27/Jul/2025 23:24:18] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:24:18,387 [INFO] 127.0.0.1 - - [27/Jul/2025 23:24:18] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:26:37,248 [INFO] 127.0.0.1 - - [27/Jul/2025 23:26:37] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:26:37,267 [INFO] 127.0.0.1 - - [27/Jul/2025 23:26:37] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:26:37,270 [INFO] 127.0.0.1 - - [27/Jul/2025 23:26:37] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:26:37,271 [INFO] 127.0.0.1 - - [27/Jul/2025 23:26:37] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 23:26:58,049 [INFO] 127.0.0.1 - - [27/Jul/2025 23:26:58] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:26:58,104 [INFO] 127.0.0.1 - - [27/Jul/2025 23:26:58] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:26:59,531 [INFO] 127.0.0.1 - - [27/Jul/2025 23:26:59] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:26:59,558 [INFO] 127.0.0.1 - - [27/Jul/2025 23:26:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:27:02,101 [INFO] 127.0.0.1 - - [27/Jul/2025 23:27:02] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:27:02,127 [INFO] 127.0.0.1 - - [27/Jul/2025 23:27:02] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:27:09,467 [INFO] 127.0.0.1 - - [27/Jul/2025 23:27:09] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:27:09,482 [INFO] 127.0.0.1 - - [27/Jul/2025 23:27:09] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:27:09,503 [INFO] 127.0.0.1 - - [27/Jul/2025 23:27:09] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:27:39,390 [INFO] 127.0.0.1 - - [27/Jul/2025 23:27:39] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:27:39,434 [INFO] 127.0.0.1 - - [27/Jul/2025 23:27:39] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:27:41,830 [INFO] 127.0.0.1 - - [27/Jul/2025 23:27:41] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:27:41,861 [INFO] 127.0.0.1 - - [27/Jul/2025 23:27:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:27:48,274 [INFO] 127.0.0.1 - - [27/Jul/2025 23:27:48] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:27:48,291 [INFO] 127.0.0.1 - - [27/Jul/2025 23:27:48] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:27:52,549 [INFO] 127.0.0.1 - - [27/Jul/2025 23:27:52] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:27:52,564 [INFO] 127.0.0.1 - - [27/Jul/2025 23:27:52] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:27:52,584 [INFO] 127.0.0.1 - - [27/Jul/2025 23:27:52] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:28:04,113 [INFO] 127.0.0.1 - - [27/Jul/2025 23:28:04] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:28:04,167 [INFO] 127.0.0.1 - - [27/Jul/2025 23:28:04] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:28:05,638 [INFO] 127.0.0.1 - - [27/Jul/2025 23:28:05] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:28:05,665 [INFO] 127.0.0.1 - - [27/Jul/2025 23:28:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:28:09,215 [INFO] 127.0.0.1 - - [27/Jul/2025 23:28:09] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:28:09,232 [INFO] 127.0.0.1 - - [27/Jul/2025 23:28:09] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:28:10,669 [INFO] 127.0.0.1 - - [27/Jul/2025 23:28:10] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:28:10,685 [INFO] 127.0.0.1 - - [27/Jul/2025 23:28:10] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:28:10,703 [INFO] 127.0.0.1 - - [27/Jul/2025 23:28:10] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:28:57,225 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:28:57,329 [INFO]  * Restarting with stat
+2025-07-27 23:28:58,767 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:28:58,834 [INFO]  * Restarting with stat
+2025-07-27 23:29:12,043 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:12] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:29:12,088 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:12] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:29:13,033 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:13] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:29:13,062 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:29:14,505 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:14] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:29:14,526 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:14] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:29:16,957 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:16] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:29:16,972 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:16] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:29:16,986 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:16] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:29:20,648 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:20] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:29:20,692 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:20] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:29:21,393 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:21] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:29:21,421 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:29:22,612 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:22] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:29:22,631 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:22] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:29:26,163 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:26] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:29:26,178 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:26] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:29:26,198 [INFO] 127.0.0.1 - - [27/Jul/2025 23:29:26] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:29:53,671 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:29:53,768 [INFO]  * Restarting with stat
+2025-07-27 23:29:55,121 [INFO]  * Restarting with stat
+2025-07-27 23:29:59,533 [INFO]  * Restarting with stat
+2025-07-27 23:30:00,902 [INFO]  * Restarting with stat
+2025-07-27 23:30:05,366 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:30:05,459 [INFO]  * Restarting with stat
+2025-07-27 23:30:16,415 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:16] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:30:16,480 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:16] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:30:17,205 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:17] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:30:17,237 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:30:21,021 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:21] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:30:21,034 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:21] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:30:21,842 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:21] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:30:21,857 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:21] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:30:21,877 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:21] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:30:24,252 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:24] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:30:24,293 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:24] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:30:25,256 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:25] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:30:25,290 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:30:26,358 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:26] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:30:26,381 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:26] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:30:28,919 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:28] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:30:28,934 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:28] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:30:28,948 [INFO] 127.0.0.1 - - [27/Jul/2025 23:30:28] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:31:16,413 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-27 23:31:16,517 [INFO]  * Restarting with stat
+2025-07-27 23:31:33,417 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:33] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:31:33,479 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:33] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:31:34,460 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:34] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:31:34,493 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:31:40,353 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:40] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:31:40,369 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:40] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:31:41,460 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:41] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:31:41,477 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:41] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:31:41,496 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:41] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:31:44,173 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:44] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:31:44,222 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:44] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:31:44,901 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:44] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:31:44,928 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:31:45,995 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:45] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:31:46,018 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:46] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:31:46,843 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:46] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:31:46,858 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:46] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:31:46,878 [INFO] 127.0.0.1 - - [27/Jul/2025 23:31:46] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:32:24,725 [INFO] 127.0.0.1 - - [27/Jul/2025 23:32:24] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:32:24,757 [INFO] 127.0.0.1 - - [27/Jul/2025 23:32:24] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:32:25,433 [INFO] 127.0.0.1 - - [27/Jul/2025 23:32:25] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:32:25,464 [INFO] 127.0.0.1 - - [27/Jul/2025 23:32:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:32:29,057 [INFO] 127.0.0.1 - - [27/Jul/2025 23:32:29] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:32:29,100 [INFO] 127.0.0.1 - - [27/Jul/2025 23:32:29] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:32:29,967 [INFO] 127.0.0.1 - - [27/Jul/2025 23:32:29] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:32:31,996 [INFO] 127.0.0.1 - - [27/Jul/2025 23:32:31] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:32:32,041 [INFO] 127.0.0.1 - - [27/Jul/2025 23:32:32] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:32:35,019 [INFO] 127.0.0.1 - - [27/Jul/2025 23:32:35] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:32:35,038 [INFO] 127.0.0.1 - - [27/Jul/2025 23:32:35] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:32:36,068 [INFO] 127.0.0.1 - - [27/Jul/2025 23:32:36] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:32:36,084 [INFO] 127.0.0.1 - - [27/Jul/2025 23:32:36] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:32:36,101 [INFO] 127.0.0.1 - - [27/Jul/2025 23:32:36] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:34:18,298 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 23:34:18,400 [INFO]  * Restarting with stat
+2025-07-27 23:34:39,922 [INFO] 127.0.0.1 - - [27/Jul/2025 23:34:39] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:34:39,959 [INFO] 127.0.0.1 - - [27/Jul/2025 23:34:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:34:41,016 [INFO] 127.0.0.1 - - [27/Jul/2025 23:34:41] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:34:41,039 [INFO] 127.0.0.1 - - [27/Jul/2025 23:34:41] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:34:45,433 [INFO] 127.0.0.1 - - [27/Jul/2025 23:34:45] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:34:45,449 [INFO] 127.0.0.1 - - [27/Jul/2025 23:34:45] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:34:45,472 [INFO] 127.0.0.1 - - [27/Jul/2025 23:34:45] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:35:30,091 [INFO] 127.0.0.1 - - [27/Jul/2025 23:35:30] "GET /link_request HTTP/1.1" 200 -
+2025-07-27 23:35:30,141 [INFO] 127.0.0.1 - - [27/Jul/2025 23:35:30] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:39:56,378 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-27 23:39:56,482 [INFO]  * Restarting with stat
+2025-07-27 23:40:02,890 [INFO]  * Restarting with stat
+2025-07-27 23:40:20,726 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:20] "POST /link_request HTTP/1.1" 200 -
+2025-07-27 23:40:20,764 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:40:22,257 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:22] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:40:22,286 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:22] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:40:22,287 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:22] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-27 23:40:22,287 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:22] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:40:24,832 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:24] "GET /records HTTP/1.1" 200 -
+2025-07-27 23:40:24,857 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:24] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:40:25,576 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:25] "GET /add_time HTTP/1.1" 200 -
+2025-07-27 23:40:25,597 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:25] "[36mGET /static/logo_study.png HTTP/1.1[0m" 304 -
+2025-07-27 23:40:25,598 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:25] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-27 23:40:26,431 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:26] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-27 23:40:26,441 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:26] "GET /use_time HTTP/1.1" 200 -
+2025-07-27 23:40:26,460 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:26] "GET /perfil HTTP/1.1" 200 -
+2025-07-27 23:40:26,461 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:26] "[36mGET /static/logo_play.png HTTP/1.1[0m" 304 -
+2025-07-27 23:40:26,470 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:26] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-27 23:40:26,520 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:26] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-27 23:40:27,845 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:27] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:40:27,863 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:27] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2025-07-27 23:40:36,437 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:36] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-07-27 23:40:36,452 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:36] "GET /notifications HTTP/1.1" 200 -
+2025-07-27 23:40:36,466 [INFO] 127.0.0.1 - - [27/Jul/2025 23:40:36] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -

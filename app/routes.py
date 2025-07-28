@@ -133,7 +133,8 @@ def register_routes(app):
         if not solicitud_id or response not in ('aceptada', 'rechazada'):
             return jsonify({'status': 'failed', 'error': 'Invalid params'}), 404
 
-        solicitud = SolicitudVinculacion.query.filter_by(id=solicitud_id, estudiante_id=estudiante_id).first()
+        solicitud = SolicitudVinculacion.query.filter_by(id=solicitud_id, estudiante_id=estudiante_id).order_by(desc(SolicitudVinculacion.fecha_solicitud)).first()
+        
 
         if not solicitud:
             return jsonify({'status': 'failed', 'error': 'Request not found'}), 404
@@ -147,6 +148,9 @@ def register_routes(app):
             )
             db.session.add(relacion)
         
+        else:
+            solicitud.estado = 'rechazada'
+
         notificacion = (
             Notificaciones.query
             .filter(
@@ -180,7 +184,6 @@ def register_routes(app):
             usuario_estudiante = request.form['email']
             
             estudiante_id = db.session.query(Usuario.id).filter_by(correo=usuario_estudiante).scalar()
-            printn(estudiante_id)
 
             if not estudiante_id:
                 return jsonify({'status': 'failed', 'error': f"No students were found with the username '{usuario_estudiante}'"})
@@ -213,8 +216,7 @@ def register_routes(app):
                 )
                 db.session.add(solicitud)
                 db.session.commit()
-                printn(supervisor_id)
-                printn(estudiante_id)
+
                 enviar_notificacion_link_request(supervisor_id, estudiante_id)
 
 
@@ -431,6 +433,14 @@ def register_routes(app):
                     session["supervisor_id"] = usuario_id
 
                 session.permanent = True
+
+                nueva_notificacion = NuevaNotificacion.query.filter_by(usuario_id=usuario_id).first()
+
+                if not nueva_notificacion:
+                    entrada_default = NuevaNotificacion(usuario_id=usuario_id, estado=False)
+                    db.session.add(entrada_default)
+                    db.session.commit()
+
                 return redirect(url_for("home"))
             else:
                 return "Correo o contraseña incorrectos."
@@ -562,8 +572,7 @@ def register_routes(app):
         usuario_id = session.get('usuario_id')
         NuevaNotificacion.query.filter_by(usuario_id=usuario_id).update({ 'estado': False })
         db.session.commit()
-        revisar_nuevas_notificaciones(usuario_id)
-
+        
         query = (
             Notificaciones.query
             .filter_by(usuario_id=usuario_id)
