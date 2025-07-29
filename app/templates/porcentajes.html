@@ -1,20 +1,3 @@
-<style>
-  .progress-container {
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 20px;
-    margin-top: 5px;
-  }
-
-  .progress-bar {
-    height: 100%;
-    background-color: #fb7833;
-    transition: width 0.5s ease-in-out;
-  }
-</style>
-
 {% for key, value in porcentajes_asignaturas.items() %}
 <div class="mb-3">
     {{ key | capitalize }}: {{ value }}%

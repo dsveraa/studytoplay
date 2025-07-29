@@ -20,7 +20,7 @@
   
   <div class="align-items-start">
       <div class="d-flex mb-3">
-        <select class="mb-2" name="asignaturas" id="asignaturas" required>
+        <select class="select-dark mb-2" name="asignaturas" id="asignaturas" required>
           <option value="">Select a subject...</option>
           {% for asignatura in asignaturas %}
             <option value="{{ asignatura.id }}">{{ asignatura.nombre | capitalize }}</option>
