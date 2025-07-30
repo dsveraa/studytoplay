@@ -148,6 +148,7 @@ class Asignatura(db.Model):
     usuario_id = Column(Integer, ForeignKey('usuarios.id'))
 
     estudio = relationship('Estudio', back_populates='asignatura')
+    registro_nota = relationship('RegistroNotas', back_populates='asignatura')
   
 class Nivel(db.Model):
     __tablename__ = "niveles"
@@ -183,3 +184,16 @@ class Estrella(db.Model):
     id = Column(Integer, primary_key=True)
     usuario_id = Column(Integer, ForeignKey('usuarios.id'))
     cantidad = Column(Integer)
+
+class RegistroNotas(db.Model):
+    __tablename__ = 'registro_notas'
+
+    id = Column(Integer, primary_key=True)
+    usuario_id = Column(Integer, ForeignKey('usuarios.id'), nullable=False)
+    asignatura_id = Column(Integer, ForeignKey('asignaturas.id'), nullable=False)
+    tema = Column(String, nullable=False)
+    nota = Column(Float, nullable=False)
+    fecha = Column(DateTime, nullable=False)
+    estado = Column(Boolean, default=False, nullable=False)
+
+    asignatura = relationship('Asignatura', back_populates='registro_nota')

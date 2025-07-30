@@ -203,3 +203,7 @@ height: 100%;
 background-color: #fb7833;
 transition: width 0.5s ease-in-out;
 }
+
+.topic-input {
+    width: 100px;
+}

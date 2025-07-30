@@ -1,5 +1,6 @@
 from datetime import timedelta
-from app.models import Nivel, Trofeo, Premio, Usuario, Estrella, AcumulacionTiempo, Tiempo, NuevaNotificacion, Notificaciones, SolicitudVinculacion, SupervisorEstudiante
+from app.models import Nivel, Trofeo, Premio, Usuario, Estrella, AcumulacionTiempo, Tiempo, NuevaNotificacion, Notificaciones, SolicitudVinculacion, SupervisorEstudiante, Asignatura, RegistroNotas
+
 from .. import db
 from functools import wraps
 from flask import session, jsonify, url_for
@@ -207,8 +208,6 @@ def enviar_notificacion_link_request(sid, uid): # "nombre@email.com" solicita su
    
     notificacion_lr = Notificaciones(usuario_id=uid, notificacion=mensaje_html, leida=False)
     nueva_notificacion = NuevaNotificacion.query.filter_by(usuario_id=uid).first()
-    printn(uid)
-    printn(nueva_notificacion)
     nueva_notificacion.estado = True
     
     db.session.add(notificacion_lr)
@@ -226,3 +225,16 @@ The <b>{s_correo}</b> request has been declined.
     notificacion_respuesta = Notificaciones(usuario_id=uid, notificacion=mensaje_html)
     db.session.add(notificacion_respuesta)
     db.session.commit()
+
+def listar_asignaturas(id):
+    asignaturas_obj = Asignatura.query.filter_by(usuario_id=id).all()
+    return [
+        {
+            'id': asignatura.id, 
+            'nombre': asignatura.nombre
+        } 
+        for asignatura in asignaturas_obj
+    ]
+
+def listar_registro_notas(id):
+    return RegistroNotas.query.filter_by(usuario_id=id).order_by(desc(RegistroNotas.id)).all()

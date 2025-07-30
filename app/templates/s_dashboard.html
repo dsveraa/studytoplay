@@ -1,6 +1,6 @@
 {% extends 'base_supervisor.html' %}
 
-{% block title %}Login{% endblock %}
+{% block title %}Dashboard{% endblock %}
 
 {% block content %}
 <div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
@@ -14,7 +14,10 @@
             Status: {{ estudiante.estado | capitalize }}<br>
             Current time: {{ estudiante.tiempo | ms_to_hms }}
           </div>
-          <a href="{{ url_for('student_info', id=estudiante.id) }}" class="btn custom-btn-2">View</a>
+          <div class="d-flex gap-2">
+            <a href="{{ url_for('student_info', id=estudiante.id) }}" class="btn custom-btn-2">Records</a>
+            <a href="{{ url_for('grade_record', id=estudiante.id) }}" class="btn custom-btn-2">Best Grades</a>
+          </div>
         </div>
       {% endfor %}
     </div>

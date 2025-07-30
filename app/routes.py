@@ -5,8 +5,12 @@ from sqlalchemy import desc, and_
 from sqlalchemy.orm import aliased
 
 
-from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura, AcumulacionTiempo, Rol, SolicitudVinculacion, SupervisorEstudiante, EstadoUsuario, NuevaNotificacion, Notificaciones
-from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, mostrar_estrellas, mostrar_trofeos, porcentaje_tiempos, sumar_tiempos, mostrar_nivel, login_required, supervisor_required, revisar_nuevas_notificaciones, enviar_notificacion_link_request, enviar_notificacion_respuesta_lr
+from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura, AcumulacionTiempo, Rol, SolicitudVinculacion, SupervisorEstudiante, EstadoUsuario, NuevaNotificacion, Notificaciones, RegistroNotas
+
+from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, mostrar_estrellas, mostrar_trofeos, porcentaje_tiempos, sumar_tiempos, mostrar_nivel, login_required, supervisor_required, revisar_nuevas_notificaciones, enviar_notificacion_link_request, enviar_notificacion_respuesta_lr, listar_asignaturas, listar_registro_notas
+
+from app.utils.notifications import Notification
+
 from . import db
 
 
@@ -32,6 +36,7 @@ def register_routes(app):
         return str(datetime.timedelta(seconds=segundos))
     
     @app.route('/student_info/<id>', methods=['GET'])
+    @supervisor_required
     def student_info(id):
         supervisor_id = session.get('usuario_id')
         relation = SupervisorEstudiante.query.filter_by(supervisor_id=supervisor_id, estudiante_id=id).first()
@@ -585,3 +590,34 @@ def register_routes(app):
         )
 
         return render_template("notificaciones.html", notificaciones=query)
+    
+    @app.route('/grade_record/<id>', methods=['GET', 'POST'])
+    @supervisor_required
+    def grade_record(id):
+        if request.method == 'POST':
+            data = request.get_json()
+            
+            asignatura = data.get('asignatura')
+            tema = data.get('tema')
+            nota = data.get('nota')
+            fecha = data.get('fecha')
+
+            registro_notas = RegistroNotas(
+                usuario_id=id,
+                asignatura_id=asignatura,
+                tema=tema,
+                nota=nota,
+                fecha=fecha,
+                )
+            db.session.add(registro_notas)
+            db.session.commit()
+            
+            notification = Notification(id)
+            
+            asignatura_nombre = Asignatura.query.get(asignatura).nombre
+            notification.notify_grade(nota, asignatura_nombre, 'add')
+        
+        asignaturas = listar_asignaturas(id)
+        registro_notas = listar_registro_notas(id)
+
+        return render_template('s_grade_record.html', asignaturas=asignaturas, registro_notas=registro_notas)

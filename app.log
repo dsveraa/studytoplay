@@ -11084,3 +11084,1484 @@ TypeError: unsupported operand type(s) for //: 'NoneType' and 'int'
 2025-07-29 14:57:47,250 [INFO] 127.0.0.1 - - [29/Jul/2025 14:57:47] "GET /static/styles.css HTTP/1.1" 200 -
 2025-07-29 14:58:06,838 [INFO] 127.0.0.1 - - [29/Jul/2025 14:58:06] "GET /login HTTP/1.1" 200 -
 2025-07-29 14:58:06,896 [INFO] 127.0.0.1 - - [29/Jul/2025 14:58:06] "GET /static/styles.css HTTP/1.1" 200 -
+2025-07-29 17:47:28,695 [INFO] 127.0.0.1 - - [29/Jul/2025 17:47:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-07-29 17:47:28,703 [INFO] 127.0.0.1 - - [29/Jul/2025 17:47:28] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-29 17:47:28,717 [INFO] 127.0.0.1 - - [29/Jul/2025 17:47:28] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:47:28,803 [INFO] 127.0.0.1 - - [29/Jul/2025 17:47:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:47:28,804 [INFO] 127.0.0.1 - - [29/Jul/2025 17:47:28] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-29 17:47:28,805 [INFO] 127.0.0.1 - - [29/Jul/2025 17:47:28] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-29 17:49:39,884 [INFO] 127.0.0.1 - - [29/Jul/2025 17:49:39] "GET /records HTTP/1.1" 200 -
+2025-07-29 17:49:39,977 [INFO] 127.0.0.1 - - [29/Jul/2025 17:49:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:49:49,372 [INFO] 127.0.0.1 - - [29/Jul/2025 17:49:49] "GET /add_time HTTP/1.1" 200 -
+2025-07-29 17:49:49,436 [INFO] 127.0.0.1 - - [29/Jul/2025 17:49:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:49:49,440 [INFO] 127.0.0.1 - - [29/Jul/2025 17:49:49] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-29 17:49:49,513 [INFO] 127.0.0.1 - - [29/Jul/2025 17:49:49] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:50:01,581 [INFO] Click en: "Cancel", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:50:01,582 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:01] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-07-29 17:50:01,583 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:01] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:50:01,598 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:01] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-07-29 17:50:01,661 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:01] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:50:01,663 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:01] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-29 17:50:01,713 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:01] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:50:01,731 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:50:01,738 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:01] "GET /static/trofeo.png HTTP/1.1" 200 -
+2025-07-29 17:50:01,740 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:01] "GET /static/template_star.png HTTP/1.1" 200 -
+2025-07-29 17:50:03,314 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:03] "GET /records HTTP/1.1" 200 -
+2025-07-29 17:50:03,375 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:50:05,233 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:05] "GET /add_time HTTP/1.1" 200 -
+2025-07-29 17:50:05,308 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:50:05,316 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:05] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-29 17:50:05,380 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:05] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:50:21,611 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:21] "GET /records HTTP/1.1" 200 -
+2025-07-29 17:50:21,617 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:21] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-29 17:50:21,689 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:50:21,713 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:21] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:50:24,433 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:24] "GET /records/8 HTTP/1.1" 200 -
+2025-07-29 17:50:24,503 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:50:25,787 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:25] "GET /records/9 HTTP/1.1" 200 -
+2025-07-29 17:50:25,826 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:50:26,843 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:26] "GET /records/7 HTTP/1.1" 200 -
+2025-07-29 17:50:26,908 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:50:28,437 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:28] "GET /use_time HTTP/1.1" 200 -
+2025-07-29 17:50:28,499 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:50:28,502 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:28] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-29 17:50:28,558 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:28] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-29 17:50:30,697 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:30] "GET /notifications HTTP/1.1" 200 -
+2025-07-29 17:50:30,752 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:50:41,201 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:41] "GET /use_time HTTP/1.1" 200 -
+2025-07-29 17:50:41,253 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:50:41,256 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:41] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-29 17:50:41,307 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:41] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-29 17:50:44,526 [INFO] Click en: "Start countdown", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:50:44,526 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:44] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:50:44,530 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:44] "[32mPOST /switch_status/playing HTTP/1.1[0m" 308 -
+2025-07-29 17:50:44,541 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:44] "POST /switch_status/playing/ HTTP/1.1" 200 -
+2025-07-29 17:50:45,507 [INFO] Click en: "Stop", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:50:45,508 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:45] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:50:45,521 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:45] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-07-29 17:50:45,545 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:45] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-07-29 17:50:53,814 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:53] "POST /use_time HTTP/1.1" 200 -
+2025-07-29 17:50:53,862 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:53] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:50:53,910 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:50:53,917 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:53] "GET /static/trofeo.png HTTP/1.1" 200 -
+2025-07-29 17:50:53,919 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:53] "GET /static/template_star.png HTTP/1.1" 200 -
+2025-07-29 17:50:55,620 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:55] "GET /records HTTP/1.1" 200 -
+2025-07-29 17:50:55,683 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:50:56,374 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:56] "GET /use_time HTTP/1.1" 200 -
+2025-07-29 17:50:56,429 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:50:56,432 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:56] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-29 17:50:56,476 [INFO] 127.0.0.1 - - [29/Jul/2025 17:50:56] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-29 17:51:03,422 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:03] "GET /add_time HTTP/1.1" 200 -
+2025-07-29 17:51:03,503 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:51:03,507 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:03] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-29 17:51:03,567 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:03] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:51:05,062 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:51:05,064 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:05] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:51:05,066 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:05] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:51:05,067 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:05] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-07-29 17:51:05,084 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:05] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-07-29 17:51:11,310 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:51:11,311 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:11] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:51:11,312 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:11] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-07-29 17:51:11,322 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:11] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-07-29 17:51:12,326 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:12] "POST /add_time HTTP/1.1" 200 -
+2025-07-29 17:51:12,374 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:12] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:51:12,375 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:12] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-29 17:51:12,434 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:51:12,451 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:12] "GET /static/trofeo.png HTTP/1.1" 200 -
+2025-07-29 17:51:12,452 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:12] "GET /static/template_star.png HTTP/1.1" 200 -
+2025-07-29 17:51:12,476 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:12] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:51:14,030 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:14] "GET /use_time HTTP/1.1" 200 -
+2025-07-29 17:51:14,100 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:51:14,105 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:14] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-29 17:51:14,151 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:14] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-29 17:51:17,348 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:17] "GET /add_time HTTP/1.1" 200 -
+2025-07-29 17:51:17,418 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:51:17,419 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:17] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-29 17:51:17,482 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:17] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:51:19,311 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:19] "GET /records HTTP/1.1" 200 -
+2025-07-29 17:51:19,314 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:19] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-29 17:51:19,379 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:51:19,411 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:19] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:51:20,474 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:20] "GET /add_time HTTP/1.1" 200 -
+2025-07-29 17:51:20,537 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:51:20,543 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:20] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-29 17:51:20,606 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:20] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:51:27,704 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:51:27,704 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:27] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:51:27,705 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:27] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:51:27,710 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:27] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-07-29 17:51:27,723 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:27] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-07-29 17:51:30,827 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:51:30,828 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:30] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:51:30,830 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:30] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-07-29 17:51:30,841 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:30] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-07-29 17:51:31,840 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:31] "POST /add_time HTTP/1.1" 200 -
+2025-07-29 17:51:31,900 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:31] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:51:31,905 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:31] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-29 17:51:31,982 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:51:31,987 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:31] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:51:31,992 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:31] "GET /static/trofeo.png HTTP/1.1" 200 -
+2025-07-29 17:51:31,993 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:31] "GET /static/template_star.png HTTP/1.1" 200 -
+2025-07-29 17:51:32,733 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:32] "GET /use_time HTTP/1.1" 200 -
+2025-07-29 17:51:32,776 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:51:32,777 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:32] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-29 17:51:32,829 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:32] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-29 17:51:36,135 [INFO] Click en: "Start countdown", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:51:36,135 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:36] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:51:36,137 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:36] "[32mPOST /switch_status/playing HTTP/1.1[0m" 308 -
+2025-07-29 17:51:36,148 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:36] "POST /switch_status/playing/ HTTP/1.1" 200 -
+2025-07-29 17:51:43,012 [INFO] Click en: "Stop", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:51:43,012 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:43] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:51:43,024 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:43] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-07-29 17:51:43,058 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:43] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-07-29 17:51:44,864 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:44] "POST /use_time HTTP/1.1" 200 -
+2025-07-29 17:51:44,902 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:44] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:51:44,960 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:51:44,964 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:44] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-29 17:51:44,967 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:44] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-29 17:51:46,792 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:46] "GET /use_time HTTP/1.1" 200 -
+2025-07-29 17:51:46,861 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:51:46,863 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:46] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-29 17:51:46,907 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:46] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-29 17:51:59,586 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:59] "GET /add_time HTTP/1.1" 200 -
+2025-07-29 17:51:59,646 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:51:59,651 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:59] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-29 17:51:59,725 [INFO] 127.0.0.1 - - [29/Jul/2025 17:51:59] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:52:00,896 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:52:00,897 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:00] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:52:00,899 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:00] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:52:00,901 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:00] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-07-29 17:52:00,916 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:00] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-07-29 17:52:05,213 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:52:05,214 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:05] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-07-29 17:52:05,215 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:05] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:52:05,227 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:05] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-07-29 17:52:06,225 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:06] "POST /add_time HTTP/1.1" 200 -
+2025-07-29 17:52:06,286 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:06] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:52:06,294 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:06] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-29 17:52:06,369 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:52:06,385 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:06] "GET /static/trofeo.png HTTP/1.1" 200 -
+2025-07-29 17:52:06,386 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:06] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-29 17:52:06,401 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:06] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:52:07,829 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:07] "GET /use_time HTTP/1.1" 200 -
+2025-07-29 17:52:07,897 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:52:07,905 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:07] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-29 17:52:07,958 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:07] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-29 17:52:26,101 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:26] "GET /records HTTP/1.1" 200 -
+2025-07-29 17:52:26,186 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:52:27,900 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:27] "GET /add_time HTTP/1.1" 200 -
+2025-07-29 17:52:27,965 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:52:27,973 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:27] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-29 17:52:28,074 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:28] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:52:28,163 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:52:29,189 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:29] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-29 17:52:29,189 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:29] "GET /notifications HTTP/1.1" 200 -
+2025-07-29 17:52:29,258 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:52:29,263 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:29] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:52:29,919 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:29] "GET /use_time HTTP/1.1" 200 -
+2025-07-29 17:52:29,958 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:52:29,961 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:29] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-29 17:52:30,021 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:30] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-29 17:52:30,146 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:52:55,694 [INFO] Click en: "Start countdown", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:52:55,695 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:55] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:52:55,700 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:55] "[32mPOST /switch_status/playing HTTP/1.1[0m" 308 -
+2025-07-29 17:52:55,712 [INFO] 127.0.0.1 - - [29/Jul/2025 17:52:55] "POST /switch_status/playing/ HTTP/1.1" 200 -
+2025-07-29 17:53:08,348 [INFO] Click en: "Stop", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:53:08,349 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:08] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:53:08,362 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:08] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-07-29 17:53:08,388 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:08] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-07-29 17:53:10,891 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:10] "POST /use_time HTTP/1.1" 200 -
+2025-07-29 17:53:10,956 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:10] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:53:11,025 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:53:11,032 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:11] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-29 17:53:11,034 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:11] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-29 17:53:11,144 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:53:12,599 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:12] "GET /use_time HTTP/1.1" 200 -
+2025-07-29 17:53:12,668 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:53:12,676 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:12] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-29 17:53:12,714 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:12] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-29 17:53:23,928 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:23] "GET /add_time HTTP/1.1" 200 -
+2025-07-29 17:53:24,000 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:53:24,002 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:24] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-29 17:53:24,063 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:24] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:53:24,145 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:53:25,122 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:53:25,123 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:25] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:53:25,124 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:25] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:53:25,130 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:25] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-07-29 17:53:25,141 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:25] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-07-29 17:53:28,317 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:53:28,319 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:28] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:53:28,319 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:28] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-07-29 17:53:28,331 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:28] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-07-29 17:53:29,331 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:29] "POST /add_time HTTP/1.1" 200 -
+2025-07-29 17:53:29,378 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:29] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-29 17:53:29,381 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:29] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:53:29,408 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:29] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:53:29,440 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:53:29,450 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:29] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-29 17:53:29,450 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:29] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-29 17:53:30,648 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:30] "GET /use_time HTTP/1.1" 200 -
+2025-07-29 17:53:30,730 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:53:30,732 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:30] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-29 17:53:30,776 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:30] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-29 17:53:34,615 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:34] "GET /add_time HTTP/1.1" 200 -
+2025-07-29 17:53:34,681 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:53:34,683 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:34] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-29 17:53:34,795 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:34] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:53:35,885 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:53:35,885 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:35] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:53:35,887 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:35] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:53:35,889 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:35] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-07-29 17:53:35,903 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:35] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-07-29 17:53:42,903 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:53:42,905 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:42] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:53:42,905 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:42] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-07-29 17:53:42,919 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:42] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-07-29 17:53:43,912 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:43] "POST /add_time HTTP/1.1" 200 -
+2025-07-29 17:53:43,972 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:43] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-29 17:53:43,975 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:43] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:53:44,057 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:53:44,059 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:44] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:53:44,065 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:44] "GET /static/trofeo.png HTTP/1.1" 200 -
+2025-07-29 17:53:44,067 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:44] "GET /static/template_star.png HTTP/1.1" 200 -
+2025-07-29 17:53:44,209 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:53:45,065 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:45] "GET /use_time HTTP/1.1" 200 -
+2025-07-29 17:53:45,139 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:53:45,143 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:45] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-29 17:53:45,198 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:45] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-29 17:53:48,638 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:48] "GET /records HTTP/1.1" 200 -
+2025-07-29 17:53:48,685 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:53:49,302 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:49] "GET /add_time HTTP/1.1" 200 -
+2025-07-29 17:53:49,335 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:53:49,341 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:49] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-29 17:53:49,389 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:49] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:53:50,324 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:53:50,325 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:50] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:53:50,328 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:50] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:53:50,328 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:50] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-07-29 17:53:50,345 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:50] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-07-29 17:53:59,937 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-07-29 17:53:59,937 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:59] "POST /log_click HTTP/1.1" 200 -
+2025-07-29 17:53:59,940 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:59] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-07-29 17:53:59,954 [INFO] 127.0.0.1 - - [29/Jul/2025 17:53:59] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-07-29 17:54:00,946 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:00] "POST /add_time HTTP/1.1" 200 -
+2025-07-29 17:54:01,005 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:01] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-29 17:54:01,009 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:01] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:54:01,090 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:54:01,093 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:01] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:54:01,099 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:01] "GET /static/template_star.png HTTP/1.1" 200 -
+2025-07-29 17:54:01,100 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:01] "GET /static/trofeo.png HTTP/1.1" 200 -
+2025-07-29 17:54:02,716 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:02] "GET /use_time HTTP/1.1" 200 -
+2025-07-29 17:54:02,786 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:54:02,790 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:02] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-29 17:54:02,836 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:02] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-29 17:54:32,559 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:32] "GET /add_time HTTP/1.1" 200 -
+2025-07-29 17:54:32,624 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:54:32,627 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:32] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-29 17:54:32,682 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:32] "GET /get_time HTTP/1.1" 200 -
+2025-07-29 17:54:34,068 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:34] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-29 17:54:34,069 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:34] "GET /records HTTP/1.1" 200 -
+2025-07-29 17:54:34,147 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:54:34,153 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:34] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:54:37,388 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:37] "GET /edit_record/208 HTTP/1.1" 200 -
+2025-07-29 17:54:37,462 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:54:37,463 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:37] "GET /static/editRecord.js HTTP/1.1" 200 -
+2025-07-29 17:54:40,461 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:40] "[32mPOST /edit_record/208 HTTP/1.1[0m" 302 -
+2025-07-29 17:54:40,475 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:40] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:54:40,520 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:40] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:54:40,584 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:54:40,598 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:40] "GET /static/trofeo.png HTTP/1.1" 200 -
+2025-07-29 17:54:40,599 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:40] "GET /static/template_star.png HTTP/1.1" 200 -
+2025-07-29 17:54:42,137 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:42] "GET /records HTTP/1.1" 200 -
+2025-07-29 17:54:42,205 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:54:50,324 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:50] "GET /notifications HTTP/1.1" 200 -
+2025-07-29 17:54:50,416 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:54:51,490 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:51] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 17:54:51,565 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 17:54:51,584 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:51] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-29 17:54:51,585 [INFO] 127.0.0.1 - - [29/Jul/2025 17:54:51] "GET /static/trofeo.png HTTP/1.1" 200 -
+2025-07-29 18:09:41,563 [INFO] 127.0.0.1 - - [29/Jul/2025 18:09:41] "GET /notifications HTTP/1.1" 200 -
+2025-07-29 18:09:41,651 [INFO] 127.0.0.1 - - [29/Jul/2025 18:09:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 21:44:50,164 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-29 21:44:50,164 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-29 21:44:50,164 [INFO]  * Restarting with stat
+2025-07-29 21:44:50,587 [WARNING]  * Debugger is active!
+2025-07-29 21:44:50,587 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 21:45:16,375 [INFO] 127.0.0.1 - - [29/Jul/2025 21:45:16] "[35m[1mGET /grade_record HTTP/1.1[0m" 500 -
+2025-07-29 21:45:16,438 [INFO] 127.0.0.1 - - [29/Jul/2025 21:45:16] "GET /grade_record?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-29 21:45:16,438 [INFO] 127.0.0.1 - - [29/Jul/2025 21:45:16] "GET /grade_record?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-29 21:45:16,450 [INFO] 127.0.0.1 - - [29/Jul/2025 21:45:16] "GET /grade_record?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-29 21:45:16,459 [INFO] 127.0.0.1 - - [29/Jul/2025 21:45:16] "GET /grade_record?__debugger__=yes&cmd=resource&f=console.png&s=YXiprJY8tvSy6wQSKYuu HTTP/1.1" 200 -
+2025-07-29 21:46:04,820 [INFO] 127.0.0.1 - - [29/Jul/2025 21:46:04] "[35m[1mGET /grade_record HTTP/1.1[0m" 500 -
+2025-07-29 21:46:04,882 [INFO] 127.0.0.1 - - [29/Jul/2025 21:46:04] "[36mGET /grade_record?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-29 21:46:04,883 [INFO] 127.0.0.1 - - [29/Jul/2025 21:46:04] "[36mGET /grade_record?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-29 21:46:04,907 [INFO] 127.0.0.1 - - [29/Jul/2025 21:46:04] "[36mGET /grade_record?__debugger__=yes&cmd=resource&f=console.png&s=YXiprJY8tvSy6wQSKYuu HTTP/1.1[0m" 304 -
+2025-07-29 21:46:33,432 [INFO] 127.0.0.1 - - [29/Jul/2025 21:46:33] "GET /grade_record HTTP/1.1" 200 -
+2025-07-29 21:46:33,500 [INFO] 127.0.0.1 - - [29/Jul/2025 21:46:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 21:47:05,616 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 21:47:05,735 [INFO]  * Restarting with stat
+2025-07-29 21:47:06,187 [WARNING]  * Debugger is active!
+2025-07-29 21:47:06,188 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 21:47:07,201 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 21:47:07,271 [INFO]  * Restarting with stat
+2025-07-29 21:47:07,704 [WARNING]  * Debugger is active!
+2025-07-29 21:47:07,705 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 21:47:09,723 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 21:47:09,796 [INFO]  * Restarting with stat
+2025-07-29 21:47:10,217 [WARNING]  * Debugger is active!
+2025-07-29 21:47:10,218 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 21:47:21,303 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 21:47:21,392 [INFO]  * Restarting with stat
+2025-07-29 21:55:56,631 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-29 21:55:56,631 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-29 21:55:56,631 [INFO]  * Restarting with stat
+2025-07-29 21:55:57,063 [WARNING]  * Debugger is active!
+2025-07-29 21:55:57,063 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 21:56:05,013 [INFO] 127.0.0.1 - - [29/Jul/2025 21:56:05] "GET /perfil HTTP/1.1" 200 -
+2025-07-29 21:56:05,076 [INFO] 127.0.0.1 - - [29/Jul/2025 21:56:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 21:56:05,080 [INFO] 127.0.0.1 - - [29/Jul/2025 21:56:05] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-29 21:56:05,080 [INFO] 127.0.0.1 - - [29/Jul/2025 21:56:05] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-29 21:56:06,717 [INFO] 127.0.0.1 - - [29/Jul/2025 21:56:06] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-07-29 21:56:06,727 [INFO] 127.0.0.1 - - [29/Jul/2025 21:56:06] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-29 21:56:06,741 [INFO] 127.0.0.1 - - [29/Jul/2025 21:56:06] "GET /login HTTP/1.1" 200 -
+2025-07-29 21:56:06,804 [INFO] 127.0.0.1 - - [29/Jul/2025 21:56:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 21:56:17,487 [INFO] 127.0.0.1 - - [29/Jul/2025 21:56:17] "POST /login HTTP/1.1" 200 -
+2025-07-29 21:56:19,867 [INFO] 127.0.0.1 - - [29/Jul/2025 21:56:19] "GET /login HTTP/1.1" 200 -
+2025-07-29 21:56:19,927 [INFO] 127.0.0.1 - - [29/Jul/2025 21:56:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 21:56:26,745 [INFO] 127.0.0.1 - - [29/Jul/2025 21:56:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-07-29 21:56:26,792 [INFO] 127.0.0.1 - - [29/Jul/2025 21:56:26] "GET / HTTP/1.1" 200 -
+2025-07-29 21:56:26,846 [INFO] 127.0.0.1 - - [29/Jul/2025 21:56:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 21:57:46,214 [INFO] 127.0.0.1 - - [29/Jul/2025 21:57:46] "GET /student_info/3 HTTP/1.1" 200 -
+2025-07-29 21:57:46,293 [INFO] 127.0.0.1 - - [29/Jul/2025 21:57:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 21:58:53,412 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 21:58:53,515 [INFO]  * Restarting with stat
+2025-07-29 21:58:53,940 [WARNING]  * Debugger is active!
+2025-07-29 21:58:53,941 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 21:58:54,953 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 21:58:55,026 [INFO]  * Restarting with stat
+2025-07-29 22:05:58,842 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-29 22:05:58,842 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-29 22:05:58,843 [INFO]  * Restarting with stat
+2025-07-29 22:05:59,252 [WARNING]  * Debugger is active!
+2025-07-29 22:05:59,252 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 22:06:04,047 [INFO] 127.0.0.1 - - [29/Jul/2025 22:06:04] "GET / HTTP/1.1" 200 -
+2025-07-29 22:06:04,121 [INFO] 127.0.0.1 - - [29/Jul/2025 22:06:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 22:06:15,697 [INFO] 127.0.0.1 - - [29/Jul/2025 22:06:15] "GET / HTTP/1.1" 200 -
+2025-07-29 22:06:15,751 [INFO] 127.0.0.1 - - [29/Jul/2025 22:06:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 22:06:34,816 [INFO] 127.0.0.1 - - [29/Jul/2025 22:06:34] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-29 22:06:34,887 [INFO] 127.0.0.1 - - [29/Jul/2025 22:06:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 22:06:45,906 [INFO] 127.0.0.1 - - [29/Jul/2025 22:06:45] "GET /grade_record/5 HTTP/1.1" 200 -
+2025-07-29 22:06:45,976 [INFO] 127.0.0.1 - - [29/Jul/2025 22:06:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 22:07:24,897 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 22:07:24,995 [INFO]  * Restarting with stat
+2025-07-29 22:07:25,424 [WARNING]  * Debugger is active!
+2025-07-29 22:07:25,424 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 22:07:33,487 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 22:07:33,575 [INFO]  * Restarting with stat
+2025-07-29 22:07:34,012 [WARNING]  * Debugger is active!
+2025-07-29 22:07:34,012 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 22:07:40,058 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 22:07:40,148 [INFO]  * Restarting with stat
+2025-07-29 22:16:12,366 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-29 22:16:12,366 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-29 22:16:12,367 [INFO]  * Restarting with stat
+2025-07-29 22:16:12,788 [WARNING]  * Debugger is active!
+2025-07-29 22:16:12,788 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 22:29:46,268 [INFO] 127.0.0.1 - - [29/Jul/2025 22:29:46] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-29 22:29:46,326 [INFO] 127.0.0.1 - - [29/Jul/2025 22:29:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 22:32:32,505 [INFO] 127.0.0.1 - - [29/Jul/2025 22:32:32] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-29 22:32:32,559 [INFO] 127.0.0.1 - - [29/Jul/2025 22:32:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 22:33:12,850 [INFO] 127.0.0.1 - - [29/Jul/2025 22:33:12] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-29 22:33:12,917 [INFO] 127.0.0.1 - - [29/Jul/2025 22:33:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 22:37:05,088 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 22:37:05,180 [INFO]  * Restarting with stat
+2025-07-29 22:37:05,618 [WARNING]  * Debugger is active!
+2025-07-29 22:37:05,618 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 22:37:07,637 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 22:37:07,717 [INFO]  * Restarting with stat
+2025-07-29 22:37:08,156 [WARNING]  * Debugger is active!
+2025-07-29 22:37:08,156 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 22:37:30,322 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 22:37:30,417 [INFO]  * Restarting with stat
+2025-07-29 22:37:30,840 [WARNING]  * Debugger is active!
+2025-07-29 22:37:30,840 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 22:37:32,858 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 22:37:32,934 [INFO]  * Restarting with stat
+2025-07-29 22:37:33,377 [WARNING]  * Debugger is active!
+2025-07-29 22:37:33,377 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 22:38:04,611 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 22:38:04,709 [INFO]  * Restarting with stat
+2025-07-29 22:38:05,128 [WARNING]  * Debugger is active!
+2025-07-29 22:38:05,128 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 22:38:13,187 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 22:38:13,285 [INFO]  * Restarting with stat
+2025-07-29 22:39:28,769 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-29 22:39:28,769 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-29 22:39:28,769 [INFO]  * Restarting with stat
+2025-07-29 22:39:29,203 [WARNING]  * Debugger is active!
+2025-07-29 22:39:29,203 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 22:39:34,794 [INFO] 127.0.0.1 - - [29/Jul/2025 22:39:34] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-29 22:39:34,877 [INFO] 127.0.0.1 - - [29/Jul/2025 22:39:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 22:39:54,852 [INFO] 127.0.0.1 - - [29/Jul/2025 22:39:54] "[35m[1mPOST /grade_record/3 HTTP/1.1[0m" 500 -
+2025-07-29 22:41:23,064 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-29 22:41:23,164 [INFO]  * Restarting with stat
+2025-07-29 22:41:23,617 [WARNING]  * Debugger is active!
+2025-07-29 22:41:23,617 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 22:41:25,635 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-29 22:41:25,710 [INFO]  * Restarting with stat
+2025-07-29 22:41:26,158 [WARNING]  * Debugger is active!
+2025-07-29 22:41:26,159 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 22:41:27,173 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-29 22:41:27,250 [INFO]  * Restarting with stat
+2025-07-29 22:41:27,682 [WARNING]  * Debugger is active!
+2025-07-29 22:41:27,682 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 22:41:54,886 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-29 22:41:54,978 [INFO]  * Restarting with stat
+2025-07-29 22:41:55,413 [WARNING]  * Debugger is active!
+2025-07-29 22:41:55,414 [INFO]  * Debugger PIN: 131-242-693
+2025-07-29 22:42:14,071 [INFO] 127.0.0.1 - - [29/Jul/2025 22:42:14] "[35m[1mPOST /grade_record/3 HTTP/1.1[0m" 500 -
+2025-07-29 22:42:24,997 [INFO] 127.0.0.1 - - [29/Jul/2025 22:42:24] "POST /grade_record/3 HTTP/1.1" 200 -
+2025-07-29 22:42:45,547 [INFO] 127.0.0.1 - - [29/Jul/2025 22:42:45] "POST /grade_record/3 HTTP/1.1" 200 -
+2025-07-29 22:45:14,431 [INFO] 127.0.0.1 - - [29/Jul/2025 22:45:14] "POST /grade_record/3 HTTP/1.1" 200 -
+2025-07-29 22:45:55,351 [INFO] 127.0.0.1 - - [29/Jul/2025 22:45:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 22:45:57,017 [INFO] 127.0.0.1 - - [29/Jul/2025 22:45:57] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-29 22:45:57,100 [INFO] 127.0.0.1 - - [29/Jul/2025 22:45:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 22:45:59,960 [INFO] 127.0.0.1 - - [29/Jul/2025 22:45:59] "GET /grade_record/5 HTTP/1.1" 200 -
+2025-07-29 22:46:00,015 [INFO] 127.0.0.1 - - [29/Jul/2025 22:46:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 22:46:00,131 [INFO] 127.0.0.1 - - [29/Jul/2025 22:46:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 22:46:13,175 [INFO] 127.0.0.1 - - [29/Jul/2025 22:46:13] "GET /grade_record/5 HTTP/1.1" 200 -
+2025-07-29 22:46:13,245 [INFO] 127.0.0.1 - - [29/Jul/2025 22:46:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 22:46:38,432 [INFO] 127.0.0.1 - - [29/Jul/2025 22:46:38] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-29 22:46:38,499 [INFO] 127.0.0.1 - - [29/Jul/2025 22:46:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 22:47:09,698 [INFO] 127.0.0.1 - - [29/Jul/2025 22:47:09] "GET /student_info/3 HTTP/1.1" 200 -
+2025-07-29 22:47:09,768 [INFO] 127.0.0.1 - - [29/Jul/2025 22:47:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-29 22:47:20,153 [INFO] 127.0.0.1 - - [29/Jul/2025 22:47:20] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-29 22:47:20,221 [INFO] 127.0.0.1 - - [29/Jul/2025 22:47:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:40:54,918 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 11:40:54,919 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-30 11:40:54,919 [INFO]  * Restarting with stat
+2025-07-30 11:40:55,364 [WARNING]  * Debugger is active!
+2025-07-30 11:40:55,364 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 11:41:00,570 [INFO] 127.0.0.1 - - [30/Jul/2025 11:41:00] "GET / HTTP/1.1" 200 -
+2025-07-30 11:41:00,630 [INFO] 127.0.0.1 - - [30/Jul/2025 11:41:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:41:02,953 [INFO] 127.0.0.1 - - [30/Jul/2025 11:41:02] "[35m[1mGET /grade_record/3 HTTP/1.1[0m" 500 -
+2025-07-30 11:41:02,996 [INFO] 127.0.0.1 - - [30/Jul/2025 11:41:02] "GET /grade_record/3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-07-30 11:41:02,996 [INFO] 127.0.0.1 - - [30/Jul/2025 11:41:02] "GET /grade_record/3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-07-30 11:41:03,041 [INFO] 127.0.0.1 - - [30/Jul/2025 11:41:03] "GET /grade_record/3?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-07-30 11:41:03,043 [INFO] 127.0.0.1 - - [30/Jul/2025 11:41:03] "GET /grade_record/3?__debugger__=yes&cmd=resource&f=console.png&s=hjg8YzUdwePysh5mKrks HTTP/1.1" 200 -
+2025-07-30 11:43:02,316 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-30 11:43:02,416 [INFO]  * Restarting with stat
+2025-07-30 11:43:02,858 [WARNING]  * Debugger is active!
+2025-07-30 11:43:02,858 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 11:43:05,328 [INFO] 127.0.0.1 - - [30/Jul/2025 11:43:05] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:43:05,366 [INFO] 127.0.0.1 - - [30/Jul/2025 11:43:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:43:23,315 [INFO] 127.0.0.1 - - [30/Jul/2025 11:43:23] "[35m[1mPOST /grade_record/3 HTTP/1.1[0m" 500 -
+2025-07-30 11:46:45,435 [INFO] 127.0.0.1 - - [30/Jul/2025 11:46:45] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:46:45,467 [INFO] 127.0.0.1 - - [30/Jul/2025 11:46:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:48:03,874 [INFO] 127.0.0.1 - - [30/Jul/2025 11:48:03] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:48:03,898 [INFO] 127.0.0.1 - - [30/Jul/2025 11:48:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:48:22,639 [INFO] 127.0.0.1 - - [30/Jul/2025 11:48:22] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:48:22,673 [INFO] 127.0.0.1 - - [30/Jul/2025 11:48:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:48:51,816 [INFO] 127.0.0.1 - - [30/Jul/2025 11:48:51] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:48:51,848 [INFO] 127.0.0.1 - - [30/Jul/2025 11:48:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:51:45,887 [INFO] 127.0.0.1 - - [30/Jul/2025 11:51:45] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:51:45,922 [INFO] 127.0.0.1 - - [30/Jul/2025 11:51:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:52:58,382 [INFO] 127.0.0.1 - - [30/Jul/2025 11:52:58] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:52:58,423 [INFO] 127.0.0.1 - - [30/Jul/2025 11:52:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:53:15,615 [INFO] 127.0.0.1 - - [30/Jul/2025 11:53:15] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:53:15,656 [INFO] 127.0.0.1 - - [30/Jul/2025 11:53:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:53:28,954 [INFO] 127.0.0.1 - - [30/Jul/2025 11:53:28] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:53:28,987 [INFO] 127.0.0.1 - - [30/Jul/2025 11:53:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:53:57,354 [INFO] 127.0.0.1 - - [30/Jul/2025 11:53:57] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:53:57,389 [INFO] 127.0.0.1 - - [30/Jul/2025 11:53:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:54:05,327 [INFO] 127.0.0.1 - - [30/Jul/2025 11:54:05] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:54:05,360 [INFO] 127.0.0.1 - - [30/Jul/2025 11:54:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:55:16,915 [INFO] 127.0.0.1 - - [30/Jul/2025 11:55:16] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:55:16,955 [INFO] 127.0.0.1 - - [30/Jul/2025 11:55:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:55:37,745 [INFO] 127.0.0.1 - - [30/Jul/2025 11:55:37] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:55:37,781 [INFO] 127.0.0.1 - - [30/Jul/2025 11:55:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:55:45,606 [INFO] 127.0.0.1 - - [30/Jul/2025 11:55:45] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:55:45,635 [INFO] 127.0.0.1 - - [30/Jul/2025 11:55:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:56:01,994 [INFO] 127.0.0.1 - - [30/Jul/2025 11:56:01] "[31m[1mGET /grade_record/3 HTTP/1.1[0m" 401 -
+2025-07-30 11:57:15,680 [INFO] 127.0.0.1 - - [30/Jul/2025 11:57:15] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:57:15,734 [INFO] 127.0.0.1 - - [30/Jul/2025 11:57:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:57:25,621 [INFO] 127.0.0.1 - - [30/Jul/2025 11:57:25] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:57:25,675 [INFO] 127.0.0.1 - - [30/Jul/2025 11:57:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:57:48,460 [INFO] 127.0.0.1 - - [30/Jul/2025 11:57:48] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:57:48,517 [INFO] 127.0.0.1 - - [30/Jul/2025 11:57:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:58:08,454 [INFO] 127.0.0.1 - - [30/Jul/2025 11:58:08] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:58:08,503 [INFO] 127.0.0.1 - - [30/Jul/2025 11:58:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:58:09,482 [INFO] 127.0.0.1 - - [30/Jul/2025 11:58:09] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:58:09,525 [INFO] 127.0.0.1 - - [30/Jul/2025 11:58:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 11:58:42,075 [INFO] 127.0.0.1 - - [30/Jul/2025 11:58:42] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 11:58:42,141 [INFO] 127.0.0.1 - - [30/Jul/2025 11:58:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:00:45,343 [INFO] 127.0.0.1 - - [30/Jul/2025 12:00:45] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:00:45,393 [INFO] 127.0.0.1 - - [30/Jul/2025 12:00:45] "GET /static/styles.css HTTP/1.1" 200 -
+2025-07-30 12:01:33,429 [INFO] 127.0.0.1 - - [30/Jul/2025 12:01:33] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:01:33,477 [INFO] 127.0.0.1 - - [30/Jul/2025 12:01:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:01:52,738 [INFO] 127.0.0.1 - - [30/Jul/2025 12:01:52] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:01:52,784 [INFO] 127.0.0.1 - - [30/Jul/2025 12:01:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:02:45,338 [INFO] 127.0.0.1 - - [30/Jul/2025 12:02:45] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:02:45,389 [INFO] 127.0.0.1 - - [30/Jul/2025 12:02:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:02:59,572 [INFO] 127.0.0.1 - - [30/Jul/2025 12:02:59] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:02:59,621 [INFO] 127.0.0.1 - - [30/Jul/2025 12:02:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:03:54,752 [INFO] 127.0.0.1 - - [30/Jul/2025 12:03:54] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:03:54,795 [INFO] 127.0.0.1 - - [30/Jul/2025 12:03:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:04:33,310 [INFO] 127.0.0.1 - - [30/Jul/2025 12:04:33] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:04:33,356 [INFO] 127.0.0.1 - - [30/Jul/2025 12:04:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:07:55,890 [INFO] 127.0.0.1 - - [30/Jul/2025 12:07:55] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:07:55,954 [INFO] 127.0.0.1 - - [30/Jul/2025 12:07:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:08:39,021 [INFO] 127.0.0.1 - - [30/Jul/2025 12:08:39] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:08:39,072 [INFO] 127.0.0.1 - - [30/Jul/2025 12:08:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:08:50,116 [INFO] 127.0.0.1 - - [30/Jul/2025 12:08:50] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:08:50,191 [INFO] 127.0.0.1 - - [30/Jul/2025 12:08:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:11:05,092 [INFO] 127.0.0.1 - - [30/Jul/2025 12:11:05] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:11:05,153 [INFO] 127.0.0.1 - - [30/Jul/2025 12:11:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:11:23,962 [INFO] 127.0.0.1 - - [30/Jul/2025 12:11:23] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:11:24,041 [INFO] 127.0.0.1 - - [30/Jul/2025 12:11:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:11:24,166 [INFO] 127.0.0.1 - - [30/Jul/2025 12:11:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:13:11,609 [INFO] 127.0.0.1 - - [30/Jul/2025 12:13:11] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:13:11,674 [INFO] 127.0.0.1 - - [30/Jul/2025 12:13:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:14:20,369 [INFO] 127.0.0.1 - - [30/Jul/2025 12:14:20] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:14:20,408 [INFO] 127.0.0.1 - - [30/Jul/2025 12:14:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:14:36,568 [INFO] 127.0.0.1 - - [30/Jul/2025 12:14:36] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:14:36,623 [INFO] 127.0.0.1 - - [30/Jul/2025 12:14:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:15:08,872 [INFO] 127.0.0.1 - - [30/Jul/2025 12:15:08] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:15:08,926 [INFO] 127.0.0.1 - - [30/Jul/2025 12:15:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:15:15,352 [INFO] 127.0.0.1 - - [30/Jul/2025 12:15:15] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:15:15,411 [INFO] 127.0.0.1 - - [30/Jul/2025 12:15:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:15:33,386 [INFO] 127.0.0.1 - - [30/Jul/2025 12:15:33] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:15:33,441 [INFO] 127.0.0.1 - - [30/Jul/2025 12:15:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:15:46,764 [INFO] 127.0.0.1 - - [30/Jul/2025 12:15:46] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:15:46,811 [INFO] 127.0.0.1 - - [30/Jul/2025 12:15:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:15:54,252 [INFO] 127.0.0.1 - - [30/Jul/2025 12:15:54] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:15:54,297 [INFO] 127.0.0.1 - - [30/Jul/2025 12:15:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:15:58,297 [INFO] 127.0.0.1 - - [30/Jul/2025 12:15:58] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:15:58,323 [INFO] 127.0.0.1 - - [30/Jul/2025 12:15:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:16:29,028 [INFO] 127.0.0.1 - - [30/Jul/2025 12:16:29] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:16:29,088 [INFO] 127.0.0.1 - - [30/Jul/2025 12:16:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:16:51,681 [INFO] 127.0.0.1 - - [30/Jul/2025 12:16:51] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:16:51,729 [INFO] 127.0.0.1 - - [30/Jul/2025 12:16:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:16:52,736 [INFO] 127.0.0.1 - - [30/Jul/2025 12:16:52] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:16:52,776 [INFO] 127.0.0.1 - - [30/Jul/2025 12:16:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:17:02,107 [INFO] 127.0.0.1 - - [30/Jul/2025 12:17:02] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:17:02,162 [INFO] 127.0.0.1 - - [30/Jul/2025 12:17:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:18:24,503 [INFO] 127.0.0.1 - - [30/Jul/2025 12:18:24] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:18:24,555 [INFO] 127.0.0.1 - - [30/Jul/2025 12:18:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:18:57,893 [INFO] 127.0.0.1 - - [30/Jul/2025 12:18:57] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:18:57,944 [INFO] 127.0.0.1 - - [30/Jul/2025 12:18:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:19:05,033 [INFO] 127.0.0.1 - - [30/Jul/2025 12:19:05] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:19:05,095 [INFO] 127.0.0.1 - - [30/Jul/2025 12:19:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:19:36,853 [INFO] 127.0.0.1 - - [30/Jul/2025 12:19:36] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:19:36,902 [INFO] 127.0.0.1 - - [30/Jul/2025 12:19:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:19:41,094 [INFO] 127.0.0.1 - - [30/Jul/2025 12:19:41] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:19:41,148 [INFO] 127.0.0.1 - - [30/Jul/2025 12:19:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:24:42,230 [INFO] 127.0.0.1 - - [30/Jul/2025 12:24:42] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:24:42,291 [INFO] 127.0.0.1 - - [30/Jul/2025 12:24:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:26:33,152 [INFO] 127.0.0.1 - - [30/Jul/2025 12:26:33] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:26:33,198 [INFO] 127.0.0.1 - - [30/Jul/2025 12:26:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:27:28,312 [INFO] 127.0.0.1 - - [30/Jul/2025 12:27:28] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:27:28,381 [INFO] 127.0.0.1 - - [30/Jul/2025 12:27:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:27:41,190 [INFO] 127.0.0.1 - - [30/Jul/2025 12:27:41] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:27:41,236 [INFO] 127.0.0.1 - - [30/Jul/2025 12:27:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:27:52,559 [INFO] 127.0.0.1 - - [30/Jul/2025 12:27:52] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:27:52,620 [INFO] 127.0.0.1 - - [30/Jul/2025 12:27:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:27:58,134 [INFO] 127.0.0.1 - - [30/Jul/2025 12:27:58] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:27:58,201 [INFO] 127.0.0.1 - - [30/Jul/2025 12:27:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:28:12,517 [INFO] 127.0.0.1 - - [30/Jul/2025 12:28:12] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:28:12,573 [INFO] 127.0.0.1 - - [30/Jul/2025 12:28:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:30:54,664 [INFO] 127.0.0.1 - - [30/Jul/2025 12:30:54] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:30:54,720 [INFO] 127.0.0.1 - - [30/Jul/2025 12:30:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:32:03,079 [INFO] 127.0.0.1 - - [30/Jul/2025 12:32:03] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:32:03,139 [INFO] 127.0.0.1 - - [30/Jul/2025 12:32:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:34:30,710 [INFO] 127.0.0.1 - - [30/Jul/2025 12:34:30] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:34:30,778 [INFO] 127.0.0.1 - - [30/Jul/2025 12:34:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:34:56,405 [INFO] 127.0.0.1 - - [30/Jul/2025 12:34:56] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:34:56,464 [INFO] 127.0.0.1 - - [30/Jul/2025 12:34:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:35:12,361 [INFO] 127.0.0.1 - - [30/Jul/2025 12:35:12] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:35:12,415 [INFO] 127.0.0.1 - - [30/Jul/2025 12:35:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:36:14,288 [INFO] 127.0.0.1 - - [30/Jul/2025 12:36:14] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:36:14,333 [INFO] 127.0.0.1 - - [30/Jul/2025 12:36:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:36:20,181 [INFO] 127.0.0.1 - - [30/Jul/2025 12:36:20] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:36:20,237 [INFO] 127.0.0.1 - - [30/Jul/2025 12:36:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:36:42,429 [INFO] 127.0.0.1 - - [30/Jul/2025 12:36:42] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:36:42,483 [INFO] 127.0.0.1 - - [30/Jul/2025 12:36:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:37:14,701 [INFO] 127.0.0.1 - - [30/Jul/2025 12:37:14] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:37:14,756 [INFO] 127.0.0.1 - - [30/Jul/2025 12:37:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:37:40,562 [INFO] 127.0.0.1 - - [30/Jul/2025 12:37:40] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:37:40,610 [INFO] 127.0.0.1 - - [30/Jul/2025 12:37:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:37:41,492 [INFO] 127.0.0.1 - - [30/Jul/2025 12:37:41] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:37:41,567 [INFO] 127.0.0.1 - - [30/Jul/2025 12:37:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:37:57,513 [INFO] 127.0.0.1 - - [30/Jul/2025 12:37:57] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:37:57,564 [INFO] 127.0.0.1 - - [30/Jul/2025 12:37:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:38:15,004 [INFO] 127.0.0.1 - - [30/Jul/2025 12:38:15] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:38:15,052 [INFO] 127.0.0.1 - - [30/Jul/2025 12:38:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:38:36,468 [INFO] 127.0.0.1 - - [30/Jul/2025 12:38:36] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:38:36,528 [INFO] 127.0.0.1 - - [30/Jul/2025 12:38:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:38:59,020 [INFO] 127.0.0.1 - - [30/Jul/2025 12:38:59] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:38:59,077 [INFO] 127.0.0.1 - - [30/Jul/2025 12:38:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:39:11,876 [INFO] 127.0.0.1 - - [30/Jul/2025 12:39:11] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:39:11,925 [INFO] 127.0.0.1 - - [30/Jul/2025 12:39:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:39:30,107 [INFO] 127.0.0.1 - - [30/Jul/2025 12:39:30] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:39:30,140 [INFO] 127.0.0.1 - - [30/Jul/2025 12:39:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:42:52,203 [INFO] 127.0.0.1 - - [30/Jul/2025 12:42:52] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:42:52,278 [INFO] 127.0.0.1 - - [30/Jul/2025 12:42:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:44:40,450 [INFO] 127.0.0.1 - - [30/Jul/2025 12:44:40] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:44:40,500 [INFO] 127.0.0.1 - - [30/Jul/2025 12:44:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:48:08,003 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:08] "GET / HTTP/1.1" 200 -
+2025-07-30 12:48:08,089 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:48:11,636 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:11] "GET /student_info/5 HTTP/1.1" 200 -
+2025-07-30 12:48:11,705 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:48:17,825 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:17] "GET /grade_record/5 HTTP/1.1" 200 -
+2025-07-30 12:48:17,894 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:48:21,073 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:21] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:48:21,129 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:48:24,313 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:24] "GET /student_info/3 HTTP/1.1" 200 -
+2025-07-30 12:48:24,362 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:48:32,186 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:32] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:48:32,263 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:48:39,108 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:39] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:48:39,174 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:48:49,951 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:49] "GET /grade_record/5 HTTP/1.1" 200 -
+2025-07-30 12:48:50,016 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:48:50,166 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:48:53,185 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:53] "GET /grade_record/5 HTTP/1.1" 200 -
+2025-07-30 12:48:53,242 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:48:57,333 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:57] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:48:57,391 [INFO] 127.0.0.1 - - [30/Jul/2025 12:48:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:49:05,998 [INFO] 127.0.0.1 - - [30/Jul/2025 12:49:05] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:49:06,076 [INFO] 127.0.0.1 - - [30/Jul/2025 12:49:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:49:06,215 [INFO] 127.0.0.1 - - [30/Jul/2025 12:49:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:52:24,185 [INFO] 127.0.0.1 - - [30/Jul/2025 12:52:24] "[35m[1mGET /grade_record/3 HTTP/1.1[0m" 500 -
+2025-07-30 12:52:24,248 [INFO] 127.0.0.1 - - [30/Jul/2025 12:52:24] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-30 12:52:24,249 [INFO] 127.0.0.1 - - [30/Jul/2025 12:52:24] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-30 12:52:24,279 [INFO] 127.0.0.1 - - [30/Jul/2025 12:52:24] "GET /grade_record/3?__debugger__=yes&cmd=resource&f=console.png&s=eLwLoPaKE9QEJHZAFSdl HTTP/1.1" 200 -
+2025-07-30 12:53:34,544 [INFO] 127.0.0.1 - - [30/Jul/2025 12:53:34] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:53:34,604 [INFO] 127.0.0.1 - - [30/Jul/2025 12:53:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 12:55:17,366 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 12:55:17,476 [INFO]  * Restarting with stat
+2025-07-30 12:55:17,918 [WARNING]  * Debugger is active!
+2025-07-30 12:55:17,918 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 12:55:29,002 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 12:55:29,088 [INFO]  * Restarting with stat
+2025-07-30 12:55:29,514 [WARNING]  * Debugger is active!
+2025-07-30 12:55:29,515 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 12:55:31,531 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 12:55:31,602 [INFO]  * Restarting with stat
+2025-07-30 12:55:32,044 [WARNING]  * Debugger is active!
+2025-07-30 12:55:32,044 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 12:55:56,277 [INFO] 127.0.0.1 - - [30/Jul/2025 12:55:56] "[35m[1mGET /grade_record/3 HTTP/1.1[0m" 500 -
+2025-07-30 12:55:56,349 [INFO] 127.0.0.1 - - [30/Jul/2025 12:55:56] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-30 12:55:56,349 [INFO] 127.0.0.1 - - [30/Jul/2025 12:55:56] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-30 12:55:56,374 [INFO] 127.0.0.1 - - [30/Jul/2025 12:55:56] "GET /grade_record/3?__debugger__=yes&cmd=resource&f=console.png&s=imYo8qypuoe2oTz4j11e HTTP/1.1" 200 -
+2025-07-30 12:57:29,925 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 12:57:30,033 [INFO]  * Restarting with stat
+2025-07-30 12:57:30,458 [WARNING]  * Debugger is active!
+2025-07-30 12:57:30,458 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 12:57:35,497 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 12:57:35,593 [INFO]  * Restarting with stat
+2025-07-30 12:57:36,033 [WARNING]  * Debugger is active!
+2025-07-30 12:57:36,034 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 12:58:00,724 [INFO] 127.0.0.1 - - [30/Jul/2025 12:58:00] "[35m[1mGET /grade_record/3 HTTP/1.1[0m" 500 -
+2025-07-30 12:58:00,781 [INFO] 127.0.0.1 - - [30/Jul/2025 12:58:00] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-30 12:58:00,782 [INFO] 127.0.0.1 - - [30/Jul/2025 12:58:00] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-30 12:58:00,810 [INFO] 127.0.0.1 - - [30/Jul/2025 12:58:00] "GET /grade_record/3?__debugger__=yes&cmd=resource&f=console.png&s=2hMR2MXFbwi8Uch6PcNF HTTP/1.1" 200 -
+2025-07-30 12:58:02,548 [INFO] 127.0.0.1 - - [30/Jul/2025 12:58:02] "[35m[1mGET /grade_record/3 HTTP/1.1[0m" 500 -
+2025-07-30 12:58:02,603 [INFO] 127.0.0.1 - - [30/Jul/2025 12:58:02] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-30 12:58:02,603 [INFO] 127.0.0.1 - - [30/Jul/2025 12:58:02] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-30 12:58:02,624 [INFO] 127.0.0.1 - - [30/Jul/2025 12:58:02] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=console.png&s=2hMR2MXFbwi8Uch6PcNF HTTP/1.1[0m" 304 -
+2025-07-30 12:58:05,757 [INFO] 127.0.0.1 - - [30/Jul/2025 12:58:05] "[35m[1mGET /grade_record/3 HTTP/1.1[0m" 500 -
+2025-07-30 12:58:05,808 [INFO] 127.0.0.1 - - [30/Jul/2025 12:58:05] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-30 12:58:05,809 [INFO] 127.0.0.1 - - [30/Jul/2025 12:58:05] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-30 12:58:05,831 [INFO] 127.0.0.1 - - [30/Jul/2025 12:58:05] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=console.png&s=2hMR2MXFbwi8Uch6PcNF HTTP/1.1[0m" 304 -
+2025-07-30 12:58:59,653 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 12:58:59,753 [INFO]  * Restarting with stat
+2025-07-30 12:59:00,189 [WARNING]  * Debugger is active!
+2025-07-30 12:59:00,189 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 12:59:54,597 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 12:59:54,681 [INFO]  * Restarting with stat
+2025-07-30 12:59:55,120 [WARNING]  * Debugger is active!
+2025-07-30 12:59:55,120 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 12:59:56,134 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 12:59:56,207 [INFO]  * Restarting with stat
+2025-07-30 12:59:56,655 [WARNING]  * Debugger is active!
+2025-07-30 12:59:56,655 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 12:59:57,283 [INFO] 127.0.0.1 - - [30/Jul/2025 12:59:57] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 12:59:57,391 [INFO] 127.0.0.1 - - [30/Jul/2025 12:59:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:01:01,143 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 13:01:01,254 [INFO]  * Restarting with stat
+2025-07-30 13:01:01,703 [WARNING]  * Debugger is active!
+2025-07-30 13:01:01,703 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:01:09,762 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 13:01:09,850 [INFO]  * Restarting with stat
+2025-07-30 13:01:10,301 [WARNING]  * Debugger is active!
+2025-07-30 13:01:10,301 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:01:26,787 [INFO] 127.0.0.1 - - [30/Jul/2025 13:01:26] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 13:01:26,837 [INFO] 127.0.0.1 - - [30/Jul/2025 13:01:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:02:47,038 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 13:02:47,156 [INFO]  * Restarting with stat
+2025-07-30 13:02:47,601 [WARNING]  * Debugger is active!
+2025-07-30 13:02:47,602 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:03:02,714 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 13:03:02,808 [INFO]  * Restarting with stat
+2025-07-30 13:03:03,240 [WARNING]  * Debugger is active!
+2025-07-30 13:03:03,240 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:03:09,286 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 13:03:09,375 [INFO]  * Restarting with stat
+2025-07-30 13:03:09,823 [WARNING]  * Debugger is active!
+2025-07-30 13:03:09,824 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:04:09,266 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 13:04:09,356 [INFO]  * Restarting with stat
+2025-07-30 13:04:09,781 [WARNING]  * Debugger is active!
+2025-07-30 13:04:09,782 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:04:41,016 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 13:04:41,105 [INFO]  * Restarting with stat
+2025-07-30 13:05:22,340 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 13:05:22,340 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-30 13:05:22,340 [INFO]  * Restarting with stat
+2025-07-30 13:05:22,768 [WARNING]  * Debugger is active!
+2025-07-30 13:05:22,768 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:05:23,135 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:23] "[35m[1mGET /grade_record/3 HTTP/1.1[0m" 500 -
+2025-07-30 13:05:23,189 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:23] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-30 13:05:23,193 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:23] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-30 13:05:23,227 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:23] "GET /grade_record/3?__debugger__=yes&cmd=resource&f=console.png&s=KqHhBHA4hOmNcDxegyFu HTTP/1.1" 200 -
+2025-07-30 13:05:27,806 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 13:05:27,905 [INFO]  * Restarting with stat
+2025-07-30 13:05:28,363 [WARNING]  * Debugger is active!
+2025-07-30 13:05:28,363 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:05:28,750 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:28] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 13:05:28,803 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:05:42,472 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 13:05:42,576 [INFO]  * Restarting with stat
+2025-07-30 13:05:43,008 [WARNING]  * Debugger is active!
+2025-07-30 13:05:43,008 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:05:43,065 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:43] "[35m[1mGET /grade_record/3 HTTP/1.1[0m" 500 -
+2025-07-30 13:05:43,131 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:43] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-30 13:05:43,132 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:43] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-30 13:05:43,165 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:43] "GET /grade_record/3?__debugger__=yes&cmd=resource&f=console.png&s=RP8jBLdmMtOzrMd6VCog HTTP/1.1" 200 -
+2025-07-30 13:05:46,859 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:46] "[35m[1mGET /grade_record/3 HTTP/1.1[0m" 500 -
+2025-07-30 13:05:46,916 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:46] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-30 13:05:46,917 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:46] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-30 13:05:46,938 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:46] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=console.png&s=RP8jBLdmMtOzrMd6VCog HTTP/1.1[0m" 304 -
+2025-07-30 13:05:47,098 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 13:05:47,216 [INFO]  * Restarting with stat
+2025-07-30 13:05:47,670 [WARNING]  * Debugger is active!
+2025-07-30 13:05:47,670 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:05:48,987 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:48] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 13:05:49,050 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:05:49,149 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:05:55,731 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 13:05:55,839 [INFO]  * Restarting with stat
+2025-07-30 13:05:56,271 [WARNING]  * Debugger is active!
+2025-07-30 13:05:56,271 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:05:57,415 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:57] "[35m[1mGET /grade_record/3 HTTP/1.1[0m" 500 -
+2025-07-30 13:05:57,465 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:57] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-30 13:05:57,470 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:57] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-30 13:05:57,501 [INFO] 127.0.0.1 - - [30/Jul/2025 13:05:57] "GET /grade_record/3?__debugger__=yes&cmd=resource&f=console.png&s=vhIBxNHNHS2ZJjxQKQQb HTTP/1.1" 200 -
+2025-07-30 13:06:28,513 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models.py', reloading
+2025-07-30 13:06:28,619 [INFO]  * Restarting with stat
+2025-07-30 13:06:29,054 [WARNING]  * Debugger is active!
+2025-07-30 13:06:29,054 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:06:30,036 [INFO] 127.0.0.1 - - [30/Jul/2025 13:06:30] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 13:06:30,105 [INFO] 127.0.0.1 - - [30/Jul/2025 13:06:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:07:10,399 [INFO] 127.0.0.1 - - [30/Jul/2025 13:07:10] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 13:07:10,456 [INFO] 127.0.0.1 - - [30/Jul/2025 13:07:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:08:05,611 [INFO] 127.0.0.1 - - [30/Jul/2025 13:08:05] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 13:08:05,668 [INFO] 127.0.0.1 - - [30/Jul/2025 13:08:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:08:11,107 [INFO] 127.0.0.1 - - [30/Jul/2025 13:08:11] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 13:08:11,161 [INFO] 127.0.0.1 - - [30/Jul/2025 13:08:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:08:18,771 [INFO] 127.0.0.1 - - [30/Jul/2025 13:08:18] "[35m[1mGET /grade_record/3 HTTP/1.1[0m" 500 -
+2025-07-30 13:08:18,832 [INFO] 127.0.0.1 - - [30/Jul/2025 13:08:18] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-30 13:08:18,833 [INFO] 127.0.0.1 - - [30/Jul/2025 13:08:18] "[36mGET /grade_record/3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-30 13:08:18,857 [INFO] 127.0.0.1 - - [30/Jul/2025 13:08:18] "GET /grade_record/3?__debugger__=yes&cmd=resource&f=console.png&s=VA7L3gC3fx5foinGrsE8 HTTP/1.1" 200 -
+2025-07-30 13:08:25,211 [INFO] 127.0.0.1 - - [30/Jul/2025 13:08:25] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 13:08:25,275 [INFO] 127.0.0.1 - - [30/Jul/2025 13:08:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:10:44,979 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-30 13:10:45,084 [INFO]  * Restarting with stat
+2025-07-30 13:10:45,542 [WARNING]  * Debugger is active!
+2025-07-30 13:10:45,542 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:10:48,872 [INFO] 127.0.0.1 - - [30/Jul/2025 13:10:48] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 13:10:48,936 [INFO] 127.0.0.1 - - [30/Jul/2025 13:10:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:12:04,740 [INFO] 127.0.0.1 - - [30/Jul/2025 13:12:04] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 13:12:04,784 [INFO] 127.0.0.1 - - [30/Jul/2025 13:12:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:12:39,410 [INFO] 127.0.0.1 - - [30/Jul/2025 13:12:39] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 13:12:39,464 [INFO] 127.0.0.1 - - [30/Jul/2025 13:12:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:28:33,841 [INFO] 127.0.0.1 - - [30/Jul/2025 13:28:33] "GET / HTTP/1.1" 200 -
+2025-07-30 13:28:33,901 [INFO] 127.0.0.1 - - [30/Jul/2025 13:28:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:28:44,697 [INFO] 127.0.0.1 - - [30/Jul/2025 13:28:44] "GET /student_info/3 HTTP/1.1" 200 -
+2025-07-30 13:28:44,757 [INFO] 127.0.0.1 - - [30/Jul/2025 13:28:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:28:54,837 [INFO] 127.0.0.1 - - [30/Jul/2025 13:28:54] "GET / HTTP/1.1" 200 -
+2025-07-30 13:28:54,880 [INFO] 127.0.0.1 - - [30/Jul/2025 13:28:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:28:56,608 [INFO] 127.0.0.1 - - [30/Jul/2025 13:28:56] "GET /student_info/3 HTTP/1.1" 200 -
+2025-07-30 13:28:56,666 [INFO] 127.0.0.1 - - [30/Jul/2025 13:28:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:29:21,131 [INFO] 127.0.0.1 - - [30/Jul/2025 13:29:21] "GET / HTTP/1.1" 200 -
+2025-07-30 13:29:21,187 [INFO] 127.0.0.1 - - [30/Jul/2025 13:29:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:29:32,659 [INFO] 127.0.0.1 - - [30/Jul/2025 13:29:32] "GET / HTTP/1.1" 200 -
+2025-07-30 13:29:32,712 [INFO] 127.0.0.1 - - [30/Jul/2025 13:29:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:29:33,761 [INFO] 127.0.0.1 - - [30/Jul/2025 13:29:33] "GET / HTTP/1.1" 200 -
+2025-07-30 13:29:33,810 [INFO] 127.0.0.1 - - [30/Jul/2025 13:29:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:29:36,830 [INFO] 127.0.0.1 - - [30/Jul/2025 13:29:36] "GET / HTTP/1.1" 200 -
+2025-07-30 13:29:36,874 [INFO] 127.0.0.1 - - [30/Jul/2025 13:29:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:29:42,568 [INFO] 127.0.0.1 - - [30/Jul/2025 13:29:42] "GET / HTTP/1.1" 200 -
+2025-07-30 13:29:42,618 [INFO] 127.0.0.1 - - [30/Jul/2025 13:29:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:30:08,900 [INFO] 127.0.0.1 - - [30/Jul/2025 13:30:08] "GET /student_info/3 HTTP/1.1" 200 -
+2025-07-30 13:30:08,972 [INFO] 127.0.0.1 - - [30/Jul/2025 13:30:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:30:27,995 [INFO] 127.0.0.1 - - [30/Jul/2025 13:30:27] "GET /grade_record/5 HTTP/1.1" 200 -
+2025-07-30 13:30:28,055 [INFO] 127.0.0.1 - - [30/Jul/2025 13:30:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:30:28,178 [INFO] 127.0.0.1 - - [30/Jul/2025 13:30:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:30:30,578 [INFO] 127.0.0.1 - - [30/Jul/2025 13:30:30] "GET /student_info/5 HTTP/1.1" 200 -
+2025-07-30 13:30:30,644 [INFO] 127.0.0.1 - - [30/Jul/2025 13:30:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:30:33,235 [INFO] 127.0.0.1 - - [30/Jul/2025 13:30:33] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 13:30:33,278 [INFO] 127.0.0.1 - - [30/Jul/2025 13:30:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 13:34:38,219 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:34:38,329 [INFO]  * Restarting with stat
+2025-07-30 13:34:38,753 [WARNING]  * Debugger is active!
+2025-07-30 13:34:38,753 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:34:52,856 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:34:52,946 [INFO]  * Restarting with stat
+2025-07-30 13:34:53,370 [WARNING]  * Debugger is active!
+2025-07-30 13:34:53,370 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:34:56,393 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:34:56,466 [INFO]  * Restarting with stat
+2025-07-30 13:34:56,888 [WARNING]  * Debugger is active!
+2025-07-30 13:34:56,889 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:35:04,952 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:35:05,045 [INFO]  * Restarting with stat
+2025-07-30 13:35:05,460 [WARNING]  * Debugger is active!
+2025-07-30 13:35:05,460 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:35:07,479 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:35:07,548 [INFO]  * Restarting with stat
+2025-07-30 13:35:07,962 [WARNING]  * Debugger is active!
+2025-07-30 13:35:07,963 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:35:13,001 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:35:13,089 [INFO]  * Restarting with stat
+2025-07-30 13:35:13,525 [WARNING]  * Debugger is active!
+2025-07-30 13:35:13,526 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:35:16,550 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:35:16,620 [INFO]  * Restarting with stat
+2025-07-30 13:35:17,042 [WARNING]  * Debugger is active!
+2025-07-30 13:35:17,042 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:35:33,159 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:35:33,248 [INFO]  * Restarting with stat
+2025-07-30 13:35:33,697 [WARNING]  * Debugger is active!
+2025-07-30 13:35:33,697 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:35:37,727 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:35:37,811 [INFO]  * Restarting with stat
+2025-07-30 13:35:38,253 [WARNING]  * Debugger is active!
+2025-07-30 13:35:38,253 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:35:43,292 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:35:43,386 [INFO]  * Restarting with stat
+2025-07-30 13:35:43,808 [WARNING]  * Debugger is active!
+2025-07-30 13:35:43,809 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:35:45,826 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:35:45,895 [INFO]  * Restarting with stat
+2025-07-30 13:35:46,331 [WARNING]  * Debugger is active!
+2025-07-30 13:35:46,331 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:35:48,350 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:35:48,435 [INFO]  * Restarting with stat
+2025-07-30 13:35:48,856 [WARNING]  * Debugger is active!
+2025-07-30 13:35:48,856 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:35:50,875 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:35:50,944 [INFO]  * Restarting with stat
+2025-07-30 13:35:51,368 [WARNING]  * Debugger is active!
+2025-07-30 13:35:51,369 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:36:03,459 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:36:03,561 [INFO]  * Restarting with stat
+2025-07-30 13:36:03,994 [WARNING]  * Debugger is active!
+2025-07-30 13:36:03,994 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:36:07,017 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:36:07,090 [INFO]  * Restarting with stat
+2025-07-30 13:36:07,538 [WARNING]  * Debugger is active!
+2025-07-30 13:36:07,538 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:36:13,584 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:36:13,675 [INFO]  * Restarting with stat
+2025-07-30 13:36:14,109 [WARNING]  * Debugger is active!
+2025-07-30 13:36:14,110 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:36:23,178 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:36:23,267 [INFO]  * Restarting with stat
+2025-07-30 13:36:23,687 [WARNING]  * Debugger is active!
+2025-07-30 13:36:23,687 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:36:25,706 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:36:25,778 [INFO]  * Restarting with stat
+2025-07-30 13:36:26,227 [WARNING]  * Debugger is active!
+2025-07-30 13:36:26,228 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:36:27,242 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:36:27,311 [INFO]  * Restarting with stat
+2025-07-30 13:36:27,746 [WARNING]  * Debugger is active!
+2025-07-30 13:36:27,746 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:36:29,765 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:36:29,836 [INFO]  * Restarting with stat
+2025-07-30 13:36:30,264 [WARNING]  * Debugger is active!
+2025-07-30 13:36:30,265 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:36:45,379 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:36:45,467 [INFO]  * Restarting with stat
+2025-07-30 13:36:45,913 [WARNING]  * Debugger is active!
+2025-07-30 13:36:45,914 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:36:46,928 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:36:47,007 [INFO]  * Restarting with stat
+2025-07-30 13:36:47,442 [WARNING]  * Debugger is active!
+2025-07-30 13:36:47,443 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:37:45,877 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:37:45,972 [INFO]  * Restarting with stat
+2025-07-30 13:37:46,406 [WARNING]  * Debugger is active!
+2025-07-30 13:37:46,406 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:37:50,437 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:37:50,528 [INFO]  * Restarting with stat
+2025-07-30 13:37:50,979 [WARNING]  * Debugger is active!
+2025-07-30 13:37:50,979 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:37:51,992 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:37:52,063 [INFO]  * Restarting with stat
+2025-07-30 13:37:52,503 [WARNING]  * Debugger is active!
+2025-07-30 13:37:52,503 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:38:00,567 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:38:00,664 [INFO]  * Restarting with stat
+2025-07-30 13:38:01,111 [WARNING]  * Debugger is active!
+2025-07-30 13:38:01,111 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:38:02,126 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:38:02,202 [INFO]  * Restarting with stat
+2025-07-30 13:38:02,638 [WARNING]  * Debugger is active!
+2025-07-30 13:38:02,639 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:38:04,657 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:38:04,756 [INFO]  * Restarting with stat
+2025-07-30 13:38:05,187 [WARNING]  * Debugger is active!
+2025-07-30 13:38:05,187 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:38:08,209 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:38:08,283 [INFO]  * Restarting with stat
+2025-07-30 13:38:08,709 [WARNING]  * Debugger is active!
+2025-07-30 13:38:08,710 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:38:12,740 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:38:12,832 [INFO]  * Restarting with stat
+2025-07-30 13:38:13,256 [WARNING]  * Debugger is active!
+2025-07-30 13:38:13,256 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:38:40,461 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:38:40,550 [INFO]  * Restarting with stat
+2025-07-30 13:38:40,992 [WARNING]  * Debugger is active!
+2025-07-30 13:38:40,992 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:39:45,482 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:39:45,576 [INFO]  * Restarting with stat
+2025-07-30 13:39:46,011 [WARNING]  * Debugger is active!
+2025-07-30 13:39:46,011 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:40:02,132 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:40:02,236 [INFO]  * Restarting with stat
+2025-07-30 13:40:02,656 [WARNING]  * Debugger is active!
+2025-07-30 13:40:02,656 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:40:04,674 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:40:04,754 [INFO]  * Restarting with stat
+2025-07-30 13:40:05,189 [WARNING]  * Debugger is active!
+2025-07-30 13:40:05,189 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:40:08,213 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:40:08,285 [INFO]  * Restarting with stat
+2025-07-30 13:40:08,715 [WARNING]  * Debugger is active!
+2025-07-30 13:40:08,715 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:40:12,746 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:40:12,838 [INFO]  * Restarting with stat
+2025-07-30 13:40:13,256 [WARNING]  * Debugger is active!
+2025-07-30 13:40:13,256 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:40:22,326 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:40:22,416 [INFO]  * Restarting with stat
+2025-07-30 13:40:22,860 [WARNING]  * Debugger is active!
+2025-07-30 13:40:22,861 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:40:30,920 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:40:31,013 [INFO]  * Restarting with stat
+2025-07-30 13:40:31,464 [WARNING]  * Debugger is active!
+2025-07-30 13:40:31,465 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:40:33,484 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:40:33,555 [INFO]  * Restarting with stat
+2025-07-30 13:40:34,001 [WARNING]  * Debugger is active!
+2025-07-30 13:40:34,001 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:40:36,021 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:40:36,092 [INFO]  * Restarting with stat
+2025-07-30 13:40:36,530 [WARNING]  * Debugger is active!
+2025-07-30 13:40:36,530 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:40:43,584 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:40:43,678 [INFO]  * Restarting with stat
+2025-07-30 13:40:44,106 [WARNING]  * Debugger is active!
+2025-07-30 13:40:44,106 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:40:49,143 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:40:49,241 [INFO]  * Restarting with stat
+2025-07-30 13:40:49,680 [WARNING]  * Debugger is active!
+2025-07-30 13:40:49,680 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:40:50,693 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:40:50,767 [INFO]  * Restarting with stat
+2025-07-30 13:40:51,214 [WARNING]  * Debugger is active!
+2025-07-30 13:40:51,214 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:41:20,436 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:41:20,521 [INFO]  * Restarting with stat
+2025-07-30 13:41:20,953 [WARNING]  * Debugger is active!
+2025-07-30 13:41:20,954 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:41:38,082 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:41:38,173 [INFO]  * Restarting with stat
+2025-07-30 13:41:38,616 [WARNING]  * Debugger is active!
+2025-07-30 13:41:38,617 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:42:06,835 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:42:06,928 [INFO]  * Restarting with stat
+2025-07-30 13:42:07,364 [WARNING]  * Debugger is active!
+2025-07-30 13:42:07,364 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:42:20,467 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:42:20,559 [INFO]  * Restarting with stat
+2025-07-30 13:42:20,998 [WARNING]  * Debugger is active!
+2025-07-30 13:42:20,999 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:42:28,051 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:42:28,145 [INFO]  * Restarting with stat
+2025-07-30 13:42:28,593 [WARNING]  * Debugger is active!
+2025-07-30 13:42:28,593 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:42:29,607 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:42:29,678 [INFO]  * Restarting with stat
+2025-07-30 13:42:30,117 [WARNING]  * Debugger is active!
+2025-07-30 13:42:30,117 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:44:42,150 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:44:42,240 [INFO]  * Restarting with stat
+2025-07-30 13:44:42,668 [WARNING]  * Debugger is active!
+2025-07-30 13:44:42,669 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:44:44,685 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:44:44,758 [INFO]  * Restarting with stat
+2025-07-30 13:44:45,206 [WARNING]  * Debugger is active!
+2025-07-30 13:44:45,207 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:45:13,417 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:45:13,508 [INFO]  * Restarting with stat
+2025-07-30 13:45:13,945 [WARNING]  * Debugger is active!
+2025-07-30 13:45:13,945 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:45:14,958 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:45:15,029 [INFO]  * Restarting with stat
+2025-07-30 13:45:15,450 [WARNING]  * Debugger is active!
+2025-07-30 13:45:15,450 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:45:29,555 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:45:29,653 [INFO]  * Restarting with stat
+2025-07-30 13:45:30,098 [WARNING]  * Debugger is active!
+2025-07-30 13:45:30,098 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:45:31,112 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:45:31,183 [INFO]  * Restarting with stat
+2025-07-30 13:45:31,626 [WARNING]  * Debugger is active!
+2025-07-30 13:45:31,626 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:45:34,650 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:45:34,733 [INFO]  * Restarting with stat
+2025-07-30 13:45:35,178 [WARNING]  * Debugger is active!
+2025-07-30 13:45:35,179 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:45:36,192 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:45:36,268 [INFO]  * Restarting with stat
+2025-07-30 13:45:36,698 [WARNING]  * Debugger is active!
+2025-07-30 13:45:36,698 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:46:01,895 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:46:01,972 [INFO]  * Restarting with stat
+2025-07-30 13:46:02,397 [WARNING]  * Debugger is active!
+2025-07-30 13:46:02,397 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:46:03,411 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:46:03,488 [INFO]  * Restarting with stat
+2025-07-30 13:46:03,932 [WARNING]  * Debugger is active!
+2025-07-30 13:46:03,932 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:46:08,967 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:46:09,063 [INFO]  * Restarting with stat
+2025-07-30 13:46:09,490 [WARNING]  * Debugger is active!
+2025-07-30 13:46:09,491 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:46:17,554 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:46:17,648 [INFO]  * Restarting with stat
+2025-07-30 13:46:18,097 [WARNING]  * Debugger is active!
+2025-07-30 13:46:18,097 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:46:19,111 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:46:19,181 [INFO]  * Restarting with stat
+2025-07-30 13:46:19,619 [WARNING]  * Debugger is active!
+2025-07-30 13:46:19,620 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:46:24,657 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:46:24,748 [INFO]  * Restarting with stat
+2025-07-30 13:46:25,171 [WARNING]  * Debugger is active!
+2025-07-30 13:46:25,171 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:46:27,189 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:46:27,257 [INFO]  * Restarting with stat
+2025-07-30 13:46:27,679 [WARNING]  * Debugger is active!
+2025-07-30 13:46:27,680 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:47:47,279 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:47:47,370 [INFO]  * Restarting with stat
+2025-07-30 13:47:47,805 [WARNING]  * Debugger is active!
+2025-07-30 13:47:47,805 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:47:57,881 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:47:57,971 [INFO]  * Restarting with stat
+2025-07-30 13:47:58,411 [WARNING]  * Debugger is active!
+2025-07-30 13:47:58,411 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:49:02,898 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:49:02,988 [INFO]  * Restarting with stat
+2025-07-30 13:49:03,432 [WARNING]  * Debugger is active!
+2025-07-30 13:49:03,432 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:49:21,566 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:49:21,657 [INFO]  * Restarting with stat
+2025-07-30 13:49:22,098 [WARNING]  * Debugger is active!
+2025-07-30 13:49:22,098 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:49:26,128 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:49:26,219 [INFO]  * Restarting with stat
+2025-07-30 13:49:26,644 [WARNING]  * Debugger is active!
+2025-07-30 13:49:26,644 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:49:29,667 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:49:29,740 [INFO]  * Restarting with stat
+2025-07-30 13:49:30,186 [WARNING]  * Debugger is active!
+2025-07-30 13:49:30,186 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:49:31,200 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:49:31,277 [INFO]  * Restarting with stat
+2025-07-30 13:49:31,701 [WARNING]  * Debugger is active!
+2025-07-30 13:49:31,702 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:49:33,720 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:49:33,790 [INFO]  * Restarting with stat
+2025-07-30 13:49:34,238 [WARNING]  * Debugger is active!
+2025-07-30 13:49:34,238 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:49:49,354 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:49:49,456 [INFO]  * Restarting with stat
+2025-07-30 13:49:49,892 [WARNING]  * Debugger is active!
+2025-07-30 13:49:49,893 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:50:06,016 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:50:06,112 [INFO]  * Restarting with stat
+2025-07-30 13:50:06,544 [WARNING]  * Debugger is active!
+2025-07-30 13:50:06,544 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:50:11,582 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:50:11,677 [INFO]  * Restarting with stat
+2025-07-30 13:50:12,119 [WARNING]  * Debugger is active!
+2025-07-30 13:50:12,119 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:50:21,187 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:50:21,277 [INFO]  * Restarting with stat
+2025-07-30 13:50:21,722 [WARNING]  * Debugger is active!
+2025-07-30 13:50:21,722 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:50:22,735 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:50:22,808 [INFO]  * Restarting with stat
+2025-07-30 13:50:23,248 [WARNING]  * Debugger is active!
+2025-07-30 13:50:23,248 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:50:26,271 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:50:26,341 [INFO]  * Restarting with stat
+2025-07-30 13:50:26,771 [WARNING]  * Debugger is active!
+2025-07-30 13:50:26,771 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:50:51,961 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:50:52,051 [INFO]  * Restarting with stat
+2025-07-30 13:50:52,502 [WARNING]  * Debugger is active!
+2025-07-30 13:50:52,502 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:50:56,532 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:50:56,614 [INFO]  * Restarting with stat
+2025-07-30 13:50:57,056 [WARNING]  * Debugger is active!
+2025-07-30 13:50:57,057 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:51:00,079 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:51:00,151 [INFO]  * Restarting with stat
+2025-07-30 13:51:00,583 [WARNING]  * Debugger is active!
+2025-07-30 13:51:00,583 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:52:47,398 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:52:47,495 [INFO]  * Restarting with stat
+2025-07-30 13:52:47,927 [WARNING]  * Debugger is active!
+2025-07-30 13:52:47,927 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:52:52,964 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:52:53,055 [INFO]  * Restarting with stat
+2025-07-30 13:52:53,490 [WARNING]  * Debugger is active!
+2025-07-30 13:52:53,490 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:52:58,528 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:52:58,623 [INFO]  * Restarting with stat
+2025-07-30 13:52:59,068 [WARNING]  * Debugger is active!
+2025-07-30 13:52:59,068 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:53:00,082 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:53:00,177 [INFO]  * Restarting with stat
+2025-07-30 13:53:00,603 [WARNING]  * Debugger is active!
+2025-07-30 13:53:00,604 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:53:17,732 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:53:17,824 [INFO]  * Restarting with stat
+2025-07-30 13:53:18,255 [WARNING]  * Debugger is active!
+2025-07-30 13:53:18,255 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:53:19,268 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:53:19,339 [INFO]  * Restarting with stat
+2025-07-30 13:53:19,763 [WARNING]  * Debugger is active!
+2025-07-30 13:53:19,763 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:53:31,852 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:53:31,945 [INFO]  * Restarting with stat
+2025-07-30 13:53:32,382 [WARNING]  * Debugger is active!
+2025-07-30 13:53:32,383 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:53:34,402 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:53:34,473 [INFO]  * Restarting with stat
+2025-07-30 13:53:34,903 [WARNING]  * Debugger is active!
+2025-07-30 13:53:34,904 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:53:36,923 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:53:36,994 [INFO]  * Restarting with stat
+2025-07-30 13:53:37,425 [WARNING]  * Debugger is active!
+2025-07-30 13:53:37,425 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:53:56,561 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-07-30 13:53:56,639 [INFO]  * Restarting with stat
+2025-07-30 13:53:57,087 [WARNING]  * Debugger is active!
+2025-07-30 13:53:57,087 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:54:03,133 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:54:03,232 [INFO]  * Restarting with stat
+2025-07-30 13:54:03,675 [WARNING]  * Debugger is active!
+2025-07-30 13:54:03,675 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:54:04,688 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:54:04,761 [INFO]  * Restarting with stat
+2025-07-30 13:54:05,202 [WARNING]  * Debugger is active!
+2025-07-30 13:54:05,203 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:54:14,271 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:54:14,367 [INFO]  * Restarting with stat
+2025-07-30 13:54:14,805 [WARNING]  * Debugger is active!
+2025-07-30 13:54:14,805 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:54:24,882 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:54:24,982 [INFO]  * Restarting with stat
+2025-07-30 13:54:25,424 [WARNING]  * Debugger is active!
+2025-07-30 13:54:25,424 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:54:32,478 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:54:32,568 [INFO]  * Restarting with stat
+2025-07-30 13:54:33,015 [WARNING]  * Debugger is active!
+2025-07-30 13:54:33,016 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:54:35,034 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:54:35,107 [INFO]  * Restarting with stat
+2025-07-30 13:54:35,554 [WARNING]  * Debugger is active!
+2025-07-30 13:54:35,554 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:54:40,593 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:54:40,685 [INFO]  * Restarting with stat
+2025-07-30 13:54:41,128 [WARNING]  * Debugger is active!
+2025-07-30 13:54:41,128 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:54:45,159 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:54:45,249 [INFO]  * Restarting with stat
+2025-07-30 13:54:45,669 [WARNING]  * Debugger is active!
+2025-07-30 13:54:45,669 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:54:46,682 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:54:46,751 [INFO]  * Restarting with stat
+2025-07-30 13:54:47,206 [WARNING]  * Debugger is active!
+2025-07-30 13:54:47,207 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:54:50,230 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:54:50,305 [INFO]  * Restarting with stat
+2025-07-30 13:54:50,734 [WARNING]  * Debugger is active!
+2025-07-30 13:54:50,735 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:56:30,480 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:56:30,577 [INFO]  * Restarting with stat
+2025-07-30 13:56:31,002 [WARNING]  * Debugger is active!
+2025-07-30 13:56:31,003 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:56:35,034 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:56:35,146 [INFO]  * Restarting with stat
+2025-07-30 13:56:35,596 [WARNING]  * Debugger is active!
+2025-07-30 13:56:35,596 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:56:38,621 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:56:38,693 [INFO]  * Restarting with stat
+2025-07-30 13:56:39,118 [WARNING]  * Debugger is active!
+2025-07-30 13:56:39,119 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:56:41,137 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:56:41,209 [INFO]  * Restarting with stat
+2025-07-30 13:56:41,647 [WARNING]  * Debugger is active!
+2025-07-30 13:56:41,647 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:56:46,687 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:56:46,781 [INFO]  * Restarting with stat
+2025-07-30 13:56:47,212 [WARNING]  * Debugger is active!
+2025-07-30 13:56:47,213 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:56:51,243 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:56:51,333 [INFO]  * Restarting with stat
+2025-07-30 13:56:51,774 [WARNING]  * Debugger is active!
+2025-07-30 13:56:51,775 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:56:58,827 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:56:58,920 [INFO]  * Restarting with stat
+2025-07-30 13:56:59,342 [WARNING]  * Debugger is active!
+2025-07-30 13:56:59,342 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:57:33,605 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:57:33,696 [INFO]  * Restarting with stat
+2025-07-30 13:57:34,139 [WARNING]  * Debugger is active!
+2025-07-30 13:57:34,139 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:57:41,193 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:57:41,283 [INFO]  * Restarting with stat
+2025-07-30 13:57:41,729 [WARNING]  * Debugger is active!
+2025-07-30 13:57:41,729 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:58:40,184 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:58:40,275 [INFO]  * Restarting with stat
+2025-07-30 13:58:40,723 [WARNING]  * Debugger is active!
+2025-07-30 13:58:40,723 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:58:41,737 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:58:41,838 [INFO]  * Restarting with stat
+2025-07-30 13:58:42,278 [WARNING]  * Debugger is active!
+2025-07-30 13:58:42,279 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:58:44,297 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:58:44,369 [INFO]  * Restarting with stat
+2025-07-30 13:58:44,788 [WARNING]  * Debugger is active!
+2025-07-30 13:58:44,788 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:58:48,818 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:58:48,911 [INFO]  * Restarting with stat
+2025-07-30 13:58:49,347 [WARNING]  * Debugger is active!
+2025-07-30 13:58:49,347 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:58:51,366 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:58:51,438 [INFO]  * Restarting with stat
+2025-07-30 13:58:51,861 [WARNING]  * Debugger is active!
+2025-07-30 13:58:51,861 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:58:55,891 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:58:55,983 [INFO]  * Restarting with stat
+2025-07-30 13:58:56,434 [WARNING]  * Debugger is active!
+2025-07-30 13:58:56,434 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:58:57,448 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:58:57,525 [INFO]  * Restarting with stat
+2025-07-30 13:58:57,969 [WARNING]  * Debugger is active!
+2025-07-30 13:58:57,970 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:58:58,984 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:58:59,055 [INFO]  * Restarting with stat
+2025-07-30 13:58:59,491 [WARNING]  * Debugger is active!
+2025-07-30 13:58:59,492 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:59:47,866 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:59:47,961 [INFO]  * Restarting with stat
+2025-07-30 13:59:48,406 [WARNING]  * Debugger is active!
+2025-07-30 13:59:48,406 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 13:59:54,452 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 13:59:54,544 [INFO]  * Restarting with stat
+2025-07-30 13:59:54,987 [WARNING]  * Debugger is active!
+2025-07-30 13:59:54,987 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:00:04,056 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:00:04,148 [INFO]  * Restarting with stat
+2025-07-30 14:00:04,598 [WARNING]  * Debugger is active!
+2025-07-30 14:00:04,599 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:00:15,683 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:00:15,774 [INFO]  * Restarting with stat
+2025-07-30 14:00:16,224 [WARNING]  * Debugger is active!
+2025-07-30 14:00:16,224 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:00:17,237 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:00:17,309 [INFO]  * Restarting with stat
+2025-07-30 14:00:17,755 [WARNING]  * Debugger is active!
+2025-07-30 14:00:17,756 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:00:19,774 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:00:19,852 [INFO]  * Restarting with stat
+2025-07-30 14:00:20,282 [WARNING]  * Debugger is active!
+2025-07-30 14:00:20,282 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:00:26,326 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:00:26,423 [INFO]  * Restarting with stat
+2025-07-30 14:00:26,872 [WARNING]  * Debugger is active!
+2025-07-30 14:00:26,872 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:00:29,895 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:00:29,966 [INFO]  * Restarting with stat
+2025-07-30 14:00:30,409 [WARNING]  * Debugger is active!
+2025-07-30 14:00:30,410 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:00:34,439 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:00:34,530 [INFO]  * Restarting with stat
+2025-07-30 14:00:34,972 [WARNING]  * Debugger is active!
+2025-07-30 14:00:34,973 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:00:35,987 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:00:36,058 [INFO]  * Restarting with stat
+2025-07-30 14:00:36,496 [WARNING]  * Debugger is active!
+2025-07-30 14:00:36,497 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:00:42,544 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:00:42,638 [INFO]  * Restarting with stat
+2025-07-30 14:00:43,083 [WARNING]  * Debugger is active!
+2025-07-30 14:00:43,083 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:00:53,163 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:00:53,257 [INFO]  * Restarting with stat
+2025-07-30 14:00:53,687 [WARNING]  * Debugger is active!
+2025-07-30 14:00:53,687 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:01:01,749 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:01:01,866 [INFO]  * Restarting with stat
+2025-07-30 14:01:02,282 [WARNING]  * Debugger is active!
+2025-07-30 14:01:02,282 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:01:08,328 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:01:08,416 [INFO]  * Restarting with stat
+2025-07-30 14:01:08,831 [WARNING]  * Debugger is active!
+2025-07-30 14:01:08,831 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:01:17,901 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:01:17,991 [INFO]  * Restarting with stat
+2025-07-30 14:01:18,416 [WARNING]  * Debugger is active!
+2025-07-30 14:01:18,416 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:01:19,430 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:01:19,500 [INFO]  * Restarting with stat
+2025-07-30 14:01:19,927 [WARNING]  * Debugger is active!
+2025-07-30 14:01:19,927 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:01:21,946 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:01:22,020 [INFO]  * Restarting with stat
+2025-07-30 14:01:22,445 [WARNING]  * Debugger is active!
+2025-07-30 14:01:22,446 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:01:25,469 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:01:25,550 [INFO]  * Restarting with stat
+2025-07-30 14:01:25,972 [WARNING]  * Debugger is active!
+2025-07-30 14:01:25,973 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:01:35,043 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:01:35,148 [INFO]  * Restarting with stat
+2025-07-30 14:01:35,598 [WARNING]  * Debugger is active!
+2025-07-30 14:01:35,598 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:01:36,611 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:01:36,684 [INFO]  * Restarting with stat
+2025-07-30 14:01:37,111 [WARNING]  * Debugger is active!
+2025-07-30 14:01:37,111 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:02:07,339 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:02:07,429 [INFO]  * Restarting with stat
+2025-07-30 14:02:07,849 [WARNING]  * Debugger is active!
+2025-07-30 14:02:07,850 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:02:09,868 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:02:09,939 [INFO]  * Restarting with stat
+2025-07-30 14:02:10,387 [WARNING]  * Debugger is active!
+2025-07-30 14:02:10,387 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:02:23,487 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:02:23,578 [INFO]  * Restarting with stat
+2025-07-30 14:02:24,005 [WARNING]  * Debugger is active!
+2025-07-30 14:02:24,005 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:02:50,201 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:02:50,289 [INFO]  * Restarting with stat
+2025-07-30 14:02:50,716 [WARNING]  * Debugger is active!
+2025-07-30 14:02:50,716 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:02:52,735 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:02:52,805 [INFO]  * Restarting with stat
+2025-07-30 14:02:53,233 [WARNING]  * Debugger is active!
+2025-07-30 14:02:53,233 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:02:59,277 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:02:59,370 [INFO]  * Restarting with stat
+2025-07-30 14:02:59,812 [WARNING]  * Debugger is active!
+2025-07-30 14:02:59,812 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:03:46,164 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:03:46,256 [INFO]  * Restarting with stat
+2025-07-30 14:03:46,701 [WARNING]  * Debugger is active!
+2025-07-30 14:03:46,702 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:04:31,031 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/notifications.py', reloading
+2025-07-30 14:04:31,121 [INFO]  * Restarting with stat
+2025-07-30 14:04:31,562 [WARNING]  * Debugger is active!
+2025-07-30 14:04:31,562 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:15:54,865 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-30 14:15:54,958 [INFO]  * Restarting with stat
+2025-07-30 14:15:55,387 [WARNING]  * Debugger is active!
+2025-07-30 14:15:55,388 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:16:09,497 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-30 14:16:09,584 [INFO]  * Restarting with stat
+2025-07-30 14:20:29,884 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-30 14:20:29,884 [INFO] [33mPress CTRL+C to quit[0m
+2025-07-30 14:20:29,884 [INFO]  * Restarting with stat
+2025-07-30 14:20:30,313 [WARNING]  * Debugger is active!
+2025-07-30 14:20:30,313 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:20:33,029 [INFO] 127.0.0.1 - - [30/Jul/2025 14:20:33] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 14:20:33,105 [INFO] 127.0.0.1 - - [30/Jul/2025 14:20:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 14:20:44,171 [INFO] 127.0.0.1 - - [30/Jul/2025 14:20:44] "POST /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 14:20:48,479 [INFO] 127.0.0.1 - - [30/Jul/2025 14:20:48] "GET /grade_record/3 HTTP/1.1" 200 -
+2025-07-30 14:20:48,537 [INFO] 127.0.0.1 - - [30/Jul/2025 14:20:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 14:20:58,346 [INFO] 127.0.0.1 - - [30/Jul/2025 14:20:58] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-07-30 14:20:58,360 [INFO] 127.0.0.1 - - [30/Jul/2025 14:20:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-30 14:20:58,380 [INFO] 127.0.0.1 - - [30/Jul/2025 14:20:58] "GET /login HTTP/1.1" 200 -
+2025-07-30 14:20:58,473 [INFO] 127.0.0.1 - - [30/Jul/2025 14:20:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 14:21:05,788 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:05] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-07-30 14:21:05,796 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:05] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-30 14:21:05,822 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:05] "GET /perfil HTTP/1.1" 200 -
+2025-07-30 14:21:05,887 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 14:21:05,890 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:05] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
+2025-07-30 14:21:05,893 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:05] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-30 14:21:08,291 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:08] "GET /notifications HTTP/1.1" 200 -
+2025-07-30 14:21:08,345 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 14:21:25,635 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:25] "GET /use_time HTTP/1.1" 200 -
+2025-07-30 14:21:25,717 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 14:21:25,724 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:25] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
+2025-07-30 14:21:25,777 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:25] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-07-30 14:21:27,400 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:27] "GET /add_time HTTP/1.1" 200 -
+2025-07-30 14:21:27,473 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 14:21:27,476 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:27] "[36mGET /static/timerAdd.js HTTP/1.1[0m" 304 -
+2025-07-30 14:21:27,535 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:27] "GET /get_time HTTP/1.1" 200 -
+2025-07-30 14:21:28,982 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:28] "GET /notifications HTTP/1.1" 200 -
+2025-07-30 14:21:28,984 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:28] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-07-30 14:21:29,043 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 14:21:29,106 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:29] "GET /perfil HTTP/1.1" 200 -
+2025-07-30 14:21:29,242 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 14:21:32,643 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:32] "GET /perfil HTTP/1.1" 200 -
+2025-07-30 14:21:32,706 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-07-30 14:21:32,720 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:32] "GET /static/trofeo.png HTTP/1.1" 200 -
+2025-07-30 14:21:32,721 [INFO] 127.0.0.1 - - [30/Jul/2025 14:21:32] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
+2025-07-30 14:22:42,315 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-30 14:22:42,421 [INFO]  * Restarting with stat
+2025-07-30 14:22:42,856 [WARNING]  * Debugger is active!
+2025-07-30 14:22:42,857 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:22:43,871 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-30 14:22:43,948 [INFO]  * Restarting with stat
+2025-07-30 14:22:44,380 [WARNING]  * Debugger is active!
+2025-07-30 14:22:44,381 [INFO]  * Debugger PIN: 123-917-054
+2025-07-30 14:24:03,985 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes.py', reloading
+2025-07-30 14:24:04,076 [INFO]  * Restarting with stat
+2025-07-30 14:24:04,529 [WARNING]  * Debugger is active!
+2025-07-30 14:24:04,529 [INFO]  * Debugger PIN: 123-917-054
