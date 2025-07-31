@@ -9,7 +9,7 @@ from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura, AcumulacionTie
 
 from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, mostrar_estrellas, mostrar_trofeos, porcentaje_tiempos, sumar_tiempos, mostrar_nivel, login_required, supervisor_required, revisar_nuevas_notificaciones, enviar_notificacion_link_request, enviar_notificacion_respuesta_lr, listar_asignaturas, listar_registro_notas
 
-from app.utils.notifications import Notification
+from app.utils.notifications import Notification, NotificationRepository
 
 from . import db
 
@@ -612,12 +612,32 @@ def register_routes(app):
             db.session.add(registro_notas)
             db.session.commit()
             
-            notification = Notification(id)
-            
+            repo = NotificationRepository(db.session)
+            notification = Notification(id, repo)
             asignatura_nombre = Asignatura.query.get(asignatura).nombre
             notification.notify_grade(nota, asignatura_nombre, 'add')
+
+            return redirect(url_for("grade_record", id=id))
         
         asignaturas = listar_asignaturas(id)
         registro_notas = listar_registro_notas(id)
 
         return render_template('s_grade_record.html', asignaturas=asignaturas, registro_notas=registro_notas)
+
+    @app.route("/mark_paid", methods=["POST"])
+    @supervisor_required
+    def mark_paid():
+        data = request.get_json()
+        registro_id = data.get('grade_to_pay')
+        usuario_id = data.get('usuario_id')
+        
+        registro = RegistroNotas.query.get_or_404(registro_id)
+        registro.estado = True
+        nota = registro.nota
+        asignatura = registro.asignatura.nombre
+        
+        repo = NotificationRepository(db.session)
+        notification = Notification(usuario_id, repo)
+        notification.notify_grade(nota, asignatura, 'pay')
+        
+        return redirect(url_for("grade_record", id=usuario_id))

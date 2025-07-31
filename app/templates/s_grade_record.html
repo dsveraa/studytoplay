@@ -33,6 +33,24 @@
 
 </div>
 
+<!-- Mark grade as paid -->
+<div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
+    <h3 class="mb-4">Pay</h3>
+    <select class="form-control mb-2 grade-to-pay-select" name="grade_to_pay" id="grade_to_pay" required>
+        <!-- menu -->
+        <option value="">Select a grade to mark as paid...</option>
+            {% for registro in registro_notas %}
+                {% if not registro.estado %}
+                    <option value="{{ registro.id }}" data-usuario_id="{{ registro.usuario_id }}">{{ registro.asignatura.nombre | capitalize }}: {{ registro.tema | capitalize }}: [{{ registro.nota }}]</option>
+                {% endif %}
+            {% endfor %}
+    </select>
+    <div class="d-flex justify-content-end">
+        <button class="btn custom-btn-2" onclick="markPaid()">Mark as paid</button>
+    </div>
+</div>
+
+<!-- Best grades table -->
 <div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
     <h3 class="mb-4">Best Grades</h3>
 
@@ -48,7 +66,7 @@
         <tbody>
             {% for registro in registro_notas %}
                 <tr>
-                    <td>{{ registro.asignatura.nombre | capitalize }}</td>
+                    <td style="word-break: break-word;">{{ registro.asignatura.nombre | capitalize }}</td>
                     <td style="word-break: break-word;">{{ registro.tema }}</td>
                     <td>{{ registro.nota }}</td>
                     <td>{{ "Paid" if registro.estado == true else "Unpaid" }}</td>
@@ -59,6 +77,27 @@
 </div>
 <br><br>
 <script>
+function markPaid() {
+    const select = document.querySelector('.grade-to-pay-select');
+    const selectedOption = select.options[select.selectedIndex];
+    const registroId = selectedOption.value;
+    const usuarioId = selectedOption.dataset.usuario_id;
+
+    fetch("/mark_paid", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            grade_to_pay: registroId,
+            usuario_id: usuarioId
+        }),
+    }).then(response => {
+        if (response.redirected) {
+            window.location.href = response.url;
+        }
+    });
+}
+
+
 function submitGrade() {
     let asignatura = document.getElementById("asignatura").value
     let tema = document.getElementById("tema").value
