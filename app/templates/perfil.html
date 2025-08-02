@@ -19,5 +19,13 @@
 </div>
 <br><br>
 {% endif %}
-
+<script>
+  if (window.location.search.includes("reload=true")) {
+    
+    const url = new URL(window.location.href)
+    url.searchParams.delete("reload")
+    window.history.replaceState({}, document.title, url.pathname)
+    window.location.reload()
+  }
+</script>
 {% endblock %}

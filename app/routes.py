@@ -317,12 +317,7 @@ def register_routes(app):
 
             db.session.commit()
             db.session.refresh(acumulacion_tiempo)
-            asignar_estrellas(usuario_id)
-            asignar_nivel(usuario_id)
-            asignar_trofeos(usuario_id)
-
             
-
             return jsonify({'redirect': url_for('perfil')})
         
         revisar_nuevas_notificaciones(usuario_id)
@@ -517,6 +512,9 @@ def register_routes(app):
         estrellas: List[int] = crear_plantilla_estrellas(cantidad_estrellas)
 
         revisar_nuevas_notificaciones(usuario_id)
+        asignar_nivel(usuario_id)
+        asignar_estrellas(usuario_id)
+        asignar_trofeos(usuario_id)
 
         return render_template(
             "perfil.html", 

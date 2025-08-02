@@ -111,21 +111,21 @@ def revisar_tiempo_total(id: int) -> float:
     return tiempo_total
 
 HORA = 3_600_000
-CHECKPOINT = HORA * 2
-TIEMPO_MAXIMO = CHECKPOINT * 5
-BONIFICACION = CHECKPOINT // 2 
+# HORA = 500
+CHECKPOINT = HORA * 2 # suma una estrella
+TIEMPO_MAXIMO = CHECKPOINT * 5 # pasa de nivel
+BONIFICACION = CHECKPOINT // 2  # resultado para aplicar multiplicador 
 
 def asignar_estrellas(id: int) -> int:
     tiempo_acumulado = revisar_acumulacion_tiempo(id)
-    tiempo = tiempo_acumulado.cantidad
-    print(f'{tiempo=}')
+    tiempo_ciclo = tiempo_acumulado.cantidad
+    print(f'{tiempo_ciclo=}')
     estrellas_obj = revisar_estrellas(id)
-    estrellas_iniciales = estrellas_obj.cantidad
     nivel_estrellas = [5, 4, 3, 2, 1]
 
 
     for estrellas in nivel_estrellas:
-        if tiempo >= CHECKPOINT * estrellas:
+        if tiempo_ciclo >= CHECKPOINT * estrellas:
             ''' CP * 5 = 36_000_000
                 CP * 4 = 28_800_000
                 CP * 3 = 21_600_000
@@ -135,7 +135,6 @@ def asignar_estrellas(id: int) -> int:
             estrellas_obj.cantidad = estrellas
             print(f'{estrellas=}')
             db.session.commit()
-            print(f'Has ganado una nueva estrella, ¡felicidades!, tienes {estrellas} en total.') if estrellas_iniciales < estrellas_obj.cantidad else None
             break
 
 
@@ -144,7 +143,7 @@ def asignar_nivel(id: int) -> int:
     nivel_obj = revisar_nivel(id)
     tiempo_obj = revisar_acumulacion_tiempo(id)
         
-    if estrellas_obj.cantidad == 5:
+    if estrellas_obj.cantidad > 4:
         estrellas_obj.cantidad = 0
         nuevo_nivel = nivel_obj.nivel + 1
         nivel_obj.nivel = nuevo_nivel
@@ -153,13 +152,13 @@ def asignar_nivel(id: int) -> int:
         # tiempo_total_obj.tiempo += BONIFICACION * nuevo_nivel
         db.session.commit()
         # return print(f'Has pasado a nivel {nivel_obj.nivel} y tienes una nueva bonificación de tiempo!')
-        return print(f'Has pasado a nivel {nivel_obj.nivel} !')
+        return print(f'Has pasado a nivel {nivel_obj.nivel}!') if nivel_obj.nivel < 4 else None
 
 def asignar_trofeos(id: int) -> int:
     nivel_obj = revisar_nivel(id)
     trofeos_obj = revisar_trofeos(id)
 
-    if nivel_obj.nivel == 4:
+    if nivel_obj.nivel > 3:
         trofeos_obj.cantidad += 1
         nivel_obj.nivel = 0
         db.session.commit()

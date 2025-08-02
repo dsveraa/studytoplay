@@ -183,7 +183,7 @@ async function sendData(date_inicio, date_fin, summary, time, subject_id) {
     })
     const data = await response.json()
     if (data.redirect) {
-      window.location.href = data.redirect
+      window.location.href = data.redirect + "?reload=true"
     }
   } catch (error) {
     console.error("Error al guardar los datos:", error)
