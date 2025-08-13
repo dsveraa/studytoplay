@@ -208,3 +208,10 @@ transition: width 0.5s ease-in-out;
 .topic-input {
     width: 100px;
 }
+
+.btn {
+    --bs-btn-font-size: 0.85rem;
+    --bs-btn-padding-x: 0.5rem;
+    --bs-btn-padding-y: 0.25rem;
+    --bs-btn-border-radius: 0.75rem;
+}

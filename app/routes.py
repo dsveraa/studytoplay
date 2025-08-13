@@ -639,3 +639,8 @@ def register_routes(app):
         notification.notify_grade(nota, asignatura, 'pay')
         
         return redirect(url_for("grade_record", id=usuario_id))
+
+    @app.route("/settings/<id>")
+    @login_required
+    def settings(id=None):
+        return jsonify({"status": "success"})

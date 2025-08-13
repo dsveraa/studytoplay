@@ -8,15 +8,16 @@
     <h3>Students</h3>
     <div class="list-group w-100 mt-3">
       {% for estudiante in estudiantes %}
-        <div class="d-flex list-group-item justify-content-between align-items-center">
+        <div class="d-flex list-group-item flex-column flex-sm-row justify-content-between align-items-sm-center">
           <div>
-            <strong>{{ estudiante.nombre }}</strong><br>
-            Status: {{ estudiante.estado | capitalize }}<br>
-            Current time: {{ estudiante.tiempo | ms_to_hms }}
+            <div><strong>{{ estudiante.nombre | capitalize }}</strong></div>
+            <div>Status: {{ estudiante.estado | capitalize }}</div>
+            <div>Current time: {{ estudiante.tiempo | ms_to_hms }}</div>
           </div>
-          <div class="d-flex gap-2">
-            <a href="{{ url_for('student_info', id=estudiante.id) }}" class="btn custom-btn-2">Records</a>
-            <a href="{{ url_for('grade_record', id=estudiante.id) }}" class="btn custom-btn-2">Best Grades</a>
+          <div class="d-flex gap-2 my-2 my-sm-0 align-items-center">
+            <a href="{{ url_for('student_info', id=estudiante.id) }}" >Records</a>
+            <a href="{{ url_for('grade_record', id=estudiante.id) }}" >Best Grades</a>
+            <a href="{{ url_for('settings', id=estudiante.id) }}">Settings</a>
           </div>
         </div>
       {% endfor %}
@@ -24,5 +25,5 @@
     <a href="{{ url_for('link_request')}}" class="btn custom-btn-3 mt-4">Link new student</a>
   </div>
 </div>
-
+<br><br>
 {% endblock %}
