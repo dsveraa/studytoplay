@@ -20,7 +20,7 @@ class NotificationRepository:
         self.db.commit()
 
 
-class NotificationMessageFactory:
+class NotifyGradeMessageFactory:
     @staticmethod
     def create(action, grade, subject):
         messages = {
@@ -38,7 +38,7 @@ class Notification:
         self.repo = repo
 
     def notify_grade(self, grade, subject, action):
-        message = NotificationMessageFactory.create(action, grade, subject)
+        message = NotifyGradeMessageFactory.create(action, grade, subject)
         self.repo.save_notification(self.id, message)
         self.repo.activate_alert(self.id)
         self.repo.commit()

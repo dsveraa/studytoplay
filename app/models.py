@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float, DateTime, Text, ForeignKey, UniqueConstraint, Boolean
+from sqlalchemy import Column, Integer, String, Float, DateTime, Text, ForeignKey, UniqueConstraint, Boolean, text
 from sqlalchemy.orm import relationship
 from . import db
 from datetime import datetime, timezone
@@ -45,6 +45,8 @@ class Usuario(db.Model):
     estrellas = relationship('Estrella', backref='usuario')
     asignaturas = relationship('Asignatura', backref='usuario')
     rol = relationship('Rol', backref='usuario')
+    incentivos = relationship("Incentivos", backref="usuario")
+    restricciones = relationship("Restricciones", backref="usuario")
 
 class Rol(db.Model):
     __tablename__ = 'roles'
@@ -197,3 +199,49 @@ class RegistroNotas(db.Model):
     estado = Column(Boolean, default=False, nullable=False)
 
     asignatura = relationship('Asignatura', back_populates='registro_nota')
+
+class Incentivos(db.Model):
+    __tablename__ = "incentivos"
+    
+    id = Column(Integer, primary_key=True)
+    usuario_id = Column(Integer, ForeignKey('usuarios.id'), nullable=False)
+    condicion = Column(String, nullable=False)
+
+class Restricciones(db.Model):
+    __tablename__ = "restricciones"
+    
+    id = Column(Integer, primary_key=True)
+    usuario_id = Column(Integer, ForeignKey('usuarios.id'), nullable=False)
+    restriccion = Column(String, nullable=False)
+
+class Monedas(db.Model):
+    __tablename__ = "monedas"
+    
+    id = Column(Integer, primary_key=True)
+    nombre = Column(String, unique=True, nullable=False)
+    simbolo_id = Column(Integer, ForeignKey("simbolos.id"), nullable=False)
+
+    simbolo = relationship("Simbolos", backref="monedas")
+
+class Simbolos(db.Model):
+    __tablename__ = "simbolos"
+    
+    id = Column(Integer, primary_key=True)
+    simbolo = Column(String, nullable=False)
+
+class Settings(db.Model):
+    __tablename__ = "settings"
+
+    id = Column(Integer, primary_key=True)
+    usuario_id = Column(Integer, ForeignKey('usuarios.id'), nullable=False, unique=True)
+    
+    incentivo_notas = Column(Boolean, server_default=text("false"), nullable=False)
+    pais_id = Column(Integer, ForeignKey("pais.id"), server_default=text("1"), nullable=False)
+
+    pais = relationship("Pais", backref="settings")
+
+class Pais(db.Model):
+    __tablename__ = "pais"
+
+    id = Column(Integer, primary_key=True)
+    nombre = Column(String, nullable=False)

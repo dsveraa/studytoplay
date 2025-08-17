@@ -56,3 +56,4 @@ def elegir_sistema_calificaciones(sistema: str, *filtros) -> list:
 
 print(elegir_sistema_calificaciones("USA", ">B"))
 print(elegir_sistema_calificaciones("CL", ">=6.0", "=7.0"))
+print(elegir_sistema_calificaciones("GER", "<=3", "=1"))

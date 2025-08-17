@@ -304,7 +304,7 @@ def register_routes(app):
             acumulacion_tiempo = AcumulacionTiempo.query.filter_by(usuario_id=usuario_id).first()
             
             if tiempo:
-                tiempo.tiempo += time
+                tiempo.tiempo += (time * 1.5)
             else:
                 tiempo = Tiempo(usuario_id=usuario_id, tiempo=time)
                 db.session.add(tiempo)
@@ -640,7 +640,24 @@ def register_routes(app):
         
         return redirect(url_for("grade_record", id=usuario_id))
 
+    @app.route("/settings/")
     @app.route("/settings/<id>")
     @login_required
     def settings(id=None):
-        return jsonify({"status": "success"})
+        return render_template("s_settings.html")
+    
+    @app.route("/incentivo_toggle", methods=["POST"])
+    def incentivo_toggle():
+        from app.utils.settings import UserSettings
+        
+        data = request.get_json()
+        estudiante_id = data.get('estudiante_id')
+
+        if not estudiante_id:
+            return jsonify({"error": "estudiante_id missing"}), 400
+
+        settings = UserSettings(estudiante_id)
+        result = settings.incentivo_toggle()
+        # result = settings.pais()
+
+        return jsonify({"success": True, "result": result})
