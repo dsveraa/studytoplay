@@ -85,7 +85,17 @@ stopBtn.addEventListener("click", () => {
     },
   }).then((result) => {
     if (result.isConfirmed) {
-      const actividad = result.value 
+      const actividad = result.value
+      
+      Swal.fire({
+        title: "Saving data...",
+        text: "Please wait",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        didOpen: () => {
+          Swal.showLoading()
+        }
+      })
       
       countdownRunning = false
       stopCountdown()
