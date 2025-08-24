@@ -7,9 +7,11 @@ from sqlalchemy.orm import aliased
 
 from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura, AcumulacionTiempo, Rol, SolicitudVinculacion, SupervisorEstudiante, EstadoUsuario, NuevaNotificacion, Notificaciones, RegistroNotas
 
-from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, mostrar_estrellas, mostrar_trofeos, porcentaje_tiempos, sumar_tiempos, mostrar_nivel, login_required, supervisor_required, revisar_nuevas_notificaciones, enviar_notificacion_link_request, enviar_notificacion_respuesta_lr, listar_asignaturas, listar_registro_notas
+from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, mostrar_estrellas, mostrar_trofeos, porcentaje_tiempos, sumar_tiempos, mostrar_nivel, login_required, relation_required, supervisor_required, revisar_nuevas_notificaciones, enviar_notificacion_link_request, enviar_notificacion_respuesta_lr, listar_asignaturas, listar_registro_notas
 
+from app.utils.settings import UserSettings
 from app.utils.notifications import Notification, NotificationRepository
+from app.utils.incentives_restrictions import IncentiveRestrictionRepository, IncentiveManagement
 
 from . import db
 
@@ -22,6 +24,8 @@ from decouple import config
 
 from user_agents import parse
 import logging
+
+import time
 
 SECRET_KEY = config('SECRET_KEY')
 
@@ -37,12 +41,8 @@ def register_routes(app):
     
     @app.route('/student_info/<id>', methods=['GET'])
     @supervisor_required
+    @relation_required
     def student_info(id):
-        supervisor_id = session.get('usuario_id')
-        relation = SupervisorEstudiante.query.filter_by(supervisor_id=supervisor_id, estudiante_id=id).first()
-
-        if not relation:
-            return "Relation not found"
         
         activity_obj = Estudio.query.filter_by(usuario_id=id).order_by(desc(Estudio.id)).limit(5).all()
         use_obj = Uso.query.filter_by(usuario_id=id).order_by(desc(Uso.id)).limit(10).all()
@@ -66,10 +66,8 @@ def register_routes(app):
         return jsonify({"status": "ok"}), 200
 
     @app.route('/switch_status/<status>/', methods=['POST'])
+    @login_required
     def switch_status(status: str):
-        if 'usuario_id' not in session:
-            return render_template("login.html")
-        
         usuario_id = session['usuario_id']
 
         estado_existente = EstadoUsuario.query.filter_by(usuario_id=usuario_id).first()
@@ -443,11 +441,16 @@ def register_routes(app):
                     entrada_default = NuevaNotificacion(usuario_id=usuario_id, estado=False)
                     db.session.add(entrada_default)
                     db.session.commit()
+                
+                if "supervisor_id" in session:
+                    print("supervisor_id existe en session")
+                else:
+                    print("No existe supervisor_id en session")
 
                 return redirect(url_for("home"))
             else:
                 return "Correo o contraseña incorrectos."
-                
+
         return render_template("login.html")
 
     @app.route("/records")
@@ -542,6 +545,9 @@ def register_routes(app):
         usuario_id = session.get('usuario_id')
         supervisor = Usuario.query.join(Rol).filter(Usuario.id == usuario_id, Rol.nombre == "supervisor").first()
 
+        settings = UserSettings(usuario_id)
+        settings.information()
+        
         if supervisor:
             session["supervisor_id"] = usuario_id
 
@@ -591,6 +597,7 @@ def register_routes(app):
     
     @app.route('/grade_record/<id>', methods=['GET', 'POST'])
     @supervisor_required
+    @relation_required
     def grade_record(id):
         if request.method == 'POST':
             data = request.get_json()
@@ -640,16 +647,36 @@ def register_routes(app):
         
         return redirect(url_for("grade_record", id=usuario_id))
 
-    @app.route("/settings/")
     @app.route("/settings/<id>")
-    @login_required
+    @supervisor_required
+    @relation_required
     def settings(id=None):
-        return render_template("s_settings.html")
+        from app.utils.settings import get_countries
+        from app.utils.sistemas_notas import sistemas
+        
+        repo = IncentiveRestrictionRepository(db.session)
+        management = IncentiveManagement(id, repo)
+
+        incentivos, restricciones = management.list_information()
+
+        settings = UserSettings(id)
+        incentivo_notas = settings.consultar_incentivo_notas()
+
+        lista_paises = get_countries()
+        pais_actual = settings.consultar_pais()
+
+        return render_template("s_settings.html", 
+                               incentivo_notas=incentivo_notas, 
+                               estudiante_id=id, 
+                               paises=lista_paises,
+                               pais_actual=pais_actual,
+                               incentivos=incentivos,
+                               restricciones=restricciones,
+                               sistemas=sistemas
+                               )
     
     @app.route("/incentivo_toggle", methods=["POST"])
     def incentivo_toggle():
-        from app.utils.settings import UserSettings
-        
         data = request.get_json()
         estudiante_id = data.get('estudiante_id')
 
@@ -657,7 +684,112 @@ def register_routes(app):
             return jsonify({"error": "estudiante_id missing"}), 400
 
         settings = UserSettings(estudiante_id)
-        result = settings.incentivo_toggle()
-        # result = settings.pais()
+        result = settings.incentivo_toggle()        
 
         return jsonify({"success": True, "result": result})
+    
+    @app.route("/change_country", methods=["POST"])
+    def change_country():
+        data = request.get_json()
+        estudiante_id = data.get('estudiante_id')
+        pais_id = data.get('pais_id')
+
+        if not estudiante_id:
+            return jsonify({"error": "estudiante_id missing"}), 400
+        
+        if not pais_id:
+            return jsonify({"error": "pais_id missing"}), 400
+        
+        settings = UserSettings(estudiante_id)
+        result = settings.cambiar_pais(pais_id)
+
+        return jsonify({"success": True, "result": result})
+    
+    @app.route("/add_incentive", methods=["POST"])
+    def add_incentive():
+        from app.models import Incentivos
+
+        data = request.get_json()
+        estudiante_id = data.get('estudiante_id')
+        monto = data.get('monto')
+        nota = data.get('nota')
+        simbolo = data.get('simbolo')
+        moneda = data.get('moneda')
+
+        if not estudiante_id:
+            return jsonify({"error": "estudiante_id missing"}), 400
+        
+        if not monto:
+            return jsonify({"error": "monto missing"}), 400
+        
+        if not nota:
+            return jsonify({"error": "nota missing"}), 400
+        
+        if not simbolo:
+            return jsonify({"error": "simbolo missing"}), 400
+        
+        if not moneda:
+            return jsonify({"error": "moneda missing"}), 400
+        
+        repo = IncentiveRestrictionRepository(db.session)
+        incentive = IncentiveManagement(estudiante_id, repo)
+        incentive.add_incentive(monto, nota, simbolo, moneda)
+
+        ultimo = Incentivos.query.filter_by(usuario_id=estudiante_id).order_by(Incentivos.id.desc()).first()
+
+        return jsonify({"id": ultimo.id, "incentivo": ultimo.condicion }), 200
+
+            
+    @app.route("/add_restriction", methods=["POST"])
+    def add_restriction():
+        from app.models import Restricciones
+
+        data = request.get_json()
+        estudiante_id = data.get('estudiante_id')
+        mensaje = data.get('mensaje')
+
+        if not estudiante_id:
+            return jsonify({"error": "estudiante_id missing"}), 400
+        
+        if not mensaje:
+            return jsonify({"error": "mensaje missing"}), 400
+
+        repo = IncentiveRestrictionRepository(db.session)
+        incentive = IncentiveManagement(estudiante_id, repo)
+        incentive.add_restriction(mensaje)
+
+        ultima = Restricciones.query.filter_by(usuario_id=estudiante_id).order_by(Restricciones.id.desc()).first()
+
+        return jsonify({"id": ultima.id, "restriccion": ultima.restriccion}), 200
+    
+    @app.route("/delete_incentive", methods=["POST"])
+    def delete_incentive():
+        data = request.get_json()
+        estudiante_id = data.get('estudiante_id')
+        incentive_id = data.get('incentive_id')
+
+        repo = IncentiveRestrictionRepository(db.session)
+        incentive = IncentiveManagement(estudiante_id, repo)
+        incentive.remove_incentive(incentive_id)
+        
+        return jsonify({"success": "ok"}), 200
+    
+    @app.route("/delete_restriction", methods=["POST"])
+    def delete_restriction():
+        data = request.get_json()
+        estudiante_id = data.get('estudiante_id')
+        restriction_id = data.get('restriction_id')
+
+        repo = IncentiveRestrictionRepository(db.session)
+        incentive = IncentiveManagement(estudiante_id, repo)
+        incentive.remove_restriction(restriction_id)
+        
+        return jsonify({"success": "ok"}), 200
+    
+    @app.route("/debug_session")
+    def debug_session():
+        return dict(session)
+    
+    @app.route("/dom")
+    def dom():
+        return render_template("dom.html")

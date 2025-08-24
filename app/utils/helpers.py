@@ -3,16 +3,32 @@ from app.models import Nivel, Trofeo, Premio, Usuario, Estrella, AcumulacionTiem
 
 from .. import db
 from functools import wraps
-from flask import session, jsonify, url_for
+from flask import session, jsonify, url_for, abort
 from sqlalchemy.orm import aliased
 from sqlalchemy import desc
 from app.utils.debugging import printn
+
+def relation_required(f):
+    @wraps(f)
+    def wrapped(*args, **kwargs):
+        supervisor_id = session.get("usuario_id")
+        estudiante_id = kwargs.get("id")
+
+        relacion = SupervisorEstudiante.query.filter_by(
+            supervisor_id=supervisor_id,
+            estudiante_id=estudiante_id
+        ).first()
+
+        if not relacion:
+            return jsonify({'status': 'unauthorized', 'reason': 'relation required'}), 401
+        return f(*args, **kwargs)
+    return wrapped
 
 def login_required(f):
     @wraps(f)
     def wrapped(*args, **kwargs):
         if 'usuario_id' not in session:
-            return jsonify({'status': 'unauthorized'}), 401
+            return jsonify({'status': 'unauthorized', 'reason': 'login required'}), 401
         return f(*args, **kwargs)
     return wrapped
 
@@ -20,7 +36,7 @@ def supervisor_required(f):
     @wraps(f)
     def wrapped(*args, **kwargs):
         if 'supervisor_id' not in session:
-            return jsonify({'status': 'unauthorized'}), 401
+            return jsonify({'status': 'unauthorized', 'reason': 'supervisor required'}), 401
         return f(*args, **kwargs)
     return wrapped
 

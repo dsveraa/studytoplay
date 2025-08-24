@@ -4,32 +4,280 @@
 
 {% block content %}
 
-<button type="button" onclick="fetchIncentivoToggle(1)">Incentivo Toggle</button>
+<style>
+  .tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 250px;
+    background-color: rgb(49, 49, 49);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* arriba del icono */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s;
+    font-size: 14px;
+  }
+  
+  /* En desktop se muestra con hover */
+  .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  </style>
+
+<div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
+  <h1 class="mb-4">Settings</h1>
+  <div class="d-flex justify-content-start align-items-center gap-2 mb-2">
+    <label for="grade_incentive">Grade incentive</label>
+    
+    <input 
+    type="checkbox" 
+    id="grade_incentive" 
+    name="grade_incentive" 
+    value="1" 
+    onclick="fetchIncentivoToggle({{ estudiante_id }})" 
+    {% if incentivo_notas %}checked{% endif %}>
+
+    <div class="tooltip-container">
+      <iconify-icon id="infoIcon" icon="ic:twotone-info" width="20" height="20" style="display:flex; align-items:center;"></iconify-icon>
+      <span class="tooltip-text">Monetary reward system for results applying personalized criteria</span>
+    </div>
+  </div>
+
+  <div id="grade_incentive_section" style="{% if incentivo_notas %} display:block {% else %}display: none;{% endif %}">
+    
+    <div>
+      Country
+      <select id="pais_select" class="flex-shrink-1 select-dark" onchange="handlePaisChange(this)">
+        {% for pais in paises %}
+          <option 
+          value="{{ pais.id }}"
+          {% if pais.id == pais_actual %}selected{% endif %}
+          data-moneda="{{ pais.moneda }}"
+          data-simbolo="{{ pais.simbolo }}"
+          >
+            {{ pais.pais }}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="my-4"></div>
+
+    <h3>Incentives</h3>
+    <ul id="incentivos_ul">
+        {% if incentivos %}
+            {% for item in incentivos %}
+            <li data-id="{{ item.id }}">
+                <div class="d-flex justify-content-start gap-2 align-content-center">
+                    <div>{{ item.incentivo }}</div>
+                    <iconify-icon icon="ic:baseline-delete" width="20" height="20"
+                        onclick="deleteIncentive({{ estudiante_id }}, {{ item.id }})"></iconify-icon>
+                </div>
+            </li>
+            {% endfor %}
+        {% else %}
+            <li id="no_incentives">There is no incentives yet.</li>
+        {% endif %}
+    </ul>
+
+    <h3>Restrictions</h3>
+    <ul id="restricciones_ul">
+      {% if restricciones %}
+        {% for item in restricciones %}
+          <li data-id="{{ item.id }}">
+            <div class="d-flex justify-content-start gap-2 align-content-center">
+              <div>{{item.restriccion}}</div> 
+              <iconify-icon icon="ic:baseline-delete" width="20" height="20" onclick="deleteRestriction({{ estudiante_id }}, {{ item.id }})"></iconify-icon>
+            </div>
+          </li>
+        {% endfor %}
+      {% else %}
+          <li id="no_restrictions">There is no restrictions yet.</li>
+      {% endif %}
+    </ul>
+    
+    <div class="my-4"></div>
+    
+    <h3>Add incentive</h3>
+    <div class="d-flex flex-nowrap gap-2 align-items-center">
+      
+      <!-- monto -->
+      <input type="text" id="monto" class="form-control flex-shrink-1" style="min-width:60px" placeholder="">
+      
+      <!-- texto -->
+      <div class="text-nowrap"><span id="moneda_display"></span> for grades >=</div>
+      
+      <!-- monto -->
+      <select id="grade" class="select-dark"></select>
+
+      <!-- enviar -->
+      <button id="add_incentive_btn" class="btn custom-btn-2" onclick="agregarIncentivoUI(...incentiveVars())">Add</button>
+    </div>
+
+    <div class="my-4"></div>
+    
+    <h3>Add restriction</h3>
+    <div class="d-flex gap-2 align-items-center">
+      <input id="restriccion_input" type="text" class="form-control flex-shrink-1">
+      <button class="btn custom-btn-2" onclick="agregarRestriccionUI(...restrictionVars())">Add</button>
+    </div>
+  </div>
+</div>
+<br><br>
+
+<script src="{{ url_for('static', filename='settings_fetch.js') }}"></script>
 
 <script>
-  async function fetchIncentivoToggle(estudianteId) {
-    try {
-      const response = await fetch("/incentivo_toggle", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ estudiante_id: estudianteId })
-      })
-      
-      if (!response.ok) {
-        throw new Error(`Error HTTP: ${response.status}`)
-      }
+  
+const selectPais = document.getElementById("pais_select")
+const monedaDisplay = document.getElementById("moneda_display")
+const simboloDisplay = document.getElementById("monto")
+const selectSistema = document.getElementById("grade")
 
-      const data = await response.json()
-      console.log("Respuesta del servidor:", data)
-      return data
-    
-    } catch (error) {
-    console.error("Error al consultar los datos", error)
-    return null
+const sistemas = {{ sistemas|tojson }}
+
+async function agregarRestriccionUI(estudianteId, mensaje) {
+    const data = await addRestriction(estudianteId, mensaje)
+
+    if (!data) return
+
+    const contenedor = document.getElementById("restricciones_ul")
+
+    const mensajeVacio = document.getElementById("no_restrictions")
+    if (mensajeVacio) mensajeVacio.remove()
+
+    const nuevaRestriccion = document.createElement("li")
+
+    nuevaRestriccion.setAttribute("data-id", data.id)
+
+    nuevaRestriccion.innerHTML = `
+        <div class="d-flex justify-content-start gap-2 align-content-center">
+            <div>${data.restriccion}</div>
+            <iconify-icon icon="ic:baseline-delete" width="20" height="20" 
+                onclick="deleteRestriction(${estudianteId}, ${data.id})">
+            </iconify-icon>
+        </div>
+    `
+
+    contenedor.appendChild(nuevaRestriccion)
+
+    document.getElementById("restriccion_input").value = ""
+}
+
+async function agregarIncentivoUI(estudianteId, monto, nota, simbolo, moneda) {
+    const data = await addIncentive(estudianteId, monto, nota, simbolo, moneda)
+
+    if (!data) return
+
+    const contenedor = document.getElementById("incentivos_ul")
+
+    const mensajeVacio = document.getElementById("no_incentives")
+    if (mensajeVacio) mensajeVacio.remove()
+
+    const nuevoIncentivo = document.createElement("li")
+
+    nuevoIncentivo.setAttribute("data-id", data.id)
+
+    nuevoIncentivo.innerHTML = `
+        <div class="d-flex justify-content-start gap-2 align-content-center">
+            <div>${data.incentivo}</div>
+            <iconify-icon icon="ic:baseline-delete" width="20" height="20" 
+                onclick="deleteIncentive(${estudianteId}, ${data.id})">
+            </iconify-icon>
+        </div>
+    `
+
+    contenedor.appendChild(nuevoIncentivo)
+
+    document.getElementById("monto").value = ""
+}
+
+function updateDisplay() {
+  const selected = selectPais.options[selectPais.selectedIndex]
+  monedaDisplay.textContent = selected.dataset.moneda
+  simboloDisplay.placeholder = selected.dataset.simbolo
+}
+
+function updateSistema() {
+  const paisId = selectPais.value
+  const sistema = sistemas[paisId]
+
+  selectSistema.innerHTML = ""
+  if (sistema) {
+    sistema.valores.forEach(val => {
+      const opt = document.createElement("option")
+      opt.value = val
+      opt.textContent = val
+      selectSistema.appendChild(opt)
+    })
   }
 }
+
+function handlePaisChange(select) {
+  updateDisplay()
+  updateSistema()
+
+  fetchCambiarPais({{ estudiante_id }}, select.value)
+}
+
+handlePaisChange(selectPais)
+
+
+document.getElementById("grade_incentive").addEventListener("change", function() {
+  const div = document.getElementById("grade_incentive_section")
+  div.style.display = this.checked ? "block" : "none"
+})
+
+const icon = document.getElementById("infoIcon")
+const tooltip = icon.nextElementSibling
+
+icon.addEventListener("click", () => {
+  if (tooltip.style.visibility === "visible") {
+    tooltip.style.visibility = "hidden"
+    tooltip.style.opacity = "0"
+  } else {
+    tooltip.style.visibility = "visible"
+    tooltip.style.opacity = "1"
+  }
+})
+
+document.addEventListener("click", (e) => {
+  if (!icon.parentElement.contains(e.target)) {
+    tooltip.style.visibility = "hidden"
+    tooltip.style.opacity = "0"
+  }
+})
+
+function incentiveVars() {
+  const estudianteId = {{ estudiante_id | tojson }}
+  const monto = document.getElementById('monto').value
+  const nota = document.getElementById('grade').value
+  const simbolo = document.getElementById('monto').placeholder
+  const moneda = document.getElementById('pais_select')
+    .options[document.getElementById('pais_select').selectedIndex]
+    .dataset.moneda
+
+  return [ estudianteId, monto, nota, simbolo, moneda ]
+}
+
+function restrictionVars() {
+  const estudianteId = {{ estudiante_id | tojson }}
+  const restriccion = document.getElementById("restriccion_input").value
+
+  return [estudianteId, restriccion]
+}
+        
 </script>
 
 {% endblock %}

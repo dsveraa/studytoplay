@@ -206,6 +206,8 @@ class Incentivos(db.Model):
     id = Column(Integer, primary_key=True)
     usuario_id = Column(Integer, ForeignKey('usuarios.id'), nullable=False)
     condicion = Column(String, nullable=False)
+    monto = Column(Float)
+    nota = Column(String)
 
 class Restricciones(db.Model):
     __tablename__ = "restricciones"
@@ -245,3 +247,6 @@ class Pais(db.Model):
 
     id = Column(Integer, primary_key=True)
     nombre = Column(String, nullable=False)
+    moneda_id = Column(ForeignKey("monedas.id"))
+
+    moneda = relationship("Monedas", backref="pais")

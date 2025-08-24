@@ -1,6 +1,6 @@
 import operator
 import re
-from sistemas import sistemas
+from sistemas_notas import sistemas
 
 OPERADORES = {
     ">=": operator.ge,
@@ -54,6 +54,6 @@ def elegir_sistema_calificaciones(sistema: str, *filtros) -> list:
         if any(f(item) if callable(f) else item == f for f in filtros_procesados)
     ]
 
-print(elegir_sistema_calificaciones("USA", ">B"))
-print(elegir_sistema_calificaciones("CL", ">=6.0", "=7.0"))
-print(elegir_sistema_calificaciones("GER", "<=3", "=1"))
+print(elegir_sistema_calificaciones(1, ">B"))
+print(elegir_sistema_calificaciones(11, ">=6.0", "=7.0"))
+print(elegir_sistema_calificaciones(6, "<=3", "=1"))

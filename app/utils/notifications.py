@@ -20,9 +20,9 @@ class NotificationRepository:
         self.db.commit()
 
 
-class NotifyGradeMessageFactory:
+class NotifyMessageFactory:
     @staticmethod
-    def create(action, grade, subject):
+    def create_grade_message(action, grade, subject):
         messages = {
             "add": f"You're about to receive a prize for your <b>{grade}</b> in <b>{subject.capitalize()}</b>!",
             "pay": f"You have been rewarded for a grade of <b>{grade}</b> in <b>{subject.capitalize()}</b>!",
@@ -38,7 +38,7 @@ class Notification:
         self.repo = repo
 
     def notify_grade(self, grade, subject, action):
-        message = NotifyGradeMessageFactory.create(action, grade, subject)
+        message = NotifyMessageFactory.create_grade_message(action, grade, subject)
         self.repo.save_notification(self.id, message)
         self.repo.activate_alert(self.id)
         self.repo.commit()
