@@ -16,10 +16,11 @@
         </select>
     
         <input class="form-control mb-2" style="max-width: 160px;" type="date" id="fecha" placeholder="fecha">
-    
+        
+        <!-- select dinámico según criterios grade incentive -->
         <select class="form-control mb-2" style="max-width: 50px;" name="nota" id="nota">
-            {% for i in range(60, 71) %}
-              <option value="{{ i / 10 }}">{{ i / 10 }}</option>
+            {% for grade in best_grades %}
+              <option value="{{ grade }}">{{ grade }}</option>
             {% endfor %}
         </select>
     

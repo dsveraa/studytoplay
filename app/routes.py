@@ -11,7 +11,7 @@ from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos,
 
 from app.utils.settings import UserSettings
 from app.utils.notifications import Notification, NotificationRepository
-from app.utils.incentives_restrictions import IncentiveRestrictionRepository, IncentiveManagement
+from app.utils.grade_incentive import GradeIncentiveRepository, GradeIncentive
 
 from . import db
 
@@ -627,7 +627,16 @@ def register_routes(app):
         asignaturas = listar_asignaturas(id)
         registro_notas = listar_registro_notas(id)
 
-        return render_template('s_grade_record.html', asignaturas=asignaturas, registro_notas=registro_notas)
+        repo = GradeIncentiveRepository(db.session)
+        grade_incentive = GradeIncentive(id, repo)
+        best_grades = grade_incentive.filter_grades()
+        print(best_grades)
+
+        return render_template('s_grade_record.html', 
+                               asignaturas=asignaturas, 
+                               registro_notas=registro_notas,
+                               best_grades=best_grades
+                               )
 
     @app.route("/mark_paid", methods=["POST"])
     @supervisor_required
@@ -654,8 +663,8 @@ def register_routes(app):
         from app.utils.settings import get_countries
         from app.utils.sistemas_notas import sistemas
         
-        repo = IncentiveRestrictionRepository(db.session)
-        management = IncentiveManagement(id, repo)
+        repo = GradeIncentiveRepository(db.session)
+        management = GradeIncentive(id, repo)
 
         incentivos, restricciones = management.list_information()
 
@@ -731,9 +740,9 @@ def register_routes(app):
         if not moneda:
             return jsonify({"error": "moneda missing"}), 400
         
-        repo = IncentiveRestrictionRepository(db.session)
-        incentive = IncentiveManagement(estudiante_id, repo)
-        incentive.add_incentive(monto, nota, simbolo, moneda)
+        repo = GradeIncentiveRepository(db.session)
+        grade_incentive = GradeIncentive(estudiante_id, repo)
+        grade_incentive.add_incentive(monto, nota, simbolo, moneda)
 
         ultimo = Incentivos.query.filter_by(usuario_id=estudiante_id).order_by(Incentivos.id.desc()).first()
 
@@ -754,9 +763,9 @@ def register_routes(app):
         if not mensaje:
             return jsonify({"error": "mensaje missing"}), 400
 
-        repo = IncentiveRestrictionRepository(db.session)
-        incentive = IncentiveManagement(estudiante_id, repo)
-        incentive.add_restriction(mensaje)
+        repo = GradeIncentiveRepository(db.session)
+        grade_incentive = GradeIncentive(estudiante_id, repo)
+        grade_incentive.add_restriction(mensaje)
 
         ultima = Restricciones.query.filter_by(usuario_id=estudiante_id).order_by(Restricciones.id.desc()).first()
 
@@ -768,9 +777,9 @@ def register_routes(app):
         estudiante_id = data.get('estudiante_id')
         incentive_id = data.get('incentive_id')
 
-        repo = IncentiveRestrictionRepository(db.session)
-        incentive = IncentiveManagement(estudiante_id, repo)
-        incentive.remove_incentive(incentive_id)
+        repo = GradeIncentiveRepository(db.session)
+        grade_incentive = GradeIncentive(estudiante_id, repo)
+        grade_incentive.remove_incentive(incentive_id)
         
         return jsonify({"success": "ok"}), 200
     
@@ -780,9 +789,9 @@ def register_routes(app):
         estudiante_id = data.get('estudiante_id')
         restriction_id = data.get('restriction_id')
 
-        repo = IncentiveRestrictionRepository(db.session)
-        incentive = IncentiveManagement(estudiante_id, repo)
-        incentive.remove_restriction(restriction_id)
+        repo = GradeIncentiveRepository(db.session)
+        grade_incentive = GradeIncentive(estudiante_id, repo)
+        grade_incentive.remove_restriction(restriction_id)
         
         return jsonify({"success": "ok"}), 200
     
