@@ -1,28 +1,5 @@
 from app.models import Settings
-from app.models import Pais
-from app.models import Monedas
-
 from .. import db
-from sqlalchemy.orm import joinedload
-
-
-def get_countries():
-    countries = (
-        Pais.query
-        .options(
-            joinedload(Pais.moneda).joinedload(Monedas.simbolo)
-        )
-        .all()
-    )
-    return [
-        {
-            "id": pais.id,
-            "pais": pais.nombre,
-            "moneda": pais.moneda.nombre,
-            "simbolo": pais.moneda.simbolo.simbolo,
-        }
-        for pais in countries
-    ]
 
 
 class UserSettings:
@@ -41,7 +18,10 @@ class UserSettings:
             self.message = "User Settings created"
             
     def information(self):
-        print(self.message)
+        return self.message
+    
+    def get_country(self):
+        return self.user_settings.pais_id
     
     def incentivo_toggle(self):
         '''

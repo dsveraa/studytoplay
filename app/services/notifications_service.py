@@ -22,10 +22,10 @@ class NotificationRepository:
 
 class NotifyMessageFactory:
     @staticmethod
-    def create_grade_message(action, grade, subject):
+    def create_grade_message(action, grade, subject, amount, currency, symbol):
         messages = {
-            "add": f"You're about to receive a prize for your <b>{grade}</b> in <b>{subject.capitalize()}</b>!",
-            "pay": f"You have been rewarded for a grade of <b>{grade}</b> in <b>{subject.capitalize()}</b>!",
+            "add": f"You'll receive <b>{symbol}{amount} {currency}</b> for your <b>{grade}</b> in <b>{subject.capitalize()}</b>!",
+            "pay": f"You've been rewarded with <b>{symbol}{amount} {currency}</b> for a grade of <b>{grade}</b> in <b>{subject.capitalize()}</b>!",
         }
         if action not in messages:
             raise ValueError("Invalid action. Expected 'add' or 'pay'.")
@@ -37,8 +37,8 @@ class Notification:
         self.id = id
         self.repo = repo
 
-    def notify_grade(self, grade, subject, action):
-        message = NotifyMessageFactory.create_grade_message(action, grade, subject)
+    def notify_grade(self, grade, subject, action, amount, currency, symbol):
+        message = NotifyMessageFactory.create_grade_message(action, grade, subject, amount, currency, symbol)
         self.repo.save_notification(self.id, message)
         self.repo.activate_alert(self.id)
         self.repo.commit()

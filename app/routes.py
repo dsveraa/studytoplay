@@ -9,16 +9,16 @@ from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura, AcumulacionTie
 
 from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, mostrar_estrellas, mostrar_trofeos, porcentaje_tiempos, sumar_tiempos, mostrar_nivel, login_required, relation_required, supervisor_required, revisar_nuevas_notificaciones, enviar_notificacion_link_request, enviar_notificacion_respuesta_lr, listar_asignaturas, listar_registro_notas
 
-from app.utils.settings import UserSettings
-from app.utils.notifications import Notification, NotificationRepository
-from app.utils.grade_incentive import GradeIncentiveRepository, GradeIncentive
+from app.services.settings_service import UserSettings
+from app.services.notifications_service import Notification, NotificationRepository
+from app.services.grade_incentive_service import GradeIncentiveRepository, GradeIncentive, get_currency_data
 
 from . import db
 
 
 from pprint import pprint
 from typing import List, Tuple, Dict
-from app.utils.debugging import printn
+from app.utils.debugging_utils import printn
 
 from decouple import config
 
@@ -615,6 +615,7 @@ def register_routes(app):
     @supervisor_required
     @relation_required
     def grade_record(id):
+        
         if request.method == 'POST':
             data = request.get_json()
             
@@ -632,11 +633,20 @@ def register_routes(app):
                 )
             db.session.add(registro_notas)
             db.session.commit()
-            
+
+            asignatura_nombre = Asignatura.query.get(asignatura).nombre
+
+            amount, currency, symbol = get_currency_data(id, nota)
+
             repo = NotificationRepository(db.session)
             notification = Notification(id, repo)
-            asignatura_nombre = Asignatura.query.get(asignatura).nombre
-            notification.notify_grade(nota, asignatura_nombre, 'add')
+            notification.notify_grade(nota, 
+                                      asignatura_nombre, 
+                                      'add', 
+                                      amount,
+                                      currency,
+                                      symbol
+                                      )
 
             return redirect(url_for("grade_record", id=id))
         
@@ -646,14 +656,13 @@ def register_routes(app):
         repo = GradeIncentiveRepository(db.session)
         grade_incentive = GradeIncentive(id, repo)
         best_grades = grade_incentive.filter_grades()
-        print(best_grades)
 
         return render_template('s_grade_record.html', 
                                asignaturas=asignaturas, 
                                registro_notas=registro_notas,
                                best_grades=best_grades
                                )
-
+    
     @app.route("/mark_paid", methods=["POST"])
     @supervisor_required
     def mark_paid():
@@ -666,9 +675,11 @@ def register_routes(app):
         nota = registro.nota
         asignatura = registro.asignatura.nombre
         
+        amount, currency, symbol = get_currency_data(usuario_id, nota)
+
         repo = NotificationRepository(db.session)
         notification = Notification(usuario_id, repo)
-        notification.notify_grade(nota, asignatura, 'pay')
+        notification.notify_grade(nota, asignatura, 'pay', amount, currency, symbol)
         
         return redirect(url_for("grade_record", id=usuario_id))
 
@@ -676,8 +687,8 @@ def register_routes(app):
     @supervisor_required
     @relation_required
     def settings(id=None):
-        from app.utils.settings import get_countries
-        from app.utils.sistemas_notas import sistemas
+        from app.services.countries_service import get_countries
+        from app.utils.sistemas_notas_utils import sistemas
         
         repo = GradeIncentiveRepository(db.session)
         management = GradeIncentive(id, repo)

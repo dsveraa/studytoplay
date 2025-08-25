@@ -1,5 +1,31 @@
 from app.models import Incentivos, Restricciones, Settings
-from app.utils.filtro_notas import elegir_sistema_calificaciones as grade_system
+from app.utils.filtro_notas_utils import elegir_sistema_calificaciones as grade_system
+from app.services.countries_service import get_countries
+from app.services.settings_service import UserSettings
+
+
+def get_currency_data(id, nota):
+    incentivos_obj = Incentivos.query.filter_by(usuario_id=id).all()
+
+    incentivos = [{"monto": incentivo.monto, "nota": incentivo.nota} for incentivo in incentivos_obj]
+
+    def evaluar_monto(incentivos, nota):
+        for incentivo in incentivos:
+            if float(incentivo["nota"]) == float(nota):
+                return incentivo["monto"]
+
+    amount = evaluar_monto(incentivos, nota)
+
+    countries = get_countries()
+    user_settings = UserSettings(id)
+    pais_id = user_settings.get_country()
+
+    for country in countries:
+        if country["id"] == pais_id:
+            currency = country["moneda"]
+            symbol = country["simbolo"]
+    
+    return amount, currency, symbol
 
 class GradeIncentiveRepository:
     def __init__(self, db_session):
@@ -95,6 +121,6 @@ class GradeIncentive:
     
     def filter_grades(self):
         current_grades = self.repo.get_grades(self.id)
-        print(current_grades)
+        # print(current_grades)
         return self.repo.filter_grades(*current_grades)
         

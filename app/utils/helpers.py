@@ -6,7 +6,7 @@ from functools import wraps
 from flask import session, jsonify, url_for, abort
 from sqlalchemy.orm import aliased
 from sqlalchemy import desc
-from app.utils.debugging import printn
+from app.utils.debugging_utils import printn
 
 def relation_required(f):
     @wraps(f)
