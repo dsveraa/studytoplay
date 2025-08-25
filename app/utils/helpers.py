@@ -135,7 +135,7 @@ BONIFICACION = CHECKPOINT // 2  # resultado para aplicar multiplicador
 def asignar_estrellas(id: int) -> int:
     tiempo_acumulado = revisar_acumulacion_tiempo(id)
     tiempo_ciclo = tiempo_acumulado.cantidad
-    print(f'{tiempo_ciclo=}')
+    # print(f'{tiempo_ciclo=}')
     estrellas_obj = revisar_estrellas(id)
     nivel_estrellas = [5, 4, 3, 2, 1]
 
@@ -149,7 +149,7 @@ def asignar_estrellas(id: int) -> int:
                 CP * 1 = 7_200_000 
             '''
             estrellas_obj.cantidad = estrellas
-            print(f'{estrellas=}')
+            # print(f'{estrellas=}')
             db.session.commit()
             break
 

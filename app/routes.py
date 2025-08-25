@@ -1,11 +1,11 @@
 from flask import render_template, request, redirect, url_for, session, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime, timedelta
-from sqlalchemy import desc, and_
+from sqlalchemy import desc, and_, func
 from sqlalchemy.orm import aliased
 
 
-from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura, AcumulacionTiempo, Rol, SolicitudVinculacion, SupervisorEstudiante, EstadoUsuario, NuevaNotificacion, Notificaciones, RegistroNotas
+from app.models import Estudio, Tiempo, Uso, Usuario, Asignatura, AcumulacionTiempo, Rol, SolicitudVinculacion, SupervisorEstudiante, EstadoUsuario, NuevaNotificacion, Notificaciones, RegistroNotas, Incentivos, Restricciones
 
 from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, mostrar_estrellas, mostrar_trofeos, porcentaje_tiempos, sumar_tiempos, mostrar_nivel, login_required, relation_required, supervisor_required, revisar_nuevas_notificaciones, enviar_notificacion_link_request, enviar_notificacion_respuesta_lr, listar_asignaturas, listar_registro_notas
 
@@ -477,7 +477,7 @@ def register_routes(app):
                                asignaturas=asignaturas_obj, 
                                nombre_asignatura=nombre_asignatura
                                )
-    
+        
     @app.route("/perfil")
     def perfil():
         if "usuario_id" not in session:
@@ -485,50 +485,57 @@ def register_routes(app):
         
         usuario_id = session["usuario_id"]
         usuario_nombre = session["usuario_nombre"]
-        
-        estudios = Estudio.query.filter_by(usuario_id=usuario_id).order_by(desc(Estudio.id)).all()
 
-        if not estudios:
-            return render_template("perfil.html", id=usuario_id, nombre=usuario_nombre)
+        resultados = (
+            db.session.query(
+                Estudio.asignatura_id,
+                func.sum(
+                    func.extract('epoch', Estudio.fecha_fin - Estudio.fecha_inicio)
+                ).label("total_segundos")
+            )
+            .filter(Estudio.usuario_id == usuario_id)
+            .group_by(Estudio.asignatura_id)
+            .all()
+        )
 
-        asignaturas_obj = Asignatura.query.filter_by(usuario_id=usuario_id).all()
+        tiempos = {asig_id: tiempo for asig_id, tiempo in resultados}
 
-        asignaturas_nombre = [asignatura.nombre for asignatura in asignaturas_obj]
+        asignaturas = {a.id: a.nombre for a in Asignatura.query.filter_by(usuario_id=usuario_id)}
 
-        datos_estudios = [{
-            'fecha_inicio': estudio.fecha_inicio,
-            'fecha_fin': estudio.fecha_fin,
-            'asignatura': estudio.asignatura.nombre if estudio.asignatura else 'No se seleccionó',
-            'asignatura_id': estudio.asignatura_id
-            }
-            for estudio in estudios]
-        
-        total_tiempo_asignaturas = {asignatura: sumar_tiempos(datos_estudios, asignatura) for asignatura in asignaturas_nombre}
+        total = sum(tiempos.values())
 
-        tiempo_total = sum(total_tiempo_asignaturas.values(), timedelta())
-
-        porcentajes_asignaturas = {asignatura: f'{porcentaje_tiempos(total_tiempo_asignaturas[asignatura], tiempo_total):.1f}' for asignatura in asignaturas_nombre}
+        porcentajes_asignaturas = {
+            nombre: str(round((tiempos.get(asig_id, 0) / total * 100), 1)) if total > 0 else "0.0"
+            for asig_id, nombre in asignaturas.items()
+        }
 
         nivel: int = mostrar_nivel(usuario_id)
         trofeos: int = mostrar_trofeos(usuario_id)
         cantidad_estrellas: int = mostrar_estrellas(usuario_id)
         estrellas: List[int] = crear_plantilla_estrellas(cantidad_estrellas)
-
         revisar_nuevas_notificaciones(usuario_id)
         asignar_nivel(usuario_id)
         asignar_estrellas(usuario_id)
         asignar_trofeos(usuario_id)
 
+        incentivos_obj = Incentivos.query.filter_by(usuario_id=usuario_id).all()
+        restricciones_obj = Restricciones.query.filter_by(usuario_id=usuario_id).all()
+
+        incentivos = [incentivo.condicion for incentivo in incentivos_obj]
+        restricciones = [restriccion.restriccion for restriccion in restricciones_obj]
+
         return render_template(
             "perfil.html", 
             id=usuario_id, 
             nombre=usuario_nombre, 
-            estudios=estudios, 
-            asignaturas=asignaturas_obj, 
+            estudios=resultados, 
             porcentajes_asignaturas=porcentajes_asignaturas,
             nivel=nivel,
             estrellas=estrellas,
-            trofeos=trofeos)
+            trofeos=trofeos,
+            incentivos=incentivos,
+            restricciones=restricciones
+            )
 
     @app.route("/logout")
     def logout():
@@ -539,6 +546,8 @@ def register_routes(app):
 
     @app.route("/")
     def home():
+        from app.models import Settings
+
         if "usuario_id" not in session:
             return redirect(url_for("login"))
         
@@ -559,20 +568,27 @@ def register_routes(app):
                     Estudiante.id,
                     Estudiante.nombre,
                     Tiempo.tiempo,
-                    EstadoUsuario.estado
+                    EstadoUsuario.estado,
+                    Settings.incentivo_notas
                 )
                 .select_from(SupervisorEstudiante)
                 .join(Supervisor, Supervisor.id == SupervisorEstudiante.supervisor_id)
                 .join(Estudiante, Estudiante.id == SupervisorEstudiante.estudiante_id)
                 .outerjoin(Tiempo, Tiempo.usuario_id == SupervisorEstudiante.estudiante_id)
                 .outerjoin(EstadoUsuario, EstadoUsuario.usuario_id == SupervisorEstudiante.estudiante_id)
+                .outerjoin(Settings, Settings.usuario_id == Estudiante.id)
                 .filter(SupervisorEstudiante.supervisor_id == usuario_id)
                 .distinct(Estudiante.id)
             )
 
             estudiantes = [
-                {"id": eid, "nombre": nombre, "tiempo": tiempo, "estado": estado}
-                for eid, nombre, tiempo, estado in query.all()
+                {"id": eid, 
+                 "nombre": nombre, 
+                 "tiempo": tiempo, 
+                 "estado": estado, 
+                 "grade_incentive": incentivo_notas
+                 }
+                for eid, nombre, tiempo, estado, incentivo_notas in query.all()
             ]
             printn(estudiantes)
             return render_template("s_dashboard.html", estudiantes=estudiantes)

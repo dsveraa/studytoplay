@@ -1,0 +1,35 @@
+<div class="my-4"></div>
+
+<div class="d-flex flex-column align-items-start justify-content-around flex-sm-row align-items-sm-start">
+    <div>
+        <h4>Incentives</h4>
+        
+        {% if incentivos != [] %}
+        <ul class="no-indent">
+        {% for incentivo in incentivos %}
+            <li>
+                {{ incentivo }}
+            </li>
+        {% endfor %}
+        </ul>
+        {% else %}
+            There is no incentives yet.
+        {% endif %}
+    </div>
+    
+    <div>
+        <h4>Restrictions</h4>
+        
+        {% if restricciones != [] %}
+        <ul class="no-indent">
+        {% for restriccion in restricciones %}
+            <li>
+                {{ restriccion }}
+            </li>
+        {% endfor %}
+        </ul>
+        {% else %}
+            There is no restrictions yet.
+        {% endif %}
+    </div>
+</div>

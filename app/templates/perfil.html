@@ -17,6 +17,12 @@
     <h2 class="mb-4 text-center">Percentages of study</h2>
     {% include 'porcentajes.html'%}
 </div>
+  {% if incentivos != [] %}
+    <div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
+    <h2 class="mb-4 text-center">Grade Incentive</h2>
+    {% include 'incentivo_notas.html'%}
+    </div>
+  {% endif %}
 <br><br>
 {% endif %}
 <script>
