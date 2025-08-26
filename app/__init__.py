@@ -3,9 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from decouple import config
 from datetime import timedelta
-import markdown
-
 from werkzeug.middleware.proxy_fix import ProxyFix
+from app.utils.filters_utils import register_filters
+
 import logging
 
 
@@ -30,14 +30,12 @@ def create_app():
     db.init_app(app)
     Migrate(app, db)
 
+    register_filters(app)
+
     from . import models
     from .routes import register_routes
 
     register_routes(app)
-
-    @app.template_filter('markdown')
-    def markdown_filter(text):
-        return markdown.markdown(text or "", extensions=["extra", "fenced_code", "tables"])
 
     # Logging
     logging.basicConfig(
