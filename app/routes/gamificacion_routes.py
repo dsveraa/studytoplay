@@ -29,7 +29,7 @@ def add_incentive():
 
     ultimo = Incentivos.query.filter_by(usuario_id=estudiante_id).order_by(Incentivos.id.desc()).first()
 
-    return jsonify({"id": ultimo.id, "incentivo": ultimo.condicion }), 200
+    return jsonify({"id": ultimo.id, "incentivo": ultimo.condicion, "estudiante_id": estudiante_id }), 200
         
 @gamificacion_bp.route("/add_restriction", methods=["POST"])
 def add_restriction():
@@ -49,28 +49,20 @@ def add_restriction():
 
     ultima = Restricciones.query.filter_by(usuario_id=estudiante_id).order_by(Restricciones.id.desc()).first()
 
-    return jsonify({"id": ultima.id, "restriccion": ultima.restriccion}), 200
+    return jsonify({"id": ultima.id, "restriccion": ultima.restriccion, "estudiante_id": estudiante_id}), 201
 
-@gamificacion_bp.route("/delete_incentive", methods=["POST"])
-def delete_incentive():
-    data = request.get_json()
-    estudiante_id = data.get('estudiante_id')
-    incentive_id = data.get('incentive_id')
-
+@gamificacion_bp.route("/incentive/<int:estudiante_id>/<incentive_id>", methods=["DELETE"])
+def delete_incentive(estudiante_id, incentive_id):
     repo = GradeIncentiveRepository(db.session)
     grade_incentive = GradeIncentive(estudiante_id, repo)
     grade_incentive.remove_incentive(incentive_id)
     
-    return jsonify({"success": "ok"}), 200
+    return jsonify({"success": "ok"}), 204
 
-@gamificacion_bp.route("/delete_restriction", methods=["POST"])
-def delete_restriction():
-    data = request.get_json()
-    estudiante_id = data.get('estudiante_id')
-    restriction_id = data.get('restriction_id')
-
+@gamificacion_bp.route("/restriction/<int:estudiante_id>/<int:restriction_id>", methods=["DELETE"])
+def delete_restriction(estudiante_id, restriction_id):
     repo = GradeIncentiveRepository(db.session)
     grade_incentive = GradeIncentive(estudiante_id, repo)
     grade_incentive.remove_restriction(restriction_id)
     
-    return jsonify({"success": "ok"}), 200
+    return jsonify({"success": "ok"}), 204

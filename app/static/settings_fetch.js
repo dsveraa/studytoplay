@@ -1,71 +1,23 @@
 async function deleteRestriction(estudiante_id, restriction_id) {
-    try {
-        const response = await fetch("/delete_restriction", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ estudiante_id: estudiante_id, restriction_id: restriction_id })
-        })
+    const response = await fetch(`/restriction/${estudiante_id}/${restriction_id}`, {
+        method: "DELETE"
+    })
 
-        if (!response.ok) throw new Error(`Error HTTP: ${response.status}`)
-        
-        const li = document.querySelector(`#restricciones_ul li[data-id='${restriction_id}']`)
-        if (li) li.remove()
-
-        const contenedor = document.getElementById("restricciones_ul")
-        if (contenedor.children.length === 0) {
-            const mensaje = document.createElement("li")
-            mensaje.id = "no_restrictions"
-            mensaje.textContent = "There is no restrictions yet."
-            contenedor.appendChild(mensaje)
-        }
-
-        const data = await response.json()
-        console.log("Respuesta del servidor:", data)
-        return data
-    } catch (error) {
-        console.error("Error al consultar los datos", error)
-        return null
-    }
+    if (!response.ok) throw new Error(`Error HTTP: ${response.status}`)
+    return restriction_id
 }
 
 async function deleteIncentive(estudiante_id, incentive_id) {
-    try {
-        const response = await fetch("/delete_incentive", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ estudiante_id: estudiante_id, incentive_id: incentive_id })
-        })
-        
-        if (!response.ok) throw new Error(`Error HTTP: ${response.status}`)
-        
-        const li = document.querySelector(`#incentivos_ul li[data-id='${incentive_id}']`)
-        if (li) li.remove()
-
-        const contenedor = document.getElementById("incentivos_ul")
-        if (contenedor.children.length === 0) {
-            const mensaje = document.createElement("li")
-            mensaje.id = "no_incentives"
-            mensaje.textContent = "There is no incentives yet."
-            contenedor.appendChild(mensaje)
-        }
-        
-        const data = await response.json()
-        console.log("Respuesta del servidor:", data)
-        return data
-
-    } catch (error) {
-        console.error("Error al consultar los datos", error)
-        return null
-    }
+    const response = await fetch(`/incentive/${estudiante_id}/${incentive_id}`, {
+        method: "DELETE"
+    })
+    
+    if (!response.ok) throw new Error(`Error HTTP: ${response.status}`)
+    return incentive_id
 }
 
 async function addIncentive(estudianteId, monto, nota, simbolo, moneda) {
     try {
-        console.log(estudianteId, monto, nota, simbolo, moneda)
         const response = await fetch("/add_incentive", {
             method: "POST",
             headers: {
@@ -86,7 +38,6 @@ async function addIncentive(estudianteId, monto, nota, simbolo, moneda) {
         }
 
         const data = await response.json()
-        console.log("Respuesta del servidor:", data)
         return data
     } catch (error) {
         console.error("Error al consultar los datos", error)
@@ -113,7 +64,6 @@ async function addRestriction(estudianteId, mensaje) {
         }
 
         const data = await response.json()
-        console.log("Respuesta del servidor:", data)
         return data
     } catch (error) {
         console.error("Error al consultar los datos", error)
@@ -140,7 +90,6 @@ async function fetchCambiarPais(estudianteId, paisId) {
         }
 
         const data = await response.json()
-        console.log("Respuesta del servidor:", data)
         return data
     } catch (error) {
         console.error("Error al consultar los datos", error)
@@ -163,7 +112,6 @@ async function fetchIncentivoToggle(estudianteId) {
         }
 
         const data = await response.json()
-        console.log("Respuesta del servidor:", data)
         return data
 
     } catch (error) {

@@ -111,7 +111,7 @@
               <li data-id="{{ item.id }}">
                   <div class="d-flex justify-content-start gap-2 align-content-center">
                       <div>{{ item.incentivo }}</div>
-                      <iconify-icon class="cursor-pointer" icon="ic:baseline-delete" width="20" height="20" onclick="deleteIncentive({{ estudiante_id }}, {{ item.id }})"></iconify-icon>
+                      <iconify-icon class="cursor-pointer" icon="ic:baseline-delete" width="20" height="20" onclick="handleDeleteIncentive({{ estudiante_id }}, {{ item.id }})"></iconify-icon>
                   </div>
               </li>
               {% endfor %}
@@ -127,7 +127,7 @@
             <li data-id="{{ item.id }}">
               <div class="d-flex justify-content-start gap-2 align-content-center">
                 <div>{{item.restriccion}}</div> 
-                <iconify-icon class="cursor-pointer" icon="ic:baseline-delete" width="20" height="20" onclick="deleteRestriction({{ estudiante_id }}, {{ item.id }})"></iconify-icon>
+                <iconify-icon class="cursor-pointer" icon="ic:baseline-delete" width="20" height="20" onclick="handleRemoveRestriction({{ estudiante_id }}, {{ item.id }})"></iconify-icon>
               </div>
             </li>
           {% endfor %}
@@ -151,7 +151,7 @@
         <select id="grade" class="select-dark"></select>
   
         <!-- enviar -->
-        <button id="add_incentive_btn" class="btn custom-btn-2" onclick="agregarIncentivoUI(...incentiveVars())">Add</button>
+        <button id="add_incentive_btn" class="btn custom-btn-2" onclick="handleAddIncentive(...incentiveVars())">Add</button>
       </div>
   
       <div class="my-4"></div>
@@ -159,7 +159,7 @@
       <h5>Add restriction</h5>
       <div class="d-flex gap-2 align-items-center">
         <input id="restriccion_input" type="text" class="form-control flex-shrink-1">
-        <button class="btn custom-btn-2" onclick="agregarRestriccionUI(...restrictionVars())">Add</button>
+        <button class="btn custom-btn-2" onclick="handleAddRestriction(...restrictionVars())">Add</button>
       </div>
     </div>
   </div>
@@ -167,6 +167,7 @@
 <br><br>
 
 <script src="{{ url_for('static', filename='settings_fetch.js') }}"></script>
+<script src="{{ url_for('static', filename='settings_handling.js') }}"></script>
 
 <script>
   
@@ -176,62 +177,6 @@ const simboloDisplay = document.getElementById("monto")
 const selectSistema = document.getElementById("grade")
 
 const sistemas = {{ sistemas|tojson }}
-
-async function agregarRestriccionUI(estudianteId, mensaje) {
-    const data = await addRestriction(estudianteId, mensaje)
-
-    if (!data) return
-
-    const contenedor = document.getElementById("restricciones_ul")
-
-    const mensajeVacio = document.getElementById("no_restrictions")
-    if (mensajeVacio) mensajeVacio.remove()
-
-    const nuevaRestriccion = document.createElement("li")
-
-    nuevaRestriccion.setAttribute("data-id", data.id)
-
-    nuevaRestriccion.innerHTML = `
-        <div class="d-flex justify-content-start gap-2 align-content-center">
-            <div>${data.restriccion}</div>
-            <iconify-icon icon="ic:baseline-delete" width="20" height="20" 
-                onclick="deleteRestriction(${estudianteId}, ${data.id})">
-            </iconify-icon>
-        </div>
-    `
-
-    contenedor.appendChild(nuevaRestriccion)
-
-    document.getElementById("restriccion_input").value = ""
-}
-
-async function agregarIncentivoUI(estudianteId, monto, nota, simbolo, moneda) {
-    const data = await addIncentive(estudianteId, monto, nota, simbolo, moneda)
-
-    if (!data) return
-
-    const contenedor = document.getElementById("incentivos_ul")
-
-    const mensajeVacio = document.getElementById("no_incentives")
-    if (mensajeVacio) mensajeVacio.remove()
-
-    const nuevoIncentivo = document.createElement("li")
-
-    nuevoIncentivo.setAttribute("data-id", data.id)
-
-    nuevoIncentivo.innerHTML = `
-        <div class="d-flex justify-content-start gap-2 align-content-center">
-            <div>${data.incentivo}</div>
-            <iconify-icon icon="ic:baseline-delete" width="20" height="20" 
-                onclick="deleteIncentive(${estudianteId}, ${data.id})">
-            </iconify-icon>
-        </div>
-    `
-
-    contenedor.appendChild(nuevoIncentivo)
-
-    document.getElementById("monto").value = ""
-}
 
 function updateDisplay() {
   const selected = selectPais.options[selectPais.selectedIndex]
