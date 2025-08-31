@@ -1,6 +1,7 @@
 from flask import request, jsonify, Blueprint
 
 from app.services.grade_incentive_service import GradeIncentiveRepository, GradeIncentive
+from app.models import Incentivos, Restricciones
 
 from .. import db
 
@@ -9,8 +10,6 @@ gamificacion_bp = Blueprint('gamificacion', __name__)
 
 @gamificacion_bp.route("/add_incentive", methods=["POST"])
 def add_incentive():
-    from app.models import Incentivos
-
     data = request.get_json()
     estudiante_id = data.get('estudiante_id')
     monto = data.get('monto')
@@ -18,20 +17,11 @@ def add_incentive():
     simbolo = data.get('simbolo')
     moneda = data.get('moneda')
 
-    if not estudiante_id:
-        return jsonify({"error": "estudiante_id missing"}), 400
+    required_fields = ['estudiante_id', 'monto', 'nota', 'simbolo', 'moneda']
     
-    if not monto:
-        return jsonify({"error": "monto missing"}), 400
-    
-    if not nota:
-        return jsonify({"error": "nota missing"}), 400
-    
-    if not simbolo:
-        return jsonify({"error": "simbolo missing"}), 400
-    
-    if not moneda:
-        return jsonify({"error": "moneda missing"}), 400
+    for field in required_fields:
+        if not data.get(field):
+            return jsonify({"error": f"{field} missing"}), 400
     
     repo = GradeIncentiveRepository(db.session)
     grade_incentive = GradeIncentive(estudiante_id, repo)
@@ -43,8 +33,6 @@ def add_incentive():
         
 @gamificacion_bp.route("/add_restriction", methods=["POST"])
 def add_restriction():
-    from app.models import Restricciones
-
     data = request.get_json()
     estudiante_id = data.get('estudiante_id')
     mensaje = data.get('mensaje')

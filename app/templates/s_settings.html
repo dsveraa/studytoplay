@@ -36,101 +36,131 @@
   </style>
 
 <div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
-  <h1 class="mb-4">Settings</h1>
-  <div class="d-flex justify-content-start align-items-center gap-2 mb-2">
-    <label for="grade_incentive">Grade incentive</label>
+  <h5>Settings</h5>
+  
+  <!-- level -->
+  <div class="my-4">
+    <p class="fs-2">Level</p>
+    <p>After 10 study hours, the student reaches a new level and gets extra time set here.</p> 
+    <label for="extra-time">Extra time:</label>
+    <select name="extra-time" id="extra-time" class="select-dark">
+      <option value="1800000">30 min</option>
+      <option value="3600000">1 hour</option>
+      <option value="7200000">2 hours</option>
+    </select>
+  </div>
+  
+  <hr>
+  
+  <!-- trophy-->
+  <div class="my-4">
+    <p class="fs-2">Trophy</p>
+    <p>After 50 study hours, the student unlocks a new trophy and gets a custom reward. (i.e. $5.00 Steam Gift Card, 3 extra hours or $5.00 cash)</p>
     
-    <input 
-    type="checkbox" 
-    id="grade_incentive" 
-    name="grade_incentive" 
-    value="1" 
-    onclick="fetchIncentivoToggle({{ estudiante_id }})" 
-    {% if incentivo_notas %}checked{% endif %}>
-
-    <div class="tooltip-container">
-      <iconify-icon id="infoIcon" icon="ic:twotone-info" width="20" height="20" style="display:flex; align-items:center;"></iconify-icon>
-      <span class="tooltip-text">Monetary reward system for results applying personalized criteria</span>
+    <div class="rounded custom-bg-grey py-2 px-2 d-flex align-content-center flex-column text-center mt-2 mb-4">
+      <p class="mb-0">Current reward</p>
+      <h5 class="mb-0">Unconditional love &#10084;&#65039;</h5>
+    </div>
+    
+    <h5>Set new reward</h5>
+    <div class="d-flex gap-2 align-items-center">
+      <input id="reward_input" type="text" class="form-control flex-shrink-1">
+      <button class="btn custom-btn-2">Set</button>
     </div>
   </div>
-
-  <div id="grade_incentive_section" style="{% if incentivo_notas %} display:block {% else %}display: none;{% endif %}">
-    
-    <div>
-      Country
-      <select id="pais_select" class="flex-shrink-1 select-dark" onchange="handlePaisChange(this)">
-        {% for pais in paises %}
-          <option 
-          value="{{ pais.id }}"
-          {% if pais.id == pais_actual %}selected{% endif %}
-          data-moneda="{{ pais.moneda }}"
-          data-simbolo="{{ pais.simbolo }}"
-          >
-            {{ pais.pais }}
-          </option>
-        {% endfor %}
-      </select>
+  
+  <hr>
+  
+  <!-- grade incentive-->
+  <div class="my-4">
+    <div class="d-flex justify-content-start align-items-center gap-2 mb-2">
+      
+      <label for="grade_incentive" class="fs-2">Grade incentive</label>
+      
+      <input type="checkbox" id="grade_incentive" name="grade_incentive" value="1" onclick="fetchIncentivoToggle({{ estudiante_id }})" {% if incentivo_notas %}checked{% endif %}>
+      
+      <div class="d-flex align-items-center tooltip-container">
+        <iconify-icon id="infoIcon" class="cursor-pointer" icon="ic:twotone-info" width="20" height="20"></iconify-icon>
+        <span class="tooltip-text">Monetary reward system for results applying personalized criteria</span>
+      </div>
+  
     </div>
-
-    <div class="my-4"></div>
-
-    <h3>Incentives</h3>
-    <ul id="incentivos_ul">
-        {% if incentivos %}
-            {% for item in incentivos %}
+    
+    <div id="grade_incentive_section" style="{% if incentivo_notas %} display:block {% else %}display: none;{% endif %}">
+      
+        Country: 
+        <select id="pais_select" class="flex-shrink-1 select-dark" onchange="handlePaisChange(this)">
+          {% for pais in paises %}
+            <option 
+            value="{{ pais.id }}"
+            {% if pais.id == pais_actual %}selected{% endif %}
+            data-moneda="{{ pais.moneda }}"
+            data-simbolo="{{ pais.simbolo }}"
+            >
+              {{ pais.pais }}
+            </option>
+          {% endfor %}
+        </select>
+      
+      <div class="my-4"></div>
+  
+      <h5>Incentives</h5>
+      <ul id="incentivos_ul">
+          {% if incentivos %}
+              {% for item in incentivos %}
+              <li data-id="{{ item.id }}">
+                  <div class="d-flex justify-content-start gap-2 align-content-center">
+                      <div>{{ item.incentivo }}</div>
+                      <iconify-icon class="cursor-pointer" icon="ic:baseline-delete" width="20" height="20" onclick="deleteIncentive({{ estudiante_id }}, {{ item.id }})"></iconify-icon>
+                  </div>
+              </li>
+              {% endfor %}
+          {% else %}
+              <li id="no_incentives">There is no incentives yet.</li>
+          {% endif %}
+      </ul>
+  
+      <h5>Restrictions</h5>
+      <ul id="restricciones_ul">
+        {% if restricciones %}
+          {% for item in restricciones %}
             <li data-id="{{ item.id }}">
-                <div class="d-flex justify-content-start gap-2 align-content-center">
-                    <div>{{ item.incentivo }}</div>
-                    <iconify-icon icon="ic:baseline-delete" width="20" height="20"
-                        onclick="deleteIncentive({{ estudiante_id }}, {{ item.id }})"></iconify-icon>
-                </div>
+              <div class="d-flex justify-content-start gap-2 align-content-center">
+                <div>{{item.restriccion}}</div> 
+                <iconify-icon class="cursor-pointer" icon="ic:baseline-delete" width="20" height="20" onclick="deleteRestriction({{ estudiante_id }}, {{ item.id }})"></iconify-icon>
+              </div>
             </li>
-            {% endfor %}
+          {% endfor %}
         {% else %}
-            <li id="no_incentives">There is no incentives yet.</li>
+            <li id="no_restrictions">There is no restrictions yet.</li>
         {% endif %}
-    </ul>
-
-    <h3>Restrictions</h3>
-    <ul id="restricciones_ul">
-      {% if restricciones %}
-        {% for item in restricciones %}
-          <li data-id="{{ item.id }}">
-            <div class="d-flex justify-content-start gap-2 align-content-center">
-              <div>{{item.restriccion}}</div> 
-              <iconify-icon icon="ic:baseline-delete" width="20" height="20" onclick="deleteRestriction({{ estudiante_id }}, {{ item.id }})"></iconify-icon>
-            </div>
-          </li>
-        {% endfor %}
-      {% else %}
-          <li id="no_restrictions">There is no restrictions yet.</li>
-      {% endif %}
-    </ul>
-    
-    <div class="my-4"></div>
-    
-    <h3>Add incentive</h3>
-    <div class="d-flex flex-nowrap gap-2 align-items-center">
+      </ul>
       
-      <!-- monto -->
-      <input type="text" id="monto" class="form-control flex-shrink-1" style="min-width:60px" placeholder="">
+      <div class="my-4"></div>
       
-      <!-- texto -->
-      <div class="text-nowrap"><span id="moneda_display"></span> for grades >=</div>
+      <h5>Add incentive</h5>
+      <div class="d-flex flex-nowrap gap-2 align-items-center">
+        
+        <!-- monto -->
+        <input type="text" id="monto" class="form-control flex-shrink-1" style="min-width:60px" placeholder="">
+        
+        <!-- texto -->
+        <div class="text-nowrap"><span id="moneda_display"></span> for grades >=</div>
+        
+        <!-- monto -->
+        <select id="grade" class="select-dark"></select>
+  
+        <!-- enviar -->
+        <button id="add_incentive_btn" class="btn custom-btn-2" onclick="agregarIncentivoUI(...incentiveVars())">Add</button>
+      </div>
+  
+      <div class="my-4"></div>
       
-      <!-- monto -->
-      <select id="grade" class="select-dark"></select>
-
-      <!-- enviar -->
-      <button id="add_incentive_btn" class="btn custom-btn-2" onclick="agregarIncentivoUI(...incentiveVars())">Add</button>
-    </div>
-
-    <div class="my-4"></div>
-    
-    <h3>Add restriction</h3>
-    <div class="d-flex gap-2 align-items-center">
-      <input id="restriccion_input" type="text" class="form-control flex-shrink-1">
-      <button class="btn custom-btn-2" onclick="agregarRestriccionUI(...restrictionVars())">Add</button>
+      <h5>Add restriction</h5>
+      <div class="d-flex gap-2 align-items-center">
+        <input id="restriccion_input" type="text" class="form-control flex-shrink-1">
+        <button class="btn custom-btn-2" onclick="agregarRestriccionUI(...restrictionVars())">Add</button>
+      </div>
     </div>
   </div>
 </div>

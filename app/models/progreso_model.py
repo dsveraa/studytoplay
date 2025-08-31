@@ -1,5 +1,6 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, ForeignKey
 from .. import db
+
 
 class Nivel(db.Model):
     __tablename__ = "niveles"
@@ -15,14 +16,6 @@ class Trofeo(db.Model):
     id = Column(Integer, primary_key=True)
     usuario_id = Column(Integer, ForeignKey('usuarios.id'))
     cantidad = Column(Integer)
-
-
-class Premio(db.Model):
-    __tablename__ = "premios"
-
-    id = Column(Integer, primary_key=True)
-    usuario_id = Column(Integer, ForeignKey('usuarios.id'))
-    descripcion = Column(String(100))
 
 
 class Estrella(db.Model):

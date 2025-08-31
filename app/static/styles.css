@@ -34,6 +34,11 @@ body {
     background-color: #a5b44d;
     color: #fff;
 }
+
+.custom-bg-grey {
+    background-color:#424242
+}
+
 a {
     color: #aaa;
 }
@@ -220,4 +225,13 @@ transition: width 0.5s ease-in-out;
     list-style: none;
     padding-left: 0;
     /* margin-left: 0; */
+}
+
+label.fs-2 {
+    position: relative;
+    bottom: 3px;
+  }
+  
+.cursor-pointer {
+    cursor: pointer;
 }
