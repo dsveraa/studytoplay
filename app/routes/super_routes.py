@@ -2,7 +2,7 @@ from flask import render_template, request, redirect, url_for, Blueprint
 from sqlalchemy import desc
 
 from app.models import Estudio, Uso, Asignatura, RegistroNotas
-from app.utils.helpers import relation_required, supervisor_required, listar_asignaturas, listar_registro_notas
+from app.utils.helpers import relation_required, supervisor_required, listar_asignaturas, listar_registro_notas, id_from_json, id_from_kwargs
 from app.services.notifications_service import Notification, NotificationRepository
 from app.services.grade_incentive_service import GradeIncentiveRepository, GradeIncentive, get_currency_data
 
@@ -13,7 +13,7 @@ super_bp = Blueprint('super', __name__)
 
 @super_bp.route('/student_info/<id>', methods=['GET'])
 @supervisor_required
-@relation_required
+@relation_required(id_from_kwargs)
 def student_info(id):
     
     activity_obj = Estudio.query.filter_by(usuario_id=id).order_by(desc(Estudio.id)).limit(5).all()
@@ -21,39 +21,10 @@ def student_info(id):
 
     return render_template("s_records.html", estudios=activity_obj, usos=use_obj)
 
-@super_bp.route('/grade_record/<id>', methods=['GET', 'POST'])
+@super_bp.route('/grade_record/<id>', methods=["GET"])
 @supervisor_required
-@relation_required
+@relation_required(id_from_kwargs)
 def grade_record(id):
-    
-    if request.method == 'POST':
-        data = request.get_json()
-        
-        asignatura = data.get('asignatura')
-        tema = data.get('tema')
-        nota = data.get('nota')
-        fecha = data.get('fecha')
-
-        registro_notas = RegistroNotas(
-            usuario_id=id,
-            asignatura_id=asignatura,
-            tema=tema,
-            nota=nota,
-            fecha=fecha,
-            )
-        db.session.add(registro_notas)
-        db.session.commit()
-
-        asignatura_nombre = Asignatura.query.get(asignatura).nombre
-
-        amount, currency, symbol = get_currency_data(id, nota)
-
-        repo = NotificationRepository(db.session)
-        notification = Notification(id, repo)
-        notification.notify_grade(nota, asignatura_nombre, 'add', amount, currency, symbol)
-
-        return redirect(url_for("super.grade_record", id=id))
-    
     asignaturas = listar_asignaturas(id)
     registro_notas = listar_registro_notas(id)
 
@@ -63,23 +34,59 @@ def grade_record(id):
 
     return render_template('s_grade_record.html', asignaturas=asignaturas, registro_notas=registro_notas, best_grades=best_grades)
 
-@super_bp.route("/mark_paid", methods=["POST"])
+@super_bp.route("/grade_record/warning/<int:id>")
+@supervisor_required
+@relation_required(id_from_kwargs)
+def grade_record_warning(id):
+    return f"<h3>You must set at least 1 incentive in <a href='/settings/{id}'>Settings</a>.</h3>"
+
+@super_bp.route('/grade_record/<id>', methods=['POST'])
+@supervisor_required
+@relation_required(id_from_kwargs)
+def add_grade_record(id):
+    data = request.get_json()
+    
+    asignatura = data.get('asignatura')
+    tema = data.get('tema')
+    nota = data.get('nota')
+    fecha = data.get('fecha')
+
+    registro_notas = RegistroNotas(
+        usuario_id=id,
+        asignatura_id=asignatura,
+        tema=tema,
+        nota=nota,
+        fecha=fecha,
+        )
+    db.session.add(registro_notas)
+    db.session.commit()
+
+    asignatura_nombre = Asignatura.query.get(asignatura).nombre
+
+    amount, currency, symbol = get_currency_data(id, nota)
+
+    repo = NotificationRepository(db.session)
+    notification = Notification(id, repo)
+    notification.notify_grade(nota, asignatura_nombre, 'add', amount, currency, symbol)
+
+    return redirect(url_for("super.grade_record", id=id))  
+    
+@super_bp.route("/payment", methods=["POST"])
 @supervisor_required
 def mark_paid():
     data = request.get_json()
     registro_id = data.get('grade_to_pay')
-    usuario_id = data.get('usuario_id')
+    estudiante_id = data.get('estudiante_id')
     
     registro = RegistroNotas.query.get_or_404(registro_id)
     registro.estado = True
     nota = registro.nota
     asignatura = registro.asignatura.nombre
     
-    amount, currency, symbol = get_currency_data(usuario_id, nota)
+    amount, currency, symbol = get_currency_data(estudiante_id, nota)
 
     repo = NotificationRepository(db.session)
-    notification = Notification(usuario_id, repo)
+    notification = Notification(estudiante_id, repo)
     notification.notify_grade(nota, asignatura, 'pay', amount, currency, symbol)
     
-    return redirect(url_for("super.grade_record", id=usuario_id))
-
+    return redirect(url_for("super.grade_record", id=estudiante_id))

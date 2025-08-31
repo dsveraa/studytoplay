@@ -18,7 +18,7 @@ async function deleteIncentive(estudiante_id, incentive_id) {
 
 async function addIncentive(estudianteId, monto, nota, simbolo, moneda) {
     try {
-        const response = await fetch("/add_incentive", {
+        const response = await fetch("/incentive", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -47,7 +47,7 @@ async function addIncentive(estudianteId, monto, nota, simbolo, moneda) {
 
 async function addRestriction(estudianteId, mensaje) {
     try {
-        const response = await fetch("/add_restriction", {
+        const response = await fetch("/restriction", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -73,16 +73,8 @@ async function addRestriction(estudianteId, mensaje) {
 
 async function fetchCambiarPais(estudianteId, paisId) {
     try {
-        const response = await fetch("/change_country", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(
-                {
-                    estudiante_id: estudianteId,
-                    pais_id: paisId
-                })
+        const response = await fetch(`/country/${estudianteId}/${paisId}`, {
+            method: "PUT"
         })
 
         if (!response.ok) {
@@ -99,12 +91,8 @@ async function fetchCambiarPais(estudianteId, paisId) {
 
 async function fetchIncentivoToggle(estudianteId) {
     try {
-        const response = await fetch("/incentivo_toggle", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ estudiante_id: estudianteId })
+        const response = await fetch(`/incentivo/${estudianteId}`, {
+            method: "PUT"
         })
 
         if (!response.ok) {

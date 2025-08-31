@@ -1,4 +1,5 @@
 from app.models import Incentivos, Restricciones, Settings
+from app.utils.debugging_utils import printn
 from app.utils.filtro_notas_utils import elegir_sistema_calificaciones as grade_system
 from app.services.countries_service import get_countries
 from app.services.settings_service import UserSettings
@@ -55,7 +56,10 @@ class GradeIncentiveRepository:
         restrictions_obj = Restricciones.query.filter_by(usuario_id=user_id).all()
         return [{"id": item.id, "restriccion": item.restriccion} for item in restrictions_obj]
 
-    def get_grades(self, user_id: int) -> list: 
+    def get_grades(self, user_id: int) -> list:
+        '''
+        Devuelve una lista con la nomenclatura necesaria para filtrar notas. Ej. [11, '>=6', '>=7'] == pais_id, incentivo1, incentivo2...
+        ''' 
         query = (self.db.query(
             Settings.pais_id,
             Incentivos.nota
@@ -65,7 +69,7 @@ class GradeIncentiveRepository:
         .filter(Incentivos.usuario_id == user_id)
         .all()
         )
-        
+        printn(query)
         country = query[0][0]
         result = []
         result.append(country)
@@ -73,7 +77,7 @@ class GradeIncentiveRepository:
         for country_id, grade in query:
             grade = str(grade)
             result.append(">=" + grade)
-        
+        printn(result)
         return result
     
     def filter_grades(self, *args) -> list:
@@ -121,6 +125,5 @@ class GradeIncentive:
     
     def filter_grades(self):
         current_grades = self.repo.get_grades(self.id)
-        # print(current_grades)
         return self.repo.filter_grades(*current_grades)
         

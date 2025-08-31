@@ -25024,3 +25024,687 @@ TypeError: '<' not supported between instances of 'Nivel' and 'int'
 2025-08-31 13:59:43,716 [INFO]  * Restarting with stat
 2025-08-31 13:59:44,156 [WARNING]  * Debugger is active!
 2025-08-31 13:59:44,156 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:01:29,940 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 14:01:30,039 [INFO]  * Restarting with stat
+2025-08-31 14:01:30,483 [WARNING]  * Debugger is active!
+2025-08-31 14:01:30,484 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:01:46,607 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 14:01:46,708 [INFO]  * Restarting with stat
+2025-08-31 14:01:47,146 [WARNING]  * Debugger is active!
+2025-08-31 14:01:47,146 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:01:50,171 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 14:01:50,244 [INFO]  * Restarting with stat
+2025-08-31 14:01:50,684 [WARNING]  * Debugger is active!
+2025-08-31 14:01:50,684 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:01:55,725 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 14:01:55,820 [INFO]  * Restarting with stat
+2025-08-31 14:05:08,838 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.83:5000
+2025-08-31 14:05:08,838 [INFO] [33mPress CTRL+C to quit[0m
+2025-08-31 14:05:08,839 [INFO]  * Restarting with stat
+2025-08-31 14:05:09,291 [WARNING]  * Debugger is active!
+2025-08-31 14:05:09,292 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:05:14,873 [INFO] 127.0.0.1 - - [31/Aug/2025 14:05:14] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 14:05:14,970 [INFO] 127.0.0.1 - - [31/Aug/2025 14:05:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 14:05:14,970 [INFO] 127.0.0.1 - - [31/Aug/2025 14:05:14] "GET /static/settings_fetch.js HTTP/1.1" 200 -
+2025-08-31 14:05:14,971 [INFO] 127.0.0.1 - - [31/Aug/2025 14:05:14] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 14:05:15,000 [INFO] 127.0.0.1 - - [31/Aug/2025 14:05:15] "[33mPUT /change_country/1/11 HTTP/1.1[0m" 404 -
+2025-08-31 14:05:47,124 [INFO] 127.0.0.1 - - [31/Aug/2025 14:05:47] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 14:05:47,224 [INFO] 127.0.0.1 - - [31/Aug/2025 14:05:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 14:05:47,227 [INFO] 127.0.0.1 - - [31/Aug/2025 14:05:47] "GET /static/settings_fetch.js HTTP/1.1" 200 -
+2025-08-31 14:05:47,229 [INFO] 127.0.0.1 - - [31/Aug/2025 14:05:47] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 14:05:48,347 [INFO] 127.0.0.1 - - [31/Aug/2025 14:05:48] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 14:05:56,379 [INFO] 127.0.0.1 - - [31/Aug/2025 14:05:56] "PUT /country/1/1 HTTP/1.1" 200 -
+2025-08-31 14:06:06,691 [INFO] 127.0.0.1 - - [31/Aug/2025 14:06:06] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 14:06:06,735 [INFO] 127.0.0.1 - - [31/Aug/2025 14:06:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 14:06:06,736 [INFO] 127.0.0.1 - - [31/Aug/2025 14:06:06] "[36mGET /static/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-08-31 14:06:06,737 [INFO] 127.0.0.1 - - [31/Aug/2025 14:06:06] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 14:06:07,796 [INFO] 127.0.0.1 - - [31/Aug/2025 14:06:07] "PUT /country/1/1 HTTP/1.1" 200 -
+2025-08-31 14:06:10,188 [INFO] 127.0.0.1 - - [31/Aug/2025 14:06:10] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 14:06:13,936 [INFO] 127.0.0.1 - - [31/Aug/2025 14:06:13] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 14:06:13,973 [INFO] 127.0.0.1 - - [31/Aug/2025 14:06:13] "[36mGET /static/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-08-31 14:06:13,975 [INFO] 127.0.0.1 - - [31/Aug/2025 14:06:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 14:06:13,975 [INFO] 127.0.0.1 - - [31/Aug/2025 14:06:13] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 14:06:15,038 [INFO] 127.0.0.1 - - [31/Aug/2025 14:06:15] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 14:07:45,397 [INFO] 127.0.0.1 - - [31/Aug/2025 14:07:45] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 14:07:45,470 [INFO] 127.0.0.1 - - [31/Aug/2025 14:07:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 14:07:45,473 [INFO] 127.0.0.1 - - [31/Aug/2025 14:07:45] "GET /static/settings_fetch.js HTTP/1.1" 200 -
+2025-08-31 14:07:45,474 [INFO] 127.0.0.1 - - [31/Aug/2025 14:07:45] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 14:07:46,522 [INFO] 127.0.0.1 - - [31/Aug/2025 14:07:46] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 14:08:00,693 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 14:08:00,812 [INFO]  * Restarting with stat
+2025-08-31 14:08:01,249 [WARNING]  * Debugger is active!
+2025-08-31 14:08:01,250 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:08:03,270 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 14:08:03,343 [INFO]  * Restarting with stat
+2025-08-31 14:08:03,791 [WARNING]  * Debugger is active!
+2025-08-31 14:08:03,791 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:08:09,841 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 14:08:09,948 [INFO]  * Restarting with stat
+2025-08-31 14:08:10,393 [WARNING]  * Debugger is active!
+2025-08-31 14:08:10,393 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:08:11,407 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 14:08:11,484 [INFO]  * Restarting with stat
+2025-08-31 14:08:11,933 [WARNING]  * Debugger is active!
+2025-08-31 14:08:11,934 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:08:14,959 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 14:08:15,046 [INFO]  * Restarting with stat
+2025-08-31 14:08:15,483 [WARNING]  * Debugger is active!
+2025-08-31 14:08:15,483 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:08:26,571 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 14:08:26,671 [INFO]  * Restarting with stat
+2025-08-31 14:08:27,118 [WARNING]  * Debugger is active!
+2025-08-31 14:08:27,119 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:08:34,175 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 14:08:34,266 [INFO]  * Restarting with stat
+2025-08-31 14:08:34,714 [WARNING]  * Debugger is active!
+2025-08-31 14:08:34,714 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:08:52,862 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 14:08:52,956 [INFO]  * Restarting with stat
+2025-08-31 14:08:53,418 [WARNING]  * Debugger is active!
+2025-08-31 14:08:53,418 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:09:07,536 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 14:09:07,629 [INFO]  * Restarting with stat
+2025-08-31 14:09:15,994 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.83:5000
+2025-08-31 14:09:15,994 [INFO] [33mPress CTRL+C to quit[0m
+2025-08-31 14:09:15,994 [INFO]  * Restarting with stat
+2025-08-31 14:09:16,430 [WARNING]  * Debugger is active!
+2025-08-31 14:09:16,430 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:10:07,092 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:07] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 14:10:07,167 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 14:10:07,168 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:07] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 14:10:07,169 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:07] "GET /static/settings_fetch.js HTTP/1.1" 200 -
+2025-08-31 14:10:08,204 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:08] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 14:10:09,794 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:09] "PUT /incentivo/1 HTTP/1.1" 200 -
+2025-08-31 14:10:15,699 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:15] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 14:10:15,769 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:15] "[36mGET /static/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-08-31 14:10:15,770 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 14:10:15,771 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:15] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 14:10:16,832 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:16] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 14:10:19,151 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:19] "PUT /incentivo/1 HTTP/1.1" 200 -
+2025-08-31 14:10:25,473 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:25] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 14:10:25,523 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:25] "[36mGET /static/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-08-31 14:10:25,523 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 14:10:25,524 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:25] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 14:10:26,569 [INFO] 127.0.0.1 - - [31/Aug/2025 14:10:26] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 14:15:52,491 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-08-31 14:15:52,584 [INFO]  * Restarting with stat
+2025-08-31 14:15:53,039 [WARNING]  * Debugger is active!
+2025-08-31 14:15:53,039 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:16:16,228 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-08-31 14:16:16,333 [INFO]  * Restarting with stat
+2025-08-31 14:16:16,774 [WARNING]  * Debugger is active!
+2025-08-31 14:16:16,774 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 14:26:28,657 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-08-31 14:26:28,760 [INFO]  * Restarting with stat
+2025-08-31 15:26:13,736 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.83:5000
+2025-08-31 15:26:13,736 [INFO] [33mPress CTRL+C to quit[0m
+2025-08-31 15:26:13,736 [INFO]  * Restarting with stat
+2025-08-31 15:26:14,167 [WARNING]  * Debugger is active!
+2025-08-31 15:26:14,167 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 15:27:28,730 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 15:27:28,831 [INFO]  * Restarting with stat
+2025-08-31 15:27:29,280 [WARNING]  * Debugger is active!
+2025-08-31 15:27:29,280 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 15:28:49,933 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 15:28:50,037 [INFO]  * Restarting with stat
+2025-08-31 15:28:50,502 [WARNING]  * Debugger is active!
+2025-08-31 15:28:50,502 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 15:28:54,535 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 15:28:54,634 [INFO]  * Restarting with stat
+2025-08-31 15:29:07,590 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.83:5000
+2025-08-31 15:29:07,590 [INFO] [33mPress CTRL+C to quit[0m
+2025-08-31 15:29:07,590 [INFO]  * Restarting with stat
+2025-08-31 15:29:08,037 [WARNING]  * Debugger is active!
+2025-08-31 15:29:08,037 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 15:33:08,964 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-08-31 15:33:09,070 [INFO]  * Restarting with stat
+2025-08-31 15:33:09,506 [WARNING]  * Debugger is active!
+2025-08-31 15:33:09,506 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 15:33:24,628 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 15:33:24,724 [INFO]  * Restarting with stat
+2025-08-31 15:39:21,318 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.83:5000
+2025-08-31 15:39:21,318 [INFO] [33mPress CTRL+C to quit[0m
+2025-08-31 15:39:21,318 [INFO]  * Restarting with stat
+2025-08-31 15:39:21,770 [WARNING]  * Debugger is active!
+2025-08-31 15:39:21,771 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 15:41:06,626 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 15:41:06,727 [INFO]  * Restarting with stat
+2025-08-31 15:41:07,178 [WARNING]  * Debugger is active!
+2025-08-31 15:41:07,178 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 17:01:28,008 [INFO] 127.0.0.1 - - [31/Aug/2025 17:01:28] "PUT /country/1/1 HTTP/1.1" 200 -
+2025-08-31 17:01:35,786 [INFO] 127.0.0.1 - - [31/Aug/2025 17:01:35] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 17:01:39,873 [INFO] 127.0.0.1 - - [31/Aug/2025 17:01:39] "[33mPOST /add_incentive HTTP/1.1[0m" 404 -
+2025-08-31 17:02:15,713 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:15] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 17:02:15,800 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 17:02:15,801 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:15] "GET /static/settings_fetch.js HTTP/1.1" 200 -
+2025-08-31 17:02:15,802 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:15] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 17:02:17,039 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:17] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 17:02:19,220 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:19] "POST /incentive HTTP/1.1" 200 -
+2025-08-31 17:02:27,073 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:27] "POST /incentive HTTP/1.1" 200 -
+2025-08-31 17:02:28,832 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:28] "[35m[1mDELETE /incentive/1/55 HTTP/1.1[0m" 204 -
+2025-08-31 17:02:30,236 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:30] "[35m[1mDELETE /incentive/1/54 HTTP/1.1[0m" 204 -
+2025-08-31 17:02:31,378 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:31] "[35m[1mDELETE /incentive/1/53 HTTP/1.1[0m" 204 -
+2025-08-31 17:02:35,059 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:35] "[35m[1mPOST /restriction HTTP/1.1[0m" 201 -
+2025-08-31 17:02:36,714 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:36] "[31m[1mPOST /restriction HTTP/1.1[0m" 400 -
+2025-08-31 17:02:49,187 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:49] "[31m[1mPOST /restriction HTTP/1.1[0m" 400 -
+2025-08-31 17:02:52,859 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:52] "[35m[1mPOST /restriction HTTP/1.1[0m" 201 -
+2025-08-31 17:02:55,662 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:55] "[35m[1mDELETE /restriction/1/37 HTTP/1.1[0m" 204 -
+2025-08-31 17:02:57,015 [INFO] 127.0.0.1 - - [31/Aug/2025 17:02:57] "[35m[1mDELETE /restriction/1/36 HTTP/1.1[0m" 204 -
+2025-08-31 17:03:25,037 [INFO] 127.0.0.1 - - [31/Aug/2025 17:03:25] "GET / HTTP/1.1" 200 -
+2025-08-31 17:03:25,115 [INFO] 127.0.0.1 - - [31/Aug/2025 17:03:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 17:03:27,769 [INFO] 127.0.0.1 - - [31/Aug/2025 17:03:27] "[35m[1mGET /grade_record/1 HTTP/1.1[0m" 500 -
+2025-08-31 17:03:27,849 [INFO] 127.0.0.1 - - [31/Aug/2025 17:03:27] "[36mGET /grade_record/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-31 17:03:27,849 [INFO] 127.0.0.1 - - [31/Aug/2025 17:03:27] "[36mGET /grade_record/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-31 17:03:27,884 [INFO] 127.0.0.1 - - [31/Aug/2025 17:03:27] "GET /grade_record/1?__debugger__=yes&cmd=resource&f=console.png&s=hUk6Re5KKZZ6iSmceLCu HTTP/1.1" 200 -
+2025-08-31 17:03:27,904 [INFO] 127.0.0.1 - - [31/Aug/2025 17:03:27] "GET /grade_record/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-08-31 17:55:51,519 [INFO] 127.0.0.1 - - [31/Aug/2025 17:55:51] "[35m[1mGET /grade_record/1 HTTP/1.1[0m" 500 -
+2025-08-31 17:55:51,622 [INFO] 127.0.0.1 - - [31/Aug/2025 17:55:51] "[36mGET /grade_record/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-31 17:55:51,623 [INFO] 127.0.0.1 - - [31/Aug/2025 17:55:51] "[36mGET /grade_record/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-31 17:55:51,649 [INFO] 127.0.0.1 - - [31/Aug/2025 17:55:51] "[36mGET /grade_record/1?__debugger__=yes&cmd=resource&f=console.png&s=hUk6Re5KKZZ6iSmceLCu HTTP/1.1[0m" 304 -
+2025-08-31 17:57:09,187 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 17:57:09,312 [INFO]  * Restarting with stat
+2025-08-31 17:57:09,754 [WARNING]  * Debugger is active!
+2025-08-31 17:57:09,755 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 17:57:17,040 [INFO] 127.0.0.1 - - [31/Aug/2025 17:57:17] "[35m[1mGET /grade_record/1 HTTP/1.1[0m" 500 -
+2025-08-31 17:57:17,136 [INFO] 127.0.0.1 - - [31/Aug/2025 17:57:17] "[36mGET /grade_record/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-31 17:57:17,140 [INFO] 127.0.0.1 - - [31/Aug/2025 17:57:17] "[36mGET /grade_record/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-31 17:57:17,167 [INFO] 127.0.0.1 - - [31/Aug/2025 17:57:17] "GET /grade_record/1?__debugger__=yes&cmd=resource&f=console.png&s=Bc2FPk1eOpBSH3W842kQ HTTP/1.1" 200 -
+2025-08-31 17:57:29,922 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 17:57:30,038 [INFO]  * Restarting with stat
+2025-08-31 17:57:30,490 [WARNING]  * Debugger is active!
+2025-08-31 17:57:30,491 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 17:57:34,525 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 17:57:34,624 [INFO]  * Restarting with stat
+2025-08-31 17:57:35,071 [WARNING]  * Debugger is active!
+2025-08-31 17:57:35,071 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 17:57:39,626 [INFO] 127.0.0.1 - - [31/Aug/2025 17:57:39] "[35m[1mGET /grade_record/1 HTTP/1.1[0m" 500 -
+2025-08-31 17:57:39,720 [INFO] 127.0.0.1 - - [31/Aug/2025 17:57:39] "[36mGET /grade_record/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-31 17:57:39,720 [INFO] 127.0.0.1 - - [31/Aug/2025 17:57:39] "[36mGET /grade_record/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-31 17:57:39,744 [INFO] 127.0.0.1 - - [31/Aug/2025 17:57:39] "GET /grade_record/1?__debugger__=yes&cmd=resource&f=console.png&s=wZh55KDfDsX4UGgeCpq3 HTTP/1.1" 200 -
+2025-08-31 17:58:01,224 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 17:58:01,320 [INFO]  * Restarting with stat
+2025-08-31 17:58:01,793 [WARNING]  * Debugger is active!
+2025-08-31 17:58:01,793 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 17:58:02,808 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 17:58:02,887 [INFO]  * Restarting with stat
+2025-08-31 17:58:03,337 [WARNING]  * Debugger is active!
+2025-08-31 17:58:03,337 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 17:58:05,358 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 17:58:05,434 [INFO]  * Restarting with stat
+2025-08-31 17:58:05,895 [WARNING]  * Debugger is active!
+2025-08-31 17:58:05,895 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 17:58:10,775 [INFO] 127.0.0.1 - - [31/Aug/2025 17:58:10] "[35m[1mGET /grade_record/1 HTTP/1.1[0m" 500 -
+2025-08-31 17:58:10,859 [INFO] 127.0.0.1 - - [31/Aug/2025 17:58:10] "[36mGET /grade_record/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-31 17:58:10,863 [INFO] 127.0.0.1 - - [31/Aug/2025 17:58:10] "[36mGET /grade_record/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-31 17:58:10,890 [INFO] 127.0.0.1 - - [31/Aug/2025 17:58:10] "GET /grade_record/1?__debugger__=yes&cmd=resource&f=console.png&s=dAHhnkrRJ9rWhiw2p1Qq HTTP/1.1" 200 -
+2025-08-31 17:58:49,243 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 17:58:49,356 [INFO]  * Restarting with stat
+2025-08-31 17:58:49,821 [WARNING]  * Debugger is active!
+2025-08-31 17:58:49,822 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 17:58:50,836 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 17:58:50,916 [INFO]  * Restarting with stat
+2025-08-31 17:58:51,372 [WARNING]  * Debugger is active!
+2025-08-31 17:58:51,372 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 17:58:53,392 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 17:58:53,467 [INFO]  * Restarting with stat
+2025-08-31 17:58:53,914 [WARNING]  * Debugger is active!
+2025-08-31 17:58:53,914 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 17:58:59,314 [INFO] 127.0.0.1 - - [31/Aug/2025 17:58:59] "[35m[1mGET /grade_record/1 HTTP/1.1[0m" 500 -
+2025-08-31 17:58:59,408 [INFO] 127.0.0.1 - - [31/Aug/2025 17:58:59] "[36mGET /grade_record/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-31 17:58:59,409 [INFO] 127.0.0.1 - - [31/Aug/2025 17:58:59] "[36mGET /grade_record/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-31 17:58:59,434 [INFO] 127.0.0.1 - - [31/Aug/2025 17:58:59] "GET /grade_record/1?__debugger__=yes&cmd=resource&f=console.png&s=zeDyUwtT10uOzf5UtnM5 HTTP/1.1" 200 -
+2025-08-31 17:59:43,313 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 17:59:43,423 [INFO]  * Restarting with stat
+2025-08-31 17:59:43,873 [WARNING]  * Debugger is active!
+2025-08-31 17:59:43,873 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 17:59:50,932 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 17:59:51,042 [INFO]  * Restarting with stat
+2025-08-31 17:59:51,504 [WARNING]  * Debugger is active!
+2025-08-31 17:59:51,505 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:00:07,276 [INFO] 127.0.0.1 - - [31/Aug/2025 18:00:07] "GET / HTTP/1.1" 200 -
+2025-08-31 18:00:07,375 [INFO] 127.0.0.1 - - [31/Aug/2025 18:00:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:00:09,788 [INFO] 127.0.0.1 - - [31/Aug/2025 18:00:09] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 18:00:09,875 [INFO] 127.0.0.1 - - [31/Aug/2025 18:00:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:00:09,877 [INFO] 127.0.0.1 - - [31/Aug/2025 18:00:09] "[36mGET /static/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-08-31 18:00:09,879 [INFO] 127.0.0.1 - - [31/Aug/2025 18:00:09] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 18:00:11,239 [INFO] 127.0.0.1 - - [31/Aug/2025 18:00:11] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 18:00:24,173 [INFO] 127.0.0.1 - - [31/Aug/2025 18:00:24] "POST /incentive HTTP/1.1" 200 -
+2025-08-31 18:00:29,929 [INFO] 127.0.0.1 - - [31/Aug/2025 18:00:29] "GET /grade_record/1 HTTP/1.1" 200 -
+2025-08-31 18:00:29,975 [INFO] 127.0.0.1 - - [31/Aug/2025 18:00:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:01:07,127 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:01:07,249 [INFO]  * Restarting with stat
+2025-08-31 18:01:07,723 [WARNING]  * Debugger is active!
+2025-08-31 18:01:07,723 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:01:08,737 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:01:08,815 [INFO]  * Restarting with stat
+2025-08-31 18:01:09,246 [WARNING]  * Debugger is active!
+2025-08-31 18:01:09,247 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:01:39,488 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:01:39,587 [INFO]  * Restarting with stat
+2025-08-31 18:01:40,032 [WARNING]  * Debugger is active!
+2025-08-31 18:01:40,033 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:01:42,053 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:01:42,131 [INFO]  * Restarting with stat
+2025-08-31 18:01:42,569 [WARNING]  * Debugger is active!
+2025-08-31 18:01:42,569 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:01:49,625 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:01:49,729 [INFO]  * Restarting with stat
+2025-08-31 18:01:50,174 [WARNING]  * Debugger is active!
+2025-08-31 18:01:50,174 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:01:52,193 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:01:52,280 [INFO]  * Restarting with stat
+2025-08-31 18:01:52,746 [WARNING]  * Debugger is active!
+2025-08-31 18:01:52,747 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:01:53,761 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:01:53,841 [INFO]  * Restarting with stat
+2025-08-31 18:01:54,292 [WARNING]  * Debugger is active!
+2025-08-31 18:01:54,292 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:01:58,637 [INFO] 127.0.0.1 - - [31/Aug/2025 18:01:58] "GET /grade_record/1 HTTP/1.1" 200 -
+2025-08-31 18:01:58,719 [INFO] 127.0.0.1 - - [31/Aug/2025 18:01:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:02:15,731 [INFO] 127.0.0.1 - - [31/Aug/2025 18:02:15] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 18:02:15,827 [INFO] 127.0.0.1 - - [31/Aug/2025 18:02:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:02:15,829 [INFO] 127.0.0.1 - - [31/Aug/2025 18:02:15] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 18:02:15,830 [INFO] 127.0.0.1 - - [31/Aug/2025 18:02:15] "[36mGET /static/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-08-31 18:02:17,016 [INFO] 127.0.0.1 - - [31/Aug/2025 18:02:17] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 18:02:23,234 [INFO] 127.0.0.1 - - [31/Aug/2025 18:02:23] "POST /incentive HTTP/1.1" 200 -
+2025-08-31 18:02:25,535 [INFO] 127.0.0.1 - - [31/Aug/2025 18:02:25] "GET / HTTP/1.1" 200 -
+2025-08-31 18:02:25,612 [INFO] 127.0.0.1 - - [31/Aug/2025 18:02:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:02:28,128 [INFO] 127.0.0.1 - - [31/Aug/2025 18:02:28] "GET /grade_record/1 HTTP/1.1" 200 -
+2025-08-31 18:02:28,192 [INFO] 127.0.0.1 - - [31/Aug/2025 18:02:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:02:46,721 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:02:46,833 [INFO]  * Restarting with stat
+2025-08-31 18:02:47,272 [WARNING]  * Debugger is active!
+2025-08-31 18:02:47,272 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:03:01,386 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:03:01,479 [INFO]  * Restarting with stat
+2025-08-31 18:03:01,911 [WARNING]  * Debugger is active!
+2025-08-31 18:03:01,912 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:03:09,979 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:03:10,078 [INFO]  * Restarting with stat
+2025-08-31 18:03:10,545 [WARNING]  * Debugger is active!
+2025-08-31 18:03:10,546 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:03:19,619 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:03:19,723 [INFO]  * Restarting with stat
+2025-08-31 18:03:20,172 [WARNING]  * Debugger is active!
+2025-08-31 18:03:20,172 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:03:25,214 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:03:25,310 [INFO]  * Restarting with stat
+2025-08-31 18:03:25,764 [WARNING]  * Debugger is active!
+2025-08-31 18:03:25,765 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:03:30,806 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:03:30,903 [INFO]  * Restarting with stat
+2025-08-31 18:03:31,360 [WARNING]  * Debugger is active!
+2025-08-31 18:03:31,360 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:03:33,380 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:03:33,454 [INFO]  * Restarting with stat
+2025-08-31 18:03:33,892 [WARNING]  * Debugger is active!
+2025-08-31 18:03:33,893 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:03:39,941 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:03:40,041 [INFO]  * Restarting with stat
+2025-08-31 18:03:40,487 [WARNING]  * Debugger is active!
+2025-08-31 18:03:40,488 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:03:55,608 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:03:55,705 [INFO]  * Restarting with stat
+2025-08-31 18:03:56,162 [WARNING]  * Debugger is active!
+2025-08-31 18:03:56,163 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:03:59,189 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:03:59,265 [INFO]  * Restarting with stat
+2025-08-31 18:03:59,709 [WARNING]  * Debugger is active!
+2025-08-31 18:03:59,709 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:04:02,734 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:04:02,811 [INFO]  * Restarting with stat
+2025-08-31 18:04:03,287 [WARNING]  * Debugger is active!
+2025-08-31 18:04:03,287 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:04:04,302 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:04:04,379 [INFO]  * Restarting with stat
+2025-08-31 18:04:04,824 [WARNING]  * Debugger is active!
+2025-08-31 18:04:04,824 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:04:11,881 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:04:11,981 [INFO]  * Restarting with stat
+2025-08-31 18:04:12,429 [WARNING]  * Debugger is active!
+2025-08-31 18:04:12,429 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:04:13,444 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:04:13,528 [INFO]  * Restarting with stat
+2025-08-31 18:04:13,969 [WARNING]  * Debugger is active!
+2025-08-31 18:04:13,969 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:04:21,026 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:04:21,134 [INFO]  * Restarting with stat
+2025-08-31 18:04:21,604 [WARNING]  * Debugger is active!
+2025-08-31 18:04:21,605 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:04:22,620 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:04:22,700 [INFO]  * Restarting with stat
+2025-08-31 18:04:23,143 [WARNING]  * Debugger is active!
+2025-08-31 18:04:23,144 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:04:24,159 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:04:24,241 [INFO]  * Restarting with stat
+2025-08-31 18:04:24,680 [WARNING]  * Debugger is active!
+2025-08-31 18:04:24,680 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:04:26,700 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:04:26,777 [INFO]  * Restarting with stat
+2025-08-31 18:04:27,213 [WARNING]  * Debugger is active!
+2025-08-31 18:04:27,213 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:04:28,230 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:04:28,304 [INFO]  * Restarting with stat
+2025-08-31 18:04:28,755 [WARNING]  * Debugger is active!
+2025-08-31 18:04:28,755 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:04:30,775 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:04:30,851 [INFO]  * Restarting with stat
+2025-08-31 18:04:31,296 [WARNING]  * Debugger is active!
+2025-08-31 18:04:31,297 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:04:36,338 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:04:36,434 [INFO]  * Restarting with stat
+2025-08-31 18:04:36,886 [WARNING]  * Debugger is active!
+2025-08-31 18:04:36,886 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:04:38,906 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:04:38,995 [INFO]  * Restarting with stat
+2025-08-31 18:04:39,453 [WARNING]  * Debugger is active!
+2025-08-31 18:04:39,453 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:04:40,468 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:04:40,541 [INFO]  * Restarting with stat
+2025-08-31 18:04:40,987 [WARNING]  * Debugger is active!
+2025-08-31 18:04:40,987 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:04:50,045 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:04:50,127 [INFO]  * Restarting with stat
+2025-08-31 18:04:50,586 [WARNING]  * Debugger is active!
+2025-08-31 18:04:50,587 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:04:53,615 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:04:53,689 [INFO]  * Restarting with stat
+2025-08-31 18:04:54,128 [WARNING]  * Debugger is active!
+2025-08-31 18:04:54,128 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:05:05,201 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:05:05,302 [INFO]  * Restarting with stat
+2025-08-31 18:05:05,761 [WARNING]  * Debugger is active!
+2025-08-31 18:05:05,761 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:05:07,782 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:05:07,871 [INFO]  * Restarting with stat
+2025-08-31 18:05:08,324 [WARNING]  * Debugger is active!
+2025-08-31 18:05:08,324 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:05:09,339 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/grade_incentive_service.py', reloading
+2025-08-31 18:05:09,417 [INFO]  * Restarting with stat
+2025-08-31 18:05:09,859 [WARNING]  * Debugger is active!
+2025-08-31 18:05:09,859 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:10:51,468 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:10:51,575 [INFO]  * Restarting with stat
+2025-08-31 18:10:52,016 [WARNING]  * Debugger is active!
+2025-08-31 18:10:52,016 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:10:55,042 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:10:55,116 [INFO]  * Restarting with stat
+2025-08-31 18:10:55,556 [WARNING]  * Debugger is active!
+2025-08-31 18:10:55,556 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:11:15,718 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:11:15,813 [INFO]  * Restarting with stat
+2025-08-31 18:11:16,252 [WARNING]  * Debugger is active!
+2025-08-31 18:11:16,253 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:11:37,424 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:11:37,519 [INFO]  * Restarting with stat
+2025-08-31 18:11:37,993 [WARNING]  * Debugger is active!
+2025-08-31 18:11:37,993 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:12:31,196 [INFO] 127.0.0.1 - - [31/Aug/2025 18:12:31] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 18:12:31,287 [INFO] 127.0.0.1 - - [31/Aug/2025 18:12:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:12:31,290 [INFO] 127.0.0.1 - - [31/Aug/2025 18:12:31] "[36mGET /static/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-08-31 18:12:31,291 [INFO] 127.0.0.1 - - [31/Aug/2025 18:12:31] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 18:12:32,478 [INFO] 127.0.0.1 - - [31/Aug/2025 18:12:32] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 18:15:08,690 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 18:15:08,800 [INFO]  * Restarting with stat
+2025-08-31 18:15:09,276 [WARNING]  * Debugger is active!
+2025-08-31 18:15:09,276 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:16:20,881 [INFO] 127.0.0.1 - - [31/Aug/2025 18:16:20] "GET / HTTP/1.1" 200 -
+2025-08-31 18:16:20,956 [INFO] 127.0.0.1 - - [31/Aug/2025 18:16:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:16:47,082 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 18:16:47,201 [INFO]  * Restarting with stat
+2025-08-31 18:16:47,657 [WARNING]  * Debugger is active!
+2025-08-31 18:16:47,657 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:16:49,676 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 18:16:49,772 [INFO]  * Restarting with stat
+2025-08-31 18:16:53,111 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.83:5000
+2025-08-31 18:16:53,111 [INFO] [33mPress CTRL+C to quit[0m
+2025-08-31 18:16:53,111 [INFO]  * Restarting with stat
+2025-08-31 18:16:53,549 [WARNING]  * Debugger is active!
+2025-08-31 18:16:53,549 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:16:57,630 [INFO] 127.0.0.1 - - [31/Aug/2025 18:16:57] "GET / HTTP/1.1" 200 -
+2025-08-31 18:16:57,678 [INFO] 127.0.0.1 - - [31/Aug/2025 18:16:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:17:40,851 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 18:17:40,946 [INFO]  * Restarting with stat
+2025-08-31 18:17:41,416 [WARNING]  * Debugger is active!
+2025-08-31 18:17:41,416 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:17:43,436 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 18:17:43,511 [INFO]  * Restarting with stat
+2025-08-31 18:17:43,957 [WARNING]  * Debugger is active!
+2025-08-31 18:17:43,957 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:18:50,490 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 18:18:50,595 [INFO]  * Restarting with stat
+2025-08-31 18:18:51,051 [WARNING]  * Debugger is active!
+2025-08-31 18:18:51,051 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:18:56,091 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 18:18:56,192 [INFO]  * Restarting with stat
+2025-08-31 18:18:56,647 [WARNING]  * Debugger is active!
+2025-08-31 18:18:56,647 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:18:58,667 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 18:18:58,742 [INFO]  * Restarting with stat
+2025-08-31 18:18:59,179 [WARNING]  * Debugger is active!
+2025-08-31 18:18:59,180 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:19:01,199 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 18:19:01,280 [INFO]  * Restarting with stat
+2025-08-31 18:19:01,719 [WARNING]  * Debugger is active!
+2025-08-31 18:19:01,719 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:19:02,732 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 18:19:02,811 [INFO]  * Restarting with stat
+2025-08-31 18:19:03,262 [WARNING]  * Debugger is active!
+2025-08-31 18:19:03,263 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:21:28,414 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 18:21:28,507 [INFO]  * Restarting with stat
+2025-08-31 18:21:28,957 [WARNING]  * Debugger is active!
+2025-08-31 18:21:28,958 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:21:33,998 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 18:21:34,084 [INFO]  * Restarting with stat
+2025-08-31 18:21:34,565 [WARNING]  * Debugger is active!
+2025-08-31 18:21:34,565 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:21:35,581 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 18:21:35,656 [INFO]  * Restarting with stat
+2025-08-31 18:21:36,101 [WARNING]  * Debugger is active!
+2025-08-31 18:21:36,101 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:21:38,121 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 18:21:38,199 [INFO]  * Restarting with stat
+2025-08-31 18:21:38,669 [WARNING]  * Debugger is active!
+2025-08-31 18:21:38,669 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:21:41,695 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-08-31 18:21:41,786 [INFO]  * Restarting with stat
+2025-08-31 18:26:44,650 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.83:5000
+2025-08-31 18:26:44,650 [INFO] [33mPress CTRL+C to quit[0m
+2025-08-31 18:26:44,651 [INFO]  * Restarting with stat
+2025-08-31 18:26:45,087 [WARNING]  * Debugger is active!
+2025-08-31 18:26:45,087 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:26:57,933 [INFO] 127.0.0.1 - - [31/Aug/2025 18:26:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-31 18:26:57,995 [INFO] 127.0.0.1 - - [31/Aug/2025 18:26:57] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-08-31 18:26:57,997 [INFO] 127.0.0.1 - - [31/Aug/2025 18:26:57] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-08-31 18:26:58,022 [INFO] 127.0.0.1 - - [31/Aug/2025 18:26:58] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-08-31 18:26:58,031 [INFO] 127.0.0.1 - - [31/Aug/2025 18:26:58] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=smz0WhEAsepHIeoKwp3J HTTP/1.1" 200 -
+2025-08-31 18:29:22,465 [INFO] 127.0.0.1 - - [31/Aug/2025 18:29:22] "GET / HTTP/1.1" 200 -
+2025-08-31 18:29:22,537 [INFO] 127.0.0.1 - - [31/Aug/2025 18:29:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:29:35,785 [INFO] 127.0.0.1 - - [31/Aug/2025 18:29:35] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 18:29:35,864 [INFO] 127.0.0.1 - - [31/Aug/2025 18:29:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:29:35,870 [INFO] 127.0.0.1 - - [31/Aug/2025 18:29:35] "[36mGET /static/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-08-31 18:29:35,870 [INFO] 127.0.0.1 - - [31/Aug/2025 18:29:35] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 18:29:37,083 [INFO] 127.0.0.1 - - [31/Aug/2025 18:29:37] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 18:29:39,140 [INFO] 127.0.0.1 - - [31/Aug/2025 18:29:39] "[35m[1mDELETE /incentive/1/57 HTTP/1.1[0m" 204 -
+2025-08-31 18:29:40,378 [INFO] 127.0.0.1 - - [31/Aug/2025 18:29:40] "[35m[1mDELETE /incentive/1/56 HTTP/1.1[0m" 204 -
+2025-08-31 18:29:42,303 [INFO] 127.0.0.1 - - [31/Aug/2025 18:29:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-31 18:29:42,392 [INFO] 127.0.0.1 - - [31/Aug/2025 18:29:42] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-31 18:29:42,393 [INFO] 127.0.0.1 - - [31/Aug/2025 18:29:42] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-31 18:29:42,415 [INFO] 127.0.0.1 - - [31/Aug/2025 18:29:42] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=smz0WhEAsepHIeoKwp3J HTTP/1.1[0m" 304 -
+2025-08-31 18:30:17,799 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:30:17,922 [INFO]  * Restarting with stat
+2025-08-31 18:30:18,376 [WARNING]  * Debugger is active!
+2025-08-31 18:30:18,377 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:30:21,402 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:30:21,479 [INFO]  * Restarting with stat
+2025-08-31 18:32:21,357 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.83:5000
+2025-08-31 18:32:21,357 [INFO] [33mPress CTRL+C to quit[0m
+2025-08-31 18:32:21,357 [INFO]  * Restarting with stat
+2025-08-31 18:32:21,789 [WARNING]  * Debugger is active!
+2025-08-31 18:32:21,790 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:32:30,776 [INFO] 127.0.0.1 - - [31/Aug/2025 18:32:30] "GET / HTTP/1.1" 200 -
+2025-08-31 18:32:30,831 [INFO] 127.0.0.1 - - [31/Aug/2025 18:32:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:32:38,030 [INFO] 127.0.0.1 - - [31/Aug/2025 18:32:38] "GET /grade_record/warning?id=1 HTTP/1.1" 200 -
+2025-08-31 18:32:54,083 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:32:54,198 [INFO]  * Restarting with stat
+2025-08-31 18:32:54,637 [WARNING]  * Debugger is active!
+2025-08-31 18:32:54,638 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:33:02,704 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:33:02,812 [INFO]  * Restarting with stat
+2025-08-31 18:33:03,272 [WARNING]  * Debugger is active!
+2025-08-31 18:33:03,272 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:33:03,559 [INFO] 127.0.0.1 - - [31/Aug/2025 18:33:03] "GET /grade_record/warning?id=1 HTTP/1.1" 200 -
+2025-08-31 18:34:25,942 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:34:26,040 [INFO]  * Restarting with stat
+2025-08-31 18:34:26,490 [WARNING]  * Debugger is active!
+2025-08-31 18:34:26,490 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:34:28,510 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:34:28,590 [INFO]  * Restarting with stat
+2025-08-31 18:34:29,022 [WARNING]  * Debugger is active!
+2025-08-31 18:34:29,022 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:35:50,540 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:35:50,632 [INFO]  * Restarting with stat
+2025-08-31 18:35:51,077 [WARNING]  * Debugger is active!
+2025-08-31 18:35:51,078 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:35:55,111 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:35:55,202 [INFO]  * Restarting with stat
+2025-08-31 18:36:02,364 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.83:5000
+2025-08-31 18:36:02,364 [INFO] [33mPress CTRL+C to quit[0m
+2025-08-31 18:36:02,364 [INFO]  * Restarting with stat
+2025-08-31 18:36:02,836 [WARNING]  * Debugger is active!
+2025-08-31 18:36:02,836 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:36:07,888 [INFO] 127.0.0.1 - - [31/Aug/2025 18:36:07] "GET / HTTP/1.1" 200 -
+2025-08-31 18:36:07,955 [INFO] 127.0.0.1 - - [31/Aug/2025 18:36:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:36:14,878 [INFO] 127.0.0.1 - - [31/Aug/2025 18:36:14] "[35m[1mGET /grade_record/warning/1 HTTP/1.1[0m" 500 -
+2025-08-31 18:36:14,939 [INFO] 127.0.0.1 - - [31/Aug/2025 18:36:14] "GET /grade_record/warning/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-08-31 18:36:14,941 [INFO] 127.0.0.1 - - [31/Aug/2025 18:36:14] "GET /grade_record/warning/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-08-31 18:36:14,970 [INFO] 127.0.0.1 - - [31/Aug/2025 18:36:14] "GET /grade_record/warning/1?__debugger__=yes&cmd=resource&f=console.png&s=joog72uxy8ofLKdo9LjZ HTTP/1.1" 200 -
+2025-08-31 18:36:14,990 [INFO] 127.0.0.1 - - [31/Aug/2025 18:36:14] "GET /grade_record/warning/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-08-31 18:36:29,048 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:36:29,160 [INFO]  * Restarting with stat
+2025-08-31 18:36:29,607 [WARNING]  * Debugger is active!
+2025-08-31 18:36:29,607 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:36:39,689 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:36:39,784 [INFO]  * Restarting with stat
+2025-08-31 18:36:40,235 [WARNING]  * Debugger is active!
+2025-08-31 18:36:40,235 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:36:46,283 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:36:46,380 [INFO]  * Restarting with stat
+2025-08-31 18:36:46,836 [WARNING]  * Debugger is active!
+2025-08-31 18:36:46,837 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:36:58,935 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:36:59,030 [INFO]  * Restarting with stat
+2025-08-31 18:36:59,481 [WARNING]  * Debugger is active!
+2025-08-31 18:36:59,482 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:37:04,516 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:37:04,596 [INFO]  * Restarting with stat
+2025-08-31 18:38:18,107 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.83:5000
+2025-08-31 18:38:18,107 [INFO] [33mPress CTRL+C to quit[0m
+2025-08-31 18:38:18,108 [INFO]  * Restarting with stat
+2025-08-31 18:38:18,551 [WARNING]  * Debugger is active!
+2025-08-31 18:38:18,551 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:38:25,545 [INFO] 127.0.0.1 - - [31/Aug/2025 18:38:25] "GET / HTTP/1.1" 200 -
+2025-08-31 18:38:25,594 [INFO] 127.0.0.1 - - [31/Aug/2025 18:38:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:38:27,586 [INFO] 127.0.0.1 - - [31/Aug/2025 18:38:27] "GET /grade_record/warning/1 HTTP/1.1" 200 -
+2025-08-31 18:38:33,787 [INFO] 127.0.0.1 - - [31/Aug/2025 18:38:33] "[35m[1mGET /grade_record/1 HTTP/1.1[0m" 500 -
+2025-08-31 18:38:33,860 [INFO] 127.0.0.1 - - [31/Aug/2025 18:38:33] "[36mGET /grade_record/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-31 18:38:33,860 [INFO] 127.0.0.1 - - [31/Aug/2025 18:38:33] "[36mGET /grade_record/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-31 18:38:33,879 [INFO] 127.0.0.1 - - [31/Aug/2025 18:38:33] "GET /grade_record/1?__debugger__=yes&cmd=resource&f=console.png&s=rKNLEaePy6jWm0q270qc HTTP/1.1" 200 -
+2025-08-31 18:38:55,764 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:38:55,860 [INFO]  * Restarting with stat
+2025-08-31 18:38:56,301 [WARNING]  * Debugger is active!
+2025-08-31 18:38:56,302 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:38:58,519 [INFO] 127.0.0.1 - - [31/Aug/2025 18:38:58] "GET /grade_record/warning/1 HTTP/1.1" 200 -
+2025-08-31 18:39:03,875 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:03] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 18:39:03,949 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:03] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 18:39:03,949 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:03] "[36mGET /static/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-08-31 18:39:03,950 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:39:05,170 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:05] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 18:39:14,049 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:14] "GET / HTTP/1.1" 200 -
+2025-08-31 18:39:14,105 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:39:16,876 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:16] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 18:39:16,950 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:16] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 18:39:16,951 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:39:16,952 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:16] "[36mGET /static/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-08-31 18:39:18,136 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:18] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 18:39:25,624 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:25] "PUT /incentivo/1 HTTP/1.1" 200 -
+2025-08-31 18:39:26,639 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:26] "GET / HTTP/1.1" 200 -
+2025-08-31 18:39:26,699 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:39:29,736 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:29] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 18:39:29,795 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:39:29,800 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:29] "[36mGET /static/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-08-31 18:39:29,801 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:29] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 18:39:30,973 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:30] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 18:39:33,134 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:33] "PUT /incentivo/1 HTTP/1.1" 200 -
+2025-08-31 18:39:36,054 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:36] "GET / HTTP/1.1" 200 -
+2025-08-31 18:39:36,117 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:39:37,567 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:37] "GET /grade_record/warning/1 HTTP/1.1" 200 -
+2025-08-31 18:39:41,502 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:41] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 18:39:41,557 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:39:41,562 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:41] "[36mGET /static/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-08-31 18:39:41,563 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:41] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 18:39:43,502 [INFO] 127.0.0.1 - - [31/Aug/2025 18:39:43] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 18:39:55,790 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:39:55,896 [INFO]  * Restarting with stat
+2025-08-31 18:39:56,340 [WARNING]  * Debugger is active!
+2025-08-31 18:39:56,341 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:39:58,361 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-08-31 18:39:58,450 [INFO]  * Restarting with stat
+2025-08-31 18:40:19,352 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.83:5000
+2025-08-31 18:40:19,352 [INFO] [33mPress CTRL+C to quit[0m
+2025-08-31 18:40:19,352 [INFO]  * Restarting with stat
+2025-08-31 18:40:19,809 [WARNING]  * Debugger is active!
+2025-08-31 18:40:19,809 [INFO]  * Debugger PIN: 568-535-637
+2025-08-31 18:40:29,004 [INFO] 127.0.0.1 - - [31/Aug/2025 18:40:29] "GET / HTTP/1.1" 200 -
+2025-08-31 18:40:29,069 [INFO] 127.0.0.1 - - [31/Aug/2025 18:40:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:40:30,676 [INFO] 127.0.0.1 - - [31/Aug/2025 18:40:30] "GET /grade_record/warning/1 HTTP/1.1" 200 -
+2025-08-31 18:40:59,720 [INFO] 127.0.0.1 - - [31/Aug/2025 18:40:59] "GET / HTTP/1.1" 200 -
+2025-08-31 18:40:59,778 [INFO] 127.0.0.1 - - [31/Aug/2025 18:40:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:41:10,758 [INFO] 127.0.0.1 - - [31/Aug/2025 18:41:10] "GET /grade_record/7 HTTP/1.1" 200 -
+2025-08-31 18:41:10,837 [INFO] 127.0.0.1 - - [31/Aug/2025 18:41:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:41:17,662 [INFO] 127.0.0.1 - - [31/Aug/2025 18:41:17] "GET /settings/1 HTTP/1.1" 200 -
+2025-08-31 18:41:17,718 [INFO] 127.0.0.1 - - [31/Aug/2025 18:41:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:41:17,725 [INFO] 127.0.0.1 - - [31/Aug/2025 18:41:17] "[36mGET /static/settings_handling.js HTTP/1.1[0m" 304 -
+2025-08-31 18:41:17,726 [INFO] 127.0.0.1 - - [31/Aug/2025 18:41:17] "[36mGET /static/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-08-31 18:41:18,910 [INFO] 127.0.0.1 - - [31/Aug/2025 18:41:18] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-08-31 18:41:25,161 [INFO] 127.0.0.1 - - [31/Aug/2025 18:41:25] "POST /incentive HTTP/1.1" 200 -
+2025-08-31 18:41:27,769 [INFO] 127.0.0.1 - - [31/Aug/2025 18:41:27] "GET / HTTP/1.1" 200 -
+2025-08-31 18:41:27,842 [INFO] 127.0.0.1 - - [31/Aug/2025 18:41:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:41:30,435 [INFO] 127.0.0.1 - - [31/Aug/2025 18:41:30] "GET /grade_record/1 HTTP/1.1" 200 -
+2025-08-31 18:41:30,487 [INFO] 127.0.0.1 - - [31/Aug/2025 18:41:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-08-31 18:41:46,525 [INFO] 127.0.0.1 - - [31/Aug/2025 18:41:46] "GET / HTTP/1.1" 200 -
+2025-08-31 18:41:46,617 [INFO] 127.0.0.1 - - [31/Aug/2025 18:41:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -

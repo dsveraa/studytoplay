@@ -1,28 +1,35 @@
 from datetime import timedelta
-from app.models import Nivel, Trofeo, Premio, Usuario, Estrella, AcumulacionTiempo, Tiempo, NuevaNotificacion, Notificaciones, SolicitudVinculacion, SupervisorEstudiante, Asignatura, RegistroNotas
+from app.models import Nivel, Trofeo, Usuario, Estrella, AcumulacionTiempo, Tiempo, NuevaNotificacion, Notificaciones, SolicitudVinculacion, SupervisorEstudiante, Asignatura, RegistroNotas
 
 from .. import db
 from functools import wraps
-from flask import session, jsonify, url_for, abort
-from sqlalchemy.orm import aliased
+from flask import session, jsonify, request
 from sqlalchemy import desc
 from app.utils.debugging_utils import printn
 
-def relation_required(f):
-    @wraps(f)
-    def wrapped(*args, **kwargs):
-        supervisor_id = session.get("usuario_id")
-        estudiante_id = kwargs.get("id")
+def id_from_kwargs(*args, **kwargs):
+    return kwargs.get("estudiante_id") or kwargs.get("id")
 
-        relacion = SupervisorEstudiante.query.filter_by(
-            supervisor_id=supervisor_id,
-            estudiante_id=estudiante_id
-        ).first()
+def id_from_json(*args, **kwargs):
+    return request.get_json().get("estudiante_id")
 
-        if not relacion:
-            return jsonify({'status': 'unauthorized', 'reason': 'relation required'}), 401
-        return f(*args, **kwargs)
-    return wrapped
+def relation_required(get_estudiante_id):
+    def decorator(f):
+        @wraps(f)
+        def wrapped(*args, **kwargs):
+            supervisor_id = session.get("usuario_id")
+            estudiante_id = get_estudiante_id(*args, **kwargs)
+
+            relacion = SupervisorEstudiante.query.filter_by(
+                supervisor_id=supervisor_id,
+                estudiante_id=estudiante_id
+            ).first()
+
+            if not relacion:
+                return jsonify({'status': 'unauthorized', 'reason': 'relation required'}), 401
+            return f(*args, **kwargs)
+        return wrapped
+    return decorator
 
 def login_required(f):
     @wraps(f)

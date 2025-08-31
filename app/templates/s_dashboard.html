@@ -18,7 +18,7 @@
             <a href="{{ url_for('super.student_info', id=estudiante.id) }}" >Records</a>
             
             {% if estudiante.grade_incentive %}
-              <a href="{{ url_for('super.grade_record', id=estudiante.id) }}" >Grade incentive</a>
+              <a href="{{ url_for('super.grade_record' if estudiante.incentivo_id else 'super.grade_record_warning', id=estudiante.id) }}" >Grade incentive</a>
             {% endif %}
             
             <a href="{{ url_for('core.settings', id=estudiante.id) }}">Settings</a>

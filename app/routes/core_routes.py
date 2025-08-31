@@ -3,7 +3,7 @@ from sqlalchemy import func
 from sqlalchemy.orm import aliased
 
 from app.models import Estudio, Tiempo, Usuario, Asignatura, Rol, SupervisorEstudiante, EstadoUsuario, Incentivos, Restricciones
-from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, mostrar_estrellas, mostrar_trofeos, mostrar_nivel, relation_required, supervisor_required, revisar_nuevas_notificaciones
+from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, id_from_kwargs, mostrar_estrellas, mostrar_trofeos, mostrar_nivel, relation_required, supervisor_required, revisar_nuevas_notificaciones
 from app.services.settings_service import UserSettings
 from app.services.grade_incentive_service import GradeIncentiveRepository, GradeIncentive
 
@@ -29,7 +29,7 @@ def home():
     supervisor = Usuario.query.join(Rol).filter(Usuario.id == usuario_id, Rol.nombre == "supervisor").first()
 
     settings = UserSettings(usuario_id)
-    settings.information()
+    printn(settings.information())
     
     if supervisor:
         session["supervisor_id"] = usuario_id
@@ -43,7 +43,8 @@ def home():
                 Estudiante.nombre,
                 Tiempo.tiempo,
                 EstadoUsuario.estado,
-                Settings.incentivo_notas
+                Settings.incentivo_notas,
+                Incentivos.id
             )
             .select_from(SupervisorEstudiante)
             .join(Supervisor, Supervisor.id == SupervisorEstudiante.supervisor_id)
@@ -51,27 +52,30 @@ def home():
             .outerjoin(Tiempo, Tiempo.usuario_id == SupervisorEstudiante.estudiante_id)
             .outerjoin(EstadoUsuario, EstadoUsuario.usuario_id == SupervisorEstudiante.estudiante_id)
             .outerjoin(Settings, Settings.usuario_id == Estudiante.id)
+            .outerjoin(Incentivos, Incentivos.usuario_id == Estudiante.id)
             .filter(SupervisorEstudiante.supervisor_id == usuario_id)
             .distinct(Estudiante.id)
         )
 
         estudiantes = [
-            {"id": eid, 
+            {   
+                "id": eid, 
                 "nombre": nombre, 
                 "tiempo": tiempo, 
                 "estado": estado, 
-                "grade_incentive": incentivo_notas
-                }
-            for eid, nombre, tiempo, estado, incentivo_notas in query.all()
+                "grade_incentive": incentivo_notas,
+                "incentivo_id": inc_id
+            }
+            for eid, nombre, tiempo, estado, incentivo_notas, inc_id in query.all()
         ]
-        printn(estudiantes)
+
         return render_template("s_dashboard.html", estudiantes=estudiantes)
     
     return redirect(url_for("core.perfil"))
 
 @core_bp.route("/settings/<id>")
 @supervisor_required
-@relation_required
+@relation_required(id_from_kwargs)
 def settings(id=None):
     from app.services.countries_service import get_countries
     from app.utils.sistemas_notas_utils import sistemas
@@ -156,35 +160,21 @@ def perfil():
         restricciones=restricciones
         )
 
-@core_bp.route("/change_country", methods=["POST"])
-def change_country():
-    data = request.get_json()
-    estudiante_id = data.get('estudiante_id')
-    pais_id = data.get('pais_id')
-
-    if not estudiante_id:
-        return jsonify({"error": "estudiante_id missing"}), 400
-    
-    if not pais_id:
-        return jsonify({"error": "pais_id missing"}), 400
-    
+@core_bp.route("/country/<int:estudiante_id>/<int:pais_id>", methods=["PUT"])
+@relation_required(id_from_kwargs)
+def change_country(estudiante_id, pais_id):
     settings = UserSettings(estudiante_id)
     result = settings.cambiar_pais(pais_id)
 
-    return jsonify({"success": True, "result": result})
+    return jsonify({"success": True, "pais_id": result}), 200
 
-@core_bp.route("/incentivo_toggle", methods=["POST"])
-def incentivo_toggle():
-    data = request.get_json()
-    estudiante_id = data.get('estudiante_id')
-
-    if not estudiante_id:
-        return jsonify({"error": "estudiante_id missing"}), 400
-
+@core_bp.route("/incentivo/<int:estudiante_id>", methods=["PUT"])
+@relation_required(id_from_kwargs)
+def incentivo_toggle(estudiante_id):
     settings = UserSettings(estudiante_id)
-    result = settings.incentivo_toggle()        
+    result = settings.incentivo_toggle()
 
-    return jsonify({"success": True, "result": result})
+    return jsonify({"success": True, "incentivo": result}), 200
 
 @core_bp.route('/log_click', methods=['POST'])
 def log_click():

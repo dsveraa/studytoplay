@@ -82,14 +82,14 @@ function markPaid() {
     const select = document.querySelector('.grade-to-pay-select');
     const selectedOption = select.options[select.selectedIndex];
     const registroId = selectedOption.value;
-    const usuarioId = selectedOption.dataset.usuario_id;
+    const estudianteId = selectedOption.dataset.usuario_id;
 
-    fetch("/mark_paid", {
+    fetch("/payment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
             grade_to_pay: registroId,
-            usuario_id: usuarioId
+            estudiante_id: estudianteId
         }),
     }).then(response => {
         if (response.redirected) {
