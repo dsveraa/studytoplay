@@ -3,7 +3,36 @@
 
 {% block content %}
 
+<style>
+    #flash-messages {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+#flash-messages.show {
+  opacity: 1;
+}
+
 </style>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div id="flash-messages" class="hidden">
+      {% for category, message in messages %}
+        {% set bootstrap_class = {
+            "error": "danger",
+            "success": "success",
+            "warning": "warning",
+            "info": "info"
+        }[category] %}
+        <div class="alert alert-{{ bootstrap_class }} mt-2" role="alert">
+          {{ message }}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+
 <div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
     <h3 class="mb-4">New Record</h3>
     
@@ -36,7 +65,7 @@
 
 <!-- Mark grade as paid -->
 <div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
-    <h3 class="mb-4">Pay</h3>
+    <h3 class="mb-4">Payment</h3>
     <select class="form-control mb-2 grade-to-pay-select" name="grade_to_pay" id="grade_to_pay" required>
         <!-- menu -->
         <option value="">Select a grade to mark as paid...</option>
@@ -78,6 +107,14 @@
 </div>
 <br><br>
 <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+    const flash = document.getElementById("flash-messages")
+    if (flash) {
+        flash.classList.add("show")
+    }   
+})
+
 function markPaid() {
     const select = document.querySelector('.grade-to-pay-select');
     const selectedOption = select.options[select.selectedIndex];
@@ -85,7 +122,7 @@ function markPaid() {
     const estudianteId = selectedOption.dataset.usuario_id;
 
     fetch("/payment", {
-        method: "POST",
+        method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
             grade_to_pay: registroId,
@@ -97,7 +134,6 @@ function markPaid() {
         }
     });
 }
-
 
 function submitGrade() {
     let asignatura = document.getElementById("asignatura").value

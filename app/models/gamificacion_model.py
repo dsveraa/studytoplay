@@ -2,14 +2,6 @@ from sqlalchemy import Column, Integer, String, Float, ForeignKey
 from .. import db
 
 
-class Premio(db.Model):
-    __tablename__ = "premios"
-
-    id = Column(Integer, primary_key=True)
-    usuario_id = Column(Integer, ForeignKey('usuarios.id'))
-    descripcion = Column(String(100))
-
-
 class Incentivos(db.Model):
     __tablename__ = "incentivos"
     

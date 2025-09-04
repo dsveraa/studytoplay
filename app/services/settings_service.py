@@ -15,6 +15,7 @@ class UserSettings:
             self.user_settings = Settings(usuario_id=self.id)
             db.session.add(self.user_settings)
             db.session.commit()
+            db.session.refresh(self.user_settings)
             self.message = "User Settings created"
             
     def information(self):

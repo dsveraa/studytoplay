@@ -1,7 +1,8 @@
-from flask import render_template, request, redirect, url_for, Blueprint
+from flask import flash, jsonify, render_template, request, redirect, url_for, Blueprint
 from sqlalchemy import desc
 
 from app.models import Estudio, Uso, Asignatura, RegistroNotas
+from app.utils.debugging_utils import printn
 from app.utils.helpers import relation_required, supervisor_required, listar_asignaturas, listar_registro_notas, id_from_json, id_from_kwargs
 from app.services.notifications_service import Notification, NotificationRepository
 from app.services.grade_incentive_service import GradeIncentiveRepository, GradeIncentive, get_currency_data
@@ -71,7 +72,7 @@ def add_grade_record(id):
 
     return redirect(url_for("super.grade_record", id=id))  
     
-@super_bp.route("/payment", methods=["POST"])
+@super_bp.route("/payment", methods=["PUT"])
 @supervisor_required
 def mark_paid():
     data = request.get_json()
@@ -79,14 +80,21 @@ def mark_paid():
     estudiante_id = data.get('estudiante_id')
     
     registro = RegistroNotas.query.get_or_404(registro_id)
-    registro.estado = True
     nota = registro.nota
     asignatura = registro.asignatura.nombre
     
     amount, currency, symbol = get_currency_data(estudiante_id, nota)
 
+    if amount == None:
+        flash("An unexpected error occurred, please try again.", "error")
+        return redirect(url_for("super.grade_record", id=estudiante_id))
+        
+    registro.estado = True
+    db.session.commit()
+
     repo = NotificationRepository(db.session)
     notification = Notification(estudiante_id, repo)
     notification.notify_grade(nota, asignatura, 'pay', amount, currency, symbol)
     
+    flash("The payment has been recorded successfully", "success")
     return redirect(url_for("super.grade_record", id=estudiante_id))

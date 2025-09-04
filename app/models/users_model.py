@@ -18,7 +18,6 @@ class Usuario(db.Model):
 
     niveles = relationship('Nivel', backref='usuario')
     trofeos = relationship('Trofeo', backref='usuario')
-    premios = relationship('Premio', backref='usuario')
     acumulacion_tiempos = relationship('AcumulacionTiempo', backref='usuario')
     estrellas = relationship('Estrella', backref='usuario')
     asignaturas = relationship('Asignatura', backref='usuario')
@@ -47,8 +46,9 @@ class Settings(db.Model):
 
     id = Column(Integer, primary_key=True)
     usuario_id = Column(Integer, ForeignKey('usuarios.id'), nullable=False, unique=True)
-    
     incentivo_notas = Column(Boolean, server_default=text("false"), nullable=False)
     pais_id = Column(Integer, ForeignKey("pais.id"), server_default=text("1"), nullable=False)
+    trofeo = Column(String, server_default=text("'Unconditional love &#10084;&#65039;'"), nullable=False)
+    extra_time = Column(Integer, server_default="1800000")
 
     pais = relationship("Pais", backref="settings")

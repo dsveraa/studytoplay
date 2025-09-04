@@ -5,28 +5,32 @@ from app.services.countries_service import get_countries
 from app.services.settings_service import UserSettings
 
 
-def get_currency_data(id, nota):
-    incentivos_obj = Incentivos.query.filter_by(usuario_id=id).all()
-
-    incentivos = [{"monto": incentivo.monto, "nota": incentivo.nota} for incentivo in incentivos_obj]
-
-    def evaluar_monto(incentivos, nota):
-        for incentivo in incentivos:
-            if float(incentivo["nota"]) == float(nota):
-                return incentivo["monto"]
-
-    amount = evaluar_monto(incentivos, nota)
-
-    countries = get_countries()
+def get_currency_data(id, grade):
+    incentives = get_incentives(id)
+    amount = eval_amount(incentives, grade)
     user_settings = UserSettings(id)
-    pais_id = user_settings.get_country()
+    country_id = user_settings.get_country()
+    countries = get_countries()
+    currency, symbol = get_currency_and_symbol(countries, country_id)
+    return amount, currency, symbol
 
+def get_incentives(id):
+    incentivos_obj = Incentivos.query.filter_by(usuario_id=id).all()
+    incentivos = [{"monto": incentivo.monto, "nota": incentivo.nota} for incentivo in incentivos_obj]
+    return incentivos
+
+def eval_amount(incentivos, nota):
+    for incentivo in incentivos:
+        if float(incentivo["nota"]) == float(nota):
+            return incentivo["monto"]
+        
+def get_currency_and_symbol(countries, pais_id):
     for country in countries:
         if country["id"] == pais_id:
             currency = country["moneda"]
             symbol = country["simbolo"]
-    
-    return amount, currency, symbol
+    return currency,symbol
+
 
 class GradeIncentiveRepository:
     def __init__(self, db_session):
@@ -69,7 +73,7 @@ class GradeIncentiveRepository:
         .filter(Incentivos.usuario_id == user_id)
         .all()
         )
-        printn(query)
+        # printn(query)
         country = query[0][0]
         result = []
         result.append(country)

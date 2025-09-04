@@ -4,5 +4,5 @@ from .progreso_model import Nivel, Trofeo, Estrella
 from .academico_model import Estudio, Asignatura, RegistroNotas
 from .tiempo_model import Tiempo, Uso, AcumulacionTiempo
 from .regional_model import Monedas, Simbolos, Pais
-from .gamificacion_model import Incentivos, Restricciones, Premio
+from .gamificacion_model import Incentivos, Restricciones
 from .notificaciones_model import Notificaciones, NuevaNotificacion
