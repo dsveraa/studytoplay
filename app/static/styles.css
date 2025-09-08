@@ -235,3 +235,12 @@ label.fs-2 {
 .cursor-pointer {
     cursor: pointer;
 }
+
+#flash-messages {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+#flash-messages.show {
+    opacity: 1;
+}

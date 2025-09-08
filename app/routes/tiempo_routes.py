@@ -3,6 +3,7 @@ from datetime import datetime
 from sqlalchemy import desc
 
 from app.models import Estudio, Tiempo, Uso, Asignatura, AcumulacionTiempo
+from app.services.settings_service import UserSettings
 from app.utils.helpers import revisar_nuevas_notificaciones
 
 from .. import db
@@ -67,8 +68,11 @@ def add_time():
         tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
         acumulacion_tiempo = AcumulacionTiempo.query.filter_by(usuario_id=usuario_id).first()
         
+        user_settings = UserSettings(usuario_id)
+        multiplicador = user_settings.get_study_fun_ratio()
+        
         if tiempo:
-            tiempo.tiempo += (time * 1.5)
+            tiempo.tiempo += (time * multiplicador) # temporal, multiplicador de tiempo 
         else:
             tiempo = Tiempo(usuario_id=usuario_id, tiempo=time)
             db.session.add(tiempo)

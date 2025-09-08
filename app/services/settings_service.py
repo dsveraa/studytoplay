@@ -38,10 +38,31 @@ class UserSettings:
         '''
         return self.user_settings.incentivo_notas
 
-    def consultar_pais(self):
+    def consultar_pais(self) -> int:
         return self.user_settings.pais_id
     
     def cambiar_pais(self, pais_id: int):
         self.user_settings.pais_id = pais_id
         db.session.commit()
         return self.user_settings.pais_id
+
+    def get_trophy(self):
+        return self.user_settings.trofeo
+    
+    def set_trophy(self, reward):
+        self.user_settings.trofeo = reward
+        db.session.commit()
+    
+    def get_extra_time(self):
+        return self.user_settings.extra_time
+    
+    def set_extra_time(self, extra_time):
+        self.user_settings.extra_time = extra_time
+        db.session.commit()
+    
+    def get_study_fun_ratio(self):
+        return self.user_settings.time_ratio
+    
+    def set_study_fun_ratio(self, time_ratio):
+        self.user_settings.time_ratio = time_ratio
+        db.session.commit()

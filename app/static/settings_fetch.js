@@ -107,3 +107,49 @@ async function fetchIncentivoToggle(estudianteId) {
         return null
     }
 }
+
+async function fetchSetTrophy(estudianteId, reward) {
+    try {
+        const response = await fetch(`/trophy/${estudianteId}/${encodeURIComponent(reward)}`, {
+            method: "PUT"
+        })
+
+        const data = await response.json()
+
+        if (data.flash) {
+            showFlashMessage(data.flash.message, data.flash.category)
+        }
+
+    } catch (error) {
+        console.error("Error al consultar los datos", error)
+    }
+}
+
+async function fetchSetExtraTime(id, extraTime) {
+    try {
+      const response = await fetch(`/extra_time/${id}/${extraTime}`, {
+        method: "PUT"
+      })
+  
+      const data = await response.json()
+      return data
+
+    } catch (error) {
+      console.error("Error al consultar los datos", error)
+    }
+
+  }
+
+async function fetchTimeFunRatio(id, estudianteId) {
+    try {
+        const response = await fetch(`/study_fun_ratio/${id}/${estudianteId}`, {
+            method: "PUT"
+        })
+
+        const data = await response.json()
+        return data
+
+    } catch (error) {
+        console.error("Error al consultar los datos", error)
+    }
+}

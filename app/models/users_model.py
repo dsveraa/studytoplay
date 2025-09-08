@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, ForeignKey, Boolean, text
+from sqlalchemy import Column, Integer, String, ForeignKey, Boolean, text, Float
 from sqlalchemy.orm import relationship
 from .. import db
 
@@ -50,5 +50,6 @@ class Settings(db.Model):
     pais_id = Column(Integer, ForeignKey("pais.id"), server_default=text("1"), nullable=False)
     trofeo = Column(String, server_default=text("'Unconditional love &#10084;&#65039;'"), nullable=False)
     extra_time = Column(Integer, server_default="1800000")
+    time_ratio = Column(Float, server_default="1.0")
 
     pais = relationship("Pais", backref="settings")

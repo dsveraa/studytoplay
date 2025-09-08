@@ -87,9 +87,11 @@ def settings(id=None):
 
     settings = UserSettings(id)
     incentivo_notas = settings.consultar_incentivo_notas()
-
-    lista_paises = get_countries()
     pais_actual = settings.consultar_pais()
+    trofeo = settings.get_trophy()
+    extra_time = settings.get_extra_time()
+    study_fun_ratio = settings.get_study_fun_ratio()
+    lista_paises = get_countries()
 
     return render_template("s_settings.html", 
                             incentivo_notas=incentivo_notas, 
@@ -98,7 +100,10 @@ def settings(id=None):
                             pais_actual=pais_actual,
                             incentivos=incentivos,
                             restricciones=restricciones,
-                            sistemas=sistemas
+                            sistemas=sistemas,
+                            trofeo=trofeo,
+                            extra_time=extra_time,
+                            study_fun_ratio=study_fun_ratio
                             )
 
 @core_bp.route("/perfil")

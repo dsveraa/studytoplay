@@ -3,34 +3,7 @@
 
 {% block content %}
 
-<style>
-    #flash-messages {
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
-#flash-messages.show {
-  opacity: 1;
-}
-
-</style>
-
-{% with messages = get_flashed_messages(with_categories=true) %}
-  {% if messages %}
-    <div id="flash-messages" class="hidden">
-      {% for category, message in messages %}
-        {% set bootstrap_class = {
-            "error": "danger",
-            "success": "success",
-            "warning": "warning",
-            "info": "info"
-        }[category] %}
-        <div class="alert alert-{{ bootstrap_class }} mt-2" role="alert">
-          {{ message }}
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
-{% endwith %}
+{% include 'flash_messages.html' %}
 
 
 <div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">

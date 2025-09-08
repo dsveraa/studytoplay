@@ -1,5 +1,6 @@
 from datetime import timedelta
 from app.models import Nivel, Trofeo, Usuario, Estrella, AcumulacionTiempo, Tiempo, NuevaNotificacion, Notificaciones, SolicitudVinculacion, SupervisorEstudiante, Asignatura, RegistroNotas
+from app.services.settings_service import UserSettings
 
 from .. import db
 from functools import wraps
@@ -133,11 +134,15 @@ def revisar_tiempo_total(id: int) -> float:
         raise ValueError(f"No se encontró tiempo total con id {id}")
     return tiempo_total
 
+def get_extra_time(user_id: int) -> int:
+    user_settings = UserSettings(user_id)
+    return user_settings.get_extra_time
+
 HORA = 3_600_000
 # HORA = 500
 CHECKPOINT = HORA * 2 # suma una estrella
 TIEMPO_MAXIMO = CHECKPOINT * 5 # pasa de nivel
-BONIFICACION = CHECKPOINT // 2  # resultado para aplicar multiplicador 
+
 
 def asignar_estrellas(id: int) -> int:
     tiempo_acumulado = revisar_acumulacion_tiempo(id)
@@ -171,8 +176,8 @@ def asignar_nivel(id: int) -> int:
         nuevo_nivel = nivel_obj.nivel + 1
         nivel_obj.nivel = nuevo_nivel
         tiempo_obj.cantidad -= TIEMPO_MAXIMO
-        # tiempo_total_obj = revisar_tiempo_total(id)
-        # tiempo_total_obj.tiempo += BONIFICACION * nuevo_nivel
+        tiempo_total_obj = revisar_tiempo_total(id)
+        tiempo_total_obj.tiempo += get_extra_time(id)
         db.session.commit()
         # return print(f'Has pasado a nivel {nivel_obj.nivel} y tienes una nueva bonificación de tiempo!')
         return print(f'Has pasado a nivel {nivel_obj.nivel}!') if nivel_obj.nivel < 4 else None

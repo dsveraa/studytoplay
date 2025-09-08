@@ -35,8 +35,41 @@
   }
   </style>
 
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      {% set bootstrap_class = {
+          "error": "danger",
+          "success": "success",
+          "warning": "warning",
+          "info": "info"
+      }[category] %}
+      <div class="alert alert-{{ bootstrap_class }} mt-2" role="alert">
+        {{ message | safe }}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
 <div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
   <h5>Settings</h5>
+  
+  <!-- ratio -->
+  <div class="my-4">
+    <p class="fs-2">Study-Fun Ratio</p>
+    <p>Set the ratio between study time and fun time.</p> 
+    <label for="study-fun-ratio">For every:</label>
+    <select name="study-fun-ratio" id="study-fun-ratio" class="select-dark">
+      <option value="0.5" {% if study_fun_ratio == 0.5 %}selected{% endif %}>2 hours of study, 1 hour of fun</option>
+      <option value="0.67" {% if study_fun_ratio == 0.67 %}selected{% endif %}>1.5 hours of study, 1 hour of fun</option>
+      <option value="1.0" {% if study_fun_ratio == 1.0 %}selected{% endif %}>1 hour of study, 1 hour of fun</option>
+      <option value="1.5" {% if study_fun_ratio == 1.5 %}selected{% endif %}>1 hour of study, 1.5 hours of fun</option>
+      <option value="2.0" {% if study_fun_ratio == 2.0 %}selected{% endif %}>1 hour of study, 2 hours of fun</option>
+    </select>
+  </div>
+  
+  <hr>
   
   <!-- level -->
   <div class="my-4">
@@ -44,9 +77,9 @@
     <p>After 10 study hours, the student reaches a new level and gets extra time set here.</p> 
     <label for="extra-time">Extra time:</label>
     <select name="extra-time" id="extra-time" class="select-dark">
-      <option value="1800000">30 min</option>
-      <option value="3600000">1 hour</option>
-      <option value="7200000">2 hours</option>
+      <option value="1800000" {% if extra_time == 1800000 %}selected{% endif %}>30 min</option>
+      <option value="3600000" {% if extra_time == 3600000 %}selected{% endif %}>1 hour</option>
+      <option value="7200000" {% if extra_time == 7200000 %}selected{% endif %}>2 hours</option>
     </select>
   </div>
   
@@ -59,14 +92,14 @@
     
     <div class="rounded custom-bg-grey py-2 px-2 d-flex align-content-center flex-column text-center mt-2 mb-4">
       <p class="mb-0">Current reward</p>
-      <h5 class="mb-0">Unconditional love &#10084;&#65039;</h5>
+      <h5 class="mb-0">{{ trofeo | safe }}</h5>
     </div>
     
     <h5>Set new reward</h5>
-    <div class="d-flex gap-2 align-items-center">
-      <input id="reward_input" type="text" class="form-control flex-shrink-1">
-      <button class="btn custom-btn-2">Set</button>
-    </div>
+    <form action="{{ url_for('super.set_trophy', id=estudiante_id) }}" method="POST" class="d-flex gap-2 align-items-center">
+      <input id="reward_input" name="reward" type="text" class="form-control flex-shrink-1">
+      <button type="submit" class="btn custom-btn-2">Set</button>
+    </form>
   </div>
   
   <hr>
@@ -170,7 +203,31 @@
 <script src="{{ url_for('static', filename='settings_handling.js') }}"></script>
 
 <script>
+
+  const extraTimeSelect = document.getElementById("extra-time")
+  const timeRatioSelect = document.getElementById("study-fun-ratio")
+
+  timeRatioSelect.addEventListener("change", () => {
+    const ratio = timeRatioSelect.value
+    const id = {{ estudiante_id }}
+    fetchTimeFunRatio(id, ratio)
+  })
+
+  extraTimeSelect.addEventListener("change", () => {
+    const extraTime = extraTimeSelect.value
+    const id = {{ estudiante_id }}
+    fetchSetExtraTime(id, extraTime)
+  })
+
   
+
+document.addEventListener("DOMContentLoaded", () => {
+  const alerts = document.querySelectorAll(".alert");
+  alerts.forEach(alert => {
+    setTimeout(() => alert.remove(), 5000);
+  });
+});
+
 const selectPais = document.getElementById("pais_select")
 const monedaDisplay = document.getElementById("moneda_display")
 const simboloDisplay = document.getElementById("monto")

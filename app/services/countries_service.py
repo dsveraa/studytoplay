@@ -3,7 +3,10 @@ from app.models import Monedas
 from sqlalchemy.orm import joinedload
 
 
-def get_countries():
+def get_countries() -> list:
+    '''
+    Devuelve una lista de paises con su Id, Nombre, Moneda y Símbolo.
+    '''
     countries = (
         Pais.query
         .options(

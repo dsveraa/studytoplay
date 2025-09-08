@@ -107,3 +107,4 @@ async function handleRemoveRestriction(estudiante_id, restriction_id) {
         console.error("Error removing restriction", error)
     }
 }
+

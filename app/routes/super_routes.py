@@ -1,7 +1,8 @@
 from flask import flash, jsonify, render_template, request, redirect, url_for, Blueprint
 from sqlalchemy import desc
 
-from app.models import Estudio, Uso, Asignatura, RegistroNotas
+from app.models import Estudio, Uso, Asignatura, RegistroNotas, Settings
+from app.services.settings_service import UserSettings
 from app.utils.debugging_utils import printn
 from app.utils.helpers import relation_required, supervisor_required, listar_asignaturas, listar_registro_notas, id_from_json, id_from_kwargs
 from app.services.notifications_service import Notification, NotificationRepository
@@ -98,3 +99,34 @@ def mark_paid():
     
     flash("The payment has been recorded successfully", "success")
     return redirect(url_for("super.grade_record", id=estudiante_id))
+
+@super_bp.route("/trophy/<int:id>", methods=["POST"])
+@supervisor_required
+@relation_required(id_from_kwargs)
+def set_trophy(id):
+    reward = request.form.get("reward", "").strip()
+    user_settings = UserSettings(id)
+
+    if not reward:
+        flash("Isn't possible to submit empty data as a Trophy.", "warning")
+        return redirect(url_for("core.settings", id=id))
+
+    user_settings.set_trophy(reward)
+    flash(f"A new trophy has been set up: <b>{reward}</b>", "success")
+    return redirect(url_for("core.settings", id=id))
+
+@super_bp.route("/extra_time/<int:id>/<int:extra_time>", methods=["PUT"])
+@supervisor_required
+@relation_required(id_from_kwargs)
+def set_extra_time(id, extra_time):
+    user_settings = UserSettings(id)
+    user_settings.set_extra_time(extra_time)
+    return jsonify({"status": "success"}), 200
+
+@super_bp.route("/study_fun_ratio/<int:id>/<ratio>", methods=["PUT"])
+@supervisor_required
+@relation_required(id_from_kwargs)
+def set_study_fun_ratio(id, ratio):
+    user_settings = UserSettings(id)
+    user_settings.set_study_fun_ratio(ratio)
+    return jsonify({"status": "success"}), 200
