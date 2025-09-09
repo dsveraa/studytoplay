@@ -27568,3 +27568,11 @@ TypeError: '<' not supported between instances of 'Nivel' and 'int'
 2025-09-08 13:18:48,332 [INFO] 127.0.0.1 - - [08/Sep/2025 13:18:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
 2025-09-08 13:18:48,334 [INFO] 127.0.0.1 - - [08/Sep/2025 13:18:48] "[36mGET /static/timerUse.js HTTP/1.1[0m" 304 -
 2025-09-08 13:18:48,920 [INFO] 127.0.0.1 - - [08/Sep/2025 13:18:48] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-09-08 13:49:34,836 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-08 13:49:34,836 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-08 13:49:34,836 [INFO]  * Restarting with stat
+2025-09-08 13:49:35,281 [WARNING]  * Debugger is active!
+2025-09-08 13:49:35,281 [INFO]  * Debugger PIN: 118-623-613

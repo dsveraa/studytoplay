@@ -1,3 +1,4 @@
+import logging
 from app.models import Incentivos, Restricciones, Settings
 from app.utils.debugging_utils import printn
 from app.utils.filtro_notas_utils import elegir_sistema_calificaciones as grade_system
@@ -8,6 +9,7 @@ from app.services.settings_service import UserSettings
 def get_currency_data(id, grade):
     incentives = get_incentives(id)
     amount = eval_amount(incentives, grade)
+    logging.info(f"amount dentro de get_currency_data: {amount}")
     user_settings = UserSettings(id)
     country_id = user_settings.get_country()
     countries = get_countries()
@@ -20,9 +22,12 @@ def get_incentives(id):
     return incentivos
 
 def eval_amount(incentivos, nota):
+    incentivos = sorted(incentivos, key=lambda x: x["nota"])
+    monto = None
     for incentivo in incentivos:
-        if float(incentivo["nota"]) == float(nota):
-            return incentivo["monto"]
+        if float(nota) >= float(incentivo["nota"]):
+            monto = incentivo["monto"]        
+    return monto
         
 def get_currency_and_symbol(countries, pais_id):
     for country in countries:

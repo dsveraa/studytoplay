@@ -1,3 +1,4 @@
+import logging
 from flask import flash, jsonify, render_template, request, redirect, url_for, Blueprint
 from sqlalchemy import desc
 
@@ -82,9 +83,11 @@ def mark_paid():
     
     registro = RegistroNotas.query.get_or_404(registro_id)
     nota = registro.nota
+    logging.info(f"registro nota: {nota}")
     asignatura = registro.asignatura.nombre
     
     amount, currency, symbol = get_currency_data(estudiante_id, nota)
+    logging.info(f"amount: {amount}")
 
     if amount == None:
         flash("An unexpected error occurred, please try again.", "error")
