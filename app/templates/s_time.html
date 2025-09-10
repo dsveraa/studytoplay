@@ -1,0 +1,78 @@
+{% extends 'base_supervisor.html' %}
+
+{% block title %}Edit Time{% endblock %}
+
+{% block content %}
+
+{% include 'flash_messages.html' %}
+
+<div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
+  <div class="d-flex flex-column align-items-center">
+    <h3>Manage student Time</h3>
+    
+    <h1 class="custom-text-3 my-3">{{ current_time | ms_to_hms }}</h1>
+    
+    <div class="d-flex gap-4 flex-column">
+      <fieldset>
+        <input type="radio" name="manage-time" id="add-time" value="add" checked />
+        <label for="add-time">Add</label>
+        <input type="radio" name="manage-time" id="substract-time" value="substract" />
+        <label for="substract-time">Substract</label>
+      </fieldset>
+  
+      <select name="hours" id="hours">
+        <option value="900000">15 minutes</option>
+        <option value="1800000">30 minutes</option>
+        <option value="3600000" selected>1 hour</option>
+        <option value="7200000">2 hours</option>
+        <option value="10800000">3 hours</option>
+        <option value="14400000">4 hours</option>
+      </select>
+  
+      <button class="btn custom-btn-2" onclick="handleManageTime({{ user_id }})">Apply</button>
+    </div>
+  </div>
+</div>
+<br><br>
+
+<script>
+  function handleManageTime(id) {
+    const action = document.querySelector('input[name="manage-time"]:checked').value
+    const time = parseInt(document.getElementById("hours").value, 10)
+    fetchManageTime(id, action, time)
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const flash = document.getElementById("flash-messages")
+    if (flash) {
+        flash.classList.add("show")
+    }   
+  })
+
+  async function fetchManageTime(id, action, time) {
+    try {
+        const response = await fetch(`/s_time/${id}/${action}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ time: time })
+        })
+
+        if (!response.ok) {
+            throw new Error(`Error HTTP: ${response.status}`)
+        }
+
+        const data = await response.json()
+        console.log(data)
+
+        window.location.reload()
+
+    } catch (error) {
+        console.error(`Error en la solicitud: ${error}`)
+    }
+}
+
+</script>
+
+{% endblock %}

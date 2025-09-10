@@ -9,7 +9,7 @@
             "info": "info"
         }[category] %}
         <div class="alert alert-{{ bootstrap_class }} mt-2" role="alert">
-          {{ message }}
+          {{ message | safe }}
         </div>
       {% endfor %}
     </div>

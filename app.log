@@ -27576,3 +27576,758 @@ TypeError: '<' not supported between instances of 'Nivel' and 'int'
 2025-09-08 13:49:34,836 [INFO]  * Restarting with stat
 2025-09-08 13:49:35,281 [WARNING]  * Debugger is active!
 2025-09-08 13:49:35,281 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 12:52:59,167 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-09 12:52:59,167 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-09 12:52:59,167 [INFO]  * Restarting with stat
+2025-09-09 12:52:59,597 [WARNING]  * Debugger is active!
+2025-09-09 12:52:59,598 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 12:53:07,536 [INFO] 127.0.0.1 - - [09/Sep/2025 12:53:07] "GET / HTTP/1.1" 200 -
+2025-09-09 12:53:07,591 [INFO] 127.0.0.1 - - [09/Sep/2025 12:53:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 12:53:12,535 [INFO] 127.0.0.1 - - [09/Sep/2025 12:53:12] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-09 12:53:12,745 [INFO] 127.0.0.1 - - [09/Sep/2025 12:53:12] "GET /login HTTP/1.1" 200 -
+2025-09-09 12:53:27,195 [INFO] 127.0.0.1 - - [09/Sep/2025 12:53:27] "GET /student_info/1 HTTP/1.1" 200 -
+2025-09-09 12:53:27,257 [INFO] 127.0.0.1 - - [09/Sep/2025 12:53:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 12:53:27,416 [INFO] 127.0.0.1 - - [09/Sep/2025 12:53:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 12:53:47,987 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 12:53:48,092 [INFO]  * Restarting with stat
+2025-09-09 12:53:48,552 [WARNING]  * Debugger is active!
+2025-09-09 12:53:48,553 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 12:53:51,577 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 12:53:51,659 [INFO]  * Restarting with stat
+2025-09-09 12:59:17,391 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-09 12:59:17,391 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-09 12:59:17,391 [INFO]  * Restarting with stat
+2025-09-09 12:59:17,821 [WARNING]  * Debugger is active!
+2025-09-09 12:59:17,821 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 12:59:22,810 [INFO] 127.0.0.1 - - [09/Sep/2025 12:59:22] "GET / HTTP/1.1" 200 -
+2025-09-09 12:59:22,905 [INFO] 127.0.0.1 - - [09/Sep/2025 12:59:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 12:59:28,484 [INFO] 127.0.0.1 - - [09/Sep/2025 12:59:28] "GET /s_time/7 HTTP/1.1" 200 -
+2025-09-09 12:59:28,557 [INFO] 127.0.0.1 - - [09/Sep/2025 12:59:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 12:59:34,745 [INFO] 127.0.0.1 - - [09/Sep/2025 12:59:34] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 12:59:34,808 [INFO] 127.0.0.1 - - [09/Sep/2025 12:59:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 13:00:45,761 [INFO] 127.0.0.1 - - [09/Sep/2025 13:00:45] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 13:00:45,856 [INFO] 127.0.0.1 - - [09/Sep/2025 13:00:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 13:01:05,375 [INFO] 127.0.0.1 - - [09/Sep/2025 13:01:05] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 13:01:05,430 [INFO] 127.0.0.1 - - [09/Sep/2025 13:01:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 13:01:29,471 [INFO] 127.0.0.1 - - [09/Sep/2025 13:01:29] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 13:01:29,549 [INFO] 127.0.0.1 - - [09/Sep/2025 13:01:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 13:02:16,162 [INFO] 127.0.0.1 - - [09/Sep/2025 13:02:16] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 13:02:16,225 [INFO] 127.0.0.1 - - [09/Sep/2025 13:02:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 13:02:21,177 [INFO] 127.0.0.1 - - [09/Sep/2025 13:02:21] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 13:02:21,243 [INFO] 127.0.0.1 - - [09/Sep/2025 13:02:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 13:05:29,819 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 13:05:29,921 [INFO]  * Restarting with stat
+2025-09-09 13:05:30,367 [WARNING]  * Debugger is active!
+2025-09-09 13:05:30,367 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:05:32,387 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 13:05:32,463 [INFO]  * Restarting with stat
+2025-09-09 13:05:32,911 [WARNING]  * Debugger is active!
+2025-09-09 13:05:32,911 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:06:41,467 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:06:41,559 [INFO]  * Restarting with stat
+2025-09-09 13:06:42,010 [WARNING]  * Debugger is active!
+2025-09-09 13:06:42,010 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:06:54,106 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:06:54,207 [INFO]  * Restarting with stat
+2025-09-09 13:06:54,652 [WARNING]  * Debugger is active!
+2025-09-09 13:06:54,652 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:07:03,725 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:07:03,818 [INFO]  * Restarting with stat
+2025-09-09 13:07:04,258 [WARNING]  * Debugger is active!
+2025-09-09 13:07:04,258 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:07:09,300 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:07:09,395 [INFO]  * Restarting with stat
+2025-09-09 13:07:09,832 [WARNING]  * Debugger is active!
+2025-09-09 13:07:09,832 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:07:16,888 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:07:16,981 [INFO]  * Restarting with stat
+2025-09-09 13:07:17,417 [WARNING]  * Debugger is active!
+2025-09-09 13:07:17,417 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:07:19,437 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:07:19,513 [INFO]  * Restarting with stat
+2025-09-09 13:07:19,963 [WARNING]  * Debugger is active!
+2025-09-09 13:07:19,963 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:07:28,027 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:07:28,120 [INFO]  * Restarting with stat
+2025-09-09 13:07:28,554 [WARNING]  * Debugger is active!
+2025-09-09 13:07:28,555 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:07:31,579 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:07:31,655 [INFO]  * Restarting with stat
+2025-09-09 13:07:32,103 [WARNING]  * Debugger is active!
+2025-09-09 13:07:32,104 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:07:44,200 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:07:44,297 [INFO]  * Restarting with stat
+2025-09-09 13:07:44,749 [WARNING]  * Debugger is active!
+2025-09-09 13:07:44,749 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:08:39,179 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:08:39,282 [INFO]  * Restarting with stat
+2025-09-09 13:08:39,716 [WARNING]  * Debugger is active!
+2025-09-09 13:08:39,716 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:08:55,848 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:08:55,942 [INFO]  * Restarting with stat
+2025-09-09 13:08:56,383 [WARNING]  * Debugger is active!
+2025-09-09 13:08:56,384 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:04,448 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:04,540 [INFO]  * Restarting with stat
+2025-09-09 13:09:04,989 [WARNING]  * Debugger is active!
+2025-09-09 13:09:04,989 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:13,053 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:13,150 [INFO]  * Restarting with stat
+2025-09-09 13:09:13,588 [WARNING]  * Debugger is active!
+2025-09-09 13:09:13,588 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:16,613 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:16,687 [INFO]  * Restarting with stat
+2025-09-09 13:09:17,131 [WARNING]  * Debugger is active!
+2025-09-09 13:09:17,131 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:18,146 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:18,219 [INFO]  * Restarting with stat
+2025-09-09 13:09:18,649 [WARNING]  * Debugger is active!
+2025-09-09 13:09:18,650 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:22,685 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:22,785 [INFO]  * Restarting with stat
+2025-09-09 13:09:23,240 [WARNING]  * Debugger is active!
+2025-09-09 13:09:23,240 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:24,256 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:24,330 [INFO]  * Restarting with stat
+2025-09-09 13:09:24,776 [WARNING]  * Debugger is active!
+2025-09-09 13:09:24,776 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:27,802 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:27,875 [INFO]  * Restarting with stat
+2025-09-09 13:09:28,319 [WARNING]  * Debugger is active!
+2025-09-09 13:09:28,319 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:33,359 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:33,457 [INFO]  * Restarting with stat
+2025-09-09 13:09:33,894 [WARNING]  * Debugger is active!
+2025-09-09 13:09:33,894 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:34,909 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:34,981 [INFO]  * Restarting with stat
+2025-09-09 13:09:35,427 [WARNING]  * Debugger is active!
+2025-09-09 13:09:35,427 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:36,442 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:36,515 [INFO]  * Restarting with stat
+2025-09-09 13:09:36,961 [WARNING]  * Debugger is active!
+2025-09-09 13:09:36,961 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:38,981 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:39,058 [INFO]  * Restarting with stat
+2025-09-09 13:09:39,513 [WARNING]  * Debugger is active!
+2025-09-09 13:09:39,513 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:40,528 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:40,608 [INFO]  * Restarting with stat
+2025-09-09 13:09:41,040 [WARNING]  * Debugger is active!
+2025-09-09 13:09:41,040 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:42,054 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:42,133 [INFO]  * Restarting with stat
+2025-09-09 13:09:42,573 [WARNING]  * Debugger is active!
+2025-09-09 13:09:42,574 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:47,615 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:47,713 [INFO]  * Restarting with stat
+2025-09-09 13:09:48,149 [WARNING]  * Debugger is active!
+2025-09-09 13:09:48,149 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:51,174 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:51,249 [INFO]  * Restarting with stat
+2025-09-09 13:09:51,685 [WARNING]  * Debugger is active!
+2025-09-09 13:09:51,685 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:55,718 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:55,805 [INFO]  * Restarting with stat
+2025-09-09 13:09:56,258 [WARNING]  * Debugger is active!
+2025-09-09 13:09:56,258 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:09:58,278 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:09:58,359 [INFO]  * Restarting with stat
+2025-09-09 13:09:58,807 [WARNING]  * Debugger is active!
+2025-09-09 13:09:58,807 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:10:00,827 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:10:00,901 [INFO]  * Restarting with stat
+2025-09-09 13:10:01,337 [WARNING]  * Debugger is active!
+2025-09-09 13:10:01,338 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:10:08,394 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:10:08,488 [INFO]  * Restarting with stat
+2025-09-09 13:10:08,936 [WARNING]  * Debugger is active!
+2025-09-09 13:10:08,937 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:10:16,991 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:10:17,075 [INFO]  * Restarting with stat
+2025-09-09 13:10:17,512 [WARNING]  * Debugger is active!
+2025-09-09 13:10:17,512 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:10:19,531 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:10:19,605 [INFO]  * Restarting with stat
+2025-09-09 13:10:20,040 [WARNING]  * Debugger is active!
+2025-09-09 13:10:20,040 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:10:22,060 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:10:22,134 [INFO]  * Restarting with stat
+2025-09-09 13:10:22,589 [WARNING]  * Debugger is active!
+2025-09-09 13:10:22,589 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:10:25,615 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:10:25,691 [INFO]  * Restarting with stat
+2025-09-09 13:10:26,143 [WARNING]  * Debugger is active!
+2025-09-09 13:10:26,143 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:10:30,175 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:10:30,274 [INFO]  * Restarting with stat
+2025-09-09 13:10:30,721 [WARNING]  * Debugger is active!
+2025-09-09 13:10:30,721 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:10:33,745 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:10:33,823 [INFO]  * Restarting with stat
+2025-09-09 13:10:34,277 [WARNING]  * Debugger is active!
+2025-09-09 13:10:34,277 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:10:36,298 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:10:36,375 [INFO]  * Restarting with stat
+2025-09-09 13:10:36,817 [WARNING]  * Debugger is active!
+2025-09-09 13:10:36,817 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:10:39,842 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:10:39,915 [INFO]  * Restarting with stat
+2025-09-09 13:10:40,346 [WARNING]  * Debugger is active!
+2025-09-09 13:10:40,346 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:10:45,385 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:10:45,462 [INFO]  * Restarting with stat
+2025-09-09 13:10:45,907 [WARNING]  * Debugger is active!
+2025-09-09 13:10:45,907 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:11:03,050 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:11:03,149 [INFO]  * Restarting with stat
+2025-09-09 13:11:03,605 [WARNING]  * Debugger is active!
+2025-09-09 13:11:03,606 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:11:06,631 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:11:06,707 [INFO]  * Restarting with stat
+2025-09-09 13:11:07,145 [WARNING]  * Debugger is active!
+2025-09-09 13:11:07,145 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:11:18,235 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:11:18,329 [INFO]  * Restarting with stat
+2025-09-09 13:11:18,779 [WARNING]  * Debugger is active!
+2025-09-09 13:11:18,779 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:11:22,809 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:11:22,896 [INFO]  * Restarting with stat
+2025-09-09 13:11:23,340 [WARNING]  * Debugger is active!
+2025-09-09 13:11:23,341 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:11:24,355 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:11:24,428 [INFO]  * Restarting with stat
+2025-09-09 13:11:24,864 [WARNING]  * Debugger is active!
+2025-09-09 13:11:24,864 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:11:31,922 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:11:32,014 [INFO]  * Restarting with stat
+2025-09-09 13:11:32,464 [WARNING]  * Debugger is active!
+2025-09-09 13:11:32,464 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:11:41,541 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:11:41,636 [INFO]  * Restarting with stat
+2025-09-09 13:11:42,081 [WARNING]  * Debugger is active!
+2025-09-09 13:11:42,081 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:12:07,278 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:12:07,370 [INFO]  * Restarting with stat
+2025-09-09 13:12:07,820 [WARNING]  * Debugger is active!
+2025-09-09 13:12:07,820 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:12:09,840 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 13:12:09,922 [INFO]  * Restarting with stat
+2025-09-09 13:12:10,375 [WARNING]  * Debugger is active!
+2025-09-09 13:12:10,375 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:13:51,157 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 13:13:51,233 [INFO]  * Restarting with stat
+2025-09-09 13:15:13,204 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-09 13:15:13,204 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-09 13:15:13,205 [INFO]  * Restarting with stat
+2025-09-09 13:15:13,648 [WARNING]  * Debugger is active!
+2025-09-09 13:15:13,648 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:15:20,819 [INFO] 127.0.0.1 - - [09/Sep/2025 13:15:20] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 13:15:20,914 [INFO] 127.0.0.1 - - [09/Sep/2025 13:15:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 13:15:33,770 [INFO] 127.0.0.1 - - [09/Sep/2025 13:15:33] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 13:15:33,838 [INFO] 127.0.0.1 - - [09/Sep/2025 13:15:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 13:16:25,203 [INFO] 127.0.0.1 - - [09/Sep/2025 13:16:25] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 13:16:25,271 [INFO] 127.0.0.1 - - [09/Sep/2025 13:16:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 13:16:38,058 [INFO] 127.0.0.1 - - [09/Sep/2025 13:16:38] "GET /s_time/3 HTTP/1.1" 200 -
+2025-09-09 13:16:38,130 [INFO] 127.0.0.1 - - [09/Sep/2025 13:16:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 13:16:38,244 [INFO] 127.0.0.1 - - [09/Sep/2025 13:16:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 13:16:41,668 [INFO] 127.0.0.1 - - [09/Sep/2025 13:16:41] "GET /s_time/7 HTTP/1.1" 200 -
+2025-09-09 13:16:41,725 [INFO] 127.0.0.1 - - [09/Sep/2025 13:16:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 13:16:48,812 [INFO] 127.0.0.1 - - [09/Sep/2025 13:16:48] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 13:16:48,918 [INFO] 127.0.0.1 - - [09/Sep/2025 13:16:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 13:17:15,617 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 13:17:15,721 [INFO]  * Restarting with stat
+2025-09-09 13:17:16,164 [WARNING]  * Debugger is active!
+2025-09-09 13:17:16,165 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:18:10,470 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 13:18:10,563 [INFO]  * Restarting with stat
+2025-09-09 13:44:00,611 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-09 13:44:00,611 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-09 13:44:00,611 [INFO]  * Restarting with stat
+2025-09-09 13:44:01,062 [WARNING]  * Debugger is active!
+2025-09-09 13:44:01,062 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:44:07,307 [INFO] 127.0.0.1 - - [09/Sep/2025 13:44:07] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 13:44:07,403 [INFO] 127.0.0.1 - - [09/Sep/2025 13:44:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 13:45:55,695 [INFO] 127.0.0.1 - - [09/Sep/2025 13:45:55] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 13:45:55,758 [INFO] 127.0.0.1 - - [09/Sep/2025 13:45:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 13:45:57,165 [INFO] 127.0.0.1 - - [09/Sep/2025 13:45:57] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 13:47:34,748 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 13:47:34,879 [INFO]  * Restarting with stat
+2025-09-09 13:47:35,327 [WARNING]  * Debugger is active!
+2025-09-09 13:47:35,327 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 13:47:38,242 [INFO] 127.0.0.1 - - [09/Sep/2025 13:47:38] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 16:24:02,813 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:24:02,910 [INFO]  * Restarting with stat
+2025-09-09 16:24:03,352 [WARNING]  * Debugger is active!
+2025-09-09 16:24:03,352 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:24:09,400 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:24:09,495 [INFO]  * Restarting with stat
+2025-09-09 16:24:09,939 [WARNING]  * Debugger is active!
+2025-09-09 16:24:09,939 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:24:12,945 [INFO] 127.0.0.1 - - [09/Sep/2025 16:24:12] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 16:25:45,704 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:25:45,801 [INFO]  * Restarting with stat
+2025-09-09 16:25:46,233 [WARNING]  * Debugger is active!
+2025-09-09 16:25:46,234 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:25:49,927 [INFO] 127.0.0.1 - - [09/Sep/2025 16:25:49] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 16:26:46,729 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:26:46,824 [INFO]  * Restarting with stat
+2025-09-09 16:26:47,257 [WARNING]  * Debugger is active!
+2025-09-09 16:26:47,257 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:26:51,288 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:26:51,375 [INFO]  * Restarting with stat
+2025-09-09 16:26:51,826 [WARNING]  * Debugger is active!
+2025-09-09 16:26:51,826 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:26:53,847 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:26:53,926 [INFO]  * Restarting with stat
+2025-09-09 16:26:54,360 [WARNING]  * Debugger is active!
+2025-09-09 16:26:54,360 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:26:59,629 [INFO] 127.0.0.1 - - [09/Sep/2025 16:26:59] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:26:59,718 [INFO] 127.0.0.1 - - [09/Sep/2025 16:26:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:27:03,415 [INFO] 127.0.0.1 - - [09/Sep/2025 16:27:03] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 16:27:33,678 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:27:33,783 [INFO]  * Restarting with stat
+2025-09-09 16:27:34,238 [WARNING]  * Debugger is active!
+2025-09-09 16:27:34,239 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:27:38,271 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:27:38,370 [INFO]  * Restarting with stat
+2025-09-09 16:27:38,830 [WARNING]  * Debugger is active!
+2025-09-09 16:27:38,831 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:27:40,074 [INFO] 127.0.0.1 - - [09/Sep/2025 16:27:40] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 16:28:06,054 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:28:06,153 [INFO]  * Restarting with stat
+2025-09-09 16:28:06,603 [WARNING]  * Debugger is active!
+2025-09-09 16:28:06,603 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:28:09,628 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:28:09,704 [INFO]  * Restarting with stat
+2025-09-09 16:28:10,161 [WARNING]  * Debugger is active!
+2025-09-09 16:28:10,161 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:28:11,177 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:28:11,260 [INFO]  * Restarting with stat
+2025-09-09 16:28:11,704 [WARNING]  * Debugger is active!
+2025-09-09 16:28:11,705 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:28:14,730 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:28:14,805 [INFO]  * Restarting with stat
+2025-09-09 16:28:15,254 [WARNING]  * Debugger is active!
+2025-09-09 16:28:15,255 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:28:16,438 [INFO] 127.0.0.1 - - [09/Sep/2025 16:28:16] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 16:29:00,621 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:29:00,720 [INFO]  * Restarting with stat
+2025-09-09 16:29:01,171 [WARNING]  * Debugger is active!
+2025-09-09 16:29:01,171 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:29:03,191 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:29:03,266 [INFO]  * Restarting with stat
+2025-09-09 16:29:03,703 [WARNING]  * Debugger is active!
+2025-09-09 16:29:03,703 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:29:05,723 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:29:05,801 [INFO]  * Restarting with stat
+2025-09-09 16:29:06,258 [WARNING]  * Debugger is active!
+2025-09-09 16:29:06,258 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:29:10,548 [INFO] 127.0.0.1 - - [09/Sep/2025 16:29:10] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 16:29:39,528 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:29:39,630 [INFO]  * Restarting with stat
+2025-09-09 16:29:40,092 [WARNING]  * Debugger is active!
+2025-09-09 16:29:40,092 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:29:46,910 [INFO] 127.0.0.1 - - [09/Sep/2025 16:29:46] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 16:31:40,091 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:31:40,192 [INFO]  * Restarting with stat
+2025-09-09 16:31:40,649 [WARNING]  * Debugger is active!
+2025-09-09 16:31:40,649 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:31:46,961 [INFO] 127.0.0.1 - - [09/Sep/2025 16:31:46] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 16:31:57,334 [INFO] 127.0.0.1 - - [09/Sep/2025 16:31:57] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:31:57,432 [INFO] 127.0.0.1 - - [09/Sep/2025 16:31:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:32:56,212 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:32:56,317 [INFO]  * Restarting with stat
+2025-09-09 16:32:56,764 [WARNING]  * Debugger is active!
+2025-09-09 16:32:56,764 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:32:58,784 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:32:58,864 [INFO]  * Restarting with stat
+2025-09-09 16:32:59,316 [WARNING]  * Debugger is active!
+2025-09-09 16:32:59,316 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:33:01,336 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:33:01,412 [INFO]  * Restarting with stat
+2025-09-09 16:33:01,858 [WARNING]  * Debugger is active!
+2025-09-09 16:33:01,858 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:33:03,879 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:33:03,954 [INFO]  * Restarting with stat
+2025-09-09 16:33:04,400 [WARNING]  * Debugger is active!
+2025-09-09 16:33:04,401 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:33:11,955 [INFO] 127.0.0.1 - - [09/Sep/2025 16:33:11] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 16:33:24,568 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:33:24,676 [INFO]  * Restarting with stat
+2025-09-09 16:33:25,109 [WARNING]  * Debugger is active!
+2025-09-09 16:33:25,109 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:33:38,581 [INFO] 127.0.0.1 - - [09/Sep/2025 16:33:38] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 16:34:39,730 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:34:39,834 [INFO]  * Restarting with stat
+2025-09-09 16:34:40,279 [WARNING]  * Debugger is active!
+2025-09-09 16:34:40,280 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:34:45,034 [INFO] 127.0.0.1 - - [09/Sep/2025 16:34:45] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 16:34:55,891 [INFO] 127.0.0.1 - - [09/Sep/2025 16:34:55] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 16:35:02,549 [INFO] 127.0.0.1 - - [09/Sep/2025 16:35:02] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 16:35:07,703 [INFO] 127.0.0.1 - - [09/Sep/2025 16:35:07] "[35m[1mPUT /s_time/1/substract HTTP/1.1[0m" 500 -
+2025-09-09 16:38:03,915 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-09 16:38:04,014 [INFO]  * Restarting with stat
+2025-09-09 16:38:51,878 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-09 16:38:51,878 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-09 16:38:51,879 [INFO]  * Restarting with stat
+2025-09-09 16:38:52,321 [WARNING]  * Debugger is active!
+2025-09-09 16:38:52,321 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:38:57,551 [INFO] 127.0.0.1 - - [09/Sep/2025 16:38:57] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 16:39:01,745 [INFO] 127.0.0.1 - - [09/Sep/2025 16:39:01] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:39:01,799 [INFO] 127.0.0.1 - - [09/Sep/2025 16:39:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:39:57,790 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:39:57,902 [INFO]  * Restarting with stat
+2025-09-09 16:40:07,758 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-09 16:40:07,758 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-09 16:40:07,759 [INFO]  * Restarting with stat
+2025-09-09 16:40:08,204 [WARNING]  * Debugger is active!
+2025-09-09 16:40:08,204 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:40:21,924 [INFO] 127.0.0.1 - - [09/Sep/2025 16:40:21] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-09 16:40:32,473 [INFO] 127.0.0.1 - - [09/Sep/2025 16:40:32] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:40:32,545 [INFO] 127.0.0.1 - - [09/Sep/2025 16:40:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:40:50,213 [INFO] 127.0.0.1 - - [09/Sep/2025 16:40:50] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 16:43:14,557 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:43:14,651 [INFO]  * Restarting with stat
+2025-09-09 16:43:15,090 [WARNING]  * Debugger is active!
+2025-09-09 16:43:15,091 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:43:17,111 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:43:17,185 [INFO]  * Restarting with stat
+2025-09-09 16:43:17,615 [WARNING]  * Debugger is active!
+2025-09-09 16:43:17,615 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:43:30,718 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:43:30,811 [INFO]  * Restarting with stat
+2025-09-09 16:43:31,240 [WARNING]  * Debugger is active!
+2025-09-09 16:43:31,241 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:47:38,200 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:47:38,294 [INFO]  * Restarting with stat
+2025-09-09 16:47:38,760 [WARNING]  * Debugger is active!
+2025-09-09 16:47:38,760 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:47:42,792 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:47:42,888 [INFO]  * Restarting with stat
+2025-09-09 16:47:43,332 [WARNING]  * Debugger is active!
+2025-09-09 16:47:43,332 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:47:57,447 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:47:57,541 [INFO]  * Restarting with stat
+2025-09-09 16:47:57,992 [WARNING]  * Debugger is active!
+2025-09-09 16:47:57,992 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:48:01,017 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:48:01,098 [INFO]  * Restarting with stat
+2025-09-09 16:48:01,552 [WARNING]  * Debugger is active!
+2025-09-09 16:48:01,552 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:49:02,630 [INFO] 127.0.0.1 - - [09/Sep/2025 16:49:02] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:49:02,701 [INFO] 127.0.0.1 - - [09/Sep/2025 16:49:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:49:05,166 [INFO] 127.0.0.1 - - [09/Sep/2025 16:49:05] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 16:49:15,454 [INFO] 127.0.0.1 - - [09/Sep/2025 16:49:15] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:49:15,521 [INFO] 127.0.0.1 - - [09/Sep/2025 16:49:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:50:41,843 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:50:41,950 [INFO]  * Restarting with stat
+2025-09-09 16:50:42,390 [WARNING]  * Debugger is active!
+2025-09-09 16:50:42,391 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:50:46,421 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:50:46,516 [INFO]  * Restarting with stat
+2025-09-09 16:50:46,984 [WARNING]  * Debugger is active!
+2025-09-09 16:50:46,984 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:50:54,032 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:50:54,122 [INFO]  * Restarting with stat
+2025-09-09 16:50:54,576 [WARNING]  * Debugger is active!
+2025-09-09 16:50:54,577 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:50:58,610 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:50:58,697 [INFO]  * Restarting with stat
+2025-09-09 16:50:59,133 [WARNING]  * Debugger is active!
+2025-09-09 16:50:59,133 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:51:08,685 [INFO] 127.0.0.1 - - [09/Sep/2025 16:51:08] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:51:08,754 [INFO] 127.0.0.1 - - [09/Sep/2025 16:51:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:51:12,065 [INFO] 127.0.0.1 - - [09/Sep/2025 16:51:12] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-09 16:52:36,697 [INFO] 127.0.0.1 - - [09/Sep/2025 16:52:36] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:52:36,783 [INFO] 127.0.0.1 - - [09/Sep/2025 16:52:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:52:41,490 [INFO] 127.0.0.1 - - [09/Sep/2025 16:52:41] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:52:41,575 [INFO] 127.0.0.1 - - [09/Sep/2025 16:52:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:52:45,379 [INFO] 127.0.0.1 - - [09/Sep/2025 16:52:45] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-09 16:52:45,962 [INFO] 127.0.0.1 - - [09/Sep/2025 16:52:45] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:52:46,063 [INFO] 127.0.0.1 - - [09/Sep/2025 16:52:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:56:12,450 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:12] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:56:12,539 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:56:16,188 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:16] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 16:56:16,956 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:16] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:56:17,019 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:56:23,075 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:23] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 16:56:23,814 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:23] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:56:23,903 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:56:27,608 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:27] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 16:56:28,321 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:28] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:56:28,378 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:56:32,291 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:32] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-09 16:56:33,135 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:33] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:56:33,230 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:56:36,890 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:36] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-09 16:56:37,516 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:37] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 16:56:37,599 [INFO] 127.0.0.1 - - [09/Sep/2025 16:56:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 16:57:58,524 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:57:58,628 [INFO]  * Restarting with stat
+2025-09-09 16:57:59,065 [WARNING]  * Debugger is active!
+2025-09-09 16:57:59,065 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:58:58,536 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:58:58,633 [INFO]  * Restarting with stat
+2025-09-09 16:58:59,088 [WARNING]  * Debugger is active!
+2025-09-09 16:58:59,089 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:59:05,139 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:59:05,236 [INFO]  * Restarting with stat
+2025-09-09 16:59:05,702 [WARNING]  * Debugger is active!
+2025-09-09 16:59:05,702 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:59:09,734 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:59:09,822 [INFO]  * Restarting with stat
+2025-09-09 16:59:10,280 [WARNING]  * Debugger is active!
+2025-09-09 16:59:10,280 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:59:13,306 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:59:13,385 [INFO]  * Restarting with stat
+2025-09-09 16:59:13,838 [WARNING]  * Debugger is active!
+2025-09-09 16:59:13,838 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:59:14,853 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:59:14,931 [INFO]  * Restarting with stat
+2025-09-09 16:59:15,416 [WARNING]  * Debugger is active!
+2025-09-09 16:59:15,416 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 16:59:16,430 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 16:59:16,504 [INFO]  * Restarting with stat
+2025-09-09 17:02:38,725 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-09 17:02:38,725 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-09 17:02:38,725 [INFO]  * Restarting with stat
+2025-09-09 17:02:39,186 [WARNING]  * Debugger is active!
+2025-09-09 17:02:39,186 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:02:44,746 [INFO] 127.0.0.1 - - [09/Sep/2025 17:02:44] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-09 17:02:45,363 [INFO] 127.0.0.1 - - [09/Sep/2025 17:02:45] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:02:45,441 [INFO] 127.0.0.1 - - [09/Sep/2025 17:02:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:03:14,471 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 17:03:14,575 [INFO]  * Restarting with stat
+2025-09-09 17:03:15,028 [WARNING]  * Debugger is active!
+2025-09-09 17:03:15,028 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:03:31,159 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 17:03:31,266 [INFO]  * Restarting with stat
+2025-09-09 17:03:31,719 [WARNING]  * Debugger is active!
+2025-09-09 17:03:31,719 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:03:32,733 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 17:03:32,814 [INFO]  * Restarting with stat
+2025-09-09 17:03:33,253 [WARNING]  * Debugger is active!
+2025-09-09 17:03:33,253 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:03:52,023 [INFO] 127.0.0.1 - - [09/Sep/2025 17:03:52] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 17:03:52,740 [INFO] 127.0.0.1 - - [09/Sep/2025 17:03:52] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:03:52,850 [INFO] 127.0.0.1 - - [09/Sep/2025 17:03:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:04:40,870 [INFO] 127.0.0.1 - - [09/Sep/2025 17:04:40] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 17:04:41,614 [INFO] 127.0.0.1 - - [09/Sep/2025 17:04:41] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:04:41,710 [INFO] 127.0.0.1 - - [09/Sep/2025 17:04:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:06:56,903 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/ms_to_hms.py', reloading
+2025-09-09 17:06:57,007 [INFO]  * Restarting with stat
+2025-09-09 17:06:57,452 [WARNING]  * Debugger is active!
+2025-09-09 17:06:57,452 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:07:00,478 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/ms_to_hms.py', reloading
+2025-09-09 17:07:00,553 [INFO]  * Restarting with stat
+2025-09-09 17:07:01,002 [WARNING]  * Debugger is active!
+2025-09-09 17:07:01,002 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:07:04,028 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/ms_to_hms.py', reloading
+2025-09-09 17:07:04,105 [INFO]  * Restarting with stat
+2025-09-09 17:07:04,551 [WARNING]  * Debugger is active!
+2025-09-09 17:07:04,552 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:07:06,571 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/ms_to_hms.py', reloading
+2025-09-09 17:07:06,651 [INFO]  * Restarting with stat
+2025-09-09 17:07:07,096 [WARNING]  * Debugger is active!
+2025-09-09 17:07:07,096 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:07:17,178 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/ms_to_hms.py', reloading
+2025-09-09 17:07:17,271 [INFO]  * Restarting with stat
+2025-09-09 17:07:17,706 [WARNING]  * Debugger is active!
+2025-09-09 17:07:17,706 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:07:38,878 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 17:07:38,959 [INFO]  * Restarting with stat
+2025-09-09 17:07:39,398 [WARNING]  * Debugger is active!
+2025-09-09 17:07:39,398 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:07:47,464 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 17:07:47,556 [INFO]  * Restarting with stat
+2025-09-09 17:07:48,009 [WARNING]  * Debugger is active!
+2025-09-09 17:07:48,009 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:07:49,024 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 17:07:49,099 [INFO]  * Restarting with stat
+2025-09-09 17:07:49,539 [WARNING]  * Debugger is active!
+2025-09-09 17:07:49,540 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:07:50,554 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 17:07:50,634 [INFO]  * Restarting with stat
+2025-09-09 17:07:51,079 [WARNING]  * Debugger is active!
+2025-09-09 17:07:51,080 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:07:55,111 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 17:07:55,201 [INFO]  * Restarting with stat
+2025-09-09 17:07:55,647 [WARNING]  * Debugger is active!
+2025-09-09 17:07:55,647 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:08:00,690 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 17:08:00,783 [INFO]  * Restarting with stat
+2025-09-09 17:08:01,237 [WARNING]  * Debugger is active!
+2025-09-09 17:08:01,237 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:08:12,310 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 17:08:12,407 [INFO]  * Restarting with stat
+2025-09-09 17:08:12,841 [WARNING]  * Debugger is active!
+2025-09-09 17:08:12,841 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:08:20,907 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 17:08:21,001 [INFO]  * Restarting with stat
+2025-09-09 17:08:21,453 [WARNING]  * Debugger is active!
+2025-09-09 17:08:21,453 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:08:27,505 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-09 17:08:27,598 [INFO]  * Restarting with stat
+2025-09-09 17:08:28,051 [WARNING]  * Debugger is active!
+2025-09-09 17:08:28,052 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:08:33,334 [INFO] 127.0.0.1 - - [09/Sep/2025 17:08:33] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 17:19:43,372 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/ms_to_hms.py', reloading
+2025-09-09 17:19:43,473 [INFO]  * Restarting with stat
+2025-09-09 17:19:43,932 [WARNING]  * Debugger is active!
+2025-09-09 17:19:43,932 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:20:01,685 [INFO] 127.0.0.1 - - [09/Sep/2025 17:20:01] "[35m[1mPUT /s_time/1/add HTTP/1.1[0m" 500 -
+2025-09-09 17:21:29,064 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-09 17:21:29,064 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-09 17:21:29,064 [INFO]  * Restarting with stat
+2025-09-09 17:21:29,516 [WARNING]  * Debugger is active!
+2025-09-09 17:21:29,516 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:21:37,015 [INFO] 127.0.0.1 - - [09/Sep/2025 17:21:37] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 17:21:37,773 [INFO] 127.0.0.1 - - [09/Sep/2025 17:21:37] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:21:37,871 [INFO] 127.0.0.1 - - [09/Sep/2025 17:21:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:21:45,616 [INFO] 127.0.0.1 - - [09/Sep/2025 17:21:45] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-09 17:21:46,333 [INFO] 127.0.0.1 - - [09/Sep/2025 17:21:46] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:21:46,422 [INFO] 127.0.0.1 - - [09/Sep/2025 17:21:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:22:48,798 [INFO] 127.0.0.1 - - [09/Sep/2025 17:22:48] "GET / HTTP/1.1" 200 -
+2025-09-09 17:22:48,870 [INFO] 127.0.0.1 - - [09/Sep/2025 17:22:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:23:12,618 [INFO] 127.0.0.1 - - [09/Sep/2025 17:23:12] "GET / HTTP/1.1" 200 -
+2025-09-09 17:23:12,708 [INFO] 127.0.0.1 - - [09/Sep/2025 17:23:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:23:47,655 [INFO] 127.0.0.1 - - [09/Sep/2025 17:23:47] "GET / HTTP/1.1" 200 -
+2025-09-09 17:23:47,756 [INFO] 127.0.0.1 - - [09/Sep/2025 17:23:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:24:29,472 [INFO] 127.0.0.1 - - [09/Sep/2025 17:24:29] "GET / HTTP/1.1" 200 -
+2025-09-09 17:24:29,559 [INFO] 127.0.0.1 - - [09/Sep/2025 17:24:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:24:56,030 [INFO] 127.0.0.1 - - [09/Sep/2025 17:24:56] "GET / HTTP/1.1" 200 -
+2025-09-09 17:24:56,078 [INFO] 127.0.0.1 - - [09/Sep/2025 17:24:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:25:09,220 [INFO] 127.0.0.1 - - [09/Sep/2025 17:25:09] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:25:09,301 [INFO] 127.0.0.1 - - [09/Sep/2025 17:25:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:25:12,839 [INFO] 127.0.0.1 - - [09/Sep/2025 17:25:12] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 17:25:13,595 [INFO] 127.0.0.1 - - [09/Sep/2025 17:25:13] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:25:13,664 [INFO] 127.0.0.1 - - [09/Sep/2025 17:25:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:30:25,700 [INFO] 127.0.0.1 - - [09/Sep/2025 17:30:25] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:30:25,792 [INFO] 127.0.0.1 - - [09/Sep/2025 17:30:25] "GET /static/styles.css HTTP/1.1" 200 -
+2025-09-09 17:32:18,663 [INFO] 127.0.0.1 - - [09/Sep/2025 17:32:18] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:32:18,747 [INFO] 127.0.0.1 - - [09/Sep/2025 17:32:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:45:22,884 [INFO] 127.0.0.1 - - [09/Sep/2025 17:45:22] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:45:22,938 [INFO] 127.0.0.1 - - [09/Sep/2025 17:45:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:46:01,285 [INFO] 127.0.0.1 - - [09/Sep/2025 17:46:01] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:46:01,358 [INFO] 127.0.0.1 - - [09/Sep/2025 17:46:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:46:10,155 [INFO] 127.0.0.1 - - [09/Sep/2025 17:46:10] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:46:10,244 [INFO] 127.0.0.1 - - [09/Sep/2025 17:46:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:47:14,348 [INFO] 127.0.0.1 - - [09/Sep/2025 17:47:14] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:47:14,441 [INFO] 127.0.0.1 - - [09/Sep/2025 17:47:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:47:35,974 [INFO] 127.0.0.1 - - [09/Sep/2025 17:47:35] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:47:36,068 [INFO] 127.0.0.1 - - [09/Sep/2025 17:47:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:47:53,130 [INFO] 127.0.0.1 - - [09/Sep/2025 17:47:53] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:47:53,213 [INFO] 127.0.0.1 - - [09/Sep/2025 17:47:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:48:08,976 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:08] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:48:09,048 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:48:14,101 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:14] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:48:14,185 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:48:24,067 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:24] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 17:48:24,822 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:24] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:48:24,915 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:48:30,351 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:30] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 17:48:31,068 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:31] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:48:31,139 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:48:42,742 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:42] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-09 17:48:43,459 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:43] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:48:43,547 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:48:49,045 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:49] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-09 17:48:49,705 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:49] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:48:49,790 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:48:54,954 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:54] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-09 17:48:55,542 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:55] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:48:55,593 [INFO] 127.0.0.1 - - [09/Sep/2025 17:48:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:49:03,737 [INFO] 127.0.0.1 - - [09/Sep/2025 17:49:03] "GET / HTTP/1.1" 200 -
+2025-09-09 17:49:03,841 [INFO] 127.0.0.1 - - [09/Sep/2025 17:49:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:49:09,266 [INFO] 127.0.0.1 - - [09/Sep/2025 17:49:09] "GET /s_time/7 HTTP/1.1" 200 -
+2025-09-09 17:49:09,371 [INFO] 127.0.0.1 - - [09/Sep/2025 17:49:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:49:13,155 [INFO] 127.0.0.1 - - [09/Sep/2025 17:49:13] "PUT /s_time/7/add HTTP/1.1" 200 -
+2025-09-09 17:49:13,974 [INFO] 127.0.0.1 - - [09/Sep/2025 17:49:13] "GET /s_time/7 HTTP/1.1" 200 -
+2025-09-09 17:49:14,060 [INFO] 127.0.0.1 - - [09/Sep/2025 17:49:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:49:16,970 [INFO] 127.0.0.1 - - [09/Sep/2025 17:49:16] "GET / HTTP/1.1" 200 -
+2025-09-09 17:49:17,060 [INFO] 127.0.0.1 - - [09/Sep/2025 17:49:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:49:35,771 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-09 17:49:35,771 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-09 17:49:35,772 [INFO]  * Restarting with stat
+2025-09-09 17:49:36,213 [WARNING]  * Debugger is active!
+2025-09-09 17:49:36,213 [INFO]  * Debugger PIN: 118-623-613
+2025-09-09 17:49:58,881 [INFO] 192.168.1.82 - - [09/Sep/2025 17:49:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-09 17:49:58,924 [INFO] 192.168.1.82 - - [09/Sep/2025 17:49:58] "GET /login HTTP/1.1" 200 -
+2025-09-09 17:49:58,957 [INFO] 192.168.1.82 - - [09/Sep/2025 17:49:58] "GET /static/styles.css HTTP/1.1" 200 -
+2025-09-09 17:50:00,269 [INFO] 192.168.1.82 - - [09/Sep/2025 17:50:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-09 17:50:16,975 [INFO] 192.168.1.82 - - [09/Sep/2025 17:50:16] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-09 17:50:18,078 [INFO] 192.168.1.82 - - [09/Sep/2025 17:50:18] "GET / HTTP/1.1" 200 -
+2025-09-09 17:50:18,149 [INFO] 192.168.1.82 - - [09/Sep/2025 17:50:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:50:39,789 [INFO] 192.168.1.82 - - [09/Sep/2025 17:50:39] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:50:39,952 [INFO] 192.168.1.82 - - [09/Sep/2025 17:50:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:50:53,509 [INFO] 192.168.1.82 - - [09/Sep/2025 17:50:53] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-09 17:50:54,431 [INFO] 192.168.1.82 - - [09/Sep/2025 17:50:54] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:50:54,605 [INFO] 192.168.1.82 - - [09/Sep/2025 17:50:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:51:07,640 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:07] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-09 17:51:08,357 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:08] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:51:08,534 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:51:17,006 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:17] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-09 17:51:17,778 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:17] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:51:17,951 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:51:25,362 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:25] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 17:51:26,066 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:26] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:51:26,247 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:51:30,783 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:30] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 17:51:31,527 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:31] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:51:31,674 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:51:35,903 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:35] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 17:51:36,647 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:36] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:51:36,799 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:51:40,384 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:40] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 17:51:41,023 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:41] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:51:41,232 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:51:59,046 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:59] "GET /settings/1 HTTP/1.1" 200 -
+2025-09-09 17:51:59,211 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:51:59,219 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:59] "GET /static/settings_fetch.js HTTP/1.1" 200 -
+2025-09-09 17:51:59,221 [INFO] 192.168.1.82 - - [09/Sep/2025 17:51:59] "GET /static/settings_handling.js HTTP/1.1" 200 -
+2025-09-09 17:52:00,481 [INFO] 192.168.1.82 - - [09/Sep/2025 17:52:00] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-09-09 17:52:16,222 [INFO] 192.168.1.82 - - [09/Sep/2025 17:52:16] "[32mPOST /trophy/1 HTTP/1.1[0m" 302 -
+2025-09-09 17:52:17,537 [INFO] 192.168.1.82 - - [09/Sep/2025 17:52:17] "GET /settings/1 HTTP/1.1" 200 -
+2025-09-09 17:52:17,609 [INFO] 192.168.1.82 - - [09/Sep/2025 17:52:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:52:17,618 [INFO] 192.168.1.82 - - [09/Sep/2025 17:52:17] "GET /static/settings_handling.js HTTP/1.1" 200 -
+2025-09-09 17:52:17,621 [INFO] 192.168.1.82 - - [09/Sep/2025 17:52:17] "GET /static/settings_fetch.js HTTP/1.1" 200 -
+2025-09-09 17:52:18,914 [INFO] 192.168.1.82 - - [09/Sep/2025 17:52:18] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-09-09 17:52:32,226 [INFO] 192.168.1.82 - - [09/Sep/2025 17:52:32] "GET / HTTP/1.1" 200 -
+2025-09-09 17:52:32,249 [INFO] 192.168.1.82 - - [09/Sep/2025 17:52:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:52:32,309 [INFO] 192.168.1.82 - - [09/Sep/2025 17:52:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:52:37,031 [INFO] 192.168.1.82 - - [09/Sep/2025 17:52:37] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:52:37,116 [INFO] 192.168.1.82 - - [09/Sep/2025 17:52:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:52:45,741 [INFO] 192.168.1.82 - - [09/Sep/2025 17:52:45] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-09 17:52:46,458 [INFO] 192.168.1.82 - - [09/Sep/2025 17:52:46] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:52:46,529 [INFO] 192.168.1.82 - - [09/Sep/2025 17:52:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-09 17:53:08,884 [INFO] 192.168.1.82 - - [09/Sep/2025 17:53:08] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-09 17:53:09,498 [INFO] 192.168.1.82 - - [09/Sep/2025 17:53:09] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-09 17:53:09,570 [INFO] 192.168.1.82 - - [09/Sep/2025 17:53:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -

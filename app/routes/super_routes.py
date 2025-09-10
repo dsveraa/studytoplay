@@ -4,6 +4,8 @@ from sqlalchemy import desc
 
 from app.models import Estudio, Uso, Asignatura, RegistroNotas, Settings
 from app.services.settings_service import UserSettings
+from app.services.time_service import UserTime
+from app.utils.ms_to_hms import ms_to_hms
 from app.utils.debugging_utils import printn
 from app.utils.helpers import relation_required, supervisor_required, listar_asignaturas, listar_registro_notas, id_from_json, id_from_kwargs
 from app.services.notifications_service import Notification, NotificationRepository
@@ -133,3 +135,25 @@ def set_study_fun_ratio(id, ratio):
     user_settings = UserSettings(id)
     user_settings.set_study_fun_ratio(ratio)
     return jsonify({"status": "success"}), 200
+
+@super_bp.route("/s_time/<int:id>")
+@supervisor_required
+def time_information(id):
+    user_time = UserTime(id)
+    current_time = user_time.get_time()
+
+    return render_template("s_time.html", current_time=current_time, user_id=id)
+
+@super_bp.route("/s_time/<int:id>/<action>", methods=["PUT"])
+@supervisor_required
+def manage_time(id, action):
+    data = request.get_json()
+    time = data.get("time")
+    
+    user_time = UserTime(id)
+    current_time = user_time.get_time()
+    previous_time = ms_to_hms(current_time)
+    new_time = user_time.manage_time(action, time)
+    
+    flash(f"Time updated, previous time: <b>{previous_time}</b>", "success")
+    return jsonify({"new_time": new_time, "previous_time": current_time}), 200
