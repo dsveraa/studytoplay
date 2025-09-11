@@ -2,7 +2,7 @@ import logging
 from flask import flash, jsonify, render_template, request, redirect, url_for, Blueprint
 from sqlalchemy import desc
 
-from app.models import Estudio, Uso, Asignatura, RegistroNotas, Settings
+from app.models import Estudio, Uso, Asignatura, RegistroNotas, Settings, Usuario
 from app.services.settings_service import UserSettings
 from app.services.time_service import UserTime
 from app.utils.ms_to_hms import ms_to_hms
@@ -16,39 +16,43 @@ from .. import db
 
 super_bp = Blueprint('super', __name__)
 
-@super_bp.route('/student_info/<id>', methods=['GET'])
+@super_bp.route('/student_records/<id>')
 @supervisor_required
 @relation_required(id_from_kwargs)
-def student_info(id):
-    
+def student_records(id):
+    user_obj = Usuario.query.filter_by(id=id).first()
+    name = user_obj.nombre
     activity_obj = Estudio.query.filter_by(usuario_id=id).order_by(desc(Estudio.id)).limit(5).all()
     use_obj = Uso.query.filter_by(usuario_id=id).order_by(desc(Uso.id)).limit(10).all()
 
-    return render_template("s_records.html", estudios=activity_obj, usos=use_obj)
+    return render_template("s_records.html", estudios=activity_obj, usos=use_obj, name=name)
 
-@super_bp.route('/grade_record/<id>', methods=["GET"])
+@super_bp.route('/grade_incentive/<id>')
 @supervisor_required
 @relation_required(id_from_kwargs)
-def grade_record(id):
+def grade_incentive(id):
     asignaturas = listar_asignaturas(id)
     registro_notas = listar_registro_notas(id)
+
+    user_settings = UserSettings(id)
+    name = user_settings.name
 
     repo = GradeIncentiveRepository(db.session)
     grade_incentive = GradeIncentive(id, repo)
     best_grades = grade_incentive.filter_grades()
 
-    return render_template('s_grade_record.html', asignaturas=asignaturas, registro_notas=registro_notas, best_grades=best_grades)
+    return render_template('s_grade_incentive.html', asignaturas=asignaturas, registro_notas=registro_notas, best_grades=best_grades, name=name, user_id=id)
 
-@super_bp.route("/grade_record/warning/<int:id>")
+@super_bp.route("/grade_incentive/warning/<int:id>")
 @supervisor_required
 @relation_required(id_from_kwargs)
-def grade_record_warning(id):
+def grade_incentive_warning(id):
     return f"<h3>You must set at least 1 incentive in <a href='/settings/{id}'>Settings</a>.</h3>"
 
-@super_bp.route('/grade_record/<id>', methods=['POST'])
+@super_bp.route('/grade_incentive/<id>', methods=['POST'])
 @supervisor_required
 @relation_required(id_from_kwargs)
-def add_grade_record(id):
+def add_grade_incentive(id):
     data = request.get_json()
     
     asignatura = data.get('asignatura')
@@ -74,7 +78,7 @@ def add_grade_record(id):
     notification = Notification(id, repo)
     notification.notify_grade(nota, asignatura_nombre, 'add', amount, currency, symbol)
 
-    return redirect(url_for("super.grade_record", id=id))  
+    return redirect(url_for("super.grade_incentive", id=id))  
     
 @super_bp.route("/payment", methods=["PUT"])
 @supervisor_required
@@ -82,6 +86,8 @@ def mark_paid():
     data = request.get_json()
     registro_id = data.get('grade_to_pay')
     estudiante_id = data.get('estudiante_id')
+
+
     
     registro = RegistroNotas.query.get_or_404(registro_id)
     nota = registro.nota
@@ -93,7 +99,7 @@ def mark_paid():
 
     if amount == None:
         flash("An unexpected error occurred, please try again.", "error")
-        return redirect(url_for("super.grade_record", id=estudiante_id))
+        return redirect(url_for("super.grade_incentive", id=estudiante_id))
         
     registro.estado = True
     db.session.commit()
@@ -103,7 +109,7 @@ def mark_paid():
     notification.notify_grade(nota, asignatura, 'pay', amount, currency, symbol)
     
     flash("The payment has been recorded successfully", "success")
-    return redirect(url_for("super.grade_record", id=estudiante_id))
+    return redirect(url_for("super.grade_incentive", id=estudiante_id))
 
 @super_bp.route("/trophy/<int:id>", methods=["POST"])
 @supervisor_required

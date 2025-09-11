@@ -12,13 +12,13 @@
           <div>
             <div><strong>{{ estudiante.nombre | capitalize }}</strong></div>
             <div>Status: {{ estudiante.estado | capitalize }}</div>
-            <div>Current time: {{ estudiante.tiempo | ms_to_hms }} <span>[<a href="{{ url_for('super.time_information', id=estudiante.id )}}">Manage</a>]</span></div>
+            <div>Current time: {{ estudiante.tiempo | ms_to_hms }} <span>[<a href="{{ url_for('super.time_information', id=estudiante.id) }}">Manage</a>]</span></div>
           </div>
           <div class="d-flex gap-2 my-2 my-sm-0 align-items-center">
-            <a href="{{ url_for('super.student_info', id=estudiante.id) }}" >Records</a>
+            <a href="{{ url_for('super.student_records', id=estudiante.id) }}">Records</a>
             
             {% if estudiante.grade_incentive %}
-              <a href="{{ url_for('super.grade_record' if estudiante.incentivo_id else 'super.grade_record_warning', id=estudiante.id) }}" >Grade incentive</a>
+              <a href="{{ url_for('super.grade_incentive' if estudiante.incentivo_id else 'super.grade_incentive_warning', id=estudiante.id ) }}" >Grade incentive</a>
             {% endif %}
             
             <a href="{{ url_for('core.settings', id=estudiante.id) }}">Settings</a>
@@ -26,7 +26,7 @@
         </div>
       {% endfor %}
     </div>
-    <a href="{{ url_for('relaciones.link_request')}}" class="btn custom-btn-3 mt-4">Link new student</a>
+    <a href="{{ url_for('relaciones.link_request') }}" class="btn custom-btn-3 mt-4">Link new student</a>
   </div>
 </div>
 <br><br>

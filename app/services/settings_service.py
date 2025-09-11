@@ -10,6 +10,7 @@ class UserSettings:
         self.id = user_id
         self.user_settings = Settings.query.filter_by(usuario_id=self.id).first()
         self.message = ""
+        self.name = self.user_settings.usuario.nombre
 
         if not self.user_settings:
             self.user_settings = Settings(usuario_id=self.id)

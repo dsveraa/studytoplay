@@ -76,7 +76,7 @@ def home():
 @core_bp.route("/settings/<id>")
 @supervisor_required
 @relation_required(id_from_kwargs)
-def settings(id=None):
+def settings(id):
     from app.services.countries_service import get_countries
     from app.utils.sistemas_notas_utils import sistemas
     
@@ -86,6 +86,7 @@ def settings(id=None):
     incentivos, restricciones = management.list_information()
 
     settings = UserSettings(id)
+    name = settings.name
     incentivo_notas = settings.consultar_incentivo_notas()
     pais_actual = settings.consultar_pais()
     trofeo = settings.get_trophy()
@@ -103,7 +104,8 @@ def settings(id=None):
                             sistemas=sistemas,
                             trofeo=trofeo,
                             extra_time=extra_time,
-                            study_fun_ratio=study_fun_ratio
+                            study_fun_ratio=study_fun_ratio,
+                            name=name
                             )
 
 @core_bp.route("/perfil")

@@ -7,31 +7,49 @@
 
 
 <div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
-    <h3 class="mb-4">New Record</h3>
-    
-    <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
-        <select class="form-control mb-2" style="max-width: 150px;" name="asignatura" id="asignatura" required>
-            <option value="">Select a subject...</option>
-            {% for asignatura in asignaturas %}
-              <option value="{{ asignatura.id }}">{{ asignatura.nombre | capitalize }}</option>
-            {% endfor %}
-        </select>
-    
-        <input class="form-control mb-2" style="max-width: 160px;" type="date" id="fecha" placeholder="fecha">
-        
-        <!-- select dinámico según criterios grade incentive -->
-        <select class="form-control mb-2" style="max-width: 50px;" name="nota" id="nota">
-            {% for grade in best_grades %}
-              <option value="{{ grade }}">{{ grade }}</option>
-            {% endfor %}
-        </select>
-    
-        <input class="form-control mb-2 flex-grow-1" type="text" id="tema" placeholder="Topic">
+    <div class="d-flex justify-content-between">
+        <h3 class="mb-4">New Grade</h3>
+        <p>{{ name }}</p>
     </div>
     
+    <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
+
+        <div class="d-flex flex-column" style="max-width: 150px;">
+            <label for="asignatura" class="form-label">Subject</label>
+            <select class="form-control mb-2" name="asignatura" id="asignatura" required>
+                <option value="">Select a subject...</option>
+                {% for asignatura in asignaturas %}
+                  <option value="{{ asignatura.id }}">{{ asignatura.nombre | capitalize }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    
+        <div class="d-flex flex-column" style="max-width: 160px;">
+            <label for="fecha" class="form-label">Date</label>
+            <input class="form-control mb-2" type="date" id="fecha" name="fecha" placeholder="fecha">
+        </div>
+    
+        <div class="d-flex flex-column" style="max-width: 50px;">
+            <label for="nota" class="form-label">Grade</label>
+            <select class="form-control mb-2" name="nota" id="nota">
+                {% for grade in best_grades %}
+                  <option value="{{ grade }}">{{ grade }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    
+        <div class="d-flex flex-column flex-grow-1">
+            <label for="tema" class="form-label">Topic</label>
+            <input class="form-control mb-2" type="text" id="tema" name="tema" placeholder="Topic">
+        </div>
+    
+    </div>
     
     <div class="d-flex justify-content-end">
-        <button class="btn custom-btn-2 mt-2" onclick="submitGrade()">Submit</button>
+        <button class="btn custom-btn-2 mt-2 btn-loading" id="submit-grade-btn" onclick="">
+            <span class="btn-text">Submit</span>
+            <span class="btn-loader"></span>
+        </button>
     </div>
 
 </div>
@@ -49,7 +67,10 @@
             {% endfor %}
     </select>
     <div class="d-flex justify-content-end">
-        <button class="btn custom-btn-2" onclick="markPaid()">Mark as paid</button>
+        <button class="btn custom-btn-2 mt-2 btn-loading" id="mark-paid-btn">
+            <span class="btn-text">Mark as paid</span>
+            <span class="btn-loader"></span>
+        </button>
     </div>
 </div>
 
@@ -81,6 +102,12 @@
 <br><br>
 <script>
 
+const submitGradeBtn = document.getElementById("submit-grade-btn")
+const markPaidBtn = document.getElementById("mark-paid-btn")
+
+withLoader(submitGradeBtn, () => submitGrade())
+withLoader(markPaidBtn, () => markPaid())
+
 document.addEventListener("DOMContentLoaded", () => {
     const flash = document.getElementById("flash-messages")
     if (flash) {
@@ -108,28 +135,42 @@ function markPaid() {
     });
 }
 
-function submitGrade() {
+async function submitGrade() {
     let asignatura = document.getElementById("asignatura").value
     let tema = document.getElementById("tema").value
     let nota = document.getElementById("nota").value
     let fecha = document.getElementById("fecha").value
 
-    fetch(window.location.href, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ 
-            asignatura: asignatura,
-            tema: tema,
-            nota: nota,
-            fecha: fecha
+    try {
+        const response = await fetch("/grade_incentive/{{ user_id }}", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                asignatura: asignatura,
+                tema: tema,
+                nota: nota,
+                fecha: fecha,
+            })
         })
-    }).then(response => {
+
+        if (!response.ok) {
+            throw new Error(`Error HTTP: ${response.status}`)
+        }
+        
         if (response.redirected) {
             window.location.href = response.url
+            return
         }
-    })
+
+        const data = await response.json()
+        console.log("Respuesta del servidor:", data)
+
+    } catch (error) {
+        console.error("Error al consultar los datos", error)
+    }
 }
+
 </script>
 {% endblock %}

@@ -53,3 +53,4 @@ class Settings(db.Model):
     time_ratio = Column(Float, server_default="1.0")
 
     pais = relationship("Pais", backref="settings")
+    usuario = relationship("Usuario", backref="settings")
