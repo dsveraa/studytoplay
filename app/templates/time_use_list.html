@@ -24,6 +24,7 @@
           <div class="d-flex justify-content-between mb-2">
             <div><strong>Start:</strong> {{ uso.fecha_inicio.strftime('%H:%M:%S') }}</div>
             <div><strong>End:</strong> {{ uso.fecha_fin.strftime('%H:%M:%S') }}</div>
+            <div><strong>RT:</strong> {{ uso.remaining_time | ms_to_hms }}</div>
           </div>
           
           <div class="text-start">

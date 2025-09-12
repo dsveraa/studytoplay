@@ -33,8 +33,18 @@
       </div>
   </div>
     <div class="d-flex justify-content-center gap-4">
-      <div><button id="stop" class="btn custom-btn-2" onclick="logClick('Submit session')">Submit session</button></div>
-      <div><a id="cancel" class="btn custom-btn-3" onclick="logClick('Cancel')">Cancel</a></div>
+      
+        <button id="stop" class="btn custom-btn-2 btn-loading" onclick="logClick('Submit session')">
+          <span class="btn-text">Submit session</span>
+          <span class="btn-loader"></span>
+        </button>
+      
+      
+        <button id="cancel" class="btn custom-btn-3 btn-loading" onclick="logClick('Cancel')">
+          <span class="btn-text">Cancel</span>
+          <span class="btn-loader"></span>
+        </button>
+      
     </div>
   </form>
 </div>

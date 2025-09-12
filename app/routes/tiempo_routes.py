@@ -1,3 +1,4 @@
+from venv import logger
 from flask import render_template, request, redirect, url_for, session, jsonify, Blueprint
 from datetime import datetime
 from sqlalchemy import desc
@@ -112,28 +113,31 @@ def use_time():
         if not activity:
             return jsonify({'error': 'La actividad no puede estar vacía'}), 400
 
-        # print(start, end, time)
-        
         usuario_id = session.get("usuario_id")
+        
+        tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
+        tiempo.tiempo = time
+        db.session.add(tiempo)
+        db.session.commit()
 
         fecha_inicio = datetime.strptime(start, "%Y-%m-%d %H:%M:%S")
         fecha_fin = datetime.strptime(end, "%Y-%m-%d %H:%M:%S")
+
+        time_obj = Tiempo.query.filter_by(usuario_id=usuario_id).first()
+        remaining_time = time_obj.tiempo
 
         uso = Uso(
             usuario_id=usuario_id,
             fecha_inicio=fecha_inicio,
             fecha_fin=fecha_fin,
-            actividad=activity or "Sin especificar"
+            actividad=activity or "Sin especificar",
+            remaining_time=remaining_time
         )
         db.session.add(uso)
-        
-        tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()
-        tiempo.tiempo = time
-        db.session.add(tiempo)
-
         db.session.commit()
+
         ultimo_uso = Uso.query.order_by(Uso.id.desc()).first()
-        print("Último uso registrado:", ultimo_uso.__dict__)
+        logger.info("Último uso registrado:", ultimo_uso.__dict__)
         
         return jsonify({'redirect': url_for('core.perfil')})
     

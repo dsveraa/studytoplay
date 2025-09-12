@@ -74,15 +74,19 @@ stopBtn.addEventListener("click", () => {
     input: "text",
     inputPlaceholder: "Videogames, watching Youtube, etc...",
     showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Guardar",
-    cancelButtonText: "Cancelar",
+    confirmButtonText: "Save",
+    cancelButtonText: "Cancel",
     inputValidator: (value) => {
       if (!value) {
         return "You must instert an activity"
       }
     },
+    background: "#4e4e4e",
+    color: "#d1d1d1",
+    customClass: {
+      confirmButton: "custom-btn-2",
+      cancelButton: "custom-btn-3"
+    }
   }).then((result) => {
     if (result.isConfirmed) {
       const actividad = result.value
@@ -94,7 +98,9 @@ stopBtn.addEventListener("click", () => {
         allowEscapeKey: false,
         didOpen: () => {
           Swal.showLoading()
-        }
+        },
+        background: "#4e4e4e",
+        color: "#d1d1d1"
       })
       
       countdownRunning = false

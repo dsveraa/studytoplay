@@ -21,6 +21,7 @@ class Uso(db.Model):
     fecha_inicio = Column(DateTime, nullable=False)
     fecha_fin = Column(DateTime, nullable=False)
     actividad = Column(Text, nullable=False, default="")
+    remaining_time = Column(Float)
     
     usuario = relationship('Usuario', back_populates='usos')
 

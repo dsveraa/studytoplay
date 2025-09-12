@@ -29,13 +29,19 @@
         <option value="14400000">4 hours</option>
       </select>
   
-      <button class="btn custom-btn-2" onclick="handleManageTime({{ user_id }})">Apply</button>
+      <button class="btn custom-btn-2 btn-loading" id="apply-btn">
+        <span class="btn-text">Apply</span>
+        <span class="btn-loader"></span>
+      </button>
     </div>
   </div>
 </div>
 <br><br>
 
 <script>
+  const applyTime = document.getElementById("apply-btn")
+  withLoader(applyTime, () => handleManageTime("{{ user_id }}"))
+
   function handleManageTime(id) {
     const action = document.querySelector('input[name="manage-time"]:checked').value
     const time = parseInt(document.getElementById("hours").value, 10)

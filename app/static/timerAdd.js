@@ -228,27 +228,32 @@ async function switchIdle() {
   }
 }
 
+withLoader(submitBtn, () => handleSubmit())
 
-submitBtn.addEventListener("click", () => {
+function handleSubmit() {
   if (validateInputs()) {
     UI.alert('Subject and Summary are mandatory')
   } else {
     timer.stop()
     date_fin = getDate()
-
-    setTimeout(() => {
-      sendData(date_inicio, date_fin, summaryInput.value, timer.getElapsedTime(), subjectInput.value)
-    }, 1000)
+    
+    sendData(date_inicio, date_fin, summaryInput.value, timer.getElapsedTime(), subjectInput.value)
   }
-
+  
   switchIdle()
-})
+}
 
-cancelBtn.addEventListener("click", () => {
+withLoader(cancelBtn, () => {
   switchIdle().then(() => {
     window.location.href = "/perfil"  
   })
 })
+
+// cancelBtn.addEventListener("click", () => {
+//   switchIdle().then(() => {
+//     window.location.href = "/perfil"  
+//   })
+// })
 
 window.addEventListener("focus", async () => {
 
@@ -266,3 +271,4 @@ window.addEventListener("focus", async () => {
 window.addEventListener("beforeunload", () => {
   navigator.sendBeacon("/cancel")
 })
+
