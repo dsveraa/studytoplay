@@ -30385,3 +30385,428 @@ TypeError: '<' not supported between instances of 'Nivel' and 'int'
 2025-09-12 12:04:10,365 [INFO] 127.0.0.1 - - [12/Sep/2025 12:04:10] "[36mGET /static/trofeo.png HTTP/1.1[0m" 304 -
 2025-09-12 12:04:10,371 [INFO] 127.0.0.1 - - [12/Sep/2025 12:04:10] "[36mGET /static/template_star.png HTTP/1.1[0m" 304 -
 2025-09-12 12:04:13,986 [INFO] 127.0.0.1 - - [12/Sep/2025 12:04:13] "GET /perfil HTTP/1.1" 200 -
+2025-09-12 12:09:33,458 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-12 12:09:33,458 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-12 12:09:33,459 [INFO]  * Restarting with stat
+2025-09-12 12:09:33,891 [WARNING]  * Debugger is active!
+2025-09-12 12:09:33,892 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 12:09:38,574 [INFO] 127.0.0.1 - - [12/Sep/2025 12:09:38] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:09:38,626 [INFO] 127.0.0.1 - - [12/Sep/2025 12:09:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:09:38,627 [INFO] 127.0.0.1 - - [12/Sep/2025 12:09:38] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:10:03,696 [INFO] 127.0.0.1 - - [12/Sep/2025 12:10:03] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:10:03,728 [INFO] 127.0.0.1 - - [12/Sep/2025 12:10:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:10:03,729 [INFO] 127.0.0.1 - - [12/Sep/2025 12:10:03] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:10:11,693 [INFO] 127.0.0.1 - - [12/Sep/2025 12:10:11] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:10:11,736 [INFO] 127.0.0.1 - - [12/Sep/2025 12:10:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:10:11,739 [INFO] 127.0.0.1 - - [12/Sep/2025 12:10:11] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:11:23,645 [INFO] 127.0.0.1 - - [12/Sep/2025 12:11:23] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:11:23,696 [INFO] 127.0.0.1 - - [12/Sep/2025 12:11:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:11:23,697 [INFO] 127.0.0.1 - - [12/Sep/2025 12:11:23] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:11:45,465 [INFO] 127.0.0.1 - - [12/Sep/2025 12:11:45] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:11:45,515 [INFO] 127.0.0.1 - - [12/Sep/2025 12:11:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:11:45,516 [INFO] 127.0.0.1 - - [12/Sep/2025 12:11:45] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:11:56,785 [INFO] 127.0.0.1 - - [12/Sep/2025 12:11:56] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:11:56,836 [INFO] 127.0.0.1 - - [12/Sep/2025 12:11:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:11:56,838 [INFO] 127.0.0.1 - - [12/Sep/2025 12:11:56] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:12:09,826 [INFO] 127.0.0.1 - - [12/Sep/2025 12:12:09] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:12:09,874 [INFO] 127.0.0.1 - - [12/Sep/2025 12:12:09] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:12:09,874 [INFO] 127.0.0.1 - - [12/Sep/2025 12:12:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:12:19,176 [INFO] 127.0.0.1 - - [12/Sep/2025 12:12:19] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:12:19,217 [INFO] 127.0.0.1 - - [12/Sep/2025 12:12:19] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:12:19,218 [INFO] 127.0.0.1 - - [12/Sep/2025 12:12:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:12:31,418 [INFO] 127.0.0.1 - - [12/Sep/2025 12:12:31] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:12:31,461 [INFO] 127.0.0.1 - - [12/Sep/2025 12:12:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:12:31,462 [INFO] 127.0.0.1 - - [12/Sep/2025 12:12:31] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:12:56,061 [INFO] 127.0.0.1 - - [12/Sep/2025 12:12:56] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:12:56,102 [INFO] 127.0.0.1 - - [12/Sep/2025 12:12:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:12:56,110 [INFO] 127.0.0.1 - - [12/Sep/2025 12:12:56] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:13:11,271 [INFO] 127.0.0.1 - - [12/Sep/2025 12:13:11] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:13:11,325 [INFO] 127.0.0.1 - - [12/Sep/2025 12:13:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:13:11,326 [INFO] 127.0.0.1 - - [12/Sep/2025 12:13:11] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:13:28,646 [INFO] 127.0.0.1 - - [12/Sep/2025 12:13:28] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:13:28,672 [INFO] 127.0.0.1 - - [12/Sep/2025 12:13:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:13:28,673 [INFO] 127.0.0.1 - - [12/Sep/2025 12:13:28] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:13:47,315 [INFO] 127.0.0.1 - - [12/Sep/2025 12:13:47] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:13:47,355 [INFO] 127.0.0.1 - - [12/Sep/2025 12:13:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:13:47,357 [INFO] 127.0.0.1 - - [12/Sep/2025 12:13:47] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:14:11,717 [INFO] 127.0.0.1 - - [12/Sep/2025 12:14:11] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:14:11,748 [INFO] 127.0.0.1 - - [12/Sep/2025 12:14:11] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:14:11,748 [INFO] 127.0.0.1 - - [12/Sep/2025 12:14:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:14:22,440 [INFO] 127.0.0.1 - - [12/Sep/2025 12:14:22] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:14:22,492 [INFO] 127.0.0.1 - - [12/Sep/2025 12:14:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:14:22,492 [INFO] 127.0.0.1 - - [12/Sep/2025 12:14:22] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:14:25,075 [INFO] 127.0.0.1 - - [12/Sep/2025 12:14:25] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:14:25,114 [INFO] 127.0.0.1 - - [12/Sep/2025 12:14:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:14:25,115 [INFO] 127.0.0.1 - - [12/Sep/2025 12:14:25] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:14:33,295 [INFO] 127.0.0.1 - - [12/Sep/2025 12:14:33] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:14:33,343 [INFO] 127.0.0.1 - - [12/Sep/2025 12:14:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:14:33,344 [INFO] 127.0.0.1 - - [12/Sep/2025 12:14:33] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:16:13,445 [INFO] 127.0.0.1 - - [12/Sep/2025 12:16:13] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:16:13,519 [INFO] 127.0.0.1 - - [12/Sep/2025 12:16:13] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:16:13,523 [INFO] 127.0.0.1 - - [12/Sep/2025 12:16:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:16:40,273 [INFO] 127.0.0.1 - - [12/Sep/2025 12:16:40] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:16:40,347 [INFO] 127.0.0.1 - - [12/Sep/2025 12:16:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:16:40,349 [INFO] 127.0.0.1 - - [12/Sep/2025 12:16:40] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:17:09,615 [INFO] 127.0.0.1 - - [12/Sep/2025 12:17:09] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:17:09,662 [INFO] 127.0.0.1 - - [12/Sep/2025 12:17:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:17:09,663 [INFO] 127.0.0.1 - - [12/Sep/2025 12:17:09] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:17:16,728 [INFO] 127.0.0.1 - - [12/Sep/2025 12:17:16] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:17:16,775 [INFO] 127.0.0.1 - - [12/Sep/2025 12:17:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:17:16,776 [INFO] 127.0.0.1 - - [12/Sep/2025 12:17:16] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:17:25,228 [INFO] 127.0.0.1 - - [12/Sep/2025 12:17:25] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:17:25,283 [INFO] 127.0.0.1 - - [12/Sep/2025 12:17:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:17:25,284 [INFO] 127.0.0.1 - - [12/Sep/2025 12:17:25] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:17:36,869 [INFO] 127.0.0.1 - - [12/Sep/2025 12:17:36] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:17:36,922 [INFO] 127.0.0.1 - - [12/Sep/2025 12:17:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:17:36,924 [INFO] 127.0.0.1 - - [12/Sep/2025 12:17:36] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:17:44,102 [INFO] 127.0.0.1 - - [12/Sep/2025 12:17:44] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:17:44,162 [INFO] 127.0.0.1 - - [12/Sep/2025 12:17:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:17:44,164 [INFO] 127.0.0.1 - - [12/Sep/2025 12:17:44] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:18:35,182 [INFO] 127.0.0.1 - - [12/Sep/2025 12:18:35] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:18:35,254 [INFO] 127.0.0.1 - - [12/Sep/2025 12:18:35] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:18:35,256 [INFO] 127.0.0.1 - - [12/Sep/2025 12:18:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:18:57,497 [INFO] 127.0.0.1 - - [12/Sep/2025 12:18:57] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:18:57,577 [INFO] 127.0.0.1 - - [12/Sep/2025 12:18:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:18:57,578 [INFO] 127.0.0.1 - - [12/Sep/2025 12:18:57] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:19:45,413 [INFO] 127.0.0.1 - - [12/Sep/2025 12:19:45] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:19:45,469 [INFO] 127.0.0.1 - - [12/Sep/2025 12:19:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:19:45,470 [INFO] 127.0.0.1 - - [12/Sep/2025 12:19:45] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:20:10,524 [INFO] 127.0.0.1 - - [12/Sep/2025 12:20:10] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:20:10,573 [INFO] 127.0.0.1 - - [12/Sep/2025 12:20:10] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:20:10,574 [INFO] 127.0.0.1 - - [12/Sep/2025 12:20:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:20:40,336 [INFO] 127.0.0.1 - - [12/Sep/2025 12:20:40] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:20:40,377 [INFO] 127.0.0.1 - - [12/Sep/2025 12:20:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:20:40,378 [INFO] 127.0.0.1 - - [12/Sep/2025 12:20:40] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:20:49,945 [INFO] 127.0.0.1 - - [12/Sep/2025 12:20:49] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:20:49,993 [INFO] 127.0.0.1 - - [12/Sep/2025 12:20:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:20:49,994 [INFO] 127.0.0.1 - - [12/Sep/2025 12:20:49] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:22:14,928 [INFO] 127.0.0.1 - - [12/Sep/2025 12:22:14] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:22:14,978 [INFO] 127.0.0.1 - - [12/Sep/2025 12:22:14] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:22:14,981 [INFO] 127.0.0.1 - - [12/Sep/2025 12:22:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:22:31,314 [INFO] 127.0.0.1 - - [12/Sep/2025 12:22:31] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:22:31,386 [INFO] 127.0.0.1 - - [12/Sep/2025 12:22:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:22:31,387 [INFO] 127.0.0.1 - - [12/Sep/2025 12:22:31] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:22:41,889 [INFO] 127.0.0.1 - - [12/Sep/2025 12:22:41] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:22:41,944 [INFO] 127.0.0.1 - - [12/Sep/2025 12:22:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:22:41,945 [INFO] 127.0.0.1 - - [12/Sep/2025 12:22:41] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:23:04,842 [INFO] 127.0.0.1 - - [12/Sep/2025 12:23:04] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:23:04,913 [INFO] 127.0.0.1 - - [12/Sep/2025 12:23:04] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:23:04,916 [INFO] 127.0.0.1 - - [12/Sep/2025 12:23:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:23:22,815 [INFO] 127.0.0.1 - - [12/Sep/2025 12:23:22] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:23:22,862 [INFO] 127.0.0.1 - - [12/Sep/2025 12:23:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:23:22,864 [INFO] 127.0.0.1 - - [12/Sep/2025 12:23:22] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:23:38,972 [INFO] 127.0.0.1 - - [12/Sep/2025 12:23:38] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:23:39,043 [INFO] 127.0.0.1 - - [12/Sep/2025 12:23:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:23:39,044 [INFO] 127.0.0.1 - - [12/Sep/2025 12:23:39] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:23:55,910 [INFO] 127.0.0.1 - - [12/Sep/2025 12:23:55] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:23:55,974 [INFO] 127.0.0.1 - - [12/Sep/2025 12:23:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:23:55,976 [INFO] 127.0.0.1 - - [12/Sep/2025 12:23:55] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:24:09,112 [INFO] 127.0.0.1 - - [12/Sep/2025 12:24:09] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:24:09,161 [INFO] 127.0.0.1 - - [12/Sep/2025 12:24:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:24:09,162 [INFO] 127.0.0.1 - - [12/Sep/2025 12:24:09] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:24:17,203 [INFO] 127.0.0.1 - - [12/Sep/2025 12:24:17] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:24:17,258 [INFO] 127.0.0.1 - - [12/Sep/2025 12:24:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:24:17,259 [INFO] 127.0.0.1 - - [12/Sep/2025 12:24:17] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:24:43,522 [INFO] 127.0.0.1 - - [12/Sep/2025 12:24:43] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:24:43,595 [INFO] 127.0.0.1 - - [12/Sep/2025 12:24:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:24:43,597 [INFO] 127.0.0.1 - - [12/Sep/2025 12:24:43] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:24:59,188 [INFO] 127.0.0.1 - - [12/Sep/2025 12:24:59] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:24:59,254 [INFO] 127.0.0.1 - - [12/Sep/2025 12:24:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:24:59,257 [INFO] 127.0.0.1 - - [12/Sep/2025 12:24:59] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:25:26,123 [INFO] 127.0.0.1 - - [12/Sep/2025 12:25:26] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:25:26,165 [INFO] 127.0.0.1 - - [12/Sep/2025 12:25:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:25:26,166 [INFO] 127.0.0.1 - - [12/Sep/2025 12:25:26] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:25:41,482 [INFO] 127.0.0.1 - - [12/Sep/2025 12:25:41] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:25:41,532 [INFO] 127.0.0.1 - - [12/Sep/2025 12:25:41] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:25:41,532 [INFO] 127.0.0.1 - - [12/Sep/2025 12:25:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:26:21,050 [INFO] 127.0.0.1 - - [12/Sep/2025 12:26:21] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:26:21,103 [INFO] 127.0.0.1 - - [12/Sep/2025 12:26:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:26:21,104 [INFO] 127.0.0.1 - - [12/Sep/2025 12:26:21] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:26:35,137 [INFO] 127.0.0.1 - - [12/Sep/2025 12:26:35] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:26:35,206 [INFO] 127.0.0.1 - - [12/Sep/2025 12:26:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:26:35,210 [INFO] 127.0.0.1 - - [12/Sep/2025 12:26:35] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:26:45,011 [INFO] 127.0.0.1 - - [12/Sep/2025 12:26:45] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:26:45,079 [INFO] 127.0.0.1 - - [12/Sep/2025 12:26:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:26:45,080 [INFO] 127.0.0.1 - - [12/Sep/2025 12:26:45] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:26:58,596 [INFO] 127.0.0.1 - - [12/Sep/2025 12:26:58] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:26:58,637 [INFO] 127.0.0.1 - - [12/Sep/2025 12:26:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:26:58,638 [INFO] 127.0.0.1 - - [12/Sep/2025 12:26:58] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:27:13,850 [INFO] 127.0.0.1 - - [12/Sep/2025 12:27:13] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:27:13,930 [INFO] 127.0.0.1 - - [12/Sep/2025 12:27:13] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:27:13,931 [INFO] 127.0.0.1 - - [12/Sep/2025 12:27:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:27:52,278 [INFO] 127.0.0.1 - - [12/Sep/2025 12:27:52] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:27:52,360 [INFO] 127.0.0.1 - - [12/Sep/2025 12:27:52] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:27:52,362 [INFO] 127.0.0.1 - - [12/Sep/2025 12:27:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:28:19,762 [INFO] 127.0.0.1 - - [12/Sep/2025 12:28:19] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:28:19,817 [INFO] 127.0.0.1 - - [12/Sep/2025 12:28:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:28:19,818 [INFO] 127.0.0.1 - - [12/Sep/2025 12:28:19] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:31:48,030 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 12:31:48,132 [INFO]  * Restarting with stat
+2025-09-12 12:31:48,558 [WARNING]  * Debugger is active!
+2025-09-12 12:31:48,558 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 12:31:50,578 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 12:31:50,653 [INFO]  * Restarting with stat
+2025-09-12 12:31:51,092 [WARNING]  * Debugger is active!
+2025-09-12 12:31:51,093 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 12:32:00,166 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 12:32:00,262 [INFO]  * Restarting with stat
+2025-09-12 12:32:00,693 [WARNING]  * Debugger is active!
+2025-09-12 12:32:00,694 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 12:32:05,735 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 12:32:05,827 [INFO]  * Restarting with stat
+2025-09-12 12:32:06,279 [WARNING]  * Debugger is active!
+2025-09-12 12:32:06,280 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 12:32:12,328 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 12:32:12,420 [INFO]  * Restarting with stat
+2025-09-12 12:32:12,855 [WARNING]  * Debugger is active!
+2025-09-12 12:32:12,856 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 12:32:35,919 [INFO] 127.0.0.1 - - [12/Sep/2025 12:32:35] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:32:35,997 [INFO] 127.0.0.1 - - [12/Sep/2025 12:32:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:32:35,998 [INFO] 127.0.0.1 - - [12/Sep/2025 12:32:35] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:33:18,923 [INFO] 127.0.0.1 - - [12/Sep/2025 12:33:18] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:33:18,965 [INFO] 127.0.0.1 - - [12/Sep/2025 12:33:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:33:18,966 [INFO] 127.0.0.1 - - [12/Sep/2025 12:33:18] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:33:37,620 [INFO] 127.0.0.1 - - [12/Sep/2025 12:33:37] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:33:37,659 [INFO] 127.0.0.1 - - [12/Sep/2025 12:33:37] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:33:37,661 [INFO] 127.0.0.1 - - [12/Sep/2025 12:33:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:33:45,548 [INFO] 127.0.0.1 - - [12/Sep/2025 12:33:45] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:33:45,579 [INFO] 127.0.0.1 - - [12/Sep/2025 12:33:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:33:45,580 [INFO] 127.0.0.1 - - [12/Sep/2025 12:33:45] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:33:57,633 [INFO] 127.0.0.1 - - [12/Sep/2025 12:33:57] "[31m[1mGET /s_time/1 HTTP/1.1[0m" 401 -
+2025-09-12 12:34:20,395 [INFO] 127.0.0.1 - - [12/Sep/2025 12:34:20] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:34:20,466 [INFO] 127.0.0.1 - - [12/Sep/2025 12:34:20] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:34:20,468 [INFO] 127.0.0.1 - - [12/Sep/2025 12:34:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:34:29,981 [INFO] 127.0.0.1 - - [12/Sep/2025 12:34:29] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:34:30,048 [INFO] 127.0.0.1 - - [12/Sep/2025 12:34:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:34:30,050 [INFO] 127.0.0.1 - - [12/Sep/2025 12:34:30] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:34:30,177 [INFO] 127.0.0.1 - - [12/Sep/2025 12:34:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:34:54,559 [INFO] 127.0.0.1 - - [12/Sep/2025 12:34:54] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:34:54,614 [INFO] 127.0.0.1 - - [12/Sep/2025 12:34:54] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:34:54,614 [INFO] 127.0.0.1 - - [12/Sep/2025 12:34:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:35:43,587 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 12:35:43,692 [INFO]  * Restarting with stat
+2025-09-12 12:35:44,141 [WARNING]  * Debugger is active!
+2025-09-12 12:35:44,141 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 12:36:15,399 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 12:36:15,493 [INFO]  * Restarting with stat
+2025-09-12 12:37:22,281 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-12 12:37:22,281 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-12 12:37:22,281 [INFO]  * Restarting with stat
+2025-09-12 12:37:22,713 [WARNING]  * Debugger is active!
+2025-09-12 12:37:22,713 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 12:37:27,683 [INFO] 127.0.0.1 - - [12/Sep/2025 12:37:27] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:37:27,739 [INFO] 127.0.0.1 - - [12/Sep/2025 12:37:27] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:37:27,739 [INFO] 127.0.0.1 - - [12/Sep/2025 12:37:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:37:34,131 [INFO] 127.0.0.1 - - [12/Sep/2025 12:37:34] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-12 12:37:35,086 [INFO] 127.0.0.1 - - [12/Sep/2025 12:37:35] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:37:35,151 [INFO] 127.0.0.1 - - [12/Sep/2025 12:37:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:37:35,152 [INFO] 127.0.0.1 - - [12/Sep/2025 12:37:35] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:37:35,316 [INFO] 127.0.0.1 - - [12/Sep/2025 12:37:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:37:55,988 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 12:37:56,094 [INFO]  * Restarting with stat
+2025-09-12 12:37:56,541 [WARNING]  * Debugger is active!
+2025-09-12 12:37:56,542 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 12:38:02,591 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 12:38:02,687 [INFO]  * Restarting with stat
+2025-09-12 12:38:03,133 [WARNING]  * Debugger is active!
+2025-09-12 12:38:03,133 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 12:38:07,288 [INFO] 127.0.0.1 - - [12/Sep/2025 12:38:07] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:38:07,360 [INFO] 127.0.0.1 - - [12/Sep/2025 12:38:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:38:07,361 [INFO] 127.0.0.1 - - [12/Sep/2025 12:38:07] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:38:07,475 [INFO] 127.0.0.1 - - [12/Sep/2025 12:38:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:38:14,228 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 12:38:14,330 [INFO]  * Restarting with stat
+2025-09-12 12:57:49,285 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-12 12:57:49,285 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-12 12:57:49,286 [INFO]  * Restarting with stat
+2025-09-12 12:57:49,714 [WARNING]  * Debugger is active!
+2025-09-12 12:57:49,714 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 12:58:05,902 [INFO] 127.0.0.1 - - [12/Sep/2025 12:58:05] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 12:58:05,993 [INFO] 127.0.0.1 - - [12/Sep/2025 12:58:05] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 12:58:05,993 [INFO] 127.0.0.1 - - [12/Sep/2025 12:58:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 12:58:09,412 [INFO] 127.0.0.1 - - [12/Sep/2025 12:58:09] "[31m[1mPOST /s_time HTTP/1.1[0m" 401 -
+2025-09-12 12:59:10,391 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 12:59:10,518 [INFO]  * Restarting with stat
+2025-09-12 12:59:10,959 [WARNING]  * Debugger is active!
+2025-09-12 12:59:10,960 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 12:59:18,535 [INFO] 127.0.0.1 - - [12/Sep/2025 12:59:18] "[31m[1mPOST /s_time HTTP/1.1[0m" 401 -
+2025-09-12 13:00:13,472 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:00:13,572 [INFO]  * Restarting with stat
+2025-09-12 13:00:14,011 [WARNING]  * Debugger is active!
+2025-09-12 13:00:14,011 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:00:24,094 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:00:24,190 [INFO]  * Restarting with stat
+2025-09-12 13:00:24,623 [WARNING]  * Debugger is active!
+2025-09-12 13:00:24,624 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:00:27,649 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:00:27,724 [INFO]  * Restarting with stat
+2025-09-12 13:00:28,180 [WARNING]  * Debugger is active!
+2025-09-12 13:00:28,180 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:02:05,622 [INFO] 127.0.0.1 - - [12/Sep/2025 13:02:05] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 13:02:05,688 [INFO] 127.0.0.1 - - [12/Sep/2025 13:02:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 13:02:05,691 [INFO] 127.0.0.1 - - [12/Sep/2025 13:02:05] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:02:07,676 [INFO] 127.0.0.1 - - [12/Sep/2025 13:02:07] "[35m[1mPOST /s_time HTTP/1.1[0m" 500 -
+2025-09-12 13:02:13,613 [INFO] 127.0.0.1 - - [12/Sep/2025 13:02:13] "[35m[1mPOST /s_time HTTP/1.1[0m" 500 -
+2025-09-12 13:04:06,990 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:04:07,097 [INFO]  * Restarting with stat
+2025-09-12 13:04:07,531 [WARNING]  * Debugger is active!
+2025-09-12 13:04:07,531 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:04:31,440 [INFO] 127.0.0.1 - - [12/Sep/2025 13:04:31] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 13:04:31,502 [INFO] 127.0.0.1 - - [12/Sep/2025 13:04:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 13:04:31,505 [INFO] 127.0.0.1 - - [12/Sep/2025 13:04:31] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:04:33,161 [INFO] 127.0.0.1 - - [12/Sep/2025 13:04:33] "[35m[1mPOST /s_time HTTP/1.1[0m" 500 -
+2025-09-12 13:04:41,809 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:04:41,916 [INFO]  * Restarting with stat
+2025-09-12 13:04:42,364 [WARNING]  * Debugger is active!
+2025-09-12 13:04:42,365 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:05:04,543 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:05:04,640 [INFO]  * Restarting with stat
+2025-09-12 13:05:05,085 [WARNING]  * Debugger is active!
+2025-09-12 13:05:05,085 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:05:07,514 [INFO] 127.0.0.1 - - [12/Sep/2025 13:05:07] "[35m[1mPOST /s_time HTTP/1.1[0m" 500 -
+2025-09-12 13:06:36,846 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:06:36,941 [INFO]  * Restarting with stat
+2025-09-12 13:06:37,399 [WARNING]  * Debugger is active!
+2025-09-12 13:06:37,399 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:06:38,413 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:06:38,489 [INFO]  * Restarting with stat
+2025-09-12 13:06:38,921 [WARNING]  * Debugger is active!
+2025-09-12 13:06:38,921 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:06:40,941 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:06:41,014 [INFO]  * Restarting with stat
+2025-09-12 13:06:41,457 [WARNING]  * Debugger is active!
+2025-09-12 13:06:41,457 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:06:42,471 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:06:42,550 [INFO]  * Restarting with stat
+2025-09-12 13:06:42,984 [WARNING]  * Debugger is active!
+2025-09-12 13:06:42,985 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:07:05,862 [INFO] 127.0.0.1 - - [12/Sep/2025 13:07:05] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 13:07:05,951 [INFO] 127.0.0.1 - - [12/Sep/2025 13:07:05] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:07:05,952 [INFO] 127.0.0.1 - - [12/Sep/2025 13:07:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 13:07:08,424 [INFO] 127.0.0.1 - - [12/Sep/2025 13:07:08] "PUT /s_time/1/substract HTTP/1.1" 200 -
+2025-09-12 13:07:09,675 [INFO] 127.0.0.1 - - [12/Sep/2025 13:07:09] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 13:07:09,740 [INFO] 127.0.0.1 - - [12/Sep/2025 13:07:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 13:07:09,741 [INFO] 127.0.0.1 - - [12/Sep/2025 13:07:09] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:07:12,084 [INFO] 127.0.0.1 - - [12/Sep/2025 13:07:12] "[35m[1mPUT /s_time/reset HTTP/1.1[0m" 500 -
+2025-09-12 13:07:43,491 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:07:43,594 [INFO]  * Restarting with stat
+2025-09-12 13:07:44,025 [WARNING]  * Debugger is active!
+2025-09-12 13:07:44,025 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:07:51,890 [INFO] 127.0.0.1 - - [12/Sep/2025 13:07:51] "[35m[1mPUT /s_time/reset HTTP/1.1[0m" 201 -
+2025-09-12 13:07:53,111 [INFO] 127.0.0.1 - - [12/Sep/2025 13:07:53] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 13:07:53,204 [INFO] 127.0.0.1 - - [12/Sep/2025 13:07:53] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:07:53,207 [INFO] 127.0.0.1 - - [12/Sep/2025 13:07:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 13:08:07,722 [INFO] 127.0.0.1 - - [12/Sep/2025 13:08:07] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-12 13:08:08,798 [INFO] 127.0.0.1 - - [12/Sep/2025 13:08:08] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 13:08:08,862 [INFO] 127.0.0.1 - - [12/Sep/2025 13:08:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 13:08:08,863 [INFO] 127.0.0.1 - - [12/Sep/2025 13:08:08] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:08:17,297 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:08:17,402 [INFO]  * Restarting with stat
+2025-09-12 13:08:17,863 [WARNING]  * Debugger is active!
+2025-09-12 13:08:17,863 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:08:24,095 [INFO] 127.0.0.1 - - [12/Sep/2025 13:08:24] "[35m[1mPUT /s_time/reset HTTP/1.1[0m" 201 -
+2025-09-12 13:08:25,528 [INFO] 127.0.0.1 - - [12/Sep/2025 13:08:25] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 13:08:25,609 [INFO] 127.0.0.1 - - [12/Sep/2025 13:08:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 13:08:25,609 [INFO] 127.0.0.1 - - [12/Sep/2025 13:08:25] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:08:32,082 [INFO] 127.0.0.1 - - [12/Sep/2025 13:08:32] "PUT /s_time/1/add HTTP/1.1" 200 -
+2025-09-12 13:08:33,367 [INFO] 127.0.0.1 - - [12/Sep/2025 13:08:33] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 13:08:33,420 [INFO] 127.0.0.1 - - [12/Sep/2025 13:08:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 13:08:33,422 [INFO] 127.0.0.1 - - [12/Sep/2025 13:08:33] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:09:24,419 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:09:24,520 [INFO]  * Restarting with stat
+2025-09-12 13:09:24,976 [WARNING]  * Debugger is active!
+2025-09-12 13:09:24,977 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:09:32,035 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:09:32,131 [INFO]  * Restarting with stat
+2025-09-12 13:09:32,575 [WARNING]  * Debugger is active!
+2025-09-12 13:09:32,575 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:09:35,601 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:09:35,676 [INFO]  * Restarting with stat
+2025-09-12 13:09:36,124 [WARNING]  * Debugger is active!
+2025-09-12 13:09:36,124 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:09:38,144 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:09:38,233 [INFO]  * Restarting with stat
+2025-09-12 13:10:23,866 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-12 13:10:23,866 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-12 13:10:23,867 [INFO]  * Restarting with stat
+2025-09-12 13:10:24,320 [WARNING]  * Debugger is active!
+2025-09-12 13:10:24,320 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:10:26,592 [INFO] 127.0.0.1 - - [12/Sep/2025 13:10:26] "[33mPUT /s_time/1/add HTTP/1.1[0m" 404 -
+2025-09-12 13:10:55,239 [INFO] 127.0.0.1 - - [12/Sep/2025 13:10:55] "[35m[1mPUT /s_time/reset HTTP/1.1[0m" 201 -
+2025-09-12 13:10:56,543 [INFO] 127.0.0.1 - - [12/Sep/2025 13:10:56] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 13:10:56,641 [INFO] 127.0.0.1 - - [12/Sep/2025 13:10:56] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:10:56,642 [INFO] 127.0.0.1 - - [12/Sep/2025 13:10:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 13:10:59,329 [INFO] 127.0.0.1 - - [12/Sep/2025 13:10:59] "[32mPUT /s_time HTTP/1.1[0m" 308 -
+2025-09-12 13:10:59,920 [INFO] 127.0.0.1 - - [12/Sep/2025 13:10:59] "[31m[1mPUT /s_time/ HTTP/1.1[0m" 401 -
+2025-09-12 13:11:25,826 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:11:25,933 [INFO]  * Restarting with stat
+2025-09-12 13:11:26,372 [WARNING]  * Debugger is active!
+2025-09-12 13:11:26,372 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:11:31,631 [INFO] 127.0.0.1 - - [12/Sep/2025 13:11:31] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 13:11:31,735 [INFO] 127.0.0.1 - - [12/Sep/2025 13:11:31] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:11:31,735 [INFO] 127.0.0.1 - - [12/Sep/2025 13:11:31] "GET /static/styles.css HTTP/1.1" 200 -
+2025-09-12 13:11:32,457 [INFO] 127.0.0.1 - - [12/Sep/2025 13:11:32] "[32mPUT /s_time HTTP/1.1[0m" 308 -
+2025-09-12 13:11:34,153 [INFO] 127.0.0.1 - - [12/Sep/2025 13:11:34] "PUT /s_time/ HTTP/1.1" 200 -
+2025-09-12 13:11:35,382 [INFO] 127.0.0.1 - - [12/Sep/2025 13:11:35] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 13:11:35,451 [INFO] 127.0.0.1 - - [12/Sep/2025 13:11:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 13:11:35,454 [INFO] 127.0.0.1 - - [12/Sep/2025 13:11:35] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:11:46,541 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:11:46,648 [INFO]  * Restarting with stat
+2025-09-12 13:11:47,091 [WARNING]  * Debugger is active!
+2025-09-12 13:11:47,091 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:11:54,162 [INFO] 127.0.0.1 - - [12/Sep/2025 13:11:54] "PUT /s_time HTTP/1.1" 200 -
+2025-09-12 13:11:55,451 [INFO] 127.0.0.1 - - [12/Sep/2025 13:11:55] "GET /s_time/1 HTTP/1.1" 200 -
+2025-09-12 13:11:55,520 [INFO] 127.0.0.1 - - [12/Sep/2025 13:11:55] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:11:55,521 [INFO] 127.0.0.1 - - [12/Sep/2025 13:11:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 13:12:57,680 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:12:57,791 [INFO]  * Restarting with stat
+2025-09-12 13:12:58,226 [WARNING]  * Debugger is active!
+2025-09-12 13:12:58,226 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:12:59,240 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-12 13:12:59,319 [INFO]  * Restarting with stat
+2025-09-12 13:12:59,756 [WARNING]  * Debugger is active!
+2025-09-12 13:12:59,756 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:13:17,320 [INFO] 127.0.0.1 - - [12/Sep/2025 13:13:17] "GET / HTTP/1.1" 200 -
+2025-09-12 13:13:17,425 [INFO] 127.0.0.1 - - [12/Sep/2025 13:13:17] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:13:17,427 [INFO] 127.0.0.1 - - [12/Sep/2025 13:13:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 13:16:14,732 [INFO] 127.0.0.1 - - [12/Sep/2025 13:16:14] "GET / HTTP/1.1" 200 -
+2025-09-12 13:16:14,805 [INFO] 127.0.0.1 - - [12/Sep/2025 13:16:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 13:16:14,806 [INFO] 127.0.0.1 - - [12/Sep/2025 13:16:14] "[36mGET /static/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:24:59,031 [INFO] 127.0.0.1 - - [12/Sep/2025 13:24:59] "GET / HTTP/1.1" 200 -
+2025-09-12 13:24:59,121 [INFO] 127.0.0.1 - - [12/Sep/2025 13:24:59] "GET /static/js/global.js HTTP/1.1" 200 -
+2025-09-12 13:24:59,122 [INFO] 127.0.0.1 - - [12/Sep/2025 13:24:59] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-12 13:25:02,726 [INFO] 127.0.0.1 - - [12/Sep/2025 13:25:02] "GET /settings/1 HTTP/1.1" 200 -
+2025-09-12 13:25:02,806 [INFO] 127.0.0.1 - - [12/Sep/2025 13:25:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 13:25:02,812 [INFO] 127.0.0.1 - - [12/Sep/2025 13:25:02] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:25:02,813 [INFO] 127.0.0.1 - - [12/Sep/2025 13:25:02] "GET /static/js/settings_handling.js HTTP/1.1" 200 -
+2025-09-12 13:25:02,813 [INFO] 127.0.0.1 - - [12/Sep/2025 13:25:02] "GET /static/js/settings_fetch.js HTTP/1.1" 200 -
+2025-09-12 13:25:04,763 [INFO] 127.0.0.1 - - [12/Sep/2025 13:25:04] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-09-12 13:25:18,280 [INFO] 127.0.0.1 - - [12/Sep/2025 13:25:18] "GET /use_time HTTP/1.1" 200 -
+2025-09-12 13:25:18,301 [INFO] 127.0.0.1 - - [12/Sep/2025 13:25:18] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-12 13:25:18,304 [INFO] 127.0.0.1 - - [12/Sep/2025 13:25:18] "GET /static/js/global.js HTTP/1.1" 200 -
+2025-09-12 13:25:18,307 [INFO] 127.0.0.1 - - [12/Sep/2025 13:25:18] "GET /static/js/timerUse.js HTTP/1.1" 200 -
+2025-09-12 13:25:19,021 [INFO] 127.0.0.1 - - [12/Sep/2025 13:25:19] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-09-12 13:25:25,145 [INFO] 127.0.0.1 - - [12/Sep/2025 13:25:25] "GET /add_time HTTP/1.1" 200 -
+2025-09-12 13:25:25,167 [INFO] 127.0.0.1 - - [12/Sep/2025 13:25:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-12 13:25:25,169 [INFO] 127.0.0.1 - - [12/Sep/2025 13:25:25] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-12 13:25:25,170 [INFO] 127.0.0.1 - - [12/Sep/2025 13:25:25] "GET /static/js/timerAdd.js HTTP/1.1" 200 -
+2025-09-12 13:25:59,389 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/test.py', reloading
+2025-09-12 13:25:59,496 [INFO]  * Restarting with stat
+2025-09-12 13:25:59,932 [WARNING]  * Debugger is active!
+2025-09-12 13:25:59,932 [INFO]  * Debugger PIN: 869-012-419
+2025-09-12 13:27:37,738 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-12 13:27:37,836 [INFO]  * Restarting with stat
+2025-09-12 13:27:38,286 [WARNING]  * Debugger is active!
+2025-09-12 13:27:38,286 [INFO]  * Debugger PIN: 869-012-419

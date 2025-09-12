@@ -144,18 +144,22 @@ def set_study_fun_ratio(id, ratio):
 
 @super_bp.route("/s_time/<int:id>")
 @supervisor_required
+@relation_required(id_from_kwargs)
 def time_information(id):
     user_time = UserTime(id)
     current_time = user_time.get_time()
+    settings = UserSettings(id)
+    name = settings.name
+    return render_template("s_time.html", current_time=current_time, user_id=id, name=name)
 
-    return render_template("s_time.html", current_time=current_time, user_id=id)
-
-@super_bp.route("/s_time/<int:id>/<action>", methods=["PUT"])
+@super_bp.route("/s_time", methods=["PUT"])
 @supervisor_required
-def manage_time(id, action):
+@relation_required(id_from_json)
+def manage_time():
     data = request.get_json()
     time = data.get("time")
-    
+    id = data.get("estudiante_id")
+    action = data.get("action")
     user_time = UserTime(id)
     current_time = user_time.get_time()
     previous_time = ms_to_hms(current_time)
@@ -163,3 +167,17 @@ def manage_time(id, action):
     
     flash(f"Time updated, previous time: <b>{previous_time}</b>", "success")
     return jsonify({"new_time": new_time, "previous_time": current_time}), 200
+
+@super_bp.route("/s_time/reset", methods=["PUT"])
+@supervisor_required
+@relation_required(id_from_json)
+def reset_time():
+    data = request.get_json()
+    id = data.get("estudiante_id")
+    user_time = UserTime(id)
+    current_time = user_time.get_time()
+    previous_time = ms_to_hms(current_time)
+    reset = user_time.reset_time()
+
+    flash(f"The time has been reset. Previous time <b>{previous_time}</b>", "success")
+    return jsonify({"new_time": reset, "previous_time": current_time}), 201

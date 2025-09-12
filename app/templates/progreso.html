@@ -1,7 +1,7 @@
 <div class="d-flex flex-column flex-md-row justify-content-around align-items-md-end gap-5">
     <!-- Trofeos -->
     <div class="d-flex flex-column align-items-center">
-        <img src="{{ url_for('static', filename='trofeo.png') }}" alt="trofeo" height="64">
+        <img src="{{ url_for('static', filename='img/trofeo.png') }}" alt="trofeo" height="64">
         <div class="custom-text-3 fs-3 mt-2">
             <strong>Trophies: {{ trofeos }}</strong>
         </div>
@@ -12,9 +12,9 @@
         <div class="d-flex justify-content-center mb-2 gap-2 flex-wrap">
             {% for estrella in estrellas %}
                 {% if estrella %}
-                    <img src="{{ url_for('static', filename='star.png') }}" alt="estrella" height="32">
+                    <img src="{{ url_for('static', filename='img/star.png') }}" alt="estrella" height="32">
                 {% else %}
-                    <img src="{{ url_for('static', filename='template_star.png') }}" alt="estrella" height="32">
+                    <img src="{{ url_for('static', filename='img/template_star.png') }}" alt="estrella" height="32">
                 {% endif %}
             {% endfor %}
         </div>

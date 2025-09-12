@@ -23,3 +23,9 @@ class UserTime:
 
         db.session.commit()
         return self.user_time.tiempo
+
+    def reset_time(self):
+        self.user_time.tiempo = 0
+        db.session.commit()
+        return self.user_time.tiempo
+    
