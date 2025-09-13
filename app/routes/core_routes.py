@@ -26,6 +26,7 @@ def home():
         return redirect(url_for("auth.login"))
     
     usuario_id = session.get('usuario_id')
+    printn(usuario_id)
     supervisor = Usuario.query.join(Rol).filter(Usuario.id == usuario_id, Rol.nombre == "supervisor").first()
 
     settings = UserSettings(usuario_id)

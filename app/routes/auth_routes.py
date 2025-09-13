@@ -2,6 +2,7 @@ from flask import render_template, request, redirect, url_for, session, Blueprin
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from app.models import Usuario, Rol, NuevaNotificacion
+from app.utils.debugging_utils import printn
 
 from .. import db
 
@@ -46,38 +47,47 @@ def login():
 
     return render_template("login.html")
 
-@auth_bp.route("/registro", methods=["GET","POST"])
-def registro():
-    role_obj = Rol.query.all()
-    roles = [{'id': role.id, 'rol': role.rol} for role in role_obj]
-    # print(roles)
-
-    if request.method == 'POST':
-        nombre = request.form["nombre"]
-        email = request.form["email"]
-        contrasena = request.form["contrasena"]
-        repetir_contrasena = request.form["repetir_contrasena"]
-        rol = request.form["role"]
-        
-        if contrasena != repetir_contrasena:
-            return "Las contraseñas no coinciden, intenta nuevamente."
-        
-        if Usuario.query.filter_by(correo=email).first():
-            return "El correo ya está registrado, intenta con otro."
-        
-        contrasena_hash = generate_password_hash(contrasena)
-        
-        nuevo_usuario = Usuario(nombre=nombre, correo=email, contrasena=contrasena_hash, rol=rol)
-        db.session.add(nuevo_usuario)
-        db.session.commit()
-        
-        return redirect(url_for("auth.login"))
+@auth_bp.route("/registro")
+def registro_view():
+    role_obj = Rol.query.order_by(Rol.id).all()
+    roles = [{'id': role.id, 'nombre': role.nombre} for role in role_obj]
+    
     return render_template("registro.html", roles=roles, rol_seleccionado='student')
+
+
+@auth_bp.route("/registro", methods=["POST"])
+def registro():
+    nombre = request.form["nombre"]
+    email = request.form["email"]
+    contrasena = request.form["contrasena"]
+    repetir_contrasena = request.form["repetir_contrasena"]
+    rol = request.form["role"]
+    printn(rol)
+    if contrasena != repetir_contrasena:
+        return "Las contraseñas no coinciden, intenta nuevamente."
+    
+    if Usuario.query.filter_by(correo=email).first():
+        return "El correo ya está registrado, intenta con otro."
+    
+    if rol == "1":
+        rol_obj = Rol.query.filter_by(nombre='student').first()
+    else:
+        rol_obj = Rol.query.filter_by(nombre='supervisor').first()
+
+    contrasena_hash = generate_password_hash(contrasena)
+    
+    nuevo_usuario = Usuario(nombre=nombre, correo=email, contrasena=contrasena_hash, rol=rol_obj)
+    db.session.add(nuevo_usuario)
+    db.session.commit()
+    
+    return redirect(url_for("auth.login"))
+    
 
 @auth_bp.route("/usuarios")
 def mostrar_usuarios():
     usuarios = Usuario.query.all()
     return '<br>'.join([f'{usuario.nombre} ({usuario.correo})' for usuario in usuarios])
+
 
 @auth_bp.route("/logout")
 def logout():

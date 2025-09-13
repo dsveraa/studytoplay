@@ -125,7 +125,7 @@ def mostrar_trofeos(id: int) -> int:
 def revisar_acumulacion_tiempo(id: int) -> float:
     acumulacion_tiempo = AcumulacionTiempo.query.filter_by(usuario_id=id).first()
     if acumulacion_tiempo is None:
-        raise ValueError(f"No se encontró acumulación de tiempo con id {id}")
+        acumulacion_tiempo = 0
     return acumulacion_tiempo
 
 def revisar_tiempo_total(id: int) -> float:
@@ -146,7 +146,11 @@ TIEMPO_MAXIMO = CHECKPOINT * 5 # pasa de nivel
 
 def asignar_estrellas(id: int) -> int:
     tiempo_acumulado = revisar_acumulacion_tiempo(id)
-    tiempo_ciclo = tiempo_acumulado.cantidad
+    if tiempo_acumulado != 0:
+        tiempo_ciclo = tiempo_acumulado.cantidad
+    else:
+        tiempo_ciclo = 0
+    
     # print(f'{tiempo_ciclo=}')
     estrellas_obj = revisar_estrellas(id)
     nivel_estrellas = [5, 4, 3, 2, 1]

@@ -10,7 +10,6 @@ class UserSettings:
         self.id = user_id
         self.user_settings = Settings.query.filter_by(usuario_id=self.id).first()
         self.message = ""
-        self.name = self.user_settings.usuario.nombre
 
         if not self.user_settings:
             self.user_settings = Settings(usuario_id=self.id)
@@ -18,6 +17,8 @@ class UserSettings:
             db.session.commit()
             db.session.refresh(self.user_settings)
             self.message = "User Settings created"
+            
+        self.name = self.user_settings.usuario.nombre
             
     def information(self):
         return self.message

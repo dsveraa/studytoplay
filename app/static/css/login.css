@@ -1,0 +1,39 @@
+.login-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.login-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 46%;
+    height: 100%;
+    background-image: url('/static/img/stp_login.webp');
+    background-size: cover;
+    background-position: 30% center;
+    border-radius: 0 1rem 1rem 0;
+    z-index: 0;
+}
+
+.login-form {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .login-bg {
+        display: none;
+    }
+
+    .login-form {
+        width: 100% !important;
+        margin: 0 auto;
+    }
+
+    .login-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+}
