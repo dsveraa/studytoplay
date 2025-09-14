@@ -7,7 +7,7 @@ class Estudio(db.Model):
     __tablename__ = 'estudios'
 
     id = Column(Integer, primary_key=True)
-    usuario_id = Column(Integer, ForeignKey('usuarios.id'), nullable=False)
+    usuario_id = Column(Integer, ForeignKey('usuarios.id', ondelete="CASCADE"), nullable=False)
     fecha_inicio = Column(DateTime, nullable=False)
     fecha_fin = Column(DateTime, nullable=False)
     resumen = Column(Text, nullable=False)
@@ -22,7 +22,7 @@ class Asignatura(db.Model):
 
     id = Column(Integer, primary_key=True)
     nombre = Column(String(50), nullable=False)
-    usuario_id = Column(Integer, ForeignKey('usuarios.id'))
+    usuario_id = Column(Integer, ForeignKey('usuarios.id', ondelete="CASCADE"))
 
     estudio = relationship('Estudio', back_populates='asignatura')
     registro_nota = relationship('RegistroNotas', back_populates='asignatura')
@@ -32,7 +32,7 @@ class RegistroNotas(db.Model):
     __tablename__ = 'registro_notas'
 
     id = Column(Integer, primary_key=True)
-    usuario_id = Column(Integer, ForeignKey('usuarios.id'), nullable=False)
+    usuario_id = Column(Integer, ForeignKey('usuarios.id', ondelete="CASCADE"), nullable=False)
     asignatura_id = Column(Integer, ForeignKey('asignaturas.id'), nullable=False)
     tema = Column(String, nullable=False)
     nota = Column(Float, nullable=False)

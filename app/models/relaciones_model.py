@@ -12,8 +12,8 @@ class SupervisorEstudiante(db.Model):
 
     id = Column(Integer, primary_key=True)
 
-    supervisor_id = Column(Integer, ForeignKey('usuarios.id'))
-    estudiante_id = Column(Integer, ForeignKey('usuarios.id'))
+    supervisor_id = Column(Integer, ForeignKey('usuarios.id', ondelete="CASCADE"))
+    estudiante_id = Column(Integer, ForeignKey('usuarios.id', ondelete="CASCADE"))
 
     supervisor = relationship('Usuario', foreign_keys=[supervisor_id], backref='estudiantes_asignados')
     estudiante = relationship('Usuario', foreign_keys=[estudiante_id], backref='supervisores_asignados')
@@ -24,8 +24,8 @@ class SolicitudVinculacion(db.Model):
 
     id = Column(Integer, primary_key=True)
 
-    supervisor_id = Column(Integer, ForeignKey('usuarios.id'))
-    estudiante_id = Column(Integer, ForeignKey('usuarios.id'))
+    supervisor_id = Column(Integer, ForeignKey('usuarios.id', ondelete="CASCADE"))
+    estudiante_id = Column(Integer, ForeignKey('usuarios.id', ondelete="CASCADE"))
     estado = Column(String, default='pendiente')
     fecha_solicitud = Column(DateTime, default=datetime.now(timezone.utc))
 

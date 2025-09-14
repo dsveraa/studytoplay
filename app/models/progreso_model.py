@@ -6,7 +6,7 @@ class Nivel(db.Model):
     __tablename__ = "niveles"
 
     id = Column(Integer, primary_key=True)
-    usuario_id = Column(Integer, ForeignKey('usuarios.id'))
+    usuario_id = Column(Integer, ForeignKey('usuarios.id', ondelete="CASCADE"))
     nivel = Column(Integer)
 
 
@@ -14,7 +14,7 @@ class Trofeo(db.Model):
     __tablename__ = "trofeos"
 
     id = Column(Integer, primary_key=True)
-    usuario_id = Column(Integer, ForeignKey('usuarios.id'))
+    usuario_id = Column(Integer, ForeignKey('usuarios.id', ondelete="CASCADE"))
     cantidad = Column(Integer)
 
 
@@ -22,5 +22,5 @@ class Estrella(db.Model):
     __tablename__ = 'estrellas'
 
     id = Column(Integer, primary_key=True)
-    usuario_id = Column(Integer, ForeignKey('usuarios.id'))
+    usuario_id = Column(Integer, ForeignKey('usuarios.id', ondelete="CASCADE"))
     cantidad = Column(Integer)
