@@ -26,3 +26,17 @@ function withLoader(btn, asyncFunc) {
         }
     })
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const flash = document.getElementById("flash-messages")
+    if (flash) {
+        flash.classList.add("show")
+    }   
+})
+
+document.addEventListener("DOMContentLoaded", () => {
+    const alerts = document.querySelectorAll(".alert");
+    alerts.forEach(alert => {
+      setTimeout(() => alert.remove(), 5000);
+    });
+  });

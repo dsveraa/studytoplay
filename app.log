@@ -34074,3 +34074,975 @@ AttributeError: 'Rol' object has no attribute 'rol'
 2025-09-14 12:42:49,535 [INFO] 127.0.0.1 - - [14/Sep/2025 12:42:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
 2025-09-14 12:46:29,781 [INFO] 127.0.0.1 - - [14/Sep/2025 12:46:29] "POST /link_request HTTP/1.1" 200 -
 2025-09-14 12:46:29,815 [INFO] 127.0.0.1 - - [14/Sep/2025 12:46:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-16 15:23:04,422 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-16 15:23:04,422 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-16 15:23:04,423 [INFO]  * Restarting with stat
+2025-09-16 15:23:32,110 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 15:23:32,212 [INFO]  * Restarting with stat
+2025-09-16 15:24:11,131 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-16 15:24:11,131 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-16 15:24:11,131 [INFO]  * Restarting with stat
+2025-09-16 15:25:18,919 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.ForeignKeyViolation: insert or update on table "settings" violates foreign key constraint "settings_usuario_id_fkey"
+DETAIL:  Key (usuario_id)=(9) is not present in table "usuarios".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py", line 32, in home
+    settings = UserSettings(usuario_id)
+  File "/home/david/Dropbox/dev/studytoplay/app/services/settings_service.py", line 17, in __init__
+    db.session.commit()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 599, in commit
+    return self._proxied.commit()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4353, in flush
+    self._flush(objects)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4488, in _flush
+    with util.safe_reraise():
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4449, in _flush
+    flush_context.execute()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+    return meth(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.ForeignKeyViolation) insert or update on table "settings" violates foreign key constraint "settings_usuario_id_fkey"
+DETAIL:  Key (usuario_id)=(9) is not present in table "usuarios".
+
+[SQL: INSERT INTO settings (usuario_id) VALUES (%(usuario_id)s) RETURNING settings.id, settings.incentivo_notas, settings.pais_id, settings.trofeo, settings.extra_time, settings.time_ratio]
+[parameters: {'usuario_id': 9}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-16 15:25:18,929 [INFO] 127.0.0.1 - - [16/Sep/2025 15:25:18] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-09-16 15:25:40,381 [INFO] 127.0.0.1 - - [16/Sep/2025 15:25:40] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-16 15:25:40,574 [INFO] 127.0.0.1 - - [16/Sep/2025 15:25:40] "GET /login HTTP/1.1" 200 -
+2025-09-16 15:25:57,606 [INFO] 127.0.0.1 - - [16/Sep/2025 15:25:57] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-16 15:25:57,616 [INFO] 127.0.0.1 - - [16/Sep/2025 15:25:57] "GET /login HTTP/1.1" 200 -
+2025-09-16 15:25:57,699 [INFO] 127.0.0.1 - - [16/Sep/2025 15:25:57] "GET /static/css/login.css HTTP/1.1" 200 -
+2025-09-16 15:25:57,701 [INFO] 127.0.0.1 - - [16/Sep/2025 15:25:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 15:25:57,702 [INFO] 127.0.0.1 - - [16/Sep/2025 15:25:57] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 15:25:57,806 [INFO] 127.0.0.1 - - [16/Sep/2025 15:25:57] "GET /static/img/stp_login.webp HTTP/1.1" 200 -
+2025-09-16 15:26:13,801 [INFO] 127.0.0.1 - - [16/Sep/2025 15:26:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-16 15:26:13,873 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py", line 73, in home
+    return render_template("s_dashboard.html", estudiantes=estudiantes)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 1, in top-level template code
+    {% extends 'base_supervisor.html' %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/base_supervisor.html", line 29, in top-level template code
+    {% block content %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 29, in block 'content'
+    <a href="{{ url_for('relaciones.link_request') }}" class="btn custom-btn-3 mt-4">Link new student</a>
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'relaciones.link_request'. Did you mean 'relaciones.view_link_request' instead?
+2025-09-16 15:26:13,880 [INFO] 127.0.0.1 - - [16/Sep/2025 15:26:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-09-16 15:28:08,939 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py", line 73, in home
+    return render_template("s_dashboard.html", estudiantes=estudiantes)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 1, in top-level template code
+    {% extends 'base_supervisor.html' %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/base_supervisor.html", line 29, in top-level template code
+    {% block content %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 29, in block 'content'
+    <a href="{{ url_for('relaciones.send_link_request') }}" class="btn custom-btn-3 mt-4">Link new student</a>
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'relaciones.link_request'. Did you mean 'relaciones.view_link_request' instead?
+2025-09-16 15:28:08,942 [INFO] 127.0.0.1 - - [16/Sep/2025 15:28:08] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-09-16 15:28:19,463 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py", line 73, in home
+    return render_template("s_dashboard.html", estudiantes=estudiantes)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 1, in top-level template code
+    {% extends 'base_supervisor.html' %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/base_supervisor.html", line 29, in top-level template code
+    {% block content %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 29, in block 'content'
+    <a href="{{ url_for('relaciones.view_link_request') }}" class="btn custom-btn-3 mt-4">Link new student</a>
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'relaciones.link_request'. Did you mean 'relaciones.view_link_request' instead?
+2025-09-16 15:28:19,466 [INFO] 127.0.0.1 - - [16/Sep/2025 15:28:19] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-09-16 15:28:20,370 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py", line 73, in home
+    return render_template("s_dashboard.html", estudiantes=estudiantes)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 1, in top-level template code
+    {% extends 'base_supervisor.html' %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/base_supervisor.html", line 29, in top-level template code
+    {% block content %}
+  File "/home/david/Dropbox/dev/studytoplay/app/templates/s_dashboard.html", line 29, in block 'content'
+    <a href="{{ url_for('relaciones.view_link_request') }}" class="btn custom-btn-3 mt-4">Link new student</a>
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/david/Dropbox/dev/studytoplay/.venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'relaciones.link_request'. Did you mean 'relaciones.view_link_request' instead?
+2025-09-16 15:28:20,374 [INFO] 127.0.0.1 - - [16/Sep/2025 15:28:20] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-09-16 15:28:43,223 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-16 15:28:43,223 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-16 15:28:43,223 [INFO]  * Restarting with stat
+2025-09-16 15:28:43,691 [WARNING]  * Debugger is active!
+2025-09-16 15:28:43,692 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:28:45,315 [INFO] 127.0.0.1 - - [16/Sep/2025 15:28:45] "GET / HTTP/1.1" 200 -
+2025-09-16 15:28:45,443 [INFO] 127.0.0.1 - - [16/Sep/2025 15:28:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 15:28:45,444 [INFO] 127.0.0.1 - - [16/Sep/2025 15:28:45] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 15:28:53,943 [INFO] 127.0.0.1 - - [16/Sep/2025 15:28:53] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 15:28:54,018 [INFO] 127.0.0.1 - - [16/Sep/2025 15:28:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 15:28:54,020 [INFO] 127.0.0.1 - - [16/Sep/2025 15:28:54] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 15:29:18,990 [INFO] 127.0.0.1 - - [16/Sep/2025 15:29:18] "POST /link_request HTTP/1.1" 200 -
+2025-09-16 15:29:19,053 [INFO] 127.0.0.1 - - [16/Sep/2025 15:29:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-16 15:29:21,356 [INFO] 127.0.0.1 - - [16/Sep/2025 15:29:21] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 15:29:21,417 [INFO] 127.0.0.1 - - [16/Sep/2025 15:29:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 15:29:21,418 [INFO] 127.0.0.1 - - [16/Sep/2025 15:29:21] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 15:30:09,478 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/link_request_respository.py', reloading
+2025-09-16 15:30:09,596 [INFO]  * Restarting with stat
+2025-09-16 15:30:10,064 [WARNING]  * Debugger is active!
+2025-09-16 15:30:10,065 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:32:13,158 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 15:32:13,266 [INFO]  * Restarting with stat
+2025-09-16 15:32:13,747 [WARNING]  * Debugger is active!
+2025-09-16 15:32:13,747 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:32:19,800 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:32:19,911 [INFO]  * Restarting with stat
+2025-09-16 15:32:20,372 [WARNING]  * Debugger is active!
+2025-09-16 15:32:20,372 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:32:23,400 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:32:23,488 [INFO]  * Restarting with stat
+2025-09-16 15:32:23,936 [WARNING]  * Debugger is active!
+2025-09-16 15:32:23,936 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:32:30,998 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:32:31,098 [INFO]  * Restarting with stat
+2025-09-16 15:32:31,556 [WARNING]  * Debugger is active!
+2025-09-16 15:32:31,556 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:32:43,660 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:32:43,772 [INFO]  * Restarting with stat
+2025-09-16 15:32:44,246 [WARNING]  * Debugger is active!
+2025-09-16 15:32:44,246 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:32:49,292 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:32:49,400 [INFO]  * Restarting with stat
+2025-09-16 15:32:49,865 [WARNING]  * Debugger is active!
+2025-09-16 15:32:49,865 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:32:51,887 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:32:51,980 [INFO]  * Restarting with stat
+2025-09-16 15:32:52,449 [WARNING]  * Debugger is active!
+2025-09-16 15:32:52,450 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:32:57,496 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:32:57,603 [INFO]  * Restarting with stat
+2025-09-16 15:32:58,075 [WARNING]  * Debugger is active!
+2025-09-16 15:32:58,075 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:33:00,098 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:33:00,193 [INFO]  * Restarting with stat
+2025-09-16 15:33:00,657 [WARNING]  * Debugger is active!
+2025-09-16 15:33:00,657 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:33:15,790 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:33:15,893 [INFO]  * Restarting with stat
+2025-09-16 15:33:16,372 [WARNING]  * Debugger is active!
+2025-09-16 15:33:16,372 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:33:26,464 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:33:26,573 [INFO]  * Restarting with stat
+2025-09-16 15:33:27,022 [WARNING]  * Debugger is active!
+2025-09-16 15:33:27,022 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:33:28,038 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:33:28,121 [INFO]  * Restarting with stat
+2025-09-16 15:33:28,578 [WARNING]  * Debugger is active!
+2025-09-16 15:33:28,579 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:33:29,595 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:33:29,677 [INFO]  * Restarting with stat
+2025-09-16 15:33:30,150 [WARNING]  * Debugger is active!
+2025-09-16 15:33:30,150 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:33:37,214 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:33:37,330 [INFO]  * Restarting with stat
+2025-09-16 15:33:37,788 [WARNING]  * Debugger is active!
+2025-09-16 15:33:37,788 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:33:40,817 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:33:40,902 [INFO]  * Restarting with stat
+2025-09-16 15:33:41,370 [WARNING]  * Debugger is active!
+2025-09-16 15:33:41,370 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:33:43,392 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:33:43,478 [INFO]  * Restarting with stat
+2025-09-16 15:33:43,942 [WARNING]  * Debugger is active!
+2025-09-16 15:33:43,942 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:33:44,958 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:33:45,044 [INFO]  * Restarting with stat
+2025-09-16 15:33:45,514 [WARNING]  * Debugger is active!
+2025-09-16 15:33:45,514 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:34:14,775 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:34:14,883 [INFO]  * Restarting with stat
+2025-09-16 15:34:15,349 [WARNING]  * Debugger is active!
+2025-09-16 15:34:15,350 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:34:17,372 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:34:17,462 [INFO]  * Restarting with stat
+2025-09-16 15:34:17,927 [WARNING]  * Debugger is active!
+2025-09-16 15:34:17,927 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:34:18,944 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:34:19,029 [INFO]  * Restarting with stat
+2025-09-16 15:34:19,483 [WARNING]  * Debugger is active!
+2025-09-16 15:34:19,484 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:34:21,506 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:34:21,596 [INFO]  * Restarting with stat
+2025-09-16 15:34:22,065 [WARNING]  * Debugger is active!
+2025-09-16 15:34:22,065 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:34:27,109 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:34:27,214 [INFO]  * Restarting with stat
+2025-09-16 15:34:27,664 [WARNING]  * Debugger is active!
+2025-09-16 15:34:27,664 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:34:30,692 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:34:30,778 [INFO]  * Restarting with stat
+2025-09-16 15:34:31,243 [WARNING]  * Debugger is active!
+2025-09-16 15:34:31,244 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:34:44,361 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:34:44,486 [INFO]  * Restarting with stat
+2025-09-16 15:34:44,943 [WARNING]  * Debugger is active!
+2025-09-16 15:34:44,943 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:34:58,061 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:34:58,172 [INFO]  * Restarting with stat
+2025-09-16 15:34:58,641 [WARNING]  * Debugger is active!
+2025-09-16 15:34:58,641 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:35:01,669 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:35:01,764 [INFO]  * Restarting with stat
+2025-09-16 15:35:02,231 [WARNING]  * Debugger is active!
+2025-09-16 15:35:02,231 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:35:06,266 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:35:06,375 [INFO]  * Restarting with stat
+2025-09-16 15:35:06,841 [WARNING]  * Debugger is active!
+2025-09-16 15:35:06,841 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:35:12,896 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:35:13,011 [INFO]  * Restarting with stat
+2025-09-16 15:35:13,470 [WARNING]  * Debugger is active!
+2025-09-16 15:35:13,471 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:35:14,487 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:35:14,573 [INFO]  * Restarting with stat
+2025-09-16 15:35:15,030 [WARNING]  * Debugger is active!
+2025-09-16 15:35:15,030 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:35:20,074 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:35:20,180 [INFO]  * Restarting with stat
+2025-09-16 15:35:20,651 [WARNING]  * Debugger is active!
+2025-09-16 15:35:20,652 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:35:21,668 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 15:35:21,758 [INFO]  * Restarting with stat
+2025-09-16 15:35:22,228 [WARNING]  * Debugger is active!
+2025-09-16 15:35:22,228 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 15:35:54,522 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/user_repository.py', reloading
+2025-09-16 15:35:54,635 [INFO]  * Restarting with stat
+2025-09-16 16:33:04,291 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-16 16:33:04,291 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-16 16:33:04,292 [INFO]  * Restarting with stat
+2025-09-16 16:33:04,760 [WARNING]  * Debugger is active!
+2025-09-16 16:33:04,761 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 16:33:12,299 [INFO] 127.0.0.1 - - [16/Sep/2025 16:33:12] "[35m[1mPOST /link_request HTTP/1.1[0m" 500 -
+2025-09-16 16:33:12,424 [INFO] 127.0.0.1 - - [16/Sep/2025 16:33:12] "GET /link_request?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-09-16 16:33:12,424 [INFO] 127.0.0.1 - - [16/Sep/2025 16:33:12] "GET /link_request?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-09-16 16:33:12,443 [INFO] 127.0.0.1 - - [16/Sep/2025 16:33:12] "GET /link_request?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-09-16 16:33:12,455 [INFO] 127.0.0.1 - - [16/Sep/2025 16:33:12] "GET /link_request?__debugger__=yes&cmd=resource&f=console.png&s=y7ibZLvE6DoizCcKkIW6 HTTP/1.1" 200 -
+2025-09-16 16:35:12,931 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 16:35:13,054 [INFO]  * Restarting with stat
+2025-09-16 16:35:13,516 [WARNING]  * Debugger is active!
+2025-09-16 16:35:13,516 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 16:35:14,821 [INFO] 127.0.0.1 - - [16/Sep/2025 16:35:14] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 16:35:14,908 [INFO] 127.0.0.1 - - [16/Sep/2025 16:35:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 16:35:14,909 [INFO] 127.0.0.1 - - [16/Sep/2025 16:35:14] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 16:35:17,140 [INFO] 127.0.0.1 - - [16/Sep/2025 16:35:17] "[31m[1mPOST /link_request HTTP/1.1[0m" 400 -
+2025-09-16 16:35:17,202 [INFO] 127.0.0.1 - - [16/Sep/2025 16:35:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-16 16:36:54,733 [INFO] 127.0.0.1 - - [16/Sep/2025 16:36:54] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 16:36:54,827 [INFO] 127.0.0.1 - - [16/Sep/2025 16:36:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 16:36:54,828 [INFO] 127.0.0.1 - - [16/Sep/2025 16:36:54] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 16:36:57,131 [INFO] 127.0.0.1 - - [16/Sep/2025 16:36:57] "POST /link_request HTTP/1.1" 200 -
+2025-09-16 16:36:57,184 [INFO] 127.0.0.1 - - [16/Sep/2025 16:36:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-16 16:37:47,912 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/user_repository.py', reloading
+2025-09-16 16:37:48,030 [INFO]  * Restarting with stat
+2025-09-16 16:37:48,508 [WARNING]  * Debugger is active!
+2025-09-16 16:37:48,508 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 16:37:51,537 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/user_repository.py', reloading
+2025-09-16 16:37:51,633 [INFO]  * Restarting with stat
+2025-09-16 16:50:09,899 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-16 16:50:09,899 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-16 16:50:09,899 [INFO]  * Restarting with stat
+2025-09-16 16:50:10,368 [WARNING]  * Debugger is active!
+2025-09-16 16:50:10,368 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 16:50:13,381 [INFO] 127.0.0.1 - - [16/Sep/2025 16:50:13] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 16:50:13,472 [INFO] 127.0.0.1 - - [16/Sep/2025 16:50:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 16:50:13,474 [INFO] 127.0.0.1 - - [16/Sep/2025 16:50:13] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 16:50:31,912 [INFO] 127.0.0.1 - - [16/Sep/2025 16:50:31] "[31m[1mPOST /link_request HTTP/1.1[0m" 400 -
+2025-09-16 16:50:31,967 [INFO] 127.0.0.1 - - [16/Sep/2025 16:50:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-16 16:51:17,980 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 16:51:18,104 [INFO]  * Restarting with stat
+2025-09-16 16:51:18,575 [WARNING]  * Debugger is active!
+2025-09-16 16:51:18,575 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 16:51:29,630 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:29] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 16:51:29,696 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 16:51:29,697 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:29] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 16:51:31,415 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:31] "GET / HTTP/1.1" 200 -
+2025-09-16 16:51:31,497 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:31] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 16:51:31,497 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 16:51:32,907 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:32] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-09-16 16:51:32,914 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:32] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-16 16:51:32,940 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:32] "GET /login HTTP/1.1" 200 -
+2025-09-16 16:51:33,014 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 16:51:33,015 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:33] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 16:51:33,018 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:33] "GET /static/css/login.css HTTP/1.1" 200 -
+2025-09-16 16:51:33,071 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:33] "GET /static/img/stp_login.webp HTTP/1.1" 200 -
+2025-09-16 16:51:34,195 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:34] "GET /registro HTTP/1.1" 200 -
+2025-09-16 16:51:34,268 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 16:51:34,270 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:34] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 16:51:45,765 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:45] "[32mPOST /registro HTTP/1.1[0m" 302 -
+2025-09-16 16:51:45,772 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:45] "GET /login HTTP/1.1" 200 -
+2025-09-16 16:51:45,860 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:45] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-16 16:51:45,861 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 16:51:45,861 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:45] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 16:51:45,920 [INFO] 127.0.0.1 - - [16/Sep/2025 16:51:45] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-16 16:52:10,820 [INFO] 127.0.0.1 - - [16/Sep/2025 16:52:10] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-16 16:52:10,831 [INFO] 127.0.0.1 - - [16/Sep/2025 16:52:10] "GET / HTTP/1.1" 200 -
+2025-09-16 16:52:10,903 [INFO] 127.0.0.1 - - [16/Sep/2025 16:52:10] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 16:52:10,903 [INFO] 127.0.0.1 - - [16/Sep/2025 16:52:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 16:52:12,177 [INFO] 127.0.0.1 - - [16/Sep/2025 16:52:12] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 16:52:12,248 [INFO] 127.0.0.1 - - [16/Sep/2025 16:52:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 16:52:12,249 [INFO] 127.0.0.1 - - [16/Sep/2025 16:52:12] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 16:52:18,447 [INFO] 127.0.0.1 - - [16/Sep/2025 16:52:18] "[31m[1mPOST /link_request HTTP/1.1[0m" 400 -
+2025-09-16 16:52:18,521 [INFO] 127.0.0.1 - - [16/Sep/2025 16:52:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-16 16:52:21,871 [INFO] 127.0.0.1 - - [16/Sep/2025 16:52:21] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 16:52:21,922 [INFO] 127.0.0.1 - - [16/Sep/2025 16:52:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 16:52:21,922 [INFO] 127.0.0.1 - - [16/Sep/2025 16:52:21] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 16:54:55,553 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 16:54:55,670 [INFO]  * Restarting with stat
+2025-09-16 16:54:56,142 [WARNING]  * Debugger is active!
+2025-09-16 16:54:56,142 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 16:55:00,177 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/link_request_service.py', reloading
+2025-09-16 16:55:00,292 [INFO]  * Restarting with stat
+2025-09-16 16:55:22,724 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-16 16:55:22,724 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-16 16:55:22,724 [INFO]  * Restarting with stat
+2025-09-16 16:55:23,228 [WARNING]  * Debugger is active!
+2025-09-16 16:55:23,228 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 16:55:24,799 [INFO] 127.0.0.1 - - [16/Sep/2025 16:55:24] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 16:55:24,880 [INFO] 127.0.0.1 - - [16/Sep/2025 16:55:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 16:55:24,881 [INFO] 127.0.0.1 - - [16/Sep/2025 16:55:24] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 16:55:31,263 [INFO] 127.0.0.1 - - [16/Sep/2025 16:55:31] "[35m[1mPOST /link_request HTTP/1.1[0m" 500 -
+2025-09-16 16:55:31,315 [INFO] 127.0.0.1 - - [16/Sep/2025 16:55:31] "[36mGET /link_request?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-09-16 16:55:31,318 [INFO] 127.0.0.1 - - [16/Sep/2025 16:55:31] "[36mGET /link_request?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-09-16 16:55:31,370 [INFO] 127.0.0.1 - - [16/Sep/2025 16:55:31] "GET /link_request?__debugger__=yes&cmd=resource&f=console.png&s=RABnYyZjDQiRnKj52Ok9 HTTP/1.1" 200 -
+2025-09-16 16:59:55,691 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-09-16 16:59:55,804 [INFO]  * Restarting with stat
+2025-09-16 16:59:56,277 [WARNING]  * Debugger is active!
+2025-09-16 16:59:56,277 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:00:01,323 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-09-16 17:00:01,429 [INFO]  * Restarting with stat
+2025-09-16 17:00:01,885 [WARNING]  * Debugger is active!
+2025-09-16 17:00:01,885 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:00:09,956 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-09-16 17:00:10,085 [INFO]  * Restarting with stat
+2025-09-16 17:00:10,552 [WARNING]  * Debugger is active!
+2025-09-16 17:00:10,553 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:00:14,587 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-09-16 17:00:14,682 [INFO]  * Restarting with stat
+2025-09-16 17:00:15,160 [WARNING]  * Debugger is active!
+2025-09-16 17:00:15,161 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:00:17,183 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-09-16 17:00:17,268 [INFO]  * Restarting with stat
+2025-09-16 17:00:17,720 [WARNING]  * Debugger is active!
+2025-09-16 17:00:17,721 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:00:26,573 [INFO] 127.0.0.1 - - [16/Sep/2025 17:00:26] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:00:26,659 [INFO] 127.0.0.1 - - [16/Sep/2025 17:00:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:00:26,660 [INFO] 127.0.0.1 - - [16/Sep/2025 17:00:26] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:00:28,214 [INFO] 127.0.0.1 - - [16/Sep/2025 17:00:28] "[31m[1mPOST /link_request HTTP/1.1[0m" 400 -
+2025-09-16 17:00:28,258 [INFO] 127.0.0.1 - - [16/Sep/2025 17:00:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-16 17:00:31,752 [INFO] 127.0.0.1 - - [16/Sep/2025 17:00:31] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:00:31,802 [INFO] 127.0.0.1 - - [16/Sep/2025 17:00:31] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:00:31,803 [INFO] 127.0.0.1 - - [16/Sep/2025 17:00:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:01:31,720 [INFO] None
+2025-09-16 17:01:31,725 [INFO] 127.0.0.1 - - [16/Sep/2025 17:01:31] "[35m[1mPOST /link_request HTTP/1.1[0m" 500 -
+2025-09-16 17:01:31,800 [INFO] 127.0.0.1 - - [16/Sep/2025 17:01:31] "[36mGET /link_request?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-09-16 17:01:31,802 [INFO] 127.0.0.1 - - [16/Sep/2025 17:01:31] "[36mGET /link_request?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-09-16 17:01:31,859 [INFO] 127.0.0.1 - - [16/Sep/2025 17:01:31] "GET /link_request?__debugger__=yes&cmd=resource&f=console.png&s=wGTibsWqELz3RjOe0Qw8 HTTP/1.1" 200 -
+2025-09-16 17:01:42,483 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-09-16 17:01:42,621 [INFO]  * Restarting with stat
+2025-09-16 17:01:43,106 [WARNING]  * Debugger is active!
+2025-09-16 17:01:43,107 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:01:44,123 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-09-16 17:01:44,218 [INFO]  * Restarting with stat
+2025-09-16 17:01:44,693 [WARNING]  * Debugger is active!
+2025-09-16 17:01:44,693 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:01:46,715 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-09-16 17:01:46,802 [INFO]  * Restarting with stat
+2025-09-16 17:01:47,274 [WARNING]  * Debugger is active!
+2025-09-16 17:01:47,274 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:01:57,837 [INFO] 127.0.0.1 - - [16/Sep/2025 17:01:57] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:01:57,913 [INFO] 127.0.0.1 - - [16/Sep/2025 17:01:57] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:01:57,917 [INFO] 127.0.0.1 - - [16/Sep/2025 17:01:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:01:59,548 [INFO] None
+2025-09-16 17:01:59,552 [INFO] 127.0.0.1 - - [16/Sep/2025 17:01:59] "[35m[1mPOST /link_request HTTP/1.1[0m" 500 -
+2025-09-16 17:01:59,642 [INFO] 127.0.0.1 - - [16/Sep/2025 17:01:59] "[36mGET /link_request?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-09-16 17:01:59,643 [INFO] 127.0.0.1 - - [16/Sep/2025 17:01:59] "[36mGET /link_request?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-09-16 17:01:59,685 [INFO] 127.0.0.1 - - [16/Sep/2025 17:01:59] "GET /link_request?__debugger__=yes&cmd=resource&f=console.png&s=aPr704ApJK3SXc02hVVe HTTP/1.1" 200 -
+2025-09-16 17:02:16,540 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-09-16 17:02:16,664 [INFO]  * Restarting with stat
+2025-09-16 17:02:17,134 [WARNING]  * Debugger is active!
+2025-09-16 17:02:17,134 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:02:22,770 [INFO] 127.0.0.1 - - [16/Sep/2025 17:02:22] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:02:22,847 [INFO] 127.0.0.1 - - [16/Sep/2025 17:02:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:02:22,848 [INFO] 127.0.0.1 - - [16/Sep/2025 17:02:22] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:02:24,104 [INFO] None
+2025-09-16 17:02:24,142 [INFO] 127.0.0.1 - - [16/Sep/2025 17:02:24] "[35m[1mPOST /link_request HTTP/1.1[0m" 500 -
+2025-09-16 17:02:24,234 [INFO] 127.0.0.1 - - [16/Sep/2025 17:02:24] "[36mGET /link_request?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-09-16 17:02:24,235 [INFO] 127.0.0.1 - - [16/Sep/2025 17:02:24] "[36mGET /link_request?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-09-16 17:02:24,259 [INFO] 127.0.0.1 - - [16/Sep/2025 17:02:24] "GET /link_request?__debugger__=yes&cmd=resource&f=console.png&s=FgyTxBLXrYu6oey0BJZN HTTP/1.1" 200 -
+2025-09-16 17:02:39,330 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-09-16 17:02:39,457 [INFO]  * Restarting with stat
+2025-09-16 17:02:39,927 [WARNING]  * Debugger is active!
+2025-09-16 17:02:39,927 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:04:31,930 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/auth_routes.py', reloading
+2025-09-16 17:04:32,036 [INFO]  * Restarting with stat
+2025-09-16 17:04:32,486 [WARNING]  * Debugger is active!
+2025-09-16 17:04:32,486 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:04:34,507 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/auth_routes.py', reloading
+2025-09-16 17:04:34,591 [INFO]  * Restarting with stat
+2025-09-16 17:04:35,071 [WARNING]  * Debugger is active!
+2025-09-16 17:04:35,071 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:04:46,169 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/auth_routes.py', reloading
+2025-09-16 17:04:46,271 [INFO]  * Restarting with stat
+2025-09-16 17:10:44,788 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-16 17:10:44,788 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-16 17:10:44,788 [INFO]  * Restarting with stat
+2025-09-16 17:10:45,253 [WARNING]  * Debugger is active!
+2025-09-16 17:10:45,253 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:10:48,269 [INFO] 127.0.0.1 - - [16/Sep/2025 17:10:48] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:10:48,372 [INFO] 127.0.0.1 - - [16/Sep/2025 17:10:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:10:48,373 [INFO] 127.0.0.1 - - [16/Sep/2025 17:10:48] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:10:58,487 [INFO] 127.0.0.1 - - [16/Sep/2025 17:10:58] "GET / HTTP/1.1" 200 -
+2025-09-16 17:10:58,567 [INFO] 127.0.0.1 - - [16/Sep/2025 17:10:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:10:58,567 [INFO] 127.0.0.1 - - [16/Sep/2025 17:10:58] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:11:02,436 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:02] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-09-16 17:11:02,441 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:02] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-16 17:11:02,468 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:02] "GET /login HTTP/1.1" 200 -
+2025-09-16 17:11:02,542 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:02] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:11:02,543 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:11:02,550 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:02] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-16 17:11:02,620 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:02] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-16 17:11:03,901 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:03] "GET /registro HTTP/1.1" 200 -
+2025-09-16 17:11:03,969 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:11:03,971 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:03] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:11:16,568 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:16] "[32mPOST /registro HTTP/1.1[0m" 302 -
+2025-09-16 17:11:16,574 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:16] "GET /login HTTP/1.1" 200 -
+2025-09-16 17:11:16,648 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:11:16,649 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:16] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:11:16,650 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:16] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-16 17:11:16,715 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:16] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-16 17:11:29,532 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-16 17:11:29,544 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:29] "GET / HTTP/1.1" 200 -
+2025-09-16 17:11:29,606 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:11:29,607 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:29] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:11:31,302 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:31] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:11:31,380 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:11:31,381 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:31] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:11:39,380 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:39] "POST /link_request HTTP/1.1" 200 -
+2025-09-16 17:11:39,426 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-16 17:11:47,553 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:47] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:11:47,606 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:11:47,607 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:47] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:11:49,619 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:49] "[31m[1mPOST /link_request HTTP/1.1[0m" 400 -
+2025-09-16 17:11:49,659 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-16 17:11:52,419 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:52] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:11:52,462 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:11:52,463 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:52] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:11:57,738 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:57] "[31m[1mPOST /link_request HTTP/1.1[0m" 400 -
+2025-09-16 17:11:57,796 [INFO] 127.0.0.1 - - [16/Sep/2025 17:11:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-16 17:12:00,835 [INFO] 127.0.0.1 - - [16/Sep/2025 17:12:00] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:12:00,885 [INFO] 127.0.0.1 - - [16/Sep/2025 17:12:00] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:12:00,889 [INFO] 127.0.0.1 - - [16/Sep/2025 17:12:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:13:07,549 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:13:07,667 [INFO]  * Restarting with stat
+2025-09-16 17:13:08,131 [WARNING]  * Debugger is active!
+2025-09-16 17:13:08,131 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:14:00,598 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:14:00,707 [INFO]  * Restarting with stat
+2025-09-16 17:14:01,162 [WARNING]  * Debugger is active!
+2025-09-16 17:14:01,162 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:14:19,325 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:14:19,429 [INFO]  * Restarting with stat
+2025-09-16 17:14:19,893 [WARNING]  * Debugger is active!
+2025-09-16 17:14:19,893 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:15:06,302 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:15:06,403 [INFO]  * Restarting with stat
+2025-09-16 17:15:06,868 [WARNING]  * Debugger is active!
+2025-09-16 17:15:06,868 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:15:09,896 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:15:09,994 [INFO]  * Restarting with stat
+2025-09-16 17:15:10,460 [WARNING]  * Debugger is active!
+2025-09-16 17:15:10,461 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:15:15,503 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:15:15,607 [INFO]  * Restarting with stat
+2025-09-16 17:15:16,090 [WARNING]  * Debugger is active!
+2025-09-16 17:15:16,090 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:15:18,112 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:15:18,207 [INFO]  * Restarting with stat
+2025-09-16 17:15:18,676 [WARNING]  * Debugger is active!
+2025-09-16 17:15:18,676 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:16:11,150 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:16:11,259 [INFO]  * Restarting with stat
+2025-09-16 17:16:11,725 [WARNING]  * Debugger is active!
+2025-09-16 17:16:11,725 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:16:19,797 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:16:19,888 [INFO]  * Restarting with stat
+2025-09-16 17:16:20,361 [WARNING]  * Debugger is active!
+2025-09-16 17:16:20,361 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:16:27,424 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:16:27,532 [INFO]  * Restarting with stat
+2025-09-16 17:16:27,984 [WARNING]  * Debugger is active!
+2025-09-16 17:16:27,984 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:16:28,999 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:16:29,084 [INFO]  * Restarting with stat
+2025-09-16 17:16:29,530 [WARNING]  * Debugger is active!
+2025-09-16 17:16:29,530 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:16:32,558 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:16:32,641 [INFO]  * Restarting with stat
+2025-09-16 17:17:52,574 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-16 17:17:52,574 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-16 17:17:52,575 [INFO]  * Restarting with stat
+2025-09-16 17:17:53,043 [WARNING]  * Debugger is active!
+2025-09-16 17:17:53,043 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:17:55,406 [INFO] 127.0.0.1 - - [16/Sep/2025 17:17:55] "[31m[1mPOST /link_request HTTP/1.1[0m" 400 -
+2025-09-16 17:17:55,481 [INFO] 127.0.0.1 - - [16/Sep/2025 17:17:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-16 17:18:00,920 [INFO] 127.0.0.1 - - [16/Sep/2025 17:18:00] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:18:00,988 [INFO] 127.0.0.1 - - [16/Sep/2025 17:18:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:18:00,989 [INFO] 127.0.0.1 - - [16/Sep/2025 17:18:00] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:19:40,019 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:19:40,133 [INFO]  * Restarting with stat
+2025-09-16 17:19:40,608 [WARNING]  * Debugger is active!
+2025-09-16 17:19:40,608 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:19:41,624 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:19:41,711 [INFO]  * Restarting with stat
+2025-09-16 17:19:42,170 [WARNING]  * Debugger is active!
+2025-09-16 17:19:42,170 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:19:45,198 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:19:45,291 [INFO]  * Restarting with stat
+2025-09-16 17:19:45,757 [WARNING]  * Debugger is active!
+2025-09-16 17:19:45,757 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:19:48,785 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:19:48,894 [INFO]  * Restarting with stat
+2025-09-16 17:19:49,376 [WARNING]  * Debugger is active!
+2025-09-16 17:19:49,376 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:19:50,392 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:19:50,482 [INFO]  * Restarting with stat
+2025-09-16 17:19:50,957 [WARNING]  * Debugger is active!
+2025-09-16 17:19:50,958 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:19:51,973 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:19:52,059 [INFO]  * Restarting with stat
+2025-09-16 17:19:52,525 [WARNING]  * Debugger is active!
+2025-09-16 17:19:52,525 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:20:04,634 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:20:04,740 [INFO]  * Restarting with stat
+2025-09-16 17:20:05,207 [WARNING]  * Debugger is active!
+2025-09-16 17:20:05,207 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:20:09,243 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:20:09,337 [INFO]  * Restarting with stat
+2025-09-16 17:20:09,813 [WARNING]  * Debugger is active!
+2025-09-16 17:20:09,813 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:20:14,858 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:20:14,962 [INFO]  * Restarting with stat
+2025-09-16 17:21:32,422 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-16 17:21:32,422 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-16 17:21:32,422 [INFO]  * Restarting with stat
+2025-09-16 17:21:32,890 [WARNING]  * Debugger is active!
+2025-09-16 17:21:32,890 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:21:34,534 [INFO] 127.0.0.1 - - [16/Sep/2025 17:21:34] "[32mPOST /link_request HTTP/1.1[0m" 302 -
+2025-09-16 17:21:34,551 [INFO] 127.0.0.1 - - [16/Sep/2025 17:21:34] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:21:34,621 [INFO] 127.0.0.1 - - [16/Sep/2025 17:21:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:21:34,624 [INFO] 127.0.0.1 - - [16/Sep/2025 17:21:34] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:21:48,026 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:21:48,140 [INFO]  * Restarting with stat
+2025-09-16 17:21:48,615 [WARNING]  * Debugger is active!
+2025-09-16 17:21:48,616 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:21:52,650 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:21:52,753 [INFO]  * Restarting with stat
+2025-09-16 17:21:53,219 [WARNING]  * Debugger is active!
+2025-09-16 17:21:53,219 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:21:59,705 [INFO] 127.0.0.1 - - [16/Sep/2025 17:21:59] "[32mPOST /link_request HTTP/1.1[0m" 302 -
+2025-09-16 17:21:59,722 [INFO] 127.0.0.1 - - [16/Sep/2025 17:21:59] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:21:59,828 [INFO] 127.0.0.1 - - [16/Sep/2025 17:21:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:21:59,829 [INFO] 127.0.0.1 - - [16/Sep/2025 17:21:59] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:25:26,256 [INFO] 127.0.0.1 - - [16/Sep/2025 17:25:26] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:25:26,336 [INFO] 127.0.0.1 - - [16/Sep/2025 17:25:26] "GET /static/js/global.js HTTP/1.1" 200 -
+2025-09-16 17:25:26,339 [INFO] 127.0.0.1 - - [16/Sep/2025 17:25:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:25:31,877 [INFO] 127.0.0.1 - - [16/Sep/2025 17:25:31] "[32mPOST /link_request HTTP/1.1[0m" 302 -
+2025-09-16 17:25:31,890 [INFO] 127.0.0.1 - - [16/Sep/2025 17:25:31] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:25:31,968 [INFO] 127.0.0.1 - - [16/Sep/2025 17:25:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:25:31,969 [INFO] 127.0.0.1 - - [16/Sep/2025 17:25:31] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:26:43,018 [INFO] 127.0.0.1 - - [16/Sep/2025 17:26:43] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:26:43,093 [INFO] 127.0.0.1 - - [16/Sep/2025 17:26:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:26:43,093 [INFO] 127.0.0.1 - - [16/Sep/2025 17:26:43] "GET /static/js/global.js HTTP/1.1" 200 -
+2025-09-16 17:26:47,565 [INFO] 127.0.0.1 - - [16/Sep/2025 17:26:47] "[32mPOST /link_request HTTP/1.1[0m" 302 -
+2025-09-16 17:26:47,579 [INFO] 127.0.0.1 - - [16/Sep/2025 17:26:47] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:26:47,641 [INFO] 127.0.0.1 - - [16/Sep/2025 17:26:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:26:47,641 [INFO] 127.0.0.1 - - [16/Sep/2025 17:26:47] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:27:07,006 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:07] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:27:07,077 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:27:07,078 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:07] "GET /static/js/global.js HTTP/1.1" 200 -
+2025-09-16 17:27:10,278 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:10] "[35m[1mPOST /link_request HTTP/1.1[0m" 500 -
+2025-09-16 17:27:10,362 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:10] "[36mGET /link_request?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-09-16 17:27:10,362 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:10] "[36mGET /link_request?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-09-16 17:27:10,406 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:10] "GET /link_request?__debugger__=yes&cmd=resource&f=console.png&s=6uVOvdgMGXxZT5Jee4Ir HTTP/1.1" 200 -
+2025-09-16 17:27:13,167 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:13] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:27:13,229 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:27:13,230 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:13] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:27:19,140 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:19] "[32mPOST /link_request HTTP/1.1[0m" 302 -
+2025-09-16 17:27:19,148 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:19] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:27:19,225 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:27:19,226 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:19] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:27:39,394 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relaciones_routes.py', reloading
+2025-09-16 17:27:39,508 [INFO]  * Restarting with stat
+2025-09-16 17:27:39,970 [WARNING]  * Debugger is active!
+2025-09-16 17:27:39,971 [INFO]  * Debugger PIN: 179-359-789
+2025-09-16 17:27:47,773 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:47] "[32mPOST /link_request HTTP/1.1[0m" 302 -
+2025-09-16 17:27:47,791 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:47] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:27:47,901 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:27:47,902 [INFO] 127.0.0.1 - - [16/Sep/2025 17:27:47] "GET /static/js/global.js HTTP/1.1" 200 -
+2025-09-16 17:28:00,331 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:00] "[32mPOST /link_request HTTP/1.1[0m" 302 -
+2025-09-16 17:28:00,344 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:00] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:28:00,416 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:00] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:28:00,417 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:28:06,096 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:06] "[32mPOST /link_request HTTP/1.1[0m" 302 -
+2025-09-16 17:28:06,102 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:06] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:28:06,183 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:06] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:28:06,183 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:28:12,057 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:12] "[32mPOST /link_request HTTP/1.1[0m" 302 -
+2025-09-16 17:28:12,063 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:12] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:28:12,143 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:28:12,144 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:12] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:28:29,650 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:29] "[32mPOST /link_request HTTP/1.1[0m" 302 -
+2025-09-16 17:28:29,672 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:29] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:28:29,731 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:28:29,733 [INFO] 127.0.0.1 - - [16/Sep/2025 17:28:29] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:30:04,352 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:04] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-09-16 17:30:04,367 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:04] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-16 17:30:04,391 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:04] "GET /login HTTP/1.1" 200 -
+2025-09-16 17:30:04,471 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:30:04,473 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:04] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:30:04,482 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:04] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-16 17:30:04,517 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:04] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-16 17:30:06,106 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:06] "GET /registro HTTP/1.1" 200 -
+2025-09-16 17:30:06,187 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:30:06,190 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:06] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:30:24,014 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:24] "[32mPOST /registro HTTP/1.1[0m" 302 -
+2025-09-16 17:30:24,022 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:24] "GET /login HTTP/1.1" 200 -
+2025-09-16 17:30:24,134 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:30:24,134 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:24] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:30:24,135 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:24] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-16 17:30:24,184 [INFO] 127.0.0.1 - - [16/Sep/2025 17:30:24] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-16 17:31:08,728 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-16 17:31:08,799 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:08] "GET / HTTP/1.1" 200 -
+2025-09-16 17:31:08,874 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:31:08,876 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:08] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:31:10,269 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:10] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:31:10,345 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:31:10,349 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:10] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:31:16,998 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:16] "[32mPOST /link_request HTTP/1.1[0m" 302 -
+2025-09-16 17:31:17,006 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:17] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:31:17,076 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:31:17,077 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:17] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:31:29,781 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:29] "GET / HTTP/1.1" 200 -
+2025-09-16 17:31:29,855 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:31:29,856 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:29] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:31:35,209 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:35] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-09-16 17:31:35,219 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:35] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-16 17:31:35,227 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:35] "GET /login HTTP/1.1" 200 -
+2025-09-16 17:31:35,308 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:35] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:31:35,309 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:31:35,313 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:35] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-16 17:31:35,357 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:35] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-16 17:31:43,027 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-16 17:31:43,038 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:43] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-16 17:31:43,074 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:43] "GET /perfil HTTP/1.1" 200 -
+2025-09-16 17:31:43,140 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:31:43,141 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:43] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:31:45,229 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:45] "GET /notifications HTTP/1.1" 200 -
+2025-09-16 17:31:45,305 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:31:45,306 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:45] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:31:52,737 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:52] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-09-16 17:31:52,772 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:52] "GET /notifications HTTP/1.1" 200 -
+2025-09-16 17:31:52,835 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:31:52,835 [INFO] 127.0.0.1 - - [16/Sep/2025 17:31:52] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:32:02,209 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:02] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-09-16 17:32:02,220 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:02] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-16 17:32:02,227 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:02] "GET /login HTTP/1.1" 200 -
+2025-09-16 17:32:02,296 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:32:02,297 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:02] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:32:02,298 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:02] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-16 17:32:02,359 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:02] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-16 17:32:08,929 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-16 17:32:08,946 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:08] "GET / HTTP/1.1" 200 -
+2025-09-16 17:32:09,044 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:09] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:32:09,044 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:32:11,384 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:11] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:32:11,432 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:32:11,433 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:11] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:32:16,604 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:16] "[32mPOST /link_request HTTP/1.1[0m" 302 -
+2025-09-16 17:32:16,611 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:16] "GET /link_request HTTP/1.1" 200 -
+2025-09-16 17:32:16,680 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:16] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:32:16,681 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:32:18,720 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:18] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-09-16 17:32:18,730 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:18] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-16 17:32:18,739 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:18] "GET /login HTTP/1.1" 200 -
+2025-09-16 17:32:18,815 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:32:18,816 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:18] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:32:18,817 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:18] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-16 17:32:18,866 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:18] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-16 17:32:26,239 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:26] "POST /login HTTP/1.1" 200 -
+2025-09-16 17:32:28,071 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:28] "GET /login HTTP/1.1" 200 -
+2025-09-16 17:32:28,154 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:32:28,155 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:28] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-16 17:32:28,156 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:28] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:32:28,213 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:28] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-16 17:32:49,924 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:49] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-16 17:32:49,937 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:49] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-16 17:32:49,959 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:49] "GET /perfil HTTP/1.1" 200 -
+2025-09-16 17:32:50,031 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:32:50,034 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:50] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:32:51,674 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:51] "GET /notifications HTTP/1.1" 200 -
+2025-09-16 17:32:51,753 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:32:51,755 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:51] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:32:54,926 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:54] "[35m[1mPOST /request_response HTTP/1.1[0m" 201 -
+2025-09-16 17:32:54,961 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:54] "GET /notifications HTTP/1.1" 200 -
+2025-09-16 17:32:55,030 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:32:55,033 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:55] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:32:57,216 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:57] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-09-16 17:32:57,226 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:57] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-16 17:32:57,233 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:57] "GET /login HTTP/1.1" 200 -
+2025-09-16 17:32:57,312 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:57] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:32:57,312 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:32:57,313 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:57] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-16 17:32:57,367 [INFO] 127.0.0.1 - - [16/Sep/2025 17:32:57] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-16 17:33:04,135 [INFO] 127.0.0.1 - - [16/Sep/2025 17:33:04] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-16 17:33:04,148 [INFO] 127.0.0.1 - - [16/Sep/2025 17:33:04] "GET / HTTP/1.1" 200 -
+2025-09-16 17:33:04,219 [INFO] 127.0.0.1 - - [16/Sep/2025 17:33:04] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-16 17:33:04,220 [INFO] 127.0.0.1 - - [16/Sep/2025 17:33:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-16 17:33:07,477 [INFO] 127.0.0.1 - - [16/Sep/2025 17:33:07] "[35m[1mGET /s_time/20 HTTP/1.1[0m" 500 -
+2025-09-16 17:33:07,551 [INFO] 127.0.0.1 - - [16/Sep/2025 17:33:07] "GET /s_time/20?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-09-16 17:33:07,551 [INFO] 127.0.0.1 - - [16/Sep/2025 17:33:07] "GET /s_time/20?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-09-16 17:33:07,583 [INFO] 127.0.0.1 - - [16/Sep/2025 17:33:07] "GET /s_time/20?__debugger__=yes&cmd=resource&f=console.png&s=wKzSeW9JgnMN3AEKEPEt HTTP/1.1" 200 -
+2025-09-16 17:33:07,591 [INFO] 127.0.0.1 - - [16/Sep/2025 17:33:07] "GET /s_time/20?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-09-17 12:11:48,451 [INFO] 127.0.0.1 - - [17/Sep/2025 12:11:48] "[35m[1mGET /s_time/20 HTTP/1.1[0m" 500 -
+2025-09-17 12:11:48,530 [INFO] 127.0.0.1 - - [17/Sep/2025 12:11:48] "[36mGET /s_time/20?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-09-17 12:11:48,531 [INFO] 127.0.0.1 - - [17/Sep/2025 12:11:48] "[36mGET /s_time/20?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-09-17 12:11:48,552 [INFO] 127.0.0.1 - - [17/Sep/2025 12:11:48] "[36mGET /s_time/20?__debugger__=yes&cmd=resource&f=console.png&s=wKzSeW9JgnMN3AEKEPEt HTTP/1.1[0m" 304 -
+2025-09-17 12:15:24,754 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-09-17 12:15:24,883 [INFO]  * Restarting with stat
+2025-09-17 12:15:25,358 [WARNING]  * Debugger is active!
+2025-09-17 12:15:25,359 [INFO]  * Debugger PIN: 179-359-789
+2025-09-17 12:15:26,375 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-09-17 12:15:26,460 [INFO]  * Restarting with stat
+2025-09-17 12:15:26,908 [WARNING]  * Debugger is active!
+2025-09-17 12:15:26,908 [INFO]  * Debugger PIN: 179-359-789
+2025-09-17 12:15:29,935 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-09-17 12:15:30,020 [INFO]  * Restarting with stat
+2025-09-17 12:15:30,479 [WARNING]  * Debugger is active!
+2025-09-17 12:15:30,480 [INFO]  * Debugger PIN: 179-359-789
+2025-09-17 12:15:34,515 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-09-17 12:15:34,625 [INFO]  * Restarting with stat
+2025-09-17 12:15:35,092 [WARNING]  * Debugger is active!
+2025-09-17 12:15:35,092 [INFO]  * Debugger PIN: 179-359-789
+2025-09-17 12:15:36,108 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-09-17 12:15:36,191 [INFO]  * Restarting with stat
+2025-09-17 12:15:36,648 [WARNING]  * Debugger is active!
+2025-09-17 12:15:36,649 [INFO]  * Debugger PIN: 179-359-789
+2025-09-17 12:15:43,712 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-09-17 12:15:43,820 [INFO]  * Restarting with stat
+2025-09-17 12:15:44,289 [WARNING]  * Debugger is active!
+2025-09-17 12:15:44,289 [INFO]  * Debugger PIN: 179-359-789
+2025-09-17 12:15:54,380 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-09-17 12:15:54,495 [INFO]  * Restarting with stat
+2025-09-17 12:15:54,957 [WARNING]  * Debugger is active!
+2025-09-17 12:15:54,958 [INFO]  * Debugger PIN: 179-359-789
+2025-09-17 12:16:00,000 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-09-17 12:16:00,093 [INFO]  * Restarting with stat
+2025-09-17 12:16:00,557 [WARNING]  * Debugger is active!
+2025-09-17 12:16:00,557 [INFO]  * Debugger PIN: 179-359-789
+2025-09-17 12:16:07,620 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-09-17 12:16:07,728 [INFO]  * Restarting with stat
+2025-09-17 12:16:08,194 [WARNING]  * Debugger is active!
+2025-09-17 12:16:08,194 [INFO]  * Debugger PIN: 179-359-789
+2025-09-17 12:16:22,322 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-09-17 12:16:22,428 [INFO]  * Restarting with stat
+2025-09-17 12:16:22,873 [WARNING]  * Debugger is active!
+2025-09-17 12:16:22,873 [INFO]  * Debugger PIN: 179-359-789
+2025-09-17 12:16:29,932 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-09-17 12:16:30,017 [INFO]  * Restarting with stat
+2025-09-17 12:16:30,490 [WARNING]  * Debugger is active!
+2025-09-17 12:16:30,490 [INFO]  * Debugger PIN: 179-359-789
+2025-09-17 12:17:17,918 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-09-17 12:17:18,039 [INFO]  * Restarting with stat
+2025-09-17 12:27:59,388 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2025-09-17 12:27:59,389 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-17 12:27:59,389 [INFO]  * Restarting with stat
+2025-09-17 12:27:59,851 [WARNING]  * Debugger is active!
+2025-09-17 12:27:59,851 [INFO]  * Debugger PIN: 179-359-789
+2025-09-17 12:28:06,225 [INFO] 127.0.0.1 - - [17/Sep/2025 12:28:06] "[35m[1mGET /s_time/20 HTTP/1.1[0m" 500 -
+2025-09-17 12:28:06,343 [INFO] 127.0.0.1 - - [17/Sep/2025 12:28:06] "[36mGET /s_time/20?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-09-17 12:28:06,344 [INFO] 127.0.0.1 - - [17/Sep/2025 12:28:06] "[36mGET /s_time/20?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-09-17 12:28:06,389 [INFO] 127.0.0.1 - - [17/Sep/2025 12:28:06] "GET /s_time/20?__debugger__=yes&cmd=resource&f=console.png&s=p3uarCHOJR77EqAvLvkq HTTP/1.1" 200 -
+2025-09-17 12:33:59,119 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-09-17 12:33:59,239 [INFO]  * Restarting with stat
+2025-09-17 12:33:59,716 [WARNING]  * Debugger is active!
+2025-09-17 12:33:59,716 [INFO]  * Debugger PIN: 179-359-789
+2025-09-17 12:34:05,770 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-09-17 12:34:05,888 [INFO]  * Restarting with stat
+2025-09-17 12:34:06,349 [WARNING]  * Debugger is active!
+2025-09-17 12:34:06,349 [INFO]  * Debugger PIN: 179-359-789
+2025-09-17 12:34:08,370 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-09-17 12:34:08,459 [INFO]  * Restarting with stat
+2025-09-17 12:34:08,911 [WARNING]  * Debugger is active!
+2025-09-17 12:34:08,912 [INFO]  * Debugger PIN: 179-359-789
+2025-09-17 12:34:12,727 [INFO] 127.0.0.1 - - [17/Sep/2025 12:34:12] "GET /s_time/20 HTTP/1.1" 200 -
+2025-09-17 12:34:12,857 [INFO] 127.0.0.1 - - [17/Sep/2025 12:34:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-17 12:34:12,858 [INFO] 127.0.0.1 - - [17/Sep/2025 12:34:12] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -

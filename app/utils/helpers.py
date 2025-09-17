@@ -1,4 +1,5 @@
 from datetime import timedelta
+from venv import logger
 from app.models import Nivel, Trofeo, Usuario, Estrella, AcumulacionTiempo, Tiempo, NuevaNotificacion, Notificaciones, SolicitudVinculacion, SupervisorEstudiante, Asignatura, RegistroNotas
 from app.services.settings_service import UserSettings
 
@@ -201,7 +202,7 @@ def revisar_nuevas_notificaciones(id):
     session['nueva_notificacion'] = nueva_notificacion.estado
     return
 
-def enviar_notificacion_link_request(sid, uid): # "nombre@email.com" solicita supervisar tu cuenta [aceptar] [rechazar]
+def send_link_request_notification(sid, uid): # "nombre@email.com" solicita supervisar tu cuenta [aceptar] [rechazar]
     
     supervisor = Usuario.query.get_or_404(sid)
     email = supervisor.correo
@@ -239,6 +240,7 @@ def enviar_notificacion_link_request(sid, uid): # "nombre@email.com" solicita su
    
     notificacion_lr = Notificaciones(usuario_id=uid, notificacion=mensaje_html, leida=False)
     nueva_notificacion = NuevaNotificacion.query.filter_by(usuario_id=uid).first()
+    printn(nueva_notificacion)
     nueva_notificacion.estado = True
     
     db.session.add(notificacion_lr)

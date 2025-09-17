@@ -4,6 +4,8 @@
 
 {% block content %}
 
+{% include 'flash_messages.html' %}
+
 <div class="custom-bg-1 custom-text-1 p-4 rounded-4 mb-5">
     <h4 class="mb-4">Link to student account</h4>
     <form method="POST" action="/link_request">

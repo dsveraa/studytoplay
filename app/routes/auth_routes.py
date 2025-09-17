@@ -2,6 +2,7 @@ from flask import render_template, request, redirect, url_for, session, Blueprin
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from app.models import Usuario, Rol, NuevaNotificacion
+from app.services.user_service import UserService
 from app.utils.debugging_utils import printn
 
 from .. import db
@@ -29,13 +30,6 @@ def login():
 
             session.permanent = True
 
-            nueva_notificacion = NuevaNotificacion.query.filter_by(usuario_id=usuario_id).first()
-
-            if not nueva_notificacion:
-                entrada_default = NuevaNotificacion(usuario_id=usuario_id, estado=False)
-                db.session.add(entrada_default)
-                db.session.commit()
-            
             if "supervisor_id" in session:
                 print("supervisor_id existe en session")
             else:
@@ -62,7 +56,7 @@ def registro():
     contrasena = request.form["contrasena"]
     repetir_contrasena = request.form["repetir_contrasena"]
     rol = request.form["role"]
-    printn(rol)
+    
     if contrasena != repetir_contrasena:
         return "Las contraseñas no coinciden, intenta nuevamente."
     
@@ -79,7 +73,12 @@ def registro():
     nuevo_usuario = Usuario(nombre=nombre, correo=email, contrasena=contrasena_hash, rol=rol_obj)
     db.session.add(nuevo_usuario)
     db.session.commit()
-    
+
+    user_id = UserService.get_id_from_email(email)
+    default = NuevaNotificacion(usuario_id=user_id, estado=False)
+    db.session.add(default)
+    db.session.commit()
+
     return redirect(url_for("auth.login"))
     
 

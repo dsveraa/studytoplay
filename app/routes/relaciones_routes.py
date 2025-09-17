@@ -1,9 +1,12 @@
-from flask import render_template, request, session, jsonify, Blueprint
+from flask import flash, redirect, render_template, request, session, jsonify, Blueprint, url_for
 from sqlalchemy import desc
 from sqlalchemy.orm import aliased
 
 from app.models import Usuario, SolicitudVinculacion, SupervisorEstudiante, Notificaciones
-from app.utils.helpers import login_required, supervisor_required, enviar_notificacion_link_request, enviar_notificacion_respuesta_lr
+from app.repositories.user_repository import UserRepository
+from app.services.link_request_service import LinkRequestService
+from app.services.user_service import UserService
+from app.utils.helpers import login_required, supervisor_required, send_link_request_notification, enviar_notificacion_respuesta_lr
 
 from .. import db
 
@@ -106,50 +109,26 @@ def request_response():
     
     return jsonify({'status': 'success', 'response': response}), 201
 
-@relaciones_bp.route('/link_request', methods=['GET', 'POST']) # envía solicitud de vinculación escribiendo datos en tabla solicitud_vinculacion
+@relaciones_bp.route('/link_request')
 @supervisor_required
-def link_request(id=None):
-    if request.method == 'POST':            
-        supervisor_id = session.get('supervisor_id')
-        usuario_estudiante = request.form['email']
-        
-        estudiante_id = db.session.query(Usuario.id).filter_by(correo=usuario_estudiante).scalar()
-
-        if not estudiante_id:
-            return jsonify({'status': 'failed', 'error': f"No students were found with the username '{usuario_estudiante}'"})
-
-        estado_solicitud_vinculacion = (
-            db.session.query(SolicitudVinculacion.estado)
-            .select_from(SolicitudVinculacion)
-            .filter_by(supervisor_id=supervisor_id, estudiante_id=estudiante_id)
-            .order_by(desc(SolicitudVinculacion.fecha_solicitud))
-            .limit(1).scalar()
-            )
-                    
-        relacion_supervisor_estudiante = (
-            db.session.query(SupervisorEstudiante)
-            .filter_by(supervisor_id=supervisor_id, estudiante_id=estudiante_id)
-            .scalar()
-        )
-        
-        if relacion_supervisor_estudiante:
-            return '<h1>This supervisor account is already following the student</h1>'
-
-        if estado_solicitud_vinculacion == 'pendiente':
-            return '<h1>There is a pending link request for this student</h1>'
-            
-        else:
-            solicitud = SolicitudVinculacion(
-                supervisor_id=supervisor_id,
-                estudiante_id=estudiante_id,
-                estado='pendiente'
-            )
-            db.session.add(solicitud)
-            db.session.commit()
-
-            enviar_notificacion_link_request(supervisor_id, estudiante_id)
-
-
-        return jsonify({'response': 'solicitud enviada'})
+def view_link_request():
     return render_template("/s_link_request.html")
 
+@relaciones_bp.route('/link_request', methods=['POST']) # envía solicitud de vinculación escribiendo datos en tabla solicitud_vinculacion
+@supervisor_required
+def send_link_request():
+    supervisor_id = session.get('supervisor_id')
+    email = request.form['email']
+
+    try:
+        UserService.get_from_email(email)
+        student_id = UserRepository.get_id_by_email(email)
+        LinkRequestService.link_request(supervisor_id, student_id)
+        send_link_request_notification(supervisor_id, student_id)
+        flash(f'Link request sent to {email}', 'success')
+        return redirect(url_for('relaciones.send_link_request'))
+    
+    except ValueError as e:
+        flash(f'Operation failed: {str(e)}', 'error')
+        return redirect(url_for('relaciones.send_link_request'))
+        
