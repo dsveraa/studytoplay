@@ -4,17 +4,19 @@
 
 {% block content %}
 
+{% include 'flash_messages.html' %}
+
 <div class="custom-bg-1 custom-text-1 p-4 rounded-4 mb-5">
     <h4 class="mb-4">New user</h4>
     <form action="/registro" method="POST">
         <div class="d-flex gap-3">
             <div class="mb-3 flex-grow-1">
                 <label for="name" class="form-label">Name</label>
-                <input class="form-control" type="text" id="nombre" name="nombre" required>
+                <input class="form-control" type="text" id="nombre" name="nombre" value="{{ nombre }}" required>
             </div>
             <div class="mb-3 flex-grow-1">
                 <label for="email" class="form-label">E-mail</label>
-                <input class="form-control" type="email" id="email" name="email" required>
+                <input class="form-control" type="email" id="email" name="email" value="{{ email }}" required>
             </div>
         </div>
         <div class="d-flex gap-3">
@@ -32,7 +34,8 @@
             <fieldset class="d-flex justify-content-start gap-3 custom-bg-2 rounded-2 px-2 pt-2">
             {% for rol in roles %}
                 <div>
-                    <input type="radio" id="{{rol.id}}" name="role" value="{{rol.id}}" {% if rol.nombre == rol_seleccionado %}checked{% endif %}>
+                    <input type="radio" id="{{rol.id}}" name="role" value="{{rol.id}}" {% if rol.id|string == rol_seleccionado|string %}checked{% endif %}>
+
                     <label for="{{rol.id}}" class="form-label">{{rol.nombre | capitalize }}</label>
                 </div>
                 {% endfor %}

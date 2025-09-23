@@ -37,7 +37,7 @@ def cancel():
 @tiempo_bp.route("/add_time", methods=["GET", "POST"])
 def add_time():
     if "usuario_id" not in session:
-        return redirect(url_for("auth.login"))
+        return redirect(url_for("auth.login_view"))
     
     usuario_id = session.get("usuario_id")
 
@@ -96,7 +96,7 @@ def add_time():
 @tiempo_bp.route("/use_time", methods=["GET", "POST"])
 def use_time():
     if "usuario_id" not in session:
-        return redirect(url_for("auth.login"))
+        return redirect(url_for("auth.login_view"))
     
     usuario_id = session.get("usuario_id")
     username = session.get("usuario_nombre")
@@ -148,7 +148,7 @@ def use_time():
 @tiempo_bp.route("/get_remaining_time")
 def get_remaining_time():
     if "usuario_id" not in session:
-        return redirect(url_for("auth.login"))
+        return redirect(url_for("auth.login_view"))
     
     usuario_id = session.get("usuario_id")
     tiempo = Tiempo.query.filter_by(usuario_id=usuario_id).first()

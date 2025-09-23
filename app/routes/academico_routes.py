@@ -51,7 +51,7 @@ def edit_record(id):
 @academico_bp.route("/records/<activity_id>")
 def records(activity_id=None):
     if "usuario_id" not in session:
-        return redirect(url_for("auth.login"))
+        return redirect(url_for("auth.login_view"))
     
     usuario_id = session.get("usuario_id")
     asignaturas_obj = Asignatura.query.filter_by(usuario_id=usuario_id).all()

@@ -23,7 +23,7 @@ def home():
     from app.models import Settings
 
     if "usuario_id" not in session:
-        return redirect(url_for("auth.login"))
+        return redirect(url_for("auth.login_view"))
     
     usuario_id = session.get('usuario_id')
     printn(usuario_id)
@@ -112,7 +112,7 @@ def settings(id):
 @core_bp.route("/perfil")
 def perfil():
     if "usuario_id" not in session:
-        return redirect(url_for("auth.login"))
+        return redirect(url_for("auth.login_view"))
     
     usuario_id = session["usuario_id"]
     usuario_nombre = session["usuario_nombre"]
