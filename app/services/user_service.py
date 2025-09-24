@@ -1,3 +1,4 @@
+from flask import session
 from app.models.users_model import Rol
 from app.repositories.user_repository import UserRepository
 
@@ -25,4 +26,9 @@ class UserService:
     def get_all_roles():
         role_obj = Rol.query.order_by(Rol.id).all()
         return [{'id': role.id, 'nombre': role.nombre} for role in role_obj]
+    
+    @staticmethod
+    def get_id_from_session():
+        return session['usuario_id']
+    
     

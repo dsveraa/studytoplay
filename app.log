@@ -35896,3 +35896,588 @@ werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'relaci
 2025-09-23 20:24:04,651 [INFO] 127.0.0.1 - - [23/Sep/2025 20:24:04] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
 2025-09-23 20:24:04,652 [INFO] 127.0.0.1 - - [23/Sep/2025 20:24:04] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
 2025-09-23 20:24:04,696 [INFO] 127.0.0.1 - - [23/Sep/2025 20:24:04] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-23 20:26:04,865 [INFO] 127.0.0.1 - - [23/Sep/2025 20:26:04] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-23 20:26:04,872 [INFO] 127.0.0.1 - - [23/Sep/2025 20:26:04] "GET /login HTTP/1.1" 200 -
+2025-09-23 20:26:04,895 [INFO] 127.0.0.1 - - [23/Sep/2025 20:26:04] "GET /static/js/global.js HTTP/1.1" 200 -
+2025-09-23 20:26:04,896 [INFO] 127.0.0.1 - - [23/Sep/2025 20:26:04] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:26:04,897 [INFO] 127.0.0.1 - - [23/Sep/2025 20:26:04] "GET /static/css/login.css HTTP/1.1" 200 -
+2025-09-23 20:26:05,015 [INFO] 127.0.0.1 - - [23/Sep/2025 20:26:05] "GET /static/img/stp_login.webp HTTP/1.1" 200 -
+2025-09-23 20:28:51,237 [INFO] 127.0.0.1 - - [23/Sep/2025 20:28:51] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-09-23 20:28:51,248 [INFO] 127.0.0.1 - - [23/Sep/2025 20:28:51] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-23 20:28:51,256 [INFO] 127.0.0.1 - - [23/Sep/2025 20:28:51] "GET /login HTTP/1.1" 200 -
+2025-09-23 20:28:51,313 [INFO] 127.0.0.1 - - [23/Sep/2025 20:28:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:28:51,321 [INFO] 127.0.0.1 - - [23/Sep/2025 20:28:51] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:28:51,321 [INFO] 127.0.0.1 - - [23/Sep/2025 20:28:51] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-23 20:28:51,355 [INFO] 127.0.0.1 - - [23/Sep/2025 20:28:51] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-23 20:28:52,603 [INFO] 127.0.0.1 - - [23/Sep/2025 20:28:52] "[31m[1mGET /notifications HTTP/1.1[0m" 401 -
+2025-09-23 20:28:52,677 [INFO] 127.0.0.1 - - [23/Sep/2025 20:28:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-23 20:29:09,256 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:29:10,563 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:10] "[32mGET /use_time HTTP/1.1[0m" 302 -
+2025-09-23 20:29:10,576 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:10] "GET /login HTTP/1.1" 200 -
+2025-09-23 20:29:10,655 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:29:10,655 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:10] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:29:10,658 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:10] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-23 20:29:10,722 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:10] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-23 20:29:12,017 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:12] "[32mGET /add_time HTTP/1.1[0m" 302 -
+2025-09-23 20:29:12,027 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:12] "GET /login HTTP/1.1" 200 -
+2025-09-23 20:29:12,070 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:12] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:29:12,070 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:29:12,072 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:12] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-23 20:29:12,111 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:12] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-23 20:29:13,490 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:13] "[32mGET /records HTTP/1.1[0m" 302 -
+2025-09-23 20:29:13,501 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:13] "GET /login HTTP/1.1" 200 -
+2025-09-23 20:29:13,581 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:29:13,585 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:13] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:29:13,585 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:13] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-23 20:29:13,638 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:13] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-23 20:29:14,936 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:14] "[32mGET /perfil HTTP/1.1[0m" 302 -
+2025-09-23 20:29:14,947 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:14] "GET /login HTTP/1.1" 200 -
+2025-09-23 20:29:15,006 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:15] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:29:15,007 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:29:15,008 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:15] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-23 20:29:15,065 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:15] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-23 20:29:15,169 [INFO] 127.0.0.1 - - [23/Sep/2025 20:29:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:22,971 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:22] "POST /login HTTP/1.1" 200 -
+2025-09-23 20:30:23,069 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:23] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:23,070 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:23] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:23,071 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:23,113 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:23] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-23 20:30:23,253 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:28,581 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-23 20:30:28,619 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:28] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-23 20:30:28,663 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:28] "GET /perfil HTTP/1.1" 200 -
+2025-09-23 20:30:28,763 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:28,764 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:28] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:30,692 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:30] "GET /records HTTP/1.1" 200 -
+2025-09-23 20:30:30,772 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:30,773 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:30] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:31,701 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:31] "GET /add_time HTTP/1.1" 200 -
+2025-09-23 20:30:31,775 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:31] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:31,776 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:31,779 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:31] "GET /static/js/timerAdd.js HTTP/1.1" 200 -
+2025-09-23 20:30:31,838 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:31] "GET /get_time HTTP/1.1" 200 -
+2025-09-23 20:30:33,230 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:33] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-09-23 20:30:33,248 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:33] "GET /use_time HTTP/1.1" 200 -
+2025-09-23 20:30:33,266 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:33] "GET /perfil HTTP/1.1" 200 -
+2025-09-23 20:30:33,322 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:33,325 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:33] "GET /static/js/timerUse.js HTTP/1.1" 200 -
+2025-09-23 20:30:33,326 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:33] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:33,399 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:33] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-09-23 20:30:35,096 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:35] "GET /notifications HTTP/1.1" 200 -
+2025-09-23 20:30:35,175 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:35,176 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:35] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:39,706 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:39] "GET /perfil HTTP/1.1" 200 -
+2025-09-23 20:30:39,822 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:39,823 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:39] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:40,909 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:40] "GET /notifications HTTP/1.1" 200 -
+2025-09-23 20:30:40,988 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:40,989 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:40] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:41,740 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:41] "GET /perfil HTTP/1.1" 200 -
+2025-09-23 20:30:41,788 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:41,789 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:41] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:44,053 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:44] "GET /records HTTP/1.1" 200 -
+2025-09-23 20:30:44,109 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:44,111 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:44] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:44,956 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:44] "GET /add_time HTTP/1.1" 200 -
+2025-09-23 20:30:45,010 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:45] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:45,011 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:45,024 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:45] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:45,167 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:45] "GET /get_time HTTP/1.1" 200 -
+2025-09-23 20:30:45,239 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:45,829 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:45] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-09-23 20:30:45,837 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:45] "GET /perfil HTTP/1.1" 200 -
+2025-09-23 20:30:45,851 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:45] "GET /perfil HTTP/1.1" 200 -
+2025-09-23 20:30:45,894 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:45,895 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:45] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:47,203 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:47] "GET /add_time HTTP/1.1" 200 -
+2025-09-23 20:30:47,281 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:47,283 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:47] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:47,284 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:47] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:47,339 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:47] "GET /get_time HTTP/1.1" 200 -
+2025-09-23 20:30:52,390 [INFO] Click en: "Cancel", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-09-23 20:30:52,390 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:52] "POST /log_click HTTP/1.1" 200 -
+2025-09-23 20:30:52,392 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:52] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-09-23 20:30:52,410 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:52] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-09-23 20:30:52,476 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:52] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-09-23 20:30:52,483 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:52] "GET /perfil HTTP/1.1" 200 -
+2025-09-23 20:30:52,501 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:52] "GET /perfil HTTP/1.1" 200 -
+2025-09-23 20:30:52,551 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:52,552 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:52] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:30:54,828 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:54] "GET /records HTTP/1.1" 200 -
+2025-09-23 20:30:54,897 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:30:54,898 [INFO] 127.0.0.1 - - [23/Sep/2025 20:30:54] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:31:04,203 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:04] "GET /add_time HTTP/1.1" 200 -
+2025-09-23 20:31:04,276 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:31:04,276 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:04] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:31:04,279 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:04] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-09-23 20:31:04,342 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:04] "GET /get_time HTTP/1.1" 200 -
+2025-09-23 20:31:06,219 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:06] "GET /use_time HTTP/1.1" 200 -
+2025-09-23 20:31:06,226 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:06] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-09-23 20:31:06,296 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:06] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:31:06,297 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:31:06,301 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:06] "[36mGET /static/js/timerUse.js HTTP/1.1[0m" 304 -
+2025-09-23 20:31:06,338 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:06] "GET /perfil HTTP/1.1" 200 -
+2025-09-23 20:31:06,346 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:06] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-09-23 20:31:07,683 [INFO] Click en: "Start countdown", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-09-23 20:31:07,684 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:07] "POST /log_click HTTP/1.1" 200 -
+2025-09-23 20:31:07,689 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:07] "[32mPOST /switch_status/playing HTTP/1.1[0m" 308 -
+2025-09-23 20:31:07,702 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:07] "POST /switch_status/playing/ HTTP/1.1" 200 -
+2025-09-23 20:31:10,801 [INFO] Click en: "Stop", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-09-23 20:31:10,801 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:10] "POST /log_click HTTP/1.1" 200 -
+2025-09-23 20:31:10,814 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:10] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-09-23 20:31:10,835 [INFO] 127.0.0.1 - - [23/Sep/2025 20:31:10] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-09-23 20:32:13,462 [INFO] Click en: "Stop", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-09-23 20:32:13,462 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:13] "POST /log_click HTTP/1.1" 200 -
+2025-09-23 20:32:13,474 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:13] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-09-23 20:32:13,634 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:13] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-09-23 20:32:16,833 [INFO] Último uso registrado:
+2025-09-23 20:32:16,834 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:16] "POST /use_time HTTP/1.1" 200 -
+2025-09-23 20:32:16,907 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:16] "GET /perfil HTTP/1.1" 200 -
+2025-09-23 20:32:16,994 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:32:16,994 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:16] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:32:18,929 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:18] "GET /use_time HTTP/1.1" 200 -
+2025-09-23 20:32:19,016 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:32:19,017 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:19] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:32:19,021 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:19] "[36mGET /static/js/timerUse.js HTTP/1.1[0m" 304 -
+2025-09-23 20:32:19,058 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:19] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-09-23 20:32:19,208 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:32:33,040 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:33] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-09-23 20:32:33,049 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:33] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-23 20:32:33,064 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:33] "GET /login HTTP/1.1" 200 -
+2025-09-23 20:32:33,149 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:32:33,150 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:33] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:32:33,156 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:33] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-23 20:32:33,196 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:33] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-23 20:32:38,503 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-23 20:32:38,523 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:38] "GET / HTTP/1.1" 200 -
+2025-09-23 20:32:38,625 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:32:38,626 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:38] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:32:42,237 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:42] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:32:42,253 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:42] "GET / HTTP/1.1" 200 -
+2025-09-23 20:32:42,325 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:32:42,326 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:42] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:32:59,556 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:59] "GET /settings/20 HTTP/1.1" 200 -
+2025-09-23 20:32:59,653 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:32:59,656 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:59] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:32:59,657 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:59] "[36mGET /static/js/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-09-23 20:32:59,658 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:59] "[36mGET /static/js/settings_handling.js HTTP/1.1[0m" 304 -
+2025-09-23 20:32:59,691 [INFO] 127.0.0.1 - - [23/Sep/2025 20:32:59] "PUT /country/20/1 HTTP/1.1" 200 -
+2025-09-23 20:33:46,160 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-23 20:33:46,287 [INFO]  * Restarting with stat
+2025-09-23 20:33:46,752 [WARNING]  * Debugger is active!
+2025-09-23 20:33:46,753 [INFO]  * Debugger PIN: 114-472-365
+2025-09-23 20:33:48,554 [INFO] 127.0.0.1 - - [23/Sep/2025 20:33:48] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:33:48,616 [INFO] 127.0.0.1 - - [23/Sep/2025 20:33:48] "GET / HTTP/1.1" 200 -
+2025-09-23 20:33:48,755 [INFO] 127.0.0.1 - - [23/Sep/2025 20:33:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:33:48,755 [INFO] 127.0.0.1 - - [23/Sep/2025 20:33:48] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:34:33,361 [INFO] 127.0.0.1 - - [23/Sep/2025 20:34:33] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:34:33,380 [INFO] 127.0.0.1 - - [23/Sep/2025 20:34:33] "GET / HTTP/1.1" 200 -
+2025-09-23 20:34:33,440 [INFO] 127.0.0.1 - - [23/Sep/2025 20:34:33] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:34:33,446 [INFO] 127.0.0.1 - - [23/Sep/2025 20:34:33] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:34:52,133 [INFO] 127.0.0.1 - - [23/Sep/2025 20:34:52] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:34:52,151 [INFO] 127.0.0.1 - - [23/Sep/2025 20:34:52] "GET / HTTP/1.1" 200 -
+2025-09-23 20:34:52,226 [INFO] 127.0.0.1 - - [23/Sep/2025 20:34:52] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:34:52,227 [INFO] 127.0.0.1 - - [23/Sep/2025 20:34:52] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:35:08,887 [INFO] 127.0.0.1 - - [23/Sep/2025 20:35:08] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:35:08,902 [INFO] 127.0.0.1 - - [23/Sep/2025 20:35:08] "GET / HTTP/1.1" 200 -
+2025-09-23 20:35:08,973 [INFO] 127.0.0.1 - - [23/Sep/2025 20:35:08] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:35:08,974 [INFO] 127.0.0.1 - - [23/Sep/2025 20:35:08] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:36:05,398 [INFO] 127.0.0.1 - - [23/Sep/2025 20:36:05] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:36:05,411 [INFO] 127.0.0.1 - - [23/Sep/2025 20:36:05] "GET / HTTP/1.1" 200 -
+2025-09-23 20:36:05,482 [INFO] 127.0.0.1 - - [23/Sep/2025 20:36:05] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:36:05,484 [INFO] 127.0.0.1 - - [23/Sep/2025 20:36:05] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:36:33,023 [INFO] 127.0.0.1 - - [23/Sep/2025 20:36:33] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:36:33,038 [INFO] 127.0.0.1 - - [23/Sep/2025 20:36:33] "GET / HTTP/1.1" 200 -
+2025-09-23 20:36:33,102 [INFO] 127.0.0.1 - - [23/Sep/2025 20:36:33] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:36:33,103 [INFO] 127.0.0.1 - - [23/Sep/2025 20:36:33] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:36:42,691 [INFO] 127.0.0.1 - - [23/Sep/2025 20:36:42] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:36:42,707 [INFO] 127.0.0.1 - - [23/Sep/2025 20:36:42] "GET / HTTP/1.1" 200 -
+2025-09-23 20:36:42,782 [INFO] 127.0.0.1 - - [23/Sep/2025 20:36:42] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:36:42,784 [INFO] 127.0.0.1 - - [23/Sep/2025 20:36:42] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:37:01,943 [INFO] 127.0.0.1 - - [23/Sep/2025 20:37:01] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:37:01,959 [INFO] 127.0.0.1 - - [23/Sep/2025 20:37:01] "GET / HTTP/1.1" 200 -
+2025-09-23 20:37:02,025 [INFO] 127.0.0.1 - - [23/Sep/2025 20:37:02] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:37:02,026 [INFO] 127.0.0.1 - - [23/Sep/2025 20:37:02] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:37:02,150 [INFO] 127.0.0.1 - - [23/Sep/2025 20:37:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:38:01,801 [INFO] 127.0.0.1 - - [23/Sep/2025 20:38:01] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:38:01,821 [INFO] 127.0.0.1 - - [23/Sep/2025 20:38:01] "GET / HTTP/1.1" 200 -
+2025-09-23 20:38:01,882 [INFO] 127.0.0.1 - - [23/Sep/2025 20:38:01] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:38:01,883 [INFO] 127.0.0.1 - - [23/Sep/2025 20:38:01] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:38:33,984 [INFO] 127.0.0.1 - - [23/Sep/2025 20:38:33] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:38:33,998 [INFO] 127.0.0.1 - - [23/Sep/2025 20:38:33] "GET / HTTP/1.1" 200 -
+2025-09-23 20:38:34,061 [INFO] 127.0.0.1 - - [23/Sep/2025 20:38:34] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:38:34,066 [INFO] 127.0.0.1 - - [23/Sep/2025 20:38:34] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:38:34,251 [INFO] 127.0.0.1 - - [23/Sep/2025 20:38:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:38:51,168 [INFO] 127.0.0.1 - - [23/Sep/2025 20:38:51] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:38:51,186 [INFO] 127.0.0.1 - - [23/Sep/2025 20:38:51] "GET / HTTP/1.1" 200 -
+2025-09-23 20:38:51,272 [INFO] 127.0.0.1 - - [23/Sep/2025 20:38:51] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:38:51,273 [INFO] 127.0.0.1 - - [23/Sep/2025 20:38:51] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:38:59,979 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.84:5000
+2025-09-23 20:38:59,979 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-23 20:38:59,979 [INFO]  * Restarting with stat
+2025-09-23 20:39:00,433 [WARNING]  * Debugger is active!
+2025-09-23 20:39:00,433 [INFO]  * Debugger PIN: 114-472-365
+2025-09-23 20:39:01,856 [INFO] 127.0.0.1 - - [23/Sep/2025 20:39:01] "GET / HTTP/1.1" 200 -
+2025-09-23 20:39:01,948 [INFO] 127.0.0.1 - - [23/Sep/2025 20:39:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:39:01,949 [INFO] 127.0.0.1 - - [23/Sep/2025 20:39:01] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:39:03,610 [INFO] 127.0.0.1 - - [23/Sep/2025 20:39:03] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:39:03,626 [INFO] 127.0.0.1 - - [23/Sep/2025 20:39:03] "GET / HTTP/1.1" 200 -
+2025-09-23 20:39:03,694 [INFO] 127.0.0.1 - - [23/Sep/2025 20:39:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:39:03,695 [INFO] 127.0.0.1 - - [23/Sep/2025 20:39:03] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:40:42,340 [INFO] 127.0.0.1 - - [23/Sep/2025 20:40:42] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:40:42,354 [INFO] 127.0.0.1 - - [23/Sep/2025 20:40:42] "GET / HTTP/1.1" 200 -
+2025-09-23 20:40:42,425 [INFO] 127.0.0.1 - - [23/Sep/2025 20:40:42] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:40:42,430 [INFO] 127.0.0.1 - - [23/Sep/2025 20:40:42] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:41:10,643 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-23 20:41:10,761 [INFO]  * Restarting with stat
+2025-09-23 20:41:11,226 [WARNING]  * Debugger is active!
+2025-09-23 20:41:11,226 [INFO]  * Debugger PIN: 114-472-365
+2025-09-23 20:41:12,534 [INFO] 127.0.0.1 - - [23/Sep/2025 20:41:12] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:41:12,595 [INFO] 127.0.0.1 - - [23/Sep/2025 20:41:12] "GET / HTTP/1.1" 200 -
+2025-09-23 20:41:12,698 [INFO] 127.0.0.1 - - [23/Sep/2025 20:41:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:41:12,699 [INFO] 127.0.0.1 - - [23/Sep/2025 20:41:12] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:41:35,995 [INFO] 127.0.0.1 - - [23/Sep/2025 20:41:35] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:41:36,018 [INFO] 127.0.0.1 - - [23/Sep/2025 20:41:36] "GET / HTTP/1.1" 200 -
+2025-09-23 20:41:36,082 [INFO] 127.0.0.1 - - [23/Sep/2025 20:41:36] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:41:36,087 [INFO] 127.0.0.1 - - [23/Sep/2025 20:41:36] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:41:47,539 [INFO] 127.0.0.1 - - [23/Sep/2025 20:41:47] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:41:47,555 [INFO] 127.0.0.1 - - [23/Sep/2025 20:41:47] "GET / HTTP/1.1" 200 -
+2025-09-23 20:41:47,626 [INFO] 127.0.0.1 - - [23/Sep/2025 20:41:47] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:41:47,627 [INFO] 127.0.0.1 - - [23/Sep/2025 20:41:47] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:42:00,875 [INFO] 127.0.0.1 - - [23/Sep/2025 20:42:00] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:42:00,891 [INFO] 127.0.0.1 - - [23/Sep/2025 20:42:00] "GET / HTTP/1.1" 200 -
+2025-09-23 20:42:00,957 [INFO] 127.0.0.1 - - [23/Sep/2025 20:42:00] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:42:00,958 [INFO] 127.0.0.1 - - [23/Sep/2025 20:42:00] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:42:18,847 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-23 20:42:18,968 [INFO]  * Restarting with stat
+2025-09-23 20:42:19,444 [WARNING]  * Debugger is active!
+2025-09-23 20:42:19,444 [INFO]  * Debugger PIN: 114-472-365
+2025-09-23 20:42:20,460 [INFO] 127.0.0.1 - - [23/Sep/2025 20:42:20] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:42:20,523 [INFO] 127.0.0.1 - - [23/Sep/2025 20:42:20] "GET / HTTP/1.1" 200 -
+2025-09-23 20:42:20,642 [INFO] 127.0.0.1 - - [23/Sep/2025 20:42:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:42:20,642 [INFO] 127.0.0.1 - - [23/Sep/2025 20:42:20] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:42:31,566 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-23 20:42:31,687 [INFO]  * Restarting with stat
+2025-09-23 20:42:32,144 [WARNING]  * Debugger is active!
+2025-09-23 20:42:32,144 [INFO]  * Debugger PIN: 114-472-365
+2025-09-23 20:42:32,692 [INFO] 127.0.0.1 - - [23/Sep/2025 20:42:32] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:42:32,752 [INFO] 127.0.0.1 - - [23/Sep/2025 20:42:32] "GET / HTTP/1.1" 200 -
+2025-09-23 20:42:32,886 [INFO] 127.0.0.1 - - [23/Sep/2025 20:42:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:42:32,887 [INFO] 127.0.0.1 - - [23/Sep/2025 20:42:32] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:43:02,236 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:02] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:43:02,252 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:02] "GET / HTTP/1.1" 200 -
+2025-09-23 20:43:02,310 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:02] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:43:02,311 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:02] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:43:08,753 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:08] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:43:08,767 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:08] "GET / HTTP/1.1" 200 -
+2025-09-23 20:43:08,819 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:08] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:43:08,823 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:08] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:43:14,042 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:14] "GET / HTTP/1.1" 200 -
+2025-09-23 20:43:14,108 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:14] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:43:14,109 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:43:15,407 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:15] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:43:15,421 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:15] "GET / HTTP/1.1" 200 -
+2025-09-23 20:43:15,497 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:43:15,498 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:15] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:43:26,562 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:26] "GET / HTTP/1.1" 200 -
+2025-09-23 20:43:26,642 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:26] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:43:26,643 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:26] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:43:28,014 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:28] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:43:28,031 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:28] "GET / HTTP/1.1" 200 -
+2025-09-23 20:43:28,115 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:43:28,116 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:28] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:43:45,823 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-23 20:43:45,942 [INFO]  * Restarting with stat
+2025-09-23 20:43:46,416 [WARNING]  * Debugger is active!
+2025-09-23 20:43:46,416 [INFO]  * Debugger PIN: 114-472-365
+2025-09-23 20:43:47,225 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:47] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:43:47,287 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:47] "GET / HTTP/1.1" 200 -
+2025-09-23 20:43:47,407 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:43:47,408 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:47] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:43:47,433 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-09-23 20:43:47,534 [INFO]  * Restarting with stat
+2025-09-23 20:43:48,013 [WARNING]  * Debugger is active!
+2025-09-23 20:43:48,014 [INFO]  * Debugger PIN: 114-472-365
+2025-09-23 20:43:51,398 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:51] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:43:51,458 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:51] "GET / HTTP/1.1" 200 -
+2025-09-23 20:43:51,586 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-23 20:43:51,587 [INFO] 127.0.0.1 - - [23/Sep/2025 20:43:51] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-23 20:44:02,381 [INFO] 127.0.0.1 - - [23/Sep/2025 20:44:02] "[32mGET /grade_incentive/warning/20 HTTP/1.1[0m" 302 -
+2025-09-23 20:44:02,396 [INFO] 127.0.0.1 - - [23/Sep/2025 20:44:02] "GET / HTTP/1.1" 200 -
+2025-09-23 20:44:02,467 [INFO] 127.0.0.1 - - [23/Sep/2025 20:44:02] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-23 20:44:02,468 [INFO] 127.0.0.1 - - [23/Sep/2025 20:44:02] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-24 12:26:53,339 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 12:26:53,461 [INFO]  * Restarting with stat
+2025-09-24 12:26:53,924 [WARNING]  * Debugger is active!
+2025-09-24 12:26:53,925 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 12:27:01,998 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 12:27:02,101 [INFO]  * Restarting with stat
+2025-09-24 12:36:11,591 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.84:5000
+2025-09-24 12:36:11,591 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-24 12:36:11,591 [INFO]  * Restarting with stat
+2025-09-24 12:36:12,036 [WARNING]  * Debugger is active!
+2025-09-24 12:36:12,037 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 12:37:17,299 [INFO] 127.0.0.1 - - [24/Sep/2025 12:37:17] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-24 12:37:29,425 [INFO] 127.0.0.1 - - [24/Sep/2025 12:37:29] "[35m[1mGET /subjects HTTP/1.1[0m" 500 -
+2025-09-24 12:38:02,298 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:02] "[33mGET /static/logo.png HTTP/1.1[0m" 404 -
+2025-09-24 12:38:03,933 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:03] "[33mGET /static/logo.png HTTP/1.1[0m" 404 -
+2025-09-24 12:38:03,934 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:03] "[33mGET /static/trofeo.png HTTP/1.1[0m" 404 -
+2025-09-24 12:38:03,940 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:03] "[33mGET /static/template_star.png HTTP/1.1[0m" 404 -
+2025-09-24 12:38:10,086 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:10] "[33mGET /static/logo.png HTTP/1.1[0m" 404 -
+2025-09-24 12:38:12,590 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:12] "[33mGET /static/trofeo.png HTTP/1.1[0m" 404 -
+2025-09-24 12:38:12,590 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:12] "[33mGET /static/logo.png HTTP/1.1[0m" 404 -
+2025-09-24 12:38:12,591 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:12] "[33mGET /static/template_star.png HTTP/1.1[0m" 404 -
+2025-09-24 12:38:25,368 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:25] "[33mGET /static/logo.png HTTP/1.1[0m" 404 -
+2025-09-24 12:38:29,176 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:29] "[33mGET /static/trofeo.png HTTP/1.1[0m" 404 -
+2025-09-24 12:38:29,177 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:29] "[33mGET /static/logo.png HTTP/1.1[0m" 404 -
+2025-09-24 12:38:29,178 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:29] "[33mGET /static/template_star.png HTTP/1.1[0m" 404 -
+2025-09-24 12:38:46,467 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:46] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-24 12:38:46,508 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:46] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-24 12:38:46,560 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:46] "GET /perfil HTTP/1.1" 200 -
+2025-09-24 12:38:46,858 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:46] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-24 12:38:46,859 [INFO] 127.0.0.1 - - [24/Sep/2025 12:38:46] "GET /static/js/global.js HTTP/1.1" 200 -
+2025-09-24 12:39:21,329 [INFO] 127.0.0.1 - - [24/Sep/2025 12:39:21] "GET /subjects HTTP/1.1" 200 -
+2025-09-24 12:50:40,029 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 12:50:40,150 [INFO]  * Restarting with stat
+2025-09-24 12:50:40,605 [WARNING]  * Debugger is active!
+2025-09-24 12:50:40,605 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 12:50:57,762 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/subject_repository.py', reloading
+2025-09-24 12:50:57,884 [INFO]  * Restarting with stat
+2025-09-24 12:53:22,687 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.84:5000
+2025-09-24 12:53:22,687 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-24 12:53:22,687 [INFO]  * Restarting with stat
+2025-09-24 12:53:23,157 [WARNING]  * Debugger is active!
+2025-09-24 12:53:23,158 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 12:53:24,291 [INFO] 127.0.0.1 - - [24/Sep/2025 12:53:24] "GET /subjects HTTP/1.1" 200 -
+2025-09-24 12:53:37,289 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/subject_repository.py', reloading
+2025-09-24 12:53:37,400 [INFO]  * Restarting with stat
+2025-09-24 13:08:40,213 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.84:5000
+2025-09-24 13:08:40,213 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-24 13:08:40,214 [INFO]  * Restarting with stat
+2025-09-24 13:08:40,666 [WARNING]  * Debugger is active!
+2025-09-24 13:08:40,667 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:08:41,693 [INFO] 127.0.0.1 - - [24/Sep/2025 13:08:41] "[31m[1mPOST /subjects HTTP/1.1[0m" 400 -
+2025-09-24 13:09:25,203 [INFO] 127.0.0.1 - - [24/Sep/2025 13:09:25] "[35m[1mPOST /subjects HTTP/1.1[0m" 201 -
+2025-09-24 13:10:23,612 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:10:23,721 [INFO]  * Restarting with stat
+2025-09-24 13:26:44,767 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.84:5000
+2025-09-24 13:26:44,767 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-24 13:26:44,767 [INFO]  * Restarting with stat
+2025-09-24 13:26:45,233 [WARNING]  * Debugger is active!
+2025-09-24 13:26:45,234 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:26:50,036 [INFO] 127.0.0.1 - - [24/Sep/2025 13:26:50] "[35m[1mPOST /subjects HTTP/1.1[0m" 500 -
+2025-09-24 13:26:50,283 [INFO] 127.0.0.1 - - [24/Sep/2025 13:26:50] "GET /subjects?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-09-24 13:26:50,289 [INFO] 127.0.0.1 - - [24/Sep/2025 13:26:50] "GET /subjects?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-09-24 13:26:50,304 [INFO] 127.0.0.1 - - [24/Sep/2025 13:26:50] "GET /subjects?__debugger__=yes&cmd=resource&f=console.png&s=YOOpp0xdusVM4VFwl1kY HTTP/1.1" 200 -
+2025-09-24 13:27:37,712 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:27:37,848 [INFO]  * Restarting with stat
+2025-09-24 13:28:06,228 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.84:5000
+2025-09-24 13:28:06,228 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-24 13:28:06,229 [INFO]  * Restarting with stat
+2025-09-24 13:28:06,681 [WARNING]  * Debugger is active!
+2025-09-24 13:28:06,682 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:28:08,843 [INFO] 127.0.0.1 - - [24/Sep/2025 13:28:08] "[35m[1mPOST /subjects HTTP/1.1[0m" 201 -
+2025-09-24 13:32:19,030 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:32:19,144 [INFO]  * Restarting with stat
+2025-09-24 13:32:19,593 [WARNING]  * Debugger is active!
+2025-09-24 13:32:19,594 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:32:24,638 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:32:24,745 [INFO]  * Restarting with stat
+2025-09-24 13:32:25,218 [WARNING]  * Debugger is active!
+2025-09-24 13:32:25,218 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:32:41,364 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:32:41,467 [INFO]  * Restarting with stat
+2025-09-24 13:32:41,920 [WARNING]  * Debugger is active!
+2025-09-24 13:32:41,921 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:32:47,973 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:32:48,075 [INFO]  * Restarting with stat
+2025-09-24 13:32:48,519 [WARNING]  * Debugger is active!
+2025-09-24 13:32:48,519 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:32:50,542 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:32:50,629 [INFO]  * Restarting with stat
+2025-09-24 13:32:51,090 [WARNING]  * Debugger is active!
+2025-09-24 13:32:51,090 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:32:52,108 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:32:52,193 [INFO]  * Restarting with stat
+2025-09-24 13:32:52,641 [WARNING]  * Debugger is active!
+2025-09-24 13:32:52,641 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:32:56,677 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:32:56,776 [INFO]  * Restarting with stat
+2025-09-24 13:32:57,242 [WARNING]  * Debugger is active!
+2025-09-24 13:32:57,242 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:32:59,265 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:32:59,353 [INFO]  * Restarting with stat
+2025-09-24 13:32:59,824 [WARNING]  * Debugger is active!
+2025-09-24 13:32:59,824 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:34:10,475 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:34:10,587 [INFO]  * Restarting with stat
+2025-09-24 13:34:11,039 [WARNING]  * Debugger is active!
+2025-09-24 13:34:11,039 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:34:39,299 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:34:39,405 [INFO]  * Restarting with stat
+2025-09-24 13:34:39,872 [WARNING]  * Debugger is active!
+2025-09-24 13:34:39,873 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:34:46,936 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:34:47,041 [INFO]  * Restarting with stat
+2025-09-24 13:34:47,494 [WARNING]  * Debugger is active!
+2025-09-24 13:34:47,495 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:34:48,511 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:34:48,601 [INFO]  * Restarting with stat
+2025-09-24 13:34:49,064 [WARNING]  * Debugger is active!
+2025-09-24 13:34:49,064 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:35:21,358 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/subject_service.py', reloading
+2025-09-24 13:35:21,464 [INFO]  * Restarting with stat
+2025-09-24 13:47:47,207 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.84:5000
+2025-09-24 13:47:47,207 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-24 13:47:47,207 [INFO]  * Restarting with stat
+2025-09-24 13:47:47,670 [WARNING]  * Debugger is active!
+2025-09-24 13:47:47,670 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:48:36,114 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:48:36,217 [INFO]  * Restarting with stat
+2025-09-24 13:48:36,688 [WARNING]  * Debugger is active!
+2025-09-24 13:48:36,688 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:48:38,711 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:48:38,802 [INFO]  * Restarting with stat
+2025-09-24 13:48:39,267 [WARNING]  * Debugger is active!
+2025-09-24 13:48:39,268 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:48:44,313 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:48:44,421 [INFO]  * Restarting with stat
+2025-09-24 13:48:44,893 [WARNING]  * Debugger is active!
+2025-09-24 13:48:44,893 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:49:46,461 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:49:46,576 [INFO]  * Restarting with stat
+2025-09-24 13:49:47,027 [WARNING]  * Debugger is active!
+2025-09-24 13:49:47,028 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:49:56,108 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:49:56,209 [INFO]  * Restarting with stat
+2025-09-24 13:49:56,678 [WARNING]  * Debugger is active!
+2025-09-24 13:49:56,678 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:49:58,700 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:49:58,791 [INFO]  * Restarting with stat
+2025-09-24 13:49:59,256 [WARNING]  * Debugger is active!
+2025-09-24 13:49:59,257 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:50:08,338 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:50:08,443 [INFO]  * Restarting with stat
+2025-09-24 13:50:08,916 [WARNING]  * Debugger is active!
+2025-09-24 13:50:08,917 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:50:52,497 [INFO] 127.0.0.1 - - [24/Sep/2025 13:50:52] "[35m[1mPUT /subject HTTP/1.1[0m" 201 -
+2025-09-24 13:51:14,906 [INFO] 127.0.0.1 - - [24/Sep/2025 13:51:14] "[35m[1mPUT /subject HTTP/1.1[0m" 500 -
+2025-09-24 13:51:15,177 [INFO] 127.0.0.1 - - [24/Sep/2025 13:51:15] "GET /subject?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-09-24 13:51:15,179 [INFO] 127.0.0.1 - - [24/Sep/2025 13:51:15] "GET /subject?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-09-24 13:51:15,211 [INFO] 127.0.0.1 - - [24/Sep/2025 13:51:15] "GET /subject?__debugger__=yes&cmd=resource&f=console.png&s=NyeOu2bQtKWE9j7D5iR6 HTTP/1.1" 200 -
+2025-09-24 13:51:52,878 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 13:51:52,997 [INFO]  * Restarting with stat
+2025-09-24 13:52:03,975 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.84:5000
+2025-09-24 13:52:03,975 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-24 13:52:03,975 [INFO]  * Restarting with stat
+2025-09-24 13:52:04,445 [WARNING]  * Debugger is active!
+2025-09-24 13:52:04,445 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:52:06,524 [INFO] 127.0.0.1 - - [24/Sep/2025 13:52:06] "PUT /subject HTTP/1.1" 200 -
+2025-09-24 13:52:23,679 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/subject_service.py', reloading
+2025-09-24 13:52:23,794 [INFO]  * Restarting with stat
+2025-09-24 13:52:24,266 [WARNING]  * Debugger is active!
+2025-09-24 13:52:24,267 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:52:28,303 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/subject_service.py', reloading
+2025-09-24 13:52:28,405 [INFO]  * Restarting with stat
+2025-09-24 13:52:28,867 [WARNING]  * Debugger is active!
+2025-09-24 13:52:28,867 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:52:29,883 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/subject_service.py', reloading
+2025-09-24 13:52:29,973 [INFO]  * Restarting with stat
+2025-09-24 13:52:30,421 [WARNING]  * Debugger is active!
+2025-09-24 13:52:30,421 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:52:38,494 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/subject_service.py', reloading
+2025-09-24 13:52:38,596 [INFO]  * Restarting with stat
+2025-09-24 13:52:39,057 [WARNING]  * Debugger is active!
+2025-09-24 13:52:39,057 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:52:40,073 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/subject_service.py', reloading
+2025-09-24 13:52:40,172 [INFO]  * Restarting with stat
+2025-09-24 13:52:40,656 [WARNING]  * Debugger is active!
+2025-09-24 13:52:40,656 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:52:42,677 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/subject_service.py', reloading
+2025-09-24 13:52:42,764 [INFO]  * Restarting with stat
+2025-09-24 13:52:43,225 [WARNING]  * Debugger is active!
+2025-09-24 13:52:43,225 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:53:02,400 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/subject_service.py', reloading
+2025-09-24 13:53:02,503 [INFO]  * Restarting with stat
+2025-09-24 13:58:56,409 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.84:5000
+2025-09-24 13:58:56,409 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-24 13:58:56,409 [INFO]  * Restarting with stat
+2025-09-24 13:58:56,880 [WARNING]  * Debugger is active!
+2025-09-24 13:58:56,880 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 13:59:02,704 [INFO] 127.0.0.1 - - [24/Sep/2025 13:59:02] "[31m[1mPUT /subject HTTP/1.1[0m" 400 -
+2025-09-24 13:59:41,883 [INFO] 127.0.0.1 - - [24/Sep/2025 13:59:41] "PUT /subject HTTP/1.1" 200 -
+2025-09-24 14:17:43,202 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 14:17:43,321 [INFO]  * Restarting with stat
+2025-09-24 14:17:43,777 [WARNING]  * Debugger is active!
+2025-09-24 14:17:43,777 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 14:19:32,783 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/academico_routes.py', reloading
+2025-09-24 14:19:32,884 [INFO]  * Restarting with stat
+2025-09-24 14:19:33,350 [WARNING]  * Debugger is active!
+2025-09-24 14:19:33,350 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 14:19:53,535 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/subject_service.py', reloading
+2025-09-24 14:19:53,638 [INFO]  * Restarting with stat
+2025-09-24 14:24:13,118 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.84:5000
+2025-09-24 14:24:13,118 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-24 14:24:13,119 [INFO]  * Restarting with stat
+2025-09-24 14:24:13,586 [WARNING]  * Debugger is active!
+2025-09-24 14:24:13,586 [INFO]  * Debugger PIN: 114-472-365
+2025-09-24 14:24:49,737 [INFO] 127.0.0.1 - - [24/Sep/2025 14:24:49] "[35m[1mDELETE /subject HTTP/1.1[0m" 204 -
+2025-09-24 14:25:05,601 [INFO] 127.0.0.1 - - [24/Sep/2025 14:25:05] "[31m[1mDELETE /subject HTTP/1.1[0m" 400 -
+2025-09-24 14:27:34,647 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:34] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-09-24 14:27:34,655 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:34] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-24 14:27:34,685 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:34] "GET /login HTTP/1.1" 200 -
+2025-09-24 14:27:34,812 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:34] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-09-24 14:27:34,817 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:34] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-24 14:27:34,817 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-24 14:27:34,850 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:34] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-09-24 14:27:44,674 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-09-24 14:27:44,737 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:44] "[32mGET / HTTP/1.1[0m" 302 -
+2025-09-24 14:27:44,773 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:44] "GET /perfil HTTP/1.1" 200 -
+2025-09-24 14:27:44,845 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-24 14:27:44,845 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:44] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-24 14:27:47,542 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:47] "GET /add_time HTTP/1.1" 200 -
+2025-09-24 14:27:47,613 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-24 14:27:47,613 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:47] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-09-24 14:27:47,618 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:47] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-09-24 14:27:47,674 [INFO] 127.0.0.1 - - [24/Sep/2025 14:27:47] "GET /get_time HTTP/1.1" 200 -
+2025-09-24 14:29:00,091 [INFO] 127.0.0.1 - - [24/Sep/2025 14:29:00] "GET /get_time HTTP/1.1" 200 -
+2025-09-24 14:29:33,238 [INFO] 127.0.0.1 - - [24/Sep/2025 14:29:33] "GET /get_time HTTP/1.1" 200 -
+2025-09-24 14:29:41,824 [INFO] 127.0.0.1 - - [24/Sep/2025 14:29:41] "GET /get_time HTTP/1.1" 200 -
+2025-09-24 14:30:27,479 [INFO] 127.0.0.1 - - [24/Sep/2025 14:30:27] "GET /login HTTP/1.1" 200 -
+2025-09-24 14:30:27,516 [INFO] 127.0.0.1 - - [24/Sep/2025 14:30:27] "GET /static/js/global.js HTTP/1.1" 200 -
+2025-09-24 14:30:27,517 [INFO] 127.0.0.1 - - [24/Sep/2025 14:30:27] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-24 14:30:27,518 [INFO] 127.0.0.1 - - [24/Sep/2025 14:30:27] "GET /static/css/login.css HTTP/1.1" 200 -
+2025-09-24 14:30:27,619 [INFO] 127.0.0.1 - - [24/Sep/2025 14:30:27] "GET /static/img/stp_login.webp HTTP/1.1" 200 -
+2025-09-24 15:35:32,297 [INFO] 127.0.0.1 - - [24/Sep/2025 15:35:32] "GET /get_time HTTP/1.1" 200 -
+2025-09-24 18:17:42,914 [INFO] 127.0.0.1 - - [24/Sep/2025 18:17:42] "GET /get_time HTTP/1.1" 200 -
+2025-09-24 18:21:03,059 [INFO] 127.0.0.1 - - [24/Sep/2025 18:21:03] "GET /get_time HTTP/1.1" 200 -

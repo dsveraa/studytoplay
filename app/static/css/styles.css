@@ -342,8 +342,17 @@ label.fs-2 {
     background-color: #c0b8a3; /* amarillo claro */
     color: #494646;
     border-color: #c0b8a3;
-
 }
+
+.alert.alert-warning a,
+.alert.alert-warning a:visited,
+.alert.alert-warning a:hover,
+.alert.alert-warning a:active {
+    color: rgb(88, 72, 0) !important;
+    
+    
+}
+
 
 .alert-info {
     background-color: #cce5ff; /* azul claro */

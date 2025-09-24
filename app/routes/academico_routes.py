@@ -2,6 +2,9 @@ from flask import render_template, request, redirect, url_for, session, jsonify,
 from sqlalchemy import desc
 
 from app.models import Estudio, Asignatura, EstadoUsuario
+from app.repositories.subject_repository import SubjectRepository
+from app.services.subject_service import SubjectService
+from app.services.user_service import UserService
 from app.utils.helpers import login_required, revisar_nuevas_notificaciones
 
 from .. import db
@@ -71,3 +74,67 @@ def records(activity_id=None):
                             asignaturas=asignaturas_obj, 
                             nombre_asignatura=nombre_asignatura
                             )
+
+
+@academico_bp.route("/subject")
+def view_subjects():
+    user_id = UserService.get_id_from_session()
+    subjects = SubjectRepository.get_all_subjects_by_user_id(user_id)
+    return jsonify({
+        'subjects': subjects
+    }), 200
+
+
+@academico_bp.route("/subject", methods=['POST'])
+def add_subject():
+    data = request.get_json()
+    subject = data.get('subject')
+
+    user_id = UserService.get_id_from_session()
+    new_subject = SubjectService.add_subject(user_id, subject)
+        
+    return jsonify({
+        'message': 'new subject added',
+        'subject': new_subject.nombre
+    }), 201
+
+
+@academico_bp.route("/subject", methods=['PUT'])
+def edit_subject():
+    data = request.get_json()
+    new_name = data.get('subject')
+    subject_id = data.get('subject_id')
+    
+    user_id = UserService.get_id_from_session()
+    
+    try:
+        result = SubjectService.edit_subject(user_id, subject_id, new_name)
+        return jsonify({
+            'status': 'ok',
+            'new_name': result
+        }), 200
+    except ValueError as e:
+        return jsonify({
+            'status': 'error',
+            'message': str(e)
+        }), 400
+
+    
+@academico_bp.route("/subject", methods=['DELETE'])
+def delete_subject():
+    data = request.get_json()
+    subject_id = data.get('subject_id')
+    
+    user_id = UserService.get_id_from_session()
+    
+    try:
+        result = SubjectService.delete_subject(user_id, subject_id)
+        return jsonify({
+            'status': 'ok',
+            'new_name': result
+        }), 204
+    except ValueError as e:
+        return jsonify({
+            'status': 'error',
+            'message': str(e)
+        }), 400

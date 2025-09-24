@@ -47,7 +47,7 @@ def grade_incentive(id):
 @supervisor_required
 @relation_required(id_from_kwargs)
 def grade_incentive_warning(id):
-    flash(f"You must set at least 1 incentive in <a href='/settings/{id}'>Settings</a>.", 'warning')
+    flash(f"You must set at least 1 incentive in <a href='/settings/{id}'>Settings</a>", 'warning')
     return redirect(url_for('core.home'))
 
 @super_bp.route('/grade_incentive/<id>', methods=['POST'])
