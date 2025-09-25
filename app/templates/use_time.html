@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %}Usar tiempo{% endblock %}
+{% block title %}Use Time{% endblock %}
 
 {% block content %}
 
 <div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">
   <p class="text-center"><strong>{{ username | capitalize }}</strong>, this is the time you have accumulated so far. <span class="custom-text-3"><strong>Use it wisely.</strong></span></p>
   <div class="d-flex justify-content-center display-flex-column custom-fs-1">
-    <div id="counter"></div>
+    <div id="counter" class="text-center"></div>
   </div>
 
   <div class="d-flex flex-column align-items-center">
@@ -16,7 +16,6 @@
       <button id="stop_button" class="btn btn-secondary" onclick="logClick('Stop')" disabled>Stop</button>
     </div>
   </div>
-  <div class="tiempo" style="display:none">{{ tiempo }}</div>
 
 </div>
 <div class="custom-bg-1 custom-text-2 p-4 rounded-4 mb-5">

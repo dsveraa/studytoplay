@@ -249,12 +249,6 @@ withLoader(cancelBtn, () => {
   })
 })
 
-// cancelBtn.addEventListener("click", () => {
-//   switchIdle().then(() => {
-//     window.location.href = "/perfil"  
-//   })
-// })
-
 window.addEventListener("focus", async () => {
 
   console.log("Ventana activa, solicitando datos...")
@@ -271,4 +265,17 @@ window.addEventListener("focus", async () => {
 window.addEventListener("beforeunload", () => {
   navigator.sendBeacon("/cancel")
 })
+
+
+function validateForm() {
+  const subjectValid = subjectInput.value !== '';
+  const summaryValid = summaryInput.value.trim() !== '';
+
+  submitBtn.disabled = !(subjectValid && summaryValid);
+}
+
+validateForm();
+
+subjectInput.addEventListener('change', validateForm);
+summaryInput.addEventListener('input', validateForm);
 

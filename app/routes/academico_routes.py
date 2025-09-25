@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for, session, jsonify, Blueprint
+from flask import flash, render_template, request, redirect, url_for, session, jsonify, Blueprint
 from sqlalchemy import desc
 
 from app.models import Estudio, Asignatura, EstadoUsuario
@@ -77,12 +77,12 @@ def records(activity_id=None):
 
 
 @academico_bp.route("/subject")
-def view_subjects():
+def subjects_management():
     user_id = UserService.get_id_from_session()
     subjects = SubjectRepository.get_all_subjects_by_user_id(user_id)
-    return jsonify({
-        'subjects': subjects
-    }), 200
+    subjects_list = SubjectService.transform_obj_subject_to_list(subjects)
+
+    return render_template('subjects.html', subjects=subjects_list)
 
 
 @academico_bp.route("/subject", methods=['POST'])
@@ -92,11 +92,10 @@ def add_subject():
 
     user_id = UserService.get_id_from_session()
     new_subject = SubjectService.add_subject(user_id, subject)
-        
-    return jsonify({
-        'message': 'new subject added',
-        'subject': new_subject.nombre
-    }), 201
+    print(new_subject)
+    flash(f'New subject added: <b>{new_subject.nombre}</b>', 'success')    
+    return jsonify({"status": "ok", "subject": new_subject.nombre}), 201
+
 
 
 @academico_bp.route("/subject", methods=['PUT'])

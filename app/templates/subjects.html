@@ -1,0 +1,35 @@
+{% extends 'base.html' %}url_for('static
+
+{% block title %}Subjects Management{% endblock %}
+
+{% block content %}
+
+{% include 'flash_messages.html' %}
+
+<h4 class="mb-4 text-center custom-text-1">Subject managemet</h4>
+<div class="custom-bg-1 custom-text-1 p-4 rounded-4 mb-5">
+    <iconify-icon icon="mdi:arrow-back-circle" width="24" height="24" id="back-icon" class="cursor-pointer mb-1"></iconify-icon>
+
+    <div class="d-flex flex-wrap gap-2 justify-content-center">
+        {% for sub in subjects %}
+            <div id="{{ sub.id }}" class="bg-black bg-opacity-25 rounded py-1 px-3 fs-2">{{ sub.name | capitalize }} <span class="opacity-25 close-btn cursor-pointer">x</span></div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="custom-bg-1 custom-text-1 p-4 rounded-4 mb-5">
+    <h4 class="mb-4">Add new subject</h4>
+
+    <label for="subject" class="form-label">Subject name</label>
+    <div class="d-flex gap-2">
+        <input type="text" class="form-control" id="add-subject" name="add-subject" placeholder="e.g. Math">
+        <button class="btn custom-btn-2 btn-loading" id="add-subject-btn" disabled>
+            <span class="btn-text">Add</span>
+            <span class="btn-loader"></span>
+        </button>
+    </div>
+
+</div>
+<br><br>
+<script src="{{ url_for('static', filename='js/subjects.js') }}"></script>
+{% endblock %}

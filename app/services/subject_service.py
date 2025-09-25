@@ -29,4 +29,13 @@ class SubjectService:
 
         SubjectRepository.delete(subject)
         SubjectRepository.commit()
-        
+
+    @staticmethod
+    def transform_obj_subject_to_list(obj):
+        return [{
+        'id': sub.id,
+        'name': sub.nombre,
+        'user_id': sub.usuario_id
+    }
+    for sub in obj]
+    

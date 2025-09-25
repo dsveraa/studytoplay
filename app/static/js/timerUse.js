@@ -147,7 +147,11 @@ function startCountdown() {
       currentTime = currentTime -1000
       counter.removeChild(rt_element)
       const HMS = msToHMS(currentTime)
-      rt_element.textContent = HMS
+      if (currentTime > 0) {
+        rt_element.textContent = HMS
+      } else {
+        rt_element.textContent = 'Time is up. Submit your session now.'
+      }
       counter.appendChild(rt_element)
       localStorage.setItem('current_time', currentTime)
 
@@ -210,7 +214,7 @@ async function onLoad() {
     
     console.log(HMS)
     
-    rt_element.textContent = HMS // <p>HMS</p>
+    rt_element.textContent = HMS
     counter.appendChild(rt_element)
     startCountdown()
     return
@@ -220,6 +224,10 @@ async function onLoad() {
   startBtn.disabled = false
   
   const time = await fetchTime()
+
+  if (time < 0) {
+    startBtn.disabled = true
+  }
   
   encryptedTime = encryptData(time)
   localStorage.setItem("session_time", encryptedTime)
@@ -227,7 +235,14 @@ async function onLoad() {
   sessionTime = decryptData(localStorage.getItem('session_time'))
 
   HMS = msToHMS(sessionTime)
-  rt_element.textContent = HMS
+  
+  if (sessionTime > 0) {
+    rt_element.textContent = HMS
+
+  } else {
+    rt_element.textContent = 'You are currently in debt, so you should add time.'
+  }
+  
   counter.appendChild(rt_element)
 }
 
