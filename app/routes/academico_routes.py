@@ -1,10 +1,10 @@
 from flask import flash, render_template, request, redirect, url_for, session, jsonify, Blueprint
 from sqlalchemy import desc
 
-from app.models import Estudio, Asignatura, EstadoUsuario
+from app.models import Estudio, Asignatura
 from app.repositories.subject_repository import SubjectRepository
 from app.services.subject_service import SubjectService
-from app.services.user_service import UserService
+from app.services.user_service import UserService, UserStatusService
 from app.utils.helpers import login_required, revisar_nuevas_notificaciones
 
 from .. import db
@@ -15,23 +15,12 @@ academico_bp = Blueprint('academico', __name__)
 @academico_bp.route('/switch_status/<status>/', methods=['POST'])
 @login_required
 def switch_status(status: str):
-    usuario_id = session['usuario_id']
-
-    estado_existente = EstadoUsuario.query.filter_by(usuario_id=usuario_id).first()
-
-    if not estado_existente:
-        nuevo_estado = EstadoUsuario(usuario_id=usuario_id, estado=status)
-        db.session.add(nuevo_estado)
-        db.session.commit()
-        return jsonify({
-            'status': status
-        }), 200
-        
-    estado_existente.estado = status
-    db.session.commit()
+    user_id = UserService.get_id_from_session()
+    current_status = UserStatusService.switch_status(user_id, status)
     return jsonify({
-        'status': status
+        'status': current_status.estado
     }), 200
+
     
 @academico_bp.route('/edit_record/<id>', methods=["GET", "POST"])
 def edit_record(id):

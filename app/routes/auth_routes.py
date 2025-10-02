@@ -50,10 +50,8 @@ def login():
 def registro_view():
     roles = UserService.get_all_roles()
     
-    rol_default = Rol.query.filter_by(nombre='estudiante').first()
-    print(rol_default)
+    rol_default = Rol.query.filter_by(nombre='student').first()
     rol_seleccionado = request.args.get("rol_seleccionado", rol_default.id if rol_default else None)
-    print(rol_seleccionado)
     return render_template("registro.html", roles=roles, rol_seleccionado=rol_seleccionado)
 
 
@@ -109,4 +107,3 @@ def logout():
     session.pop("usuario_nombre", None)
     session.pop("supervisor_id", None)
     return redirect(url_for("core.home"))
-

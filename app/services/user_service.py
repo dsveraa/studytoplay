@@ -1,6 +1,7 @@
 from flask import session
 from app.models.users_model import Rol
 from app.repositories.user_repository import UserRepository
+from app.repositories.user_status_repository import UserStatusRepository
 
 
 class UserService:
@@ -31,4 +32,18 @@ class UserService:
     def get_id_from_session():
         return session['usuario_id']
     
+
+class UserStatusService:
+    @staticmethod
+    def switch_status(user_id, status: str):
+        current_status = UserStatusRepository.get_status_object(user_id)
+
+        if current_status:
+            current_status.estado = status
+        else:
+            current_status = UserStatusRepository.set_new_status(user_id, status)
+            UserStatusRepository.add_new_status(current_status)
+
+        UserStatusRepository.commit()
+        return current_status
     
