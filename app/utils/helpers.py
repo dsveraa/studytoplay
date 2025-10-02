@@ -137,7 +137,7 @@ def revisar_tiempo_total(id: int) -> float:
 
 def get_extra_time(user_id: int) -> int:
     user_settings = UserSettings(user_id)
-    return user_settings.get_extra_time
+    return user_settings.get_extra_time()
 
 HORA = 3_600_000
 # HORA = 500

@@ -38562,3 +38562,97 @@ werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'relaci
 2025-09-25 17:24:22,485 [INFO]  * Restarting with stat
 2025-09-25 17:24:22,964 [WARNING]  * Debugger is active!
 2025-09-25 17:24:22,965 [INFO]  * Debugger PIN: 106-906-292
+2025-10-02 11:29:08,738 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.84:5000
+2025-10-02 11:29:08,738 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-02 11:29:08,739 [INFO]  * Restarting with stat
+2025-10-02 11:29:09,198 [WARNING]  * Debugger is active!
+2025-10-02 11:29:09,198 [INFO]  * Debugger PIN: 132-220-997
+2025-10-02 11:29:31,472 [INFO] 127.0.0.1 - - [02/Oct/2025 11:29:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-02 11:29:31,508 [INFO] 127.0.0.1 - - [02/Oct/2025 11:29:31] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-10-02 11:29:31,508 [INFO] 127.0.0.1 - - [02/Oct/2025 11:29:31] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-02 11:29:31,574 [INFO] 127.0.0.1 - - [02/Oct/2025 11:29:31] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=7rQ1QZmd0GvuQG3M4Kj1 HTTP/1.1" 200 -
+2025-10-02 11:30:01,806 [INFO] 127.0.0.1 - - [02/Oct/2025 11:30:01] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-02 11:30:01,857 [INFO] 127.0.0.1 - - [02/Oct/2025 11:30:01] "GET /login HTTP/1.1" 200 -
+2025-10-02 11:30:01,955 [INFO] 127.0.0.1 - - [02/Oct/2025 11:30:01] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-02 11:30:01,956 [INFO] 127.0.0.1 - - [02/Oct/2025 11:30:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-02 11:30:01,957 [INFO] 127.0.0.1 - - [02/Oct/2025 11:30:01] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-10-02 11:30:02,088 [INFO] 127.0.0.1 - - [02/Oct/2025 11:30:02] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-10-02 11:30:25,146 [INFO] 127.0.0.1 - - [02/Oct/2025 11:30:25] "GET /registro HTTP/1.1" 200 -
+2025-10-02 11:30:25,189 [INFO] 127.0.0.1 - - [02/Oct/2025 11:30:25] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-02 11:30:25,189 [INFO] 127.0.0.1 - - [02/Oct/2025 11:30:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-02 11:31:46,187 [INFO] 127.0.0.1 - - [02/Oct/2025 11:31:46] "[32mGET /perfil HTTP/1.1[0m" 302 -
+2025-10-02 11:31:46,194 [INFO] 127.0.0.1 - - [02/Oct/2025 11:31:46] "GET /login HTTP/1.1" 200 -
+2025-10-02 11:31:46,214 [INFO] 127.0.0.1 - - [02/Oct/2025 11:31:46] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-10-02 11:31:46,217 [INFO] 127.0.0.1 - - [02/Oct/2025 11:31:46] "GET /static/js/global.js HTTP/1.1" 200 -
+2025-10-02 11:31:46,217 [INFO] 127.0.0.1 - - [02/Oct/2025 11:31:46] "GET /static/css/login.css HTTP/1.1" 200 -
+2025-10-02 11:31:46,319 [INFO] 127.0.0.1 - - [02/Oct/2025 11:31:46] "GET /static/img/stp_login.webp HTTP/1.1" 200 -
+2025-10-02 11:32:59,797 [INFO] 127.0.0.1 - - [02/Oct/2025 11:32:59] "GET /registro HTTP/1.1" 200 -
+2025-10-02 11:32:59,853 [INFO] 127.0.0.1 - - [02/Oct/2025 11:32:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-02 11:32:59,854 [INFO] 127.0.0.1 - - [02/Oct/2025 11:32:59] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-02 11:33:01,882 [INFO] 127.0.0.1 - - [02/Oct/2025 11:33:01] "GET /registro HTTP/1.1" 200 -
+2025-10-02 11:33:01,923 [INFO] 127.0.0.1 - - [02/Oct/2025 11:33:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-02 11:33:01,925 [INFO] 127.0.0.1 - - [02/Oct/2025 11:33:01] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-02 11:33:05,245 [INFO] 127.0.0.1 - - [02/Oct/2025 11:33:05] "GET /registro HTTP/1.1" 200 -
+2025-10-02 11:33:05,286 [INFO] 127.0.0.1 - - [02/Oct/2025 11:33:05] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-02 11:33:05,287 [INFO] 127.0.0.1 - - [02/Oct/2025 11:33:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-02 11:36:00,057 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/auth_routes.py', reloading
+2025-10-02 11:36:00,180 [INFO]  * Restarting with stat
+2025-10-02 11:36:00,661 [WARNING]  * Debugger is active!
+2025-10-02 11:36:00,661 [INFO]  * Debugger PIN: 132-220-997
+2025-10-02 11:36:01,677 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/auth_routes.py', reloading
+2025-10-02 11:36:01,761 [INFO]  * Restarting with stat
+2025-10-02 11:36:02,240 [WARNING]  * Debugger is active!
+2025-10-02 11:36:02,240 [INFO]  * Debugger PIN: 132-220-997
+2025-10-02 11:36:04,264 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/auth_routes.py', reloading
+2025-10-02 11:36:04,352 [INFO]  * Restarting with stat
+2025-10-02 11:36:04,804 [WARNING]  * Debugger is active!
+2025-10-02 11:36:04,805 [INFO]  * Debugger PIN: 132-220-997
+2025-10-02 11:36:07,584 [INFO] 127.0.0.1 - - [02/Oct/2025 11:36:07] "GET /registro HTTP/1.1" 200 -
+2025-10-02 11:36:07,663 [INFO] 127.0.0.1 - - [02/Oct/2025 11:36:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-02 11:36:07,664 [INFO] 127.0.0.1 - - [02/Oct/2025 11:36:07] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-02 11:37:28,587 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/auth_routes.py', reloading
+2025-10-02 11:37:28,705 [INFO]  * Restarting with stat
+2025-10-02 11:37:29,153 [WARNING]  * Debugger is active!
+2025-10-02 11:37:29,154 [INFO]  * Debugger PIN: 132-220-997
+2025-10-02 11:37:31,932 [INFO] 127.0.0.1 - - [02/Oct/2025 11:37:31] "GET /registro HTTP/1.1" 200 -
+2025-10-02 11:37:31,988 [INFO] 127.0.0.1 - - [02/Oct/2025 11:37:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-02 11:37:31,988 [INFO] 127.0.0.1 - - [02/Oct/2025 11:37:31] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-02 11:37:54,388 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/auth_routes.py', reloading
+2025-10-02 11:37:54,508 [INFO]  * Restarting with stat
+2025-10-02 11:37:54,967 [WARNING]  * Debugger is active!
+2025-10-02 11:37:54,967 [INFO]  * Debugger PIN: 132-220-997
+2025-10-02 11:38:11,114 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/auth_routes.py', reloading
+2025-10-02 11:38:11,231 [INFO]  * Restarting with stat
+2025-10-02 11:38:11,694 [WARNING]  * Debugger is active!
+2025-10-02 11:38:11,695 [INFO]  * Debugger PIN: 132-220-997
+2025-10-02 11:38:12,712 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/auth_routes.py', reloading
+2025-10-02 11:38:12,797 [INFO]  * Restarting with stat
+2025-10-02 11:38:13,269 [WARNING]  * Debugger is active!
+2025-10-02 11:38:13,270 [INFO]  * Debugger PIN: 132-220-997
+2025-10-02 11:38:21,344 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/auth_routes.py', reloading
+2025-10-02 11:38:21,447 [INFO]  * Restarting with stat
+2025-10-02 11:39:00,076 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.84:5000
+2025-10-02 11:39:00,076 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-02 11:39:00,077 [INFO]  * Restarting with stat
+2025-10-02 11:39:00,553 [WARNING]  * Debugger is active!
+2025-10-02 11:39:00,553 [INFO]  * Debugger PIN: 132-220-997
+2025-10-02 11:39:01,671 [INFO] 127.0.0.1 - - [02/Oct/2025 11:39:01] "GET /registro HTTP/1.1" 200 -
+2025-10-02 11:39:01,719 [INFO] 127.0.0.1 - - [02/Oct/2025 11:39:01] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-02 11:39:01,749 [INFO] 127.0.0.1 - - [02/Oct/2025 11:39:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-02 11:39:31,846 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/auth_routes.py', reloading
+2025-10-02 11:39:31,961 [INFO]  * Restarting with stat
+2025-10-02 11:39:32,411 [WARNING]  * Debugger is active!
+2025-10-02 11:39:32,411 [INFO]  * Debugger PIN: 132-220-997
+2025-10-02 11:39:35,438 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/auth_routes.py', reloading
+2025-10-02 11:39:35,521 [INFO]  * Restarting with stat
+2025-10-02 11:39:35,985 [WARNING]  * Debugger is active!
+2025-10-02 11:39:35,985 [INFO]  * Debugger PIN: 132-220-997
+2025-10-02 11:39:38,786 [INFO] 127.0.0.1 - - [02/Oct/2025 11:39:38] "GET /registro HTTP/1.1" 200 -
+2025-10-02 11:39:38,867 [INFO] 127.0.0.1 - - [02/Oct/2025 11:39:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-02 11:39:38,869 [INFO] 127.0.0.1 - - [02/Oct/2025 11:39:38] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
