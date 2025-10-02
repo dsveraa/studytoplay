@@ -3,6 +3,7 @@ from sqlalchemy import desc
 
 from app.models import Estudio, Asignatura
 from app.repositories.subject_repository import SubjectRepository
+from app.services.record_service import RecordService
 from app.services.subject_service import SubjectService
 from app.services.user_service import UserService, UserStatusService
 from app.utils.helpers import login_required, revisar_nuevas_notificaciones
@@ -22,21 +23,20 @@ def switch_status(status: str):
     }), 200
 
     
-@academico_bp.route('/edit_record/<id>', methods=["GET", "POST"])
-def edit_record(id):
-    usuario_id = session.get("usuario_id")
-    summary_obj = Estudio.query.filter_by(id=id, usuario_id=usuario_id).first()
-    summary = summary_obj.resumen
-
-    if request.method == 'POST':
-        data = request.get_json()
-        summary = data.get('summary')
-        summary_obj.resumen = summary
-        db.session.commit()
-        return redirect(url_for("core.perfil"))
-
+@academico_bp.route('/edit_record/<id>')
+def view_edit_record(id):
+    user_id = UserService.get_id_from_session()
+    summary = RecordService.edit_record(id, user_id)
     return render_template("edit_record.html", summary=summary)
 
+
+@academico_bp.route('/edit_record/<id>', methods=["POST"])
+def edit_record(id):
+    data = request.get_json()
+    summary = data.get('summary')
+    user_id = UserService.get_id_from_session()
+    RecordService.edit_record(id, user_id, summary)
+    return redirect(url_for("core.perfil"))  
 
 
 @academico_bp.route("/records")
