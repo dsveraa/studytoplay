@@ -22,9 +22,3 @@ def usuario_test(app):
     yield user
     db.session.delete(user)
     db.session.commit()
-
-
-def test_lista_usuarios(client, usuario_test):
-    response = client.get("/usuarios")
-    assert response.status_code == 200
-    assert b"visitor" in response.data

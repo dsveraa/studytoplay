@@ -19,3 +19,19 @@ class UserRepository:
     @staticmethod
     def check_supervisor(user_id, name):
         return Usuario.query.join(Rol).filter(Usuario.id == user_id, Rol.nombre == name).first()
+    
+    @staticmethod
+    def get_role_obj_by_name(name):
+        return Rol.query.filter_by(nombre=name).first()
+    
+    @staticmethod
+    def create_user(name, email, password_hash, role_obj):
+        return Usuario(nombre=name, correo=email, contrasena=password_hash, rol=role_obj)
+    
+    @staticmethod
+    def add(new_user):
+        db.session.add(new_user)
+    
+    @staticmethod
+    def commit():
+        db.session.commit()
