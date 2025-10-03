@@ -1,7 +1,5 @@
 from flask import flash, render_template, request, redirect, url_for, session, jsonify, Blueprint
-from sqlalchemy import desc
 
-from app.models import Estudio, Asignatura
 from app.repositories.subject_repository import SubjectRepository
 from app.services.record_service import RecordService
 from app.services.subject_service import SubjectService

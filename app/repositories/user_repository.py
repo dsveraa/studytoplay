@@ -1,3 +1,4 @@
+from app.models.users_model import Rol
 from .. import db
 from app.models import Usuario
 
@@ -15,3 +16,6 @@ class UserRepository:
         user = Usuario.query.filter_by(id=id).first()
         return user.correo
     
+    @staticmethod
+    def check_supervisor(user_id, name):
+        return Usuario.query.join(Rol).filter(Usuario.id == user_id, Rol.nombre == name).first()

@@ -2,6 +2,7 @@ from flask import flash, render_template, request, redirect, url_for, session, B
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from app.models import Usuario, Rol, NuevaNotificacion
+from app.services.login_service import LoginService
 from app.services.user_service import UserService
 from app.utils.debugging_utils import printn
 
@@ -17,34 +18,17 @@ def login_view():
 
 @auth_bp.route("/login", methods=["POST"])
 def login():
-    correo = request.form["correo"]
-    contrasena = request.form["contrasena"]
+    email = request.form["correo"]
+    password = request.form["contrasena"]
     
-    usuario = Usuario.query.filter_by(correo=correo).first()
-
-    if not usuario:
-        flash("User doesn't exist.", "error")
-        return render_template("login.html", email=correo)
+    try:
+        LoginService.login(email, password)
+        return redirect(url_for("core.home"))
     
-    if not check_password_hash(usuario.contrasena, contrasena):
-        flash("Incorrect password.", "error")
-        return render_template("login.html", email=correo)
+    except ValueError as e:
+        flash(str(e), "error")
+        return render_template("login.html", email=email)
 
-    session["usuario_id"] = usuario.id
-    session["usuario_nombre"] = usuario.nombre
-
-    supervisor = Usuario.query.join(Rol).filter(
-        Usuario.id == usuario.id,
-        Rol.nombre == "supervisor"
-    ).first()
-    
-    if supervisor:
-        session["supervisor_id"] = usuario.id
-
-    session.permanent = True
-
-    return redirect(url_for("core.home"))
-    
 
 @auth_bp.route("/registro")
 def registro_view():
