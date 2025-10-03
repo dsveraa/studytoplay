@@ -1,3 +1,5 @@
+from app.models.academico_model import Asignatura
+from app.repositories.record_repository import RecordRepository
 from app.repositories.subject_repository import SubjectRepository
 
 
@@ -11,7 +13,7 @@ class SubjectService:
     
     @staticmethod
     def edit_subject(user_id, subject_id, new_name):
-        subject = SubjectRepository.get_subject_by_id_and_user_id(subject_id, user_id)
+        subject = SubjectRepository.get_one_subject_by_id_and_user_id(subject_id, user_id)
         
         if not subject:
             raise ValueError('User Id or Subject Id not found')
@@ -22,7 +24,7 @@ class SubjectService:
         
     @staticmethod
     def delete_subject(user_id, subject_id):
-        subject = SubjectRepository.get_subject_by_id_and_user_id(subject_id, user_id)
+        subject = SubjectRepository.get_one_subject_by_id_and_user_id(subject_id, user_id)
         
         if not subject:
             raise ValueError('User Id or Subject Id not found')
@@ -38,4 +40,17 @@ class SubjectService:
         'user_id': sub.usuario_id
     }
     for sub in obj]
-    
+
+    @staticmethod
+    def get_subject_obj_by_user_id(user_id):
+        return SubjectRepository.get_all_subjects_by_user_id(user_id)
+        
+    @staticmethod
+    def get_subject_name(activity_id):
+        if activity_id:
+            subject_obj = SubjectRepository.get_subject_by_id(activity_id)
+            subject_name = subject_obj.nombre if subject_obj else "Unknown"
+        else:
+            subject_name = "Latest"
+        return subject_name
+        

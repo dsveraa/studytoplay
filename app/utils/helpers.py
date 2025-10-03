@@ -199,7 +199,8 @@ def asignar_trofeos(id: int) -> int:
     
 def revisar_nuevas_notificaciones(id):
     nueva_notificacion = NuevaNotificacion.query.filter_by(usuario_id=id).first()
-    session['nueva_notificacion'] = nueva_notificacion.estado
+    if nueva_notificacion:
+        session['nueva_notificacion'] = nueva_notificacion.estado
     return
 
 def send_link_request_notification(sid, uid): # "nombre@email.com" solicita supervisar tu cuenta [aceptar] [rechazar]

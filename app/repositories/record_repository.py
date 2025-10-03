@@ -1,3 +1,4 @@
+from sqlalchemy import desc
 from app.models.academico_model import Estudio
 from app import db
 
@@ -14,3 +15,12 @@ class RecordRepository:
     
     def commit(self):
         db.session.commit()
+
+    @staticmethod
+    def get_list_by_activity(user_id, activity_id):
+        return Estudio.query.filter_by(usuario_id=user_id, asignatura_id=activity_id).order_by(desc(Estudio.id)).all()
+    
+    @staticmethod
+    def get_full_list(user_id, limit):
+        return Estudio.query.filter_by(usuario_id=user_id).order_by(desc(Estudio.id)).limit(limit).all()
+    

@@ -8,8 +8,6 @@ from app.services.subject_service import SubjectService
 from app.services.user_service import UserService, UserStatusService
 from app.utils.helpers import login_required, revisar_nuevas_notificaciones
 
-from .. import db
-
 
 academico_bp = Blueprint('academico', __name__)
 
@@ -45,18 +43,12 @@ def records(activity_id=None):
     if "usuario_id" not in session:
         return redirect(url_for("auth.login_view"))
     
-    usuario_id = session.get("usuario_id")
-    asignaturas_obj = Asignatura.query.filter_by(usuario_id=usuario_id).all()
-
-    if activity_id:
-        activity_obj = Estudio.query.filter_by(usuario_id=usuario_id, asignatura_id=activity_id).order_by(desc(Estudio.id)).all()
-        nombre_asignatura_obj = Asignatura.query.filter_by(id=activity_id).first()
-        nombre_asignatura = nombre_asignatura_obj.nombre if nombre_asignatura_obj else "Desconocida"
-    else:
-        activity_obj = Estudio.query.filter_by(usuario_id=usuario_id).order_by(desc(Estudio.id)).limit(20).all()
-        nombre_asignatura = "Latest"
+    user_id = UserService.get_id_from_session()
+    asignaturas_obj = SubjectService.get_subject_obj_by_user_id(user_id)
+    activity_obj = RecordService.get_activity_obj(user_id, activity_id)
+    nombre_asignatura = SubjectService.get_subject_name(activity_id)
     
-    revisar_nuevas_notificaciones(usuario_id)
+    revisar_nuevas_notificaciones(user_id)
     
     return render_template("records.html", 
                             estudios=activity_obj, 
