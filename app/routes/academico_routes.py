@@ -4,7 +4,7 @@ from app.repositories.subject_repository import SubjectRepository
 from app.services.record_service import RecordService
 from app.services.subject_service import SubjectService
 from app.services.user_service import UserService, UserStatusService
-from app.utils.helpers import login_required, revisar_nuevas_notificaciones
+from app.utils.helpers import login_required, check_new_notifications
 
 
 academico_bp = Blueprint('academico', __name__)
@@ -46,7 +46,7 @@ def records(activity_id=None):
     activity_obj = RecordService.get_activity_obj(user_id, activity_id)
     nombre_asignatura = SubjectService.get_subject_name(activity_id)
     
-    revisar_nuevas_notificaciones(user_id)
+    check_new_notifications(user_id)
     
     return render_template("records.html", 
                             estudios=activity_obj, 

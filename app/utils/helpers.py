@@ -75,7 +75,7 @@ def revisar_nivel(id: int) -> int:
         print(f"No se encontró nivel con id {id}")
     return nivel
 
-def mostrar_nivel(id: int) -> int:
+def show_level(id: int) -> int:
     nivel_actual = revisar_nivel(id)
     if not nivel_actual:
         nuevo_nivel = Nivel(usuario_id=id, nivel=0)
@@ -91,7 +91,7 @@ def revisar_estrellas(id: int) -> int:
         print(f"No se encontraron estrellas con id {id}")
     return estrellas
 
-def mostrar_estrellas(id: int) -> int:
+def show_stars(id: int) -> int:
     estrellas_existentes = revisar_estrellas(id)
     if not estrellas_existentes:
         nueva_estrella = Estrella(usuario_id=id, cantidad=0)
@@ -100,7 +100,7 @@ def mostrar_estrellas(id: int) -> int:
         return 0
     return estrellas_existentes.cantidad
 
-def crear_plantilla_estrellas(estrellas):
+def make_stars_template(estrellas):
     plantilla_estrellas = [1] * estrellas  
     
     while len(plantilla_estrellas) < 5:
@@ -114,7 +114,7 @@ def revisar_trofeos(id: int) -> int:
         print(f"No se encontraron trofeos con id {id}")
     return trofeos
 
-def mostrar_trofeos(id: int) -> int:
+def show_trophies(id: int) -> int:
     trofeos_existentes = revisar_trofeos(id)
     if not trofeos_existentes:
         nuevo_trofeo = Trofeo(usuario_id=id, cantidad=0)
@@ -145,7 +145,7 @@ CHECKPOINT = HORA * 2 # suma una estrella
 TIEMPO_MAXIMO = CHECKPOINT * 5 # pasa de nivel
 
 
-def asignar_estrellas(id: int) -> int:
+def set_stars(id: int) -> int:
     tiempo_acumulado = revisar_acumulacion_tiempo(id)
     if tiempo_acumulado != 0:
         tiempo_ciclo = tiempo_acumulado.cantidad
@@ -171,7 +171,7 @@ def asignar_estrellas(id: int) -> int:
             break
 
 
-def asignar_nivel(id: int) -> int:
+def set_level(id: int) -> int:
     estrellas_obj = revisar_estrellas(id)
     nivel_obj = revisar_nivel(id)
     tiempo_obj = revisar_acumulacion_tiempo(id)
@@ -187,7 +187,7 @@ def asignar_nivel(id: int) -> int:
         # return print(f'Has pasado a nivel {nivel_obj.nivel} y tienes una nueva bonificación de tiempo!')
         return print(f'Has pasado a nivel {nivel_obj.nivel}!') if nivel_obj.nivel < 4 else None
 
-def asignar_trofeos(id: int) -> int:
+def set_trophies(id: int) -> int:
     nivel_obj = revisar_nivel(id)
     trofeos_obj = revisar_trofeos(id)
 
@@ -197,7 +197,7 @@ def asignar_trofeos(id: int) -> int:
         db.session.commit()
         return print(f'Has ganado un nuevo trofeo! Tienes {trofeos_obj.cantidad} en total.')
     
-def revisar_nuevas_notificaciones(id):
+def check_new_notifications(id):
     nueva_notificacion = NuevaNotificacion.query.filter_by(usuario_id=id).first()
     if nueva_notificacion:
         session['nueva_notificacion'] = nueva_notificacion.estado

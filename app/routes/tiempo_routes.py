@@ -5,7 +5,7 @@ from sqlalchemy import desc
 
 from app.models import Estudio, Tiempo, Uso, Asignatura, AcumulacionTiempo
 from app.services.settings_service import UserSettings
-from app.utils.helpers import revisar_nuevas_notificaciones
+from app.utils.helpers import check_new_notifications
 
 from .. import db
 
@@ -89,7 +89,7 @@ def add_time():
         
         return jsonify({'redirect': url_for('core.perfil')})
     
-    revisar_nuevas_notificaciones(usuario_id)
+    check_new_notifications(usuario_id)
     
     return render_template("add_time.html", asignaturas=asignaturas)
 
@@ -141,7 +141,7 @@ def use_time():
         
         return jsonify({'redirect': url_for('core.perfil')})
     
-    revisar_nuevas_notificaciones(usuario_id)
+    check_new_notifications(usuario_id)
     
     return render_template("use_time.html", username=username, usos=use_obj)
 

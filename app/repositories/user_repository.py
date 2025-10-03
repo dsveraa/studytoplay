@@ -17,7 +17,7 @@ class UserRepository:
         return user.correo
     
     @staticmethod
-    def check_supervisor(user_id, name):
+    def check_role(user_id, name):
         return Usuario.query.join(Rol).filter(Usuario.id == user_id, Rol.nombre == name).first()
     
     @staticmethod

@@ -1,6 +1,8 @@
 from sqlalchemy import desc
 from app.models.academico_model import Estudio
 from app import db
+from sqlalchemy import func
+
 
 class RecordRepository:
     def __init__(self, id, user_id):
@@ -24,3 +26,16 @@ class RecordRepository:
     def get_full_list(user_id, limit):
         return Estudio.query.filter_by(usuario_id=user_id).order_by(desc(Estudio.id)).limit(limit).all()
     
+    @staticmethod
+    def get_time_by_subject(user_id):
+        return (
+        db.session.query(
+            Estudio.asignatura_id,
+            func.sum(
+                func.extract('epoch', Estudio.fecha_fin - Estudio.fecha_inicio)
+            ).label("total_segundos")
+        )
+        .filter(Estudio.usuario_id == user_id)
+        .group_by(Estudio.asignatura_id)
+        .all()
+    )

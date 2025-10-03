@@ -1,15 +1,17 @@
 from flask import render_template, request, redirect, url_for, session, jsonify, Blueprint
-from sqlalchemy import func
-from sqlalchemy.orm import aliased
 
-from app.models import Estudio, Tiempo, Usuario, Asignatura, Rol, SupervisorEstudiante, EstadoUsuario, Incentivos, Restricciones
-from app.utils.helpers import asignar_estrellas, asignar_nivel, asignar_trofeos, crear_plantilla_estrellas, id_from_kwargs, mostrar_estrellas, mostrar_trofeos, mostrar_nivel, relation_required, supervisor_required, revisar_nuevas_notificaciones
+from app.services.core_service import CoreService
+from app.services.gamificacion_service import GamificacionService
+from app.services.home_service import HomeService
+from app.services.record_service import RecordService
+from app.services.subject_service import SubjectService
+from app.services.user_service import UserService
+from app.utils.helpers import id_from_kwargs, show_trophies, show_level, relation_required, supervisor_required
 from app.services.settings_service import UserSettings
 from app.services.grade_incentive_service import GradeIncentiveRepository, GradeIncentive
 
 from .. import db
 
-from typing import List
 from app.utils.debugging_utils import printn
 
 from user_agents import parse
@@ -20,58 +22,17 @@ core_bp = Blueprint('core', __name__)
 
 @core_bp.route("/")
 def home():
-    from app.models import Settings
-
     if "usuario_id" not in session:
         return redirect(url_for("auth.login_view"))
     
-    usuario_id = session.get('usuario_id')
-    printn(usuario_id)
-    supervisor = Usuario.query.join(Rol).filter(Usuario.id == usuario_id, Rol.nombre == "supervisor").first()
+    user_id = session.get('usuario_id')
+    supervisor = UserService.check_role(user_id, 'supervisor')
 
-    settings = UserSettings(usuario_id)
-    printn(settings.information())
+    UserSettings(user_id) # init
     
     if supervisor:
-        session["supervisor_id"] = usuario_id
-
-        Estudiante = aliased(Usuario)
-        Supervisor = aliased(Usuario)
-
-        query = (
-            db.session.query(
-                Estudiante.id,
-                Estudiante.nombre,
-                Tiempo.tiempo,
-                EstadoUsuario.estado,
-                Settings.incentivo_notas,
-                Incentivos.id
-            )
-            .select_from(SupervisorEstudiante)
-            .join(Supervisor, Supervisor.id == SupervisorEstudiante.supervisor_id)
-            .join(Estudiante, Estudiante.id == SupervisorEstudiante.estudiante_id)
-            .outerjoin(Tiempo, Tiempo.usuario_id == SupervisorEstudiante.estudiante_id)
-            .outerjoin(EstadoUsuario, EstadoUsuario.usuario_id == SupervisorEstudiante.estudiante_id)
-            .outerjoin(Settings, Settings.usuario_id == Estudiante.id)
-            .outerjoin(Incentivos, Incentivos.usuario_id == Estudiante.id)
-            .filter(SupervisorEstudiante.supervisor_id == usuario_id)
-            .distinct(Estudiante.id)
-        )
-
-        estudiantes = [
-            {   
-                "id": eid, 
-                "nombre": nombre, 
-                "tiempo": tiempo, 
-                "estado": estado, 
-                "grade_incentive": incentivo_notas,
-                "incentivo_id": inc_id
-            }
-            for eid, nombre, tiempo, estado, incentivo_notas, inc_id in query.all()
-        ]
-
-        return render_template("s_dashboard.html", estudiantes=estudiantes)
-    
+        students = HomeService.get_students(user_id)
+        return render_template("s_dashboard.html", estudiantes=students)
     return redirect(url_for("core.perfil"))
 
 @core_bp.route("/settings/<id>")
@@ -114,58 +75,30 @@ def perfil():
     if "usuario_id" not in session:
         return redirect(url_for("auth.login_view"))
     
-    usuario_id = session["usuario_id"]
-    usuario_nombre = session["usuario_nombre"]
-
-    resultados = (
-        db.session.query(
-            Estudio.asignatura_id,
-            func.sum(
-                func.extract('epoch', Estudio.fecha_fin - Estudio.fecha_inicio)
-            ).label("total_segundos")
-        )
-        .filter(Estudio.usuario_id == usuario_id)
-        .group_by(Estudio.asignatura_id)
-        .all()
-    )
-
-    tiempos = {asig_id: tiempo for asig_id, tiempo in resultados}
-
-    asignaturas = {a.id: a.nombre for a in Asignatura.query.filter_by(usuario_id=usuario_id)}
-
-    total = sum(tiempos.values())
-
-    porcentajes_asignaturas = {
-        nombre: str(round((tiempos.get(asig_id, 0) / total * 100), 1)) if total > 0 else "0.0"
-        for asig_id, nombre in asignaturas.items()
-    }
-
-    nivel: int = mostrar_nivel(usuario_id)
-    trofeos: int = mostrar_trofeos(usuario_id)
-    cantidad_estrellas: int = mostrar_estrellas(usuario_id)
-    estrellas: List[int] = crear_plantilla_estrellas(cantidad_estrellas)
-    revisar_nuevas_notificaciones(usuario_id)
-    asignar_nivel(usuario_id)
-    asignar_estrellas(usuario_id)
-    asignar_trofeos(usuario_id)
-
-    incentivos_obj = Incentivos.query.filter_by(usuario_id=usuario_id).all()
-    restricciones_obj = Restricciones.query.filter_by(usuario_id=usuario_id).all()
-
-    incentivos = [incentivo.condicion for incentivo in incentivos_obj]
-    restricciones = [restriccion.restriccion for restriccion in restricciones_obj]
+    user_id = session["usuario_id"]
+    username = session["usuario_nombre"]
+    time_by_subject = RecordService.get_time_by_subject(user_id)
+    subject_percent = SubjectService.get_subject_percentage(time_by_subject, user_id)
+    level: int = show_level(user_id)
+    trophies: int = show_trophies(user_id)
+    stars = GamificacionService.get_stars(user_id)
+    
+    CoreService.check_and_set_up(user_id) # init
+    
+    incentives_list = GamificacionService.get_incentives(user_id)
+    restrictions_list = GamificacionService.get_restrictions(user_id)
 
     return render_template(
         "perfil.html", 
-        id=usuario_id, 
-        nombre=usuario_nombre, 
-        estudios=resultados, 
-        porcentajes_asignaturas=porcentajes_asignaturas,
-        nivel=nivel,
-        estrellas=estrellas,
-        trofeos=trofeos,
-        incentivos=incentivos,
-        restricciones=restricciones
+        id=user_id, 
+        nombre=username, 
+        estudios=time_by_subject, 
+        porcentajes_asignaturas=subject_percent,
+        nivel=level,
+        estrellas=stars,
+        trofeos=trophies,
+        incentivos=incentives_list,
+        restricciones=restrictions_list
         )
 
 @core_bp.route("/country/<int:estudiante_id>/<int:pais_id>", methods=["PUT"])
@@ -189,7 +122,6 @@ def log_click():
     data = request.json
     boton = data.get('boton', 'desconocido')
     origen = request.referrer or 'origen desconocido'
-    # hora_cliente = data.get('hora_cliente', 'hora no enviada')
     
     ua_strig = request.headers.get('User-Agent', '')
     user_agent = parse(ua_strig)

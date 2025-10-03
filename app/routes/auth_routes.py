@@ -1,6 +1,5 @@
 from flask import flash, render_template, request, redirect, url_for, session, Blueprint
 
-from app.models import Rol
 from app.repositories.user_repository import UserRepository
 from app.services.login_service import LoginService
 from app.services.signup_service import SignUpService

@@ -18,3 +18,11 @@ class RecordService:
             activity_obj = RecordRepository.get_full_list(user_id, limit)
         return activity_obj
     
+    @staticmethod
+    def get_time_by_subject(user_id):
+        return RecordRepository.get_time_by_subject(user_id)
+    
+    @staticmethod
+    def get_individual_time(time_by_subject):
+        return {subject_id: time for subject_id, time in time_by_subject}
+    

@@ -1,6 +1,7 @@
 from app.models.academico_model import Asignatura
 from app.repositories.record_repository import RecordRepository
 from app.repositories.subject_repository import SubjectRepository
+from app.services.record_service import RecordService
 
 
 class SubjectService:
@@ -54,3 +55,14 @@ class SubjectService:
             subject_name = "Latest"
         return subject_name
         
+    @staticmethod
+    def get_subjects_dict(user_id):
+        subject_obj = SubjectService.get_subject_obj_by_user_id(user_id)    
+        return {subject.id: subject.nombre for subject in subject_obj}
+
+    @staticmethod
+    def get_subject_percentage(time_by_subject, user_id):
+        individual_time_by_subject = RecordService.get_individual_time(time_by_subject)
+        subjects_dict = SubjectService.get_subjects_dict(user_id)
+        total = sum(individual_time_by_subject.values())
+        return { name: str(round((individual_time_by_subject.get(asig_id, 0) / total * 100), 1)) if total > 0 else "0.0" for asig_id, name in subjects_dict.items()}

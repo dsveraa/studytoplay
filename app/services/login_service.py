@@ -17,7 +17,7 @@ class LoginService:
         session["usuario_id"] = user.id
         session["usuario_nombre"] = user.nombre
 
-        supervisor = UserRepository.check_supervisor(user.id, 'supervisor')
+        supervisor = UserRepository.check_role(user.id, 'supervisor')
         
         if supervisor:
             session["supervisor_id"] = user.id

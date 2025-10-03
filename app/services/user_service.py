@@ -32,6 +32,10 @@ class UserService:
     def get_id_from_session():
         return session['usuario_id']
     
+    @staticmethod
+    def check_role(user_id, name):
+        return UserRepository.check_role(user_id, name)
+    
 
 class UserStatusService:
     @staticmethod
