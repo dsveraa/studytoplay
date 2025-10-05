@@ -1,3 +1,4 @@
+from sqlalchemy import desc
 from app.models import NuevaNotificacion, Notificaciones
 
 
@@ -5,16 +6,29 @@ class NotificationRepository:
     def __init__(self, db_session):
         self.db = db_session
 
-    def save_notification(self, usuario_id, mensaje):
-        notificacion = Notificaciones(
-            usuario_id=usuario_id, notificacion=mensaje, leida=False
+    def save_notification(self, user_id, message):
+        notification = Notificaciones(
+            usuario_id=user_id, notificacion=message, leida=False
         )
-        self.db.add(notificacion)
+        self.db.add(notification)
 
-    def activate_alert(self, usuario_id):
-        nueva = NuevaNotificacion.query.filter_by(usuario_id=usuario_id).first()
-        if nueva:
-            nueva.estado = True
+    def activate_alert(self, user_id):
+        notification = NuevaNotificacion.query.filter_by(usuario_id=user_id).first()
+        if notification:
+            notification.estado = True
+
+    def uncheck_new_notification(self, user_id):
+        notification_obj = NuevaNotificacion.query.filter_by(usuario_id=user_id).first()
+        if notification_obj:
+            notification_obj.estado = False
+    
+    def get_all_notifications(self, user_id):
+        return (
+            Notificaciones.query
+            .filter_by(usuario_id=user_id)
+            .order_by(desc(Notificaciones.fecha))
+            .all()
+        )
 
     def commit(self):
         self.db.commit()
@@ -41,4 +55,8 @@ class Notification:
         message = NotifyMessageFactory.create_grade_message(action, grade, subject, amount, currency, symbol)
         self.repo.save_notification(self.id, message)
         self.repo.activate_alert(self.id)
+        self.repo.commit()
+
+    def uncheck_new_notification(self):
+        self.repo.uncheck_new_notification(self.id)
         self.repo.commit()
