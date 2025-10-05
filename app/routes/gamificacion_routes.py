@@ -57,9 +57,9 @@ def add_restriction():
 
 @gamificacion_bp.route("/incentive/<int:estudiante_id>/<incentive_id>", methods=["DELETE"])
 @relation_required(id_from_kwargs)
-def delete_incentive(student_id, incentive_id):
+def delete_incentive(estudiante_id, incentive_id):
     repo = GradeIncentiveRepository(db.session)
-    grade_incentive = GradeIncentive(student_id, repo)
+    grade_incentive = GradeIncentive(estudiante_id, repo)
     try:
         grade_incentive.remove_incentive(incentive_id)
     except ValueError as e:
@@ -69,9 +69,9 @@ def delete_incentive(student_id, incentive_id):
 
 @gamificacion_bp.route("/restriction/<int:estudiante_id>/<int:restriction_id>", methods=["DELETE"])
 @relation_required(id_from_kwargs)
-def delete_restriction(student_id, restriction_id):
+def delete_restriction(estudiante_id, restriction_id):
     repo = GradeIncentiveRepository(db.session)
-    grade_incentive = GradeIncentive(student_id, repo)
+    grade_incentive = GradeIncentive(estudiante_id, repo)
     try:
         grade_incentive.remove_restriction(restriction_id)
     except ValueError as e:

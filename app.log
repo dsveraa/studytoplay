@@ -38797,3 +38797,223 @@ werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'relaci
 2025-10-03 16:16:25,151 [INFO]  * Debugger PIN: 142-784-802
 2025-10-03 16:17:16,623 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
 2025-10-03 16:17:16,728 [INFO]  * Restarting with stat
+2025-10-05 17:21:14,477 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.84:5000
+2025-10-05 17:21:14,478 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-05 17:21:14,478 [INFO]  * Restarting with stat
+2025-10-05 17:21:14,923 [WARNING]  * Debugger is active!
+2025-10-05 17:21:14,924 [INFO]  * Debugger PIN: 711-163-949
+2025-10-05 17:21:17,938 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:17] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-05 17:21:18,014 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:18] "GET /perfil HTTP/1.1" 200 -
+2025-10-05 17:21:18,072 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:18] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:21:18,074 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:21:18,079 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:18] "[36mGET /static/img/star.png HTTP/1.1[0m" 304 -
+2025-10-05 17:21:18,079 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:18] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-05 17:21:18,080 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:18] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-05 17:21:21,019 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:21] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-10-05 17:21:21,026 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:21] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-05 17:21:21,040 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:21] "GET /login HTTP/1.1" 200 -
+2025-10-05 17:21:21,090 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:21] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:21:21,092 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:21:21,092 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:21] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-10-05 17:21:21,122 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:21] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-10-05 17:21:26,543 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-05 17:21:26,573 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:26] "GET / HTTP/1.1" 200 -
+2025-10-05 17:21:26,619 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:21:26,620 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:26] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:21:30,340 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:30] "GET /settings/1 HTTP/1.1" 200 -
+2025-10-05 17:21:30,389 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:21:30,391 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:30] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:21:30,393 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:30] "[36mGET /static/js/settings_handling.js HTTP/1.1[0m" 304 -
+2025-10-05 17:21:30,394 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:30] "[36mGET /static/js/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-10-05 17:21:30,421 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:30] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-10-05 17:21:36,403 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:36] "POST /incentive HTTP/1.1" 200 -
+2025-10-05 17:21:46,285 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:46] "[35m[1mPOST /restriction HTTP/1.1[0m" 201 -
+2025-10-05 17:21:54,299 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:54] "[35m[1mDELETE /restriction/1/49 HTTP/1.1[0m" 500 -
+2025-10-05 17:21:59,145 [INFO] 127.0.0.1 - - [05/Oct/2025 17:21:59] "[35m[1mDELETE /incentive/1/67 HTTP/1.1[0m" 500 -
+2025-10-05 17:22:45,659 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:45] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-10-05 17:22:45,666 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:45] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-05 17:22:45,675 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:45] "GET /login HTTP/1.1" 200 -
+2025-10-05 17:22:45,723 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:45] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:22:45,725 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:22:45,726 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:45] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-10-05 17:22:45,773 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:45] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-10-05 17:22:53,280 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-05 17:22:53,287 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:53] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-05 17:22:53,301 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:53] "GET /perfil HTTP/1.1" 200 -
+2025-10-05 17:22:53,344 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:53] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:22:53,345 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:22:53,374 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:53] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-05 17:22:53,375 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:53] "[36mGET /static/img/star.png HTTP/1.1[0m" 304 -
+2025-10-05 17:22:53,376 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:53] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-05 17:22:58,328 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:58] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-10-05 17:22:58,333 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-05 17:22:58,345 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:58] "GET /login HTTP/1.1" 200 -
+2025-10-05 17:22:58,392 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:58] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:22:58,395 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:22:58,396 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:58] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-10-05 17:22:58,440 [INFO] 127.0.0.1 - - [05/Oct/2025 17:22:58] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-10-05 17:24:10,815 [INFO] 127.0.0.1 - - [05/Oct/2025 17:24:10] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-05 17:24:10,827 [INFO] 127.0.0.1 - - [05/Oct/2025 17:24:10] "GET / HTTP/1.1" 200 -
+2025-10-05 17:24:10,866 [INFO] 127.0.0.1 - - [05/Oct/2025 17:24:10] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:24:10,867 [INFO] 127.0.0.1 - - [05/Oct/2025 17:24:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:24:12,812 [INFO] 127.0.0.1 - - [05/Oct/2025 17:24:12] "GET /settings/1 HTTP/1.1" 200 -
+2025-10-05 17:24:12,856 [INFO] 127.0.0.1 - - [05/Oct/2025 17:24:12] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:24:12,860 [INFO] 127.0.0.1 - - [05/Oct/2025 17:24:12] "[36mGET /static/js/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-10-05 17:24:12,861 [INFO] 127.0.0.1 - - [05/Oct/2025 17:24:12] "[36mGET /static/js/settings_handling.js HTTP/1.1[0m" 304 -
+2025-10-05 17:24:12,862 [INFO] 127.0.0.1 - - [05/Oct/2025 17:24:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:24:12,883 [INFO] 127.0.0.1 - - [05/Oct/2025 17:24:12] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-10-05 17:24:21,254 [INFO] 127.0.0.1 - - [05/Oct/2025 17:24:21] "[35m[1mDELETE /incentive/1/67 HTTP/1.1[0m" 500 -
+2025-10-05 17:26:22,855 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-10-05 17:26:22,983 [INFO]  * Restarting with stat
+2025-10-05 17:26:23,452 [WARNING]  * Debugger is active!
+2025-10-05 17:26:23,453 [INFO]  * Debugger PIN: 711-163-949
+2025-10-05 17:26:27,524 [INFO] 127.0.0.1 - - [05/Oct/2025 17:26:27] "[35m[1mDELETE /incentive/1/67 HTTP/1.1[0m" 500 -
+2025-10-05 17:26:34,382 [INFO] 127.0.0.1 - - [05/Oct/2025 17:26:34] "[35m[1mDELETE /restriction/1/48 HTTP/1.1[0m" 500 -
+2025-10-05 17:26:38,099 [INFO] 127.0.0.1 - - [05/Oct/2025 17:26:38] "[35m[1mDELETE /incentive/1/67 HTTP/1.1[0m" 500 -
+2025-10-05 17:26:43,639 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-10-05 17:26:43,756 [INFO]  * Restarting with stat
+2025-10-05 17:26:44,225 [WARNING]  * Debugger is active!
+2025-10-05 17:26:44,226 [INFO]  * Debugger PIN: 711-163-949
+2025-10-05 17:26:47,525 [INFO] 127.0.0.1 - - [05/Oct/2025 17:26:47] "[35m[1mDELETE /incentive/1/67 HTTP/1.1[0m" 500 -
+2025-10-05 17:31:53,179 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-10-05 17:31:53,292 [INFO]  * Restarting with stat
+2025-10-05 17:31:53,761 [WARNING]  * Debugger is active!
+2025-10-05 17:31:53,761 [INFO]  * Debugger PIN: 711-163-949
+2025-10-05 17:31:57,032 [INFO] 127.0.0.1 - - [05/Oct/2025 17:31:57] "[31m[1mDELETE /incentive/1/67 HTTP/1.1[0m" 401 -
+2025-10-05 17:32:23,032 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-10-05 17:32:23,147 [INFO]  * Restarting with stat
+2025-10-05 17:32:23,622 [WARNING]  * Debugger is active!
+2025-10-05 17:32:23,622 [INFO]  * Debugger PIN: 711-163-949
+2025-10-05 17:32:28,669 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-10-05 17:32:28,773 [INFO]  * Restarting with stat
+2025-10-05 17:32:29,244 [WARNING]  * Debugger is active!
+2025-10-05 17:32:29,244 [INFO]  * Debugger PIN: 711-163-949
+2025-10-05 17:32:31,462 [INFO] 127.0.0.1 - - [05/Oct/2025 17:32:31] "[35m[1mDELETE /incentive/1/67 HTTP/1.1[0m" 204 -
+2025-10-05 17:32:53,476 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-10-05 17:32:53,609 [INFO]  * Restarting with stat
+2025-10-05 17:32:54,097 [WARNING]  * Debugger is active!
+2025-10-05 17:32:54,097 [INFO]  * Debugger PIN: 711-163-949
+2025-10-05 17:32:55,419 [INFO] 127.0.0.1 - - [05/Oct/2025 17:32:55] "[35m[1mDELETE /restriction/1/49 HTTP/1.1[0m" 204 -
+2025-10-05 17:33:02,204 [INFO] 127.0.0.1 - - [05/Oct/2025 17:33:02] "POST /incentive HTTP/1.1" 200 -
+2025-10-05 17:33:05,300 [INFO] 127.0.0.1 - - [05/Oct/2025 17:33:05] "[35m[1mPOST /restriction HTTP/1.1[0m" 201 -
+2025-10-05 17:34:18,906 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-10-05 17:34:19,020 [INFO]  * Restarting with stat
+2025-10-05 17:34:19,495 [WARNING]  * Debugger is active!
+2025-10-05 17:34:19,495 [INFO]  * Debugger PIN: 711-163-949
+2025-10-05 17:34:25,551 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-10-05 17:34:25,659 [INFO]  * Restarting with stat
+2025-10-05 17:34:26,132 [WARNING]  * Debugger is active!
+2025-10-05 17:34:26,132 [INFO]  * Debugger PIN: 711-163-949
+2025-10-05 17:34:34,666 [INFO] 127.0.0.1 - - [05/Oct/2025 17:34:34] "[31m[1mDELETE /incentive/1/68 HTTP/1.1[0m" 401 -
+2025-10-05 17:34:49,216 [INFO] 127.0.0.1 - - [05/Oct/2025 17:34:49] "[31m[1mDELETE /incentive/1/68 HTTP/1.1[0m" 401 -
+2025-10-05 17:34:51,430 [INFO] 127.0.0.1 - - [05/Oct/2025 17:34:51] "[31m[1mDELETE /incentive/1/68 HTTP/1.1[0m" 401 -
+2025-10-05 17:34:52,817 [INFO] 127.0.0.1 - - [05/Oct/2025 17:34:52] "GET /settings/1 HTTP/1.1" 200 -
+2025-10-05 17:34:52,869 [INFO] 127.0.0.1 - - [05/Oct/2025 17:34:52] "GET /static/js/settings_fetch.js HTTP/1.1" 200 -
+2025-10-05 17:34:52,870 [INFO] 127.0.0.1 - - [05/Oct/2025 17:34:52] "[36mGET /static/js/settings_handling.js HTTP/1.1[0m" 304 -
+2025-10-05 17:34:52,870 [INFO] 127.0.0.1 - - [05/Oct/2025 17:34:52] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:34:52,871 [INFO] 127.0.0.1 - - [05/Oct/2025 17:34:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:34:52,902 [INFO] 127.0.0.1 - - [05/Oct/2025 17:34:52] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-10-05 17:35:21,320 [INFO] 127.0.0.1 - - [05/Oct/2025 17:35:21] "GET /settings/1 HTTP/1.1" 200 -
+2025-10-05 17:35:21,353 [INFO] 127.0.0.1 - - [05/Oct/2025 17:35:21] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:35:21,355 [INFO] 127.0.0.1 - - [05/Oct/2025 17:35:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:35:21,355 [INFO] 127.0.0.1 - - [05/Oct/2025 17:35:21] "GET /static/js/settings_fetch.js HTTP/1.1" 200 -
+2025-10-05 17:35:21,357 [INFO] 127.0.0.1 - - [05/Oct/2025 17:35:21] "[36mGET /static/js/settings_handling.js HTTP/1.1[0m" 304 -
+2025-10-05 17:35:21,374 [INFO] 127.0.0.1 - - [05/Oct/2025 17:35:21] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-10-05 17:35:23,311 [INFO] 127.0.0.1 - - [05/Oct/2025 17:35:23] "[31m[1mDELETE /incentive/1/68 HTTP/1.1[0m" 401 -
+2025-10-05 17:35:25,102 [INFO] 127.0.0.1 - - [05/Oct/2025 17:35:25] "[31m[1mDELETE /incentive/1/68 HTTP/1.1[0m" 401 -
+2025-10-05 17:35:58,986 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-10-05 17:35:59,105 [INFO]  * Restarting with stat
+2025-10-05 17:35:59,589 [WARNING]  * Debugger is active!
+2025-10-05 17:35:59,590 [INFO]  * Debugger PIN: 711-163-949
+2025-10-05 17:36:01,127 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:01] "GET /settings/1 HTTP/1.1" 200 -
+2025-10-05 17:36:01,173 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:01] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:01,176 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:01] "[36mGET /static/js/settings_handling.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:01,176 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:01] "GET /static/js/settings_fetch.js HTTP/1.1" 200 -
+2025-10-05 17:36:01,179 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:36:01,206 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:01] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-10-05 17:36:02,614 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:02] "[31m[1mDELETE /incentive/1/68 HTTP/1.1[0m" 401 -
+2025-10-05 17:36:04,510 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:04] "[31m[1mDELETE /incentive/1/68 HTTP/1.1[0m" 401 -
+2025-10-05 17:36:05,278 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:05] "GET /settings/1 HTTP/1.1" 200 -
+2025-10-05 17:36:05,317 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:05] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:05,317 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:05] "[36mGET /static/js/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:05,318 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:05] "[36mGET /static/js/settings_handling.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:05,319 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:36:05,338 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:05] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-10-05 17:36:06,355 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:06] "[31m[1mDELETE /incentive/1/68 HTTP/1.1[0m" 401 -
+2025-10-05 17:36:08,100 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:08] "[31m[1mDELETE /incentive/1/68 HTTP/1.1[0m" 401 -
+2025-10-05 17:36:29,262 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:29] "GET /settings/1 HTTP/1.1" 200 -
+2025-10-05 17:36:29,296 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:29] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:29,296 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:36:29,298 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:29] "[36mGET /static/js/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:29,299 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:29] "[36mGET /static/js/settings_handling.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:29,320 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:29] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-10-05 17:36:30,540 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:30] "[31m[1mDELETE /incentive/1/68 HTTP/1.1[0m" 401 -
+2025-10-05 17:36:42,461 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:42] "GET /settings/1 HTTP/1.1" 200 -
+2025-10-05 17:36:42,497 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:42] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:42,499 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:36:42,501 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:42] "[36mGET /static/js/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:42,502 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:42] "[36mGET /static/js/settings_handling.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:42,520 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:42] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-10-05 17:36:43,221 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:43] "GET /settings/1 HTTP/1.1" 200 -
+2025-10-05 17:36:43,254 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:43] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-10-05 17:36:43,255 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:43] "GET /static/js/global.js HTTP/1.1" 200 -
+2025-10-05 17:36:43,256 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:43] "GET /static/js/settings_handling.js HTTP/1.1" 200 -
+2025-10-05 17:36:43,257 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:43] "GET /static/js/settings_fetch.js HTTP/1.1" 200 -
+2025-10-05 17:36:43,344 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:43] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-10-05 17:36:44,971 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:44] "GET /settings/1 HTTP/1.1" 200 -
+2025-10-05 17:36:45,040 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:45] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:45,042 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:36:45,047 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:45] "[36mGET /static/js/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:45,048 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:45] "[36mGET /static/js/settings_handling.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:45,103 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:45] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-10-05 17:36:48,204 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:48] "[31m[1mDELETE /incentive/1/68 HTTP/1.1[0m" 401 -
+2025-10-05 17:36:56,317 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:56] "GET /settings/1 HTTP/1.1" 200 -
+2025-10-05 17:36:56,362 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:36:56,365 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:56] "[36mGET /static/js/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:56,365 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:56] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:56,367 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:56] "[36mGET /static/js/settings_handling.js HTTP/1.1[0m" 304 -
+2025-10-05 17:36:56,388 [INFO] 127.0.0.1 - - [05/Oct/2025 17:36:56] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-10-05 17:37:00,708 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:00] "[31m[1mDELETE /incentive/1/68 HTTP/1.1[0m" 401 -
+2025-10-05 17:37:10,259 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-10-05 17:37:10,378 [INFO]  * Restarting with stat
+2025-10-05 17:37:10,851 [WARNING]  * Debugger is active!
+2025-10-05 17:37:10,851 [INFO]  * Debugger PIN: 711-163-949
+2025-10-05 17:37:11,868 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-10-05 17:37:11,965 [INFO]  * Restarting with stat
+2025-10-05 17:37:12,457 [WARNING]  * Debugger is active!
+2025-10-05 17:37:12,458 [INFO]  * Debugger PIN: 711-163-949
+2025-10-05 17:37:13,475 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-10-05 17:37:13,561 [INFO]  * Restarting with stat
+2025-10-05 17:37:14,038 [WARNING]  * Debugger is active!
+2025-10-05 17:37:14,038 [INFO]  * Debugger PIN: 711-163-949
+2025-10-05 17:37:17,683 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:17] "GET /settings/1 HTTP/1.1" 200 -
+2025-10-05 17:37:17,732 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:17] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:37:17,734 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:37:17,736 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:17] "[36mGET /static/js/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-10-05 17:37:17,737 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:17] "[36mGET /static/js/settings_handling.js HTTP/1.1[0m" 304 -
+2025-10-05 17:37:17,762 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:17] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-10-05 17:37:21,151 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:21] "POST /incentive HTTP/1.1" 200 -
+2025-10-05 17:37:23,545 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:23] "[35m[1mDELETE /incentive/1/69 HTTP/1.1[0m" 500 -
+2025-10-05 17:37:26,018 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:26] "[35m[1mPOST /restriction HTTP/1.1[0m" 201 -
+2025-10-05 17:37:26,991 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:26] "[35m[1mDELETE /restriction/1/51 HTTP/1.1[0m" 500 -
+2025-10-05 17:37:45,332 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-10-05 17:37:45,469 [INFO]  * Restarting with stat
+2025-10-05 17:37:45,943 [WARNING]  * Debugger is active!
+2025-10-05 17:37:45,944 [INFO]  * Debugger PIN: 711-163-949
+2025-10-05 17:37:48,973 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/gamificacion_routes.py', reloading
+2025-10-05 17:37:49,069 [INFO]  * Restarting with stat
+2025-10-05 17:37:49,541 [WARNING]  * Debugger is active!
+2025-10-05 17:37:49,541 [INFO]  * Debugger PIN: 711-163-949
+2025-10-05 17:37:49,658 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:49] "GET /settings/1 HTTP/1.1" 200 -
+2025-10-05 17:37:49,696 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:49] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-05 17:37:49,699 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:49] "[36mGET /static/js/settings_fetch.js HTTP/1.1[0m" 304 -
+2025-10-05 17:37:49,700 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:49] "[36mGET /static/js/settings_handling.js HTTP/1.1[0m" 304 -
+2025-10-05 17:37:49,701 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-05 17:37:49,728 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:49] "PUT /country/1/11 HTTP/1.1" 200 -
+2025-10-05 17:37:50,672 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:50] "[35m[1mDELETE /incentive/1/69 HTTP/1.1[0m" 204 -
+2025-10-05 17:37:51,695 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:51] "[35m[1mDELETE /restriction/1/51 HTTP/1.1[0m" 204 -
+2025-10-05 17:37:52,079 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:52] "[35m[1mDELETE /restriction/1/50 HTTP/1.1[0m" 204 -
+2025-10-05 17:37:53,215 [INFO] 127.0.0.1 - - [05/Oct/2025 17:37:53] "[35m[1mDELETE /incentive/1/68 HTTP/1.1[0m" 204 -
