@@ -1,7 +1,8 @@
 from flask import request, jsonify, Blueprint
 
+from app.services.gamificacion_service import GamificacionService
 from app.services.grade_incentive_service import GradeIncentiveRepository, GradeIncentive
-from app.models import Incentivos, Restricciones
+from app.models import Restricciones
 from app.utils.helpers import id_from_json, id_from_kwargs, relation_required
 
 from .. import db
@@ -13,61 +14,67 @@ gamificacion_bp = Blueprint('gamificacion', __name__)
 @relation_required(id_from_json)
 def add_incentive():
     data = request.get_json()
-    estudiante_id = data.get('estudiante_id')
-    monto = data.get('monto')
-    nota = data.get('nota')
-    simbolo = data.get('simbolo')
-    moneda = data.get('moneda')
+    student_id = data.get('estudiante_id')
+    amount = data.get('monto')
+    grade = data.get('nota')
+    symbol = data.get('simbolo')
+    currency = data.get('moneda')
 
     required_fields = ['estudiante_id', 'monto', 'nota', 'simbolo', 'moneda']
     
     for field in required_fields:
-        if not data.get(field):
+        if field not in data:
             return jsonify({"error": f"{field} missing"}), 400
     
     repo = GradeIncentiveRepository(db.session)
-    grade_incentive = GradeIncentive(estudiante_id, repo)
-    grade_incentive.add_incentive(monto, nota, simbolo, moneda)
+    grade_incentive = GradeIncentive(student_id, repo)
+    grade_incentive.add_incentive(amount, grade, symbol, currency)
 
-    ultimo = Incentivos.query.filter_by(usuario_id=estudiante_id).order_by(Incentivos.id.desc()).first()
+    last_one = GamificacionService.get_last_incentive(student_id)
 
-    return jsonify({"id": ultimo.id, "incentivo": ultimo.condicion, "estudiante_id": estudiante_id }), 200
+    return jsonify({"id": last_one.id, "incentivo": last_one.condicion, "estudiante_id": student_id }), 200
         
 @gamificacion_bp.route("/restriction", methods=["POST"])
 @relation_required(id_from_json)
 def add_restriction():
     data = request.get_json()
-    estudiante_id = data.get('estudiante_id')
-    mensaje = data.get('mensaje')
+    student_id = data.get('estudiante_id')
+    message = data.get('mensaje')
 
-    if not estudiante_id:
+    if not student_id:
         return jsonify({"error": "estudiante_id missing"}), 400
     
-    if not mensaje:
+    if not message:
         return jsonify({"error": "mensaje missing"}), 400
 
     repo = GradeIncentiveRepository(db.session)
-    grade_incentive = GradeIncentive(estudiante_id, repo)
-    grade_incentive.add_restriction(mensaje)
+    grade_incentive = GradeIncentive(student_id, repo)
+    grade_incentive.add_restriction(message)
 
-    ultima = Restricciones.query.filter_by(usuario_id=estudiante_id).order_by(Restricciones.id.desc()).first()
+    last_one = Restricciones.query.filter_by(usuario_id=student_id).order_by(Restricciones.id.desc()).first()
 
-    return jsonify({"id": ultima.id, "restriccion": ultima.restriccion, "estudiante_id": estudiante_id}), 201
+    return jsonify({"id": last_one.id, "restriccion": last_one.restriccion, "estudiante_id": student_id}), 201
 
 @gamificacion_bp.route("/incentive/<int:estudiante_id>/<incentive_id>", methods=["DELETE"])
 @relation_required(id_from_kwargs)
-def delete_incentive(estudiante_id, incentive_id):
+def delete_incentive(student_id, incentive_id):
     repo = GradeIncentiveRepository(db.session)
-    grade_incentive = GradeIncentive(estudiante_id, repo)
-    grade_incentive.remove_incentive(incentive_id)
-    
+    grade_incentive = GradeIncentive(student_id, repo)
+    try:
+        grade_incentive.remove_incentive(incentive_id)
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 404
+
     return jsonify({"success": "ok"}), 204
 
 @gamificacion_bp.route("/restriction/<int:estudiante_id>/<int:restriction_id>", methods=["DELETE"])
 @relation_required(id_from_kwargs)
-def delete_restriction(estudiante_id, restriction_id):
+def delete_restriction(student_id, restriction_id):
     repo = GradeIncentiveRepository(db.session)
-    grade_incentive = GradeIncentive(estudiante_id, repo)
-    grade_incentive.remove_restriction(restriction_id)
-    
+    grade_incentive = GradeIncentive(student_id, repo)
+    try:
+        grade_incentive.remove_restriction(restriction_id)
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 404
+
     return jsonify({"success": "ok"}), 204

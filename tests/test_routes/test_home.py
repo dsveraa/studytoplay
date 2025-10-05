@@ -1,5 +1,4 @@
 import pytest
-from flask import session
 from app.models.users_model import Usuario, Rol
 from app import db
 

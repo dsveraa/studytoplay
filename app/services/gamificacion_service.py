@@ -20,3 +20,6 @@ class GamificacionService:
         restrictions_obj = GamificacionRepository.get_restrictions_obj_by_user_id(user_id)
         return [restriction.restriccion for restriction in restrictions_obj]
     
+    @staticmethod
+    def get_last_incentive(user_id):
+        return GamificacionRepository.get_last_incentive_by_user_id(user_id)

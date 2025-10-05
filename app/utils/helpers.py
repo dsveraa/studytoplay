@@ -22,6 +22,8 @@ def relation_required(get_estudiante_id):
             supervisor_id = session.get("usuario_id")
             estudiante_id = get_estudiante_id(*args, **kwargs)
 
+            print(f"Supervisor ID: {supervisor_id}, Estudiante ID: {estudiante_id}")
+
             relacion = SupervisorEstudiante.query.filter_by(
                 supervisor_id=supervisor_id,
                 estudiante_id=estudiante_id

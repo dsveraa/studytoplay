@@ -1,9 +1,7 @@
 import pytest
-from flask import session
 from werkzeug.security import generate_password_hash
 from app import db
 from app.models import Usuario, Rol, NuevaNotificacion
-from app.services.user_service import UserService
 
 
 @pytest.fixture
@@ -19,7 +17,6 @@ def test_registro_view_default_role(client, roles):
     student, _ = roles
     resp = client.get("/registro")
     assert resp.status_code == 200
-    # Debe tener rol_default.id
     assert str(student.id).encode() in resp.data
 
 
