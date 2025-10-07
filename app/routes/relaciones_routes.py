@@ -13,7 +13,7 @@ from .. import db
 
 relaciones_bp = Blueprint('relaciones', __name__)
 
-@relaciones_bp.route('/received_requests', methods=['GET'])
+@relaciones_bp.route('/received_requests')
 @login_required
 def received_requests():
     usuario_id = session.get('usuario_id')
@@ -68,18 +68,23 @@ def request_response():
 
     solicitud = SolicitudVinculacion.query.filter_by(id=solicitud_id, estudiante_id=estudiante_id).order_by(desc(SolicitudVinculacion.fecha_solicitud)).first()
     
-
     if not solicitud:
         return jsonify({'status': 'failed', 'error': 'Request not found'}), 404
     
     solicitud.estado = response
 
     if response == 'aceptada':
-        relacion = SupervisorEstudiante(
+        relacion_existente = SupervisorEstudiante.query.filter_by(
             supervisor_id=solicitud.supervisor_id,
             estudiante_id=solicitud.estudiante_id
-        )
-        db.session.add(relacion)
+        ).first()
+
+        if not relacion_existente:
+            relacion = SupervisorEstudiante(
+                supervisor_id=solicitud.supervisor_id,
+                estudiante_id=solicitud.estudiante_id
+            )
+            db.session.add(relacion)
     
     else:
         solicitud.estado = 'rechazada'
@@ -114,7 +119,7 @@ def request_response():
 def view_link_request():
     return render_template("/s_link_request.html")
 
-@relaciones_bp.route('/link_request', methods=['POST']) # envía solicitud de vinculación escribiendo datos en tabla solicitud_vinculacion
+@relaciones_bp.route('/link_request', methods=['POST'])
 @supervisor_required
 def send_link_request():
     supervisor_id = session.get('supervisor_id')
@@ -131,4 +136,3 @@ def send_link_request():
     except ValueError as e:
         flash(f'Operation failed: {str(e)}', 'error')
         return redirect(url_for('relaciones.send_link_request'))
-        

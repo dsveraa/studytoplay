@@ -14,6 +14,8 @@ def app():
     app.config['TESTING'] = True
 
     with app.app_context():
+        db.session.execute(text("TRUNCATE TABLE supervisor_estudiante RESTART IDENTITY CASCADE"))
+        db.session.execute(text("TRUNCATE TABLE solicitud_vinculacion RESTART IDENTITY CASCADE"))
         db.session.execute(text("TRUNCATE TABLE usuarios RESTART IDENTITY CASCADE"))
         db.session.execute(text("TRUNCATE TABLE roles RESTART IDENTITY CASCADE"))
         db.session.commit()
@@ -94,4 +96,31 @@ def supervisor_and_student():
     db.session.add(relacion)
     db.session.commit()
 
+    return supervisor, estudiante
+
+@pytest.fixture
+def supervisor_and_student_no_relation():
+    # Crear roles
+    rol_supervisor = Rol(nombre="supervisor")
+    rol_estudiante = Rol(nombre="student")
+    db.session.add_all([rol_supervisor, rol_estudiante])
+    db.session.commit()
+
+    # Crear usuarios
+    supervisor = Usuario(
+        nombre="Supervisor",
+        correo="sup@example.com",
+        contrasena="hash",
+        rol_id=rol_supervisor.id
+    )
+    estudiante = Usuario(
+        nombre="Estudiante",
+        correo="est@example.com",
+        contrasena="hash",
+        rol_id=rol_estudiante.id
+    )
+    db.session.add_all([supervisor, estudiante])
+    db.session.commit()
+
+    # No crear la relación supervisor-estudiante
     return supervisor, estudiante
