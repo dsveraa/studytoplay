@@ -29,6 +29,17 @@ class NotificationRepository:
             .order_by(desc(Notificaciones.fecha))
             .all()
         )
+    
+    @staticmethod
+    def get_link_request_notification_object(student_id, request_id):
+        return (
+            Notificaciones.query
+            .filter(
+                Notificaciones.usuario_id == student_id,
+                Notificaciones.notificacion.like(f'%acciones-{request_id}%')
+            )
+            .first()
+        )
 
     def commit(self):
         self.db.commit()
@@ -60,3 +71,16 @@ class Notification:
     def uncheck_new_notification(self):
         self.repo.uncheck_new_notification(self.id)
         self.repo.commit()
+
+    @staticmethod
+    def delete_link_request_icons(student_id, request_id):
+        notification = NotificationRepository.get_link_request_notification_object(student_id, request_id)
+
+        if notification:
+            import re
+            notification.notificacion = re.sub(
+                rf'<span id="acciones-{request_id}".*?</span>',
+                '',
+                notification.notificacion,
+                flags=re.DOTALL
+            )

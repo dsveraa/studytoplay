@@ -4,7 +4,7 @@ from app.repositories.supervisor_student_respository import SupervisorStudentRep
 
 class LinkRequestService:
     @staticmethod
-    def link_request(super_id, student_id):
+    def make_link_request(super_id, student_id):
         relation = SupervisorStudentRepository.get_relation(super_id, student_id)
         
         if relation:
@@ -16,4 +16,5 @@ class LinkRequestService:
             raise ValueError('There is a pending link request for this student.')
             
         query = LinkRequestRepository.set_query(super_id, student_id)
-        LinkRequestRepository.commit(query)
+        LinkRequestRepository.add_link_request(query)
+        LinkRequestRepository.commit()

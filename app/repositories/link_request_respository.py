@@ -23,8 +23,10 @@ class LinkRequestRepository:
             )
     
     @staticmethod
-    def commit(query):
+    def add_link_request(query):
         db.session.add(query)
-        db.session.commit()
 
-    
+    @staticmethod
+    def commit():
+        db.session.commit()
+        
