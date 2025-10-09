@@ -35,7 +35,7 @@ class RegistroNotas(db.Model):
     usuario_id = Column(Integer, ForeignKey('usuarios.id', ondelete="CASCADE"), nullable=False)
     asignatura_id = Column(Integer, ForeignKey('asignaturas.id'), nullable=False)
     tema = Column(String, nullable=False)
-    nota = Column(Float, nullable=False)
+    nota = Column(String, nullable=False)
     fecha = Column(DateTime, nullable=False)
     estado = Column(Boolean, default=False, nullable=False)
 

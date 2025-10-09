@@ -23,9 +23,10 @@ def get_incentives(id):
 
 def eval_amount(incentivos, nota):
     incentivos = sorted(incentivos, key=lambda x: x["nota"])
+    # printn(incentivos)
     monto = None
     for incentivo in incentivos:
-        if float(nota) >= float(incentivo["nota"]):
+        if nota >= incentivo["nota"]:
             monto = incentivo["monto"]        
     return monto
         
