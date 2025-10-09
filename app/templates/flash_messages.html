@@ -1,6 +1,6 @@
-{% with messages = get_flashed_messages(with_categories=true) %}
-  {% if messages %}
-    <div id="flash-messages" class="hidden">
+<div id="flash-messages" class="hidden">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
       {% for category, message in messages %}
         {% set bootstrap_class = {
             "error": "danger",
@@ -12,7 +12,8 @@
           {{ message | safe }}
         </div>
       {% endfor %}
-    </div>
-  {% endif %}
-{% endwith %}
+    {% endif %}
+  {% endwith %}
+</div>
+
 

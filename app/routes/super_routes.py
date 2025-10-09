@@ -55,7 +55,7 @@ def grade_incentive_warning(id):
 @relation_required(id_from_kwargs)
 def add_grade_incentive(id):
     data = request.get_json()
-    
+
     asignatura = data.get('asignatura')
     tema = data.get('tema')
     nota = data.get('nota')
@@ -67,7 +67,7 @@ def add_grade_incentive(id):
         tema=tema,
         nota=nota,
         fecha=fecha,
-        )
+    )
     db.session.add(registro_notas)
     db.session.commit()
 
@@ -79,7 +79,9 @@ def add_grade_incentive(id):
     notification = Notification(id, repo)
     notification.notify_grade(nota, asignatura_nombre, 'add', amount, currency, symbol)
 
-    return redirect(url_for("super.grade_incentive", id=id))  
+    flash_msg = f"A new grade has been submited. Subject: <b>{asignatura_nombre}</b>, grade: <b>{nota}</b>"
+    return jsonify({"flash": {"message": flash_msg, "category": "success"}})
+
     
 @super_bp.route("/payment", methods=["PUT"])
 @supervisor_required

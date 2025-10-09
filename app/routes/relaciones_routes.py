@@ -1,7 +1,7 @@
 from flask import flash, redirect, render_template, request, session, jsonify, Blueprint, url_for
 from sqlalchemy import desc
 
-from app.models import Usuario, SolicitudVinculacion, SupervisorEstudiante, Notificaciones
+from app.models import Usuario, SolicitudVinculacion, SupervisorEstudiante, Notificaciones # no eliminar, para que pasen los tests
 from app.repositories.user_repository import UserRepository
 from app.services.link_request_service import LinkRequestService
 from app.services.notifications_service import Notification
@@ -9,7 +9,7 @@ from app.services.relations_service import RelationsService
 from app.services.user_service import UserService
 from app.utils.helpers import login_required, supervisor_required, send_link_request_notification, enviar_notificacion_respuesta_lr
 
-from .. import db
+from .. import db # no eliminar, para que pasen los tests
 
 
 relaciones_bp = Blueprint('relaciones', __name__)

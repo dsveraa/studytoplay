@@ -12,38 +12,40 @@
         <p>{{ name | capitalize }}</p>
     </div>
     
-    <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
-
-        <div class="d-flex flex-column" style="max-width: 150px;">
-            <label for="asignatura" class="form-label">Subject</label>
-            <select class="form-control mb-2" name="asignatura" id="asignatura" required>
-                <option value="">Select a subject...</option>
-                {% for asignatura in asignaturas %}
-                  <option value="{{ asignatura.id }}">{{ asignatura.nombre | capitalize }}</option>
-                {% endfor %}
-            </select>
-        </div>
+    <form id="grade-form">
+        <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
     
-        <div class="d-flex flex-column" style="max-width: 160px;">
-            <label for="fecha" class="form-label">Date</label>
-            <input class="form-control mb-2" type="date" id="fecha" name="fecha" placeholder="fecha">
+            <div class="d-flex flex-column" style="max-width: 150px;">
+                <label for="asignatura" class="form-label">Subject</label>
+                <select class="form-control mb-2" name="asignatura" id="asignatura" required>
+                    <option value="">Select a subject...</option>
+                    {% for asignatura in asignaturas %}
+                      <option value="{{ asignatura.id }}">{{ asignatura.nombre | capitalize }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        
+            <div class="d-flex flex-column" style="max-width: 160px;">
+                <label for="fecha" class="form-label">Date</label>
+                <input class="form-control mb-2" type="date" id="fecha" name="fecha" placeholder="fecha">
+            </div>
+        
+            <div class="d-flex flex-column" style="max-width: 50px;">
+                <label for="nota" class="form-label">Grade</label>
+                <select class="form-control mb-2" name="nota" id="nota">
+                    {% for grade in best_grades %}
+                      <option value="{{ grade }}">{{ grade }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        
+            <div class="d-flex flex-column flex-grow-1">
+                <label for="tema" class="form-label">Topic</label>
+                <input class="form-control mb-2" type="text" id="tema" name="tema" placeholder="Topic">
+            </div>
+        
         </div>
-    
-        <div class="d-flex flex-column" style="max-width: 50px;">
-            <label for="nota" class="form-label">Grade</label>
-            <select class="form-control mb-2" name="nota" id="nota">
-                {% for grade in best_grades %}
-                  <option value="{{ grade }}">{{ grade }}</option>
-                {% endfor %}
-            </select>
-        </div>
-    
-        <div class="d-flex flex-column flex-grow-1">
-            <label for="tema" class="form-label">Topic</label>
-            <input class="form-control mb-2" type="text" id="tema" name="tema" placeholder="Topic">
-        </div>
-    
-    </div>
+    </form>
     
     <div class="d-flex justify-content-end">
         <button class="btn custom-btn-2 mt-2 btn-loading" id="submit-grade-btn" onclick="">
@@ -87,7 +89,7 @@
               <th>Status</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="grades-list">
             {% for registro in registro_notas %}
                 <tr>
                     <td style="word-break: break-word;">{{ registro.asignatura.nombre | capitalize }}</td>
@@ -136,41 +138,58 @@ function markPaid() {
 }
 
 async function submitGrade() {
-    let asignatura = document.getElementById("asignatura").value
-    let tema = document.getElementById("tema").value
-    let nota = document.getElementById("nota").value
-    let fecha = document.getElementById("fecha").value
+    const select = document.getElementById("asignatura")
+    const asignaturaId = select.value
+    const asignaturaNombre = select.options[select.selectedIndex].text
+    const tema = document.getElementById("tema").value
+    const nota = document.getElementById("nota").value
+    const fecha = document.getElementById("fecha").value
 
     try {
         const response = await fetch("/grade_incentive/{{ user_id }}", {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                asignatura: asignatura,
-                tema: tema,
-                nota: nota,
-                fecha: fecha,
+                asignatura: asignaturaId,
+                tema,
+                nota,
+                fecha
             })
         })
 
-        if (!response.ok) {
-            throw new Error(`Error HTTP: ${response.status}`)
-        }
-        
-        if (response.redirected) {
-            window.location.href = response.url
-            return
-        }
+        if (!response.ok) throw new Error(`HTTP ${response.status}`)
 
         const data = await response.json()
-        console.log("Respuesta del servidor:", data)
+
+        if (data.flash) {
+            const flashDiv = document.getElementById("flash-messages")
+            flashDiv.innerHTML = `
+                <div class="alert alert-${data.flash.category} mt-2" role="alert">
+                    ${data.flash.message}
+                </div>
+            `
+            flashDiv.classList.remove("hidden")
+        }
+
+        const gradesList = document.getElementById("grades-list")
+        const row = document.createElement("tr")
+        row.innerHTML = `
+            <td style="word-break: break-word;">${asignaturaNombre}</td>
+            <td style="word-break: break-word;">${tema}</td>
+            <td>${nota}</td>
+            <td>Unpaid</td>
+        `
+        gradesList.insertBefore(row, gradesList.firstChild)
+
+        document.getElementById("grade-form").reset()
 
     } catch (error) {
-        console.error("Error al consultar los datos", error)
+        console.error("Error al enviar nota:", error)
     }
 }
+
+
+
 
 </script>
 {% endblock %}
