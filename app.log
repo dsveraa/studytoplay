@@ -40289,3 +40289,1230 @@ werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'relaci
 2025-10-09 19:48:36,188 [INFO]  * Restarting with stat
 2025-10-09 19:48:36,664 [WARNING]  * Debugger is active!
 2025-10-09 19:48:36,665 [INFO]  * Debugger PIN: 535-118-862
+2025-10-09 19:50:51,495 [INFO] 127.0.0.1 - - [09/Oct/2025 19:50:51] "GET /notifications HTTP/1.1" 200 -
+2025-10-09 19:50:51,573 [INFO] 127.0.0.1 - - [09/Oct/2025 19:50:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-09 19:50:51,574 [INFO] 127.0.0.1 - - [09/Oct/2025 19:50:51] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-09 19:50:56,330 [INFO] 127.0.0.1 - - [09/Oct/2025 19:50:56] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-09 19:50:56,364 [INFO] 127.0.0.1 - - [09/Oct/2025 19:50:56] "GET /perfil HTTP/1.1" 200 -
+2025-10-09 19:50:56,419 [INFO] 127.0.0.1 - - [09/Oct/2025 19:50:56] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-09 19:50:56,421 [INFO] 127.0.0.1 - - [09/Oct/2025 19:50:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-09 19:50:56,424 [INFO] 127.0.0.1 - - [09/Oct/2025 19:50:56] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-09 19:50:56,424 [INFO] 127.0.0.1 - - [09/Oct/2025 19:50:56] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 14:11:37,716 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.82:5000
+2025-10-14 14:11:37,716 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-14 14:11:37,717 [INFO]  * Restarting with stat
+2025-10-14 14:11:38,165 [WARNING]  * Debugger is active!
+2025-10-14 14:11:38,165 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 14:11:40,666 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:40] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-14 14:11:40,771 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:40] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 14:11:40,812 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 14:11:40,812 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:40] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:11:40,816 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:40] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 14:11:40,817 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:40] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 14:11:43,674 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:43] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-10-14 14:11:43,689 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:43] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-14 14:11:43,703 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:43] "GET /login HTTP/1.1" 200 -
+2025-10-14 14:11:43,751 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:43] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:11:43,752 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:43] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-10-14 14:11:43,753 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:43] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-10-14 14:11:43,798 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:43] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-10-14 14:11:48,448 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-14 14:11:48,475 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:48] "GET / HTTP/1.1" 200 -
+2025-10-14 14:11:48,518 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 14:11:48,518 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:48] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:11:51,778 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:51] "GET /student_records/3 HTTP/1.1" 200 -
+2025-10-14 14:11:51,819 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:51] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:11:51,819 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 14:11:54,172 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-14 14:11:55,521 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:55] "GET /grade_incentive/3 HTTP/1.1" 200 -
+2025-10-14 14:11:55,561 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:55] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:11:55,562 [INFO] 127.0.0.1 - - [14/Oct/2025 14:11:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 14:12:00,714 [INFO] amount dentro de get_currency_data: 10.0
+2025-10-14 14:12:00,733 [INFO] 127.0.0.1 - - [14/Oct/2025 14:12:00] "[32mPUT /payment HTTP/1.1[0m" 302 -
+2025-10-14 14:12:00,739 [INFO] 127.0.0.1 - - [14/Oct/2025 14:12:00] "[31m[1mPUT /grade_incentive/3 HTTP/1.1[0m" 405 -
+2025-10-14 14:12:00,761 [INFO] 127.0.0.1 - - [14/Oct/2025 14:12:00] "GET /grade_incentive/3 HTTP/1.1" 200 -
+2025-10-14 14:12:00,798 [INFO] 127.0.0.1 - - [14/Oct/2025 14:12:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 14:12:00,799 [INFO] 127.0.0.1 - - [14/Oct/2025 14:12:00] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:12:38,739 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-10-14 14:12:38,857 [INFO]  * Restarting with stat
+2025-10-14 14:12:39,313 [WARNING]  * Debugger is active!
+2025-10-14 14:12:39,314 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 14:12:41,338 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-10-14 14:12:41,437 [INFO]  * Restarting with stat
+2025-10-14 14:12:41,901 [WARNING]  * Debugger is active!
+2025-10-14 14:12:41,901 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 14:12:44,929 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-10-14 14:12:45,015 [INFO]  * Restarting with stat
+2025-10-14 14:12:45,472 [WARNING]  * Debugger is active!
+2025-10-14 14:12:45,473 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 14:12:48,501 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/super_routes.py', reloading
+2025-10-14 14:12:48,589 [INFO]  * Restarting with stat
+2025-10-14 14:12:49,066 [WARNING]  * Debugger is active!
+2025-10-14 14:12:49,066 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 14:13:40,461 [INFO] 127.0.0.1 - - [14/Oct/2025 14:13:40] "GET / HTTP/1.1" 200 -
+2025-10-14 14:13:40,530 [INFO] 127.0.0.1 - - [14/Oct/2025 14:13:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 14:13:40,531 [INFO] 127.0.0.1 - - [14/Oct/2025 14:13:40] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:13:46,255 [INFO] 127.0.0.1 - - [14/Oct/2025 14:13:46] "GET /grade_incentive/3 HTTP/1.1" 200 -
+2025-10-14 14:13:46,300 [INFO] 127.0.0.1 - - [14/Oct/2025 14:13:46] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:13:46,301 [INFO] 127.0.0.1 - - [14/Oct/2025 14:13:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 14:13:57,270 [INFO] amount dentro de get_currency_data: 20.0
+2025-10-14 14:13:57,282 [INFO] 127.0.0.1 - - [14/Oct/2025 14:13:57] "POST /grade_incentive/3 HTTP/1.1" 200 -
+2025-10-14 14:17:27,726 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 14:17:27,849 [INFO]  * Restarting with stat
+2025-10-14 14:17:28,323 [WARNING]  * Debugger is active!
+2025-10-14 14:17:28,323 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 14:18:29,894 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 14:18:30,000 [INFO]  * Restarting with stat
+2025-10-14 14:18:30,468 [WARNING]  * Debugger is active!
+2025-10-14 14:18:30,468 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 14:20:11,428 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 14:20:11,529 [INFO]  * Restarting with stat
+2025-10-14 14:20:11,996 [WARNING]  * Debugger is active!
+2025-10-14 14:20:11,997 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 14:20:15,025 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 14:20:15,142 [INFO]  * Restarting with stat
+2025-10-14 14:29:15,025 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.82:5000
+2025-10-14 14:29:15,025 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-14 14:29:15,025 [INFO]  * Restarting with stat
+2025-10-14 14:29:15,467 [WARNING]  * Debugger is active!
+2025-10-14 14:29:15,468 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 14:29:17,943 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:17] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-10-14 14:29:17,956 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:17] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-14 14:29:17,979 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:17] "GET /login HTTP/1.1" 200 -
+2025-10-14 14:29:18,030 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 14:29:18,034 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:18] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:29:18,035 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:18] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-10-14 14:29:18,057 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:18] "[36mGET /static/img/stp_login.webp HTTP/1.1[0m" 304 -
+2025-10-14 14:29:24,782 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-10-14 14:29:24,793 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:24] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-14 14:29:24,819 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:24] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 14:29:24,865 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 14:29:24,866 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:24] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:29:24,871 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:24] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 14:29:24,872 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:24] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 14:29:27,087 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:27] "GET /notifications HTTP/1.1" 200 -
+2025-10-14 14:29:27,134 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:27] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:29:27,134 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 14:29:30,479 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:30] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 14:29:30,526 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 14:29:30,528 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:30] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:29:30,529 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:30] "GET /static/js/timerAdd.js HTTP/1.1" 200 -
+2025-10-14 14:29:30,586 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:30] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 14:29:32,469 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 14:29:32,470 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:32] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 14:29:32,472 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:32] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 14:29:32,474 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:32] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-10-14 14:29:32,488 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:32] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-10-14 14:29:37,028 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:37] "GET /subject HTTP/1.1" 200 -
+2025-10-14 14:29:37,030 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:37] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 14:29:37,079 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:37] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:29:37,085 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 14:29:37,087 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:37] "GET /static/js/subjects.js HTTP/1.1" 200 -
+2025-10-14 14:29:37,090 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:37] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 14:29:39,587 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:39] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 14:29:39,638 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:39] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:29:39,641 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 14:29:39,641 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:39] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-10-14 14:29:39,688 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:39] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 14:29:43,917 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 14:29:43,918 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:43] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 14:29:43,919 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:43] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 14:29:43,922 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:43] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-10-14 14:29:43,930 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:43] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-10-14 14:29:55,567 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 14:29:55,568 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 14:29:55,571 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 14:29:55,588 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "POST /add_time HTTP/1.1" 200 -
+2025-10-14 14:29:55,595 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 14:29:55,606 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 14:29:55,615 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "GET /perfil?reload=true HTTP/1.1" 200 -
+2025-10-14 14:29:55,627 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 14:29:55,660 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:29:55,663 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 14:29:55,702 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 14:29:55,703 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 14:29:55,733 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 14:29:55,805 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 14:29:55,807 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:29:55,833 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 14:29:55,834 [INFO] 127.0.0.1 - - [14/Oct/2025 14:29:55] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 14:30:01,105 [INFO] 127.0.0.1 - - [14/Oct/2025 14:30:01] "GET /records HTTP/1.1" 200 -
+2025-10-14 14:30:01,153 [INFO] 127.0.0.1 - - [14/Oct/2025 14:30:01] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 14:30:01,155 [INFO] 127.0.0.1 - - [14/Oct/2025 14:30:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:06:15,387 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:06:15,508 [INFO]  * Restarting with stat
+2025-10-14 15:06:15,956 [WARNING]  * Debugger is active!
+2025-10-14 15:06:15,956 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:06:44,215 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:06:44,319 [INFO]  * Restarting with stat
+2025-10-14 15:06:44,789 [WARNING]  * Debugger is active!
+2025-10-14 15:06:44,789 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:06:46,813 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:06:46,898 [INFO]  * Restarting with stat
+2025-10-14 15:06:47,378 [WARNING]  * Debugger is active!
+2025-10-14 15:06:47,379 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:06:55,453 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:06:55,563 [INFO]  * Restarting with stat
+2025-10-14 15:06:56,034 [WARNING]  * Debugger is active!
+2025-10-14 15:06:56,034 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:06:58,058 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:06:58,141 [INFO]  * Restarting with stat
+2025-10-14 15:06:58,601 [WARNING]  * Debugger is active!
+2025-10-14 15:06:58,601 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:07:01,630 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:07:01,715 [INFO]  * Restarting with stat
+2025-10-14 15:07:02,182 [WARNING]  * Debugger is active!
+2025-10-14 15:07:02,182 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:07:36,502 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:07:36,606 [INFO]  * Restarting with stat
+2025-10-14 15:07:37,064 [WARNING]  * Debugger is active!
+2025-10-14 15:07:37,065 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:07:43,122 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:07:43,229 [INFO]  * Restarting with stat
+2025-10-14 15:07:43,704 [WARNING]  * Debugger is active!
+2025-10-14 15:07:43,704 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:07:48,750 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:07:48,857 [INFO]  * Restarting with stat
+2025-10-14 15:07:49,336 [WARNING]  * Debugger is active!
+2025-10-14 15:07:49,336 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:07:55,394 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:07:55,508 [INFO]  * Restarting with stat
+2025-10-14 15:07:55,977 [WARNING]  * Debugger is active!
+2025-10-14 15:07:55,977 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:08:06,071 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:08:06,174 [INFO]  * Restarting with stat
+2025-10-14 15:08:06,641 [WARNING]  * Debugger is active!
+2025-10-14 15:08:06,642 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:08:14,717 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:08:14,821 [INFO]  * Restarting with stat
+2025-10-14 15:08:15,276 [WARNING]  * Debugger is active!
+2025-10-14 15:08:15,276 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:08:19,313 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:08:19,409 [INFO]  * Restarting with stat
+2025-10-14 15:08:19,873 [WARNING]  * Debugger is active!
+2025-10-14 15:08:19,873 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:10:36,146 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:10:36,251 [INFO]  * Restarting with stat
+2025-10-14 15:10:36,720 [WARNING]  * Debugger is active!
+2025-10-14 15:10:36,721 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:10:42,777 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:10:42,879 [INFO]  * Restarting with stat
+2025-10-14 15:10:43,347 [WARNING]  * Debugger is active!
+2025-10-14 15:10:43,347 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:10:45,370 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:10:45,462 [INFO]  * Restarting with stat
+2025-10-14 15:10:45,916 [WARNING]  * Debugger is active!
+2025-10-14 15:10:45,917 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:10:47,939 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:10:48,024 [INFO]  * Restarting with stat
+2025-10-14 15:10:48,492 [WARNING]  * Debugger is active!
+2025-10-14 15:10:48,492 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:10:54,546 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:10:54,646 [INFO]  * Restarting with stat
+2025-10-14 15:10:55,121 [WARNING]  * Debugger is active!
+2025-10-14 15:10:55,121 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:10:57,145 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:10:57,239 [INFO]  * Restarting with stat
+2025-10-14 15:10:57,715 [WARNING]  * Debugger is active!
+2025-10-14 15:10:57,715 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:10:59,737 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:10:59,826 [INFO]  * Restarting with stat
+2025-10-14 15:11:00,317 [WARNING]  * Debugger is active!
+2025-10-14 15:11:00,318 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:12:52,364 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/record_repository.py', reloading
+2025-10-14 15:12:52,467 [INFO]  * Restarting with stat
+2025-10-14 15:22:17,279 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.82:5000
+2025-10-14 15:22:17,279 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-14 15:22:17,279 [INFO]  * Restarting with stat
+2025-10-14 15:22:17,772 [WARNING]  * Debugger is active!
+2025-10-14 15:22:17,772 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:22:18,456 [INFO] 127.0.0.1 - - [14/Oct/2025 15:22:18] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 15:22:18,534 [INFO] 127.0.0.1 - - [14/Oct/2025 15:22:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:22:18,534 [INFO] 127.0.0.1 - - [14/Oct/2025 15:22:18] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:22:18,536 [INFO] 127.0.0.1 - - [14/Oct/2025 15:22:18] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-10-14 15:22:18,562 [INFO] 127.0.0.1 - - [14/Oct/2025 15:22:18] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:22:20,136 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:22:20,139 [INFO] 127.0.0.1 - - [14/Oct/2025 15:22:20] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:22:20,139 [INFO] 127.0.0.1 - - [14/Oct/2025 15:22:20] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:22:20,141 [INFO] 127.0.0.1 - - [14/Oct/2025 15:22:20] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-10-14 15:22:20,159 [INFO] 127.0.0.1 - - [14/Oct/2025 15:22:20] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-10-14 15:22:25,237 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:22:25,240 [INFO] 127.0.0.1 - - [14/Oct/2025 15:22:25] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:22:25,243 [INFO] 127.0.0.1 - - [14/Oct/2025 15:22:25] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:22:25,257 [INFO] 127.0.0.1 - - [14/Oct/2025 15:22:25] "[35m[1mPOST /add_time HTTP/1.1[0m" 500 -
+2025-10-14 15:22:25,268 [INFO] 127.0.0.1 - - [14/Oct/2025 15:22:25] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:23:59,328 [INFO] 127.0.0.1 - - [14/Oct/2025 15:23:59] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:23:59,393 [INFO] Click en: "Cancel", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:23:59,396 [INFO] 127.0.0.1 - - [14/Oct/2025 15:23:59] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:23:59,397 [INFO] 127.0.0.1 - - [14/Oct/2025 15:23:59] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:23:59,407 [INFO] 127.0.0.1 - - [14/Oct/2025 15:23:59] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:23:59,426 [INFO] 127.0.0.1 - - [14/Oct/2025 15:23:59] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 15:23:59,455 [INFO] 127.0.0.1 - - [14/Oct/2025 15:23:59] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:23:59,462 [INFO] 127.0.0.1 - - [14/Oct/2025 15:23:59] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:23:59,509 [INFO] 127.0.0.1 - - [14/Oct/2025 15:23:59] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:23:59,510 [INFO] 127.0.0.1 - - [14/Oct/2025 15:23:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:23:59,537 [INFO] 127.0.0.1 - - [14/Oct/2025 15:23:59] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 15:23:59,538 [INFO] 127.0.0.1 - - [14/Oct/2025 15:23:59] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 15:24:02,100 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:02] "GET /use_time HTTP/1.1" 200 -
+2025-10-14 15:24:02,144 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:02] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:24:02,146 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:24:02,147 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:02] "GET /static/js/timerUse.js HTTP/1.1" 200 -
+2025-10-14 15:24:02,199 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:02] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-10-14 15:24:03,364 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:03] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 15:24:03,406 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:24:03,409 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:03] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:24:03,410 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:03] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-10-14 15:24:03,456 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:03] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:24:04,686 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:04] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 15:24:04,702 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:04] "GET /records HTTP/1.1" 200 -
+2025-10-14 15:24:04,716 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:04] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:24:04,751 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:04] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:24:04,754 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:24:09,181 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:09] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 15:24:09,226 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:24:09,227 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:09] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-10-14 15:24:09,228 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:09] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:24:09,284 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:09] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:24:12,275 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:24:12,276 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:12] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:24:12,278 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:12] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:24:12,279 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:12] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-10-14 15:24:12,289 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:12] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-10-14 15:24:16,093 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:24:16,096 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:16] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:24:16,098 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:16] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:24:16,109 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:16] "[35m[1mPOST /add_time HTTP/1.1[0m" 500 -
+2025-10-14 15:24:16,111 [INFO] 127.0.0.1 - - [14/Oct/2025 15:24:16] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:24:54,272 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/record_service.py', reloading
+2025-10-14 15:24:54,405 [INFO]  * Restarting with stat
+2025-10-14 15:24:54,897 [WARNING]  * Debugger is active!
+2025-10-14 15:24:54,898 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:24:58,935 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/record_service.py', reloading
+2025-10-14 15:24:59,035 [INFO]  * Restarting with stat
+2025-10-14 15:24:59,522 [WARNING]  * Debugger is active!
+2025-10-14 15:24:59,523 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:25:07,598 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/record_service.py', reloading
+2025-10-14 15:25:07,717 [INFO]  * Restarting with stat
+2025-10-14 15:25:08,207 [WARNING]  * Debugger is active!
+2025-10-14 15:25:08,208 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:25:10,099 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:10] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:25:10,129 [INFO] Click en: "Cancel", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:25:10,130 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:10] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:25:10,132 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:10] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:25:10,189 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:10] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:25:10,239 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:10] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 15:25:10,262 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:10] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:25:10,276 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:10] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:25:10,324 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:10] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:25:10,325 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:25:10,335 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:10] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 15:25:10,336 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:10] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 15:25:14,722 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:14] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 15:25:14,767 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:14] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:25:14,770 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:25:14,770 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:14] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-10-14 15:25:14,824 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:14] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:25:16,908 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:25:16,908 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:16] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:25:16,910 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:16] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:25:16,912 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:16] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-10-14 15:25:16,923 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:16] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-10-14 15:25:19,530 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:25:19,531 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:19] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:25:19,534 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:19] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:25:19,552 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:19] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:25:19,556 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:19] "[35m[1mPOST /add_time HTTP/1.1[0m" 500 -
+2025-10-14 15:25:41,581 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:25:41,706 [INFO]  * Restarting with stat
+2025-10-14 15:25:42,176 [WARNING]  * Debugger is active!
+2025-10-14 15:25:42,177 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:25:44,199 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:25:44,310 [INFO]  * Restarting with stat
+2025-10-14 15:25:44,809 [WARNING]  * Debugger is active!
+2025-10-14 15:25:44,809 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:25:45,827 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:25:45,925 [INFO]  * Restarting with stat
+2025-10-14 15:25:46,401 [WARNING]  * Debugger is active!
+2025-10-14 15:25:46,402 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:25:51,888 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:51] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:25:51,952 [INFO] Click en: "Cancel", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:25:51,954 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:51] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:25:51,955 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:51] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:25:52,023 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:52] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:25:52,038 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:52] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 15:25:52,091 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:52] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:25:52,107 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:52] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:25:52,154 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:52] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:25:52,155 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:25:52,168 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:52] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 15:25:52,170 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:52] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 15:25:53,912 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:53] "GET /use_time HTTP/1.1" 200 -
+2025-10-14 15:25:53,966 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:53] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:25:53,968 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:25:53,970 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:53] "[36mGET /static/js/timerUse.js HTTP/1.1[0m" 304 -
+2025-10-14 15:25:53,998 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:53] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-10-14 15:25:55,274 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:55] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 15:25:55,318 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:25:55,320 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:55] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-10-14 15:25:55,321 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:55] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:25:55,364 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:55] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:25:56,384 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:25:56,385 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:56] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:25:56,387 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:56] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-10-14 15:25:56,387 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:56] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:25:56,400 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:56] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-10-14 15:25:58,615 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:25:58,618 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:58] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:25:58,619 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:58] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:25:58,635 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:58] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:25:58,680 [INFO] 127.0.0.1 - - [14/Oct/2025 15:25:58] "[35m[1mPOST /add_time HTTP/1.1[0m" 500 -
+2025-10-14 15:28:21,882 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:28:22,003 [INFO]  * Restarting with stat
+2025-10-14 15:28:22,470 [WARNING]  * Debugger is active!
+2025-10-14 15:28:22,470 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:28:25,499 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:28:25,596 [INFO]  * Restarting with stat
+2025-10-14 15:28:26,069 [WARNING]  * Debugger is active!
+2025-10-14 15:28:26,070 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:28:29,643 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:29] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:28:29,690 [INFO] Click en: "Cancel", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:28:29,691 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:29] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:28:29,692 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:29] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:28:29,750 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:29] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:28:29,797 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:29] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 15:28:29,821 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:29] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:28:29,833 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:29] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:28:29,885 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:28:29,889 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:29] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:28:29,907 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:29] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 15:28:29,908 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:29] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 15:28:32,046 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:32] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 15:28:32,088 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:32] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:28:32,090 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:28:32,093 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:32] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-10-14 15:28:32,136 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:32] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:28:33,255 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:28:33,256 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:33] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:28:33,258 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:33] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:28:33,260 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:33] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-10-14 15:28:33,272 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:33] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-10-14 15:28:35,319 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:28:35,321 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:35] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:28:35,327 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:35] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:28:35,337 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:35] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:28:35,377 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:35] "[35m[1mPOST /add_time HTTP/1.1[0m" 500 -
+2025-10-14 15:28:53,329 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:28:53,449 [INFO]  * Restarting with stat
+2025-10-14 15:28:53,930 [WARNING]  * Debugger is active!
+2025-10-14 15:28:53,930 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:28:54,154 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:54] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:28:54,208 [INFO] Click en: "Cancel", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:28:54,211 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:54] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:28:54,211 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:54] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:28:54,263 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:54] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:28:54,311 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:54] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 15:28:54,353 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:54] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:28:54,361 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:54] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:28:54,402 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:54] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:28:54,403 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:28:54,421 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:54] "GET /static/img/trofeo.png HTTP/1.1" 200 -
+2025-10-14 15:28:54,421 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:54] "GET /static/img/template_star.png HTTP/1.1" 200 -
+2025-10-14 15:28:56,209 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:56] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 15:28:56,264 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:56] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:28:56,266 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:28:56,267 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:56] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-10-14 15:28:56,305 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:56] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:28:57,970 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:28:57,971 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:57] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:28:57,973 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:57] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:28:57,975 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:57] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-10-14 15:28:57,986 [INFO] 127.0.0.1 - - [14/Oct/2025 15:28:57] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-10-14 15:29:00,272 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:29:00,273 [INFO] 127.0.0.1 - - [14/Oct/2025 15:29:00] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:29:00,275 [INFO] 127.0.0.1 - - [14/Oct/2025 15:29:00] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:29:00,290 [INFO] 127.0.0.1 - - [14/Oct/2025 15:29:00] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:29:00,330 [INFO] 127.0.0.1 - - [14/Oct/2025 15:29:00] "[35m[1mPOST /add_time HTTP/1.1[0m" 500 -
+2025-10-14 15:30:10,665 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:30:10,782 [INFO]  * Restarting with stat
+2025-10-14 15:30:11,262 [WARNING]  * Debugger is active!
+2025-10-14 15:30:11,263 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:30:14,291 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:30:14,391 [INFO]  * Restarting with stat
+2025-10-14 15:30:14,871 [WARNING]  * Debugger is active!
+2025-10-14 15:30:14,871 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:30:16,894 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:30:16,994 [INFO]  * Restarting with stat
+2025-10-14 15:30:17,467 [WARNING]  * Debugger is active!
+2025-10-14 15:30:17,467 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:30:30,590 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:30:30,701 [INFO]  * Restarting with stat
+2025-10-14 15:30:31,180 [WARNING]  * Debugger is active!
+2025-10-14 15:30:31,181 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:30:49,277 [INFO] Click en: "Cancel", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:30:49,279 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:49] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:30:49,280 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:49] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:30:49,282 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:49] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:30:49,337 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:49] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:30:49,392 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:49] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 15:30:49,418 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:49] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:30:49,428 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:49] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:30:49,488 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:30:49,489 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:49] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:30:49,511 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:49] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 15:30:49,511 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:49] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 15:30:50,633 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:50] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 15:30:50,685 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:50] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:30:50,686 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:30:50,688 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:50] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-10-14 15:30:50,744 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:50] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:30:51,889 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:30:51,891 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:51] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:30:51,893 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:51] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:30:51,894 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:51] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-10-14 15:30:51,907 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:51] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-10-14 15:30:53,598 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:30:53,599 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:53] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:30:53,605 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:53] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:30:53,617 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:53] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:30:53,666 [INFO] 127.0.0.1 - - [14/Oct/2025 15:30:53] "[35m[1mPOST /add_time HTTP/1.1[0m" 500 -
+2025-10-14 15:31:15,674 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:31:15,793 [INFO]  * Restarting with stat
+2025-10-14 15:31:16,254 [WARNING]  * Debugger is active!
+2025-10-14 15:31:16,254 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:31:32,758 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:32] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:31:32,805 [INFO] Click en: "Cancel", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:31:32,806 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:32] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:31:32,807 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:32] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:31:32,865 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:32] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:31:32,888 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:32] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 15:31:32,961 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:32] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:31:32,965 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:32] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:31:33,025 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:33] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:31:33,026 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:31:33,047 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:33] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 15:31:33,048 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:33] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 15:31:34,264 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:34] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 15:31:34,313 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:34] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:31:34,314 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:34] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-10-14 15:31:34,317 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:31:34,363 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:34] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:31:35,459 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:31:35,461 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:35] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:31:35,462 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:35] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:31:35,464 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:35] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-10-14 15:31:35,475 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:35] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-10-14 15:31:37,809 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:31:37,813 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:37] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:31:37,816 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:37] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:31:37,832 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:37] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:31:37,870 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:37] "POST /add_time HTTP/1.1" 200 -
+2025-10-14 15:31:37,895 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:37] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 15:31:37,900 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:37] "GET /perfil?reload=true HTTP/1.1" 200 -
+2025-10-14 15:31:37,912 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:37] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:31:37,959 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:31:37,960 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:37] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:31:38,021 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:38] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 15:31:38,025 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:38] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 15:31:38,029 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:38] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:31:38,061 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:31:38,062 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:38] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:31:38,083 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:38] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 15:31:38,083 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:38] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 15:31:41,477 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:41] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 15:31:41,535 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:41] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:31:41,538 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:31:41,538 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:41] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-10-14 15:31:41,585 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:41] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:31:41,811 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:41] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 15:31:41,842 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:41] "GET /records HTTP/1.1" 200 -
+2025-10-14 15:31:41,844 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:41] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:31:41,874 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:31:41,875 [INFO] 127.0.0.1 - - [14/Oct/2025 15:31:41] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:31:55,632 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:31:55,758 [INFO]  * Restarting with stat
+2025-10-14 15:31:56,229 [WARNING]  * Debugger is active!
+2025-10-14 15:31:56,230 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:32:37,611 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:32:37,719 [INFO]  * Restarting with stat
+2025-10-14 15:32:38,196 [WARNING]  * Debugger is active!
+2025-10-14 15:32:38,196 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:32:53,340 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-10-14 15:32:53,457 [INFO]  * Restarting with stat
+2025-10-14 15:32:53,919 [WARNING]  * Debugger is active!
+2025-10-14 15:32:53,919 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:32:55,943 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-10-14 15:32:56,042 [INFO]  * Restarting with stat
+2025-10-14 15:34:14,365 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.82:5000
+2025-10-14 15:34:14,365 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-14 15:34:14,365 [INFO]  * Restarting with stat
+2025-10-14 15:34:14,832 [WARNING]  * Debugger is active!
+2025-10-14 15:34:14,832 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:34:19,877 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:34:19,981 [INFO]  * Restarting with stat
+2025-10-14 15:34:20,458 [WARNING]  * Debugger is active!
+2025-10-14 15:34:20,458 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:34:22,481 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:34:22,569 [INFO]  * Restarting with stat
+2025-10-14 15:34:23,047 [WARNING]  * Debugger is active!
+2025-10-14 15:34:23,047 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:34:36,167 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 15:34:36,273 [INFO]  * Restarting with stat
+2025-10-14 15:57:45,836 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.82:5000
+2025-10-14 15:57:45,836 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-14 15:57:45,837 [INFO]  * Restarting with stat
+2025-10-14 15:57:46,322 [WARNING]  * Debugger is active!
+2025-10-14 15:57:46,323 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 15:57:54,339 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:54] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 15:57:54,422 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:54] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:57:54,422 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:54] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-10-14 15:57:54,423 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:57:54,460 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:54] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:57:55,555 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:57:55,557 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:55] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-10-14 15:57:55,557 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:55] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:57:55,558 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:55] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 15:57:55,574 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:55] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-10-14 15:57:57,853 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 15:57:57,857 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:57] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 15:57:57,857 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:57] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 15:57:57,883 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:57] "POST /add_time HTTP/1.1" 200 -
+2025-10-14 15:57:57,884 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:57] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 15:57:57,904 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:57] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 15:57:57,933 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:57] "GET /perfil?reload=true HTTP/1.1" 200 -
+2025-10-14 15:57:57,944 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:57] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:57:57,985 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:57] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:57:57,986 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:57:57,988 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:57] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 15:57:57,989 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:57] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 15:57:58,064 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:58] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 15:57:58,099 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 15:57:58,100 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:58] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 15:57:58,122 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:58] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 15:57:58,123 [INFO] 127.0.0.1 - - [14/Oct/2025 15:57:58] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 16:31:38,023 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-10-14 16:31:38,144 [INFO]  * Restarting with stat
+2025-10-14 16:31:38,609 [WARNING]  * Debugger is active!
+2025-10-14 16:31:38,610 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 16:31:43,652 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-10-14 16:31:43,767 [INFO]  * Restarting with stat
+2025-10-14 16:31:44,267 [WARNING]  * Debugger is active!
+2025-10-14 16:31:44,268 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 16:31:57,389 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-10-14 16:31:57,499 [INFO]  * Restarting with stat
+2025-10-14 16:37:33,410 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.82:5000
+2025-10-14 16:37:33,410 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-14 16:37:33,410 [INFO]  * Restarting with stat
+2025-10-14 16:37:33,877 [WARNING]  * Debugger is active!
+2025-10-14 16:37:33,877 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 16:37:35,712 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:35] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 16:37:35,809 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:35] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 16:37:35,811 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 16:37:35,811 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:35] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-10-14 16:37:35,861 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:35] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 16:37:37,148 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 16:37:37,150 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:37] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 16:37:37,151 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:37] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 16:37:37,153 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:37] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-10-14 16:37:37,168 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:37] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-10-14 16:37:40,267 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 16:37:40,268 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 16:37:40,273 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 16:37:40,288 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "POST /add_time HTTP/1.1" 200 -
+2025-10-14 16:37:40,295 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 16:37:40,303 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 16:37:40,342 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "GET /perfil?reload=true HTTP/1.1" 200 -
+2025-10-14 16:37:40,346 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 16:37:40,392 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 16:37:40,394 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 16:37:40,431 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 16:37:40,431 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 16:37:40,467 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 16:37:40,501 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 16:37:40,502 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 16:37:40,520 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 16:37:40,520 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:40] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 16:37:44,329 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:44] "GET /records HTTP/1.1" 200 -
+2025-10-14 16:37:44,376 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:44] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 16:37:44,379 [INFO] 127.0.0.1 - - [14/Oct/2025 16:37:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 16:39:02,721 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 16:39:02,845 [INFO]  * Restarting with stat
+2025-10-14 16:39:03,317 [WARNING]  * Debugger is active!
+2025-10-14 16:39:03,318 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 16:39:05,341 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 16:39:05,440 [INFO]  * Restarting with stat
+2025-10-14 16:39:05,904 [WARNING]  * Debugger is active!
+2025-10-14 16:39:05,904 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 16:39:08,933 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 16:39:09,027 [INFO]  * Restarting with stat
+2025-10-14 16:39:09,492 [WARNING]  * Debugger is active!
+2025-10-14 16:39:09,493 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 16:39:51,887 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 16:39:51,999 [INFO]  * Restarting with stat
+2025-10-14 16:39:52,472 [WARNING]  * Debugger is active!
+2025-10-14 16:39:52,472 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 16:39:54,496 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 16:39:54,597 [INFO]  * Restarting with stat
+2025-10-14 16:39:55,080 [WARNING]  * Debugger is active!
+2025-10-14 16:39:55,080 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 16:40:12,236 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 16:40:12,350 [INFO]  * Restarting with stat
+2025-10-14 16:40:12,824 [WARNING]  * Debugger is active!
+2025-10-14 16:40:12,824 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 16:40:41,083 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 16:40:41,199 [INFO]  * Restarting with stat
+2025-10-14 16:40:41,682 [WARNING]  * Debugger is active!
+2025-10-14 16:40:41,682 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 16:40:42,699 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 16:40:42,785 [INFO]  * Restarting with stat
+2025-10-14 16:48:17,530 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.82:5000
+2025-10-14 16:48:17,531 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-14 16:48:17,531 [INFO]  * Restarting with stat
+2025-10-14 16:48:17,995 [WARNING]  * Debugger is active!
+2025-10-14 16:48:17,995 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 16:48:21,544 [INFO] 127.0.0.1 - - [14/Oct/2025 16:48:21] "GET /use_time HTTP/1.1" 200 -
+2025-10-14 16:48:21,613 [INFO] 127.0.0.1 - - [14/Oct/2025 16:48:21] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 16:48:21,613 [INFO] 127.0.0.1 - - [14/Oct/2025 16:48:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 16:48:21,615 [INFO] 127.0.0.1 - - [14/Oct/2025 16:48:21] "[36mGET /static/js/timerUse.js HTTP/1.1[0m" 304 -
+2025-10-14 16:48:21,642 [INFO] 127.0.0.1 - - [14/Oct/2025 16:48:21] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-10-14 16:49:23,624 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 16:49:23,745 [INFO]  * Restarting with stat
+2025-10-14 16:49:24,229 [WARNING]  * Debugger is active!
+2025-10-14 16:49:24,229 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 16:49:28,267 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 16:49:28,362 [INFO]  * Restarting with stat
+2025-10-14 16:49:28,830 [WARNING]  * Debugger is active!
+2025-10-14 16:49:28,830 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 16:49:50,030 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 16:49:50,137 [INFO]  * Restarting with stat
+2025-10-14 16:49:50,619 [WARNING]  * Debugger is active!
+2025-10-14 16:49:50,620 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 16:49:54,653 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 16:49:54,749 [INFO]  * Restarting with stat
+2025-10-14 17:10:00,194 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.82:5000
+2025-10-14 17:10:00,194 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-14 17:10:00,195 [INFO]  * Restarting with stat
+2025-10-14 17:10:00,669 [WARNING]  * Debugger is active!
+2025-10-14 17:10:00,670 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:10:04,864 [INFO] 127.0.0.1 - - [14/Oct/2025 17:10:04] "GET /use_time HTTP/1.1" 200 -
+2025-10-14 17:10:04,931 [INFO] 127.0.0.1 - - [14/Oct/2025 17:10:04] "[36mGET /static/js/timerUse.js HTTP/1.1[0m" 304 -
+2025-10-14 17:10:04,931 [INFO] 127.0.0.1 - - [14/Oct/2025 17:10:04] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 17:10:04,932 [INFO] 127.0.0.1 - - [14/Oct/2025 17:10:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 17:10:04,957 [INFO] 127.0.0.1 - - [14/Oct/2025 17:10:04] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-10-14 17:10:06,551 [INFO] Click en: "Start countdown", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-10-14 17:10:06,551 [INFO] 127.0.0.1 - - [14/Oct/2025 17:10:06] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 17:10:06,553 [INFO] 127.0.0.1 - - [14/Oct/2025 17:10:06] "[32mPOST /switch_status/playing HTTP/1.1[0m" 308 -
+2025-10-14 17:10:06,568 [INFO] 127.0.0.1 - - [14/Oct/2025 17:10:06] "POST /switch_status/playing/ HTTP/1.1" 200 -
+2025-10-14 17:10:08,272 [INFO] Click en: "Stop", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-10-14 17:10:08,273 [INFO] 127.0.0.1 - - [14/Oct/2025 17:10:08] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 17:10:08,282 [INFO] 127.0.0.1 - - [14/Oct/2025 17:10:08] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 17:10:08,291 [INFO] 127.0.0.1 - - [14/Oct/2025 17:10:08] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 17:10:10,121 [INFO] 127.0.0.1 - - [14/Oct/2025 17:10:10] "[35m[1mPOST /use_time HTTP/1.1[0m" 500 -
+2025-10-14 17:11:19,428 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-10-14 17:11:19,542 [INFO]  * Restarting with stat
+2025-10-14 17:11:20,007 [WARNING]  * Debugger is active!
+2025-10-14 17:11:20,007 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:11:22,030 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-10-14 17:11:22,116 [INFO]  * Restarting with stat
+2025-10-14 17:11:22,593 [WARNING]  * Debugger is active!
+2025-10-14 17:11:22,593 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:11:29,659 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-10-14 17:11:29,773 [INFO]  * Restarting with stat
+2025-10-14 17:11:30,255 [WARNING]  * Debugger is active!
+2025-10-14 17:11:30,255 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:11:31,273 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/time_service.py', reloading
+2025-10-14 17:11:31,365 [INFO]  * Restarting with stat
+2025-10-14 17:11:31,824 [WARNING]  * Debugger is active!
+2025-10-14 17:11:31,824 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:11:51,008 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:11:51,113 [INFO]  * Restarting with stat
+2025-10-14 17:11:51,605 [WARNING]  * Debugger is active!
+2025-10-14 17:11:51,606 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:12:04,728 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:12:04,867 [INFO]  * Restarting with stat
+2025-10-14 17:12:05,341 [WARNING]  * Debugger is active!
+2025-10-14 17:12:05,342 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:12:10,390 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:12:10,499 [INFO]  * Restarting with stat
+2025-10-14 17:12:10,960 [WARNING]  * Debugger is active!
+2025-10-14 17:12:10,960 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:12:13,604 [INFO] 127.0.0.1 - - [14/Oct/2025 17:12:13] "GET /use_time HTTP/1.1" 200 -
+2025-10-14 17:12:13,662 [INFO] 127.0.0.1 - - [14/Oct/2025 17:12:13] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 17:12:13,664 [INFO] 127.0.0.1 - - [14/Oct/2025 17:12:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 17:12:13,664 [INFO] 127.0.0.1 - - [14/Oct/2025 17:12:13] "[36mGET /static/js/timerUse.js HTTP/1.1[0m" 304 -
+2025-10-14 17:12:13,695 [INFO] 127.0.0.1 - - [14/Oct/2025 17:12:13] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-10-14 17:12:15,175 [INFO] Click en: "Start countdown", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-10-14 17:12:15,177 [INFO] 127.0.0.1 - - [14/Oct/2025 17:12:15] "[32mPOST /switch_status/playing HTTP/1.1[0m" 308 -
+2025-10-14 17:12:15,177 [INFO] 127.0.0.1 - - [14/Oct/2025 17:12:15] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 17:12:15,194 [INFO] 127.0.0.1 - - [14/Oct/2025 17:12:15] "POST /switch_status/playing/ HTTP/1.1" 200 -
+2025-10-14 17:12:16,788 [INFO] Click en: "Stop", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-10-14 17:12:16,789 [INFO] 127.0.0.1 - - [14/Oct/2025 17:12:16] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 17:12:16,794 [INFO] 127.0.0.1 - - [14/Oct/2025 17:12:16] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 17:12:16,805 [INFO] 127.0.0.1 - - [14/Oct/2025 17:12:16] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 17:12:18,815 [INFO] 127.0.0.1 - - [14/Oct/2025 17:12:18] "[35m[1mPOST /use_time HTTP/1.1[0m" 500 -
+2025-10-14 17:12:56,396 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-10-14 17:12:56,519 [INFO]  * Restarting with stat
+2025-10-14 17:12:56,991 [WARNING]  * Debugger is active!
+2025-10-14 17:12:56,991 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:13:19,203 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:13:19,315 [INFO]  * Restarting with stat
+2025-10-14 17:13:19,824 [WARNING]  * Debugger is active!
+2025-10-14 17:13:19,824 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:13:24,868 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-10-14 17:13:24,980 [INFO]  * Restarting with stat
+2025-10-14 17:13:25,477 [WARNING]  * Debugger is active!
+2025-10-14 17:13:25,477 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:13:26,737 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:26] "GET /use_time HTTP/1.1" 200 -
+2025-10-14 17:13:26,794 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 17:13:26,796 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:26] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 17:13:26,797 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:26] "[36mGET /static/js/timerUse.js HTTP/1.1[0m" 304 -
+2025-10-14 17:13:26,826 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:26] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-10-14 17:13:28,450 [INFO] Click en: "Start countdown", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-10-14 17:13:28,452 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:28] "[32mPOST /switch_status/playing HTTP/1.1[0m" 308 -
+2025-10-14 17:13:28,453 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:28] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 17:13:28,469 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:28] "POST /switch_status/playing/ HTTP/1.1" 200 -
+2025-10-14 17:13:30,180 [INFO] Click en: "Stop", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-10-14 17:13:30,180 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:30] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 17:13:30,188 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:30] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 17:13:30,196 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:30] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 17:13:32,114 [INFO] Último uso registrado:
+2025-10-14 17:13:32,115 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:32] "POST /use_time HTTP/1.1" 200 -
+2025-10-14 17:13:32,151 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:32] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 17:13:32,206 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:32] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 17:13:32,208 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 17:13:32,237 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:32] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 17:13:32,237 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:32] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 17:13:35,921 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:35] "GET /use_time HTTP/1.1" 200 -
+2025-10-14 17:13:35,976 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 17:13:35,976 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:35] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 17:13:35,977 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:35] "[36mGET /static/js/timerUse.js HTTP/1.1[0m" 304 -
+2025-10-14 17:13:36,006 [INFO] 127.0.0.1 - - [14/Oct/2025 17:13:36] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-10-14 17:13:45,672 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:13:45,791 [INFO]  * Restarting with stat
+2025-10-14 17:13:46,268 [WARNING]  * Debugger is active!
+2025-10-14 17:13:46,269 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:13:47,287 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:13:47,396 [INFO]  * Restarting with stat
+2025-10-14 17:13:47,865 [WARNING]  * Debugger is active!
+2025-10-14 17:13:47,866 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:14:44,389 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-10-14 17:14:44,492 [INFO]  * Restarting with stat
+2025-10-14 17:14:44,956 [WARNING]  * Debugger is active!
+2025-10-14 17:14:44,957 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:14:51,012 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-10-14 17:14:51,125 [INFO]  * Restarting with stat
+2025-10-14 17:17:32,960 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.82:5000
+2025-10-14 17:17:32,960 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-14 17:17:32,960 [INFO]  * Restarting with stat
+2025-10-14 17:17:33,413 [WARNING]  * Debugger is active!
+2025-10-14 17:17:33,413 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:18:29,309 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:29] "GET /use_time HTTP/1.1" 200 -
+2025-10-14 17:18:29,368 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:29] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 17:18:29,369 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:29] "[36mGET /static/js/timerUse.js HTTP/1.1[0m" 304 -
+2025-10-14 17:18:29,371 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 17:18:29,390 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:29] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-10-14 17:18:30,457 [INFO] Click en: "Start countdown", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-10-14 17:18:30,459 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:30] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 17:18:30,460 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:30] "[32mPOST /switch_status/playing HTTP/1.1[0m" 308 -
+2025-10-14 17:18:30,481 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:30] "POST /switch_status/playing/ HTTP/1.1" 200 -
+2025-10-14 17:18:32,088 [INFO] Click en: "Stop", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-10-14 17:18:32,088 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:32] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 17:18:32,093 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:32] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 17:18:32,103 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:32] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 17:18:34,703 [INFO] Último uso registrado:
+2025-10-14 17:18:34,704 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:34] "POST /use_time HTTP/1.1" 200 -
+2025-10-14 17:18:34,755 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:34] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 17:18:34,810 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:34] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 17:18:34,812 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 17:18:34,838 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:34] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 17:18:34,838 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:34] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 17:18:37,234 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:37] "GET /use_time HTTP/1.1" 200 -
+2025-10-14 17:18:37,305 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 17:18:37,307 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:37] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 17:18:37,308 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:37] "[36mGET /static/js/timerUse.js HTTP/1.1[0m" 304 -
+2025-10-14 17:18:37,338 [INFO] 127.0.0.1 - - [14/Oct/2025 17:18:37] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-10-14 17:18:58,207 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:18:58,327 [INFO]  * Restarting with stat
+2025-10-14 17:18:58,785 [WARNING]  * Debugger is active!
+2025-10-14 17:18:58,785 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:19:01,814 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:19:01,899 [INFO]  * Restarting with stat
+2025-10-14 17:19:02,367 [WARNING]  * Debugger is active!
+2025-10-14 17:19:02,368 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:21:04,496 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:21:04,614 [INFO]  * Restarting with stat
+2025-10-14 17:21:05,110 [WARNING]  * Debugger is active!
+2025-10-14 17:21:05,111 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:21:06,128 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:21:06,221 [INFO]  * Restarting with stat
+2025-10-14 17:21:06,711 [WARNING]  * Debugger is active!
+2025-10-14 17:21:06,711 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:21:09,739 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:21:09,840 [INFO]  * Restarting with stat
+2025-10-14 17:21:10,323 [WARNING]  * Debugger is active!
+2025-10-14 17:21:10,324 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:22:45,205 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:22:45,319 [INFO]  * Restarting with stat
+2025-10-14 17:22:45,781 [WARNING]  * Debugger is active!
+2025-10-14 17:22:45,781 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:23:00,920 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:23:01,023 [INFO]  * Restarting with stat
+2025-10-14 17:23:01,488 [WARNING]  * Debugger is active!
+2025-10-14 17:23:01,488 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:23:12,589 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:23:12,704 [INFO]  * Restarting with stat
+2025-10-14 17:23:13,177 [WARNING]  * Debugger is active!
+2025-10-14 17:23:13,178 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:23:20,243 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:23:20,356 [INFO]  * Restarting with stat
+2025-10-14 17:23:20,825 [WARNING]  * Debugger is active!
+2025-10-14 17:23:20,825 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:23:21,841 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:23:21,939 [INFO]  * Restarting with stat
+2025-10-14 17:23:22,407 [WARNING]  * Debugger is active!
+2025-10-14 17:23:22,407 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:23:23,423 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:23:23,517 [INFO]  * Restarting with stat
+2025-10-14 17:23:23,990 [WARNING]  * Debugger is active!
+2025-10-14 17:23:23,990 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:23:25,007 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:23:25,097 [INFO]  * Restarting with stat
+2025-10-14 17:23:25,579 [WARNING]  * Debugger is active!
+2025-10-14 17:23:25,579 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:23:34,664 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:23:34,763 [INFO]  * Restarting with stat
+2025-10-14 17:23:35,240 [WARNING]  * Debugger is active!
+2025-10-14 17:23:35,240 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:23:41,289 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:23:41,399 [INFO]  * Restarting with stat
+2025-10-14 17:23:41,873 [WARNING]  * Debugger is active!
+2025-10-14 17:23:41,874 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:23:48,939 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:23:49,043 [INFO]  * Restarting with stat
+2025-10-14 17:23:49,532 [WARNING]  * Debugger is active!
+2025-10-14 17:23:49,532 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:24:06,691 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-10-14 17:24:06,799 [INFO]  * Restarting with stat
+2025-10-14 17:24:07,277 [WARNING]  * Debugger is active!
+2025-10-14 17:24:07,277 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:24:09,300 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-10-14 17:24:09,390 [INFO]  * Restarting with stat
+2025-10-14 17:24:09,879 [WARNING]  * Debugger is active!
+2025-10-14 17:24:09,879 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:24:11,901 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/utils/helpers.py', reloading
+2025-10-14 17:24:11,994 [INFO]  * Restarting with stat
+2025-10-14 17:24:12,470 [WARNING]  * Debugger is active!
+2025-10-14 17:24:12,470 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:24:19,539 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:24:19,652 [INFO]  * Restarting with stat
+2025-10-14 17:24:20,142 [WARNING]  * Debugger is active!
+2025-10-14 17:24:20,142 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:24:27,207 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:24:27,317 [INFO]  * Restarting with stat
+2025-10-14 17:24:27,792 [WARNING]  * Debugger is active!
+2025-10-14 17:24:27,793 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:24:28,810 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:24:28,899 [INFO]  * Restarting with stat
+2025-10-14 17:24:29,378 [WARNING]  * Debugger is active!
+2025-10-14 17:24:29,378 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:24:31,401 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:24:31,500 [INFO]  * Restarting with stat
+2025-10-14 17:24:31,948 [WARNING]  * Debugger is active!
+2025-10-14 17:24:31,948 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:24:48,100 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:24:48,218 [INFO]  * Restarting with stat
+2025-10-14 17:24:48,696 [WARNING]  * Debugger is active!
+2025-10-14 17:24:48,697 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:25:07,874 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:25:07,980 [INFO]  * Restarting with stat
+2025-10-14 17:25:08,460 [WARNING]  * Debugger is active!
+2025-10-14 17:25:08,460 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:25:17,546 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:25:17,649 [INFO]  * Restarting with stat
+2025-10-14 17:25:18,122 [WARNING]  * Debugger is active!
+2025-10-14 17:25:18,122 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:25:22,158 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:25:22,254 [INFO]  * Restarting with stat
+2025-10-14 17:25:22,728 [WARNING]  * Debugger is active!
+2025-10-14 17:25:22,729 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:25:36,858 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:25:36,967 [INFO]  * Restarting with stat
+2025-10-14 17:25:37,449 [WARNING]  * Debugger is active!
+2025-10-14 17:25:37,449 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:25:40,479 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:25:40,570 [INFO]  * Restarting with stat
+2025-10-14 17:25:41,038 [WARNING]  * Debugger is active!
+2025-10-14 17:25:41,039 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:27:33,083 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:27:33,203 [INFO]  * Restarting with stat
+2025-10-14 17:27:33,692 [WARNING]  * Debugger is active!
+2025-10-14 17:27:33,693 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:27:36,722 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:27:36,830 [INFO]  * Restarting with stat
+2025-10-14 17:27:37,325 [WARNING]  * Debugger is active!
+2025-10-14 17:27:37,325 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:27:39,349 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:27:39,435 [INFO]  * Restarting with stat
+2025-10-14 17:41:55,091 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.82:5000
+2025-10-14 17:41:55,091 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-14 17:41:55,091 [INFO]  * Restarting with stat
+2025-10-14 17:41:55,568 [WARNING]  * Debugger is active!
+2025-10-14 17:41:55,569 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:41:58,033 [INFO] 127.0.0.1 - - [14/Oct/2025 17:41:58] "GET /use_time HTTP/1.1" 200 -
+2025-10-14 17:41:58,086 [INFO] 127.0.0.1 - - [14/Oct/2025 17:41:58] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 17:41:58,087 [INFO] 127.0.0.1 - - [14/Oct/2025 17:41:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 17:41:58,089 [INFO] 127.0.0.1 - - [14/Oct/2025 17:41:58] "[36mGET /static/js/timerUse.js HTTP/1.1[0m" 304 -
+2025-10-14 17:41:58,123 [INFO] 127.0.0.1 - - [14/Oct/2025 17:41:58] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-10-14 17:41:58,792 [INFO] Click en: "Start countdown", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-10-14 17:41:58,793 [INFO] 127.0.0.1 - - [14/Oct/2025 17:41:58] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 17:41:58,795 [INFO] 127.0.0.1 - - [14/Oct/2025 17:41:58] "[32mPOST /switch_status/playing HTTP/1.1[0m" 308 -
+2025-10-14 17:41:58,808 [INFO] 127.0.0.1 - - [14/Oct/2025 17:41:58] "POST /switch_status/playing/ HTTP/1.1" 200 -
+2025-10-14 17:42:00,251 [INFO] Click en: "Stop", desde "http://127.0.0.1:5000/use_time", usando "Firefox", en "Ubuntu"
+2025-10-14 17:42:00,252 [INFO] 127.0.0.1 - - [14/Oct/2025 17:42:00] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 17:42:00,258 [INFO] 127.0.0.1 - - [14/Oct/2025 17:42:00] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 17:42:00,271 [INFO] 127.0.0.1 - - [14/Oct/2025 17:42:00] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 17:42:03,952 [INFO] 127.0.0.1 - - [14/Oct/2025 17:42:03] "POST /use_time HTTP/1.1" 200 -
+2025-10-14 17:42:04,002 [INFO] 127.0.0.1 - - [14/Oct/2025 17:42:04] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 17:42:04,053 [INFO] 127.0.0.1 - - [14/Oct/2025 17:42:04] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 17:42:04,055 [INFO] 127.0.0.1 - - [14/Oct/2025 17:42:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 17:42:04,058 [INFO] 127.0.0.1 - - [14/Oct/2025 17:42:04] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 17:42:04,059 [INFO] 127.0.0.1 - - [14/Oct/2025 17:42:04] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 17:42:07,025 [INFO] 127.0.0.1 - - [14/Oct/2025 17:42:07] "GET /use_time HTTP/1.1" 200 -
+2025-10-14 17:42:07,075 [INFO] 127.0.0.1 - - [14/Oct/2025 17:42:07] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 17:42:07,077 [INFO] 127.0.0.1 - - [14/Oct/2025 17:42:07] "[36mGET /static/js/timerUse.js HTTP/1.1[0m" 304 -
+2025-10-14 17:42:07,078 [INFO] 127.0.0.1 - - [14/Oct/2025 17:42:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 17:42:07,106 [INFO] 127.0.0.1 - - [14/Oct/2025 17:42:07] "GET /get_remaining_time HTTP/1.1" 200 -
+2025-10-14 17:42:21,824 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:42:21,949 [INFO]  * Restarting with stat
+2025-10-14 17:43:36,806 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.82:5000
+2025-10-14 17:43:36,806 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-14 17:43:36,807 [INFO]  * Restarting with stat
+2025-10-14 17:43:37,271 [WARNING]  * Debugger is active!
+2025-10-14 17:43:37,272 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:43:44,338 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:43:44,441 [INFO]  * Restarting with stat
+2025-10-14 17:43:44,906 [WARNING]  * Debugger is active!
+2025-10-14 17:43:44,907 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:43:51,970 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:43:52,075 [INFO]  * Restarting with stat
+2025-10-14 17:43:52,563 [WARNING]  * Debugger is active!
+2025-10-14 17:43:52,564 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:47:56,863 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:47:56,969 [INFO]  * Restarting with stat
+2025-10-14 17:47:57,444 [WARNING]  * Debugger is active!
+2025-10-14 17:47:57,444 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:48:06,527 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:48:06,641 [INFO]  * Restarting with stat
+2025-10-14 17:48:07,127 [WARNING]  * Debugger is active!
+2025-10-14 17:48:07,128 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:48:08,144 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:48:08,234 [INFO]  * Restarting with stat
+2025-10-14 17:48:08,709 [WARNING]  * Debugger is active!
+2025-10-14 17:48:08,709 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:48:13,758 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:48:13,866 [INFO]  * Restarting with stat
+2025-10-14 17:48:14,337 [WARNING]  * Debugger is active!
+2025-10-14 17:48:14,337 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:48:54,716 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:48:54,827 [INFO]  * Restarting with stat
+2025-10-14 17:48:55,299 [WARNING]  * Debugger is active!
+2025-10-14 17:48:55,299 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:49:23,564 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:49:23,675 [INFO]  * Restarting with stat
+2025-10-14 17:49:24,153 [WARNING]  * Debugger is active!
+2025-10-14 17:49:24,153 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:49:30,207 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:49:30,296 [INFO]  * Restarting with stat
+2025-10-14 17:49:30,761 [WARNING]  * Debugger is active!
+2025-10-14 17:49:30,761 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:49:35,806 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:49:35,915 [INFO]  * Restarting with stat
+2025-10-14 17:49:36,386 [WARNING]  * Debugger is active!
+2025-10-14 17:49:36,386 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:49:37,403 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:49:37,486 [INFO]  * Restarting with stat
+2025-10-14 17:49:37,952 [WARNING]  * Debugger is active!
+2025-10-14 17:49:37,952 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:49:38,969 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:49:39,056 [INFO]  * Restarting with stat
+2025-10-14 17:49:39,537 [WARNING]  * Debugger is active!
+2025-10-14 17:49:39,538 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:49:41,559 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:49:41,648 [INFO]  * Restarting with stat
+2025-10-14 17:49:42,152 [WARNING]  * Debugger is active!
+2025-10-14 17:49:42,152 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:49:57,292 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/time_repository.py', reloading
+2025-10-14 17:49:57,401 [INFO]  * Restarting with stat
+2025-10-14 17:50:01,113 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.82:5000
+2025-10-14 17:50:01,113 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-14 17:50:01,113 [INFO]  * Restarting with stat
+2025-10-14 17:50:01,584 [WARNING]  * Debugger is active!
+2025-10-14 17:50:01,584 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:50:11,677 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:50:11,785 [INFO]  * Restarting with stat
+2025-10-14 17:50:12,253 [WARNING]  * Debugger is active!
+2025-10-14 17:50:12,253 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:50:23,356 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:50:23,461 [INFO]  * Restarting with stat
+2025-10-14 17:50:23,934 [WARNING]  * Debugger is active!
+2025-10-14 17:50:23,934 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:50:34,029 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:50:34,149 [INFO]  * Restarting with stat
+2025-10-14 17:50:34,618 [WARNING]  * Debugger is active!
+2025-10-14 17:50:34,618 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:50:42,691 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:50:42,798 [INFO]  * Restarting with stat
+2025-10-14 17:50:43,284 [WARNING]  * Debugger is active!
+2025-10-14 17:50:43,285 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:50:44,301 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:50:44,389 [INFO]  * Restarting with stat
+2025-10-14 17:50:44,856 [WARNING]  * Debugger is active!
+2025-10-14 17:50:44,857 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:53:15,270 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/subject_repository.py', reloading
+2025-10-14 17:53:15,394 [INFO]  * Restarting with stat
+2025-10-14 17:53:15,870 [WARNING]  * Debugger is active!
+2025-10-14 17:53:15,870 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:54:03,317 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:54:03,421 [INFO]  * Restarting with stat
+2025-10-14 17:54:03,881 [WARNING]  * Debugger is active!
+2025-10-14 17:54:03,881 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:54:05,904 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:54:06,002 [INFO]  * Restarting with stat
+2025-10-14 17:54:06,496 [WARNING]  * Debugger is active!
+2025-10-14 17:54:06,497 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:54:08,520 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:54:08,611 [INFO]  * Restarting with stat
+2025-10-14 17:54:09,079 [WARNING]  * Debugger is active!
+2025-10-14 17:54:09,079 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:54:10,096 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:54:10,186 [INFO]  * Restarting with stat
+2025-10-14 17:54:10,658 [WARNING]  * Debugger is active!
+2025-10-14 17:54:10,658 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:54:11,674 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:54:11,775 [INFO]  * Restarting with stat
+2025-10-14 17:54:12,257 [WARNING]  * Debugger is active!
+2025-10-14 17:54:12,257 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:54:17,303 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:54:17,411 [INFO]  * Restarting with stat
+2025-10-14 17:54:17,885 [WARNING]  * Debugger is active!
+2025-10-14 17:54:17,885 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:54:22,933 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:54:23,052 [INFO]  * Restarting with stat
+2025-10-14 17:54:23,537 [WARNING]  * Debugger is active!
+2025-10-14 17:54:23,537 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:55:06,943 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:55:07,067 [INFO]  * Restarting with stat
+2025-10-14 17:55:07,525 [WARNING]  * Debugger is active!
+2025-10-14 17:55:07,525 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:55:15,598 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:55:15,709 [INFO]  * Restarting with stat
+2025-10-14 17:55:16,195 [WARNING]  * Debugger is active!
+2025-10-14 17:55:16,196 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:55:17,213 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:55:17,306 [INFO]  * Restarting with stat
+2025-10-14 17:55:17,785 [WARNING]  * Debugger is active!
+2025-10-14 17:55:17,785 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 17:58:29,577 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 17:58:29,707 [INFO]  * Restarting with stat
+2025-10-14 18:02:00,034 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.82:5000
+2025-10-14 18:02:00,034 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-14 18:02:00,034 [INFO]  * Restarting with stat
+2025-10-14 18:02:00,503 [WARNING]  * Debugger is active!
+2025-10-14 18:02:00,503 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:02:05,090 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:05] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 18:02:05,185 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 18:02:05,187 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:05] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 18:02:05,187 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:05] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-10-14 18:02:05,225 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:05] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 18:02:06,260 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 18:02:06,261 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:06] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 18:02:06,263 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:06] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 18:02:06,265 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:06] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-10-14 18:02:06,298 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:06] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-10-14 18:02:10,377 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:10] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 18:02:10,405 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:10] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 18:02:12,552 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:12] "GET /add_time HTTP/1.1" 200 -
+2025-10-14 18:02:12,624 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:12] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 18:02:12,625 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:12] "[36mGET /static/js/timerAdd.js HTTP/1.1[0m" 304 -
+2025-10-14 18:02:12,627 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 18:02:12,698 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:12] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 18:02:20,112 [INFO] Click en: "Start studying", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 18:02:20,113 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:20] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 18:02:20,114 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:20] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 18:02:20,116 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:20] "[32mPOST /switch_status/studying HTTP/1.1[0m" 308 -
+2025-10-14 18:02:20,128 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:20] "POST /switch_status/studying/ HTTP/1.1" 200 -
+2025-10-14 18:02:22,786 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 18:02:22,825 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 18:02:23,013 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:23] "[32mGET /add_time HTTP/1.1[0m" 302 -
+2025-10-14 18:02:23,271 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:23] "GET /login HTTP/1.1" 200 -
+2025-10-14 18:02:25,111 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:25] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 18:02:29,394 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:29] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 18:02:34,703 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:34] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 18:02:42,906 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 18:02:43,029 [INFO]  * Restarting with stat
+2025-10-14 18:02:43,501 [WARNING]  * Debugger is active!
+2025-10-14 18:02:43,501 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:02:58,645 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/tiempo_routes.py', reloading
+2025-10-14 18:02:58,759 [INFO]  * Restarting with stat
+2025-10-14 18:02:59,246 [WARNING]  * Debugger is active!
+2025-10-14 18:02:59,246 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:02:59,536 [INFO] 127.0.0.1 - - [14/Oct/2025 18:02:59] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 18:03:03,761 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:03] "GET /get_time HTTP/1.1" 200 -
+2025-10-14 18:03:08,835 [INFO] Click en: "Submit session", desde "http://127.0.0.1:5000/add_time", usando "Firefox", en "Ubuntu"
+2025-10-14 18:03:08,838 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:08] "POST /log_click HTTP/1.1" 200 -
+2025-10-14 18:03:08,838 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:08] "[32mPOST /switch_status/idle HTTP/1.1[0m" 308 -
+2025-10-14 18:03:08,949 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:08] "POST /switch_status/idle/ HTTP/1.1" 200 -
+2025-10-14 18:03:08,953 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:08] "POST /add_time HTTP/1.1" 200 -
+2025-10-14 18:03:09,018 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:09] "[32mPOST /cancel HTTP/1.1[0m" 302 -
+2025-10-14 18:03:09,063 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:09] "GET /perfil?reload=true HTTP/1.1" 200 -
+2025-10-14 18:03:09,069 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:09] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 18:03:09,156 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 18:03:09,157 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:09] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 18:03:09,161 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:09] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 18:03:09,162 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:09] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 18:03:09,279 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:09] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 18:03:09,352 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 18:03:09,353 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:09] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 18:03:09,356 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:09] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 18:03:09,357 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:09] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 18:03:13,305 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:13] "GET /records HTTP/1.1" 200 -
+2025-10-14 18:03:13,372 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 18:03:13,374 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:13] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -

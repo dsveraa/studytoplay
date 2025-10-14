@@ -36,6 +36,11 @@ class UserService:
     def check_role(user_id, name):
         return UserRepository.check_role(user_id, name)
     
+    @staticmethod
+    def get_username_by_id(user_id):
+        user_obj = UserRepository.get_by_id(user_id)
+        return user_obj.nombre
+    
 
 class UserStatusService:
     @staticmethod

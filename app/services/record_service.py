@@ -26,3 +26,8 @@ class RecordService:
     def get_individual_time(time_by_subject):
         return {subject_id: time for subject_id, time in time_by_subject}
     
+    @staticmethod
+    def add_study_session(user_id, start_date, end_date, summary, subject_id):
+        new_study = RecordRepository.set_study_obj(user_id, start_date, end_date, summary, subject_id)
+        RecordRepository.add(new_study)
+        print("todo bien por aquí <-----")

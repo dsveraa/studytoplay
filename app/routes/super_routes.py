@@ -1,10 +1,12 @@
-import logging
 from flask import flash, jsonify, render_template, request, redirect, url_for, Blueprint
-from sqlalchemy import desc
 
-from app.models import Estudio, Uso, Asignatura, RegistroNotas, Settings, Usuario
+from app.models import Asignatura
+from app.repositories.record_repository import RecordRepository
+from app.repositories.time_repository import TimeRepository
+from app.services.academic_service import AcademicService
 from app.services.settings_service import UserSettings
 from app.services.time_service import UserTime
+from app.services.user_service import UserService
 from app.utils.ms_to_hms import ms_to_hms
 from app.utils.debugging_utils import printn
 from app.utils.helpers import relation_required, supervisor_required, listar_asignaturas, listar_registro_notas, id_from_json, id_from_kwargs
@@ -20,10 +22,9 @@ super_bp = Blueprint('super', __name__)
 @supervisor_required
 @relation_required(id_from_kwargs)
 def student_records(id):
-    user_obj = Usuario.query.filter_by(id=id).first()
-    name = user_obj.nombre
-    activity_obj = Estudio.query.filter_by(usuario_id=id).order_by(desc(Estudio.id)).limit(5).all()
-    use_obj = Uso.query.filter_by(usuario_id=id).order_by(desc(Uso.id)).limit(10).all()
+    name = UserService.get_username_by_id(id)
+    activity_obj = RecordRepository.get_records_list(id, 5)
+    use_obj = TimeRepository.get_use_obj(id, 10)
 
     return render_template("s_records.html", estudios=activity_obj, usos=use_obj, name=name)
 
@@ -56,25 +57,14 @@ def grade_incentive_warning(id):
 def add_grade_incentive(id):
     data = request.get_json()
 
-    asignatura = data.get('asignatura')
+    asignatura_id = data.get('asignatura')
     tema = data.get('tema')
     nota = data.get('nota')
     fecha = data.get('fecha')
 
-    registro_notas = RegistroNotas(
-        usuario_id=id,
-        asignatura_id=asignatura,
-        tema=tema,
-        nota=nota,
-        fecha=fecha,
-    )
-    db.session.add(registro_notas)
-    db.session.commit()
-
-    asignatura_nombre = Asignatura.query.get(asignatura).nombre
-
+    AcademicService.add_grade(id, asignatura_id, tema, nota, fecha)
+    asignatura_nombre = Asignatura.query.get(asignatura_id).nombre
     amount, currency, symbol = get_currency_data(id, nota)
-
     repo = NotificationRepository(db.session)
     notification = Notification(id, repo)
     notification.notify_grade(nota, asignatura_nombre, 'add', amount, currency, symbol)
@@ -87,32 +77,20 @@ def add_grade_incentive(id):
 @supervisor_required
 def mark_paid():
     data = request.get_json()
-    registro_id = data.get('grade_to_pay')
-    estudiante_id = data.get('estudiante_id')
-
-
+    record_id = data.get('grade_to_pay')
+    student_id = data.get('estudiante_id')
     
-    registro = RegistroNotas.query.get_or_404(registro_id)
-    nota = registro.nota
-    logging.info(f"registro nota: {nota}")
-    asignatura = registro.asignatura.nombre
-    
-    amount, currency, symbol = get_currency_data(estudiante_id, nota)
-    logging.info(f"amount: {amount}")
+    grade, subject = AcademicService.get_grade_and_subject(record_id)
+    amount, currency, symbol = get_currency_data(student_id, grade)
 
-    if amount == None:
-        flash("An unexpected error occurred, please try again.", "error")
-        return redirect(url_for("super.grade_incentive", id=estudiante_id))
-        
-    registro.estado = True
-    db.session.commit()
+    AcademicService.set_grade_as_paid(record_id)
 
     repo = NotificationRepository(db.session)
-    notification = Notification(estudiante_id, repo)
-    notification.notify_grade(nota, asignatura, 'pay', amount, currency, symbol)
+    notification = Notification(student_id, repo)
+    notification.notify_grade(grade, subject, 'pay', amount, currency, symbol)
     
     flash("The payment has been recorded successfully", "success")
-    return redirect(url_for("super.grade_incentive", id=estudiante_id))
+    return redirect(url_for("super.grade_incentive", id=student_id))
 
 @super_bp.route("/trophy/<int:id>", methods=["POST"])
 @supervisor_required

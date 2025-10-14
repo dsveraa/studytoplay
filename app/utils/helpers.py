@@ -1,4 +1,4 @@
-from datetime import timedelta
+from datetime import datetime, timedelta
 from venv import logger
 from app.models import Nivel, Trofeo, Usuario, Estrella, AcumulacionTiempo, Tiempo, NuevaNotificacion, Notificaciones, SolicitudVinculacion, SupervisorEstudiante, Asignatura, RegistroNotas
 from app.services.settings_service import UserSettings
@@ -8,6 +8,11 @@ from functools import wraps
 from flask import session, jsonify, request
 from sqlalchemy import desc
 from app.utils.debugging_utils import printn
+
+
+def format_date(date):
+    formatted_date = datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
+    return formatted_date
 
 def id_from_kwargs(*args, **kwargs):
     return kwargs.get("estudiante_id") or kwargs.get("id")

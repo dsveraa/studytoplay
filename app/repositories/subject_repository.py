@@ -15,10 +15,6 @@ class SubjectRepository:
         return Asignatura.query.filter_by(id=subject_id, usuario_id=user_id).first()
     
     @staticmethod
-    def get_all_subjects_by_user_id(user_id):
-        return Asignatura.query.filter_by(usuario_id=user_id).all()
-    
-    @staticmethod
     def add_subject(user_id, subject):
         return Asignatura(nombre=subject, usuario_id=user_id)
 

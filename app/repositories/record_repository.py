@@ -12,6 +12,16 @@ class RecordRepository:
     def get_study_obj(self):
         return self.record
     
+    @staticmethod
+    def set_study_obj(user_id, start_date, end_date, summary, subject_id):
+        return Estudio(
+        usuario_id=user_id,
+        fecha_inicio=start_date,
+        fecha_fin=end_date,
+        resumen=summary,
+        asignatura_id=subject_id
+    )
+    
     def set_summary(self, new_summary):
         self.record.resumen = new_summary
     
@@ -39,3 +49,11 @@ class RecordRepository:
         .group_by(Estudio.asignatura_id)
         .all()
     )
+
+    @staticmethod
+    def get_records_list(user_id, limit=20):
+        Estudio.query.filter_by(usuario_id=user_id).order_by(desc(Estudio.id)).limit(limit).all()
+
+    @staticmethod
+    def add(obj):
+        db.session.add(obj)

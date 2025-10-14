@@ -8,6 +8,10 @@ class UserRepository:
         return Usuario.query.filter_by(correo=email).first()
     
     @staticmethod
+    def get_by_id(id):
+        return Usuario.query.filter_by(id=id).first()
+    
+    @staticmethod
     def get_id_by_email(email):
         return db.session.query(Usuario.id).filter_by(correo=email).scalar()
         
