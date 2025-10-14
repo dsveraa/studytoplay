@@ -1,7 +1,7 @@
 from unittest.mock import patch
 
 
-@patch("app.routes.relaciones_routes.db.session.query")
+@patch("app.routes.relationship_routes.db.session.query")
 def test_received_requests_success(mock_query, client, supervisor_and_student):
     supervisor, estudiante = supervisor_and_student
 
@@ -35,7 +35,7 @@ def test_received_requests_success(mock_query, client, supervisor_and_student):
     assert solicitud["fecha_solicitud"] == "2025-10-05T12:00:00"
 
 
-@patch("app.routes.relaciones_routes.db.session.query")
+@patch("app.routes.relationship_routes.db.session.query")
 def test_received_requests_no_requests(mock_query, client, supervisor_and_student):
     _, estudiante = supervisor_and_student
 

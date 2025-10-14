@@ -2,7 +2,7 @@ from sqlalchemy import desc
 from app import db
 from sqlalchemy.orm import aliased
 
-from app.models.relaciones_model import SolicitudVinculacion, SupervisorEstudiante
+from app.models.relations_model import SolicitudVinculacion, SupervisorEstudiante
 from app.models.users_model import Usuario
 
 

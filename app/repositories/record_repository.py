@@ -1,5 +1,5 @@
 from sqlalchemy import desc
-from app.models.academico_model import Estudio
+from app.models.academic_model import Estudio
 from app import db
 from sqlalchemy import func
 

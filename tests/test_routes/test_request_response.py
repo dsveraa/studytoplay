@@ -3,8 +3,8 @@ from unittest.mock import MagicMock, patch
 
 @patch("app.models.SupervisorEstudiante.query")
 @patch("app.models.SolicitudVinculacion.query")
-@patch("app.routes.relaciones_routes.db.session.commit")
-@patch("app.routes.relaciones_routes.enviar_notificacion_respuesta_lr")
+@patch("app.routes.relationship_routes.db.session.commit")
+@patch("app.routes.relationship_routes.enviar_notificacion_respuesta_lr")
 def test_request_response_accept(
     mock_enviar_notificacion, mock_commit, mock_solicitud_query, mock_relacion_query, client, supervisor_and_student_no_relation
 ):
@@ -38,7 +38,7 @@ def test_request_response_accept(
     )
 
 
-@patch("app.routes.relaciones_routes.SolicitudVinculacion.query")
+@patch("app.routes.relationship_routes.SolicitudVinculacion.query")
 def test_request_response_request_not_found(mock_query, client, supervisor_and_student):
     _, estudiante = supervisor_and_student
 

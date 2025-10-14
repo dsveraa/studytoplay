@@ -1,8 +1,8 @@
 from sqlalchemy.orm import aliased
 from app import db
-from app.models.gamificacion_model import Incentivos
-from app.models.relaciones_model import SupervisorEstudiante
-from app.models.tiempo_model import Tiempo
+from app.models.gamification_model import Incentivos
+from app.models.relations_model import SupervisorEstudiante
+from app.models.time_model import Tiempo
 from app.models.users_model import EstadoUsuario, Settings, Usuario
 
 

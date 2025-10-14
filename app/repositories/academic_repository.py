@@ -1,4 +1,4 @@
-from app.models.academico_model import RegistroNotas
+from app.models.academic_model import RegistroNotas
 from app import db
 
 

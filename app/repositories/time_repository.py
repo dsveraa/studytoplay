@@ -1,5 +1,5 @@
 from sqlalchemy import desc
-from app.models.tiempo_model import AcumulacionTiempo, Tiempo, Uso
+from app.models.time_model import AcumulacionTiempo, Tiempo, Uso
 from .. import db
 
 

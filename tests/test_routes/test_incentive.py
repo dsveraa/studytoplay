@@ -2,9 +2,9 @@ import pytest
 from unittest.mock import MagicMock, patch
 
 
-with patch("app.routes.gamificacion_routes.relation_required") as fake_decorator:
+with patch("app.routes.gamification_routes.relation_required") as fake_decorator:
     fake_decorator.side_effect = lambda f: f
-    from app.routes.gamificacion_routes import gamificacion_bp
+    from app.routes.gamification_routes import gamificacion_bp
 
 
 @pytest.fixture
@@ -19,7 +19,7 @@ def incentive_data(supervisor_and_student):
     }
 
 
-@patch("app.routes.gamificacion_routes.relation_required")
+@patch("app.routes.gamification_routes.relation_required")
 def test_add_incentive_missing_fields(mock_relation_required, client, supervisor_and_student):
     mock_relation_required.return_value = lambda f: f
     supervisor, estudiante = supervisor_and_student
@@ -40,9 +40,9 @@ def test_add_incentive_missing_fields(mock_relation_required, client, supervisor
     assert "moneda missing" in response.get_json()["error"]
 
 
-@patch("app.routes.gamificacion_routes.GamificacionService")
-@patch("app.routes.gamificacion_routes.GradeIncentiveRepository")
-@patch("app.routes.gamificacion_routes.GradeIncentive")
+@patch("app.routes.gamification_routes.GamificacionService")
+@patch("app.routes.gamification_routes.GradeIncentiveRepository")
+@patch("app.routes.gamification_routes.GradeIncentive")
 def test_add_incentive_success(mock_incentive_class, mock_repo_class, mock_service, client, supervisor_and_student, incentive_data):
     mock_repo = MagicMock()
     mock_repo_class.return_value = mock_repo
@@ -78,9 +78,9 @@ def test_add_incentive_success(mock_incentive_class, mock_repo_class, mock_servi
     mock_service.get_last_incentive.assert_called_once_with(incentive_data["estudiante_id"])
 
 
-@patch("app.routes.gamificacion_routes.relation_required")
-@patch("app.routes.gamificacion_routes.GradeIncentiveRepository")
-@patch("app.routes.gamificacion_routes.GradeIncentive")
+@patch("app.routes.gamification_routes.relation_required")
+@patch("app.routes.gamification_routes.GradeIncentiveRepository")
+@patch("app.routes.gamification_routes.GradeIncentive")
 def test_delete_incentive_success(mock_incentive_class, mock_repo_class, mock_relation_required, client, supervisor_and_student):
     mock_relation_required.return_value = lambda f: f
 
@@ -104,9 +104,9 @@ def test_delete_incentive_success(mock_incentive_class, mock_repo_class, mock_re
     mock_incentive.remove_incentive.assert_called_once_with(incentive_id)
 
 
-@patch("app.routes.gamificacion_routes.relation_required")
-@patch("app.routes.gamificacion_routes.GradeIncentiveRepository")
-@patch("app.routes.gamificacion_routes.GradeIncentive")
+@patch("app.routes.gamification_routes.relation_required")
+@patch("app.routes.gamification_routes.GradeIncentiveRepository")
+@patch("app.routes.gamification_routes.GradeIncentive")
 def test_delete_incentive_not_found(mock_incentive_class, mock_repo_class, mock_relation_required, client, supervisor_and_student):
     mock_relation_required.return_value = lambda f: f
 

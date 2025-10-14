@@ -1,5 +1,5 @@
 from sqlalchemy import desc
-from app.models.relaciones_model import SolicitudVinculacion
+from app.models.relations_model import SolicitudVinculacion
 from .. import db
 
 

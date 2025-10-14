@@ -41516,3 +41516,84 @@ werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'relaci
 2025-10-14 18:03:13,305 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:13] "GET /records HTTP/1.1" 200 -
 2025-10-14 18:03:13,372 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
 2025-10-14 18:03:13,374 [INFO] 127.0.0.1 - - [14/Oct/2025 18:03:13] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 18:07:13,493 [INFO] 127.0.0.1 - - [14/Oct/2025 18:07:13] "GET /perfil HTTP/1.1" 200 -
+2025-10-14 18:07:13,549 [INFO] 127.0.0.1 - - [14/Oct/2025 18:07:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-10-14 18:07:13,551 [INFO] 127.0.0.1 - - [14/Oct/2025 18:07:13] "[36mGET /static/js/global.js HTTP/1.1[0m" 304 -
+2025-10-14 18:07:13,578 [INFO] 127.0.0.1 - - [14/Oct/2025 18:07:13] "[36mGET /static/img/trofeo.png HTTP/1.1[0m" 304 -
+2025-10-14 18:07:13,580 [INFO] 127.0.0.1 - - [14/Oct/2025 18:07:13] "[36mGET /static/img/template_star.png HTTP/1.1[0m" 304 -
+2025-10-14 18:10:36,656 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/record_repository.py', reloading
+2025-10-14 18:10:36,779 [INFO]  * Restarting with stat
+2025-10-14 18:10:37,241 [WARNING]  * Debugger is active!
+2025-10-14 18:10:37,241 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:11:20,637 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/repositories/home_repository.py', reloading
+2025-10-14 18:11:20,740 [INFO]  * Restarting with stat
+2025-10-14 18:11:21,224 [WARNING]  * Debugger is active!
+2025-10-14 18:11:21,224 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:11:35,356 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/signup_service.py', reloading
+2025-10-14 18:11:35,463 [INFO]  * Restarting with stat
+2025-10-14 18:11:35,945 [WARNING]  * Debugger is active!
+2025-10-14 18:11:35,945 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:11:48,056 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models/__init__.py', reloading
+2025-10-14 18:11:48,181 [INFO]  * Restarting with stat
+2025-10-14 18:11:48,655 [WARNING]  * Debugger is active!
+2025-10-14 18:11:48,656 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:12:02,778 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models/__init__.py', reloading
+2025-10-14 18:12:02,901 [INFO]  * Restarting with stat
+2025-10-14 18:12:03,374 [WARNING]  * Debugger is active!
+2025-10-14 18:12:03,375 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:12:14,479 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/models/__init__.py', reloading
+2025-10-14 18:12:14,581 [INFO]  * Restarting with stat
+2025-10-14 18:12:15,057 [WARNING]  * Debugger is active!
+2025-10-14 18:12:15,058 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:12:26,166 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/gamificacion_service.py', reloading
+2025-10-14 18:12:26,277 [INFO]  * Restarting with stat
+2025-10-14 18:12:26,753 [WARNING]  * Debugger is active!
+2025-10-14 18:12:26,753 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:12:39,875 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/__init__.py', reloading
+2025-10-14 18:12:39,990 [INFO]  * Restarting with stat
+2025-10-14 18:12:40,490 [WARNING]  * Debugger is active!
+2025-10-14 18:12:40,490 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:12:52,606 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/tests/test_routes/test_incentive.py', reloading
+2025-10-14 18:12:52,723 [INFO]  * Restarting with stat
+2025-10-14 18:12:53,203 [WARNING]  * Debugger is active!
+2025-10-14 18:12:53,203 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:13:04,308 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/__init__.py', reloading
+2025-10-14 18:13:04,411 [INFO]  * Restarting with stat
+2025-10-14 18:13:04,893 [WARNING]  * Debugger is active!
+2025-10-14 18:13:04,894 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:13:17,002 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/__init__.py', reloading
+2025-10-14 18:13:17,095 [INFO]  * Restarting with stat
+2025-10-14 18:13:17,573 [WARNING]  * Debugger is active!
+2025-10-14 18:13:17,573 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:13:29,689 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/services/relations_service.py', reloading
+2025-10-14 18:13:29,798 [INFO]  * Restarting with stat
+2025-10-14 18:13:30,304 [WARNING]  * Debugger is active!
+2025-10-14 18:13:30,304 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:13:49,486 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/__init__.py', reloading
+2025-10-14 18:13:49,591 [INFO]  * Restarting with stat
+2025-10-14 18:13:50,064 [WARNING]  * Debugger is active!
+2025-10-14 18:13:50,064 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:14:00,158 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/core_routes.py', reloading
+2025-10-14 18:14:00,270 [INFO]  * Restarting with stat
+2025-10-14 18:14:00,755 [WARNING]  * Debugger is active!
+2025-10-14 18:14:00,755 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:14:12,865 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/app/routes/relationship_routes.py', reloading
+2025-10-14 18:14:12,969 [INFO]  * Restarting with stat
+2025-10-14 18:14:13,445 [WARNING]  * Debugger is active!
+2025-10-14 18:14:13,445 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:17:02,045 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/tests/test_routes/test_incentive.py', reloading
+2025-10-14 18:17:02,150 [INFO]  * Restarting with stat
+2025-10-14 18:17:02,618 [WARNING]  * Debugger is active!
+2025-10-14 18:17:02,618 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:18:39,541 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/tests/test_routes/test_received_requests.py', reloading
+2025-10-14 18:18:39,644 [INFO]  * Restarting with stat
+2025-10-14 18:18:40,113 [WARNING]  * Debugger is active!
+2025-10-14 18:18:40,113 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:19:07,364 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/tests/test_routes/test_request_response.py', reloading
+2025-10-14 18:19:07,469 [INFO]  * Restarting with stat
+2025-10-14 18:19:07,938 [WARNING]  * Debugger is active!
+2025-10-14 18:19:07,939 [INFO]  * Debugger PIN: 124-136-797
+2025-10-14 18:19:49,330 [INFO]  * Detected change in '/home/david/Dropbox/dev/studytoplay/tests/test_routes/test_restriction.py', reloading
+2025-10-14 18:19:49,439 [INFO]  * Restarting with stat
+2025-10-14 18:19:49,897 [WARNING]  * Debugger is active!
+2025-10-14 18:19:49,897 [INFO]  * Debugger PIN: 124-136-797

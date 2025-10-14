@@ -1,4 +1,4 @@
-from app.models.relaciones_model import SupervisorEstudiante
+from app.models.relations_model import SupervisorEstudiante
 from .. import db
 
 

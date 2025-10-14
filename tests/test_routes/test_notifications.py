@@ -1,10 +1,10 @@
 import pytest
-from app.models.notificaciones_model import NuevaNotificacion
+from app.models.notifications_model import NuevaNotificacion
 
 @pytest.fixture
 def sample_notifications(usuario):
     from app import db
-    from app.models.notificaciones_model import Notificaciones, NuevaNotificacion
+    from app.models.notifications_model import Notificaciones, NuevaNotificacion
     from datetime import datetime
 
     n1 = Notificaciones(usuario_id=usuario.id, notificacion="Mensaje 1", fecha=datetime.now())

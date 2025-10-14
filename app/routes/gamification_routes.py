@@ -1,6 +1,6 @@
 from flask import request, jsonify, Blueprint
 
-from app.services.gamificacion_service import GamificacionService
+from app.services.gamification_service import GamificacionService
 from app.services.grade_incentive_service import GradeIncentiveRepository, GradeIncentive
 from app.models import Restricciones
 from app.utils.helpers import id_from_json, id_from_kwargs, relation_required

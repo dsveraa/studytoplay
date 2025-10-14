@@ -1,4 +1,4 @@
-from app.models.gamificacion_model import Incentivos, Restricciones
+from app.models.gamification_model import Incentivos, Restricciones
 
 
 class GamificacionRepository:

@@ -1,6 +1,6 @@
 from flask import session
 
-from app.repositories.relations_repository import RelationsRepository
+from app.repositories.relationship_repository import RelationsRepository
 
 
 class RelationsService:

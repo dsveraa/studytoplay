@@ -1,4 +1,4 @@
-from app.models.academico_model import Asignatura
+from app.models.academic_model import Asignatura
 from app.repositories.record_repository import RecordRepository
 from app.repositories.subject_repository import SubjectRepository
 from app.services.record_service import RecordService

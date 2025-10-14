@@ -1,7 +1,7 @@
 from flask import render_template, request, redirect, url_for, session, jsonify, Blueprint
 
 from app.services.core_service import CoreService
-from app.services.gamificacion_service import GamificacionService
+from app.services.gamification_service import GamificacionService
 from app.services.home_service import HomeService
 from app.services.record_service import RecordService
 from app.services.subject_service import SubjectService

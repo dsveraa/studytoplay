@@ -3,7 +3,7 @@ import os
 from sqlalchemy import text
 from werkzeug.security import generate_password_hash
 from app import create_app, db
-from app.models.relaciones_model import SupervisorEstudiante
+from app.models.relations_model import SupervisorEstudiante
 from app.models.users_model import Usuario, Rol
 from sqlalchemy.orm import sessionmaker
 

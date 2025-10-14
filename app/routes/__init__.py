@@ -1,11 +1,11 @@
-from .notificaciones_routes import notificaciones_bp
+from .notifications_routes import notificaciones_bp
 from .core_routes import core_bp
-from .relaciones_routes import relaciones_bp
-from .gamificacion_routes import gamificacion_bp
+from .relationship_routes import relaciones_bp
+from .gamification_routes import gamificacion_bp
 from .auth_routes import auth_bp
 from .super_routes import super_bp
-from .tiempo_routes import tiempo_bp
-from .academico_routes import academico_bp
+from .time_routes import tiempo_bp
+from .academic_routes import academico_bp
 
 
 def register_routes(app):

@@ -1,6 +1,6 @@
 from typing import List
 
-from app.repositories.gamificacion_repository import GamificacionRepository
+from app.repositories.gamification_repository import GamificacionRepository
 from app.utils.helpers import make_stars_template, show_stars
 
 

@@ -1,5 +1,5 @@
 from werkzeug.security import generate_password_hash
-from app.models.notificaciones_model import NuevaNotificacion
+from app.models.notifications_model import NuevaNotificacion
 from app.repositories.user_repository import UserRepository
 from app.services.user_service import UserService
 from app import db
