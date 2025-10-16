@@ -40,7 +40,7 @@ def home():
 @relation_required(id_from_kwargs)
 def settings(id):
     from app.services.countries_service import get_countries
-    from app.utils.sistemas_notas_utils import sistemas
+    from app.utils.grades_system_utils import sistemas
     
     repo = GradeIncentiveRepository(db.session)
     management = GradeIncentive(id, repo)

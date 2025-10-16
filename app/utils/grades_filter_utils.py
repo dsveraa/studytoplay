@@ -1,6 +1,6 @@
 import operator
 import re
-from app.utils.sistemas_notas_utils import sistemas
+from app.utils.grades_system_utils import sistemas
 
 OPERADORES = {
     ">=": operator.ge,

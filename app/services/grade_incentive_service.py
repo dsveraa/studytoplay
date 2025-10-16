@@ -1,7 +1,7 @@
 import logging
 from app.models import Incentivos, Restricciones, Settings
 from app.utils.debugging_utils import printn
-from app.utils.filtro_notas_utils import elegir_sistema_calificaciones as grade_system
+from app.utils.grades_filter_utils import elegir_sistema_calificaciones as grade_system
 from app.services.countries_service import get_countries
 from app.services.settings_service import UserSettings
 
