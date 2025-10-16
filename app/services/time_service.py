@@ -55,6 +55,7 @@ class UserTime:
             time_accumulation.cantidad += new_time
         else:
             TimeRepository.create_acc_time(user_id, new_time)
+            time_accumulation = TimeRepository.get_time_accumulation_by_user_id(user_id)
 
         db.session.commit()
         db.session.refresh(time_accumulation)

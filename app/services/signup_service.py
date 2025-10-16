@@ -17,7 +17,7 @@ class SignUpService:
         if errors:
             raise ValueError(errors)
         
-        if role == "1":
+        if role == "student":
             role_obj = UserRepository.get_role_obj_by_name('student')
         
         else:

@@ -225,7 +225,7 @@ async function onLoad() {
   
   const time = await fetchTime()
 
-  if (time < 0) {
+  if (time <= 0) {
     startBtn.disabled = true
   }
   
@@ -236,7 +236,7 @@ async function onLoad() {
 
   HMS = msToHMS(sessionTime)
   
-  if (sessionTime > 0) {
+  if (sessionTime >= 0) {
     rt_element.textContent = HMS
 
   } else {

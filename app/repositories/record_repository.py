@@ -52,7 +52,7 @@ class RecordRepository:
 
     @staticmethod
     def get_records_list(user_id, limit=20):
-        Estudio.query.filter_by(usuario_id=user_id).order_by(desc(Estudio.id)).limit(limit).all()
+        return Estudio.query.filter_by(usuario_id=user_id).order_by(desc(Estudio.id)).limit(limit).all()
 
     @staticmethod
     def add(obj):

@@ -1,5 +1,4 @@
 from flask import session
-from app.models.users_model import Rol
 from app.repositories.user_repository import UserRepository
 from app.repositories.user_status_repository import UserStatusRepository
 
@@ -25,7 +24,13 @@ class UserService:
 
     @staticmethod
     def get_all_roles():
-        role_obj = Rol.query.order_by(Rol.id).all()
+        role_obj = UserRepository.get_all_roles()
+        if not role_obj:
+            roles = UserRepository.set_default_roles()
+            UserRepository.add(roles)
+            UserRepository.commit()
+            role_obj = UserRepository.get_all_roles()
+
         return [{'id': role.id, 'nombre': role.nombre} for role in role_obj]
     
     @staticmethod

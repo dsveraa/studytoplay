@@ -6,12 +6,15 @@
     <h3>Notifications</h3>
     <div class="list-group w-100 mt-3">
       
-      {% for notificacion in notificaciones %}
-      <div class="list-group-item">
-        {{ notificacion.notificacion | safe }}
-      </div>  
-      {% endfor %}
-      
+      {% if notificaciones %}
+        {% for notificacion in notificaciones %}
+        <div class="list-group-item">
+          {{ notificacion.notificacion | safe }}
+        </div>  
+        {% endfor %}
+      {% else %}
+      <div align="center">There aren't notifications yet.</div>
+      {% endif %}
     </div>
     
   </div>

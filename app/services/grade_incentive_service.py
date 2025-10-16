@@ -100,7 +100,7 @@ class GradeIncentiveRepository:
 class GradeIncentiveMessageFactory:
     @staticmethod
     def create_incentive_message(amount, grade, symbol, currency):
-        return f"{symbol}{amount} {currency} for grades >= {grade}"
+        return f"{symbol}{amount} {currency} for grades <b>&ge;</b> {grade}"
     
     @staticmethod
     def create_restriction_message(message):

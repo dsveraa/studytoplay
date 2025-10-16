@@ -52,7 +52,7 @@ def add_time():
     RecordService.add_study_session(user_id, start_date, end_date, summary, subject_id)
     UserTime.handle_new_time(user_id, new_time)
     
-    return jsonify({'redirect': url_for('core.perfil')})
+    return jsonify({'redirect': url_for('academico.records')})
     
 
 @tiempo_bp.route("/use_time")
@@ -94,7 +94,7 @@ def use_time():
 
     UserTime.add_use(user_id, start_date, end_date, activity, remaining_time)    
 
-    return jsonify({'redirect': url_for('core.perfil')})
+    return jsonify({'redirect': url_for('tiempo.use_time')})
 
 @tiempo_bp.route("/get_remaining_time")
 def get_remaining_time():

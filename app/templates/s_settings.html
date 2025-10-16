@@ -105,7 +105,7 @@
               {% for item in incentivos %}
               <li data-id="{{ item.id }}">
                   <div class="d-flex justify-content-start gap-2 align-content-center">
-                      <div>{{ item.incentivo }}</div>
+                      <div>{{ item.incentivo | safe }}</div>
                       <iconify-icon class="cursor-pointer" icon="ic:baseline-delete" width="20" height="20" onclick="handleDeleteIncentive({{ estudiante_id }}, {{ item.id }})"></iconify-icon>
                   </div>
               </li>
@@ -140,7 +140,7 @@
         <input type="text" id="monto" class="form-control flex-shrink-1" style="min-width:60px" placeholder="">
         
         <!-- texto -->
-        <div class="text-nowrap"><span id="moneda_display"></span> for grades >=</div>
+        <div class="text-nowrap"><span id="moneda_display"></span> for grades <b>&ge;</b></div>
         
         <!-- monto -->
         <select id="grade" class="select-dark"></select>

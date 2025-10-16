@@ -29,12 +29,25 @@ class UserRepository:
         return Rol.query.filter_by(nombre=name).first()
     
     @staticmethod
+    def get_all_roles():
+       return Rol.query.order_by(Rol.id).all()
+    
+    @staticmethod
     def create_user(name, email, password_hash, role_obj):
         return Usuario(nombre=name, correo=email, contrasena=password_hash, rol=role_obj)
     
     @staticmethod
-    def add(new_user):
-        db.session.add(new_user)
+    def set_default_roles():
+        student = Rol(nombre='student')
+        supervisor = Rol(nombre='supervisor')
+        return [student, supervisor]
+
+    @staticmethod
+    def add(obj):
+        if type(obj) == list:
+            db.session.add_all(obj)
+            return
+        db.session.add(obj)
     
     @staticmethod
     def commit():

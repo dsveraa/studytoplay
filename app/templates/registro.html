@@ -34,7 +34,7 @@
             <fieldset class="d-flex justify-content-start gap-3 custom-bg-2 rounded-2 px-2 pt-2">
             {% for rol in roles %}
                 <div>
-                    <input type="radio" id="{{rol.id}}" name="role" value="{{rol.id}}" {% if rol.id|string == rol_seleccionado|string %}checked{% endif %}>
+                    <input type="radio" id="{{rol.id}}" name="role" value="{{rol.nombre}}" {% if rol.id|string == rol_seleccionado|string %}checked{% endif %}>
 
                     <label for="{{rol.id}}" class="form-label">{{rol.nombre | capitalize }}</label>
                 </div>
