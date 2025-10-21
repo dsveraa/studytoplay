@@ -60,3 +60,7 @@ This project demonstrates:
   - `utils/` — helper functions
   - `static/` — CSS/JS assets
   - `templates/` — HTML templates
+
+---
+
+👉 [View demo on YouTube](https://youtu.be/648pKewnW5M?si=3MNAGfz-Zl0eF1qz)
