@@ -63,4 +63,6 @@ This project demonstrates:
 
 ---
 
-👉 [View demo on YouTube](https://youtu.be/648pKewnW5M?si=3MNAGfz-Zl0eF1qz)
+<a href="https://youtu.be/648pKewnW5M?si=3MNAGfz-Zl0eF1qz" target="_blank">
+  <img src="https://img.shields.io/badge/YouTube-View%20Study%20to%20Play%20demo-red?logo=youtube" alt="View demo on YouTube">
+</a>
